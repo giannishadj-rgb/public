@@ -1,0 +1,6 @@
+{
+  "playwright.env": {
+    "TEST_BASE_URL": "http://caviarofswitzerland.local/"
+  },
+  "playwright.reuseBrowser": false
+}

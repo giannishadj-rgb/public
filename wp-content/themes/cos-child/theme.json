@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schemas.wp.org/wp/6.7/theme.json",
+  "version": 3,
+  "settings": {
+    "color": {
+      "palette": [
+        { "slug": "cos-ink",     "color": "#171A1F", "name": "Alpine Ink" },
+        { "slug": "cos-navy",    "color": "#0F1B2D", "name": "Midnight Navy" },
+        { "slug": "cos-pearl",   "color": "#F7F3ED", "name": "Pearl" },
+        { "slug": "cos-stone",   "color": "#E5DED4", "name": "Glacier Stone" },
+        { "slug": "cos-silver",  "color": "#C4CAD1", "name": "Silver Mist" },
+        { "slug": "cos-slate",   "color": "#5C6675", "name": "Slate" },
+        { "slug": "cos-gold",    "color": "#8B692F", "name": "Antique Gold" },
+        { "slug": "cos-gold-l",  "color": "#B8965F", "name": "Lumière Gold" },
+        { "slug": "cos-teal",    "color": "#46656B", "name": "Swiss Teal" },
+        { "slug": "cos-focus",   "color": "#2F6FED", "name": "Focus Blue" },
+        { "slug": "cos-success", "color": "#2D6A57", "name": "Success" },
+        { "slug": "cos-warning", "color": "#A56712", "name": "Warning" },
+        { "slug": "cos-error",   "color": "#A13B3B", "name": "Error" }
+      ]
+    }
+  }
+}

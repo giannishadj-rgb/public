@@ -1,0 +1,183 @@
+/*
+Theme Name: COS Child
+Template: twentytwentyfive
+Version: 1.0.0
+Text Domain: cos-child
+*/
+
+/* Self-hosted fonts — latin subset, font-display: swap */
+/* One variable-font file (weights 300-600 in a single ~47KB WOFF2) replaces
+   the 4 static per-weight files (~48KB each, ~192KB combined) previously
+   loaded here. Sourced from Google Fonts' own CSS2 API (which serves the
+   official Inter variable font, SIL Open Font License 1.1 — see
+   assets/fonts/OFL-inter.txt), latin subset only, matching the coverage of
+   the static files it replaces. */
+@font-face{font-family:'Inter';font-style:normal;font-weight:300 600;font-display:swap;src:url('assets/fonts/inter-var-latin.woff2') format('woff2-variations'),url('assets/fonts/inter-var-latin.woff2') format('woff2')}
+@font-face{font-family:'Source Serif 4';font-style:normal;font-weight:300;font-display:swap;src:url('assets/fonts/source-serif4-300-latin.woff2') format('woff2')}
+@font-face{font-family:'Source Serif 4';font-style:normal;font-weight:400;font-display:swap;src:url('assets/fonts/source-serif4-400-latin.woff2') format('woff2')}
+@font-face{font-family:'Source Serif 4';font-style:italic;font-weight:300;font-display:swap;src:url('assets/fonts/source-serif4-300-italic-latin.woff2') format('woff2')}
+@font-face{font-family:'Source Serif 4';font-style:italic;font-weight:400;font-display:swap;src:url('assets/fonts/source-serif4-400-italic-latin.woff2') format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300;font-display:swap;src:url('assets/fonts/cormorant-garamond-300-italic-latin.woff2') format('woff2')}
+
+/* Browser reset — global-styles is dequeued for performance; apply body margin reset here. */
+body { margin: 0; padding: 0; }
+
+/* Tighten the spacing between the basket and profile icons in the top nav. */
+body.home #cos-home-v3 nav .flex-1.flex.justify-end.items-center.gap-4.md\:gap-6 {
+	gap: 4px !important;
+}
+
+/* ── Block-theme wrapper resets for raw-HTML pages ─────────────── */
+/* twentytwentyfive injects padding into .wp-block-group and .wp-block-post-content
+   which breaks full-bleed section backgrounds on our custom pages. */
+body.page #cos-main-content.wp-block-group,
+body.page .wp-block-post-content,
+body.page .entry-content {
+	padding: 0 !important;
+	margin: 0 !important;
+	max-width: none !important;
+}
+
+/* ── WooCommerce Cart & Checkout — COS styling ─────────────────── */
+.woocommerce,
+.woocommerce-page {
+	font-family: var(--cos-body, 'Inter', sans-serif);
+	color: var(--cos-ink, #171A1F);
+	background: var(--cos-pearl, #F7F3ED);
+}
+
+/* page wrapper */
+.woocommerce .woocommerce-notices-wrapper,
+.woocommerce-page .woocommerce-notices-wrapper { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+/* hide default WC breadcrumb */
+.woocommerce .woocommerce-breadcrumb { display: none; }
+
+/* tables */
+.woocommerce table.shop_table {
+	width: 100%; border-collapse: collapse;
+	font-size: 13px; font-weight: 300;
+	border: 1px solid var(--cos-stone, #E5DED4);
+}
+.woocommerce table.shop_table th {
+	font-size: 9px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase;
+	color: var(--cos-slate, #5C6675); padding: 14px 16px;
+	border-bottom: 1px solid var(--cos-stone); background: #fff;
+}
+.woocommerce table.shop_table td { padding: 18px 16px; border-bottom: 1px solid var(--cos-stone); vertical-align: middle; }
+.woocommerce table.shop_table .product-name { font-weight: 400; }
+.woocommerce table.shop_table .product-price,
+.woocommerce table.shop_table .product-subtotal { font-variant-numeric: lining-nums tabular-nums; }
+
+/* quantity input */
+.woocommerce .quantity input.qty {
+	width: 60px; height: 38px; text-align: center;
+	border: 1px solid var(--cos-stone); background: #fff;
+	font-size: 14px; font-weight: 300; font-family: inherit; outline: none; border-radius: 0;
+}
+
+/* buttons */
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce #respond input#submit {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 44px;
+	box-sizing: border-box;
+	padding: 13px 28px;
+	background: var(--cos-navy, #0F1B2D);
+	color: #fff !important;
+	font-family: var(--cos-body); font-size: 9px; font-weight: 600;
+	letter-spacing: .18em; text-transform: uppercase; text-decoration: none;
+	border: none; cursor: pointer; border-radius: 0; transition: background .2s;
+}
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce input.button:hover,
+.woocommerce #respond input#submit:hover { background: var(--cos-ink, #171A1F); }
+
+.woocommerce a.button.alt,
+.woocommerce button.button.alt { background: var(--cos-navy); }
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover { background: var(--cos-ink); }
+
+/* coupon / remove links */
+.woocommerce a.remove { color: var(--cos-slate) !important; font-size: 18px; font-weight: 300; text-decoration: none; transition: color .2s; }
+.woocommerce a.remove:hover { color: var(--cos-error, #A13B3B) !important; background: none; }
+
+/* order totals */
+.woocommerce .cart_totals,
+.woocommerce-page .cart_totals { background: #fff; padding: 32px; border: 1px solid var(--cos-stone); }
+.woocommerce .cart_totals h2,
+.woocommerce-checkout h3 {
+	font-family: var(--cos-display, Georgia, serif); font-style: italic; font-weight: 300;
+	font-size: 22px; color: var(--cos-ink); margin-bottom: 20px;
+}
+.woocommerce .cart_totals table th,
+.woocommerce .cart_totals table td { padding: 12px 0; border-bottom: 1px solid var(--cos-stone); font-size: 13px; font-weight: 300; }
+
+/* form fields */
+.woocommerce form .form-row label { font-size: 10px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--cos-slate); margin-bottom: 6px; display: block; }
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea,
+.woocommerce form .form-row select {
+	width: 100%; min-height: 44px; padding: 12px 14px; box-sizing: border-box;
+	border: 1px solid var(--cos-stone, #E5DED4); border-radius: 0; background: #fff;
+	font-family: inherit; font-size: 13px; font-weight: 300; color: var(--cos-ink); outline: none;
+	transition: border-color .2s;
+}
+
+/* Native checkbox/radio controls default to ~13-16px — below the 24x24
+   CSS-pixel WCAG 2.5.8 minimum tap target — across every WooCommerce form
+   (checkout terms, alternate shipping, payment methods, "create account"
+   toggle, my-account edit-address forms, etc). */
+.woocommerce form input[type="checkbox"],
+.woocommerce form input[type="radio"] {
+	width: 24px; height: 24px; flex-shrink: 0;
+	accent-color: var(--cos-navy, #0F1B2D); cursor: pointer;
+}
+.woocommerce form .form-row input.input-text:focus,
+.woocommerce form .form-row textarea:focus,
+.woocommerce form .form-row select:focus { border-color: var(--cos-navy); }
+
+/* checkout layout */
+.woocommerce-checkout #customer_details,
+.woocommerce-checkout #order_review_heading,
+.woocommerce-checkout #order_review { max-width: 1000px; }
+.woocommerce-checkout .woocommerce { max-width: 1100px; margin: 0 auto; padding: 48px 24px; }
+
+/* cart page layout */
+.woocommerce-cart .woocommerce { max-width: 1100px; margin: 0 auto; padding: 48px 24px; }
+
+/* notices */
+.woocommerce-message,
+.woocommerce-info,
+.woocommerce-error {
+	padding: 14px 20px; margin-bottom: 20px; border-left: 3px solid var(--cos-navy);
+	background: #fff; font-size: 13px; font-weight: 300; color: var(--cos-ink);
+	list-style: none;
+}
+.woocommerce-message { border-color: var(--cos-teal, #46656B); }
+.woocommerce-error  { border-color: var(--cos-error, #A13B3B); }
+
+/* cart/checkout page top spacer */
+.woocommerce-cart .woocommerce,
+.woocommerce-checkout .woocommerce { margin-top: var(--cos-nav-h, 80px); }
+
+/* product images in cart */
+.woocommerce td.product-thumbnail img { width: 60px; height: 60px; object-fit: contain; }
+
+/* Hide "View cart" link injected by WooCommerce AJAX add-to-cart */
+a.added_to_cart { display: none !important; }
+
+/* Remove focus outline on shop product image links */
+.cos-sv3-card-img-link:focus,
+.cos-sv3-card-img-link:focus-visible,
+.cos-sv3-card-img-link:active { outline: none; }
+
+@media (max-width: 767px) {
+	.woocommerce-cart .woocommerce,
+	.woocommerce-checkout .woocommerce { padding: 24px 16px; }
+}

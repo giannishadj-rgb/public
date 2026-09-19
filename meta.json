@@ -1,0 +1,44 @@
+{
+  "siteUrl": "http://localhost:8881",
+  "phpVersion": "8.4",
+  "wordpressVersion": "7.0",
+  "plugins": [
+    {
+      "name": "all-in-one-wp-migration",
+      "status": "active",
+      "version": "7.105"
+    },
+    {
+      "name": "google-listings-and-ads",
+      "status": "active",
+      "version": "3.7.0"
+    },
+    {
+      "name": "woocommerce",
+      "status": "active",
+      "version": "10.7.0"
+    }
+  ],
+  "themes": [
+    {
+      "name": "cos-child",
+      "status": "active",
+      "version": "1.0.0"
+    },
+    {
+      "name": "twentytwentyfive",
+      "status": "parent",
+      "version": "1.5"
+    },
+    {
+      "name": "twentytwentyfour",
+      "status": "inactive",
+      "version": "1.5"
+    },
+    {
+      "name": "twentytwentythree",
+      "status": "inactive",
+      "version": "1.6"
+    }
+  ]
+}

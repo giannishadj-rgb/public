@@ -1,0 +1,17 @@
+{
+  "name": "cos-storefront-test-scenarios",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Playwright test scenarios for the local Caviar of Switzerland WordPress storefront.",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:update-snapshots": "playwright test tests/08-visual-regression.spec.ts --update-snapshots",
+    "test:report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.12.1",
+    "@playwright/test": "^1.61.1"
+  }
+}

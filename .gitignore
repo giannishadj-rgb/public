@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+vendor/
+
+# Local editor and deployment credentials
+.agents/
+.vscode/sftp.json
+skills-lock.json
+
+# WordPress local/runtime files
+.htaccess
+wp-config.php
+wp-content/uploads/
+wp-content/upgrade/
+wp-content/upgrade-temp-backup/
+wp-content/ai1wm-backups/
+
+# WordPress core files
+/index.php
+/license.txt
+/readme.html
+/wp-*.php
+/xmlrpc.php
+/wp-admin/
+/wp-includes/
+
+# Third-party installed plugins and themes
+wp-content/plugins/
+!wp-content/plugins/index.php
+wp-content/themes/*
+!wp-content/themes/index.php
+!wp-content/themes/cos-child/
+!wp-content/themes/cos-child/**
+wp-content/themes/*.backup-*/
+
+# Generated test and review artifacts
+playwright-report/
+test-results/
+outputs/
+tmp_*.js
+
+# OS noise
+.DS_Store
+Thumbs.db
