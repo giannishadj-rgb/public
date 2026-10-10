@@ -29,7 +29,7 @@ if ( $logged_in ) {
 <?php wp_body_open(); ?>
 <style nonce="<?php echo esc_attr( cos_csp_nonce() ); ?>">
 /* ─── Reset only what's needed, without the specificity trap ─── */
-#cos-account { font-family: var(--cos-body); color: var(--cos-ink, #171A1F); background: var(--cos-pearl, #F7F3ED); min-height: 100vh; }
+#cos-account { font-family: var(--cos-body); color: var(--cos-ink, #111111); background: var(--cos-pearl, #F2F2EF); min-height: 100vh; }
 #cos-account * { box-sizing: border-box; }
 #cos-account h1, #cos-account h2, #cos-account h3, #cos-account p, #cos-account ul, #cos-account li, #cos-account figure { margin: 0; padding: 0; list-style: none; }
 
@@ -118,7 +118,7 @@ if ( $logged_in ) {
   width: 13px;
   height: 13px;
   flex-shrink: 0;
-  color: var(--cos-gold-l, #B8965F);
+  color: var(--cos-gold-l, #B79A5B);
 }
 
 /* ── Right card ── */
@@ -131,7 +131,7 @@ if ( $logged_in ) {
 .cos-acc-card {
   background: #fff;
   border-top: 2px solid var(--cos-gold, #8B692F);
-  box-shadow: 0 8px 56px rgba(15, 27, 45, .11), 0 2px 12px rgba(139, 105, 47, .07);
+  box-shadow: 0 8px 56px rgba(5, 5, 5, .11), 0 2px 12px rgba(139, 105, 47, .07);
 }
 
 /* Tabs */
@@ -150,14 +150,14 @@ if ( $logged_in ) {
   cursor: pointer;
   border: none;
   font-family: var(--cos-body);
-  background: var(--cos-pearl, #F7F3ED);
+  background: var(--cos-pearl, #F2F2EF);
   border-bottom: 2px solid transparent;
   margin-bottom: -1px;
   transition: color .2s, background .2s, border-color .2s;
 }
 .cos-acc-tab + .cos-acc-tab { border-left: 1px solid var(--cos-stone, #E5DED4); }
 .cos-acc-tab.is-active {
-  color: var(--cos-navy, #0F1B2D);
+  color: var(--cos-navy, #050505);
   background: #fff;
   border-bottom-color: var(--cos-gold, #8B692F);
 }
@@ -228,7 +228,7 @@ if ( $logged_in ) {
 .cos-acc-input[type="text"]:focus,
 .cos-acc-input[type="email"]:focus,
 .cos-acc-input[type="password"]:focus {
-  border-color: var(--cos-navy, #0F1B2D) !important;
+  border-color: var(--cos-navy, #050505) !important;
   box-shadow: none !important;
   outline: none !important;
 }
@@ -280,7 +280,7 @@ if ( $logged_in ) {
   padding: 16px !important;
   min-height: 44px !important;
   box-sizing: border-box !important;
-  background: var(--cos-navy, #0F1B2D) !important;
+  background: var(--cos-navy, #050505) !important;
   color: #fff !important;
   font-size: 9px !important;
   font-weight: 700 !important;
@@ -293,7 +293,7 @@ if ( $logged_in ) {
   margin-top: 26px !important;
   border-radius: 0 !important;
 }
-.cos-acc-submit:hover { background: var(--cos-ink, #171A1F) !important; }
+.cos-acc-submit:hover { background: var(--cos-ink, #111111) !important; }
 
 /* Card bottom strip */
 .cos-acc-card-foot {
@@ -324,13 +324,13 @@ if ( $logged_in ) {
   text-transform: uppercase;
   color: var(--cos-slate);
 }
-.cos-acc-security svg { width: 11px; height: 11px; flex-shrink: 0; color: var(--cos-gold-l, #B8965F); }
+.cos-acc-security svg { width: 11px; height: 11px; flex-shrink: 0; color: var(--cos-gold-l, #B79A5B); }
 
 /* ═══════════════════════════════════════════════
    LOGGED-IN — dashboard
 ═══════════════════════════════════════════════ */
 .cos-acc-banner {
-  background: var(--cos-navy, #0F1B2D);
+  background: var(--cos-navy, #050505);
   padding: 48px 24px 44px;
 }
 .cos-acc-banner-inner {
@@ -347,7 +347,7 @@ if ( $logged_in ) {
   font-weight: 600;
   letter-spacing: .28em;
   text-transform: uppercase;
-  color: var(--cos-gold-l, #B8965F);
+  color: var(--cos-gold-l, #B79A5B);
   margin-bottom: 8px;
 }
 .cos-acc-welcome-name {
@@ -533,7 +533,7 @@ if ( $logged_in ) {
   background: #fff !important;
   font-size: 13px !important;
   font-weight: 300 !important;
-  color: var(--cos-ink, #171A1F) !important;
+  color: var(--cos-ink, #111111) !important;
   font-family: var(--cos-body, sans-serif) !important;
   line-height: 1.5 !important;
   outline: none !important;
@@ -547,7 +547,7 @@ if ( $logged_in ) {
 #cos-account .cos-acc-input[type="text"]:focus,
 #cos-account .cos-acc-input[type="email"]:focus,
 #cos-account .cos-acc-input[type="password"]:focus {
-  border-color: var(--cos-navy, #0F1B2D) !important;
+  border-color: var(--cos-navy, #050505) !important;
   box-shadow: none !important;
 }
 </style>

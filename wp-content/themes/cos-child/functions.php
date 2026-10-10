@@ -22,3 +22,4 @@ require_once get_stylesheet_directory() . '/inc/seo.php';
 require_once get_stylesheet_directory() . '/inc/schema.php';
 require_once get_stylesheet_directory() . '/inc/navigation.php';
 require_once get_stylesheet_directory() . '/inc/forms.php';
+require_once get_stylesheet_directory() . '/inc/home-2026.php';

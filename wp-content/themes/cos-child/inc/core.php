@@ -68,6 +68,27 @@ function cos_child_disable_wpautop_for_raw_html_pages(): void {
 }
 add_action( 'wp', 'cos_child_disable_wpautop_for_raw_html_pages' );
 
+/**
+ * Remove a leaked CSS preamble from the Journal collection hubs.
+ *
+ * These pages were saved with a style block in post_content, but the style
+ * tags were stripped while their CSS text remained. The component rules now
+ * live in style.css; this narrowly removes only the text before a matching
+ * hub root and leaves every other raw-HTML page untouched.
+ */
+function cos_child_clean_journal_hub_content( string $content ): string {
+	if ( is_admin() || ! is_singular( 'page' ) ) return $content;
+
+	$marker  = '<div class="cos-jnl-hub">';
+	$hub_pos = strpos( $content, $marker );
+	$css_pos = strpos( $content, '.cos-jnl-hub{' );
+
+	if ( false === $hub_pos || false === $css_pos || $css_pos > $hub_pos ) return $content;
+
+	return substr( $content, $hub_pos );
+}
+add_filter( 'the_content', 'cos_child_clean_journal_hub_content', 1 );
+
 function cos_child_decode_script_body_entities( string $html ): string {
 	$decoded = preg_replace_callback(
 		'#<script\b([^>]*)>(.*?)</script>#is',
@@ -119,13 +140,13 @@ remove_action( 'wp_enqueue_scripts', 'wp_enqueue_block_template_skip_link' );
 remove_action( 'wp_footer', 'the_block_template_skip_link' );
 
 function cos_child_skip_link(): void { ?>
-<a class="cos-skip-link screen-reader-text" href="#cos-main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;background:var(--cos-navy,#0F1B2D);color:var(--cos-pearl,#F7F3ED);padding:12px 20px;font-family:sans-serif;font-size:13px;font-weight:600;text-decoration:none">
+<a class="cos-skip-link screen-reader-text" href="#cos-main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;background:var(--cos-navy,#050505);color:var(--cos-pearl,#F2F2EF);padding:12px 20px;font-family:sans-serif;font-size:13px;font-weight:600;text-decoration:none">
 Skip to main content
 </a>
 <style nonce="<?php echo esc_attr( cos_csp_nonce() ); ?>">
 .cos-skip-link:focus{left:8px;top:8px;width:auto;height:auto;overflow:visible}
-:focus-visible{outline:2px solid #2F6FED;outline-offset:2px;box-shadow:0 0 0 2px #F7F3ED}
-button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid #2F6FED;outline-offset:2px;box-shadow:0 0 0 2px #F7F3ED}
+:focus-visible{outline:2px solid #2F6FED;outline-offset:2px;box-shadow:0 0 0 2px #F2F2EF}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid #2F6FED;outline-offset:2px;box-shadow:0 0 0 2px #F2F2EF}
 </style>
 <?php }
 add_action( 'wp_body_open', 'cos_child_skip_link', 1 );

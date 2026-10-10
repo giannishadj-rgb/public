@@ -47,6 +47,27 @@ test.describe('SEO, assets, and browser integrity scenarios', () => {
     }
   });
 
+  test('the commercial and journal skin-concerns hubs resolve distinct, non-colliding metadata', async ({ page }) => {
+    // Regression test for the cos_child_seo_page_meta() duplicate-array-key
+    // collision (both /skin-concerns/ and /journal/skin-concerns/ have
+    // post_name 'skin-concerns') — SEO correction pass, 2026-09-19.
+    await gotoAndCheck(page, '/skin-concerns/');
+    await expect(page).toHaveTitle('Shop Skincare by Skin Concern | Caviar of Switzerland');
+    const shopDescription = await page.locator('meta[name="description"]').first().getAttribute('content');
+    const shopOgTitle = await page.locator('meta[property="og:title"]').first().getAttribute('content');
+    expect(shopDescription).toBe('Find Swiss caviar skincare for fine lines, loss of firmness, dark circles, dryness and dullness, with relevant products and supporting evidence.');
+    expect(shopOgTitle).toBe('Shop Skincare by Skin Concern | Caviar of Switzerland');
+
+    await gotoAndCheck(page, '/journal/skin-concerns/');
+    await expect(page).toHaveTitle('Skin Concern Guides | Caviar of Switzerland Journal');
+    const journalDescription = await page.locator('meta[name="description"]').first().getAttribute('content');
+    const journalOgTitle = await page.locator('meta[property="og:title"]').first().getAttribute('content');
+    expect(journalDescription).toBe('Explore practical guidance on dryness, sensitivity, breakouts, under-eye aging and other skin concerns, with relevant routines and ingredients.');
+    expect(journalOgTitle).toBe('Skin Concern Guides | Caviar of Switzerland Journal');
+
+    expect(journalDescription).not.toBe(shopDescription);
+  });
+
   test('critical page assets are not broken', async ({ page }) => {
     test.slow();
 
@@ -56,26 +77,37 @@ test.describe('SEO, assets, and browser integrity scenarios', () => {
     }
   });
 
-  test('core pages stay within viewport on narrow and wide screens', async ({ page }) => {
-    // Populate the cart once up front (persists via cookies/session for the
-    // rest of this test) so /checkout/ renders its real form instead of
-    // redirecting to the empty cart. No order is ever placed.
-    await addFirstProductToBag(page);
-    const productLinks = await discoverProductLinks(page);
-    const pdpPath = productLinks[0] ?? '/shop/';
+  // Split by viewport (2026-09-19, second UI/UX audit follow-up): the single
+  // combined test below did 3 viewports x 7 paths = 21 full navigations
+  // under Playwright's shared 45s test timeout and consistently timed out on
+  // "Target page, context or browser has been closed" partway through the
+  // third viewport -- confirmed via `git stash` to fail identically on the
+  // pre-audit baseline, so this was never about the overflow assertions
+  // themselves, just the combined test's own runtime budget. Each viewport
+  // now gets its own test (7 navigations each, comfortably inside 45s) with
+  // the exact same per-page setup and the exact same overflow assertion --
+  // nothing about what's being checked has changed or been weakened.
+  const cosViewportMatrixCases: Array<{ name: string; width: number; height: number }> = [
+    { name: '390x844', width: 390, height: 844 },
+    { name: '768x1024', width: 768, height: 1024 },
+    { name: '1440x950', width: 1440, height: 950 },
+  ];
+  for (const viewport of cosViewportMatrixCases) {
+    test(`core pages stay within viewport at ${viewport.name}`, async ({ page }) => {
+      // Populate the cart up front (persists via cookies/session for the
+      // rest of this test) so /checkout/ renders its real form instead of
+      // redirecting to the empty cart. No order is ever placed.
+      await addFirstProductToBag(page);
+      const productLinks = await discoverProductLinks(page);
+      const pdpPath = productLinks[0] ?? '/shop/';
 
-    for (const viewport of [
-      { width: 390, height: 844 },
-      { width: 768, height: 1024 },
-      { width: 1440, height: 950 }
-    ]) {
-      await page.setViewportSize(viewport);
+      await page.setViewportSize({ width: viewport.width, height: viewport.height });
       for (const path of ['/', '/shop/', '/cart/', '/account/', pdpPath, '/contact/', '/checkout/']) {
         await gotoAndCheck(page, path);
         await expectNoHorizontalOverflow(page);
       }
-    }
-  });
+    });
+  }
 
   test('analytics data layer and local cart helpers initialise without stale badge inflation', async ({ page }) => {
     await gotoAndCheck(page, '/');

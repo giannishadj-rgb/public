@@ -19,9 +19,9 @@ function cos_child_newsletter_form(): void { ?>
       </div>
       <label class="cos-nl-consent">
         <input type="checkbox" name="gdpr" required/>
-        I agree to receive communications from Caviar of Switzerland. <a href="/privacy/" style="color:rgba(248,247,244,.6);text-decoration:underline">Privacy Policy</a>.
+        <span class="cos-nl-consent-text">I agree to receive communications from Caviar of Switzerland. <a href="/privacy/" style="color:rgba(248,247,244,.6);text-decoration:underline">Privacy Policy</a>.</span>
       </label>
-      <noscript><p style="font-size:10px;color:rgba(248,247,244,.6);margin-top:8px">JavaScript is required to join the Caviar Circle here. Please email us instead — see the Contact page.</p></noscript>
+      <noscript><p style="font-size:13px;color:rgba(248,247,244,.6);margin-top:8px">JavaScript is required to join the Caviar Circle here. Please email us instead — see the Contact page.</p></noscript>
     </form>
 <?php }
 
@@ -35,7 +35,7 @@ function cos_child_newsletter_form_script(): void { ?>
   var originalText=btn.textContent;
   function showError(msg){
     var err=form.querySelector('.cos-nl-err');
-    if(!err){err=document.createElement('p');err.className='cos-nl-err';err.style.cssText='font-size:10px;color:#c47a7a;margin-top:4px';form.appendChild(err);}
+    if(!err){err=document.createElement('p');err.className='cos-nl-err';err.style.cssText='font-size:13px;color:#c47a7a;margin-top:4px';form.appendChild(err);}
     err.textContent=msg;
   }
   function resetBtn(){btn.textContent=originalText;btn.disabled=false;}

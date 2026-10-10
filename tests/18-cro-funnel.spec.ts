@@ -10,13 +10,19 @@ import { gotoAndCheck, scrollWindowIncrementally } from './helpers/cos-helpers';
  */
 
 test.describe('Homepage value proposition and CTA hierarchy', () => {
-  test('hero has the new H1, supporting copy, and reassurance line', async ({ page }) => {
+  // 2026-09-27 redesign: The Complete Ritual is the hero product story
+  // (CAV59889 tray shot), with the offer as HTML text beside the CTAs.
+  test('hero presents The Complete Ritual, the four-product offer, and the evidence line as text', async ({ page }) => {
     await gotoAndCheck(page, '/');
-    await expect(page.locator('.cos-hero-h1')).toHaveText('A four-step ritual for firmer, smoother-looking skin.');
-    await expect(page.locator('.cos-hero-eyebrow')).toHaveText('SWISS CAVIAR SKINCARE');
-    await expect(page.locator('.cos-hero-sub')).toContainText('independently tested results at 28 days');
-    await expect(page.locator('.cos-hero-reassurance')).toContainText('4 full-size products');
-    await expect(page.locator('.cos-hero-reassurance')).toContainText('30-day returns');
+    await expect(page.locator('h1')).toHaveCount(1);
+    await expect(page.locator('#cos-hero h1')).toHaveText('The Complete Ritual');
+    await expect(page.locator('.cos-hh-eyebrow')).toHaveText(/swiss caviar skincare/i);
+    await expect(page.locator('.cos-hh-sub')).toHaveText('Four Swiss-made formulas designed to cleanse, treat, revitalise and regenerate the skin.');
+    await expect(page.locator('.cos-hh-offer')).toHaveText(/Four full-size products\s*·\s*€450\s*·\s*Save €50/);
+    await expect(page.locator('.cos-hh-proof')).toHaveText('Independently measured results at 28 days.');
+    await expect(page.locator('#cos-hero img')).toHaveAttribute('alt', 'The complete four-step Caviar of Switzerland skincare ritual presented on a silver tray.');
+    await expect(page.locator('#cos-hero img')).toHaveAttribute('fetchpriority', 'high');
+    await expect(page.locator('#cos-hero img')).not.toHaveAttribute('loading', 'lazy');
   });
 
   test('primary CTA is visually dominant over the secondary CTA', async ({ page }) => {
@@ -24,50 +30,48 @@ test.describe('Homepage value proposition and CTA hierarchy', () => {
     const primary = page.locator('[data-cro-cta="home-hero-primary"]');
     const secondary = page.locator('[data-cro-cta="home-hero-secondary"]');
 
-    await expect(primary).toHaveText('Shop the 4-Step Ritual — Save €50');
+    await expect(primary).toHaveText(/shop the complete ritual/i);
     await expect(primary).toHaveAttribute('href', '/products/the-complete-ritual/');
-    await expect(secondary).toHaveText('See the 4 Steps');
+    await expect(secondary).toHaveText(/discover the four steps/i);
     await expect(secondary).toHaveAttribute('href', '/the-ritual/');
 
     const [primaryBg, secondaryBg] = await Promise.all([
       primary.evaluate(el => getComputedStyle(el).backgroundColor),
       secondary.evaluate(el => getComputedStyle(el).backgroundColor),
     ]);
-    // Primary is filled (opaque background); secondary is a transparent/outline ghost button.
+    // Primary is filled (opaque background); secondary is a transparent text link.
     expect(primaryBg).not.toBe('rgba(0, 0, 0, 0)');
     expect(secondaryBg).toBe('rgba(0, 0, 0, 0)');
+    expect((await primary.boundingBox())!.height).toBeGreaterThanOrEqual(48);
   });
 
-  test('trust strip links point to real, substantiated pages', async ({ page }) => {
-    await gotoAndCheck(page, '/');
-    await expect(page.locator('.cos-hero-trust a', { hasText: 'Independently tested' })).toHaveAttribute('href', '/science/clinical-studies/');
-    await expect(page.locator('.cos-hero-trust a', { hasText: '30-day returns' })).toHaveAttribute('href', '/shipping-returns/');
-  });
-
-  test('the complete hero value proposition is visible without scrolling at 390x844', async ({ page }) => {
+  test('at 390x844 the offer and primary CTA are in the first viewport, and the copy sits above the image', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     await gotoAndCheck(page, '/');
-
-    const hero = page.locator('#cos-hero');
-    const heroBox = await hero.boundingBox();
-    expect(heroBox).not.toBeNull();
-
-    for (const selector of ['.cos-hero-eyebrow', '.cos-hero-h1', '.cos-hero-sub', '.cos-cta-group', '.cos-hero-reassurance', '.cos-hero-trust']) {
+    for (const selector of ['.cos-hh-eyebrow', '#cos-hero h1', '.cos-hh-sub', '.cos-hh-offer', '[data-cro-cta="home-hero-primary"]']) {
       const box = await page.locator(selector).first().boundingBox();
       expect(box, `${selector} should be present`).not.toBeNull();
-      expect(box!.y).toBeGreaterThanOrEqual(0);
-      expect(box!.y + box!.height, `${selector} should not overflow the 100svh hero`).toBeLessThanOrEqual(heroBox!.y + heroBox!.height + 2);
+      expect(box!.y + box!.height, `${selector} should be visible without scrolling`).toBeLessThanOrEqual(844);
     }
+    const copy = await page.locator('.cos-hh-copy').boundingBox();
+    const media = await page.locator('.cos-hh-media').boundingBox();
+    expect(media!.y).toBeGreaterThanOrEqual(copy!.y + copy!.height - 1);
   });
 
-  test('the complete hero value proposition is visible without scrolling at 1440x900', async ({ page }) => {
+  test('at 1440x900 the copy never overlaps the products and the next section begins in view', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     await gotoAndCheck(page, '/');
-
-    const hero = page.locator('#cos-hero');
-    const heroBox = await hero.boundingBox();
-    const trustBox = await page.locator('.cos-hero-trust').boundingBox();
-    expect(trustBox!.y + trustBox!.height).toBeLessThanOrEqual(heroBox!.y + heroBox!.height + 2);
+    const heroBox = await page.locator('#cos-hero').boundingBox();
+    const copy = await page.locator('.cos-hh-copy').boundingBox();
+    // The tray's left rim sits at 46% of the wide crop (object-position: right).
+    const productsLeft = await page.locator('#cos-hero img').evaluate((img: HTMLImageElement) => {
+      const r = img.getBoundingClientRect(); const s = Math.max(r.width / 2400, r.height / 1350); const dw = 2400 * s;
+      return r.left + r.width - dw + 0.46 * dw;
+    });
+    expect(copy!.x + copy!.width).toBeLessThan(productsLeft - 24);
+    expect(heroBox!.height).toBeGreaterThanOrEqual(680);
+    expect(heroBox!.height).toBeLessThanOrEqual(740);
+    expect((await page.locator('#cos-ritual-rail').boundingBox())!.y).toBeLessThan(900);
   });
 });
 
@@ -87,11 +91,14 @@ test.describe('Shop page: compact hero and concern selector', () => {
     expect(eyebrow!.y).toBeGreaterThan(80); // clear of the fixed nav bar
   });
 
-  test('shop hero CTA is filled/high-contrast, links directly to the bundle PDP, and states the saving', async ({ page }) => {
+  test('shop hero CTA is filled/high-contrast and jumps to the first purchasable section', async ({ page }) => {
+    // 2026-09-26 hero redesign: CTA copy is "Shop the Collection" per the
+    // brief, anchored to the Complete Ritual offer that opens the catalogue.
     await gotoAndCheck(page, '/shop/');
     const cta = page.locator('[data-cro-cta="shop-hero-primary"]');
-    await expect(cta).toHaveText('View Complete Ritual — Save €50');
-    await expect(cta).toHaveAttribute('href', '/products/the-complete-ritual/');
+    await expect(cta).toHaveText('Shop the Collection');
+    await expect(cta).toHaveAttribute('href', '#cos-ritual');
+    await expect(page.locator('#cos-ritual')).toHaveCount(1);
     const bg = await cta.evaluate(el => getComputedStyle(el).backgroundColor);
     expect(bg).not.toBe('rgba(0, 0, 0, 0)');
     const box = await cta.boundingBox();
@@ -128,31 +135,48 @@ test.describe('Shop page: compact hero and concern selector', () => {
 test.describe('Product page: above-fold trim, sticky mobile CTA, decision support', () => {
   const pdpUrl = '/products/advanced-repair-serum/'; // COS-002, has clinical stats
 
-  test('benefit list near the CTA is trimmed to 3, with the rest preserved further down the page', async ({ page }) => {
+  test('benefit list near the CTA is trimmed to 3, with any extras preserved further down the page', async ({ page }) => {
     await gotoAndCheck(page, pdpUrl);
     const leadList = page.locator('.cos-pdp-form').locator('xpath=preceding-sibling::ul[contains(@class,"cos-pdp-benefits-list")][1]');
     await expect(leadList.locator('.cos-pdp-benefit-item')).toHaveCount(3);
+    // PDP audit 2026-09-27: the serum's copy was consolidated to exactly three
+    // benefits, so it has no "In Full" overflow list any more.
+    await expect(page.locator('.cos-pdp-desc-section .cos-pdp-benefits-list')).toHaveCount(0);
 
-    // The 3 items trimmed from the top are not deleted — they're preserved lower on the page.
-    const fullSection = page.locator('.cos-pdp-desc-section .cos-pdp-benefits-list');
-    await expect(fullSection.locator('.cos-pdp-benefit-item')).toHaveCount(3);
+    // 2026-09-27: the same consolidation was applied to all four individual
+    // products -- each leads with exactly three benefits and has no overflow list.
+    for (const slug of ['micellar-water-cleanser', 'revitalizing-eye-cream', '24h-regeneration-cream']) {
+      await gotoAndCheck(page, `/products/${slug}/`);
+      await expect(page.locator('.cos-pdp-info .cos-pdp-benefit-item')).toHaveCount(3);
+      await expect(page.locator('.cos-pdp-desc-section .cos-pdp-benefits-list')).toHaveCount(0);
+    }
   });
 
-  test('"Ideal for", bundle saving, returns link, and payment method are all near the CTA', async ({ page }) => {
+  test('returns link and payment method are near the CTA; no bundle nudge; the who-it-is-for copy lives in its own section only', async ({ page }) => {
     await gotoAndCheck(page, pdpUrl);
-    await expect(page.locator('.cos-pdp-who-mini')).toContainText("Who it's for:");
-    const bundleNudge = page.locator('[data-cro-cta="pdp-bundle-nudge"]');
-    await expect(bundleNudge).toContainText('save €50');
-    await expect(bundleNudge).toHaveAttribute('href', '/products/the-complete-ritual/');
+    // PDP audit 2026-09-27: the duplicate "Who it's for" line under the
+    // purchase panel was removed; the dedicated section carries it.
+    await expect(page.locator('.cos-pdp-who-mini')).toHaveCount(0);
+    await expect(page.locator('#pdp-who')).toHaveCount(1);
+    // 2026-09-27: the "Part of the 4-Step Ritual — save €50" link was removed
+    // at the owner's request; the secondary CTA now reads "Discover the Ritual".
+    await expect(page.locator('[data-cro-cta="pdp-bundle-nudge"]')).toHaveCount(0);
+    await expect(page.locator('[data-cro-cta="pdp-secondary-learn-ritual"]')).toHaveText('Discover the Ritual');
 
     const returnsLink = page.locator('.cos-pdp-trust a.cos-pdp-trust-item');
     await expect(returnsLink).toHaveAttribute('href', '/shipping-returns/');
 
-    // Only Cash on Delivery is enabled today — the trust grid must say so, not "Secure Checkout".
-    await expect(page.locator('.cos-pdp-trust')).toContainText('Pay on Delivery');
+    // 2026-09-27: individual PDPs keep only shipping + returns in the trust
+    // row (payment method and "Authentic Swiss Formula" removed by the owner);
+    // it must never claim a payment method that isn't enabled.
+    await expect(page.locator('.cos-pdp-trust .cos-pdp-trust-item')).toHaveCount(2);
+    await expect(page.locator('.cos-pdp-trust')).not.toContainText('Pay on Delivery');
     await expect(page.locator('.cos-pdp-trust')).not.toContainText('Secure Checkout');
 
-    await expect(page.locator('.cos-pdp-methodology-link a')).toHaveAttribute('href', '/science/clinical-studies/');
+    // One methodology link in the purchase panel, beside the statistic — the
+    // repeat below the assurances was removed.
+    await expect(page.locator('.cos-pdp-methodology-link')).toHaveCount(0);
+    await expect(page.locator('.cos-pdp-info a[href="/science/clinical-studies/"]')).toHaveCount(1);
   });
 
   test('the bundle page does not nudge itself toward the bundle', async ({ page }) => {
@@ -166,11 +190,11 @@ test.describe('Product page: above-fold trim, sticky mobile CTA, decision suppor
   });
 
   test('a product with a verified statistic shows exactly its first stat near the CTA, unchanged, with a methodology link — and never before the benefits list', async ({ page }) => {
-    await gotoAndCheck(page, pdpUrl); // COS-002: $pd['stats'] = [['+47%', 'Perceived firmness increase at 28 days']]
+    await gotoAndCheck(page, pdpUrl); // COS-002: $pd['stats'] = [['+47%', 'Cutometer-measured improvement in firmness at 28 days']]
     const evidence = page.locator('.cos-pdp-evidence');
     await expect(evidence).toHaveCount(1);
     await expect(evidence.locator('.cos-pdp-evidence-num')).toHaveText('+47%');
-    await expect(evidence.locator('.cos-pdp-evidence-label')).toHaveText('Perceived firmness increase at 28 days');
+    await expect(evidence.locator('.cos-pdp-evidence-label')).toHaveText('Cutometer-measured improvement in firmness at 28 days');
     await expect(evidence.locator('.cos-pdp-evidence-link')).toHaveText('View study methodology');
     await expect(evidence.locator('.cos-pdp-evidence-link')).toHaveAttribute('href', '/science/clinical-studies/');
 
@@ -448,16 +472,14 @@ test.describe('Sitewide cta_click tracking', () => {
 });
 
 test.describe('Footer trust signals', () => {
-  test('footer states the confirmed hosting/security facts as plain line-icon badges, never a third-party seal', async ({ page }) => {
-    await gotoAndCheck(page, '/');
-    const badges = page.locator('.cos-footer-security-item');
-    await expect(badges).toHaveCount(3);
-    await expect(badges.nth(0)).toContainText('SSL-Encrypted Checkout');
-    await expect(badges.nth(1)).toContainText('WAF + DDoS Protection');
-    await expect(badges.nth(2)).toContainText('Daily Malware Scanning');
-    for (let i = 0; i < 3; i++) {
-      await expect(badges.nth(i).locator('svg')).toHaveCount(1);
-    }
+  test('footer carries one consolidated assurance line and no hosting/security badges', async ({ page }) => {
+    // 2026-10-02 owner decision: hosting/security facts (WAF, malware scanning)
+    // are not part of the brand presentation; assurances live in one quiet line.
+    await gotoAndCheck(page, '/shop/');
+    const items = page.locator('#cos-footer .cos-trust-item');
+    await expect(items).toHaveText(['Made in Switzerland', 'Free worldwide shipping', '30-day returns', 'Secure checkout']);
+    await expect(page.locator('.cos-footer-security-item')).toHaveCount(0);
+    await expect(page.locator('#cos-footer')).not.toContainText(/WAF|DDoS|malware/i);
 
     // Regression guard: never claim a specific third-party certification
     // (Norton/McAfee/TRUSTe/etc.) unless this site is actually enrolled in
@@ -528,16 +550,17 @@ test.describe('PDP in-page contents menu', () => {
     await expect(page.locator('#pdp-clinical')).toHaveCount(0);
   });
 
-  test('the bundle menu includes its own extra sections without duplicating shared ones', async ({ page }) => {
+  test('the bundle has no section-navigation bar at all, unlike the individual-product pill nav', async ({ page }) => {
+    // Editorial redesign (2026-09-20): the bundle previously had first a
+    // 9-entry pill nav inherited from the individual-product markup, then
+    // (after an earlier redesign pass) its own 4-item text-link nav. This
+    // latest pass removes section navigation from the bundle entirely --
+    // the page now reads top to bottom as one narrative with nothing left
+    // to jump between, per the redesign brief's explicit instruction.
     await gotoAndCheck(page, '/products/the-complete-ritual/');
-    const labels = await page.locator('.cos-pdp-jump-link').allTextContents();
-    expect(labels).toContain("What's Included");
-    expect(labels).toContain('Price Comparison');
-    expect(labels).toContain('Why It Works');
-    // Clinical Results and FAQ each appear once, not twice (common section
-    // + bundle-specific section are mutually exclusive per product).
-    expect(labels.filter(l => l === 'Clinical Results').length).toBe(1);
-    expect(labels.filter(l => l === 'FAQ').length).toBe(1);
+    await expect(page.locator('.cos-pdp-jump-link')).toHaveCount(0);
+    await expect(page.locator('.cos-pdp-bundle-nav-link')).toHaveCount(0);
+    await expect(page.locator('.cos-pdp-bundle-nav')).toHaveCount(0);
   });
 
   test('clicking a link actually scrolls its target section into view', async ({ page }) => {
@@ -551,5 +574,20 @@ test.describe('PDP in-page contents menu', () => {
       return r.top < window.innerHeight && r.bottom > 0;
     });
     expect(inView).toBe(true);
+  });
+});
+
+test.describe('PDP ritual stepper', () => {
+  test('each ritual step links to its product, and the current step is marked, not linked', async ({ page }) => {
+    await gotoAndCheck(page, '/products/advanced-repair-serum/');
+    const nav = page.getByRole('navigation', { name: 'The four-step ritual' });
+    await expect(nav.locator('a')).toHaveCount(3);
+    await expect(nav.locator('[aria-current="page"]')).toHaveText(/Treat/);
+    await expect(nav.locator('a', { hasText: 'Cleanse' })).toHaveAttribute('href', /\/products\/micellar-water-cleanser\/$/);
+    await expect(nav.locator('a', { hasText: 'Eye' })).toHaveAttribute('href', /\/products\/revitalizing-eye-cream\/$/);
+    await expect(nav.locator('a', { hasText: 'Moisturise' })).toHaveAttribute('href', /\/products\/24h-regeneration-cream\/$/);
+    await nav.locator('a', { hasText: 'Cleanse' }).click();
+    await expect(page).toHaveURL(/\/products\/micellar-water-cleanser\/$/);
+    await expect(page.getByRole('navigation', { name: 'The four-step ritual' }).locator('[aria-current="page"]')).toHaveText(/Cleanse/);
   });
 });

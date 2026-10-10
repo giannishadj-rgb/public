@@ -18,7 +18,7 @@ if ( WC()->cart->is_empty() && ! is_wc_endpoint_url( 'order-received' ) ) {
 <body <?php body_class( 'woocommerce woocommerce-checkout woocommerce-page' ); ?>>
 <?php wp_body_open(); ?>
 <style nonce="<?php echo esc_attr( cos_csp_nonce() ); ?>">
-#cos-checkout-pg{font-family:var(--cos-body);color:var(--cos-ink,#171A1F);background:var(--cos-pearl,#F7F3ED);min-height:70vh}
+#cos-checkout-pg{font-family:var(--cos-body);color:var(--cos-ink,#111111);background:var(--cos-pearl,#F2F2EF);min-height:70vh}
 #cos-checkout-pg *{box-sizing:border-box}
 .cos-co-spacer{height:var(--cos-nav-h,80px)}
 .cos-co-head{max-width:1100px;margin:0 auto;padding:48px 24px 0}
@@ -59,7 +59,7 @@ if ( WC()->cart->is_empty() && ! is_wc_endpoint_url( 'order-received' ) ) {
 #cos-checkout-pg .form-row label{display:block;font-size:9px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--cos-slate,#5C6675);margin-bottom:6px}
 #cos-checkout-pg .form-row .required{color:var(--cos-gold,#8B692F);text-decoration:none}
 #cos-checkout-pg input.input-text,#cos-checkout-pg select,#cos-checkout-pg textarea{width:100%;min-height:44px;box-sizing:border-box;padding:12px 14px;border:1.5px solid var(--cos-stone,#E5DED4);background:#fff;font-family:var(--cos-body);font-size:13px;color:var(--cos-ink);outline:none;border-radius:0;transition:border-color .2s}
-#cos-checkout-pg input.input-text:focus,#cos-checkout-pg select:focus,#cos-checkout-pg textarea:focus{border-color:var(--cos-navy,#0F1B2D)}
+#cos-checkout-pg input.input-text:focus,#cos-checkout-pg select:focus,#cos-checkout-pg textarea:focus{border-color:var(--cos-navy,#050505)}
 #cos-checkout-pg .select2-container .select2-selection--single{height:44px;border:1.5px solid var(--cos-stone,#E5DED4);border-radius:0;padding:6px 14px}
 #cos-checkout-pg .woocommerce-form__label-for-checkbox{display:flex;align-items:flex-start;gap:8px;font-size:12px;font-weight:300;color:var(--cos-slate);margin:16px 0}
 #cos-checkout-pg #order_review_heading{display:none}
@@ -68,13 +68,13 @@ if ( WC()->cart->is_empty() && ! is_wc_endpoint_url( 'order-received' ) ) {
 #cos-checkout-pg table.shop_table th,#cos-checkout-pg table.shop_table td{border:none;border-bottom:1px solid var(--cos-stone,#E5DED4);padding:10px 0;font-size:13px;font-weight:300;color:var(--cos-slate)}
 #cos-checkout-pg table.shop_table .product-name{color:var(--cos-ink)}
 #cos-checkout-pg table.shop_table .order-total th,#cos-checkout-pg table.shop_table .order-total td{font-size:15px;font-weight:600;color:var(--cos-ink);border-bottom:none;border-top:1px solid var(--cos-stone)}
-#cos-checkout-pg #payment{background:var(--cos-pearl,#F7F3ED);border-top:1px solid var(--cos-stone,#E5DED4);padding-top:20px}
+#cos-checkout-pg #payment{background:var(--cos-pearl,#F2F2EF);border-top:1px solid var(--cos-stone,#E5DED4);padding-top:20px}
 #cos-checkout-pg ul.payment_methods{list-style:none;margin:0 0 16px;padding:0;display:flex;flex-direction:column;gap:10px}
 #cos-checkout-pg ul.payment_methods li{background:#fff;border:1px solid var(--cos-stone,#E5DED4);padding:14px 16px}
 #cos-checkout-pg ul.payment_methods label{font-size:12px;font-weight:500;color:var(--cos-ink)}
 #cos-checkout-pg .payment_box{font-size:12px;font-weight:300;color:var(--cos-slate);line-height:1.7;padding-top:10px}
-#cos-checkout-pg #place_order{display:block;width:100%;padding:17px;background:var(--cos-navy,#0F1B2D);color:#fff;font-family:var(--cos-body);font-size:9px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;border:none;cursor:pointer;transition:background .2s}
-#cos-checkout-pg #place_order:hover{background:var(--cos-ink,#171A1F)}
+#cos-checkout-pg #place_order{display:block;width:100%;padding:17px;background:var(--cos-navy,#050505);color:#fff;font-family:var(--cos-body);font-size:9px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;border:none;cursor:pointer;transition:background .2s}
+#cos-checkout-pg #place_order:hover{background:var(--cos-ink,#111111)}
 #cos-checkout-pg .woocommerce-terms-and-conditions-wrapper{font-size:11px;font-weight:300;color:var(--cos-slate);margin:16px 0}
 #cos-checkout-pg .woocommerce-terms-and-conditions-wrapper a{color:var(--cos-ink)}
 #cos-checkout-pg .blockUI.blockOverlay{position:relative}
@@ -88,14 +88,14 @@ if ( WC()->cart->is_empty() && ! is_wc_endpoint_url( 'order-received' ) ) {
 #cos-checkout-pg .checkout_coupon.woocommerce-form-coupon{display:flex;gap:10px;margin:0 0 24px;padding:16px;background:#fff;border:1px solid var(--cos-stone,#E5DED4);flex-wrap:wrap}
 #cos-checkout-pg .checkout_coupon .form-row{margin:0;flex:1;min-width:180px}
 #cos-checkout-pg .checkout_coupon .form-row-last{flex:none}
-#cos-checkout-pg .checkout_coupon button{padding:0 24px;min-height:44px;background:var(--cos-navy,#0F1B2D);color:#fff;font-family:var(--cos-body);font-size:9px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;border:none;cursor:pointer;transition:background .2s}
-#cos-checkout-pg .checkout_coupon button:hover{background:var(--cos-ink,#171A1F)}
+#cos-checkout-pg .checkout_coupon button{padding:0 24px;min-height:44px;background:var(--cos-navy,#050505);color:#fff;font-family:var(--cos-body);font-size:9px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;border:none;cursor:pointer;transition:background .2s}
+#cos-checkout-pg .checkout_coupon button:hover{background:var(--cos-ink,#111111)}
 
 /* ── Reassurance line under Place Order, optional-field toggles ── */
 #cos-checkout-pg .cos-co-reassurance{font-size:10px;font-weight:300;color:var(--cos-slate,#5C6675);text-align:center;margin:14px 0 0}
 #cos-checkout-pg .cos-co-reassurance a{color:inherit;text-decoration:underline;text-underline-offset:2px}
 #cos-checkout-pg .cos-co-field-toggle{display:block;background:none;border:none;padding:6px 0;margin:0 0 16px;font-size:11px;font-weight:600;letter-spacing:.02em;color:var(--cos-slate,#5C6675);text-decoration:underline;text-underline-offset:2px;cursor:pointer;text-align:left;font-family:var(--cos-body)}
-#cos-checkout-pg .cos-co-field-toggle:hover{color:var(--cos-navy,#0F1B2D)}
+#cos-checkout-pg .cos-co-field-toggle:hover{color:var(--cos-navy,#050505)}
 /* !important: WooCommerce server-renders these fields with an inline
    style="display:block" and its own checkout.js re-applies inline
    display via jQuery .show() during address-field locale handling — a

@@ -1,0 +1,6 @@
+{
+  "files": ["wp-content/themes/cos-child/page-home-2026.php"],
+  "insertBefore": "</body>",
+  "commentSyntax": "html",
+  "cspChecked": true
+}

@@ -86,7 +86,12 @@ function cos_child_seo_page_meta(): array {
 		// Journal pillar hub pages — see cos_child_register_journal_pillar_taxonomy().
 		'ingredients-science' => [ 'Ingredient Science — Caviar of Switzerland Journal', 'What each active ingredient in the ritual actually does, and the clinical evidence behind the claim.' ],
 		'routines-how-to'     => [ 'Routines & How-To — Caviar of Switzerland Journal', 'Sequencing, timing, and the routine-building guidance behind the Caviar of Switzerland ritual.' ],
-		'skin-concerns'       => [ 'Skin Concerns — Caviar of Switzerland Journal', 'Breakouts, sensitivity, hydration, and under-eye aging, addressed by skin concern and life stage.' ],
+		// 'skin-concerns' here is qualified by parent ('journal/skin-concerns')
+		// because a second, unrelated page — the commercial concern hub at
+		// /skin-concerns/ (page 23776, top-level) — shares the same bare slug.
+		// See cos_child_seo_resolve_meta_key() below, which is what actually
+		// resolves this key; do not rename it back to bare 'skin-concerns'.
+		'journal/skin-concerns' => [ 'Skin Concern Guides | Caviar of Switzerland Journal', 'Explore practical guidance on dryness, sensitivity, breakouts, under-eye aging and other skin concerns, with relevant routines and ingredients.' ],
 		'editorial'           => [ 'Editorial — Caviar of Switzerland Journal', 'Comparisons, trends, and the wider conversation in luxury and clinical skincare.' ],
 		'cart'       => [ 'Cart — Caviar of Switzerland', 'Review your Caviar of Switzerland ritual bag, samples, gifts, and checkout options.' ],
 		// noindex,follow (see the wp_robots filter below) same as cart/account —
@@ -110,12 +115,12 @@ function cos_child_seo_page_meta(): array {
 		// Skin Concerns hub + 5 purchase-intent landing pages (page 23776 and
 		// children) — see inc/schema.php's cos_child_concern_page_schema() for
 		// the matching WebPage schema.
-		'skin-concerns'          => [ 'Skin Concerns — Caviar of Switzerland', 'Shop Caviar of Switzerland by skin concern — fine lines, firmness, dark circles, dryness, and dullness — with the evidence behind each formula.' ],
-		'fine-lines-wrinkles'    => [ 'Fine Lines & Wrinkles — Causes and Treatment | Caviar of Switzerland', 'What causes fine lines and wrinkles, and the Caviar of Switzerland actives with independently disclosed evidence behind treating them.' ],
-		'loss-of-firmness'       => [ 'Loss of Firmness — Causes and Treatment | Caviar of Switzerland', 'What causes loss of skin firmness, and the formula behind the disclosed +47% perceived firmness result at 28 days.' ],
-		'dark-circles'           => [ 'Dark Circles — Causes and Treatment | Caviar of Switzerland', 'What causes dark circles, what genuinely helps, and what skincare alone can\'t fix — plus the eye cream formulated for the eye contour.' ],
-		'dry-dehydrated-skin'    => [ 'Dry & Dehydrated Skin — Causes and Treatment | Caviar of Switzerland', 'The difference between dry and dehydrated skin, and the Caviar of Switzerland routine formulated to treat both.' ],
-		'dull-skin'              => [ 'Dull Skin — Causes and Treatment | Caviar of Switzerland', 'What causes dull, tired-looking skin, and the antioxidant actives formulated to help restore radiance.' ],
+		'skin-concerns'          => [ 'Shop Skincare by Skin Concern | Caviar of Switzerland', 'Find Swiss caviar skincare for fine lines, loss of firmness, dark circles, dryness and dullness, with relevant products and supporting evidence.' ],
+		'fine-lines-wrinkles'    => [ 'Skincare for Fine Lines & Wrinkles | Caviar of Switzerland', 'Explore Swiss skincare for fine lines and wrinkles, including caviar extract, peptides, clinical evidence and a recommended four-step routine.' ],
+		'loss-of-firmness'       => [ 'Firming Skincare for Loss of Firmness | Caviar of Switzerland', 'Discover firming Swiss skincare with caviar extract and SYN®-COLL, including the serum associated with a disclosed 28-day firmness result.' ],
+		'dark-circles'           => [ 'Eye Care for Dark Circles | Caviar of Switzerland', 'Explore Swiss eye care for dark circles, puffiness and fine lines, with suitable ingredients, realistic guidance and a targeted eye cream.' ],
+		'dry-dehydrated-skin'    => [ 'Skincare for Dry & Dehydrated Skin | Caviar of Switzerland', 'Discover Swiss skincare for dry and dehydrated skin, including caviar extract, hyaluronic acid and a hydration-supporting daily routine.' ],
+		'dull-skin'              => [ 'Skincare for Dull Skin & Lost Radiance | Caviar of Switzerland', 'Explore Swiss skincare for dull, tired-looking skin, with antioxidant ingredients and a routine designed to restore visible radiance.' ],
 		// Same generic-fallback gap as above, flagged by an SEO review: descriptions
 		// in the 200-222 character range that read as extracted/concatenated page
 		// text rather than written copy.
@@ -163,16 +168,45 @@ function cos_child_seo_page_meta(): array {
 
 function cos_child_seo_pdp_meta(): array {
 	return [
-		'micellar-water-cleanser' => [ 'Luxury Micellar Water Cleanser with Caviar Extract', 'A gentle Swiss micellar cleanser with caviar extract that removes makeup and impurities without stripping the skin. 150 ml, €55.' ],
-		'advanced-repair-serum'   => [ 'Firming Anti-Aging Face Serum with Caviar Extract', 'A concentrated Swiss firming serum with caviar extract and SYN®-COLL. Targets fine lines, dullness and loss of firmness. 30 ml, €150.' ],
-		'revitalizing-eye-cream'  => [ 'Anti-Aging Eye Cream for Fine Lines & Dark Circles', 'Swiss caviar eye cream targeting dark circles, puffiness and fine lines. Independently tested with a 38% reduction in fine-line depth. 15 ml, €145.' ],
-		'24h-regeneration-cream'  => [ '24-Hour Regenerating Face Cream with Caviar Extract', 'A rich Swiss regenerating face cream with caviar extract for lasting hydration, firmness and comfort. 50 ml, €150.' ],
-		'the-complete-ritual'     => [ 'Luxury Anti-Aging Skincare Set – Complete 4-Step Ritual', 'Shop the complete four-step Swiss caviar skincare set. Five high-performance actives, four full-size formulas and a €50 saving.' ],
+		// Titles shortened 2026-09-19 (SEO correction pass) — the previous
+		// bases ran ~73-79 chars once " — Caviar of Switzerland" is appended
+		// by the <title>/OG consumers, well past useful SERP display width.
+		// Descriptions are unchanged (out of scope for this pass).
+		'micellar-water-cleanser' => [ 'Luxury Micellar Cleanser with Caviar Extract', 'A gentle Swiss micellar cleanser with caviar extract that removes makeup and impurities without stripping the skin. 150 ml, €55.' ],
+		'advanced-repair-serum'   => [ 'Firming Face Serum with Caviar Extract', 'A concentrated Swiss firming serum with caviar extract and SYN®-COLL. Targets fine lines, dullness and loss of firmness. 30 ml, €150.' ],
+		'revitalizing-eye-cream'  => [ 'Eye Cream for Fine Lines & Dark Circles', 'Swiss caviar eye cream targeting dark circles, puffiness and fine lines. Independently tested with a 38% reduction in fine-line depth. 15 ml, €145.' ],
+		'24h-regeneration-cream'  => [ 'Regenerating Face Cream with Caviar Extract', 'A rich Swiss regenerating face cream with caviar extract for lasting hydration, firmness and comfort. 50 ml, €150.' ],
+		'the-complete-ritual'     => [ 'Luxury Anti-Aging Skincare Set – 4 Steps', 'Shop the complete four-step Swiss caviar skincare set. Five high-performance actives, four full-size formulas and a €50 saving.' ],
 	];
 }
 
 function cos_child_seo_home_title(): string {
 	return 'Luxury Caviar Skincare Made in Switzerland | Caviar of Switzerland';
+}
+
+/**
+ * Resolves the correct cos_child_seo_page_meta() array key for a page,
+ * disambiguating by immediate parent slug when two different pages share the
+ * same post_name — e.g. /skin-concerns/ (top-level) and /journal/skin-concerns/
+ * (a child of /journal/) both have post_name 'skin-concerns'. A bare post_name
+ * lookup can only ever resolve to one of them (whichever array entry was
+ * defined last), silently serving the wrong metadata to the other.
+ *
+ * Falls back to the bare slug for every page that has no qualified entry —
+ * i.e. every page on this site except the one colliding pair above — so this
+ * changes lookup behaviour only where a collision actually exists.
+ */
+function cos_child_seo_resolve_meta_key( ?WP_Post $post ): string {
+	if ( ! $post instanceof WP_Post ) return '';
+	$slug = $post->post_name;
+	if ( $post->post_parent ) {
+		$parent = get_post( $post->post_parent );
+		if ( $parent instanceof WP_Post ) {
+			$qualified = $parent->post_name . '/' . $slug;
+			if ( isset( cos_child_seo_page_meta()[ $qualified ] ) ) return $qualified;
+		}
+	}
+	return $slug;
 }
 
 // The 14 Journal articles (children of the /journal/ hub) store their
@@ -245,7 +279,8 @@ add_filter( 'pre_get_document_title', function ( string $title ): string {
 		if ( isset( $pdp_meta[ $slug ] ) ) return $pdp_meta[ $slug ][0] . ' — Caviar of Switzerland';
 	} elseif ( is_page() ) {
 		$page_meta = cos_child_seo_page_meta();
-		if ( isset( $page_meta[ $slug ] ) ) return $page_meta[ $slug ][0];
+		$meta_key  = cos_child_seo_resolve_meta_key( $post instanceof WP_Post ? $post : null );
+		if ( isset( $page_meta[ $meta_key ] ) ) return $page_meta[ $meta_key ][0];
 		if ( $post instanceof WP_Post && cos_child_seo_is_journal_article( $post ) ) {
 			return cos_child_seo_clean_title( $post->post_title ) . ' — Caviar of Switzerland';
 		}
@@ -275,6 +310,10 @@ function cos_child_open_graph(): void {
 	$image_meta = cos_child_seo_image_meta();
 	$page_meta  = cos_child_seo_page_meta();
 	$pdp_meta   = cos_child_seo_pdp_meta();
+	// Same parent-qualified lookup as the <title> tag — only used for the
+	// $page_meta branch below; $slug still drives $pdp_meta/$image_meta,
+	// neither of which has a colliding key.
+	$page_meta_key = $post instanceof WP_Post ? cos_child_seo_resolve_meta_key( $post ) : $slug;
 
 	if ( is_front_page() ) {
 		$og['title']       = cos_child_seo_home_title();
@@ -293,9 +332,9 @@ function cos_child_open_graph(): void {
 		$og['description'] = $pdp_meta[ $slug ][1];
 		$og['type']        = 'product';
 		$og['image']       = $uploads . ( $image_meta[ $slug ] ?? $image_meta['the-complete-ritual'] );
-	} elseif ( isset( $page_meta[ $slug ] ) ) {
-		$og['title']       = $page_meta[ $slug ][0];
-		$og['description'] = $page_meta[ $slug ][1];
+	} elseif ( isset( $page_meta[ $page_meta_key ] ) ) {
+		$og['title']       = $page_meta[ $page_meta_key ][0];
+		$og['description'] = $page_meta[ $page_meta_key ][1];
 		$og['image']       = $uploads . ( $image_meta[ $slug ] ?? $image_meta['home'] );
 	} elseif ( $post instanceof WP_Post ) {
 		$title             = cos_child_seo_is_journal_article( $post ) ? cos_child_seo_clean_title( $post->post_title ) : $post->post_title;

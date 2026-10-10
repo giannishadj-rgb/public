@@ -254,3 +254,23 @@ function cos_child_preload_fonts(): void {
 	echo '<link rel="preload" href="' . esc_url( $font_uri . 'cormorant-garamond-300-italic-latin.woff2' ) . '" as="font" type="font/woff2" crossorigin>' . "\n";
 }
 add_action( 'wp_head', 'cos_child_preload_fonts', 1 );
+
+// Homepage hero (page content, art-directed <picture>): preload only the AVIF
+// crop this viewport will use, matching the <source media> breakpoints.
+// Browsers without AVIF support ignore a type="image/avif" preload.
+function cos_child_preload_home_hero(): void {
+	// The 2026 homepage (inc/home-2026.php) preloads its own hero.
+	if ( ! is_front_page() || ( function_exists( 'cos_h26_is_active' ) && cos_h26_is_active() ) ) return;
+	$dir = get_stylesheet_directory_uri() . '/assets/images/home-hero/';
+	foreach ( array(
+		array( '(min-width: 1280px)', 'wide', array( 1200, 1600 ) ),
+		array( '(min-width: 1024px) and (max-width: 1279.98px)', 'compact', array( 900, 1200 ) ),
+		array( '(min-width: 768px) and (max-width: 1023.98px)', 'tablet', array( 768, 1024 ) ),
+		array( '(max-width: 767.98px)', 'mobile', array( 720, 1024 ) ),
+	) as [ $media, $crop, $widths ] ) {
+		$set = implode( ', ', array_map( static fn( int $w ): string => "{$dir}home-hero-{$crop}-{$w}.avif {$w}w", $widths ) );
+		echo '<link rel="preload" as="image" type="image/avif" fetchpriority="high" media="' . esc_attr( $media ) . '" imagesrcset="' . esc_attr( $set ) . '" imagesizes="100vw">' . "
+";
+	}
+}
+add_action( 'wp_head', 'cos_child_preload_home_hero', 2 );

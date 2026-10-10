@@ -28,19 +28,23 @@ function cos_get_product_copy( string $sku ): ?array {
 	$data = array(
 		'COS-001' => array(
 			'subtitle' => 'Cleanser · Make-up Remover · Toner',
-			'image_alt' => 'Micellar Water All-in-One Cleanser with Caviar Extract — luxury micellar water cleanser bottle',
+			'image_alt' => 'Micellar Water All-in-One Cleanser by Caviar of Switzerland held upright.',
+			'summary'  => 'A no-rinse micellar water that removes make-up and daily impurities: the first gesture of the four-step ritual.',
+			'description' => '<h2>The First Gesture</h2><p>Step 1 of the ritual: a precise, no-rinse cleanse with Caviar Extract, Aloe Vera, Tamarind Seed Extract and a Skin Barrier Optimizer that prepares the skin for Advanced Repair Serum.</p><p>A fresh, lightweight cleansing water that glides across the skin without heaviness, rinsing or residue, leaving it feeling clean, soft and comfortable.</p>',
+			'description_image' => array(
+				'dir'     => 'pdp/cleanser-ritual',
+				'desktop' => array( 'widths' => array( 560, 840, 1120 ), 'w' => 1120, 'h' => 1400 ),
+				'mobile'  => array( 'widths' => array( 720, 1080 ), 'w' => 1080, 'h' => 1080 ),
+				'alt'     => 'Model reclining beside an upright bottle of Micellar Water All-in-One Cleanser.',
+			),
 			'actives_h2' => 'Inside this luxury micellar water cleanser.',
 			'benefits' => array(
 				'Gently removes make-up and daily impurities',
 				'Cleanses, tones, and refreshes in one step',
 				'Helps protect the skin against moisture loss',
-				'Helps reduce the feeling of redness, tightness, and dryness',
-				'Leaves skin feeling clean, soft, and supple',
-				'Prepares the skin perfectly for serum and moisturiser',
 			),
-			'who_for'  => 'Formulated to be gentle for most skin types, including sensitive skin — we recommend a patch test if you have specific concerns. Ideal for anyone who wants a no-rinse Step 1 that removes make-up and prepares skin for Advanced Repair Serum.',
+			'who_for'  => 'Formulated to be gentle for most skin types, including sensitive skin — we recommend a patch test if you have specific concerns.',
 			'concerns' => array( 'Daily impurities', 'Make-up removal', 'Sensitive-feeling skin', 'Dryness & tightness', 'Loss of freshness' ),
-			'texture'  => 'A fresh, lightweight cleansing water that glides across the skin without heaviness, rinsing, or residue. The skin is left with a clean, comfortable, refreshed sensation.',
 			'specs'    => array(
 				array( 'Volume', '150 ml' ),
 				array( 'Product type', 'Cleanser · Make-up Remover · Toner' ),
@@ -56,7 +60,7 @@ function cos_get_product_copy( string $sku ): ?array {
 				array( 'Why does this cleanser cost more than a typical micellar water?', 'The price reflects Swiss development and manufacture, and a formula built around Caviar Extract and a dedicated micellar complex rather than a generic surfactant base — chosen to remove impurities without compromising the skin barrier the following steps depend on.' ),
 			),
 			'actives' => array(
-				array( 'Caviar Extract', 'Micro-nutrient complex from Oscietra caviar — replenishes skin lipids and trace minerals depleted during cleansing.' ),
+				array( 'Caviar Extract', 'Micro-nutrient complex from Siberian sturgeon (Acipenser baerii) caviar — replenishes skin lipids and trace minerals depleted during cleansing.' ),
 				array( 'Micellar Complex', 'Oil-in-water system that magnetically binds to make-up, SPF, and pollution particles without disrupting the moisture barrier.' ),
 				array( 'Panthenol (Vitamin B5)', 'Draws moisture into freshly cleansed skin and soothes any sensitivity triggered by environmental exposure.' ),
 				array( 'Allantoin', 'Promotes surface cell renewal and eliminates the tightness that follows conventional cleansers.' ),
@@ -74,19 +78,32 @@ function cos_get_product_copy( string $sku ): ?array {
 
 		'COS-002' => array(
 			'subtitle' => 'The Flagship Serum',
-			'image_alt' => 'Advanced Repair Serum with Caviar Extract — firming anti-aging face serum bottle',
+			'image_alt' => 'Advanced Repair Serum by Caviar of Switzerland displayed upright.',
+			// PDP audit 2026-09-27: each section below has one job, and no
+			// concern/benefit wording is repeated across them. 'summary'
+			// replaces the WooCommerce short description on the PDP only.
+			'summary'  => 'A lightweight, concentrated firming serum at the heart of the four-step ritual.',
+			'description' => '<h2>The Heart of the Ritual</h2><p>Step 2 of the ritual, between Micellar Water and 24h Regeneration Cream: a fine, lightweight serum that concentrates the High-Tech Complex.</p><p>Its silky, non-oily texture absorbs quickly, so the cream that follows seals the routine without heaviness or residue.</p>',
+			'description_image' => array(
+				'dir'     => 'pdp/serum-ritual',
+				'desktop' => array( 'widths' => array( 560, 840, 1120 ), 'w' => 1120, 'h' => 1400 ),
+				'mobile'  => array( 'widths' => array( 720, 1080 ), 'w' => 1080, 'h' => 1080 ),
+				'alt'     => 'Model resting her hands beside an upright bottle of Advanced Repair Serum.',
+			),
+			'editorial' => array(
+				'dir'     => 'pdp/serum-application',
+				'desktop' => array( 'widths' => array( 600, 800, 1200 ), 'w' => 1200, 'h' => 1200 ),
+				'mobile'  => array( 'widths' => array( 720, 1080 ), 'w' => 1080, 'h' => 1080 ),
+				'alt'     => 'Model dispensing Advanced Repair Serum onto the back of her hand.',
+			),
 			'actives_h2' => 'Inside this firming anti-aging face serum.',
 			'benefits' => array(
 				'Helps improve the appearance of stressed and tired-looking skin',
 				'Supports a firmer, smoother-looking complexion',
 				'Helps soften the appearance of fine lines and wrinkles',
-				'Provides antioxidant care against environmental stressors',
-				'Helps restore the look of radiance and vitality',
-				'Lightweight, silky, and fast absorbing',
 			),
-			'who_for'  => 'Ideal for skin showing dullness, dryness, loss of firmness, visible fatigue, fine lines, or signs of environmental stress.',
+			'who_for'  => 'Chosen for skin showing one or more of these concerns.',
 			'concerns' => array( 'Fine lines & wrinkles', 'Dullness', 'Loss of firmness', 'Environmental stress', 'Dehydrated-looking skin', 'Uneven skin vitality' ),
-			'texture'  => 'A fine, lightweight serum with a silky, non-oily finish. It absorbs quickly so 24h Regeneration Cream can be applied as the sealing step without heaviness or residue.',
 			'specs'    => array(
 				array( 'Volume', '30 ml' ),
 				array( 'Product type', 'Face serum' ),
@@ -95,15 +112,15 @@ function cos_get_product_copy( string $sku ): ?array {
 			'faqs' => array(
 				array( 'Can I use it morning and evening?', 'Yes. Apply morning and evening to thoroughly cleansed skin, then follow with 24h Regeneration Cream.' ),
 				array( 'Do I apply it before or after moisturiser?', 'Always apply serum before moisturiser. The lightweight texture absorbs fully before the cream seals in the actives.' ),
-				array( 'When will I notice results?', 'In our independent clinical study, cutometer-measured skin firmness improved by +47% at 28 days — see the full methodology on our Clinical Studies page. Panellists also reported visibly smoother-looking texture.' ),
+				array( 'When will I notice results?', 'In an independent 28-day study: +47% Cutometer-measured improvement in firmness at 28 days — see the full methodology on our Clinical Studies page. Panellists also reported visibly smoother-looking texture.' ),
 				array( 'How much should I use?', 'Dispense 2–3 drops into the palm and press gently across the face and neck. A small amount goes a long way.' ),
 				array( 'What is the Caviar of Switzerland High-Tech Complex?', 'The High-Tech Complex is the signature active blend of Caviar Extract, SYN®-COLL, Hyaluronic Acid, Superoxide Dismutase, and Resveratrol — chosen to help support hydration, visible firmness, antioxidant care, and a more youthful-looking complexion.' ),
 				array( 'How long will one bottle last?', 'With twice-daily use at the recommended amount, one 30 ml bottle lasts approximately 6&ndash;8 weeks.' ),
 				array( 'Why does this serum cost what it does?', 'The price reflects the concentration of clinically-tested actives — including micro-encapsulated caviar peptides and SYN®-COLL Peptide — and the independent 28-day study behind the +47% firmness result, not the packaging or the brand name alone.' ),
 			),
 			'actives' => array(
-				array( 'Micro-Encapsulated Oscietra Caviar', 'Time-release delivery technology ensures active caviar peptides penetrate into the dermis rather than remaining at the surface.' ),
-				array( 'SYN®-COLL Peptide', 'Clinically validated tripeptide that directly stimulates the skin\'s own collagen synthesis pathway. +47% perceived firmness at 28 days.' ),
+				array( 'Micro-Encapsulated Siberian Sturgeon Caviar', 'Time-release delivery technology ensures active caviar peptides penetrate into the dermis rather than remaining at the surface.' ),
+				array( 'SYN®-COLL Peptide', 'Clinically validated tripeptide that directly stimulates the skin\'s own collagen synthesis pathway. +47% Cutometer-measured improvement in firmness at 28 days.' ),
 				array( 'Low-MW Sodium Hyaluronate', 'Ultra-small molecular weight allows penetration below the epidermis, binding 1,000× its weight in water at the dermal level.' ),
 				array( 'Resveratrol', 'Potent antioxidant extracted from grape skin that neutralises free radicals and supports cellular longevity.' ),
 			),
@@ -114,25 +131,36 @@ function cos_get_product_copy( string $sku ): ?array {
 				'Use morning and evening for optimal results.',
 			),
 			'stats' => array(
-				array( '+47%', 'Perceived firmness increase at 28 days' ),
+				array( '+47%', 'Cutometer-measured improvement in firmness at 28 days' ),
 			),
 			'inci' => 'Aqua, Glycerin, Niacinamide, Butylene Glycol, Acipenser Gueldenstaedtii Roe Extract (Micro-Encapsulated), Tripeptide-5 (SYN®-COLL), Sodium Hyaluronate, Resveratrol, Tocopheryl Acetate, Xanthan Gum, Carbomer, Sodium Hydroxide, Phenoxyethanol, Ethylhexylglycerin.',
 		),
 
 		'COS-003' => array(
 			'subtitle' => 'Precision Eye Contour Care',
-			'image_alt' => 'Revitalizing Eye Cream with Caviar Extract — anti-aging eye cream for dark circles and fine lines',
+			'image_alt' => 'Revitalizing Eye Cream by Caviar of Switzerland held upright.',
+			'summary'  => 'A rich yet elegant eye cream for fine lines and dark circles: Step 3 of the four-step ritual.',
+			'description' => '<h2>The Detail That Changes Everything</h2><p>Step 3 of the ritual, after the serum and before 24h Regeneration Cream: the High-Tech Complex with Vitamin E, Provitamin B5 and Organic Floral Water, in a cream calibrated for the delicate eye contour.</p><p>It melts on contact, leaving the skin feeling hydrated, smooth and softly replenished without any heaviness.</p>',
+			'description_image' => array(
+				'dir'     => 'pdp/eye-ritual',
+				'desktop' => array( 'widths' => array( 560, 840, 1120 ), 'w' => 1120, 'h' => 1400 ),
+				'mobile'  => array( 'widths' => array( 720, 1080 ), 'w' => 1080, 'h' => 1080 ),
+				'alt'     => 'Revitalizing Eye Cream held upright between two models.',
+			),
+			'editorial' => array(
+				'dir'     => 'pdp/eye-application',
+				'desktop' => array( 'widths' => array( 600, 800, 1200 ), 'w' => 1200, 'h' => 1200 ),
+				'mobile'  => array( 'widths' => array( 720, 1080 ), 'w' => 1080, 'h' => 1080 ),
+				'alt'     => 'Model holding Revitalizing Eye Cream close to the eye contour.',
+			),
 			'actives_h2' => 'Inside this anti-aging eye cream for dark circles.',
 			'benefits' => array(
 				'Helps smooth the appearance of fine lines and wrinkles',
 				'Helps improve the look of firmness around the eyes',
 				'Helps diminish the appearance of dark circles',
-				'Hydrates and nourishes delicate eye-area skin',
-				'Leaves the eye contour looking fresher, smoother, and more youthful',
 			),
-			'who_for'  => 'Ideal for dryness, fine lines, wrinkles, dark circles, and visible tiredness around the eyes.',
+			'who_for'  => 'Chosen for an eye contour showing one or more of these concerns.',
 			'concerns' => array( 'Fine lines around the eyes', 'Wrinkles', 'Dark circles', 'Loss of firmness', 'Dryness', 'Visible fatigue' ),
-			'texture'  => 'A rich, comforting cream calibrated for the delicate eye area. It melts on contact, leaving the skin feeling hydrated, smooth, and softly replenished without any heaviness.',
 			'specs'    => array(
 				array( 'Volume', '15 ml' ),
 				array( 'Product type', 'Eye cream' ),
@@ -160,26 +188,36 @@ function cos_get_product_copy( string $sku ): ?array {
 				'Use morning and evening. Compatible with SPF and make-up.',
 			),
 			'stats' => array(
-				array( '−38%', 'Fine line depth reduction at 28 days' ),
+				array( '−38%', 'Profilometry-measured reduction in fine-line depth at 28 days' ),
 			),
 			'inci' => 'Aqua, Glycerin, Caffeine, Butylene Glycol, Acipenser Gueldenstaedtii Roe Extract (Micro-Encapsulated), Sodium Hyaluronate (Triple Weight), Menaquinone-7, Palmitoyl Pentapeptide-4, Xanthan Gum, Carbomer, Triethanolamine, Phenoxyethanol, Ethylhexylglycerin.',
 		),
 
 		'COS-004' => array(
 			'subtitle' => 'Day-and-Night Caviar Moisturiser',
-			'image_alt' => '24h Regeneration Cream with Caviar Extract — 24-hour regenerating face cream jar',
+			'image_alt' => '24h Regeneration Cream by Caviar of Switzerland, label facing forward.',
+			'summary'  => 'A silky day-and-night cream that seals in moisture: the final step of the four-step ritual.',
+			'description' => '<h2>The Completion</h2><p>Step 4 of the ritual, morning and evening: the High-Tech Complex with Vitamin E, Provitamin B5 and Shea Butter, sealing in Advanced Repair Serum.</p><p>A concentrated yet lightweight silky cream that melts into the skin, leaving the complexion soft, smooth and comfortable, never heavy.</p>',
+			'description_image' => array(
+				'dir'     => 'pdp/cream-ritual',
+				'desktop' => array( 'widths' => array( 560, 840, 1120 ), 'w' => 1120, 'h' => 1400 ),
+				'mobile'  => array( 'widths' => array( 720, 1080 ), 'w' => 1080, 'h' => 1080 ),
+				'alt'     => 'Model resting her arms behind a jar of 24h Regeneration Cream.',
+			),
+			'editorial' => array(
+				'dir'     => 'pdp/cream-application',
+				'desktop' => array( 'widths' => array( 600, 800, 1200 ), 'w' => 1200, 'h' => 1200 ),
+				'mobile'  => array( 'widths' => array( 720, 1080 ), 'w' => 1080, 'h' => 1080 ),
+				'alt'     => 'Fingers taking 24h Regeneration Cream from the jar, with texture on the hand.',
+			),
 			'actives_h2' => 'Inside this 24-hour regenerating face cream.',
 			'benefits' => array(
 				'Provides lasting hydration and comfort',
 				'Helps reduce the appearance of fine lines and wrinkles',
 				'Helps protect against environmental stressors',
-				'Supports a firmer, more elastic-looking complexion',
-				'Helps prevent dryness and dehydration',
-				'Leaves skin looking more vibrant, smooth, and radiant',
 			),
-			'who_for'  => 'Ideal for dry, dehydrated, mature, or stressed skin, and for anyone seeking a daily moisturiser powered by the Caviar of Switzerland High-Tech Complex.',
+			'who_for'  => 'Chosen for skin showing one or more of these concerns.',
 			'concerns' => array( 'Dryness', 'Dehydration', 'Fine lines & wrinkles', 'Loss of elasticity', 'Dullness', 'Environmental stress' ),
-			'texture'  => 'A concentrated yet lightweight silky cream that melts into the skin on application. It seals in Advanced Repair Serum while leaving the complexion soft, smooth, and comfortable — never heavy.',
 			'specs'    => array(
 				array( 'Volume', '50 ml' ),
 				array( 'Product type', 'Face moisturiser' ),
@@ -207,7 +245,7 @@ function cos_get_product_copy( string $sku ): ?array {
 				'Morning: wear under SPF. Evening: use as an overnight regeneration treatment.',
 			),
 			'stats' => array(
-				array( '100%', 'Panellist satisfaction at 28 days' ),
+				array( '100%', 'Panellist-reported satisfaction at 28 days' ),
 			),
 			'inci' => 'Aqua (Swiss Glacier Meltwater), Glycerin, Dimethicone, Cetearyl Alcohol, Acipenser Gueldenstaedtii Roe Extract, Sodium Hyaluronate (Triple Weight Complex), Superoxide Dismutase, Tocopheryl Acetate, Ceteareth-20, Stearic Acid, Glyceryl Stearate, Carbomer, Sodium Hydroxide, Phenoxyethanol, Ethylhexylglycerin.',
 		),

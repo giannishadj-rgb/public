@@ -13,38 +13,35 @@
 
 function cos_child_global_styles(): void { ?>
 <style id="cos-global" nonce="<?php echo esc_attr( cos_csp_nonce() ); ?>">
-:root{--cos-ink:#111111;--cos-navy:#121B2C;--cos-pearl:#F7F3EE;--cos-stone:#E5DED4;--cos-silver:#C4CAD1;--cos-slate:#5C6675;--cos-gold:#8B692F;--cos-gold-l:#B79A5B;--cos-teal:#46656B;--cos-focus:#2F6FED;--cos-success:#2D6A57;--cos-warning:#A56712;--cos-error:#A13B3B;--cos-display:'Cormorant Garamond','EB Garamond','Source Serif 4',Georgia,serif;--cos-body:'Inter',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;--cos-nav-h:80px;--cos-black:#111111;--cos-mid:#5C6675;--cos-light:#E5DED4;--cos-red:#121B2C;--cos-promo-h:0px}
+:root{--cos-ink:#111111!important;--cos-navy:#050505!important;--cos-pearl:#F2F2EF!important;--cos-gallery-bg:#E8E8E5!important;--cos-stone:#E5DED4!important;--cos-silver:#C4CAD1!important;--cos-slate:#5C6675!important;--cos-gold:#8B692F!important;--cos-gold-l:#B79A5B!important;--cos-teal:#46656B!important;--cos-focus:#2F6FED!important;--cos-success:#2D6A57!important;--cos-warning:#A56712!important;--cos-error:#A13B3B!important;--cos-display:'Cormorant Garamond','EB Garamond','Source Serif 4',Georgia,serif!important;--cos-body:'Inter',system-ui,-apple-system,'Segoe UI',Arial,sans-serif!important;--cos-nav-h:80px;--cos-black:#111111!important;--cos-mid:#5C6675!important;--cos-light:#E5DED4!important;--cos-red:#050505!important;--cos-promo-h:0px}
 /* The off-canvas mobile menu (#cos-mob-menu) is a fixed, inset:0 panel moved
    off-screen with translateX — mobile browsers still count its full-width
    layout box toward the page's scrollable area, producing a phantom
    horizontal scrollbar even though nothing is visibly clipped. */
 html,body{overflow-x:hidden;max-width:100%}
 .cos-spot-price,.cos-step-price,.cos-stat-big,.cos-spot-price *,.cos-step-price *{font-variant-numeric:lining-nums tabular-nums}
-/* Hero */
-#cos-hero{height:100svh!important;min-height:unset!important;overflow:hidden!important;align-items:center!important}
-.cos-hero-bg{position:absolute!important;inset:0!important;overflow:hidden!important;height:100%!important}
-.cos-hero-img-el{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:50% 15%!important}
-.cos-hero-overlay{background:rgba(0,0,0,0.12)!important}
-.cos-hero-h1{font-family:var(--cos-display)!important;font-style:italic!important;font-weight:300!important;font-size:clamp(44px,6.5vw,84px)!important;line-height:1.1!important}
-.cos-hero-eyebrow{color:rgba(255,255,255,.8)!important}
-/* Hero content indent */
-.cos-hero-content{padding-left:88px!important}
-@media(max-width:768px){.cos-hero-content{padding-left:24px!important}}
 /* Navigation */
-#cos-nav-wrap{position:fixed;top:0;left:0;right:0;z-index:90;height:var(--cos-nav-h);background:rgba(247,243,237,.93);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(196,202,209,.35);transition:box-shadow .25s}
+#cos-nav-wrap{position:fixed;top:0;left:0;right:0;z-index:90;height:var(--cos-nav-h);background:rgba(242,242,239,.93);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(196,202,209,.35);transition:box-shadow .25s}
 #cos-nav-wrap.scrolled{box-shadow:0 2px 20px rgba(26,26,26,.06)}
 #cos-nav{max-width:1600px;margin:0 auto;height:100%;display:flex;align-items:center;justify-content:space-between;padding:0 48px;gap:24px}
 .cos-nav-links{display:flex;align-items:center;gap:28px;flex:1}
-.cos-nav-links a{font-family:var(--cos-body);font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--cos-slate);transition:color .2s;white-space:nowrap;text-decoration:none}
+.cos-nav-links a{font-family:var(--cos-body);font-size:13px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--cos-slate);transition:color .2s;white-space:nowrap;text-decoration:none}
 .cos-nav-links a:hover,.cos-nav-links a.active{color:var(--cos-ink)}
+/* 13px links (2026-10-02, was 11px): tighter rhythm below 1440 keeps the
+   logo optically centred from 1280px up, as it was at the old size. */
+@media (min-width:1024px) and (max-width:1439.98px){.cos-nav-links{gap:20px}.cos-nav-links a{letter-spacing:.12em}}
 .cos-nav-logo{flex:0 0 auto}
-/* contrast(1.2): a subtle CSS treatment only -- no crop/resize/distortion,
-   and the red Swiss cross in the mark is untouched by a pure contrast
-   filter (it doesn't shift hue or add color, only widens the existing
-   light/dark separation already in the source file). UI/UX pass 2026-09-19,
-   task 2: the logo read faintly against the header's translucent pearl
-   background at default contrast. */
-.cos-nav-logo img{height:42px;width:auto;max-width:none;object-fit:contain;display:block;filter:contrast(1.2)}
+/* Second UI/UX audit, 2026-09-19: contrast(1.2) alone (the first attempt)
+   left the logo just as pale, because the source mark's lettering is a
+   light gray -- contrast() pushes values already above the 50% midpoint
+   toward white, not black, so it was widening the gap in the wrong
+   direction for this asset. brightness(.6) darkens every channel uniformly
+   (no hue shift, so the red Swiss cross stays red, just a shade deeper),
+   and contrast(1.15) restores some crispness lost to the darkening. No
+   crop/resize/distortion -- CSS filter only, same source file. No approved
+   darker logo asset exists in wp-content/themes/cos-child/assets/images/
+   (only this one mark, at 3 sizes/formats) to swap in instead. */
+.cos-nav-logo img{height:42px;width:auto;max-width:none;object-fit:contain;display:block;filter:brightness(.6) contrast(1.15)}
 .cos-nav-utils{display:flex;align-items:center;gap:0;flex:1;justify-content:flex-end}
 /* !important on size only: some older raw-HTML pages (e.g. the Home page's
    post_content) still embed a legacy, page-local copy of this exact
@@ -74,14 +71,14 @@ html,body{overflow-x:hidden;max-width:100%}
 .cos-mob-links a:last-child{border-bottom:none}
 .cos-mob-links a:hover{padding-left:10px;color:var(--cos-gold)}
 .cos-mob-foot{margin-top:auto;padding-top:32px;border-top:1px solid var(--cos-stone)}
-.cos-mob-foot p{font-family:var(--cos-body);font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--cos-slate);opacity:1}
+.cos-mob-foot p{font-family:var(--cos-body);font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--cos-slate);opacity:1}
 /* Page top spacer (non-hero pages) */
 .cos-page-top{height:var(--cos-nav-h)}
 /* Footer */
-#cos-footer{background:var(--cos-navy);color:var(--cos-pearl)}
+#cos-footer{background:#0D1117!important;color:var(--cos-pearl)}
 .cos-nl-wrap{max-width:1400px;margin:0 auto;padding:64px 24px;display:grid;grid-template-columns:1fr;gap:40px;border-bottom:1px solid rgba(255,255,255,.06)}
-.cos-nl-headline{font-family:var(--cos-display);font-style:italic;font-weight:300;font-size:clamp(22px,2.5vw,34px);color:#fff;margin-bottom:8px}
-.cos-nl-sub{font-family:var(--cos-body);font-size:12px;font-weight:300;color:rgba(248,247,244,.78);line-height:1.65}
+.cos-nl-headline{font-family:var(--cos-display);font-style:italic;font-weight:300;font-size:clamp(22px,2.5vw,34px);color:#fff;margin:0 0 8px}
+.cos-nl-sub{font-family:var(--cos-body);font-size:14px;font-weight:300;color:rgba(248,247,244,.78);line-height:1.65}
 .cos-nl-form{display:flex;flex-direction:column;gap:12px;min-width:0}
 .cos-nl-row{display:flex;flex-direction:column;gap:8px}
 .cos-nl-input{flex:1;min-width:0;padding:14px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);color:#fff;font-size:13px;font-weight:300;outline:none;border-radius:0;font-family:var(--cos-body)}
@@ -94,33 +91,32 @@ html,body{overflow-x:hidden;max-width:100%}
    viewports — same class of stale-CSS cascade issue as .cos-nav-utils a /
    .cos-mob-btn elsewhere in this file. This is the shared, authoritative
    newsletter component; it must stay at an accessible height everywhere. */
-.cos-nl-btn{width:100%;min-height:44px!important;box-sizing:border-box;display:flex;align-items:center;justify-content:center;padding:14px 24px;background:var(--cos-pearl);border:1px solid var(--cos-pearl);color:var(--cos-navy);font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;white-space:nowrap;border-radius:0;cursor:pointer;font-family:var(--cos-body);transition:background .2s,border-color .2s}
+.cos-nl-btn{width:100%;min-height:44px!important;box-sizing:border-box;display:flex;align-items:center;justify-content:center;padding:14px 24px;background:var(--cos-pearl);border:1px solid var(--cos-pearl);color:#050505;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;white-space:nowrap;border-radius:0;cursor:pointer;font-family:var(--cos-body);transition:background .2s,border-color .2s}
 .cos-nl-btn:hover{background:#fff;border-color:#fff}
-#cos-footer .cos-nl-consent{display:flex;align-items:flex-start;gap:8px;margin:0;font-size:10px;font-weight:300;color:rgba(248,247,244,.78);line-height:1.55;font-family:var(--cos-body)}
+#cos-footer .cos-nl-consent{display:flex;align-items:flex-start;gap:8px;margin:0;font-size:13px;font-weight:300;color:rgba(248,247,244,.78);line-height:1.55;font-family:var(--cos-body)}
 .cos-nl-consent input{width:24px!important;height:24px!important;margin-top:0;flex-shrink:0;accent-color:var(--cos-focus)}
 .cos-trust{border-bottom:1px solid rgba(255,255,255,.06);padding:24px}
 .cos-trust-items{max-width:1400px;margin:0 auto;display:flex;flex-wrap:wrap;gap:20px 36px;justify-content:center}
-.cos-trust-item{font-family:var(--cos-body);font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(248,247,244,.70);display:flex;align-items:center;gap:7px}
+.cos-trust-item{font-family:var(--cos-body);font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(248,247,244,.70);display:flex;align-items:center;gap:7px}
 .cos-trust-item a{display:inline-block;padding:7px 0;margin:-7px 0}
-.cos-trust-dot{width:3px;height:3px;background:var(--cos-gold-l);display:inline-block;flex-shrink:0}
+/* One consolidated, quiet assurance line (2026-10-02): hosting/security
+   badges removed from the brand presentation. */
+.cos-trust-dot{width:3px;height:3px;border-radius:50%;background:rgba(248,247,244,.4);display:inline-block;flex-shrink:0}
 .cos-footer-cols{max-width:1400px;margin:0 auto;padding:48px 24px;display:grid;grid-template-columns:repeat(2,1fr);gap:36px}
-.cos-footer-col h3{font-family:var(--cos-body);font-size:10px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:rgba(248,247,244,.70);margin-bottom:18px}
+.cos-footer-col h3{font-family:var(--cos-body);font-size:12px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:rgba(248,247,244,.70);margin-bottom:18px}
 .cos-footer-col ul{display:flex;flex-direction:column;gap:10px;list-style:none;margin:0;padding:0}
-.cos-footer-col li{font-family:var(--cos-body);font-size:12px;line-height:1.5}
-.cos-footer-col a{font-family:var(--cos-body);font-size:12px;font-weight:300;color:rgba(248,247,244,.82);transition:color .2s;text-decoration:none;display:inline-block;padding:5px 0;margin:-5px 0}
+.cos-footer-col li{font-family:var(--cos-body);font-size:14px;line-height:1.5}
+.cos-footer-col a{font-family:var(--cos-body);font-size:14px;font-weight:300;color:rgba(248,247,244,.82);transition:color .2s;text-decoration:none;display:inline-block;padding:5px 0;margin:-5px 0}
 .cos-footer-col a:hover{color:#fff}
 /* Small labels tighten their letter-spacing on mobile only (UI/UX pass
    2026-09-19, task 3) -- desktop keeps the wider luxury tracking. */
 @media(max-width:767px){.cos-footer-col h3{letter-spacing:.18em}}
 .cos-footer-bottom{max-width:1400px;margin:0 auto;padding:20px 24px;border-top:1px solid rgba(255,255,255,.05);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .cos-footer-legal{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-.cos-footer-copy{font-family:var(--cos-body);font-size:10px;font-weight:300;color:rgba(248,247,244,.70)}
-.cos-footer-cookie-link{font-family:var(--cos-body);font-size:10px;font-weight:300}
+.cos-footer-copy{font-family:var(--cos-body);font-size:12px;font-weight:300;color:rgba(248,247,244,.70)}
+.cos-footer-cookie-link{font-family:var(--cos-body);font-size:12px;font-weight:300}
 .cos-footer-cookie-link a,.cos-footer-cookie-link button{display:inline-block;background:none;border:none;padding:8px 2px;margin:-8px -2px;min-height:24px;font:inherit;color:rgba(248,247,244,.82);text-decoration:underline;cursor:pointer}
 .cos-footer-cookie-link a:hover,.cos-footer-cookie-link button:hover{color:#fff}
-.cos-footer-security{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-.cos-footer-security-item{display:flex;align-items:center;gap:6px;font-family:var(--cos-body);font-size:10px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:rgba(248,247,244,.70)}
-.cos-footer-security-ico{width:13px;height:13px;flex-shrink:0;color:var(--cos-gold-l)}
 .cos-footer-logo{height:28px;width:auto;max-width:none;opacity:.5;display:block}
 /* Footer column groups: <details> below 768px (collapsed by default, native
    keyboard support, no JS accordion), plain always-open sections at/above
@@ -135,14 +131,25 @@ html,body{overflow-x:hidden;max-width:100%}
 .cos-footer-details[open] .cos-footer-details-icon{transform:rotate(45deg)}
 .cos-footer-col-body{padding-top:14px}
 @media(max-width:767px){
-  .cos-footer-cols{gap:0}
+  .cos-footer-cols{gap:0;grid-template-columns:1fr} /* single-column accordion: one full-width row per group */
   .cos-footer-details{border-bottom:1px solid rgba(255,255,255,.08);padding:16px 0}
   .cos-footer-details:first-child{border-top:1px solid rgba(255,255,255,.08)}
+  /* Expanded links: full-row 44px tap targets (were ~31px tall, 'Shop' ~34px wide). */
+  .cos-footer-col ul{gap:0}
+  .cos-footer-col a{display:flex;align-items:center;min-height:44px;padding:0;margin:0}
 }
 @media(min-width:768px){
-  /* The trigger itself is what's removed -- see the block comment above --
-     so nothing on desktop (mouse or keyboard) can toggle a section shut. */
-  .cos-footer-details > summary{display:none}
+  /* Footer refinement, 2026-09-20: the previous display:none hid the whole
+     <summary>, including the <h3> inside it -- desktop lost its column
+     headings entirely. The heading must stay visible; only the toggle
+     affordance (the +/x icon, the pointer cursor, and click-to-close) needs
+     to disappear. pointer-events:none blocks mouse activation; the
+     accompanying `toggle` listener further down defensively re-opens a
+     section if anything still manages to close it (e.g. a focused summary
+     activated via keyboard Enter/Space, which pointer-events can't stop) --
+     between the two, nothing on desktop can leave a section collapsed. */
+  .cos-footer-details > summary{cursor:default;pointer-events:none}
+  .cos-footer-details-icon{display:none}
   .cos-footer-col-body{padding-top:0}
 }
 /* Hide old nav wrappers from legacy page designs */
@@ -158,8 +165,15 @@ html,body{overflow-x:hidden;max-width:100%}
 }
 /* Responsive */
 @media(min-width:768px){
-  .cos-nl-wrap{grid-template-columns:1fr 1fr;padding:64px 48px}
-  .cos-footer-cols{grid-template-columns:repeat(3,1fr);padding:48px 48px}
+  /* Footer refinement, 2026-09-20: align-items:center so the headline/copy
+     column lines up with the newsletter form's vertical center instead of
+     both stretching to the row's full height and starting at the top --
+     the form (label+input+button+consent line) is naturally taller than
+     the two lines of headline copy. Vertical padding reduced ~18% (64px ->
+     52px, 48px -> 40px) on desktop only; mobile's own 64px/48px values are
+     untouched by this media query and stay exactly as they were. */
+  .cos-nl-wrap{grid-template-columns:1fr 1fr;padding:52px 48px;align-items:center}
+  .cos-footer-cols{grid-template-columns:repeat(3,1fr);padding:40px 48px}
   .cos-footer-bottom{padding:20px 48px}
   .cos-trust{padding:28px 48px}
 }
@@ -276,20 +290,24 @@ function cos_child_global_footer(): void {
 	$logo      = esc_url( get_stylesheet_directory_uri() . '/assets/images/logo.png' );
 	$logo_webp = esc_url( get_stylesheet_directory_uri() . '/assets/images/logo-111w.webp' );
 	$logo_webp_2x = esc_url( get_stylesheet_directory_uri() . '/assets/images/logo-222w.webp' );
+	$is_editorial_home = function_exists( 'cos_h26_is_active' ) && cos_h26_is_active();
+	$newsletter_title = $is_editorial_home ? 'The Caviar Circle' : 'Enter the world of Caviar of Switzerland.';
+	$newsletter_intro = $is_editorial_home ? 'Ritual guidance, product news and brand updates.' : 'Receive ritual guidance, product news, and exclusive brand updates.';
 	?>
 <footer id="cos-footer" role="contentinfo">
   <div class="cos-nl-wrap">
     <div>
-      <h2 class="cos-nl-headline"><em>Enter the world of Caviar of Switzerland.</em></h2>
-      <p class="cos-nl-sub">Receive ritual guidance, product news, and exclusive brand updates.</p>
+      <h2 class="cos-nl-headline"><em><?php echo esc_html( $newsletter_title ); ?></em></h2>
+      <p class="cos-nl-sub"><?php echo esc_html( $newsletter_intro ); ?></p>
     </div>
     <?php cos_child_newsletter_form(); ?>
   </div>
   <div class="cos-trust">
     <ul class="cos-trust-items" role="list">
-      <li class="cos-trust-item"><span class="cos-trust-dot"></span>Made in Switzerland</li>
-      <li class="cos-trust-item"><span class="cos-trust-dot"></span>Clinical-grade formulas</li>
-      <li class="cos-trust-item"><span class="cos-trust-dot"></span>30-day returns</li>
+      <li class="cos-trust-item"><span class="cos-trust-dot" aria-hidden="true"></span>Made in Switzerland</li>
+      <li class="cos-trust-item"><span class="cos-trust-dot" aria-hidden="true"></span>Free worldwide shipping</li>
+      <li class="cos-trust-item"><span class="cos-trust-dot" aria-hidden="true"></span>30-day returns</li>
+      <li class="cos-trust-item"><span class="cos-trust-dot" aria-hidden="true"></span>Secure checkout</li>
     </ul>
   </div>
   <div class="cos-footer-cols">
@@ -299,18 +317,18 @@ function cos_child_global_footer(): void {
     </details>
     <details class="cos-footer-col cos-footer-details" open>
       <summary class="cos-footer-col-summary"><h3>Explore</h3><span class="cos-footer-details-icon" aria-hidden="true">+</span></summary>
-      <div class="cos-footer-col-body"><ul><li><a href="/shop/">Shop</a></li><li><a href="/the-ritual/">The Ritual</a></li><li><a href="/science/">Swiss Science</a></li><li><a href="/heritage/">Swiss Heritage</a></li><li><a href="/heritage/sustainability/">Sustainability</a></li><li><a href="/sitemap/">Sitemap</a></li></ul></div>
+      <div class="cos-footer-col-body"><ul><li><a href="/shop/">Shop</a></li><li><a href="/the-ritual/">The Ritual</a></li><li><a href="/science/">Swiss Science</a></li><li><a href="/heritage/">Swiss Heritage</a></li><li><a href="/journal/">Journal</a></li><li><a href="/heritage/sustainability/">Sustainability</a></li><li><a href="/sitemap/">Sitemap</a></li></ul></div>
     </details>
     <details class="cos-footer-col cos-footer-details" open>
       <summary class="cos-footer-col-summary"><h3>Caviar of Switzerland in Zug</h3><span class="cos-footer-details-icon" aria-hidden="true">+</span></summary>
-      <div class="cos-footer-col-body"><address style="font-style:normal"><p style="font-family:var(--cos-body);font-size:12px;font-weight:300;color:rgba(248,247,244,.82);line-height:1.8">Caviar of Switzerland<br>Chamerstrasse 115<br>6300 Zug<br>Switzerland<br><a href="mailto:info@caviarofswitzerland.com" style="color:inherit;text-decoration:underline">info@caviarofswitzerland.com</a></p></address><div style="display:flex;gap:20px;margin-top:16px">
-  <a href="https://www.instagram.com/caviarofswitzerland/" rel="noopener noreferrer" target="_blank" aria-label="Instagram" style="color:rgba(248,247,244,.82);transition:color .2s;display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px" onmouseover="this.style.color='rgba(248,247,244,1)'" onmouseout="this.style.color='rgba(248,247,244,.82)'">
+      <div class="cos-footer-col-body"><address style="font-style:normal"><p style="font-family:var(--cos-body);font-size:14px;font-weight:300;color:rgba(248,247,244,.82);line-height:1.8">Caviar of Switzerland<br>Chamerstrasse 115<br>6300 Zug<br>Switzerland<br><a href="mailto:info@caviarofswitzerland.com" style="color:inherit;text-decoration:underline">info@caviarofswitzerland.com</a></p></address><div style="display:flex;gap:20px;margin-top:16px">
+  <a href="https://www.instagram.com/caviarofswitzerland/" rel="noopener noreferrer" target="_blank" aria-label="Instagram" style="color:rgba(248,247,244,.82);transition:color .2s;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;margin:-10px" onmouseover="this.style.color='rgba(248,247,244,1)'" onmouseout="this.style.color='rgba(248,247,244,.82)'">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor" stroke="none"/></svg>
   </a>
-  <a href="https://www.facebook.com/caviarofswitzerland/" rel="noopener noreferrer" target="_blank" aria-label="Facebook" style="color:rgba(248,247,244,.82);transition:color .2s;display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px" onmouseover="this.style.color='rgba(248,247,244,1)'" onmouseout="this.style.color='rgba(248,247,244,.82)'">
+  <a href="https://www.facebook.com/caviarofswitzerland/" rel="noopener noreferrer" target="_blank" aria-label="Facebook" style="color:rgba(248,247,244,.82);transition:color .2s;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;margin:-10px" onmouseover="this.style.color='rgba(248,247,244,1)'" onmouseout="this.style.color='rgba(248,247,244,.82)'">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
   </a>
-  <a href="https://www.youtube.com/@caviarofswitzerland" rel="noopener noreferrer" target="_blank" aria-label="YouTube" style="color:rgba(248,247,244,.82);transition:color .2s;display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px" onmouseover="this.style.color='rgba(248,247,244,1)'" onmouseout="this.style.color='rgba(248,247,244,.82)'">
+  <a href="https://www.youtube.com/@caviarofswitzerland" rel="noopener noreferrer" target="_blank" aria-label="YouTube" style="color:rgba(248,247,244,.82);transition:color .2s;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;margin:-10px" onmouseover="this.style.color='rgba(248,247,244,1)'" onmouseout="this.style.color='rgba(248,247,244,.82)'">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" stroke="none" fill="currentColor"/></svg>
   </a>
 </div></div>
@@ -322,20 +340,6 @@ function cos_child_global_footer(): void {
       <?php if ( function_exists( 'cmplz_get_option' ) ) : ?>
       <p class="cos-footer-cookie-link"><button type="button" id="cos-cookie-settings-btn">Cookie Settings</button></p>
       <?php endif; ?>
-    </div>
-    <div class="cos-footer-security">
-      <span class="cos-footer-security-item">
-        <svg class="cos-footer-security-ico" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="9" width="14" height="9" rx="1"/><path d="M7 9V6a3 3 0 1 1 6 0v3"/></svg>
-        SSL-Encrypted Checkout
-      </span>
-      <span class="cos-footer-security-item">
-        <svg class="cos-footer-security-ico" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2.5L3 5.7v5.1c0 3.8 2.9 6.8 7 7.4 4.1-.6 7-3.6 7-7.4V5.7L10 2.5z"/></svg>
-        WAF + DDoS Protection
-      </span>
-      <span class="cos-footer-security-item">
-        <svg class="cos-footer-security-ico" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M17 17l-3.6-3.6"/></svg>
-        Daily Malware Scanning
-      </span>
     </div>
     <picture>
       <source type="image/webp" srcset="<?php echo $logo_webp; ?> 111w, <?php echo $logo_webp_2x; ?> 222w" sizes="120px">
@@ -448,9 +452,14 @@ function cos_child_global_footer(): void {
   // mobile once JS has actually run, rather than relying on JS to open
   // them (which would leave a no-JS mobile visitor's footer permanently
   // collapsed, since the trigger needs no-JS-safe native <details> behavior
-  // either way). Desktop is never touched here: its <summary> is hidden by
-  // CSS instead, which is what actually keeps it open there, with or
-  // without JS. UI/UX pass 2026-09-19, task 6.
+  // either way). Desktop is never touched here by default -- its <summary>
+  // is inert by CSS (pointer-events:none, footer refinement 2026-09-20),
+  // which handles mouse clicks, but a keyboard user can still Tab to a
+  // focused summary and press Enter/Space to toggle it (CSS can't block
+  // key-triggered activation the way it blocks pointer events). The
+  // `toggle` listener below is the backstop for that path: if a group
+  // closes while the viewport is desktop-width, it's immediately reopened,
+  // so nothing can leave a desktop section collapsed either way.
   var mq = window.matchMedia('(max-width: 767px)');
   var groups = document.querySelectorAll('.cos-footer-details');
   function applyCollapse(isMobile){
@@ -461,6 +470,11 @@ function cos_child_global_footer(): void {
   }
   applyCollapse(mq.matches);
   if (mq.addEventListener) mq.addEventListener('change', function(e){ applyCollapse(e.matches); });
+  groups.forEach(function(d){
+    d.addEventListener('toggle', function(){
+      if (!mq.matches && !d.open) d.open = true;
+    });
+  });
 })();
 </script>
 <?php cos_child_newsletter_form_script(); ?>

@@ -177,9 +177,9 @@ function cos_child_structured_data(): void {
 	// Product data map
 	$products = [
 		'micellar-water-cleanser'  => [ 'id' => 'COS-001', 'name' => 'Micellar Water Cleanser', 'price' => '55',  'size' => '150ml', 'step' => 1, 'desc' => 'Gentle micellar all-in-one cleanser that removes, balances, and prepares skin for the active layers of the Caviar of Switzerland ritual.' ],
-		'advanced-repair-serum'    => [ 'id' => 'COS-002', 'name' => 'Advanced Repair Serum',   'price' => '150', 'size' => '30ml',  'step' => 2, 'desc' => 'Concentrated clinical serum with Syn®-Coll Peptide and full High-Tech Complex. +47% perceived firmness in 28-day independent study.' ],
-		'revitalizing-eye-cream'   => [ 'id' => 'COS-003', 'name' => 'Revitalizing Eye Cream',  'price' => '145', 'size' => '15ml',  'step' => 3, 'desc' => 'Precision eye care targeting puffiness, dark circles, and crow\'s feet. −38% fine line depth in 28-day independent study.' ],
-		'24h-regeneration-cream'   => [ 'id' => 'COS-004', 'name' => '24h Regeneration Cream',  'price' => '150', 'size' => '50ml',  'step' => 4, 'desc' => '24-hour regeneration cream that seals and sustains the ritual\'s clinical gains. 100% panellist satisfaction at 28 days.' ],
+		'advanced-repair-serum'    => [ 'id' => 'COS-002', 'name' => 'Advanced Repair Serum',   'price' => '150', 'size' => '30ml',  'step' => 2, 'desc' => 'Concentrated clinical serum with Syn®-Coll Peptide and full High-Tech Complex. +47% Cutometer-measured improvement in firmness at 28 days in an independent study.' ],
+		'revitalizing-eye-cream'   => [ 'id' => 'COS-003', 'name' => 'Revitalizing Eye Cream',  'price' => '145', 'size' => '15ml',  'step' => 3, 'desc' => 'Precision eye care targeting puffiness, dark circles, and crow\'s feet. −38% profilometry-measured fine-line depth at 28 days in an independent study.' ],
+		'24h-regeneration-cream'   => [ 'id' => 'COS-004', 'name' => '24h Regeneration Cream',  'price' => '150', 'size' => '50ml',  'step' => 4, 'desc' => '24-hour regeneration cream that seals and sustains the ritual\'s clinical gains. 100% panellist-reported satisfaction at 28 days.' ],
 		'the-complete-ritual'      => [ 'id' => 'COS-BUNDLE', 'name' => 'The Complete Ritual', 'price' => '450', 'size' => '4 products', 'step' => 0, 'desc' => 'The full four-step Caviar of Switzerland protocol: Micellar Cleanser, Advanced Repair Serum, Revitalizing Eye Cream, and 24h Regeneration Cream.' ],
 	];
 
@@ -235,13 +235,18 @@ function cos_child_structured_data(): void {
 	$concern_hub_id = 23776;
 	if ( $post->ID === $concern_hub_id || (int) $post->post_parent === $concern_hub_id ) {
 		$page_meta_for_schema = cos_child_seo_page_meta();
+		// Uses the same parent-qualified resolver as the <title>/OG tags
+		// (inc/seo.php) rather than the bare $slug above — /skin-concerns/
+		// shares its post_name with the unrelated /journal/skin-concerns/
+		// page, so a bare-slug lookup here would risk the same collision.
+		$meta_key             = cos_child_seo_resolve_meta_key( $post );
 		$permalink            = get_permalink( $post );
 		$schema['@graph'][]   = [
 			'@type'       => 'WebPage',
 			'@id'         => $permalink . '#webpage',
 			'url'         => $permalink,
-			'name'        => $page_meta_for_schema[ $slug ][0] ?? get_the_title( $post ),
-			'description' => $page_meta_for_schema[ $slug ][1] ?? '',
+			'name'        => $page_meta_for_schema[ $meta_key ][0] ?? get_the_title( $post ),
+			'description' => $page_meta_for_schema[ $meta_key ][1] ?? '',
 			'isPartOf'    => [ '@type' => 'WebSite', '@id' => $site_url . '/#website' ],
 		];
 	}

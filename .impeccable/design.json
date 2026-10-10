@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-07T00:00:00Z",
+  "title": "Design System: Caviar of Switzerland",
+  "extensions": {
+    "colorMeta": {
+      "pearl-canvas": { "role": "neutral", "displayName": "Pearl Canvas", "tonalRamp": ["#262624", "#3E3E3B", "#5A5A57", "#7A7A76", "#9C9C98", "#BFBFBB", "#E8E8E5", "#F2F2EF"] },
+      "graphite-ink": { "role": "primary", "displayName": "Graphite Ink", "tonalRamp": ["#0A0A0A", "#1C1C1C", "#3A3A3A", "#5E5E5E", "#848484", "#ABABAB", "#D2D2D2", "#F0F0F0"] },
+      "obsidian": { "role": "neutral", "displayName": "Obsidian", "tonalRamp": ["#080909", "#0C0E12", "#1A1D22", "#2E3238", "#4A4F56", "#6E747C", "#9AA0A8", "#C7CBD1"] },
+      "platinum": { "role": "secondary", "displayName": "Platinum", "tonalRamp": ["#2B2E31", "#45494E", "#62676D", "#8E949B", "#B4B9BF", "#C9CDD2", "#D9DDE1", "#EEF0F2"] },
+      "swiss-red": { "role": "tertiary", "displayName": "Swiss Red (logo only)", "tonalRamp": ["#3D0C08", "#661510", "#931F17", "#B9271C", "#D52B1E", "#E2594F", "#EE9089", "#F8C9C5"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The hero line only." },
+      "headline": { "displayName": "Headline", "purpose": "Section headings and the texture statement." },
+      "figure": { "displayName": "Figure", "purpose": "Clinical results, prices and the 01–04 ritual numerals." },
+      "title": { "displayName": "Title", "purpose": "Product names on cards." },
+      "body": { "displayName": "Body", "purpose": "Ledes and reading copy." },
+      "small": { "displayName": "Small", "purpose": "Methods, glosses, cues and captions." },
+      "label": { "displayName": "Label", "purpose": "Short spaced-caps eyebrows and ritual verbs." },
+      "action": { "displayName": "Action", "purpose": "Buttons and text links." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "ease-standard", "value": "cubic-bezier(.22,.61,.36,1)", "purpose": "All state transitions and scroll reveals." },
+      { "name": "reveal", "value": "opacity .4s, translateY(12px) → 0, 30ms stagger", "purpose": "Section entrance; skipped under prefers-reduced-motion and without JS." },
+      { "name": "arrow-nudge", "value": "translateX(5px) on hover", "purpose": "Trailing arrow on buttons and text links." }
+    ],
+    "breakpoints": [
+      { "name": "tablet", "value": "700px" },
+      { "name": "split", "value": "900px" },
+      { "name": "desktop", "value": "1100px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one filled action per view, on pearl.",
+      "html": "<button class=\"ds-btn-primary\">Shop the Complete Ritual <span class=\"ds-arrow\">→</span></button>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;gap:12px;height:54px;padding:0 30px;background:#1C1C1C;color:#F2F2EF;border:1px solid #1C1C1C;border-radius:0;font:500 15px/1.5 Inter,system-ui,sans-serif;letter-spacing:.01em;cursor:pointer;transition:background-color .35s cubic-bezier(.22,.61,.36,1)}.ds-btn-primary:hover{background:#3A3A3A;border-color:#3A3A3A}.ds-btn-primary .ds-arrow{transition:transform .35s cubic-bezier(.22,.61,.36,1)}.ds-btn-primary:hover .ds-arrow{transform:translateX(5px)}.ds-btn-primary:focus-visible{outline:2px solid #1C1C1C;outline-offset:4px}"
+    },
+    {
+      "name": "Button on Dark",
+      "kind": "button",
+      "refersTo": "button-on-dark",
+      "description": "The filled hero action over the dark desktop hero.",
+      "html": "<div class=\"ds-dark\"><button class=\"ds-btn-ondark\">Shop the Complete Ritual <span>→</span></button></div>",
+      "css": ".ds-dark{background:#080909;padding:32px}.ds-btn-ondark{display:inline-flex;align-items:center;gap:12px;height:54px;padding:0 30px;background:#FAFAF8;color:#151515;border:1px solid #FAFAF8;border-radius:0;font:500 15px/1.5 Inter,system-ui,sans-serif;cursor:pointer;transition:background-color .35s}.ds-btn-ondark:hover{background:#E4E6E9;border-color:#E4E6E9}.ds-btn-ondark:focus-visible{outline:2px solid #D9DDE1;outline-offset:4px}"
+    },
+    {
+      "name": "Text Link",
+      "kind": "custom",
+      "refersTo": "text-link",
+      "description": "Secondary actions; the underline draws in on hover.",
+      "html": "<a class=\"ds-link\" href=\"#\">Read the studies →</a>",
+      "css": ".ds-link{display:inline-flex;align-items:center;min-height:44px;color:#1C1C1C;font:500 15px/1.5 Inter,system-ui,sans-serif;text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 calc(100% - 10px)/0 1px no-repeat;transition:background-size .45s cubic-bezier(.22,.61,.36,1)}.ds-link:hover{background-size:calc(100% - 26px) 1px}.ds-link:focus-visible{outline:2px solid #1C1C1C;outline-offset:4px}"
+    },
+    {
+      "name": "Newsletter Input",
+      "kind": "input",
+      "refersTo": "input-on-dark",
+      "description": "Footer email field on the blue-black footer.",
+      "html": "<div class=\"ds-foot\"><input class=\"ds-input\" type=\"email\" placeholder=\"Email for Caviar of Switzerland updates\"></div>",
+      "css": ".ds-foot{background:#0D1117;padding:24px}.ds-input{width:100%;box-sizing:border-box;height:44px;padding:0 16px;background:#0C0E12;border:1px solid rgba(250,250,248,.22);border-radius:0;color:#FAFAF8;font:300 16px/1.5 Inter,system-ui,sans-serif}.ds-input::placeholder{color:#9AA0A8}.ds-input:focus{border-color:#B4B9BF;outline:2px solid #D9DDE1;outline-offset:2px}"
+    },
+    {
+      "name": "Ritual Step",
+      "kind": "custom",
+      "description": "Signature numeral + verb + rule heading each collection card.",
+      "html": "<div class=\"ds-step\"><span class=\"ds-step-num\">01</span><span class=\"ds-step-verb\">Cleanse</span></div><p class=\"ds-step-cue\">Sweep with a cotton pad. No rinsing.</p>",
+      "css": ".ds-step{display:flex;align-items:baseline;gap:14px;background:#F2F2EF;color:#1C1C1C}.ds-step::after{content:'';flex:1;height:1px;background:rgba(28,28,28,.2);align-self:center}.ds-step-num{font:300 48px/1 'Cormorant Garamond',Georgia,serif;font-variant-numeric:lining-nums}.ds-step-verb{font:500 13px/1.5 Inter,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase}.ds-step-cue{margin:6px 0 0;font:400 14px/1.5 Inter,system-ui,sans-serif;color:#5E5E5E}"
+    },
+    {
+      "name": "Clinical Figure",
+      "kind": "custom",
+      "description": "An instrument-measured result, always named with product, method and panel.",
+      "html": "<div class=\"ds-stat\"><p class=\"ds-stat-p\">Advanced Repair Serum</p><p class=\"ds-stat-fig\">+47%</p><span class=\"ds-stat-rule\"></span><p class=\"ds-stat-l\">Skin firmness</p><p class=\"ds-stat-k\">● Instrument-measured</p><p class=\"ds-stat-m\">32 women aged 45–60, 28 days</p></div>",
+      "css": ".ds-stat{display:flex;flex-direction:column;align-items:center;text-align:center;background:#E8E8E5;padding:28px;color:#151515;font-family:Inter,system-ui,sans-serif}.ds-stat p{margin:0}.ds-stat-p{font-size:14px;font-weight:500}.ds-stat-fig{margin-top:10px!important;font:400 48px/1 'Cormorant Garamond',Georgia,serif;font-variant-numeric:lining-nums tabular-nums}.ds-stat-rule{width:44px;height:1px;background:rgba(21,21,21,.3);margin:16px 0}.ds-stat-l{font-size:17px}.ds-stat-k{margin-top:10px!important;font-size:14px}.ds-stat-m{font-size:14px;color:#5E5E5E}"
+    },
+    {
+      "name": "Self-reported Tag",
+      "kind": "chip",
+      "refersTo": "tag-self-reported",
+      "description": "Marks a self-reported result as secondary.",
+      "html": "<span class=\"ds-tag\">Self-reported</span>",
+      "css": ".ds-tag{display:inline-block;padding:1px 8px;border:1px solid rgba(21,21,21,.22);border-radius:2px;font:500 12px/1.5 Inter,system-ui,sans-serif;color:#3A3A3A;background:#E8E8E5}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Quiet Ritual",
+    "overview": "The site is a small, unhurried daily ceremony made visible. There are four steps and nothing extra, and every element earns its place by helping her understand or want one of the four formulas. The page is light-led, with a pearl canvas and graphite type. Darkness is punctuation, reserved for photographic moments: the desktop hero, the caviar macro and the footer. Type pairs a fine high-contrast serif for voice with a light sans for reading, and short spaced-caps labels for wayfinding.\n\nRestraint is the method. Elements are spaced generously and set in a narrow palette. The ornaments are the photography of the real objects (chrome caps, mirrored glass, a silver tray, a fingertip of cream) and the ritual numerals 01–04. Precision shows in the details: lining numerals, hairline rules, figures always named with their product, method and panel. Intimacy comes from scale. The interface never shouts, and the objects are photographed close.",
+    "keyCharacteristics": [
+      "Pearl canvas (#F2F2EF) with graphite ink; dark only behind photography.",
+      "Cormorant Garamond 300 for voice, Inter 300/400 for reading, Inter 500 tracked caps for short labels.",
+      "Square corners, hairline rules, no shadows.",
+      "The 01–04 ritual numerals as the page's recurring structural device.",
+      "Real, label-accurate product photography as the primary ornament."
+    ],
+    "rules": [
+      { "name": "The Punctuation Rule", "body": "Dark surfaces appear only behind photography (desktop hero, caviar macro) and in the footer. A text-only section is never dark.", "section": "colors" },
+      { "name": "The One Red Rule", "body": "Swiss red belongs to the logo's cross. It never colours a button, link, badge or sale price.", "section": "colors" },
+      { "name": "The Achromatic Rule", "body": "No hue enters the palette. Warmth comes from photography, not from tinted UI.", "section": "colors" },
+      { "name": "The Short Caps Rule", "body": "Spaced caps are only for labels of four words or fewer. Anything longer is sentence case.", "section": "typography" },
+      { "name": "The Lining Numeral Rule", "body": "Any numeral set in Cormorant (prices, figures, 01–04) uses lining numerals; old-style figures read as \"o1\".", "section": "typography" },
+      { "name": "The Flat Surface Rule", "body": "If something needs separating, use space first, a hairline second, and a tone change third. Never a shadow.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use the pearl canvas (#F2F2EF) for every text-led section; reserve obsidian for photography and the footer.",
+      "Do name every clinical figure with its product, method and panel, and mark self-reported results as secondary.",
+      "Do keep tap targets at 44px or more and small text at muted graphite (#5E5E5E) or darker.",
+      "Do use lining numerals for any Cormorant numeral.",
+      "Do photograph the real packaging with accurate labels; product imagery is the ornament."
+    ],
+    "donts": [
+      "Don't add shadows, rounded corners or gradients to UI elements.",
+      "Don't use Swiss red anywhere except the logo.",
+      "Don't set long phrases in spaced caps.",
+      "Don't add star ratings, testimonials or press logos.",
+      "Don't echo cobalt blue with caviar (another house's signature)."
+    ]
+  }
+}

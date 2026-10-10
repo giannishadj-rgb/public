@@ -23,7 +23,7 @@ test.describe('PDP image/video performance and content integrity', () => {
     expect(missing, `Images missing intrinsic dimensions: ${JSON.stringify(missing)}`).toEqual([]);
   });
 
-  test('the gallery main image actually swaps photo on dot click (not just its src attribute)', async ({ page }) => {
+  test('advancing the gallery actually changes the displayed photo (not just an attribute)', async ({ page }) => {
     // Pre-existing bug, found 2026-08-18 while investigating an unrelated AVIF/WebP
     // change: #cos-gallery-main keeps its srcset/sizes from the initial (first
     // photo) render, and per spec a valid srcset always wins over a plain src —
@@ -32,16 +32,28 @@ test.describe('PDP image/video performance and content integrity', () => {
     // the FIRST photo's srcset regardless of which dot/thumbnail was clicked.
     // Fixed by having cosGallerySet() clear srcset/sizes before setting src. If
     // this regresses, the gallery is silently showing the wrong product photo.
-    await gotoAndCheck(page, '/products/the-complete-ritual/');
+    // Uses an individual product rather than the bundle: the bundle's
+    // editorial redesign (2026-09-20) replaced its multi-image dot/thumbnail
+    // gallery with a single calm hero image, so it no longer has dots to
+    // click at all -- the underlying cosGallerySet() fix this test guards is
+    // still shared code, still exercised here via a product that still has
+    // a multi-image gallery.
+    await gotoAndCheck(page, '/products/advanced-repair-serum/');
 
-    const main = page.locator('#cos-gallery-main');
-    const initialSrc = await main.evaluate((img: HTMLImageElement) => img.currentSrc);
+    // 2026-09-27: the gallery now renders every photo as its own stacked
+    // slide (each in a <picture>) and switches the visible one by class,
+    // instead of rewriting a single <img>'s src -- so "the displayed photo"
+    // is the active slide's image. Uses the Next arrow, which is visible at
+    // every viewport (dots are mobile/tablet only, thumbnails desktop only).
+    const activeSrc = () => page.locator('.cos-pdp-slide.is-active img').evaluate((img: HTMLImageElement) => img.currentSrc);
+    const initialSrc = await activeSrc();
 
-    await page.locator('.cos-pdp-dot').nth(1).click();
-    await page.waitForTimeout(400); // matches cosGallerySet()'s 240ms fade + buffer
+    await page.locator('.cos-pdp-gallery-arrow.is-next').click();
+    await page.waitForTimeout(450); // cross-fade + lazy image fetch
 
-    const swappedCurrentSrc = await main.evaluate((img: HTMLImageElement) => img.currentSrc);
-    expect(swappedCurrentSrc, 'clicking a gallery dot should change the actually-rendered photo').not.toBe(initialSrc);
+    const swappedCurrentSrc = await activeSrc();
+    expect(swappedCurrentSrc, 'advancing the gallery should change the actually-rendered photo').not.toBe(initialSrc);
+    await expect(page.locator('.cos-pdp-slide').nth(1)).toHaveClass(/is-active/);
   });
 
   test('PDP gallery hero and shop hero serve responsive srcset/sizes, and only the true LCP image is high priority', async ({ page }) => {
@@ -67,29 +79,27 @@ test.describe('PDP image/video performance and content integrity', () => {
     await expect(hero).toHaveAttribute('fetchpriority', 'high');
   });
 
-  test('the bundle product video is not fetched until the visitor activates it', async ({ page }) => {
+  test('the bundle hero is a static full-bleed image, with no video, no video bytes fetched, and no pause/play toggle', async ({ page }) => {
+    // 2026-09-26: the brief 2026-09-22 background-video treatment (autoplay
+    // muted loop + a WCAG 2.2.2 pause/play toggle) was explicitly reverted
+    // back to a static poster image (attachment 23789, a black-background
+    // product shot) -- confirms the revert is complete, not just that a new
+    // image renders, since a half-removed video feature would be worse than
+    // either state on its own.
     const requests: string[] = [];
     page.on('request', req => {
-      if (/the-complete-ritual-video|\.mp4(\?|$)/i.test(req.url())) requests.push(req.url());
+      if (/\.mp4(\?|$)/i.test(req.url())) requests.push(req.url());
     });
 
     await gotoAndCheck(page, '/products/the-complete-ritual/');
 
-    const video = page.locator('#cos-gallery-video');
-    await expect(video).toHaveAttribute('preload', 'none');
-    await expect(video).toHaveAttribute('data-src', /.+/);
-    const srcAttr = await video.getAttribute('src');
-    expect(srcAttr, 'Video should have no eager src before activation').toBeFalsy();
-    expect(requests, 'No video bytes should be requested before activation').toEqual([]);
-
-    // Activate the video slide via the (visible) dot control — the thumbnail
-    // strip is display:none by design on this site, dots are the real nav.
-    const videoDot = page.locator('.cos-pdp-dot[aria-label="Product video"]');
-    if (await videoDot.count()) {
-      await videoDot.click();
-      await page.waitForTimeout(500);
-      expect(requests.length, 'Video should be requested after activation').toBeGreaterThan(0);
-    }
+    const heroImg = page.locator('.cos-pdp-hero .cos-pdp-gallery-main img');
+    await expect(heroImg).toHaveCount(1);
+    await expect(heroImg).toHaveAttribute('fetchpriority', 'high');
+    await expect(heroImg).toHaveAttribute('alt', /all four/i);
+    await expect(page.locator('#cos-pdp-hero-video')).toHaveCount(0);
+    await expect(page.locator('#cos-pdp-hero-video-toggle')).toHaveCount(0);
+    expect(requests, 'no video bytes should ever be requested on the bundle hero').toEqual([]);
   });
 
   test('bundle no longer shows undisclosed clinical figures, and backed figures link to methodology', async ({ page }) => {
@@ -109,7 +119,13 @@ test.describe('PDP image/video performance and content integrity', () => {
 
   test('individual and bundle PDPs still render benefits, FAQ, and specs content after the data-provider refactor', async ({ page }) => {
     await gotoAndCheck(page, '/products/advanced-repair-serum/');
-    await expect(page.getByText('The Flagship Serum')).toBeVisible();
+    // The SEO correction pass (2026-09-19, Task 5) briefly changed this to a
+    // search-relevant phrase; a later UI/UX audit (2026-09-19) restored the
+    // premium editorial subtitle and moved SEO keyword placement to page
+    // titles/metadata/schema instead (which still carry it — see inc/seo.php).
+    // 2026-09-27: the owner then asked for the subtitle (and the divider under
+    // it) to be removed from individual product pages entirely.
+    await expect(page.locator('.cos-pdp-subtitle')).toHaveCount(0);
     await expect(page.getByRole('heading', { name: /questions about this formula/i })).toBeVisible();
     // exact: true -- the SEO pass (2026-09-17) added a price-justification
     // FAQ answer that also mentions this active by name, so the plain
@@ -119,7 +135,10 @@ test.describe('PDP image/video performance and content integrity', () => {
     await expect(page.getByText('SYN®-COLL Peptide', { exact: true })).toBeVisible();
 
     await gotoAndCheck(page, '/products/the-complete-ritual/');
-    await expect(page.getByRole('heading', { name: /four products\. four roles\. one ritual\./i })).toBeVisible();
+    // "Four products. Four roles. One ritual." was the old card-grid
+    // heading; the editorial redesign (2026-09-20) replaced that section
+    // with "Four Acts of Care" as an alternating image/copy sequence.
+    await expect(page.getByRole('heading', { name: /four acts of care\./i })).toBeVisible();
     await expect(page.getByRole('heading', { name: /questions about the complete ritual/i })).toBeVisible();
   });
 });

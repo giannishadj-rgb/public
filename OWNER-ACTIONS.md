@@ -775,3 +775,63 @@ to point to instead).
    flipping it to enforced before the page-content nonce migration finishes
    would break WooCommerce/Klaviyo/Stripe scripts sitewide. No new action;
    just don't let this stall indefinitely.
+
+## 29. SEO correction pass — 2026-09-19
+
+Fixed a metadata collision and several SEO findings entirely in code; nothing
+here required production access. Everything was verified against this local
+environment plus a temporary, disposable PHP dev-server instance that
+pre-defined `WP_ENVIRONMENT_TYPE=production` before `wp-config.php` loaded —
+this local site's own indexability was never changed.
+
+**Fixed already (no action needed):**
+- `cos_child_seo_page_meta()` (`inc/seo.php`) defined the array key
+  `'skin-concerns'` twice — once for the journal pillar hub
+  (`/journal/skin-concerns/`) and once for the commercial concern hub
+  (`/skin-concerns/`) — because both pages share the same `post_name` under
+  different parents. The second definition silently won, so both pages were
+  serving the commercial hub's title/description. Added
+  `cos_child_seo_resolve_meta_key()`, which qualifies the lookup by parent
+  slug only when a qualified key exists, and used it in the `<title>` filter,
+  Open Graph/Twitter tags, and the WebPage JSON-LD in `inc/schema.php`. Every
+  other page's metadata lookup is unaffected.
+- Shortened all 5 product `<title>` tags (`cos_child_seo_pdp_meta()`) —
+  previously ~73–79 characters once " — Caviar of Switzerland" was appended.
+  Product names, H1s, slugs, breadcrumbs, cart labels, and Product schema
+  `name` fields were not touched.
+- Replaced the 5 concern pages' medical-sounding "Causes and Treatment"
+  titles with commercial-but-helpful phrasing, and rewrote their meta
+  descriptions to ~135–160 characters. Clinical qualifications (e.g. the
+  disclosed 28-day results) were preserved verbatim; no new claims added.
+- Added/revised the 5 product subtitles rendered under each PDP's H1
+  (`inc/product-data.php`) to more search-relevant phrasing. No second H1 was
+  introduced; the bundle's separate "What's Included" ritual-grid subtitles
+  (a distinct piece of copy, only shown on the bundle page) were deliberately
+  left as-is per the task's own "avoid excessive repetition elsewhere"
+  guidance.
+- Internal linking: added a visible "Shop by Concern" link row to `/shop/`
+  (distinct from the concern-filter buttons removed earlier), and added two
+  contextual links from `/science/clinical-studies/` so `fine-lines-wrinkles`,
+  `dark-circles`, and `dull-skin` each now receive links from at least two
+  distinct journal/science pages (the other two concerns already had this via
+  earlier work this session; all 5 concerns already had links from `/shop/`,
+  `/skin-concerns/`, and at least one product PDP).
+
+**Owner action still needed:**
+
+1. **Re-run Search Console / PageSpeed Insights against the real domain**
+   once this reaches staging/production (see §27) — the corrected titles,
+   descriptions, and internal links can only be evaluated for actual ranking
+   impact against a real, crawled, indexed domain; nothing local can predict
+   that.
+2. **Re-verify indexation behavior on the real staging/production web
+   server** the same way §25 already asks — this pass only added a
+   verification technique (a disposable local PHP server simulating
+   `WP_ENVIRONMENT_TYPE=production`), it didn't change the underlying
+   environment-detection logic, so §25's existing checklist still applies
+   unchanged.
+3. **Optional, no urgency:** the same "Causes and Treatment"-style medical
+   framing and the generic-fallback description gap that existed on the 5
+   concern pages also exists on 4 ingredient science pages and 13 journal
+   articles (per an earlier SEO pass's own note, §23) — those were
+   deliberately left unfixed by choice and are unaffected by this pass.

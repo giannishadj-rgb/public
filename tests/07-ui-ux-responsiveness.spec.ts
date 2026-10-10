@@ -78,6 +78,24 @@ test.describe('UI, UX, and responsive behavior scenarios', () => {
     // required consent checkbox.
     await expectPreferredTapTargets(page, '.cos-nl-btn');
     await expectMinimumTapTargets(page, '.cos-nl-consent input[type="checkbox"]');
+
+    // Footer refinement (2026-09-20): social links grew from 24x24 to a full
+    // 44x44 tap target (icon itself stays visually 20x20, via a matching
+    // negative margin that keeps the on-screen footprint/spacing unchanged).
+    await expectPreferredTapTargets(page, '.cos-footer-details a[aria-label="Instagram"], .cos-footer-details a[aria-label="Facebook"], .cos-footer-details a[aria-label="YouTube"]');
+  });
+
+  test('footer Explore column lists Journal between Swiss Heritage and Sustainability', async ({ page }) => {
+    // Explicit desktop viewport: the mobile-chromium project's default
+    // viewport is narrow enough that the footer's <details> groups start
+    // collapsed (by design, see the "footer column groups collapse on
+    // mobile" test above) -- the Journal link is still present in the DOM
+    // either way, but only visible once its group is open.
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await gotoAndCheck(page, '/');
+    const explore = page.locator('.cos-footer-details', { hasText: 'Explore' }).locator('.cos-footer-col-body a');
+    await expect(explore).toHaveText(['Shop', 'The Ritual', 'Swiss Science', 'Swiss Heritage', 'Journal', 'Sustainability', 'Sitemap']);
+    await expect(page.locator('.cos-footer-details', { hasText: 'Explore' }).locator('a[href="/journal/"]')).toBeVisible();
   });
 
   test('cart quantity, removal, checkout, and account controls meet tap-target minimums', async ({ page }) => {
@@ -164,15 +182,30 @@ test.describe('UI, UX, and responsive behavior scenarios', () => {
     await page.keyboard.press('Enter');
     await expect(groups.last()).not.toHaveAttribute('open', '');
 
-    // Desktop: always open, and the trigger itself is inert (no visible/
-    // focusable summary to accidentally close it with).
+    // Desktop: always open, and the heading is visible but inert -- footer
+    // refinement (2026-09-20) restored the <summary>/<h3> heading on desktop
+    // (it was previously display:none, hiding the column titles entirely);
+    // the trigger stays non-interactive via pointer-events:none plus a
+    // `toggle` listener that reopens a group immediately if anything still
+    // manages to close it (e.g. keyboard Enter/Space, which pointer-events
+    // can't block).
     await page.setViewportSize({ width: 1440, height: 900 });
     await gotoAndCheck(page, '/');
     const desktopGroups = page.locator('.cos-footer-details');
     for (const openAttr of await desktopGroups.evaluateAll(els => els.map(e => e.hasAttribute('open')))) {
       expect(openAttr, 'Footer groups should stay open on desktop').toBe(true);
     }
-    await expect(desktopGroups.first().locator('summary')).toBeHidden();
+    const desktopFirstSummary = desktopGroups.first().locator('summary');
+    await expect(desktopFirstSummary).toBeVisible();
+    await expect(desktopFirstSummary.locator('h3')).toHaveText('Customer Care');
+    await expect(desktopFirstSummary).toHaveCSS('pointer-events', 'none');
+
+    // Keyboard activation can't be blocked by pointer-events -- confirm the
+    // `toggle` listener backstop actually keeps the group open in practice.
+    await desktopFirstSummary.focus();
+    await page.keyboard.press('Enter');
+    await expect(desktopGroups.first()).toHaveAttribute('open', '');
+
     await expect(page.locator('.cos-footer-details').last().locator('a[aria-label="Instagram"]')).toBeVisible();
     await expectNoHorizontalOverflow(page);
   });
