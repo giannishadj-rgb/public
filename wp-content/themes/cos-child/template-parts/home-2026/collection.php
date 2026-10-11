@@ -15,15 +15,16 @@ $products = $args['products'];
 		<header class="h26c__head">
 			<h2 id="h26-collection-title" class="h26c__title">The Collection</h2>
 			<span class="h26c__rule" aria-hidden="true"></span>
-			<p class="h26c__lede">Four caviar formulas, developed and made in Zug and used morning and evening. Each step prepares the skin for the next.<em>Four formulas. One complete ritual.</em></p>
+			<p class="h26c__lede">Caviar at the heart of every formula, developed and made in Zug and used morning and evening. Each step prepares the skin for the next.<em>Four formulas. One complete ritual.</em></p>
 		</header>
-		<p class="h26c__sub" aria-hidden="true">The four formulas</p>
 		<ul class="h26c__grid" role="list">
 			<?php foreach ( $products as $p ) : ?>
 			<li>
 				<a class="h26c__item" href="<?php echo esc_url( $p['url'] ); ?>">
 					<?php echo cos_h26_picture( $p['card'], array( 480, 720, 960 ), array( 4, 5 ), $p['cardalt'], array( 'class' => 'h26c__img', 'sizes' => '(min-width: 1100px) 22vw, 46vw', 'w' => 720 ) ); ?>
 					<span class="h26c__name"><?php echo esc_html( $p['name'][0] ); ?><br><?php echo esc_html( $p['name'][1] ); ?></span>
+					<?php /* Critique 11 Oct 2026: one verified benefit per formula (product data), so the first choice has a reason. */ ?>
+					<span class="h26c__benefit"><?php echo esc_html( $p['benefit'] ); ?></span>
 					<span class="h26c__price"><?php echo esc_html( $p['size'] ); ?><?php if ( $p['price'] ) : ?><span aria-hidden="true"> · </span><span class="h26-sr">, </span><?php echo esc_html( $p['price'] ); ?><?php endif; ?></span>
 					<span class="h26c__btn">Shop now</span>
 				</a>

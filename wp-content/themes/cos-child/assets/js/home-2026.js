@@ -1,4 +1,4 @@
-/* Homepage 2026 — header state, collection rail pagination, scroll reveals. */
+/* Homepage 2026 — header state, scroll reveals, parallax. */
 (function () {
 	'use strict';
 	var root = document.querySelector('.h26');
@@ -8,46 +8,6 @@
 	// initial state too, so a reload mid-page never shows a transparent header.
 	var nav = document.getElementById('cos-nav-wrap');
 	if (nav) nav.classList.toggle('scrolled', window.scrollY > 10);
-
-	// Collection rail (mobile swipe): pagination reflects and drives position.
-	var rail = root.querySelector('[data-h26-rail]');
-	if (rail) {
-		var list = rail.querySelector('.h26-rail__list');
-		var items = Array.prototype.slice.call(list.children);
-		var dotsWrap = rail.querySelector('.h26-rail__dots');
-		var dots = Array.prototype.slice.call(dotsWrap.querySelectorAll('.h26-rail__dot'));
-		var mq = window.matchMedia('(max-width: 699.98px)');
-		var setCurrent = function (i) {
-			dots.forEach(function (d, j) {
-				if (i === j) d.setAttribute('aria-current', 'true');
-				else d.removeAttribute('aria-current');
-			});
-		};
-		var nearest = function () {
-			var x = list.scrollLeft, best = 0, dist = Infinity;
-			items.forEach(function (el, i) {
-				var off = Math.abs(el.offsetLeft - items[0].offsetLeft - x);
-				if (off < dist) { dist = off; best = i; }
-			});
-			return best;
-		};
-		var ticking = false;
-		list.addEventListener('scroll', function () {
-			if (ticking) return;
-			ticking = true;
-			requestAnimationFrame(function () { setCurrent(nearest()); ticking = false; });
-		}, { passive: true });
-		dots.forEach(function (d, i) {
-			d.addEventListener('click', function () {
-				var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-				list.scrollTo({ left: items[i].offsetLeft - items[0].offsetLeft, behavior: still ? 'auto' : 'smooth' });
-				setCurrent(i);
-			});
-		});
-		var sync = function () { dotsWrap.hidden = !mq.matches; };
-		sync();
-		if (mq.addEventListener) mq.addEventListener('change', sync);
-	}
 
 	var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -65,4 +25,27 @@
 		});
 	}, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
 	els.forEach(function (el) { if (!el.classList.contains('is-in')) io.observe(el); });
+
+	// Parallax (10 Oct 2026): each [data-h26-parallax] gets --h26-py, a drift of
+	// factor × its own height as it crosses the viewport (0 when centred). The CSS
+	// moves a photo inside its clipped frame, or, on the evidence plate, the text
+	// layer over a photo that must stay put for its callout leaders.
+	var layers = Array.prototype.slice.call(root.querySelectorAll('[data-h26-parallax]'));
+	if (!layers.length) return;
+	root.classList.add('h26-parallax');
+	var ticking = false;
+	function drift() {
+		ticking = false;
+		var h = window.innerHeight;
+		layers.forEach(function (el) {
+			var r = el.getBoundingClientRect();
+			if (r.bottom < -100 || r.top > h + 100) return;
+			var p = (r.top + r.height / 2 - h / 2) / (h / 2 + r.height / 2); // −1 leaving top … 1 entering bottom
+			el.style.setProperty('--h26-py', (-p * parseFloat(el.getAttribute('data-h26-parallax')) * r.height).toFixed(1) + 'px');
+		});
+	}
+	function queue() { if (!ticking) { ticking = true; window.requestAnimationFrame(drift); } }
+	window.addEventListener('scroll', queue, { passive: true });
+	window.addEventListener('resize', queue);
+	drift();
 })();

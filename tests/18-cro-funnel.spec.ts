@@ -25,23 +25,12 @@ test.describe('Homepage value proposition and CTA hierarchy', () => {
     await expect(page.locator('#cos-hero img')).not.toHaveAttribute('loading', 'lazy');
   });
 
-  test('primary CTA is visually dominant over the secondary CTA', async ({ page }) => {
+  test('the hero carries one action: the Complete Ritual (owner, 11 Oct 2026)', async ({ page }) => {
     await gotoAndCheck(page, '/');
     const primary = page.locator('[data-cro-cta="home-hero-primary"]');
-    const secondary = page.locator('[data-cro-cta="home-hero-secondary"]');
-
     await expect(primary).toHaveText(/shop the complete ritual/i);
-    await expect(primary).toHaveAttribute('href', '/products/the-complete-ritual/');
-    await expect(secondary).toHaveText(/discover the four steps/i);
-    await expect(secondary).toHaveAttribute('href', '/the-ritual/');
-
-    const [primaryBg, secondaryBg] = await Promise.all([
-      primary.evaluate(el => getComputedStyle(el).backgroundColor),
-      secondary.evaluate(el => getComputedStyle(el).backgroundColor),
-    ]);
-    // Primary is filled (opaque background); secondary is a transparent text link.
-    expect(primaryBg).not.toBe('rgba(0, 0, 0, 0)');
-    expect(secondaryBg).toBe('rgba(0, 0, 0, 0)');
+    await expect(primary).toHaveAttribute('href', /\/products\/the-complete-ritual\/$/);
+    await expect(page.locator('[data-cro-cta="home-hero-secondary"]')).toHaveCount(0);
     expect((await primary.boundingBox())!.height).toBeGreaterThanOrEqual(48);
   });
 
@@ -453,7 +442,6 @@ test.describe('Sitewide cta_click tracking', () => {
   test('every CTA named in the hierarchy table carries a data-cro-cta attribute', async ({ page }) => {
     await gotoAndCheck(page, '/');
     await expect(page.locator('[data-cro-cta="home-hero-primary"]')).toHaveCount(1);
-    await expect(page.locator('[data-cro-cta="home-hero-secondary"]')).toHaveCount(1);
 
     await gotoAndCheck(page, '/shop/');
     await expect(page.locator('[data-cro-cta="shop-hero-primary"]')).toHaveCount(1);

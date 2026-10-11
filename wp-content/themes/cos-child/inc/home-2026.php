@@ -99,7 +99,7 @@ add_action( 'wp_dashboard_setup', static function (): void {
  * with a subdued caviar disc behind and the cleanser label corrected to 150 ml.
  * The original shelf trial still reads "50 ml". Switch here.
  */
-const COS_H26_HERO = 'mirror'; // 4 Oct 2026 trial (owner); previous live set: 'orb'
+const COS_H26_HERO = 'jar'; // 11 Oct 2026 (owner); previous: 'mirror' (4 Oct), 'orb'
 
 function cos_h26_hero(): array {
 	$sets = array(
@@ -111,6 +111,10 @@ function cos_h26_hero(): array {
 		// build_hero_noblur_variants.py). Phones/
 		// tablets: square product crop after the copy. Light photo → .h26-hero--light.
 		'mirror' => array( 'desktop' => 'hero5-crisp', 'desktop_w' => array( 1440, 2172 ), 'mobile' => 'hero4-mobile', 'mobile_w' => array( 640, 770 ), 'mobile_ratio' => array( 1, 1 ), 'light' => true, 'alt' => 'The four Caviar of Switzerland formulas, Advanced Repair Serum, Revitalizing Eye Cream, 24h Regeneration Cream and Micellar Water Cleanser, arranged on stepped mirrored glass against a soft grey background' ),
+		// Owner image, 11 Oct 2026: the 24h Regeneration Cream on pearl silk
+		// (design-sources/home-2026/build_hero_jar.py). Light on every screen
+		// ('pearl'): graphite copy and header over the photograph.
+		'jar'   => array( 'desktop' => 'hero-jar-wide', 'desktop_w' => array( 1280, 1672 ), 'mobile' => 'hero-jar-sq', 'mobile_w' => array( 640, 880 ), 'mobile_ratio' => array( 1, 1 ), 'light' => true, 'pearl' => true, 'alt' => 'The 24h Regeneration Cream, open with its silver lid resting against the jar, on flowing pearl silk' ),
 		'orb'   => array( 'desktop' => 'hero3-desktop-restrained', 'desktop_w' => array( 1280, 1920 ), 'mobile' => 'hero3-mobile-restrained', 'mobile_w' => array( 640, 792 ), 'mobile_ratio' => array( 792, 941 ), 'alt' => 'The four Caviar of Switzerland formulas, Revitalizing Eye Cream, Advanced Repair Serum, 24h Regeneration Cream and Micellar Water Cleanser, on a polished black shelf before a subdued disc of caviar pearls against a black background' ),
 		'shelf' => array( 'desktop' => 'hero2-desktop', 'desktop_w' => array( 1280, 1920 ), 'mobile' => 'hero2-mobile', 'mobile_w' => array( 640, 792 ), 'mobile_ratio' => array( 792, 837 ), 'alt' => 'The four Caviar of Switzerland formulas, Revitalizing Eye Cream, Advanced Repair Serum, 24h Regeneration Cream and Micellar Water Cleanser, lined up on a polished black shelf' ),
 	);

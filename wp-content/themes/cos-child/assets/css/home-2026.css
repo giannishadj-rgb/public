@@ -67,31 +67,15 @@ body.cos-h26{
 
 .h26-sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .h26-wrap{width:100%;max-width:var(--h26-max);margin:0 auto;padding:0 var(--h26-gutter)}
-.h26-center{text-align:center}
 
 /* ─── Type ─────────────────────────────────────────────────────── */
-.h26-eyebrow{font-family:var(--h26-sans);font-size:var(--h26-type-label);font-weight:400;line-height:1.5;letter-spacing:0;color:var(--h26-graphite);margin-bottom:18px}
-.h26-sec--dark .h26-eyebrow{color:var(--h26-silver)}
-.h26-eyebrow--swiss::before{content:"";display:inline-block;width:7px;height:7px;background:var(--h26-red);margin-right:12px;vertical-align:2px}
-.h26-h2,.h26-final__title,.h26-caviar__title,.h26-provenance__title{font-family:var(--h26-serif);font-style:normal;font-weight:400;font-size:var(--h26-type-heading);line-height:1.18;letter-spacing:0;text-wrap:balance;overflow-wrap:break-word}
-.h26-h2{font-size:var(--h26-type-section);color:var(--h26-charcoal)}
-.h26-sec--dark .h26-h2{color:var(--h26-on-dark)}
-.h26-lede{font-size:var(--h26-type-body);line-height:1.65;color:var(--h26-graphite);margin-top:20px;max-width:36em;text-wrap:pretty}
-.h26-sec--dark .h26-lede{color:var(--h26-on-dark-2)}
-.h26-head{margin-bottom:44px}
-.h26-head--center{text-align:center}
-.h26-head--center .h26-lede{margin-left:auto;margin-right:auto}
-
-.h26-step{display:block;font-size:var(--h26-type-label);font-weight:400;line-height:1.5;letter-spacing:0;color:var(--h26-graphite)}
-.h26-step__num{color:var(--h26-silver-d);margin-right:8px;font-variant-numeric:tabular-nums}
+.h26-caviar__title,.h26-provenance__title{font-family:var(--h26-serif);font-style:normal;font-weight:400;font-size:var(--h26-type-heading);line-height:1.18;letter-spacing:0;text-wrap:balance;overflow-wrap:break-word}
 
 /* ─── Links & buttons ──────────────────────────────────────────── */
 .h26-arrow{display:inline-block;margin-left:10px;transition:transform .35s var(--h26-ease)}
 .h26-link{display:inline-flex;align-items:center;min-height:44px;font-size:var(--h26-type-small);font-weight:400;line-height:1.5;letter-spacing:0;color:var(--h26-charcoal);background:linear-gradient(currentColor,currentColor) 0 calc(100% - 10px)/0 1px no-repeat;transition:background-size .45s var(--h26-ease)}
 .h26-link:hover{background-size:calc(100% - 26px) 1px}
-.h26-link:hover .h26-arrow,.h26-btn:hover .h26-arrow,.h26-pack:hover .h26-arrow{transform:translateX(5px)}
-.h26-link--light{color:var(--h26-on-dark)}
-.h26-link--inline{min-height:0;padding:12px 0}
+.h26-link:hover .h26-arrow,.h26-btn:hover .h26-arrow{transform:translateX(5px)}
 
 .h26-btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 30px;font-size:var(--h26-type-small);font-weight:400;line-height:1.5;letter-spacing:0;text-align:center;border:1px solid currentColor;transition:background-color .35s var(--h26-ease),color .35s var(--h26-ease),border-color .35s var(--h26-ease)}
 .h26-btn--light{color:var(--h26-white);border-color:rgba(250,250,248,.7)}
@@ -154,184 +138,33 @@ body.cos-h26 #cos-nav-wrap:not(.scrolled):not(:has([aria-expanded="true"])) .cos
 body.cos-h26 #cos-nav-wrap:not(.scrolled):not(:has([aria-expanded="true"])) .cos-bag-count{background:#fff;color:#000}
 body.cos-h26 #cos-nav-wrap:not(.scrolled):not(:has([aria-expanded="true"])) :focus-visible{outline-color:#9DBBFF}
 
-/* ═══ 02 COLLECTION ═════════════════════════════════════════════
-   Photograph-led collection: unframed copy, serif product names and one
-   understated product link. The entire item remains clickable. */
-.h26-collection{padding-bottom:72px}
-.h26-rail__list{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 var(--h26-gutter);padding:0 var(--h26-gutter) 8px;scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
-.h26-rail__list::-webkit-scrollbar{display:none}
-.h26-rail__item{position:relative;display:flex;flex:0 0 84%;scroll-snap-align:start} /* contains the visually-hidden text inside the swipe row (else it escapes and widens the page when no reveal transform is applied) */
-.h26-pack{display:flex;flex-direction:column;width:100%;background:transparent;text-align:left}
-.h26-pack__img{display:block;width:100%;overflow:hidden;background:var(--cos-gallery-bg,#E8E8E5)}
-.h26-pack__img img{width:100%;transition:transform 1.2s var(--h26-ease)}
-.h26-pack:hover .h26-pack__img img{transform:scale(1.025)}
-.h26-pack__body{display:flex;flex-direction:column;align-items:flex-start;flex:1;padding:24px 22px 26px}
-.h26-pack__name{display:block;min-height:2.5em;margin:12px 0 14px;font-family:var(--h26-serif);font-style:normal;font-size:var(--h26-type-product);font-weight:400;line-height:1.25;letter-spacing:0;color:var(--h26-charcoal);overflow-wrap:break-word}
-.h26-pack__benefit{display:block;min-height:3em;font-size:var(--h26-type-body);line-height:1.5;color:var(--h26-charcoal);text-wrap:balance} /* two lines reserved so prices and buttons align across cards */
-.h26-pack__meta{display:block;margin:4px 0 16px;font-size:var(--h26-type-small);line-height:1.5;color:#5E5E5E;font-variant-numeric:tabular-nums}
-.h26-pack__btn{display:inline-flex;align-items:center;min-height:44px;margin-top:auto;font-size:var(--h26-type-small);font-weight:400;line-height:1.5;letter-spacing:0;color:var(--h26-charcoal);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px}
-.h26-rail__dots{display:flex;justify-content:center;gap:4px;margin-top:20px}
-.h26-rail__dots[hidden]{display:none}
-.h26-rail__dot{width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;background:none;border:0;padding:0;cursor:pointer}
-.h26-rail__dot span{display:block;width:22px;height:2px;background:var(--h26-line);transition:background-color .3s,width .3s}
-.h26-rail__dot[aria-current="true"] span{background:var(--h26-charcoal);width:34px}
-
-@media (min-width:700px){
-	.h26-rail__list{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;overflow:visible;padding:0}
-	.h26-rail__dots{display:none!important}
-}
-@media (min-width:1100px){
-	.h26-rail__list{grid-template-columns:repeat(4,1fr)}
-	.h26-pack__body{padding:28px 24px 30px}
-}
-
 /* ═══ 03 CAVIAR ═════════════════════════════════════════════════
    Mobile: the spoon photograph, then copy and benefits on black.
    ≥900px: full-bleed photograph, copy on its dark left side, benefits along
    the bottom — gradients keep every line of text on near-black. */
-.h26-caviar{position:relative;background:var(--h26-black);color:var(--h26-on-dark);isolation:isolate;overflow:hidden}
-.h26-caviar__media{position:relative}
-.h26-caviar__media img{width:100%}
-.h26-caviar__media::after{content:"";position:absolute;inset:auto 0 0 0;height:45%;background:linear-gradient(to bottom,rgba(5,5,5,0),var(--h26-black))}
-.h26-caviar__inner{position:relative;padding-top:8px;padding-bottom:88px}
-.h26-caviar .h26-eyebrow{color:var(--h26-silver)}
 .h26-caviar__title{color:var(--h26-on-dark);max-width:11em}
-.h26-caviar__text{margin:22px 0 32px;max-width:30em;color:var(--h26-on-dark-2);line-height:1.65}
-.h26-benefits{margin-top:56px;display:grid;border-top:1px solid var(--h26-line-dark)}
-.h26-benefit{display:flex;flex-direction:column;gap:4px;padding:16px 0;border-bottom:1px solid var(--h26-line-dark)}
-.h26-benefit__k{font-size:var(--h26-type-label);font-weight:400;line-height:1.5;letter-spacing:0;color:var(--h26-on-dark)}
-.h26-benefit__v{font-size:var(--h26-type-body);line-height:1.65;color:var(--h26-on-dark-2)}
-
-@media (min-width:900px){
-	.h26-caviar{min-height:max(720px,min(56.25vw,100svh));display:flex}
-	.h26-caviar__media{position:absolute;inset:0;z-index:-1}
-	.h26-caviar__media picture,.h26-caviar__media img{height:100%}
-	.h26-caviar__media img{object-fit:cover;object-position:75% 50%}
-	.h26-caviar__media::after{inset:0;height:auto;background:
-		linear-gradient(90deg,rgba(5,5,5,.9) 0%,rgba(5,5,5,.72) 32%,rgba(5,5,5,0) 58%),
-		linear-gradient(0deg,rgba(5,5,5,.85) 0%,rgba(5,5,5,0) 38%)}
-	.h26-caviar__inner{display:flex;flex-direction:column;justify-content:space-between;gap:72px;padding-top:clamp(96px,10vw,150px);padding-bottom:64px}
-	.h26-caviar__copy{max-width:600px}
-	.h26-benefits{margin:0;width:100%;max-width:1040px;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(250,250,248,.22);border-bottom:0}
-	.h26-benefit{padding:18px 28px 0;border-bottom:0}
-	.h26-benefit:first-child{padding-left:0}
-	.h26-benefit + .h26-benefit{border-left:1px solid rgba(250,250,248,.22)}
-}
-
-/* Shared: the ruled eyebrow. */
-.h26-eyebrow--rule{display:flex;align-items:center;gap:20px}
-.h26-eyebrow--rule::after{content:"";width:72px;height:1px;background:currentColor;opacity:.6}
-
-/* ═══ 06 TRUST ══════════════════════════════════════════════════
-   Clinical evidence only: a soft-white results panel on pearl, each figure named with
-   the product it was measured on. */
-.h26-stats{display:grid;background:var(--h26-white);padding:8px 24px} /* lighter panel on the pearl section */
-.h26-stat{display:flex;flex-direction:column;align-items:center;text-align:center;padding:28px 0}
-.h26-stat + .h26-stat{border-top:1px solid var(--h26-line)}
-.h26-stat__product{font-size:var(--h26-type-label);font-weight:400;line-height:1.5;letter-spacing:0;color:var(--h26-graphite)}
-.h26-stat__fig{margin-top:10px;font-family:var(--h26-serif);font-style:normal;font-weight:400;font-size:var(--h26-type-figure);line-height:1;letter-spacing:0;color:var(--h26-charcoal);font-variant-numeric:lining-nums tabular-nums}
-.h26-stat__rule{display:block;width:44px;height:1px;margin:16px 0 14px;background:linear-gradient(90deg,var(--h26-silver),var(--h26-silver-d),var(--h26-silver))}
-.h26-stat__label{font-family:var(--h26-sans);font-style:normal;font-weight:400;font-size:var(--h26-type-body);line-height:1.5;color:var(--h26-charcoal)}
-.h26-stat__kind{margin-top:12px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:2px 8px;font-size:var(--h26-type-small);line-height:1.5;color:var(--h26-charcoal)}
-.h26-stat__dot{width:7px;height:7px;border-radius:50%;background:var(--h26-charcoal);flex:0 0 auto}
-.h26-stat__method{margin-top:2px;font-size:var(--h26-type-small);line-height:1.5;color:var(--h26-graphite);max-width:21em}
-/* Self-reported result: same baseline as the instrument results, but visibly
-   subordinate — smaller graphite figure, hollow marker, quieter label. */
-.h26-stat--reported .h26-stat__fig span{font-size:.6em;color:var(--h26-graphite)}
-.h26-stat--reported .h26-stat__label{color:var(--h26-graphite)}
-.h26-stat--reported .h26-stat__kind{color:#6B6B6B}
-.h26-stat--reported .h26-stat__dot{background:transparent;border:1px solid #6B6B6B}
-.h26-note{margin:24px auto 0;text-align:center}
-@media (min-width:900px){
-	.h26-stats{grid-template-columns:repeat(3,1fr);padding:64px 24px}
-	.h26-stat{padding:0 32px}
-	.h26-stat__rule{margin:22px 0 18px}
-	/* two-line slot so every figure sits on the same baseline even when a product name wraps */
-	.h26-stat__product{min-height:3em;display:flex;align-items:flex-end;justify-content:center}
-	.h26-stat + .h26-stat{border-top:0;border-left:1px solid var(--h26-line)}
-}
-
-@media (max-width:899.98px){
-	.h26-trust{padding:72px 0}
-	.h26-trust .h26-head{margin-bottom:32px}
-}
 
 /* ═══ 06b PROVENANCE ════════════════════════════════════════════
    Replaces 04 Swiss Precision + 07 Swiss Philosophy. Swiss graphite; the
    laboratory shot alone; two sourced facts. */
-.h26-provenance{display:grid;background:var(--h26-swiss-graphite);color:var(--h26-on-dark)}
-.h26-provenance__media{position:relative}
-.h26-provenance__photo{position:relative;aspect-ratio:4/5;overflow:hidden;background:#1A1A1A}
-.h26-provenance__photo picture,.h26-provenance__photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.h26-provenance__body{padding:40px var(--h26-gutter) 88px}
-.h26-provenance .h26-eyebrow{color:var(--h26-silver)}
 .h26-provenance__title{color:var(--h26-on-dark)}
-.h26-provenance__text{margin-top:20px;max-width:30em;color:var(--h26-on-dark-2);line-height:1.65}
-.h26-facts{margin:36px 0 28px;border-top:1px solid var(--h26-line-dark)}
-.h26-fact{display:flex;flex-direction:column;gap:2px;padding:14px 0;border-bottom:1px solid var(--h26-line-dark)}
-.h26-fact dt{font-size:var(--h26-type-label);font-weight:400;letter-spacing:0;line-height:1.5;color:var(--h26-on-dark)}
-.h26-fact dd{margin:0;font-size:var(--h26-type-body);line-height:1.65;color:var(--h26-on-dark-2)}
-@media (min-width:700px){
-	.h26-fact{display:grid;grid-template-columns:9em 1fr;column-gap:24px;align-items:baseline}
-}
-@media (min-width:900px){
-	.h26-provenance{grid-template-columns:1fr 1fr;min-height:min(100svh,940px)}
-	.h26-provenance__media{padding-bottom:0}
-	.h26-provenance__photo{position:absolute;inset:0;aspect-ratio:auto}
-	.h26-provenance__body{align-self:center;padding:96px clamp(40px,6vw,104px)}
-}
 
-/* ═══ 08 FINAL ══════════════════════════════════════════════════
-   The complete set beside a single call to action. Mobile: photo, then copy. */
-.h26-final{display:grid;background:var(--h26-pearl)}
-.h26-final__media{position:relative;aspect-ratio:1/1;overflow:hidden;background:#D9D9D7} /* square on mobile: tray crop final-tray-sq */
-.h26-final__media picture,.h26-final__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.h26-final__body{padding:56px var(--h26-gutter) 88px}
-.h26-final__title{color:var(--h26-charcoal);max-width:11em}
-.h26-final__sequence{margin-top:14px;font-size:var(--h26-type-label);line-height:1.5;color:var(--h26-graphite)}
-.h26-final__sequence span{margin:0 .35em}
-.h26-final__lede{margin-top:16px;max-width:26em;font-size:var(--h26-type-body);line-height:1.65;color:var(--h26-graphite)}
-/* Assurances under the CTA: 2×2 (1 column on small phones), fine rule above. */
-.h26-final__facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 24px;margin-top:32px;padding-top:24px;border-top:1px solid var(--h26-line)}
-.h26-final__fact{display:flex;align-items:flex-start;gap:10px}
-.h26-final__icon{flex:0 0 auto;width:22px;height:22px;margin-top:1px;color:var(--h26-silver-d)} /* decorative, aria-hidden */
-.h26-final__fact-k{display:block;font-size:var(--h26-type-label);line-height:1.5;color:var(--h26-charcoal)}
-.h26-final__fact-v{display:block;font-size:var(--h26-type-small);line-height:1.5;color:var(--h26-graphite)}
-@media (max-width:399.98px){ .h26-final__facts{grid-template-columns:1fr} }
-.h26-final__separate{font-size:var(--h26-type-small);color:var(--h26-graphite)}
-.h26-final__amount{margin-top:20px;font-size:var(--h26-type-body);line-height:1.5;color:var(--h26-charcoal);font-variant-numeric:tabular-nums}
-.h26-final__cta{margin-top:20px;width:100%}
-@media (min-width:700px){
-	.h26-final__cta{width:auto}
-}
-@media (min-width:900px){
-	/* Full-bleed: the wide tray frame fills the section; copy sits on the extended backdrop at left. */
-	.h26-final{position:relative;display:flex;align-items:center;min-height:max(100svh,640px);isolation:isolate;background:#B9B9B7}
-	.h26-final__media{position:absolute;inset:0;z-index:-1;aspect-ratio:auto;min-height:0}
-	.h26-final__media img{object-position:72% 50%}
-	.h26-final__body{width:100%;max-width:var(--h26-max);margin:0 auto;padding:96px var(--h26-gutter)}
-	.h26-final__body > *{max-width:520px}
-}
-/* Narrow desktops (4:3-ish): show more backdrop on the left so the set clears the copy. */
-@media (min-width:900px) and (max-width:1279.98px){ .h26-final__media img{object-position:38% 50%} }
-
-/* The footer's own assurance line would repeat the facts in the Complete Ritual
-   section directly above it. */
+/* ═══ 08 THE RITUAL (layout: see the "08 The Ritual" block near the end) ═══ */
+/* The footer's own assurance line would repeat the shipping and returns facts
+   in The Ritual's offer directly above it. */
 body.cos-h26 #cos-footer .cos-trust{display:none}
 
 /* ─── Desktop rhythm ───────────────────────────────────────────── */
 @media (max-width:359.98px){
 	body.cos-h26{--h26-type-hero:2.375rem;--h26-type-product:1.25rem}
-	.h26-pack__benefit{min-height:4.5em}
 }
 @media (min-width:700px){
 	body.cos-h26{--h26-type-hero:3rem}
 	.h26{--h26-gutter:40px}
 }
 @media (min-width:900px){
-	body.cos-h26{--h26-type-heading:2.5rem;--h26-type-section:2rem;--h26-type-band:1.75rem;--h26-type-figure:3.5rem;--h26-type-newsletter:1.875rem}
+	body.cos-h26{--h26-type-band:1.75rem;--h26-type-figure:3.5rem;--h26-type-newsletter:1.875rem}
 	.h26-sec{padding:128px 0}
-	.h26-head{margin-bottom:64px}
 }
 @media (min-width:1100px){
 	body.cos-h26{--h26-type-hero:3.5rem}
@@ -367,28 +200,28 @@ body.cos-h26 #cos-footer .cos-footer-copy,body.cos-h26 #cos-footer .cos-footer-c
 }
 
 /* ─── Collection (owner pick, 10 Oct 2026) ───────────────────────
-   The whole section in #F2F3EE, the packshots' own backdrop, so the
+   The whole section in the brand pearl #F2F2EF (owner, 11 Oct), matching the packshots, so the
    bottles sit seamlessly (the greige band was dropped the same day);
    centred spaced-caps title, short rule, lede, outlined "Shop now".
    Replaced .h26-rail/.h26-pack. */
-.h26c{background:#F2F3EE;color:#1C1C1C}
-.h26c__panel{max-width:1240px;margin:0 auto;background:#F2F3EE;padding:44px 18px 52px}
+.h26c{background:#F2F2EF;color:#1C1C1C}
+.h26c__panel{max-width:1240px;margin:0 auto;background:#F2F2EF;padding:44px 18px 52px}
 .h26c__head{display:flex;flex-direction:column;align-items:center;text-align:center;max-width:40rem;margin:0 auto}
-.h26c__title{font-family:var(--h26-serif);font-weight:500;font-size:1.0625rem;line-height:1.3;letter-spacing:.26em;text-transform:uppercase;color:#1C1C1C;padding-left:.26em}
-.h26c__rule{display:block;width:56px;height:1px;margin:16px 0 18px;background:rgba(28,28,28,.45)}
-.h26c__lede{font-size:1rem;font-weight:300;line-height:1.7;color:#3A3A3A;text-wrap:pretty}
-.h26c__lede em{display:block;margin-top:6px;font-family:var(--h26-serif);font-size:1.3125rem;font-style:italic;font-weight:400;line-height:1.4;color:#1C1C1C}
+.h26c__title{color:#1C1C1C}
+.h26c__rule{display:block;width:56px;height:1px;margin:var(--s-heading) 0;background:rgba(28,28,28,.45)}
+.h26c__lede{max-width:34em;font-size:var(--t-body);font-weight:300;line-height:1.7;color:#3A3A3A;text-wrap:pretty}
+.h26c__lede em{display:block;margin-top:6px;font-family:var(--h26-serif);font-size:var(--t-title);font-style:italic;font-weight:400;line-height:1.35;color:#1C1C1C}
 .h26c__btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(28,28,28,.55);font-weight:500;letter-spacing:.01em;color:#1C1C1C;transition:background-color .35s var(--h26-ease),color .35s var(--h26-ease),border-color .35s var(--h26-ease)}
 .h26c__item:hover .h26c__btn{background:#1C1C1C;border-color:#1C1C1C;color:#F2F2EF}
-.h26c__sub{margin:36px 0 8px;text-align:center;font-family:var(--h26-serif);font-weight:500;font-size:.9375rem;letter-spacing:.26em;text-transform:uppercase;color:#1C1C1C}
-.h26c__grid{list-style:none;margin:0 auto;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 14px;max-width:1080px}
+.h26c__grid{list-style:none;margin:36px auto 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 14px;max-width:1080px}
 .h26c__item{display:flex;flex-direction:column;align-items:center;height:100%;text-align:center;color:#1C1C1C}
-.h26c__img{display:block;width:100%;overflow:hidden;background:#F2F3EE}
-.h26c__img img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;object-position:50% 72%;transition:transform 1.2s var(--h26-ease)}
+.h26c__img{display:block;width:100%;overflow:hidden;background:#F2F2EF}
+.h26c__img img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;-webkit-mask-image:linear-gradient(to right,transparent,#000 12%,#000 88%,transparent),linear-gradient(to bottom,transparent,#000 10%,#000 90%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent,#000 12%,#000 88%,transparent),linear-gradient(to bottom,transparent,#000 10%,#000 90%,transparent);mask-composite:intersect; /* tile edges ease into the pearl: no visible boxes */transition:transform 1.2s var(--h26-ease)}
 .h26c__item:hover .h26c__img img{transform:scale(1.03)}
-.h26c__name{display:block;margin-top:6px;font-family:var(--h26-serif);font-size:1.1875rem;font-weight:400;line-height:1.25;color:#1C1C1C;font-variant-numeric:lining-nums;text-wrap:balance}
-.h26c__price{display:block;margin:6px 0 14px;font-size:.875rem;line-height:1.5;color:#5E5E5E;font-variant-numeric:tabular-nums}
-.h26c__btn{min-height:44px;margin-top:auto;padding:0 22px;font-size:.875rem}
+.h26c__name{display:block;margin-top:6px;font-family:var(--h26-serif);font-size:var(--t-title);font-weight:400;line-height:1.25;color:#1C1C1C;font-variant-numeric:lining-nums;text-wrap:balance}
+.h26c__benefit{display:block;margin-top:8px;max-width:17em;font-size:var(--t-body);font-weight:300;line-height:1.5;color:#2A2A2A;text-wrap:balance}
+.h26c__price{display:block;margin:8px 0 14px;font-size:var(--t-detail);line-height:1.5;color:#3A3A3A;font-variant-numeric:tabular-nums}
+.h26c__btn{min-height:44px;margin-top:auto;padding:0 22px;font-size:var(--t-detail)}
 .h26c__item:focus-visible{outline:2px solid #1C1C1C;outline-offset:4px}
 @media (prefers-reduced-motion:reduce){.h26c__img img{transition:none}.h26c__item:hover .h26c__img img{transform:none}}
 @media (min-width:700px){
@@ -397,51 +230,62 @@ body.cos-h26 #cos-footer .cos-footer-copy,body.cos-h26 #cos-footer .cos-footer-c
 }
 @media (min-width:1100px){
 	.h26c__panel{padding:64px 64px 72px}
-	.h26c__title{font-size:1.25rem}
 	.h26c__grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:32px}
 }
 
 /* ─── Clinical evidence as measurement callouts (10 Oct 2026) ────
    The text is part of the picture: the heading sits in the headroom of a
-   single-model portrait, each result is pinned to the skin it describes,
+   single-model portrait, each measured result is pinned to the skin it describes,
    and "Read the studies" sits on the photo. Below 1100px: numbered
    markers on a 5:7 crop, keyed figures listed beneath it. Desktop: the
    section is one full-bleed plate whose backdrop was extended for the
    figures; graphite hairline leaders run from each marker to its figure
-   and draw in once on reveal. The self-reported result stays secondary:
-   hollow marker, smaller figure, tag. */
+   and draw in once on reveal. The self-reported result is a separate
+   secondary caption, never pinned to the face (critique 11 Oct 2026). */
 .h26e{background:#F2F2EF;color:#1C1C1C;padding:0 0 56px}
 .h26e__plate{position:relative}
 .h26e__photo{position:relative;margin:0}
 .h26e__photo img{display:block;width:100%;height:auto;aspect-ratio:5/7;background:#DCDBD8}
 .h26e__head{position:absolute;top:0;left:0;right:0;display:flex;flex-direction:column;align-items:center;max-width:36rem;margin:0 auto;padding:28px 22px 0;text-align:center}
-.h26e__title{font-family:var(--h26-serif);font-weight:500;font-size:1.0625rem;line-height:1.3;letter-spacing:.26em;text-transform:uppercase;color:#1C1C1C;padding-left:.26em}
-.h26e__rule{display:block;width:56px;height:1px;margin:14px 0 14px;background:rgba(28,28,28,.45)}
-.h26e__lede{font-size:.9375rem;font-weight:400;line-height:1.6;color:#2A2A2A;text-wrap:balance}
+.h26e__title{color:#1C1C1C}
+.h26e__rule{display:block;width:56px;height:1px;margin:var(--s-heading) 0;background:rgba(28,28,28,.45)}
+.h26e__lede{font-size:var(--t-body);font-weight:400;line-height:1.6;color:#2A2A2A;text-wrap:balance}
 .h26e__mark{position:absolute;left:var(--x);top:var(--y);width:0;height:0}
-.h26e__mark-n{position:absolute;left:-14px;top:-14px;display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:rgba(250,250,248,.94);font-size:.8125rem;font-weight:500;line-height:1;color:#1C1C1C;font-variant-numeric:lining-nums}
-.h26e__mark--reported .h26e__mark-n{background:rgba(250,250,248,.55);box-shadow:inset 0 0 0 1px #FAFAF8}
+.h26e__mark-n{position:absolute;left:-14px;top:-14px;display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:rgba(250,250,248,.94);font-size:var(--t-small);font-weight:500;line-height:1;color:#1C1C1C;font-variant-numeric:lining-nums}
 .h26e__calls{list-style:none;margin:0;padding:0 22px}
 .h26e__call{display:grid;grid-template-columns:28px 1fr;column-gap:14px;padding:28px 0}
 .h26e__call + .h26e__call{border-top:1px solid rgba(28,28,28,.12)}
-.h26e__call-n{grid-row:1 / span 3;display:flex;align-items:center;justify-content:center;width:28px;height:28px;margin-top:2px;border:1px solid rgba(28,28,28,.4);border-radius:50%;font-size:.8125rem;font-weight:500;line-height:1;color:#1C1C1C}
+.h26e__call-n{grid-row:1 / span 3;display:flex;align-items:center;justify-content:center;width:28px;height:28px;margin-top:2px;border:1px solid rgba(28,28,28,.4);border-radius:50%;font-size:var(--t-small);font-weight:500;line-height:1;color:#1C1C1C}
 .h26e__above,.h26e__below{display:flex;flex-direction:column}
-.h26e__product{font-size:.875rem;font-weight:500;line-height:1.5;color:#3A3A3A}
-.h26e__fig{margin-top:6px;font-family:var(--h26-serif);font-weight:300;font-size:3.25rem;line-height:1;letter-spacing:-.01em;color:#1C1C1C;font-variant-numeric:lining-nums tabular-nums}
-.h26e__call--reported .h26e__fig{font-size:2.25rem;color:#3A3A3A}
+.h26e__product{font-size:var(--t-detail);font-weight:500;line-height:1.5;color:#2A2A2A}
+.h26e__fig{margin-top:6px;font-family:var(--h26-serif);font-weight:300;font-size:var(--t-figure);line-height:1;letter-spacing:-.01em;color:#1C1C1C;font-variant-numeric:lining-nums tabular-nums}
 .h26e__lead{display:block;width:44px;height:1px;margin:16px 0 14px;background:rgba(28,28,28,.45)}
-.h26e__finding{font-size:1rem;line-height:1.5;color:#1C1C1C}
-.h26e__kind{display:flex;align-items:center;gap:8px;margin-top:8px;font-size:.875rem;line-height:1.5;color:#1C1C1C}
+.h26e__finding{font-size:var(--t-body);font-weight:500;line-height:1.5;color:#1C1C1C}
+.h26e__kind{display:flex;align-items:center;gap:8px;margin-top:8px;font-size:var(--t-body);line-height:1.5;color:#1C1C1C}
 .h26e__dot{width:7px;height:7px;border-radius:50%;background:currentColor;flex:0 0 auto}
 .h26e__tag{display:inline-block;padding:1px 8px;border:1px solid rgba(28,28,28,.3);border-radius:2px;font-size:.75rem;font-weight:500;line-height:1.5;color:#3A3A3A}
-.h26e__panel,.h26e__method{font-size:.875rem;line-height:1.5;color:#5E5E5E}
+.h26e__panel,.h26e__method{font-size:var(--t-body);line-height:1.55;color:#3A3A3A}
 .h26e__more{margin-top:8px;text-align:center}
+/* the self-reported result: a separate secondary caption, never pinned to the face */
+.h26e__aside{margin:4px 22px 0;padding-top:20px;border-top:1px solid rgba(28,28,28,.12);text-align:center}
+.h26e__note{font-size:var(--t-body);line-height:1.6;color:#2A2A2A;text-wrap:balance}
+.h26e__note strong{font-weight:500;color:#1C1C1C}
+.h26e__note .h26e__tag{margin-right:6px;vertical-align:1px}
+.h26e__note-panel{display:block;color:#3A3A3A}
+.h26e__credit{margin-top:10px;font-size:var(--t-small);line-height:1.5;color:#5E5E5E}
+/* Under 360px the 16px intro needs three lines; the plate grows 40px of headroom
+   in the photograph's own top-edge tone (sampled from evidence-portrait) so the
+   heading clears her hair. On the plate, not the photo, so the markers stay put. */
+@media (max-width:359.98px){
+	.h26e__plate{padding-top:40px;background:linear-gradient(90deg,#D2D2CE,#CFD0CB 50%,#CCCBC6) top/100% 40px no-repeat}
+	.h26e__head{padding:16px 12px 0}
+	.h26e__rule{margin:12px 0} /* compact here: the headroom is fixed by the photograph */
+}
 @media (min-width:700px){
 	.h26e{padding-bottom:72px}
 	.h26e__photo{max-width:640px;margin:0 auto}
 	.h26e__head{padding-top:40px}
-	.h26e__title{font-size:1.25rem}
-	.h26e__calls{display:grid;grid-template-columns:repeat(3,1fr);column-gap:32px;max-width:960px;margin:8px auto 0;padding:0 40px}
+	.h26e__calls{display:grid;grid-template-columns:repeat(2,1fr);column-gap:40px;max-width:760px;margin:8px auto 0;padding:0 40px}
 	.h26e__call + .h26e__call{border-top:0}
 }
 @media (min-width:1100px){
@@ -450,9 +294,7 @@ body.cos-h26 #cos-footer .cos-footer-copy,body.cos-h26 #cos-footer .cos-footer-c
 	.h26e__photo{max-width:none}
 	.h26e__photo img{aspect-ratio:48/29}
 	.h26e__head{z-index:2;padding-top:clamp(40px,5vw,80px)}
-	.h26e__title{font-size:1.375rem}
-	.h26e__rule{margin:18px 0 16px}
-	.h26e__lede{font-size:1rem}
+	.h26e__lede{font-size:var(--t-body)}
 	.h26e__mark{left:var(--xd);top:var(--yd);z-index:1;height:1px;background:rgba(28,28,28,.5)}
 	.h26e__mark-n{display:none}
 	/* leader: from the figure's outer margin to the marker */
@@ -461,7 +303,6 @@ body.cos-h26 #cos-footer .cos-footer-copy,body.cos-h26 #cos-footer .cos-footer-c
 	.h26e__mark::after{content:"";position:absolute;top:-4px;width:9px;height:9px;border-radius:50%;background:#1C1C1C;outline:1px solid rgba(28,28,28,.45);outline-offset:4px}
 	.h26e__mark--left::after{right:-4px}
 	.h26e__mark--right::after{left:-4px}
-	.h26e__mark--reported::after{background:transparent;box-shadow:inset 0 0 0 1px #1C1C1C;outline:0}
 	/* figures sit on the backdrop beside the face, their leader at the marker's height */
 	.h26e__calls{display:block;max-width:none;margin:0;padding:0}
 	.h26e__call{position:absolute;z-index:2;top:var(--yd);display:block;width:min(320px,24vw);padding:0;border:0}
@@ -470,12 +311,205 @@ body.cos-h26 #cos-footer .cos-footer-copy,body.cos-h26 #cos-footer .cos-footer-c
 	.h26e__call-n,.h26e__lead{display:none}
 	.h26e__above{position:absolute;bottom:100%;left:0;right:0;padding-bottom:14px}
 	.h26e__below{padding-top:14px}
-	.h26e__fig{font-size:clamp(2.75rem,4vw,4.25rem)}
-	.h26e__call--reported .h26e__fig{font-size:clamp(2rem,2.6vw,2.75rem)}
-	.h26e__panel,.h26e__method{color:#3A3A3A}
+	.h26e__panel,.h26e__method{color:#2A2A2A}
+	.h26e__aside{position:absolute;z-index:2;top:25%;left:max(40px,5vw);width:min(380px,30vw);margin:0;padding:14px 0 0;border-top:1px solid rgba(28,28,28,.3);text-align:left}
+	.h26e__credit{margin-top:8px;color:#3A3A3A}
 	.h26e__call--right .h26e__kind{justify-content:flex-end}
 	.h26e__more{position:absolute;z-index:2;right:max(40px,5vw);bottom:clamp(28px,5%,64px);margin:0}
 	/* the one authored moment: leaders draw out from the skin */
 	.h26-motion .h26e__plate.h26-reveal .h26e__mark{transform:scaleX(0);transition:transform 1.1s cubic-bezier(.16,1,.3,1) .35s}
 	.h26-motion .h26e__plate.h26-reveal.is-in .h26e__mark{transform:none}
+}
+
+/* ─── 03 Caviar: the light ingredient macro (11 Oct 2026) ────────
+   After the owner's ingredient-spotlight references: a full-bleed luminous
+   backlit macro of the caviar pearls (owner's photograph) with the type set
+   on its calm left field —
+   spaced label, shared heading, the species in italic serif, the lede. The
+   facts continue below in the photograph's own tone (#E2E0D9), so the plate
+   and the section read as one surface. Below 1280px the plate stands alone
+   and label, heading and copy follow on the same tone. */
+.h26v{--v-tone:#E2E0D9;background:var(--v-tone);color:#1C1C1C}
+.h26v__plate{position:relative;overflow:hidden}
+.h26v__photo{position:relative}
+.h26v__photo picture,.h26v__photo img{display:block;width:100%;height:auto}
+.h26v__photo img{aspect-ratio:3/2;object-fit:cover}
+.h26v__label{position:relative;margin:0;padding:28px 22px 12px;font-size:.75rem;font-weight:500;line-height:1.5;letter-spacing:.24em;text-transform:uppercase;color:#2A2A2A}
+.h26v__copy{position:relative;max-width:34rem;padding:0 22px}
+.h26v .h26v__copy .h26-caviar__title{max-width:none;color:#1C1C1C}
+.h26v__species{margin-top:4px;font-family:var(--h26-serif);font-size:var(--t-title);font-weight:400;line-height:1.3;color:#3A3A3A}
+.h26v__species em{font-style:italic}
+.h26v__lede{margin-top:var(--s-heading);font-size:var(--t-body);font-weight:300;line-height:1.7;color:#2A2A2A;text-wrap:pretty}
+.h26v__foot{max-width:1240px;margin:0 auto;padding:40px 22px 72px}
+.h26v__facts{margin:0;padding:0;list-style:none}
+.h26v__fact{display:flex;flex-direction:column;gap:6px;padding:20px 0;border-top:1px solid rgba(28,28,28,.16)}
+.h26v__fact-k{font-size:var(--t-small);font-weight:500;line-height:1.5;color:#1C1C1C}
+.h26v__fact-v{font-size:var(--t-body);font-weight:300;line-height:1.65;color:#2A2A2A}
+.h26v__more{margin-top:8px}
+@media (min-width:700px){ .h26v__foot{padding:48px 40px 88px} .h26v__label,.h26v__copy{padding-left:40px;padding-right:40px} }
+@media (min-width:1280px){
+	/* from 1280px the type moves onto the photograph's calm left field */
+	.h26v__label{position:absolute;top:clamp(40px,6vh,72px);left:max(40px,6vw);margin:0;padding:0}
+	.h26v__copy{position:absolute;top:calc(clamp(40px,6vh,72px) + 52px);left:max(40px,6vw);transform:none; /* the photograph's calm field is its top-left: stray pearls lie lower left */max-width:min(24rem,27vw);margin:0;padding:0}
+	.h26v__foot{padding:8px 40px 104px}
+	.h26v__facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+	.h26v__fact{padding:24px 32px 0;border-top:0;border-left:1px solid rgba(28,28,28,.16)}
+	.h26v__fact:first-child{padding-left:0;border-left:0}
+	.h26v__more{margin-top:40px}
+}
+@media (min-width:1280px){ .h26v__foot{padding-left:max(40px,6vw);padding-right:max(40px,6vw);max-width:none} }
+
+/* Label above a heading; only template-parts/home-2026/texture.php (not loaded,
+   kept restorable) still uses it. */
+.h26-eyebrow{margin-bottom:16px;font-size:.75rem;font-weight:500;line-height:1.5;letter-spacing:.18em;text-transform:uppercase;color:#3A3A3A}
+
+/* ─── 06b Swiss heritage (11 Oct 2026) ────────────────────────────
+   A full-bleed plate of the Matterhorn in cloud (graded quiet) with the label,
+   shared heading and lede in porcelain on its calm sky, a small place caption,
+   then a Swiss-grid band: three facts as large serif figures on hairlines. */
+.h26h{background:#F2F2EF;color:#1C1C1C}
+.h26h__plate{position:relative;margin:0;overflow:hidden;background:#8E949B}
+.h26h__photo picture,.h26h__photo img{display:block;width:100%;height:auto}
+.h26h__photo img{aspect-ratio:4/5;object-fit:cover}
+/* a soft shade from the top, behind the copy only */
+.h26h__plate::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(14,18,22,.66) 0,rgba(14,18,22,.46) 42%,rgba(14,18,22,0) 72%)}
+.h26h__copy{position:absolute;z-index:1;top:0;left:0;right:0;padding:36px 22px 0;color:#FAFAF8}
+.h26h__label{font-size:.75rem;font-weight:500;line-height:1.5;letter-spacing:.24em;text-transform:uppercase;color:#FAFAF8}
+.h26h .h26h__copy .h26-provenance__title{max-width:12em;margin-top:14px;color:#FAFAF8}
+.h26h__lede{max-width:26em;margin-top:var(--s-heading);font-size:var(--t-body);font-weight:400;line-height:1.65;color:rgba(250,250,248,.94);text-wrap:pretty}
+.h26h__caption{position:absolute;z-index:1;right:16px;bottom:12px;font-family:var(--h26-serif);font-size:.9375rem;font-style:italic;line-height:1.3;color:rgba(250,250,248,.92);text-shadow:0 1px 8px rgba(0,0,0,.35)}
+.h26h__band{max-width:1240px;margin:0 auto;padding:48px 22px 72px}
+.h26h__facts{display:grid;margin:0}
+.h26h__fact{padding:24px 0;border-top:1px solid rgba(28,28,28,.16)}
+.h26h__fact:last-child{border-bottom:1px solid rgba(28,28,28,.16)}
+.h26h__fact dt{display:flex;flex-direction:column;gap:6px}
+.h26h__fig{font-family:var(--h26-serif);font-size:var(--t-figure);font-weight:300;line-height:1;letter-spacing:-.01em;color:#1C1C1C;font-variant-numeric:lining-nums}
+.h26h__key{font-size:.75rem;font-weight:500;line-height:1.5;letter-spacing:.18em;text-transform:uppercase;color:#3A3A3A}
+.h26h__fact dd{margin:12px 0 0;max-width:22em;font-size:var(--t-body);font-weight:300;line-height:1.65;color:#2A2A2A}
+.h26h__links{display:flex;flex-wrap:wrap;gap:4px 32px;margin-top:28px}
+@media (min-width:700px){
+	.h26h__copy{padding:56px 40px 0}
+	.h26h__band{padding:64px 40px 96px}
+}
+@media (min-width:900px){
+	.h26h__photo img{aspect-ratio:auto;height:min(92svh,860px);min-height:560px;object-position:62% 40%}
+	.h26h__plate::after{background:linear-gradient(90deg,rgba(14,18,22,.58) 0,rgba(14,18,22,.34) 30%,rgba(14,18,22,0) 52%)}
+	.h26h__copy{top:50%;left:max(40px,6vw);right:auto;max-width:min(30rem,40vw);padding:0;transform:translateY(-50%)}
+	.h26h__caption{right:max(40px,6vw);bottom:24px}
+	.h26h__band{padding:88px max(40px,6vw) 112px;max-width:none}
+	.h26h__facts{grid-template-columns:repeat(3,minmax(0,1fr))}
+	.h26h__fact{padding:0 40px;border-top:0;border-left:1px solid rgba(28,28,28,.16)}
+	.h26h__fact:first-child{padding-left:0;border-left:0}
+	.h26h__fact:last-child{border-bottom:0}
+	.h26h__links{margin-top:56px}
+}
+
+/* ─── Parallax (10 Oct 2026) ─────────────────────────────────────
+   home-2026.js sets --h26-py on each [data-h26-parallax] (skipped for
+   reduced motion). Photos drift inside their clipped frames, scaled just
+   enough (±6% drift → 1.14) that no edge ever shows; the Complete
+   Ritual's transparent cut-outs drift at alternating speeds instead. The hero only drifts
+   on desktop, where it is a full-screen backdrop. On the evidence plate the
+   photo stays put (its callout leaders are pinned to it) and the heading
+   and studies link drift over it instead. */
+.h26-parallax .h26v__photo > picture{transform:translate3d(0,var(--h26-py,0px),0) scale(1.06);will-change:transform} /* the macro drifts inside the plate; the type stays put */
+.h26-parallax .h26h__photo > picture{transform:translate3d(0,var(--h26-py,0px),0) scale(1.14);will-change:transform}
+/* The Ritual's portrait drifts inside its cell */
+.h26-parallax .h26r__model > picture{transform:translate3d(0,var(--h26-py,0px),0) scale(1.12);will-change:transform}
+@media (min-width:1100px){
+	.h26-parallax .h26-hero__media{overflow:hidden}
+	.h26-parallax .h26-hero__media > picture{transform:translate3d(0,var(--h26-py,0px),0) scale(1.14);will-change:transform}
+	.h26-parallax :is(.h26e__head,.h26e__more){transform:translate3d(0,var(--h26-py,0px),0);will-change:transform}
+}
+
+/* ─── 08 The Ritual (11 Oct 2026) ────────────────────────────────
+   After the owner's editorial-board reference: a warm text panel ("The"
+   upright, "Ritual" in italic) beside a portrait, four numbered step tiles
+   (the step, a model using that formula, what the step does), then a band that closes the board with the offer between
+   two hairlines. The board's cells are separated by thin pearl gutters.
+   Phones: text, portrait, tiles 2×2, offer.
+   Assets: ritual-model-* (design-sources/home-2026/build_ritual_edit.py), card-* model set. */
+.h26r{background:#F2F2EF;color:#1C1C1C;padding:56px 0 72px}
+.h26r__board{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;max-width:1240px;margin:0 auto;padding:0 6px}
+.h26r__intro{grid-column:1 / -1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 24px;background:#ECE7E1;text-align:center}
+.h26r__kicker{font-size:.75rem;font-weight:500;line-height:1.5;letter-spacing:.18em;text-transform:uppercase;color:#3A3A3A}
+.h26r__rule{display:block;width:min(260px,70%);height:1px;margin:18px 0 26px;background:rgba(28,28,28,.3)}
+.h26r__title{font-family:var(--h26-serif);font-size:3.5rem;font-weight:400;line-height:.98;letter-spacing:-.01em;color:#1C1C1C}
+.h26r__title span{display:block}
+.h26r__title em{display:block;font-style:italic;font-weight:300;color:#6F665D}
+.h26r__lede{margin-top:22px;max-width:24em;font-size:var(--t-body);font-weight:300;line-height:1.65;color:#2A2A2A;text-wrap:balance}
+.h26r__model{grid-column:1 / -1;position:relative;margin:0;overflow:hidden;background:#B9B0A5}
+.h26r__model img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 40%}
+.h26r__steps{display:contents;list-style:none}
+.h26r__tile{display:flex;flex-direction:column;background:#E6E0D8}
+.h26r__step{display:flex;flex-direction:column;align-items:center;padding:18px 10px 14px;font-family:var(--h26-serif);color:#1C1C1C;text-align:center;font-variant-numeric:lining-nums}
+.h26r__num{font-size:var(--t-numeral);font-weight:400;line-height:1}
+.h26r__verb{margin-top:2px;font-size:var(--t-title);font-weight:400;line-height:1.15}
+.h26r__shot{display:block;margin:0 10px;overflow:hidden;background:#D9D2C8}
+.h26r__shot img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+.h26r__how{padding:14px 10px 20px;font-size:var(--t-body);line-height:1.5;color:#2A2A2A;text-align:center;text-wrap:pretty}
+/* the closing band: hairline — offer — hairline */
+.h26r__close{display:flex;align-items:flex-start;justify-content:center;gap:24px;max-width:1240px;margin:40px auto 0;padding:0 22px}
+.h26r__line{flex:1;height:1px;margin-top:27px;background:rgba(28,28,28,.3)} /* level with the middle of the 54px button */
+.h26r__offer{display:flex;flex-direction:column;align-items:center;text-align:center}
+.h26r__cta{white-space:nowrap}
+.h26r__facts{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 24px;margin:20px 0 0;padding:0;list-style:none}
+.h26r__fact{display:flex;align-items:center;gap:8px;font-size:var(--t-detail);line-height:1.5;color:#3A3A3A;white-space:nowrap}
+.h26r__fact svg{width:20px;height:20px;flex:0 0 auto;color:#5E5E5E}
+@media (max-width:519.98px){ .h26r__close{gap:0} .h26r__line{display:none} .h26r__facts{flex-direction:column;align-items:center} }
+/* small phones: each step becomes a row (photo beside step and explanation),
+   so the 16px explanation keeps a comfortable measure (critique 11 Oct 2026) */
+@media (max-width:519.98px){
+	.h26r__tile{grid-column:1 / -1;display:grid;grid-template-columns:40% 1fr;grid-template-rows:auto 1fr;column-gap:14px;padding:12px}
+	.h26r__shot{grid-column:1;grid-row:1 / span 2;align-self:start;margin:0}
+	.h26r__step{grid-column:2;flex-direction:row;align-items:baseline;gap:10px;padding:4px 0 0;text-align:left}
+	.h26r__verb{margin-top:0}
+	.h26r__how{grid-column:2;padding:8px 0 0;text-align:left}
+}
+@media (min-width:700px){
+	.h26r__board{padding:0 22px}
+	.h26r__title{font-size:4.5rem}
+	.h26r__step{padding:24px 16px 18px}
+	.h26r__shot{margin:0 16px}
+	.h26r__how{padding:18px 20px 26px;font-size:var(--t-body);line-height:1.55}
+}
+@media (min-width:900px){
+	.h26r{padding:96px 0 104px}
+	.h26r__board{grid-template-columns:repeat(4,minmax(0,1fr));padding:0 40px}
+	.h26r__intro{grid-column:1 / span 2;padding:56px 40px}
+	.h26r__model{grid-column:3 / span 2}
+	.h26r__model img{aspect-ratio:5/6;height:100%}
+	.h26r__title{font-size:clamp(4.5rem,6.4vw,6rem)}
+	.h26r__lede{font-size:var(--t-body)}
+	.h26r__close{margin-top:56px;padding:0 40px;gap:40px}
+}
+
+/* ─── Homepage type roles (typeset, 11 Oct 2026) ─────────────────
+   The single source for every shared type size on the homepage. Each role
+   renders at one size per breakpoint wherever it appears (DESIGN.md
+   "Hierarchy"). The older --h26-type-* names used by the base components
+   alias these, so there is one value to change, not two.
+   heading  the four section headings: Collection, Caviar, Clinical
+            evidence, Provenance (sentence case, Cormorant 300). The hero
+            and The Ritual are deliberate editorial exceptions.
+   title    product names, ritual verbs, the Collection's italic line
+   numeral  the ritual step numbers 1-4
+   figure   evidence results
+   body     all reading copy (16px)
+   detail   actions and purchase details (15px)
+   small    tertiary notes and labels only (14px) */
+body.cos-h26{
+	--t-heading:2.125rem;--t-title:1.25rem;--t-numeral:2rem;--t-figure:3rem;
+	--t-body:1rem;--t-detail:.9375rem;--t-small:.875rem;
+	--s-heading:20px; /* the one gap below every section heading (and either side of its rule) */
+	--h26-type-heading:var(--t-heading);--h26-type-section:var(--t-heading);
+	--h26-type-body:var(--t-body);--h26-type-figure:var(--t-figure);--h26-type-product:var(--t-title)
+}
+@media (min-width:700px){ body.cos-h26{--t-heading:2.5rem;--t-title:1.375rem;--t-numeral:2.5rem} }
+@media (min-width:1100px){ body.cos-h26{--t-heading:3rem;--t-figure:3.5rem;--s-heading:24px} }
+/* One section-heading treatment: size, weight, case and leading are shared;
+   colour, alignment and the rule or eyebrow around each stay with its section. */
+.h26 :is(.h26c__title,.h26-caviar__title,.h26e__title,.h26-provenance__title){
+	font-family:var(--h26-serif);font-style:normal;font-size:var(--t-heading);font-weight:300;
+	line-height:1.12;letter-spacing:-.01em;text-transform:none;padding-left:0;text-wrap:balance
 }

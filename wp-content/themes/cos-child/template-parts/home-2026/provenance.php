@@ -1,37 +1,62 @@
 <?php
 /**
- * 06b — Swiss provenance. Replaces the former "Swiss Precision" (04) and
- * "A Swiss Philosophy" (07) sections, which overlapped. One section, specific
- * facts instead of abstract statements.
- *
- * Two facts, from /science/swiss-formulation/ (page 348): GMP / ISO 22716:2007
- * manufacturing in Zug and batch traceability. Testing stages and stability
- * details live on that page (linked below), not here.
- * Imagery: the laboratory filling shot alone (Matterhorn inset removed
- * 3 Oct 2026 at the owner's request — it read as an added postcard).
+ * 06b — Swiss heritage (owner, 11 Oct 2026: "this needs to show the Swiss
+ * heritage — change the style, image and text"). A full-bleed plate of the
+ * Matterhorn in cloud, cropped above the village so it reads as landscape,
+ * not postcard (design-sources/home-2026/build_heritage_matterhorn.py), with
+ * the label, the shared section heading and the lede on its calm sky; a small
+ * caption names the place, so the photograph is never mistaken for Zug.
+ * Below, a Swiss-grid band: three facts as large serif figures on hairlines.
+ * Facts only from PRODUCT.md (20+ years, confirmed) and /science/swiss-formulation/
+ * (page 348: GMP / ISO 22716:2007 in Zug, batch release and traceability).
+ * Styles: .h26h in assets/css/home-2026.css.
  */
 defined( 'ABSPATH' ) || exit;
 
 $facts = array(
-	array( 'Manufacturing', 'GMP-certified laboratory in Zug (ISO 22716:2007).' ),
-	array( 'Traceability', 'Every batch is checked before release. Every jar and bottle is traceable.' ),
+	array( '20+', 'Years', 'A Swiss skincare house for more than two decades.' ),
+	array( 'Zug', 'Switzerland', 'Every formula developed and produced here, from formulation to final fill.' ),
+	array( 'ISO 22716', 'GMP-certified', 'Every batch checked before release. Every jar and bottle traceable.' ),
 );
 ?>
-<section class="h26-provenance" aria-labelledby="h26-provenance-title">
-	<div class="h26-provenance__media">
-		<div class="h26-provenance__photo h26-reveal">
-			<?php echo cos_h26_picture( 'philosophy-lab', array( 640, 1122 ), array( 4, 5 ), 'A gloved hand in the laboratory holding the 24h Regeneration Cream jar as a steel nozzle fills it with cream', array( 'sizes' => '(min-width: 900px) 50vw, 100vw', 'w' => 1122 ) ); ?>
+<section class="h26h" aria-labelledby="h26-provenance-title">
+	<figure class="h26h__plate">
+		<div class="h26h__photo" data-h26-parallax=".05">
+			<?php
+			echo cos_h26_picture(
+				'heritage-alps-tall',
+				array( 640, 960 ),
+				array( 4, 5 ),
+				'The Matterhorn rising through cloud above a forested ridge in the Swiss Alps',
+				array(
+					'sizes' => '100vw',
+					'w'     => 960,
+					'art'   => array(
+						array( 'media' => '(min-width: 900px)', 'base' => 'heritage-alps-wide', 'widths' => array( 1440, 1920, 2400 ), 'sizes' => '100vw' ),
+					),
+				)
+			);
+			?>
 		</div>
-	</div>
-	<div class="h26-provenance__body">
-		<p class="h26-eyebrow h26-eyebrow--rule h26-reveal">Swiss Provenance</p>
-		<h2 id="h26-provenance-title" class="h26-provenance__title h26-reveal">Formulated and made in Zug</h2>
-		<p class="h26-provenance__text h26-reveal">A Swiss skincare house for more than 20 years. Developed and produced in Zug, from formulation to final fill.</p>
-		<dl class="h26-facts">
-			<?php foreach ( $facts as $i => [ $k, $v ] ) : ?>
-			<div class="h26-fact h26-reveal" style="--h26-i:<?php echo (int) $i; ?>"><dt><?php echo esc_html( $k ); ?></dt><dd><?php echo esc_html( $v ); ?></dd></div>
+		<div class="h26h__copy">
+			<p class="h26h__label">Swiss heritage</p>
+			<h2 id="h26-provenance-title" class="h26-provenance__title">A Swiss house, made in Zug</h2>
+			<p class="h26h__lede">For more than 20 years, Caviar of Switzerland has developed and produced every formula in Zug, from formulation to final fill.</p>
+		</div>
+		<figcaption class="h26h__caption">The Matterhorn, Valais</figcaption>
+	</figure>
+	<div class="h26h__band">
+		<dl class="h26h__facts">
+			<?php foreach ( $facts as [ $fig, $k, $v ] ) : ?>
+			<div class="h26h__fact">
+				<dt><span class="h26h__fig"><?php echo esc_html( $fig ); ?></span><span class="h26h__key"><?php echo esc_html( $k ); ?></span></dt>
+				<dd><?php echo esc_html( $v ); ?></dd>
+			</div>
 			<?php endforeach; ?>
 		</dl>
-		<p class="h26-reveal"><a class="h26-link" href="<?php echo esc_url( home_url( '/science/swiss-formulation/' ) ); ?>">How we formulate in Zug <?php echo cos_h26_arrow(); ?></a></p>
+		<p class="h26h__links">
+			<a class="h26-link" href="<?php echo esc_url( home_url( '/heritage/' ) ); ?>">Our Swiss heritage <?php echo cos_h26_arrow(); ?></a>
+			<a class="h26-link" href="<?php echo esc_url( home_url( '/science/swiss-formulation/' ) ); ?>">How we formulate in Zug <?php echo cos_h26_arrow(); ?></a>
+		</p>
 	</div>
 </section>

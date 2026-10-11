@@ -5,8 +5,8 @@
 defined( 'ABSPATH' ) || exit;
 $hero = cos_h26_hero();
 ?>
-<section class="h26-hero<?php echo empty( $hero['light'] ) ? '' : ' h26-hero--light'; ?>" aria-labelledby="h26-hero-title">
-	<div class="h26-hero__media">
+<section class="h26-hero<?php echo empty( $hero['light'] ) ? '' : ' h26-hero--light'; ?><?php echo empty( $hero['pearl'] ) ? '' : ' h26-hero--pearl'; ?>" aria-labelledby="h26-hero-title">
+	<div class="h26-hero__media" data-h26-parallax=".06">
 		<?php
 		echo cos_h26_picture(
 			$hero['mobile'],
@@ -29,7 +29,6 @@ $hero = cos_h26_hero();
 		<p class="h26-hero__lines">Four essential formulas, crafted with caviar and Swiss precision.</p>
 		<div class="h26-hero__actions">
 			<a class="h26-btn h26-btn--light" href="<?php echo esc_url( home_url( '/products/the-complete-ritual/' ) ); ?>" data-cro-cta="home-hero-primary">Shop the Complete Ritual <?php echo cos_h26_arrow(); ?></a>
-			<a class="h26-hero__secondary" href="#collection" data-cro-cta="home-hero-secondary">Or explore the four formulas</a>
 		</div>
 	</div>
 </section>

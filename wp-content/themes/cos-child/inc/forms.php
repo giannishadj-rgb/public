@@ -14,13 +14,16 @@ function cos_child_newsletter_form(): void { ?>
 <form class="cos-nl-form" method="post" aria-label="Newsletter sign-up">
       <div class="cos-nl-row">
         <label for="cos-nl-email" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Email address</label>
-        <input id="cos-nl-email" class="cos-nl-input" type="email" name="email" placeholder="Email for Caviar of Switzerland updates" autocomplete="email" required/>
+        <input id="cos-nl-email" class="cos-nl-input" type="email" name="email" placeholder="Email for Caviar of Switzerland updates" autocomplete="email" aria-describedby="cos-nl-status" required/>
         <button type="submit" class="cos-nl-btn">Join the Caviar Circle</button>
       </div>
       <label class="cos-nl-consent">
         <input type="checkbox" name="gdpr" required/>
         <span class="cos-nl-consent-text">I agree to receive communications from Caviar of Switzerland. <a href="/privacy/" style="color:rgba(248,247,244,.6);text-decoration:underline">Privacy Policy</a>.</span>
       </label>
+      <?php /* Persistent live region (critique 11 Oct 2026, P1): pending, success and
+         error are announced here; the form fields are hidden, never destroyed. */ ?>
+      <p id="cos-nl-status" class="cos-nl-status" role="status" aria-live="polite" tabindex="-1" style="font-size:14px;line-height:1.6;margin-top:8px;color:rgba(248,247,244,.82)"></p>
       <noscript><p style="font-size:13px;color:rgba(248,247,244,.6);margin-top:8px">JavaScript is required to join the Caviar Circle here. Please email us instead — see the Contact page.</p></noscript>
     </form>
 <?php }
@@ -32,30 +35,39 @@ function cos_child_newsletter_form_script(): void { ?>
   if(!form)return;
   var btn=form.querySelector('.cos-nl-btn');
   var input=form.querySelector('.cos-nl-input');
+  var status=form.querySelector('.cos-nl-status');
   var originalText=btn.textContent;
-  function showError(msg){
-    var err=form.querySelector('.cos-nl-err');
-    if(!err){err=document.createElement('p');err.className='cos-nl-err';err.style.cssText='font-size:13px;color:#c47a7a;margin-top:4px';form.appendChild(err);}
-    err.textContent=msg;
+  function say(html,tone){
+    status.style.color=tone==='error'?'#E0A3A3':'rgba(248,247,244,.82)';
+    status.innerHTML=html;
   }
   function resetBtn(){btn.textContent=originalText;btn.disabled=false;}
+  function fail(){
+    // Keep the email, give the field back, and offer a second route.
+    resetBtn();
+    say('We couldn’t add you just now. Please try again, or <a href="/contact/" style="color:inherit;text-decoration:underline">contact us</a> and we’ll add you.','error');
+    input.focus();
+  }
   form.addEventListener('submit',function(e){
     e.preventDefault();
     var email=input.value.trim();
     if(!email)return;
     btn.textContent='Subscribing…';
     btn.disabled=true;
+    say('Subscribing…');
     fetch('https://a.klaviyo.com/client/subscriptions/?company_id=Rd6DHd',{
       method:'POST',
       headers:{'content-type':'application/json','revision':'2024-02-15'},
       body:JSON.stringify({data:{type:'subscription',attributes:{list_id:'XuVPEG',email:email}}})
     }).then(function(res){
       if(res.ok||res.status===202){
-        form.innerHTML='<p style="font-size:13px;font-weight:300;color:rgba(248,247,244,.8);line-height:1.65">Thank you — welcome to the world of Caviar of Switzerland.</p>';
-      }else{
-        resetBtn();showError('Something went wrong. Please try again.');
-      }
-    }).catch(function(){resetBtn();showError('Something went wrong. Please try again.');});
+        // Hide the fields (not innerHTML-replace) so the live region survives,
+        // then move focus to the confirmation the submit button used to hold.
+        Array.prototype.forEach.call(form.querySelectorAll('.cos-nl-row,.cos-nl-consent'),function(el){el.style.display='none';});
+        say('Thank you, you’re on the list. Welcome to the world of Caviar of Switzerland.');
+        status.focus();
+      }else{fail();}
+    }).catch(fail);
   });
 })();
 </script>

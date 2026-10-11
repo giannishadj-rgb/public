@@ -36,6 +36,47 @@ typography:
     fontWeight: 400
     lineHeight: 1
     fontFeature: "lnum, tnum"
+  display-feature:
+    fontFamily: "Cormorant Garamond, Georgia, serif"
+    fontSize: "4.5rem"
+    fontWeight: 400
+    lineHeight: 0.98
+    letterSpacing: "-0.01em"
+  heading:
+    fontFamily: "Cormorant Garamond, Georgia, serif"
+    fontSize: "3rem"
+    fontWeight: 300
+    lineHeight: 1.12
+    letterSpacing: "-0.01em"
+  heading-tablet:
+    fontFamily: "Cormorant Garamond, Georgia, serif"
+    fontSize: "2.5rem"
+    fontWeight: 300
+    lineHeight: 1.12
+    letterSpacing: "-0.01em"
+  heading-compact:
+    fontFamily: "Cormorant Garamond, Georgia, serif"
+    fontSize: "2.125rem"
+    fontWeight: 300
+    lineHeight: 1.12
+    letterSpacing: "-0.01em"
+  figure-large:
+    fontFamily: "Cormorant Garamond, Georgia, serif"
+    fontSize: "3.5rem"
+    fontWeight: 300
+    lineHeight: 1
+    fontFeature: "lnum, tnum"
+  numeral:
+    fontFamily: "Cormorant Garamond, Georgia, serif"
+    fontSize: "2.5rem"
+    fontWeight: 400
+    lineHeight: 1
+    fontFeature: "lnum"
+  title-compact:
+    fontFamily: "Cormorant Garamond, Georgia, serif"
+    fontSize: "1.25rem"
+    fontWeight: 400
+    lineHeight: 1.2
   title:
     fontFamily: "Cormorant Garamond, Georgia, serif"
     fontSize: "1.375rem"
@@ -115,7 +156,7 @@ components:
 
 **Creative North Star: "The Quiet Ritual"**
 
-The site is a small, unhurried daily ceremony made visible. There are four steps and nothing extra, and every element earns its place by helping her understand or want one of the four formulas. The page is light-led, with a pearl canvas and graphite type. Darkness is punctuation, reserved for photographic moments: the desktop hero, the caviar macro and the footer. Type pairs a fine high-contrast serif for voice with a light sans for reading, and short spaced-caps labels for wayfinding.
+The site is a small, unhurried daily ceremony made visible. There are four steps and nothing extra, and every element earns its place by helping her understand or want one of the four formulas. The page is light-led, with a pearl canvas and graphite type. Since 11 Oct 2026 the page is light from top to bottom: the hero is the 24h Regeneration Cream on pearl silk, and ingredient photography is keyed light (luminous macro textures, type set on the photograph). Darkness is kept for the footer. Type pairs a fine high-contrast serif for voice with a light sans for reading, and short spaced-caps labels for wayfinding.
 
 Restraint is the method. Elements are spaced generously and set in a narrow palette. The ornaments are the photography of the real objects (chrome caps, mirrored glass, a silver tray, a fingertip of cream) and the ritual numerals 01–04. Precision shows in the details: lining numerals, hairline rules, figures always named with their product, method and panel. Intimacy comes from scale. The interface never shouts, and the objects are photographed close.
 
@@ -143,7 +184,7 @@ A near-achromatic palette: pearl, graphite and platinum, with the Swiss red rese
 - **Body Graphite** (body-graphite): body copy on pearl (10:1).
 - **Muted Graphite** (muted-graphite): supporting copy, eyebrows and captions (6:1 on pearl; the floor for small text).
 - **Charcoal** (charcoal): text over light photographic backdrops and inside the evidence band.
-- **Obsidian** (obsidian) / **Obsidian Raised** (obsidian-raised): the dark moments (desktop hero, caviar band) and input fills on dark.
+- **Obsidian** (obsidian) / **Obsidian Raised** (obsidian-raised): the dark moments (desktop hero) and input fills on dark.
 - **Footer Blue-Black** (footer-blue-black): the footer, a deliberate blue-black rather than neutral.
 - **Porcelain** (porcelain): headings and primary text on dark, and the filled hero button on the dark desktop hero.
 - **On-dark Text** (on-dark-text) / **On-dark Muted** (on-dark-muted): body and supporting copy on dark.
@@ -151,7 +192,7 @@ A near-achromatic palette: pearl, graphite and platinum, with the Swiss red rese
 ### Tertiary
 - **Swiss Red** (swiss-red): the cross in the logo only.
 
-**The Punctuation Rule.** Dark surfaces appear only behind photography (desktop hero, caviar macro) and in the footer. A text-only section is never dark.
+**The Punctuation Rule.** Dark surfaces appear only in the footer and, should a dark photograph return, behind it.  A text-only section is never dark.
 
 **The One Red Rule.** Swiss red belongs to the logo's cross. It never colours a button, link, badge or sale price.
 
@@ -165,13 +206,16 @@ A near-achromatic palette: pearl, graphite and platinum, with the Swiss red rese
 **Character:** A fine, high-contrast serif carries the brand's voice in light weights. A calm, neutral sans carries everything she needs to read or tap. The serif never sets body copy, and the sans never sets a headline.
 
 ### Hierarchy
-- **Display** (300, 2.5rem mobile, scaling up on desktop, 1.06): the hero line only, balanced over two lines.
-- **Headline** (300, 2rem, 1.2, -0.01em): section headings and the texture statement.
-- **Figure** (400, 3rem, 1, lining + tabular numerals): clinical results and the ritual numerals (300 at 3–3.75rem in the collection).
-- **Title** (400, 1.375rem): product names on cards, set over two lines.
-- **Body** (300, 1rem, 1.65): ledes and reading copy; measure kept around 40–60ch.
-- **Small** (400, 0.875rem, 1.5): methods, glosses, cues and captions, in muted graphite.
-- **Label** (500, 0.75rem, 0.14em tracking, uppercase): eyebrows, ritual verbs and the footer column heads. Short phrases only, never a sentence.
+On the homepage every shared size is one CSS token on `body.cos-h26` (`--t-heading`, `--t-title`, `--t-numeral`, `--t-figure`, `--t-body`, `--t-detail`, `--t-small`; end of home-2026.css); the older `--h26-type-*` names alias them, so a role always renders at one size per breakpoint.
+- **Display** (300, 2.5rem mobile, scaling up on desktop, 1.06): the hero line. The Ritual's "The / *Ritual*" board title is the one other display moment (3.5rem phones, 4.5rem tablet, up to 6rem desktop).
+- **Heading** (Cormorant 300, sentence case, 2.125rem phones / 2.5rem tablet / 3rem desktop, 1.12, -0.01em; token `--t-heading`): every section heading — The Collection, Caviar in every formula, Clinical evidence, Formulated and made in Zug. The hero and The Ritual are the only editorial exceptions. Each section keeps its own rule or eyebrow and colour.
+- **Figure** (300, 3rem phones / 3.5rem desktop, 1, lining + tabular numerals): clinical results.
+- **Numeral** (400, 2rem phones / 2.5rem from tablet, lining): the ritual step numbers 1–4.
+- **Title** (400, 1.25rem phones / 1.375rem from tablet): product names, ritual verbs, and the Collection's italic line.
+- **Body** (300 for editorial ledes, 400 for instructions and evidence details, 1rem, 1.5–1.7): all reading copy, including benefits, step explanations and study details. Measure 40–65ch. On dark, one weight step up and slightly more leading.
+- **Detail** (400, 0.9375rem): purchase-supporting facts: price comparison, shipping and returns, size · price.
+- **Small** (400, 0.875rem, 1.5): tertiary notes only (the portrait credit), in muted graphite.
+- **Label** (500, 0.75rem, 0.14em+ tracking, uppercase): eyebrows, kickers, tags and footer column heads. Short phrases only, never a sentence.
 - **Action** (500, 0.9375rem, 0.01em, sentence case): buttons and text links.
 
 **The Short Caps Rule.** Spaced caps are only for labels of four words or fewer. Anything longer is sentence case.
@@ -195,7 +239,7 @@ The homepage is a single column of full-width sections, each with one focus.
 
 ## Elevation & Depth
 
-Flat by design. There are no box-shadows anywhere in the system. Depth comes from photography (reflections on mirrored glass, the caviar macro), from tonal shifts between pearl (#F2F2EF), the pearl band (#E8E8E5) and obsidian, and from hairline rules at 10–20% graphite. The fixed header is a 94%-opaque pearl bar with a hairline bottom rule, not a shadow.
+Flat by design. There are no box-shadows anywhere in the system. Depth comes from photography (reflections on mirrored glass, the glossy caviar pearls), from tonal shifts between pearl (#F2F2EF), the pearl band (#E8E8E5) and obsidian, and from hairline rules at 10–20% graphite. The fixed header is a 94%-opaque pearl bar with a hairline bottom rule, not a shadow.
 
 **The Flat Surface Rule.** If something needs separating, use space first, a hairline second, and a tone change third. Never a shadow.
 
