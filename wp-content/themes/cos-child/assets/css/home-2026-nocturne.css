@@ -67,7 +67,7 @@ body.cos-h26-nocturne .h26{
 body.cos-h26-nocturne .h26 :focus-visible{outline:2px solid var(--n-silver);outline-offset:4px}
 
 /* Sections on the obsidian canvas are separated by one fine rule. */
-body.cos-h26-nocturne .h26 > section + section{border-top:1px solid var(--n-line)}
+/* (no hairlines between sections: the page flows as one scroll; see "Flow & continuity" in home-2026.css) */
 
 /* ─── Shared: labels, links, buttons ───────────────────────────── */
 body.cos-h26-nocturne .h26-link{color:var(--n-white)}
@@ -352,7 +352,7 @@ body.cos-h26-nocturne #cos-footer .cos-nl-consent{min-height:44px}
 @media (min-width:1100px){
 	body.cos-h26-nocturne .h26-hero--pearl{--n-950:#F2F2EF;--n-900:#E8E8E5;--n-platinum:#5E5E5E;--n-silver:#1C1C1C;--n-white:#1C1C1C;--n-text:#2A2A2A;--n-muted:#3A3A3A;--n-line:rgba(28,28,28,.10);--n-line-strong:rgba(28,28,28,.20);background:#E6D9CD}
 	body.cos-h26-nocturne .h26-hero--pearl .h26-hero__media::after{background:linear-gradient(180deg,rgba(242,236,229,.55) 0,rgba(242,236,229,0) 140px)}
-	body.cos-h26-nocturne .h26-hero--pearl .h26-hero__media img{object-position:82% 50%} /* keep the whole lid in frame */
+	body.cos-h26-nocturne .h26-hero--pearl .h26-hero__media img{object-position:70% 50%} /* the desktop frame has silk extended left; this keeps jar + lid clear of the copy */
 	body.cos-h26-nocturne .h26-hero--pearl :is(.h26-hero__title,.h26-hero__accent){color:#1C1C1C}
 	body.cos-h26-nocturne .h26-hero--pearl :is(.h26-hero__lines,.h26-hero__secondary){color:#2A2A2A}
 	body.cos-h26-nocturne .h26-hero--pearl .h26-btn--light{color:#1C1C1C;border-color:#1C1C1C;background:transparent}

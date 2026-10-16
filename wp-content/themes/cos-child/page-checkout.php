@@ -17,106 +17,23 @@ if ( WC()->cart->is_empty() && ! is_wc_endpoint_url( 'order-received' ) ) {
 </head>
 <body <?php body_class( 'woocommerce woocommerce-checkout woocommerce-page' ); ?>>
 <?php wp_body_open(); ?>
-<style nonce="<?php echo esc_attr( cos_csp_nonce() ); ?>">
-#cos-checkout-pg{font-family:var(--cos-body);color:var(--cos-ink,#111111);background:var(--cos-pearl,#F2F2EF);min-height:70vh}
-#cos-checkout-pg *{box-sizing:border-box}
-.cos-co-spacer{height:var(--cos-nav-h,80px)}
-.cos-co-head{max-width:1100px;margin:0 auto;padding:48px 24px 0}
-.cos-co-eyebrow{font-size:9px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--cos-gold,#8B692F);margin:0 0 10px}
-.cos-co-h1{font-family:var(--cos-display);font-style:italic;font-weight:300;font-size:clamp(26px,3vw,40px);color:var(--cos-ink);margin:0 0 8px}
-.cos-co-sub{font-size:13px;font-weight:300;color:var(--cos-slate,#5C6675);margin:0}
-.cos-co-wrap{max-width:1100px;margin:0 auto;padding:32px 24px 64px}
-
-/* ── Restyle the native WooCommerce checkout to match the site ── */
-/* style.css's sitewide `.woocommerce-checkout .woocommerce` rule gives the
-   shortcode's own wrapper div a second max-width/margin/padding (and a
-   second nav-height top margin) — .cos-co-wrap above already establishes
-   both, so the two were stacking into doubled gutters (worse on mobile,
-   where style.css also narrows its copy to 16px on top of this one's
-   24px). #cos-checkout-pg's ID gives this more specificity, so it wins
-   without needing !important. */
-#cos-checkout-pg .woocommerce{max-width:none;margin:0;padding:0}
-#cos-checkout-pg .woocommerce-notices-wrapper{margin-bottom:20px}
-#cos-checkout-pg .woocommerce-error,#cos-checkout-pg .woocommerce-message,#cos-checkout-pg .woocommerce-info{background:#fff;border:1px solid var(--cos-stone,#E5DED4);border-left:3px solid var(--cos-gold,#8B692F);padding:16px 20px;font-size:13px;font-weight:300;color:var(--cos-ink);list-style:none;margin:0 0 24px}
-#cos-checkout-pg form.checkout{display:grid;grid-template-columns:1fr 380px;gap:48px;align-items:start;min-width:0}
-/* Grid items default to min-width:auto, sizing to their content's intrinsic
-   minimum — a table cell or long line inside #order_review/#customer_details
-   can otherwise force its column (and the whole form) wider than the page,
-   overflowing #cos-checkout-pg horizontally. */
-#cos-checkout-pg form.checkout > #customer_details,
-#cos-checkout-pg form.checkout > #order_review{min-width:0}
-@media(max-width:900px){#cos-checkout-pg form.checkout{grid-template-columns:1fr}}
-@media(max-width:480px){
-  .cos-co-head{padding-left:16px;padding-right:16px}
-  .cos-co-wrap{padding-left:16px;padding-right:16px}
-  #cos-checkout-pg #customer_details{padding:18px}
-  #cos-checkout-pg #order_review{padding:18px}
-}
-#cos-checkout-pg h3{font-family:var(--cos-display);font-style:italic;font-weight:300;font-size:20px;color:var(--cos-ink);margin:0 0 20px}
-#cos-checkout-pg #customer_details{background:#fff;border:1px solid var(--cos-stone,#E5DED4);padding:28px}
-#cos-checkout-pg .col-2{margin-top:32px}
-#cos-checkout-pg .form-row{margin:0 0 16px}
-#cos-checkout-pg .form-row label{display:block;font-size:9px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--cos-slate,#5C6675);margin-bottom:6px}
-#cos-checkout-pg .form-row .required{color:var(--cos-gold,#8B692F);text-decoration:none}
-#cos-checkout-pg input.input-text,#cos-checkout-pg select,#cos-checkout-pg textarea{width:100%;min-height:44px;box-sizing:border-box;padding:12px 14px;border:1.5px solid var(--cos-stone,#E5DED4);background:#fff;font-family:var(--cos-body);font-size:13px;color:var(--cos-ink);outline:none;border-radius:0;transition:border-color .2s}
-#cos-checkout-pg input.input-text:focus,#cos-checkout-pg select:focus,#cos-checkout-pg textarea:focus{border-color:var(--cos-navy,#050505)}
-#cos-checkout-pg .select2-container .select2-selection--single{height:44px;border:1.5px solid var(--cos-stone,#E5DED4);border-radius:0;padding:6px 14px}
-#cos-checkout-pg .woocommerce-form__label-for-checkbox{display:flex;align-items:flex-start;gap:8px;font-size:12px;font-weight:300;color:var(--cos-slate);margin:16px 0}
-#cos-checkout-pg #order_review_heading{display:none}
-#cos-checkout-pg #order_review{background:#fff;border:1px solid var(--cos-stone,#E5DED4);padding:28px;position:sticky;top:calc(var(--cos-nav-h,80px) + 20px)}
-#cos-checkout-pg table.shop_table{width:100%;border:none;margin:0 0 20px}
-#cos-checkout-pg table.shop_table th,#cos-checkout-pg table.shop_table td{border:none;border-bottom:1px solid var(--cos-stone,#E5DED4);padding:10px 0;font-size:13px;font-weight:300;color:var(--cos-slate)}
-#cos-checkout-pg table.shop_table .product-name{color:var(--cos-ink)}
-#cos-checkout-pg table.shop_table .order-total th,#cos-checkout-pg table.shop_table .order-total td{font-size:15px;font-weight:600;color:var(--cos-ink);border-bottom:none;border-top:1px solid var(--cos-stone)}
-#cos-checkout-pg #payment{background:var(--cos-pearl,#F2F2EF);border-top:1px solid var(--cos-stone,#E5DED4);padding-top:20px}
-#cos-checkout-pg ul.payment_methods{list-style:none;margin:0 0 16px;padding:0;display:flex;flex-direction:column;gap:10px}
-#cos-checkout-pg ul.payment_methods li{background:#fff;border:1px solid var(--cos-stone,#E5DED4);padding:14px 16px}
-#cos-checkout-pg ul.payment_methods label{font-size:12px;font-weight:500;color:var(--cos-ink)}
-#cos-checkout-pg .payment_box{font-size:12px;font-weight:300;color:var(--cos-slate);line-height:1.7;padding-top:10px}
-#cos-checkout-pg #place_order{display:block;width:100%;padding:17px;background:var(--cos-navy,#050505);color:#fff;font-family:var(--cos-body);font-size:9px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;border:none;cursor:pointer;transition:background .2s}
-#cos-checkout-pg #place_order:hover{background:var(--cos-ink,#111111)}
-#cos-checkout-pg .woocommerce-terms-and-conditions-wrapper{font-size:11px;font-weight:300;color:var(--cos-slate);margin:16px 0}
-#cos-checkout-pg .woocommerce-terms-and-conditions-wrapper a{color:var(--cos-ink)}
-#cos-checkout-pg .blockUI.blockOverlay{position:relative}
-#cos-checkout-pg .woocommerce-shipping-methods{list-style:none;margin:0;padding:0}
-
-/* ── Coupon (collapsed by default, WooCommerce's own accessible toggle) ── */
-#cos-checkout-pg .woocommerce-form-coupon-toggle{margin:0 0 24px}
-#cos-checkout-pg .wc-block-components-notice-banner{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--cos-stone,#E5DED4);padding:14px 18px;font-size:12px;font-weight:300;color:var(--cos-slate,#5C6675)}
-#cos-checkout-pg .wc-block-components-notice-banner svg{width:16px;height:16px;flex-shrink:0;fill:var(--cos-gold,#8B692F)}
-#cos-checkout-pg .showcoupon{color:var(--cos-ink);font-weight:600;text-decoration:underline;text-underline-offset:2px}
-#cos-checkout-pg .checkout_coupon.woocommerce-form-coupon{display:flex;gap:10px;margin:0 0 24px;padding:16px;background:#fff;border:1px solid var(--cos-stone,#E5DED4);flex-wrap:wrap}
-#cos-checkout-pg .checkout_coupon .form-row{margin:0;flex:1;min-width:180px}
-#cos-checkout-pg .checkout_coupon .form-row-last{flex:none}
-#cos-checkout-pg .checkout_coupon button{padding:0 24px;min-height:44px;background:var(--cos-navy,#050505);color:#fff;font-family:var(--cos-body);font-size:9px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;border:none;cursor:pointer;transition:background .2s}
-#cos-checkout-pg .checkout_coupon button:hover{background:var(--cos-ink,#111111)}
-
-/* ── Reassurance line under Place Order, optional-field toggles ── */
-#cos-checkout-pg .cos-co-reassurance{font-size:10px;font-weight:300;color:var(--cos-slate,#5C6675);text-align:center;margin:14px 0 0}
-#cos-checkout-pg .cos-co-reassurance a{color:inherit;text-decoration:underline;text-underline-offset:2px}
-#cos-checkout-pg .cos-co-field-toggle{display:block;background:none;border:none;padding:6px 0;margin:0 0 16px;font-size:11px;font-weight:600;letter-spacing:.02em;color:var(--cos-slate,#5C6675);text-decoration:underline;text-underline-offset:2px;cursor:pointer;text-align:left;font-family:var(--cos-body)}
-#cos-checkout-pg .cos-co-field-toggle:hover{color:var(--cos-navy,#050505)}
-/* !important: WooCommerce server-renders these fields with an inline
-   style="display:block" and its own checkout.js re-applies inline
-   display via jQuery .show() during address-field locale handling — a
-   plain inline style toggle from our own script gets silently clobbered
-   by whichever of those runs last. An !important class rule beats any
-   non-important inline style regardless of write order, so this is the
-   only reliably deterministic way to keep the field collapsed. */
-#cos-checkout-pg .cos-co-collapsed{display:none !important}
-</style>
-
-<main id="cos-main-content">
+<?php $cos_is_received = is_wc_endpoint_url( 'order-received' ); ?>
+<main id="cos-main-content" class="hxco hxco--checkout<?php echo $cos_is_received ? ' hxco--received' : ''; ?>">
 <div id="cos-checkout-pg">
-  <div class="cos-co-spacer"></div>
-  <div class="cos-co-head">
-    <p class="cos-co-eyebrow">Caviar of Switzerland Secure Checkout</p>
-    <h1 class="cos-co-h1">Complete your ritual.</h1>
-    <p class="cos-co-sub">Encrypted checkout &middot; Made in Switzerland &middot; 30-day comfort guarantee</p>
-  </div>
-  <div class="cos-co-wrap">
-    <?php echo do_shortcode( '[woocommerce_checkout]' ); ?>
-  </div>
+	<div class="hx-wrap hxco__wrap">
+		<?php if ( $cos_is_received ) : ?>
+		<header class="hxco-head hxco-head--received">
+			<h1 class="hx-heading hxco-head__title">Your order</h1>
+		</header>
+		<?php else : ?>
+		<header class="hxco-head">
+			<h1 class="hx-heading hxco-head__title">Checkout</h1>
+			<p class="hx-detail hxco-head__meta"><?php echo esc_html( cos_child_shipping_message( 'short' ) ); ?><span aria-hidden="true"> · </span>30-day returns<span aria-hidden="true"> · </span>Made in Switzerland</p>
+			<a class="hx-link hxco-head__back" href="<?php echo esc_url( wc_get_cart_url() ); ?>">Return to bag</a>
+		</header>
+		<?php endif; ?>
+		<?php echo do_shortcode( '[woocommerce_checkout]' ); ?>
+	</div>
 </div>
 </main>
 
@@ -131,13 +48,16 @@ document.addEventListener('DOMContentLoaded', function () {
   // the shopper already entered ever disappears from view.
   function collapseOptionalField(fieldId, label) {
     var field = document.getElementById(fieldId);
-    if (!field) return;
+    if (!field || field.querySelector('.cos-co-field-toggle')) return;
     var input = field.querySelector('input, textarea');
     if (!input || input.value) return;
+    // The toggle lives INSIDE the field row (.form-row): WooCommerce's address-i18n script
+    // re-sorts the rows by priority after load, which used to strand a sibling toggle at
+    // the top of the form. Only the row's label + input are hidden (checkout.css).
     field.classList.add('cos-co-collapsed');
     var toggle = document.createElement('button');
     toggle.type = 'button';
-    toggle.className = 'cos-co-field-toggle';
+    toggle.className = 'cos-co-field-toggle hxco-field-toggle';
     toggle.setAttribute('aria-expanded', 'false');
     toggle.setAttribute('aria-controls', fieldId);
     toggle.textContent = label;
@@ -147,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
       toggle.setAttribute('aria-expanded', 'true');
       input.focus();
     });
-    field.parentNode.insertBefore(toggle, field);
+    field.insertBefore(toggle, field.firstChild);
   }
   collapseOptionalField('billing_address_2_field', '+ Add apartment, suite, or unit');
   collapseOptionalField('shipping_address_2_field', '+ Add apartment, suite, or unit');

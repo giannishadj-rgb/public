@@ -49,6 +49,14 @@ add_action( 'wp_enqueue_scripts', static function (): void {
 	// the homepage's look: a layer over the base component styles above.
 	wp_enqueue_style( 'cos-home-2026-nocturne', $uri . '/assets/css/home-2026-nocturne.css', array( 'cos-home-2026' ), (string) filemtime( $dir . '/assets/css/home-2026-nocturne.css' ) );
 	wp_enqueue_script( 'cos-home-2026', $uri . '/assets/js/home-2026.js', array(), (string) filemtime( $dir . '/assets/js/home-2026.js' ), array( 'strategy' => 'defer', 'in_footer' => true ) );
+	// 14 Oct 2026 world-class rebuild: one design-system layer, then one stylesheet per
+	// section (each owns its own template part and class prefix), loaded last.
+	$prev = 'cos-home-2026-nocturne';
+	foreach ( array( 'system', 'hero', 'collection', 'caviar', 'science', 'provenance', 'ritual', 'closing' ) as $hx ) {
+		wp_enqueue_style( 'cos-hx-' . $hx, $uri . '/assets/css/hx/' . $hx . '.css', array( $prev ), (string) filemtime( $dir . '/assets/css/hx/' . $hx . '.css' ) );
+		$prev = 'cos-hx-' . $hx;
+	}
+	wp_enqueue_script( 'cos-hx-motion', $uri . '/assets/js/hx-motion.js', array(), (string) filemtime( $dir . '/assets/js/hx-motion.js' ), array( 'strategy' => 'defer', 'in_footer' => true ) );
 } );
 
 // The homepage is light-led (pearl + graphite, 4 Oct 2026): tell the browser, so native
@@ -64,10 +72,11 @@ add_action( 'wp_head', static function (): void {
 // <source media> breakpoints in template-parts/home-2026/hero.php).
 add_action( 'wp_head', static function (): void {
 	if ( ! cos_h26_is_active() ) return;
-	$hero = cos_h26_hero();
+	// 14 Oct 2026 rebuild: the hero is the hxh-wide / hxh-tall pair (template-parts/home-2026/hero.php,
+	// $hxh_wide_media / $hxh_*_sizes); keep these in step with that file.
 	foreach ( array(
-		array( '(min-width: 1100px)', cos_h26_srcset( $hero['desktop'], $hero['desktop_w'], 'avif' ), $hero['desktop_sizes'] ?? '100vw' ),
-		array( '(max-width: 1099.98px)', cos_h26_srcset( $hero['mobile'], $hero['mobile_w'], 'avif' ), '100vw' ),
+		array( '(min-width: 600px)', cos_h26_srcset( 'hxh-wide', array( 1440, 1920, 2560 ), 'avif' ), '(min-aspect-ratio: 237/100) 100vw, 237vh' ),
+		array( '(max-width: 599.98px)', cos_h26_srcset( 'hxh-tall', array( 540, 720 ), 'avif' ), '(max-aspect-ratio: 518/1000) 51.8vh, 100vw' ),
 	) as [ $media, $set, $sizes ] ) {
 		echo '<link rel="preload" as="image" type="image/avif" fetchpriority="high" media="' . esc_attr( $media ) . '" imagesrcset="' . esc_attr( $set ) . '" imagesizes="' . esc_attr( $sizes ) . '">' . "\n";
 	}
@@ -114,7 +123,7 @@ function cos_h26_hero(): array {
 		// Owner image, 11 Oct 2026: the 24h Regeneration Cream on pearl silk
 		// (design-sources/home-2026/build_hero_jar.py). Light on every screen
 		// ('pearl'): graphite copy and header over the photograph.
-		'jar'   => array( 'desktop' => 'hero-jar-wide', 'desktop_w' => array( 1280, 1672 ), 'mobile' => 'hero-jar-sq', 'mobile_w' => array( 640, 880 ), 'mobile_ratio' => array( 1, 1 ), 'light' => true, 'pearl' => true, 'alt' => 'The 24h Regeneration Cream, open with its silver lid resting against the jar, on flowing pearl silk' ),
+		'jar'   => array( 'desktop' => 'hero-jar-wide', 'desktop_w' => array( 1440, 2192 ), 'mobile' => 'hero-jar-sq', 'mobile_w' => array( 640, 780 ), 'mobile_ratio' => array( 1, 1 ), 'light' => true, 'pearl' => true, 'alt' => 'The 24h Regeneration Cream, open, its silver lid resting beside the jar, on flowing pearl silk' ),
 		'orb'   => array( 'desktop' => 'hero3-desktop-restrained', 'desktop_w' => array( 1280, 1920 ), 'mobile' => 'hero3-mobile-restrained', 'mobile_w' => array( 640, 792 ), 'mobile_ratio' => array( 792, 941 ), 'alt' => 'The four Caviar of Switzerland formulas, Revitalizing Eye Cream, Advanced Repair Serum, 24h Regeneration Cream and Micellar Water Cleanser, on a polished black shelf before a subdued disc of caviar pearls against a black background' ),
 		'shelf' => array( 'desktop' => 'hero2-desktop', 'desktop_w' => array( 1280, 1920 ), 'mobile' => 'hero2-mobile', 'mobile_w' => array( 640, 792 ), 'mobile_ratio' => array( 792, 837 ), 'alt' => 'The four Caviar of Switzerland formulas, Revitalizing Eye Cream, Advanced Repair Serum, 24h Regeneration Cream and Micellar Water Cleanser, lined up on a polished black shelf' ),
 	);
@@ -182,7 +191,7 @@ function cos_h26_products(): array {
 			'card'    => 'card-cream-photo', // owner's studio packshot WITH its own backdrop (build_card_photo.py); cut-out alternative: card-cream-texture
 			'story'   => 'story-cream',
 			'alt'     => 'A woman with her head tilted back holding the 24h Regeneration Cream jar',
-			'cardalt' => '24h Regeneration Cream jar with a polished silver lid, reflected on a glossy white surface',
+			'cardalt' => '24h Regeneration Cream jar with a polished silver lid',
 			'copy'    => 'The final step seals the ritual. Lasting hydration and comfort, day and night, with a caviar lipid complex that supports the skin’s barrier.',
 		),
 	);

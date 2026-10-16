@@ -1,0 +1,124 @@
+/* hx/closing.css — 09 Closing statement (14 Oct 2026 rebuild; revised after critique
+   round 1). Prefix .hxz-. Markup: template-parts/home-2026/closing.php.
+   The statement as the largest type on the page, flush left, two balanced lines at
+   every width; beneath it a quiet text-and-rule action (not a second filled button)
+   with the two service assurances; the section signs off with a hairline + the
+   brand-mark cross, house name and place, then meets the graphite footer on a
+   clean edge (no fade, no rule). Warm ivory ground: one quiet step off the pearl
+   ritual above, never a "stone block". */
+
+body.cos-h26 .hxz{
+	position:relative;
+	background:var(--hx-ivory);
+	color:var(--hx-text);
+	/* generous before a statement, tight at the end (round-1 pacing rule) */
+	padding-block:calc(var(--hx-section) * 1.05) clamp(32px,1.5rem + 2vw,56px);
+	overflow:clip;
+}
+
+/* ─── Statement ───────────────────────────────────────────────────────
+   Size = the smaller of 1.3 × display (≈114px from 1440px) and what keeps
+   "refined to the essential." on one line inside the page margins
+   (that line measures ≈7.85em in Cormorant 300 italic). */
+.hxz__title{
+	margin:0;
+	font-size:min(calc(var(--hx-fs-display) * 1.3),calc((100vw - 2 * var(--hx-margin)) * .124));
+	line-height:1.1; /* loosened: italic f descender must clear the line above's caps */
+}
+.hxz__line{display:block}
+.hxz__title em{padding-left:.04em} /* optical: the italic r sits under the S */
+
+/* ─── Action: tracked caps + a long hairline that extends on hover ───── */
+.hxz__act{margin-top:clamp(40px,2rem + 2.4vw,72px)}
+.hxz__cta{
+	--hxz-rule:clamp(56px,4vw + 32px,96px);
+	display:inline-flex;
+	align-items:center;
+	gap:var(--hx-s-5);
+	min-height:56px;
+	padding-right:var(--hx-s-3);
+	font-family:var(--hx-sans);
+	font-size:.75rem; /* = .hx-btn label size */
+	font-weight:500;
+	line-height:1.3;
+	letter-spacing:.22em;
+	text-transform:uppercase;
+	color:var(--hx-ink);
+	text-decoration:none;
+	-webkit-tap-highlight-color:transparent;
+}
+.hxz__cta:visited{color:var(--hx-ink)}
+.hxz__cta-rule{
+	position:relative;
+	flex:0 1 var(--hxz-rule);
+	min-width:24px;
+	width:var(--hxz-rule);
+	height:9px;
+	transform-origin:left center;
+	transition:transform 700ms var(--hx-ease);
+}
+.hxz__cta-rule::before{content:"";position:absolute;left:0;right:0;top:50%;height:1px;margin-top:-.5px;background:currentColor}
+.hxz__cta-rule::after{content:"";position:absolute;right:1px;top:50%;width:7px;height:7px;border-top:1px solid currentColor;border-right:1px solid currentColor;transform:translateY(-50%) rotate(45deg)}
+.hxz__cta-text{
+	background-image:linear-gradient(currentColor,currentColor);
+	background-repeat:no-repeat;
+	background-position:0 100%;
+	background-size:0 1px;
+	padding-bottom:4px;
+	white-space:nowrap;
+	transition:background-size 700ms var(--hx-ease);
+}
+@media (hover:hover){
+	.hxz__cta:hover .hxz__cta-rule{transform:translateX(10px)}
+	.hxz__cta:hover .hxz__cta-text{background-size:100% 1px}
+}
+.hxz__cta:focus{outline:none}
+.hxz__cta:focus-visible{outline:var(--hx-focus-width) solid var(--hx-focus-color);outline-offset:var(--hx-focus-offset)}
+
+.hxz__assure{
+	display:flex;
+	flex-wrap:wrap;
+	align-items:center;
+	gap:var(--hx-s-2) 0;
+	margin:var(--hx-s-3) 0 0;
+	padding:0;
+	list-style:none;
+}
+/* 15px: the site's floor for purchase details (owner, 11 Oct). */
+.hxz__assure li{margin:0;font-family:var(--hx-sans);font-size:.9375rem;font-weight:400;line-height:1.5;color:var(--hx-muted);white-space:nowrap}
+.hxz__assure li + li::before{
+	content:"";
+	display:inline-block;
+	width:18px;
+	height:1px;
+	margin:0 var(--hx-s-4);
+	vertical-align:middle;
+	background:var(--hx-chrome);
+}
+
+/* ─── Signature ──────────────────────────────────────────────────────── */
+.hxz__sign{margin-top:clamp(96px,4rem + 6vw,176px)}
+.hxz__rule{display:block;height:0;border-top:1px solid var(--hx-line)}
+.hxz__house{display:flex;align-items:center;gap:var(--hx-s-3);margin:0;padding-top:var(--hx-s-5)}
+.hxz__house .hx-label{color:var(--hx-ink);white-space:nowrap}
+.hxz__cross{display:block;flex:none;width:11px;height:11px}
+.hxz__house .hxz__place{margin-left:auto;color:var(--hx-muted)}
+
+/* Phones: a short rule that stays with the label. */
+@media (max-width:599.98px){
+	.hxz__cta{--hxz-rule:36px;gap:var(--hx-s-3)}
+}
+@media (max-width:399.98px){
+	.hxz__assure{flex-direction:column;align-items:flex-start;gap:var(--hx-s-1)}
+	.hxz__assure li + li::before{display:none}
+	.hxz__house .hxz__place{display:none}
+}
+@media (max-width:359.98px){
+	.hxz__cta{max-width:100%;font-size:.75rem;letter-spacing:.12em;gap:var(--hx-s-4);padding-right:0}
+}
+@media (min-width:1024px){
+	.hxz__cta{font-size:var(--hx-fs-detail)}
+}
+@media (prefers-reduced-motion:reduce){
+	.hxz__cta-rule,.hxz__cta-text{transition:none}
+}

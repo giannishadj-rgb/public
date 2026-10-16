@@ -1,0 +1,716 @@
+{
+  "tool": "comp-spec inspect-map",
+  "version": 1,
+  "referenceOnly": true,
+  "stateChanged": false,
+  "comp": ".impeccable/mocks/swiss-atelier-1.png",
+  "compSize": {
+    "width": 853,
+    "height": 1844
+  },
+  "inputRegionCount": 11,
+  "regions": [
+    {
+      "id": "menu",
+      "kind": "control",
+      "note": "Compact three-line menu icon; semantic button, no raster text.",
+      "grid": null,
+      "box": {
+        "x": 0.0457,
+        "y": 0.0217,
+        "w": 0.0563,
+        "h": 0.0211
+      },
+      "px": {
+        "x": 39,
+        "y": 40,
+        "w": 48,
+        "h": 39
+      },
+      "aspect": 1.2308,
+      "palette": [
+        {
+          "hex": "#f8f8f8",
+          "coverage": 0.7837
+        },
+        {
+          "hex": "#7b7d7a",
+          "coverage": 0.1442
+        },
+        {
+          "hex": "#120e12",
+          "coverage": 0.0721
+        }
+      ],
+      "detail": {
+        "energy": 12.879
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": true
+      },
+      "number": 1,
+      "cropPath": "region-1.png"
+    },
+    {
+      "id": "wordmark",
+      "kind": "image",
+      "note": "Official silver Caviar of Switzerland wordmark and red Swiss cross; exact supplied mark.",
+      "grid": null,
+      "box": {
+        "x": 0.3798,
+        "y": 0.0136,
+        "w": 0.2427,
+        "h": 0.0369
+      },
+      "px": {
+        "x": 324,
+        "y": 25,
+        "w": 207,
+        "h": 68
+      },
+      "aspect": 3.0441,
+      "palette": [
+        {
+          "hex": "#f6f5f4",
+          "coverage": 0.595
+        },
+        {
+          "hex": "#8e8e8d",
+          "coverage": 0.3527
+        },
+        {
+          "hex": "#c0bebb",
+          "coverage": 0.0379
+        },
+        {
+          "hex": "#e0090a",
+          "coverage": 0.0107
+        },
+        {
+          "hex": "#e55d55",
+          "coverage": 0.0038
+        }
+      ],
+      "detail": {
+        "energy": 28.9916
+      },
+      "medium": "raster",
+      "plate": "assets/plates/wordmark.png",
+      "text": null,
+      "number": 2,
+      "reference": {
+        "policy": "plate-reference-v2",
+        "excludedPixels": 0,
+        "totalPixels": 14076,
+        "remainingPixels": 14076,
+        "excludedFraction": 0.0,
+        "fullyExcluded": false,
+        "regions": [],
+        "ignoredContainers": []
+      },
+      "cropPath": "region-2.png",
+      "referencePath": "reference-2.png"
+    },
+    {
+      "id": "bag",
+      "kind": "control",
+      "note": "Fine outlined shopping bag icon as semantic link.",
+      "grid": null,
+      "box": {
+        "x": 0.9039,
+        "y": 0.0184,
+        "w": 0.0504,
+        "h": 0.0255
+      },
+      "px": {
+        "x": 771,
+        "y": 34,
+        "w": 43,
+        "h": 47
+      },
+      "aspect": 0.9149,
+      "palette": [
+        {
+          "hex": "#f6f6f5",
+          "coverage": 0.8319
+        },
+        {
+          "hex": "#1d1a18",
+          "coverage": 0.0672
+        },
+        {
+          "hex": "#454542",
+          "coverage": 0.0462
+        },
+        {
+          "hex": "#c6c6c6",
+          "coverage": 0.0378
+        },
+        {
+          "hex": "#787470",
+          "coverage": 0.0168
+        }
+      ],
+      "detail": {
+        "energy": 13.2983
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "number": 3,
+      "cropPath": "region-3.png"
+    },
+    {
+      "id": "campaign",
+      "kind": "image",
+      "note": "Open white 24h Regeneration Cream jar and chrome lid reflected on champagne silk; no UI text in shipping plate.",
+      "grid": null,
+      "bleed": true,
+      "box": {
+        "x": 0,
+        "y": 0.0618,
+        "w": 1,
+        "h": 0.7267
+      },
+      "px": {
+        "x": 0,
+        "y": 114,
+        "w": 853,
+        "h": 1340
+      },
+      "aspect": 0.6366,
+      "palette": [
+        {
+          "hex": "#e2d2c5",
+          "coverage": 0.5871
+        },
+        {
+          "hex": "#f5f1ea",
+          "coverage": 0.2783
+        },
+        {
+          "hex": "#c8afa1",
+          "coverage": 0.111
+        },
+        {
+          "hex": "#272524",
+          "coverage": 0.0158
+        },
+        {
+          "hex": "#a49d9a",
+          "coverage": 0.0078
+        }
+      ],
+      "detail": {
+        "energy": 17.2697
+      },
+      "medium": "raster",
+      "plate": "assets/plates/campaign.png",
+      "text": null,
+      "number": 4,
+      "reference": {
+        "policy": "plate-reference-v2",
+        "excludedPixels": 207487,
+        "totalPixels": 1143020,
+        "remainingPixels": 935533,
+        "excludedFraction": 0.18152525765078475,
+        "fullyExcluded": false,
+        "regions": [
+          {
+            "id": "headline",
+            "kind": "text",
+            "cropPx": {
+              "x": 71,
+              "y": 143,
+              "w": 507,
+              "h": 252
+            },
+            "pixels": 127764
+          },
+          {
+            "id": "proposition",
+            "kind": "text",
+            "cropPx": {
+              "x": 72,
+              "y": 435,
+              "w": 704,
+              "h": 37
+            },
+            "pixels": 26048
+          },
+          {
+            "id": "cta",
+            "kind": "control",
+            "cropPx": {
+              "x": 144,
+              "y": 1167,
+              "w": 565,
+              "h": 95
+            },
+            "pixels": 53675
+          }
+        ],
+        "ignoredContainers": []
+      },
+      "cropPath": "region-4.png",
+      "referencePath": "reference-4.png"
+    },
+    {
+      "id": "headline",
+      "kind": "text",
+      "note": "Swiss skincare, refined to the essential. Three-line high-contrast serif lead heading.",
+      "grid": null,
+      "box": {
+        "x": 0.0832,
+        "y": 0.1394,
+        "w": 0.5944,
+        "h": 0.1367
+      },
+      "px": {
+        "x": 71,
+        "y": 257,
+        "w": 507,
+        "h": 252
+      },
+      "aspect": 2.0119,
+      "palette": [
+        {
+          "hex": "#efe5db",
+          "coverage": 0.7989
+        },
+        {
+          "hex": "#282726",
+          "coverage": 0.1113
+        },
+        {
+          "hex": "#dec2b3",
+          "coverage": 0.058
+        },
+        {
+          "hex": "#575451",
+          "coverage": 0.0164
+        },
+        {
+          "hex": "#afaaa4",
+          "coverage": 0.0154
+        }
+      ],
+      "detail": {
+        "energy": 46.6603
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "number": 5,
+      "cropPath": "region-5.png"
+    },
+    {
+      "id": "proposition",
+      "kind": "text",
+      "note": "Four formulas. One complete ritual. Single concise sans line.",
+      "grid": null,
+      "box": {
+        "x": 0.0844,
+        "y": 0.2977,
+        "w": 0.8253,
+        "h": 0.0201
+      },
+      "px": {
+        "x": 72,
+        "y": 549,
+        "w": 704,
+        "h": 37
+      },
+      "aspect": 19.027,
+      "palette": [
+        {
+          "hex": "#f0e4da",
+          "coverage": 0.5541
+        },
+        {
+          "hex": "#cbb5a5",
+          "coverage": 0.328
+        },
+        {
+          "hex": "#30302f",
+          "coverage": 0.0634
+        },
+        {
+          "hex": "#8d8680",
+          "coverage": 0.0342
+        },
+        {
+          "hex": "#615b56",
+          "coverage": 0.0204
+        }
+      ],
+      "detail": {
+        "energy": 52.3974
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "number": 6,
+      "cropPath": "region-6.png"
+    },
+    {
+      "id": "cta",
+      "kind": "control",
+      "note": "Thin graphite outlined Discover the ritual shopping action, legible centered label.",
+      "grid": null,
+      "box": {
+        "x": 0.1688,
+        "y": 0.6947,
+        "w": 0.6624,
+        "h": 0.0515
+      },
+      "px": {
+        "x": 144,
+        "y": 1281,
+        "w": 565,
+        "h": 95
+      },
+      "aspect": 5.9474,
+      "palette": [
+        {
+          "hex": "#f7f6e8",
+          "coverage": 0.9448
+        },
+        {
+          "hex": "#9f9b97",
+          "coverage": 0.0209
+        },
+        {
+          "hex": "#d7c8bf",
+          "coverage": 0.0179
+        },
+        {
+          "hex": "#212020",
+          "coverage": 0.011
+        },
+        {
+          "hex": "#666663",
+          "coverage": 0.0053
+        }
+      ],
+      "detail": {
+        "energy": 16.5943
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": true
+      },
+      "number": 7,
+      "cropPath": "region-7.png"
+    },
+    {
+      "id": "collection-title",
+      "kind": "text",
+      "note": "The Collection serif section heading on pearl surface.",
+      "grid": null,
+      "box": {
+        "x": 0.238,
+        "y": 0.8216,
+        "w": 0.5322,
+        "h": 0.0418
+      },
+      "px": {
+        "x": 203,
+        "y": 1515,
+        "w": 454,
+        "h": 77
+      },
+      "aspect": 5.8961,
+      "palette": [
+        {
+          "hex": "#f7f3e9",
+          "coverage": 0.829
+        },
+        {
+          "hex": "#242322",
+          "coverage": 0.1105
+        },
+        {
+          "hex": "#73706d",
+          "coverage": 0.0294
+        },
+        {
+          "hex": "#b1adaa",
+          "coverage": 0.0223
+        },
+        {
+          "hex": "#46433b",
+          "coverage": 0.0089
+        }
+      ],
+      "detail": {
+        "energy": 52.0886
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "number": 8,
+      "cropPath": "region-8.png"
+    },
+    {
+      "id": "collection-object-a",
+      "kind": "image",
+      "note": "First collection packshot glimpse; shipping uses real approved cleanser packaging.",
+      "grid": null,
+      "bleed": true,
+      "box": {
+        "x": 0.1055,
+        "y": 0.8818,
+        "w": 0.1547,
+        "h": 0.1182
+      },
+      "px": {
+        "x": 90,
+        "y": 1626,
+        "w": 132,
+        "h": 218
+      },
+      "aspect": 0.6055,
+      "palette": [
+        {
+          "hex": "#f4f1ec",
+          "coverage": 0.4118
+        },
+        {
+          "hex": "#d7ccc4",
+          "coverage": 0.3386
+        },
+        {
+          "hex": "#a2958c",
+          "coverage": 0.1616
+        },
+        {
+          "hex": "#807571",
+          "coverage": 0.0591
+        },
+        {
+          "hex": "#080808",
+          "coverage": 0.0289
+        }
+      ],
+      "detail": {
+        "energy": 9.8981
+      },
+      "medium": "raster",
+      "plate": "assets/plates/collection-object-a.png",
+      "text": null,
+      "number": 9,
+      "reference": {
+        "policy": "plate-reference-v2",
+        "excludedPixels": 0,
+        "totalPixels": 28776,
+        "remainingPixels": 28776,
+        "excludedFraction": 0.0,
+        "fullyExcluded": false,
+        "regions": [],
+        "ignoredContainers": []
+      },
+      "cropPath": "region-9.png",
+      "referencePath": "reference-9.png"
+    },
+    {
+      "id": "collection-object-b",
+      "kind": "image",
+      "note": "Second collection object glimpse; shipping preserves real approved product packaging.",
+      "grid": null,
+      "bleed": true,
+      "box": {
+        "x": 0.3693,
+        "y": 0.9295,
+        "w": 0.3107,
+        "h": 0.0705
+      },
+      "px": {
+        "x": 315,
+        "y": 1714,
+        "w": 265,
+        "h": 130
+      },
+      "aspect": 2.0385,
+      "palette": [
+        {
+          "hex": "#f5f3ec",
+          "coverage": 0.5471
+        },
+        {
+          "hex": "#cabfb9",
+          "coverage": 0.2105
+        },
+        {
+          "hex": "#978982",
+          "coverage": 0.178
+        },
+        {
+          "hex": "#0d0b0a",
+          "coverage": 0.0388
+        },
+        {
+          "hex": "#6c6864",
+          "coverage": 0.0257
+        }
+      ],
+      "detail": {
+        "energy": 16.5786
+      },
+      "medium": "raster",
+      "plate": "assets/plates/collection-object-b.png",
+      "text": null,
+      "number": 10,
+      "reference": {
+        "policy": "plate-reference-v2",
+        "excludedPixels": 0,
+        "totalPixels": 34450,
+        "remainingPixels": 34450,
+        "excludedFraction": 0.0,
+        "fullyExcluded": false,
+        "regions": [],
+        "ignoredContainers": []
+      },
+      "cropPath": "region-10.png",
+      "referencePath": "reference-10.png"
+    },
+    {
+      "id": "collection-object-c",
+      "kind": "image",
+      "note": "Third collection object glimpse; generated comp packaging is illustrative only; real four formulas authoritative.",
+      "grid": null,
+      "bleed": true,
+      "box": {
+        "x": 0.6987,
+        "y": 0.8883,
+        "w": 0.3013,
+        "h": 0.1117
+      },
+      "px": {
+        "x": 596,
+        "y": 1638,
+        "w": 257,
+        "h": 206
+      },
+      "aspect": 1.2476,
+      "palette": [
+        {
+          "hex": "#f1eee4",
+          "coverage": 0.9038
+        },
+        {
+          "hex": "#d5c9c5",
+          "coverage": 0.0718
+        },
+        {
+          "hex": "#918f8d",
+          "coverage": 0.0243
+        }
+      ],
+      "detail": {
+        "energy": 7.0396
+      },
+      "medium": "raster",
+      "plate": "assets/plates/collection-object-c.png",
+      "text": null,
+      "number": 11,
+      "reference": {
+        "policy": "plate-reference-v2",
+        "excludedPixels": 0,
+        "totalPixels": 52942,
+        "remainingPixels": 52942,
+        "excludedFraction": 0.0,
+        "fullyExcluded": false,
+        "regions": [],
+        "ignoredContainers": []
+      },
+      "cropPath": "region-11.png",
+      "referencePath": "reference-11.png"
+    }
+  ],
+  "issues": [
+    {
+      "severity": "warning",
+      "code": "foreground-mask",
+      "regionId": "campaign",
+      "message": "headline, proposition, cta exclude 18.2% of this reference. Check that the excluded pixels contain foreground, not artwork between separate text elements. Split overly broad foreground bounds; review grouping must not change geometry."
+    },
+    {
+      "severity": "warning",
+      "code": "measurement-warning",
+      "regionId": null,
+      "message": "region campaign: \"bleed\": true set in the regions file (the clipped-artwork refusal is overridden: the page crops it there)"
+    },
+    {
+      "severity": "warning",
+      "code": "measurement-warning",
+      "regionId": null,
+      "message": "region collection-object-a: \"bleed\": true set in the regions file (the clipped-artwork refusal is overridden: the page crops it there)"
+    },
+    {
+      "severity": "warning",
+      "code": "measurement-warning",
+      "regionId": null,
+      "message": "region collection-object-b: \"bleed\": true set in the regions file (the clipped-artwork refusal is overridden: the page crops it there)"
+    },
+    {
+      "severity": "warning",
+      "code": "measurement-warning",
+      "regionId": null,
+      "message": "region collection-object-c: \"bleed\": true set in the regions file (the clipped-artwork refusal is overridden: the page crops it there)"
+    }
+  ],
+  "overlaps": [
+    {
+      "a": "campaign",
+      "b": "headline",
+      "pixels": 127764.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "campaign",
+      "b": "proposition",
+      "pixels": 26048.0,
+      "relationship": "overlapping elements"
+    },
+    {
+      "a": "campaign",
+      "b": "cta",
+      "pixels": 53675.0,
+      "relationship": "overlapping elements"
+    }
+  ],
+  "reviewGroups": {},
+  "uncoveredInkCells": [],
+  "comparisonSheets": [
+    {
+      "path": "comparison-1.png",
+      "regionIds": [
+        "campaign"
+      ]
+    }
+  ]
+}

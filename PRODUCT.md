@@ -8,7 +8,52 @@ web
 
 ## Users
 
-Primary: women aged 45–55 with mature-skin concerns — loss of firmness, fine lines, dryness — who discover, compare and buy mostly on an iPhone. She is evaluating an unfamiliar premium brand and needs to want it first and believe it second.
+### Core customer
+
+A sophisticated, internationally minded woman, usually 40+, who values premium skincare, visible cosmetic results, Swiss quality and understated luxury. She prefers a curated, credible daily ritual to a complicated routine. When evaluating an unfamiliar premium brand, she needs both desire and reasons to trust its quality and efficacy.
+
+Use three complementary personas: the mature skincare buyer sets the primary brand priorities; the international luxury discoverer informs growth and aspiration; the mobile researcher informs usability and conversion. These are overlapping motivations and behaviours, not three mutually exclusive customer segments.
+
+### Primary: The Affluent Mature Skincare Buyer
+
+**Directional profile:** A woman approximately 45–65+, comfortable considering premium skincare for concerns such as loss of firmness, fine lines and dryness. Affluence and buying motivations are inferred from the supplied analysis, not directly established by GA4 demographics.
+
+**Job:** Decide whether an unfamiliar skincare house offers enough quality, relevant benefits and credible evidence to justify its price; choose an individual formula or a manageable complete ritual.
+
+**Needs:** Visible cosmetic benefits, precise scientific reassurance, premium formulation, beautiful packaging and a sophisticated routine that is easy to understand. She should be able to explain why the brand is premium, why caviar matters, what each formula does and how the four formulas complement one another.
+
+**Brand priorities:** Calm authority, relevant skin concerns, readable evidence, Swiss provenance and curation. “Four formulas. One complete ritual.” makes the small range a deliberate advantage. Represent mature customers with respect rather than assuming that youthful imagery or trend-led language will resonate with everyone.
+
+### Secondary: The Global Luxury Discoverer
+
+**Directional profile:** An internationally minded, digitally confident premium buyer, approximately 35–54. Age and lifestyle motivations are hypotheses from the supplied analysis. The reported international audience includes the United States, Switzerland, United Kingdom, Canada, Germany, Singapore and Thailand.
+
+**Job:** Discover a distinctive skincare house and assess whether its products, provenance and experience belong in her wider premium lifestyle.
+
+**Needs:** A memorable brand identity, tangible product quality, authentic Swiss provenance, a distinctive ingredient story and confidence when ordering internationally. Luxury beauty, travel and shopping interests are audience signals, not proof that every visitor shares the same lifestyle.
+
+**Brand priorities:** Strong product presentation, understated prestige and coherent storytelling, supported by factual evidence and clear delivery/returns information. Communicate the curated range without inventing scarcity, endorsements or exclusivity claims.
+
+### Behavioural: The Mobile Beauty Researcher
+
+**Profile:** A visitor who discovers and compares skincare on a phone, often with limited attention. This behaviour can apply to either persona above; it is not a separate age or gender category.
+
+**Job:** Understand the brand and product benefits quickly, compare formulas and reach the appropriate purchase information with minimal friction.
+
+**Needs:** Immediate clarity, readable text, clear navigation, one recognisable benefit per formula, easy comparison and obvious next actions. Maintain a good desktop purchase experience as well as a strong mobile discovery experience. iPhone/iOS and Safari deserve particular validation because the supplied analysis reports meaningful revenue from those audiences.
+
+**UX priorities:** Mobile readability and touch targets, concise explanations, accessible interactions and continuity of product information from discovery to purchase. Do not assume that an individual mobile researcher later buys on desktop: aggregate device revenue does not establish a cross-device journey.
+
+### Evidence and confidence
+
+Source: user-supplied GA4 persona analysis provided on 12 October 2026. The underlying GA4 exports and reporting period were not supplied for this update. Figures below are approximate reported observations, not independently verified analytics or permanent audience targets.
+
+- A large proportion of age/gender values are unknown. Demographic ranges and persona motivations are directional; do not treat the identifiable subset as the entire customer base.
+- Among known-gender revenue, the analysis reports approximately €3,395 from women versus €559.50 from men. Reported engagement is roughly 68–71% across the 45–54, 55–64 and 65+ age groups; the 65+ group has a 2.21% user key-event rate. A key event is not necessarily a purchase.
+- The analysis reports approximately 30,066 mobile users versus 24,452 desktop users, with about €14.0k mobile revenue and €19.2k desktop revenue. This supports prioritising mobile discovery while retaining desktop quality; it does not prove a conversion cause or a device-switching journey.
+- Reported iOS revenue is approximately €10.3k and Safari revenue €13.7k. OS and browser figures are overlapping views and must not be added together or treated as an exclusively iPhone audience.
+
+Treat the primary persona as a strategic priority, not a proven highest-value demographic segment. Refine these hypotheses with dated analytics, customer interviews and purchase behaviour as evidence becomes available.
 
 ## Product Purpose
 
@@ -73,4 +118,4 @@ Absent — must not be fabricated: customer reviews, testimonials, press coverag
 
 ## Accessibility & Inclusion
 
-Mobile-first for a 45–55 audience: readable body text (16px+), generous touch targets (44px+), WCAG AA contrast, respects reduced-motion preferences.
+Mobile-first for a broad audience that includes mature skincare buyers aged approximately 45–65+: readable body text (16px+), generous touch targets (44px+), WCAG AA contrast and reduced-motion preferences. Validate iPhone/Safari and desktop experiences; do not assume all customers use the same device or have the same visual and motor needs.

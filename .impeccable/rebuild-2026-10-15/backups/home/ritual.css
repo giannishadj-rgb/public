@@ -1,0 +1,350 @@
+/* ==========================================================================
+   hx/ritual.css — 06 The Ritual (template-parts/home-2026/final.php), 14 Oct 2026.
+   Owner: ritual agent. Prefix hxr-. Tokens from hx/system.css.
+
+   Two presentations of the same markup:
+   • OVERLAY  (≥900px with a fine pointer that can hover): four tall monochrome panels
+     with hairline gutters. The step word reads upward top-left; "Step N" sits low on
+     the panel's centre axis (owner: "leave the Step one where it is"). On hover/focus the photo returns to colour and enlarges, the
+     label rises, a centred hairline draws and the explanation settles in beneath it in
+     balanced lines, on a soft
+     bottom shade.
+   • CAPTION  (every touch screen, and anything <900px): the explanation is always
+     visible as a caption under the photograph, headed by "Step N". Below 900px the
+     panels are a snap-swipe row (4:5 photos) with a hairline progress track; on phones
+     the panel in front returns to colour as it is swiped into place (scroll-driven,
+     progressive).
+   ========================================================================== */
+
+body.cos-h26 .hxr{
+	--hxr-veil:23,24,26;                 /* --hx-night as rgb, for the photo veils */
+	--hxr-mono:grayscale(1) sepia(.07) contrast(1.06) brightness(.97);   /* warm silver print */
+	--hxr-colour:grayscale(0) sepia(0) contrast(1) brightness(1);
+	--hxr-inset:var(--hx-s-5);           /* one left edge for word, label and caption */
+	position:relative;
+	background:var(--hx-white);             /* round 2: its own warm ground between the ivory provenance and closing */
+	color:var(--hx-text);
+	/* round 1 pacing: it follows imagery (tight top) and ends on the panels (no dead tail) */
+	padding-block:var(--hx-section-sm) var(--hx-s-8);
+	overflow-x:clip;
+}
+
+/* ── Heading ─────────────────────────────────────────────────────── */
+.hxr__head{
+	box-sizing:border-box;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	max-width:calc(48rem + 2 * var(--hx-margin));
+	margin:0 auto;
+	padding-inline:var(--hx-margin);
+	text-align:center;
+}
+body.cos-h26 .hxr__title{
+	margin:0;
+	font-family:var(--hx-serif);
+	font-size:var(--hx-fs-heading);
+	font-weight:300;
+	line-height:var(--hx-lh-heading);
+	letter-spacing:var(--hx-tr-heading);
+	color:var(--hx-ink);
+	white-space:nowrap;                  /* owner: "The" and "Ritual" on one line */
+	font-kerning:normal;
+	-webkit-font-smoothing:antialiased;
+}
+body.cos-h26 .hxr__title em{font-style:italic;font-weight:300;letter-spacing:-.005em;color:var(--hx-accent)}
+body.cos-h26 .hxr__lede{
+	max-width:44em;
+	margin:var(--hx-stack) 0 0;
+	font-family:var(--hx-sans);
+	font-size:var(--hx-fs-body);
+	font-weight:300;
+	line-height:var(--hx-lh-lead);
+	color:var(--hx-text);
+	text-wrap:balance;
+}
+
+/* ── Steps: shared ───────────────────────────────────────────────── */
+.hxr__stage{position:relative;margin-top:var(--hx-s-7);timeline-scope:--hxr-rail}
+body.cos-h26 .hxr__steps{margin:0;padding:0;list-style:none}
+.hxr__step{margin:0;padding:0;min-width:0}
+body.cos-h26 .hxr__link{
+	position:relative;
+	display:flex;
+	flex-direction:column;
+	height:100%;
+	color:inherit;
+	text-decoration:none;
+	-webkit-tap-highlight-color:transparent;
+}
+body.cos-h26 .hxr__link:hover,body.cos-h26 .hxr__link:visited{color:inherit;text-decoration:none}
+.hxr__frame{
+	position:relative;
+	display:block;
+	overflow:hidden;
+	aspect-ratio:4/5;
+	background:var(--hx-stone);          /* while the photo loads */
+	isolation:isolate;
+}
+.hxr__shot,.hxr__shot img{position:absolute;inset:0;display:block;width:100%;height:100%}
+.hxr__shot img{
+	object-fit:cover;
+	object-position:50% 50%;
+	filter:var(--hxr-mono);
+	transform-origin:50% 45%;
+}
+/* the corner veil that carries the vertical step word (sized to the word, not the panel) */
+.hxr__frame::before{
+	content:"";
+	position:absolute;
+	inset:0;
+	z-index:1;
+	pointer-events:none;
+	background:radial-gradient(ellipse 160px 350px at 0 0,rgba(var(--hxr-veil),.72),rgba(var(--hxr-veil),.5) 42%,rgba(var(--hxr-veil),.18) 72%,rgba(var(--hxr-veil),0) 100%);
+}
+.hxr__word{
+	position:absolute;
+	z-index:2;
+	top:var(--hx-s-5);
+	left:var(--hxr-inset);
+	writing-mode:vertical-rl;
+	transform:rotate(180deg);            /* reads upward */
+	font-family:var(--hx-serif);
+	font-size:1.5rem;                    /* 24px: large text (3:1) */
+	font-weight:500;
+	line-height:1;
+	letter-spacing:.3em;
+	text-transform:uppercase;
+	color:var(--hx-white);
+	white-space:nowrap;
+	text-shadow:0 0 18px rgba(var(--hxr-veil),.35);
+	font-kerning:normal;
+	-webkit-font-smoothing:antialiased;
+}
+
+/* Caption (default; every touch screen, and all widths below 900px) */
+.hxr__text{display:block;padding:var(--hx-s-4) var(--hx-s-2) 0 0}
+.hxr__stepno{
+	display:block;
+	font-family:var(--hx-serif);
+	font-size:1.5rem;
+	font-weight:400;
+	line-height:1.1;
+	letter-spacing:.01em;
+	font-variant-numeric:lining-nums;
+	font-feature-settings:"lnum" 1;
+	color:var(--hx-ink);
+	-webkit-font-smoothing:antialiased;
+}
+.hxr__more,.hxr__inner{display:block}
+.hxr__rule{display:none}
+.hxr__how{
+	display:block;
+	max-width:26em;
+	margin-top:var(--hx-s-2);
+	font-family:var(--hx-sans);
+	font-size:var(--hx-fs-body);
+	font-weight:400;
+	line-height:1.55;
+	color:var(--hx-text);
+	text-wrap:pretty;
+	-webkit-font-smoothing:antialiased;
+}
+
+/* Focus (keyboard): ring inside the photograph, flush with the panel edge */
+body.cos-h26 .hxr__link:focus,body.cos-h26 .hxr__link:focus-visible{outline:none}
+body.cos-h26 .hxr__link:focus-visible .hxr__frame::after{
+	content:"";
+	position:absolute;
+	inset:0;
+	z-index:4;
+	pointer-events:none;
+	opacity:1;
+	box-shadow:inset 0 0 0 2px var(--hx-ink),inset 0 0 0 4px var(--hx-white);
+}
+
+/* ── Phones and small tablets: snap-swipe row ────────────────────── */
+@media (max-width:899.98px){
+	body.cos-h26 .hxr{padding-bottom:var(--hx-s-7)}
+	.hxr__stage{margin-top:var(--hx-s-6)}
+	body.cos-h26 .hxr__steps{
+		display:grid;
+		grid-auto-flow:column;
+		grid-auto-columns:min(86vw,400px);
+		gap:var(--hx-s-3);
+		padding-inline:var(--hx-margin);
+		scroll-padding-inline:var(--hx-margin);
+		overflow-x:auto;
+		overflow-y:hidden;
+		overscroll-behavior-x:contain;
+		scroll-snap-type:x mandatory;
+		scrollbar-width:none;
+		-webkit-overflow-scrolling:touch;
+		scroll-timeline:--hxr-rail inline;
+	}
+	body.cos-h26 .hxr__steps::-webkit-scrollbar{display:none}
+	.hxr__step{scroll-snap-align:start;scroll-snap-stop:always}
+	.hxr__track{display:none}
+	@supports (animation-timeline:scroll()){
+		.hxr__track{
+			position:relative;
+			display:block;
+			height:1px;
+			margin:var(--hx-s-6) var(--hx-margin) 0;
+			background:var(--hx-line);
+			overflow:hidden;
+		}
+		.hxr__thumb{
+			position:absolute;
+			left:0;
+			top:0;
+			width:25%;
+			height:1px;
+			background:var(--hx-ink);
+			animation:hxr-progress linear both;
+			animation-timeline:--hxr-rail;
+		}
+	}
+}
+@media (max-width:399.98px){
+	/* 320px: the margin would leave a 270px photo; let the row run nearer the edge */
+	body.cos-h26 .hxr__steps{grid-auto-columns:calc(100vw - 2 * var(--hx-s-5) - 12px);padding-inline:var(--hx-s-5);scroll-padding-inline:var(--hx-s-5)}
+}
+@media (min-width:700px) and (max-width:899.98px){
+	body.cos-h26 .hxr__steps{grid-auto-columns:46vw;gap:var(--hx-s-4)}
+}
+/* phones: the panel in front returns to colour as it is swiped into place */
+@supports (animation-timeline:view(inline)){
+	@media (max-width:699.98px){
+		.hxr__shot img{animation:hxr-bloom linear both;animation-timeline:view(inline)}
+	}
+}
+@keyframes hxr-progress{from{transform:translateX(0)}to{transform:translateX(300%)}}
+@keyframes hxr-bloom{
+	0%,32%{filter:var(--hxr-mono)}
+	50%,53%{filter:var(--hxr-colour)}
+	70%,100%{filter:var(--hxr-mono)}
+}
+
+/* ── ≥900px: four tall panels in a row ───────────────────────────── */
+@media (min-width:900px){
+	body.cos-h26 .hxr{--hxr-inset:clamp(20px,1.9vw,30px)}
+	.hxr__stage{margin-top:var(--hx-s-8)}
+	.hxr__track{display:none}
+	body.cos-h26 .hxr__steps{
+		box-sizing:border-box;
+		display:grid;
+		grid-template-columns:repeat(4,minmax(0,1fr));
+		gap:var(--hx-s-6) var(--hx-s-5);
+		max-width:calc(var(--hx-max) + 2 * var(--hx-margin));
+		margin-inline:auto;
+		padding-inline:var(--hx-margin);
+	}
+	.hxr__frame{aspect-ratio:auto;height:clamp(440px,72vh,760px)}
+	.hxr__word{top:var(--hx-s-6)}
+}
+
+/* ── OVERLAY: ≥900px with a hovering fine pointer ────────────────── */
+@media (min-width:900px) and (hover:hover) and (pointer:fine){
+	body.cos-h26 .hxr__steps{gap:3px}
+	.hxr__shot img{
+		transition:
+			transform 1800ms var(--hx-ease),
+			filter 1100ms var(--hx-ease-soft);
+	}
+	/* a low shade carries "Step N" at rest… */
+	.hxr__frame::after{
+		content:"";
+		position:absolute;
+		inset:0;
+		z-index:1;
+		pointer-events:none;
+		background:radial-gradient(ellipse 90% 26% at 50% 100%,rgba(var(--hxr-veil),.4),rgba(var(--hxr-veil),0) 100%),linear-gradient(to top,rgba(var(--hxr-veil),.4) 0,rgba(var(--hxr-veil),.24) 16%,rgba(var(--hxr-veil),.06) 30%,rgba(var(--hxr-veil),0) 40%);
+		transition:opacity 900ms var(--hx-ease-soft);
+	}
+	.hxr__text{
+		position:absolute;
+		inset:0;
+		z-index:3;
+		display:flex;
+		flex-direction:column;
+		align-items:center;
+		justify-content:flex-end;
+		padding:0 var(--hxr-inset) clamp(28px,2.6vw,40px);
+		text-align:center;
+		pointer-events:none;
+	}
+	/* …and deepens softly from the bottom on hover, under the caption only */
+	.hxr__text::before{
+		content:"";
+		position:absolute;
+		inset:0;
+		z-index:-1;
+		background:linear-gradient(to top,rgba(var(--hxr-veil),.72) 0,rgba(var(--hxr-veil),.58) 28%,rgba(var(--hxr-veil),.3) 50%,rgba(var(--hxr-veil),0) 68%);
+		opacity:0;
+		transition:opacity 900ms var(--hx-ease-soft);
+	}
+	.hxr__stepno{
+		font-size:clamp(1.5rem,1.1rem + .55vw,1.875rem);
+		font-weight:400;
+		color:var(--hx-white);
+		text-shadow:0 0 22px rgba(var(--hxr-veil),.35);
+	}
+	.hxr__more{
+		display:grid;
+		grid-template-rows:0fr;
+		transition:grid-template-rows 900ms var(--hx-ease);
+	}
+	.hxr__inner{
+		display:flex;
+		flex-direction:column;
+		align-items:center;
+		min-height:0;
+		overflow:hidden;
+	}
+	.hxr__rule{
+		display:block;
+		flex:none;
+		width:24px;
+		height:1px;
+		margin-top:var(--hx-s-4);
+		background:rgba(242,239,232,.6);
+		transform:scaleX(0);
+		transform-origin:50% 50%;
+		transition:transform 900ms var(--hx-ease);
+	}
+	/* the caption: regular Inter, warm ivory, centred in balanced lines under the hairline, no glow */
+	.hxr__how{
+		max-width:28ch;
+		text-wrap:balance;
+		margin-top:var(--hx-s-4);
+		/* light type on a dark shade blooms (irradiation) and reads a step heavier than the
+		   same weight on ivory; 360 on the variable Inter matches the optical weight of the
+		   page's 400 captions. No shadow, no synthesis. */
+		font-weight:360;
+		font-synthesis:none;
+		line-height:1.6;
+		letter-spacing:.01em;
+		color:var(--hx-on-dark);
+		-webkit-font-smoothing:antialiased;
+		-moz-osx-font-smoothing:grayscale;
+		opacity:0;
+		transform:translate3d(0,8px,0);
+		transition:opacity 700ms var(--hx-ease-soft),transform 1000ms var(--hx-ease);
+	}
+
+	.hxr__link:is(:hover,:focus-visible) .hxr__shot img{transform:scale(1.07);filter:var(--hxr-colour)}
+	.hxr__link:hover .hxr__frame::after{opacity:0}
+	.hxr__link:is(:hover,:focus-visible) .hxr__text::before{opacity:1}
+	.hxr__link:is(:hover,:focus-visible) .hxr__more{grid-template-rows:1fr}
+	.hxr__link:is(:hover,:focus-visible) .hxr__rule{transform:scaleX(1);transition-delay:180ms}
+	.hxr__link:is(:hover,:focus-visible) .hxr__how{opacity:1;transform:none;transition-delay:240ms,200ms}
+	/* the other three recede a touch while one is in focus */
+	.hxr__steps:has(.hxr__link:hover) .hxr__link:not(:hover) .hxr__shot img{filter:grayscale(1) sepia(.07) contrast(1.06) brightness(.82)}
+}
+
+@media (prefers-reduced-motion:reduce){
+	.hxr__shot img,.hxr__frame::after,.hxr__text::before,.hxr__more,.hxr__rule,.hxr__how{transition:none!important}
+	.hxr__link:is(:hover,:focus-visible) .hxr__shot img{transform:none!important}
+	.hxr__how{transform:none!important}
+}

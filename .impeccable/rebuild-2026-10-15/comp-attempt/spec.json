@@ -1,0 +1,718 @@
+{
+  "tool": "comp-spec",
+  "version": 1,
+  "createdAt": "2026-10-15T17:08:57.569Z",
+  "comp": ".impeccable/mocks/swiss-atelier-1.png",
+  "warnings": [
+    "region campaign: \"bleed\": true set in the regions file (the clipped-artwork refusal is overridden: the page crops it there)",
+    "region collection-object-a: \"bleed\": true set in the regions file (the clipped-artwork refusal is overridden: the page crops it there)",
+    "region collection-object-b: \"bleed\": true set in the regions file (the clipped-artwork refusal is overridden: the page crops it there)",
+    "region collection-object-c: \"bleed\": true set in the regions file (the clipped-artwork refusal is overridden: the page crops it there)"
+  ],
+  "uncoveredInkCells": [],
+  "compSize": {
+    "width": 853,
+    "height": 1844
+  },
+  "aspect": 0.4626,
+  "orientation": "portrait",
+  "palette": [
+    {
+      "hex": "#f6f2e9",
+      "coverage": 0.4882
+    },
+    {
+      "hex": "#decec3",
+      "coverage": 0.4027
+    },
+    {
+      "hex": "#c7ad9d",
+      "coverage": 0.075
+    },
+    {
+      "hex": "#928a85",
+      "coverage": 0.0191
+    },
+    {
+      "hex": "#232221",
+      "coverage": 0.015
+    }
+  ],
+  "bands": [
+    {
+      "y": 0.0614,
+      "strength": 0.398
+    },
+    {
+      "y": 0.1588,
+      "strength": 0.3967
+    },
+    {
+      "y": 0.1805,
+      "strength": 0.4689
+    },
+    {
+      "y": 0.2274,
+      "strength": 0.4342
+    },
+    {
+      "y": 0.2491,
+      "strength": 0.2289
+    },
+    {
+      "y": 0.2744,
+      "strength": 0.2161
+    },
+    {
+      "y": 0.3032,
+      "strength": 0.3301
+    },
+    {
+      "y": 0.556,
+      "strength": 0.226
+    },
+    {
+      "y": 0.6968,
+      "strength": 0.3442
+    },
+    {
+      "y": 0.7256,
+      "strength": 0.2246
+    },
+    {
+      "y": 0.787,
+      "strength": 0.2995
+    },
+    {
+      "y": 0.8556,
+      "strength": 0.4405
+    }
+  ],
+  "regions": [
+    {
+      "id": "menu",
+      "kind": "control",
+      "note": "Compact three-line menu icon; semantic button, no raster text.",
+      "grid": null,
+      "box": {
+        "x": 0.0457,
+        "y": 0.0217,
+        "w": 0.0563,
+        "h": 0.0211
+      },
+      "px": {
+        "x": 39,
+        "y": 40,
+        "w": 48,
+        "h": 39
+      },
+      "aspect": 1.2308,
+      "palette": [
+        {
+          "hex": "#f8f8f8",
+          "coverage": 0.7837
+        },
+        {
+          "hex": "#7b7d7a",
+          "coverage": 0.1442
+        },
+        {
+          "hex": "#120e12",
+          "coverage": 0.0721
+        }
+      ],
+      "detail": {
+        "energy": 12.879
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": true
+      }
+    },
+    {
+      "id": "wordmark",
+      "kind": "image",
+      "note": "Official silver Caviar of Switzerland wordmark and red Swiss cross; exact supplied mark.",
+      "grid": null,
+      "box": {
+        "x": 0.3798,
+        "y": 0.0136,
+        "w": 0.2427,
+        "h": 0.0369
+      },
+      "px": {
+        "x": 324,
+        "y": 25,
+        "w": 207,
+        "h": 68
+      },
+      "aspect": 3.0441,
+      "palette": [
+        {
+          "hex": "#f6f5f4",
+          "coverage": 0.595
+        },
+        {
+          "hex": "#8e8e8d",
+          "coverage": 0.3527
+        },
+        {
+          "hex": "#c0bebb",
+          "coverage": 0.0379
+        },
+        {
+          "hex": "#e0090a",
+          "coverage": 0.0107
+        },
+        {
+          "hex": "#e55d55",
+          "coverage": 0.0038
+        }
+      ],
+      "detail": {
+        "energy": 28.9916
+      },
+      "medium": "raster",
+      "plate": "assets/plates/wordmark.png",
+      "text": null
+    },
+    {
+      "id": "bag",
+      "kind": "control",
+      "note": "Fine outlined shopping bag icon as semantic link.",
+      "grid": null,
+      "box": {
+        "x": 0.9039,
+        "y": 0.0184,
+        "w": 0.0504,
+        "h": 0.0255
+      },
+      "px": {
+        "x": 771,
+        "y": 34,
+        "w": 43,
+        "h": 47
+      },
+      "aspect": 0.9149,
+      "palette": [
+        {
+          "hex": "#f6f6f5",
+          "coverage": 0.8319
+        },
+        {
+          "hex": "#1d1a18",
+          "coverage": 0.0672
+        },
+        {
+          "hex": "#454542",
+          "coverage": 0.0462
+        },
+        {
+          "hex": "#c6c6c6",
+          "coverage": 0.0378
+        },
+        {
+          "hex": "#787470",
+          "coverage": 0.0168
+        }
+      ],
+      "detail": {
+        "energy": 13.2983
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      }
+    },
+    {
+      "id": "campaign",
+      "kind": "image",
+      "note": "Open white 24h Regeneration Cream jar and chrome lid reflected on champagne silk; no UI text in shipping plate.",
+      "grid": null,
+      "bleed": true,
+      "box": {
+        "x": 0,
+        "y": 0.0618,
+        "w": 1,
+        "h": 0.7267
+      },
+      "px": {
+        "x": 0,
+        "y": 114,
+        "w": 853,
+        "h": 1340
+      },
+      "aspect": 0.6366,
+      "palette": [
+        {
+          "hex": "#e2d2c5",
+          "coverage": 0.5871
+        },
+        {
+          "hex": "#f5f1ea",
+          "coverage": 0.2783
+        },
+        {
+          "hex": "#c8afa1",
+          "coverage": 0.111
+        },
+        {
+          "hex": "#272524",
+          "coverage": 0.0158
+        },
+        {
+          "hex": "#a49d9a",
+          "coverage": 0.0078
+        }
+      ],
+      "detail": {
+        "energy": 17.2697
+      },
+      "medium": "raster",
+      "plate": "assets/plates/campaign.png",
+      "text": null
+    },
+    {
+      "id": "headline",
+      "kind": "text",
+      "note": "Swiss skincare, refined to the essential. Three-line high-contrast serif lead heading.",
+      "grid": null,
+      "box": {
+        "x": 0.0832,
+        "y": 0.1394,
+        "w": 0.5944,
+        "h": 0.1367
+      },
+      "px": {
+        "x": 71,
+        "y": 257,
+        "w": 507,
+        "h": 252
+      },
+      "aspect": 2.0119,
+      "palette": [
+        {
+          "hex": "#efe5db",
+          "coverage": 0.7989
+        },
+        {
+          "hex": "#282726",
+          "coverage": 0.1113
+        },
+        {
+          "hex": "#dec2b3",
+          "coverage": 0.058
+        },
+        {
+          "hex": "#575451",
+          "coverage": 0.0164
+        },
+        {
+          "hex": "#afaaa4",
+          "coverage": 0.0154
+        }
+      ],
+      "detail": {
+        "energy": 46.6603
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": true,
+        "rules": false
+      },
+      "type": {
+        "comp": {
+          "lines": 3,
+          "glyphs": 31,
+          "capHeightPx": 64.8,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.5519,
+          "advTall": 0.2773,
+          "advX": 0.5568,
+          "gap": 0.0464,
+          "xRatio": 0.6342,
+          "stemW": 0.111,
+          "contrast": 2.4011,
+          "serif": 1.2363,
+          "densTall": 0.3958,
+          "densX": 0.3501,
+          "weight": 0.3958
+        },
+        "widthClass": "condensed",
+        "weightClass": "regular",
+        "chosen": {
+          "family": "Unna",
+          "weight": 400,
+          "fontSizePx": 89,
+          "source": "index",
+          "fp": {
+            "lines": 1,
+            "glyphs": 13,
+            "capHeightPx": 64,
+            "inkIsDark": true,
+            "allCaps": false,
+            "advance": 0.5156,
+            "advTall": 0.25,
+            "advX": 0.5156,
+            "gap": 0.0781,
+            "xRatio": 0.5781,
+            "stemW": 0.1201,
+            "contrast": 2.2643,
+            "serif": 1.07,
+            "densTall": 0.4087,
+            "densX": 0.4176,
+            "weight": 0.4087
+          },
+          "stamp": "30d55c018e23"
+        }
+      }
+    },
+    {
+      "id": "proposition",
+      "kind": "text",
+      "note": "Four formulas. One complete ritual. Single concise sans line.",
+      "grid": null,
+      "box": {
+        "x": 0.0844,
+        "y": 0.2977,
+        "w": 0.8253,
+        "h": 0.0201
+      },
+      "px": {
+        "x": 72,
+        "y": 549,
+        "w": 704,
+        "h": 37
+      },
+      "aspect": 19.027,
+      "palette": [
+        {
+          "hex": "#f0e4da",
+          "coverage": 0.5541
+        },
+        {
+          "hex": "#cbb5a5",
+          "coverage": 0.328
+        },
+        {
+          "hex": "#30302f",
+          "coverage": 0.0634
+        },
+        {
+          "hex": "#8d8680",
+          "coverage": 0.0342
+        },
+        {
+          "hex": "#615b56",
+          "coverage": 0.0204
+        }
+      ],
+      "detail": {
+        "energy": 52.3974
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": true,
+        "rules": false
+      },
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 26,
+          "capHeightPx": 23.5,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.6056,
+          "advTall": 0.4143,
+          "advX": 0.6268,
+          "gap": 0.1487,
+          "xRatio": 0.7149,
+          "stemW": 0.1186,
+          "contrast": 1.093,
+          "serif": 0.7981,
+          "densTall": 0.4022,
+          "densX": 0.4478,
+          "weight": 0.4022
+        },
+        "widthClass": "normal",
+        "weightClass": "regular"
+      }
+    },
+    {
+      "id": "cta",
+      "kind": "control",
+      "note": "Thin graphite outlined Discover the ritual shopping action, legible centered label.",
+      "grid": null,
+      "box": {
+        "x": 0.1688,
+        "y": 0.6947,
+        "w": 0.6624,
+        "h": 0.0515
+      },
+      "px": {
+        "x": 144,
+        "y": 1281,
+        "w": 565,
+        "h": 95
+      },
+      "aspect": 5.9474,
+      "palette": [
+        {
+          "hex": "#f7f6e8",
+          "coverage": 0.9448
+        },
+        {
+          "hex": "#9f9b97",
+          "coverage": 0.0209
+        },
+        {
+          "hex": "#d7c8bf",
+          "coverage": 0.0179
+        },
+        {
+          "hex": "#212020",
+          "coverage": 0.011
+        },
+        {
+          "hex": "#666663",
+          "coverage": 0.0053
+        }
+      ],
+      "detail": {
+        "energy": 16.5943
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": true,
+        "rules": false
+      }
+    },
+    {
+      "id": "collection-title",
+      "kind": "text",
+      "note": "The Collection serif section heading on pearl surface.",
+      "grid": null,
+      "box": {
+        "x": 0.238,
+        "y": 0.8216,
+        "w": 0.5322,
+        "h": 0.0418
+      },
+      "px": {
+        "x": 203,
+        "y": 1515,
+        "w": 454,
+        "h": 77
+      },
+      "aspect": 5.8961,
+      "palette": [
+        {
+          "hex": "#f7f3e9",
+          "coverage": 0.829
+        },
+        {
+          "hex": "#242322",
+          "coverage": 0.1105
+        },
+        {
+          "hex": "#73706d",
+          "coverage": 0.0294
+        },
+        {
+          "hex": "#b1adaa",
+          "coverage": 0.0223
+        },
+        {
+          "hex": "#46433b",
+          "coverage": 0.0089
+        }
+      ],
+      "detail": {
+        "energy": 52.0886
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "surface": {
+        "flat": false,
+        "rules": false
+      },
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 14,
+          "capHeightPx": 53.2,
+          "inkIsDark": true,
+          "allCaps": false,
+          "advance": 0.517,
+          "advTall": 0.2444,
+          "advX": 0.5828,
+          "gap": 0.0752,
+          "xRatio": 0.6332,
+          "stemW": 0.1154,
+          "contrast": 2.5403,
+          "serif": 1.2599,
+          "densTall": 0.4844,
+          "densX": 0.3384,
+          "weight": 0.4844
+        },
+        "widthClass": "condensed",
+        "weightClass": "medium"
+      }
+    },
+    {
+      "id": "collection-object-a",
+      "kind": "image",
+      "note": "First collection packshot glimpse; shipping uses real approved cleanser packaging.",
+      "grid": null,
+      "bleed": true,
+      "box": {
+        "x": 0.1055,
+        "y": 0.8818,
+        "w": 0.1547,
+        "h": 0.1182
+      },
+      "px": {
+        "x": 90,
+        "y": 1626,
+        "w": 132,
+        "h": 218
+      },
+      "aspect": 0.6055,
+      "palette": [
+        {
+          "hex": "#f4f1ec",
+          "coverage": 0.4118
+        },
+        {
+          "hex": "#d7ccc4",
+          "coverage": 0.3386
+        },
+        {
+          "hex": "#a2958c",
+          "coverage": 0.1616
+        },
+        {
+          "hex": "#807571",
+          "coverage": 0.0591
+        },
+        {
+          "hex": "#080808",
+          "coverage": 0.0289
+        }
+      ],
+      "detail": {
+        "energy": 9.8981
+      },
+      "medium": "raster",
+      "plate": "assets/plates/collection-object-a.png",
+      "text": null
+    },
+    {
+      "id": "collection-object-b",
+      "kind": "image",
+      "note": "Second collection object glimpse; shipping preserves real approved product packaging.",
+      "grid": null,
+      "bleed": true,
+      "box": {
+        "x": 0.3693,
+        "y": 0.9295,
+        "w": 0.3107,
+        "h": 0.0705
+      },
+      "px": {
+        "x": 315,
+        "y": 1714,
+        "w": 265,
+        "h": 130
+      },
+      "aspect": 2.0385,
+      "palette": [
+        {
+          "hex": "#f5f3ec",
+          "coverage": 0.5471
+        },
+        {
+          "hex": "#cabfb9",
+          "coverage": 0.2105
+        },
+        {
+          "hex": "#978982",
+          "coverage": 0.178
+        },
+        {
+          "hex": "#0d0b0a",
+          "coverage": 0.0388
+        },
+        {
+          "hex": "#6c6864",
+          "coverage": 0.0257
+        }
+      ],
+      "detail": {
+        "energy": 16.5786
+      },
+      "medium": "raster",
+      "plate": "assets/plates/collection-object-b.png",
+      "text": null
+    },
+    {
+      "id": "collection-object-c",
+      "kind": "image",
+      "note": "Third collection object glimpse; generated comp packaging is illustrative only; real four formulas authoritative.",
+      "grid": null,
+      "bleed": true,
+      "box": {
+        "x": 0.6987,
+        "y": 0.8883,
+        "w": 0.3013,
+        "h": 0.1117
+      },
+      "px": {
+        "x": 596,
+        "y": 1638,
+        "w": 257,
+        "h": 206
+      },
+      "aspect": 1.2476,
+      "palette": [
+        {
+          "hex": "#f1eee4",
+          "coverage": 0.9038
+        },
+        {
+          "hex": "#d5c9c5",
+          "coverage": 0.0718
+        },
+        {
+          "hex": "#918f8d",
+          "coverage": 0.0243
+        }
+      ],
+      "detail": {
+        "energy": 7.0396
+      },
+      "medium": "raster",
+      "plate": "assets/plates/collection-object-c.png",
+      "text": null
+    }
+  ],
+  "compSha256": "8803f25fdd9d3d6420326ccaed2c917990b1566d08cd09f2b66b662b58eb3fc1",
+  "regionsSource": {
+    "path": ".impeccable/mocks/regions.json",
+    "sha256": "88c9f6c49153ec41cebf93f509ced9a248a5e2ecc0d456455a4c26fc71343b6a"
+  }
+}

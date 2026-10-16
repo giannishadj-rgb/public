@@ -36,3 +36,18 @@ npm.cmd run test:update-snapshots
 ```
 
 In VS Code, install/enable the recommended `ms-playwright.playwright` extension so these scenarios appear in the Testing/Test Explorer view.
+
+## iPhone WebKit smoke checks
+
+The `mobile-webkit` project uses the iPhone 13 preset and runs the 38 route,
+navigation, commerce and accessibility scenarios in files 01, 02, 03 and 06.
+It does not create new visual-regression baselines. Start Local WP, then run:
+
+```powershell
+npx.cmd playwright install webkit
+npx.cmd playwright test --project=mobile-webkit
+```
+
+This is WebKit engine coverage on Windows, not a physical iPhone Safari check.
+The October 2026 redesign was checked with these focused suites; the entire
+repository suite and historical visual baselines were not revalidated.

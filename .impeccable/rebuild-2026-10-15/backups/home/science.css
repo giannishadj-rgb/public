@@ -1,0 +1,190 @@
+/* hx/science.css — 2026-10-14 world-class rebuild layer (round 2 revision, 15 Oct).
+   Section 04 · Swiss science (template-parts/home-2026/trust.php), prefix hxs-.
+   Pearl-white ground. The three verbs are the statement, set large under one full-width
+   hairline measuring scale (opens left→right via the system mask-x reveal, a clip-path).
+   The visual anchor: each instrument-measured figure stands beside its own product (the
+   owner's packshot, unaltered, transparent), so every number is visibly tied to its
+   formula. The self-reported figure is deliberately smaller and has no product image.
+   Every rule in the section spans the full content width.
+   Tokens and motion API: hx/system.css + assets/js/hx-motion.js. */
+
+.hxs{
+	position:relative;
+	background:var(--hx-white);
+	color:var(--hx-text);
+	padding-block:var(--hx-section-sm);
+	overflow-x:clip;
+}
+
+/* ─── The scale: one hairline, one tick per verb (≥900px) ───────── */
+.hxs__scale{display:none}
+
+/* ─── Verbs ──────────────────────────────────────────────────────── */
+.hxs__pillars{
+	display:grid;
+	grid-template-columns:1fr;
+	gap:var(--hx-s-6);
+	margin-top:var(--hx-s-5);
+}
+.hxs__pillar{min-width:0}
+.hxs__verb{color:var(--hx-ink)}
+.hxs__text{margin-top:var(--hx-s-3);max-width:26em}
+.hxs__actives{margin-top:var(--hx-s-2)}
+.hxs__active{white-space:nowrap}
+
+/* ─── Proof: measured results ────────────────────────────────────── */
+.hxs__proof{
+	margin-top:var(--hx-s-8);
+	padding-top:var(--hx-s-6);
+	border-top:1px solid var(--hx-line);
+}
+.hxs__proof-title{
+	font-family:var(--hx-serif);
+	font-size:var(--hx-fs-title);
+	font-weight:400;
+	line-height:var(--hx-lh-title);
+	letter-spacing:var(--hx-tr-title);
+	color:var(--hx-ink);
+	text-wrap:balance;
+}
+.hxs__proof-note{margin-top:var(--hx-s-2);max-width:26em}
+
+/* phones: two figures side by side; subgrid keeps product, product name, numeral,
+   finding and method on shared rows even when a name wraps */
+.hxs__results{
+	display:grid;
+	grid-template-columns:repeat(2,minmax(0,1fr));
+	column-gap:var(--hx-s-4);
+	row-gap:var(--hx-s-6);
+	margin-top:var(--hx-s-6);
+}
+.hxs__result{
+	display:grid;
+	grid-row:span 5;
+	grid-template-rows:subgrid;
+	row-gap:0;
+	align-content:start;
+	min-width:0;
+}
+.hxs__object{
+	display:block;
+	width:88px;
+	margin:0 0 var(--hx-s-2) -21px; /* the bottle sits at 27–68% of its frame: align it to the text edge */
+}
+.hxs__object img{display:block;width:100%;height:auto}
+.hxs__product{
+	align-self:start;
+	font-family:var(--hx-sans);
+	font-size:var(--hx-fs-detail);
+	font-weight:500;
+	line-height:var(--hx-lh-detail);
+	letter-spacing:.02em;
+	color:var(--hx-ink);
+}
+.hxs__fig-n{margin-top:var(--hx-s-3);color:var(--hx-ink);white-space:nowrap}
+.hxs__pct{display:inline-block;margin-left:.05em;font-size:.46em;letter-spacing:0;vertical-align:.92em;line-height:1}
+.hxs__finding{
+	margin-top:var(--hx-s-3);
+	font-family:var(--hx-serif);
+	font-size:1.25rem;
+	font-weight:400;
+	font-style:normal;
+	line-height:1.25;
+	letter-spacing:var(--hx-tr-title);
+	color:var(--hx-ink);
+}
+.hxs__method{margin-top:var(--hx-s-2);max-width:21em}
+.hxs__method span{white-space:nowrap}
+.hxs__method .hxs__kind{display:block;color:var(--hx-accent);font-weight:500;letter-spacing:0}
+
+/* secondary row: smaller, softer numeral beside its product, finding and method */
+.hxs__result--reported{
+	grid-column:1/-1;
+	grid-row:auto;
+	grid-template-rows:none;
+	grid-template-columns:auto minmax(0,1fr);
+	grid-template-areas:"n p" "n f" "n m";
+	column-gap:var(--hx-s-5);
+	padding-top:var(--hx-s-5);
+	border-top:1px solid var(--hx-line);
+}
+.hxs__fig-n--sm{
+	grid-area:n;
+	margin-top:0;
+	padding-top:.06em;
+	font-family:var(--hx-serif);
+	font-size:clamp(2.5rem,2.05rem + 1.6vw,3.5rem);
+	font-weight:300;
+	line-height:var(--hx-lh-numeral);
+	letter-spacing:var(--hx-tr-numeral);
+	font-variant-numeric:lining-nums proportional-nums;
+	color:var(--hx-text);
+}
+.hxs__result--reported .hxs__product{grid-area:p;align-self:start}
+.hxs__result--reported .hxs__finding{grid-area:f;margin-top:var(--hx-s-1);font-size:var(--hx-fs-step)}
+.hxs__result--reported .hxs__method{grid-area:m;max-width:none}
+.hxs__result--reported .hxs__method .hxs__kind{display:inline;margin-right:.5em}
+.hxs__more{margin-top:var(--hx-s-4)}
+
+@media (max-width:359.98px){
+	.hxs__results{column-gap:var(--hx-s-3)}
+	.hxs__object{width:72px;margin-left:-17px}
+}
+
+/* ─── ≥700px: verb beside its sentence; each figure beside its product ── */
+@media (min-width:700px){
+	.hxs__pillars{gap:var(--hx-s-6);margin-top:var(--hx-s-6)}
+	.hxs__pillar{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);column-gap:var(--hx-gap);align-items:baseline}
+	.hxs__verb{grid-row:1/3}
+	.hxs__text{margin-top:0}
+
+	.hxs__proof-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:var(--hx-s-2) var(--hx-s-6)}
+	.hxs__proof-note{margin-top:0}
+	.hxs__results{column-gap:clamp(28px,3.4vw,64px);row-gap:var(--hx-s-7);margin-top:var(--hx-s-7)}
+	.hxs__result{
+		grid-row:auto;
+		grid-template-rows:none;
+		grid-template-columns:auto minmax(0,1fr);
+		grid-template-areas:"o p" "o n" "o f" "o m";
+		column-gap:var(--hx-s-5);
+		align-content:center;
+	}
+	.hxs__object{grid-area:o;align-self:center;width:clamp(116px,10.4vw,150px);margin:0 calc(clamp(116px,10.4vw,150px) * -.2) 0 calc(clamp(116px,10.4vw,150px) * -.24)}
+	.hxs__result > .hxs__product{grid-area:p;align-self:end}
+	.hxs__result:not(.hxs__result--reported){column-gap:var(--hx-s-6)}
+	.hxs__result > .hxs__fig-n{grid-area:n}
+	.hxs__result > .hxs__finding{grid-area:f}
+	.hxs__result > .hxs__method{grid-area:m}
+	.hxs__result--reported{grid-template-columns:auto minmax(0,1fr);grid-template-areas:"n p" "n f" "n m"}
+	.hxs__result--reported > .hxs__fig-n--sm{grid-area:n}
+	.hxs__more{margin-top:var(--hx-s-5)}
+}
+
+/* ─── ≥900px: the three verbs read as one line across the row ───── */
+@media (min-width:900px){
+	.hxs__scale{
+		display:grid;
+		grid-template-columns:repeat(3,minmax(0,1fr));
+		column-gap:clamp(28px,3.4vw,72px);
+		position:relative;
+		width:100%;
+		margin-top:var(--hx-s-7);
+		border-top:1px solid var(--hx-line-strong);
+	}
+	.hxs__scale span{position:relative;height:0}
+	.hxs__scale span::before{content:"";position:absolute;left:0;top:-1px;width:1px;height:10px;background:var(--hx-chrome)}
+	.hxs__scale::after{content:"";position:absolute;right:0;top:-1px;width:1px;height:10px;background:var(--hx-chrome)}
+	.hxs__pillars{grid-template-columns:repeat(3,minmax(0,1fr));column-gap:clamp(28px,3.4vw,72px);margin-top:var(--hx-s-6)}
+	.hxs__pillar{display:block}
+	.hxs__text{margin-top:var(--hx-s-4)}
+	.hxs__actives{margin-top:var(--hx-s-3)}
+	.hxs__proof{margin-top:var(--hx-s-9);padding-top:var(--hx-s-7)}
+}
+@media (min-width:1100px){
+	.hxs__finding{font-size:1.375rem}
+	.hxs__result--reported .hxs__finding{font-size:1.25rem}
+	.hxs__result--reported{padding-left:0}
+}
+
+/* the scale opens left→right (system mask-x reveal is a clip-path: no fragments) */
+html.hx-motion .hxs__scale[data-hx-reveal="mask-x"]{transition-duration:1600ms}

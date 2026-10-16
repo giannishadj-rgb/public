@@ -39,34 +39,35 @@ test.describe('Homepage editorial typography', () => {
       // The four section headings share one size, weight and case; the hero and
       // The Ritual are deliberate editorial exceptions.
       const heading = px(w >= 1100 ? 48 : w >= 700 ? 40 : 34);
-      for (const el of await page.locator('.h26c__title, .h26-caviar__title, .h26e__title, .h26-provenance__title').all()) {
+      for (const el of await page.locator('.h26-caviar__title, .h26e__title, .h26-provenance__title').all()) {
         await expect(el).toHaveCSS('font-size', heading);
         await expect(el).toHaveCSS('font-weight', '300');
         await expect(el).toHaveCSS('text-transform', 'none');
       }
-      const title = px(w >= 700 ? 22 : 20);
-      for (const el of await page.locator('.h26c__name, .h26r__verb').all()) {
-        await expect(el).toHaveCSS('font-size', title);
+      // The Collection is set to the owner's Dior reference (13 Oct 2026): a smaller
+      // Cormorant heading and a 14px Inter listing (name 500, description, price).
+      await expect(page.locator('.h26c__title')).toHaveCSS('font-size', px(w >= 1100 ? 42 : w >= 700 ? 38 : 32));
+      await expect(page.locator('.h26c__title')).toHaveCSS('font-family', /Cormorant/);
+      for (const el of await page.locator('.h26c__name, .h26c__benefit, .h26c__price').all()) {
+        await expect(el).toHaveCSS('font-family', /Inter/);
+        await expect(el).toHaveCSS('font-size', '14px');
       }
-      const numeral = px(w >= 700 ? 40 : 32);
-      for (const el of await page.locator('.h26r__num').all()) await expect(el).toHaveCSS('font-size', numeral);
       const figure = px(w >= 1100 ? 56 : 48);
       for (const el of await page.locator('.h26e__fig').all()) await expect(el).toHaveCSS('font-size', figure);
 
       // Reading copy never drops below 16px; purchase details never below 15px.
-      const reading = page.locator('.h26-hero__lines, .h26c__lede, .h26e__lede, .h26c__benefit, .h26v__lede, .h26v__fact-v, .h26e__panel, .h26e__method, .h26h__lede, .h26h__fact dd, .h26r__lede, .h26r__how');
+      const reading = page.locator('.h26-hero__lines, .h26c__lede, .h26e__lede, .h26v__lede, .h26v__fact-v, .h26e__panel, .h26e__method, .h26h__lede, .h26r__lede, .h26r__how');
       for (const p of await reading.all()) {
         await expect(p).toHaveCSS('font-family', /Inter/);
         await expect(p).toHaveCSS('font-size', '16px');
       }
-      for (const p of await page.locator('.h26c__price, .h26r__fact').all()) {
+      for (const p of await page.locator('.h26r__fact').all()) {
         await expect(p).toHaveCSS('font-size', '15px');
       }
-      for (const btn of await page.locator('.h26c__btn').all()) await expect(btn).toHaveCSS('min-height', '44px');
       await expect(page.locator('.cos-nl-input')).toHaveCSS('font-size', '16px');
 
       // Nothing clips its own text, and the page never scrolls sideways.
-      const clipped = await page.locator('main h1, main h2, main h3, main p, .h26-btn, .h26-link, .h26c__btn').evaluateAll(nodes =>
+      const clipped = await page.locator('main h1, main h2, main h3, main p, .h26-btn, .h26-link, .h26c__name').evaluateAll(nodes =>
         nodes.filter(node => {
           const r = node.getBoundingClientRect();
           return r.width > 1 && r.height > 1 && node.scrollWidth > node.clientWidth + 2;
@@ -74,9 +75,11 @@ test.describe('Homepage editorial typography', () => {
       );
       expect(clipped).toEqual([]);
 
-      // Collection: prices and buttons line up across the four cards in each row.
-      const btnTops = await page.locator('.h26c__btn').evaluateAll(els => els.map(e => Math.round(e.getBoundingClientRect().top)));
+      // Collection: prices line up across the four products in each row, and each
+      // whole tile is a comfortable target.
+      const btnTops = await page.locator('.h26c__price').evaluateAll(els => els.map(e => Math.round(e.getBoundingClientRect().top)));
       expect(btnTops.length).toBe(4);
+      for (const h of await page.locator('.h26c__item').evaluateAll(els => els.map(e => e.getBoundingClientRect().height))) expect(h).toBeGreaterThanOrEqual(44);
       const perRow = w >= 1100 ? [btnTops] : [btnTops.slice(0, 2), btnTops.slice(2)];
       for (const row of perRow) expect(Math.max(...row) - Math.min(...row)).toBeLessThanOrEqual(2);
       await expectNoHorizontalOverflow(page);

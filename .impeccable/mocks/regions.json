@@ -1,0 +1,129 @@
+{
+  "regions": [
+    {
+      "id": "menu",
+      "kind": "control",
+      "pixelBox": {
+        "x": 39,
+        "y": 40,
+        "w": 48,
+        "h": 39
+      },
+      "note": "Compact three-line menu icon; semantic button, no raster text."
+    },
+    {
+      "id": "wordmark",
+      "kind": "image",
+      "pixelBox": {
+        "x": 324,
+        "y": 25,
+        "w": 207,
+        "h": 68
+      },
+      "note": "Official silver Caviar of Switzerland wordmark and red Swiss cross; exact supplied mark."
+    },
+    {
+      "id": "bag",
+      "kind": "control",
+      "pixelBox": {
+        "x": 771,
+        "y": 34,
+        "w": 43,
+        "h": 47
+      },
+      "note": "Fine outlined shopping bag icon as semantic link."
+    },
+    {
+      "id": "campaign",
+      "kind": "image",
+      "pixelBox": {
+        "x": 0,
+        "y": 114,
+        "w": 853,
+        "h": 1340
+      },
+      "bleed": true,
+      "note": "Open white 24h Regeneration Cream jar and chrome lid reflected on champagne silk; no UI text in shipping plate."
+    },
+    {
+      "id": "headline",
+      "kind": "text",
+      "pixelBox": {
+        "x": 71,
+        "y": 257,
+        "w": 507,
+        "h": 252
+      },
+      "note": "Swiss skincare, refined to the essential. Three-line high-contrast serif lead heading."
+    },
+    {
+      "id": "proposition",
+      "kind": "text",
+      "pixelBox": {
+        "x": 72,
+        "y": 549,
+        "w": 704,
+        "h": 37
+      },
+      "note": "Four formulas. One complete ritual. Single concise sans line."
+    },
+    {
+      "id": "cta",
+      "kind": "control",
+      "pixelBox": {
+        "x": 144,
+        "y": 1281,
+        "w": 565,
+        "h": 95
+      },
+      "note": "Thin graphite outlined Discover the ritual shopping action, legible centered label."
+    },
+    {
+      "id": "collection-title",
+      "kind": "text",
+      "pixelBox": {
+        "x": 203,
+        "y": 1515,
+        "w": 454,
+        "h": 77
+      },
+      "note": "The Collection serif section heading on pearl surface."
+    },
+    {
+      "id": "collection-object-a",
+      "kind": "image",
+      "pixelBox": {
+        "x": 90,
+        "y": 1626,
+        "w": 132,
+        "h": 218
+      },
+      "bleed": true,
+      "note": "First collection packshot glimpse; shipping uses real approved cleanser packaging."
+    },
+    {
+      "id": "collection-object-b",
+      "kind": "image",
+      "pixelBox": {
+        "x": 315,
+        "y": 1714,
+        "w": 265,
+        "h": 130
+      },
+      "bleed": true,
+      "note": "Second collection object glimpse; shipping preserves real approved product packaging."
+    },
+    {
+      "id": "collection-object-c",
+      "kind": "image",
+      "pixelBox": {
+        "x": 596,
+        "y": 1638,
+        "w": 257,
+        "h": 206
+      },
+      "bleed": true,
+      "note": "Third collection object glimpse; generated comp packaging is illustrative only; real four formulas authoritative."
+    }
+  ]
+}

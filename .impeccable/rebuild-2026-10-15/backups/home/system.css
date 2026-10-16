@@ -1,0 +1,424 @@
+/* ==========================================================================
+   hx/system.css — Caviar of Switzerland design system (homepage rebuild, 14 Oct 2026)
+   Owner: system agent. Section stylesheets (hero … closing) load AFTER this file.
+
+   HOW TO USE (read this before styling a section)
+   ------------------------------------------------
+   • Every token is a custom property on body.cos-h26, prefix --hx-. Use the tokens,
+     never raw hex/px, so the whole page keeps one voice.
+   • Utilities (prefix .hx-) are opt-in classes. They never touch legacy .h26-* markup.
+   • Light grounds are the default. Put .hx-on-dark on a dark/photo-shadow container and
+     every utility inside (type colours, links, buttons, focus ring) flips automatically
+     via --hx-fg / --hx-fg-2 / --hx-fg-3 / --hx-line / --hx-focus-color.
+   • Fonts: Cormorant Garamond (variable 300–700 upright + 300 italic, self-hosted, loaded
+     by home-2026.css + style.css) for the display voice; Inter (variable 300–600,
+     self-hosted, style.css) for text. No other faces. Italic exists ONLY at weight 300.
+
+   ── COLOUR ─────────────────────────────────────────────────────────────────────
+   Grounds (light → deeper)                  Ink contrast (measured, WCAG 2.x)
+   --hx-white       #FBFAF7  pearl white      ink 16.2 · text 10.7 · muted 6.4 · accent 6.9
+   --hx-pearl       #F2F2EF  site canvas      ink 15.0 · text 10.0 · muted 6.0 · accent 6.4
+                             (= header/--cos-pearl; cool, owner-approved)
+   --hx-ivory       #F3EFE7  warm ivory       ink 14.7 · text  9.8 · muted 5.8 · accent 6.2
+   --hx-champagne   #E8E0D2  soft champagne   ink 12.9 · text  8.6 · muted 5.1 · accent 5.5
+   --hx-stone       #DDD8CF  stone            ink 11.9 · text  7.9 · muted 4.7 · accent 5.0
+   --hx-silver      #D4D7DA  silver ground    ink 11.7 · text  7.8 · muted 4.6 · accent 4.9
+   Metals (DECORATIVE ONLY — hairlines, rules, numerals ≥40px; never body text)
+   --hx-chrome      #A7ACB2  chrome           --hx-chrome-2 #C6CACE light chrome
+   --hx-champagne-2 #CDBFA8  deeper champagne (rules / swatches)
+   Inks
+   --hx-ink         #1C1D1F  graphite ink — headings, buttons, numerals
+   --hx-text        #3A3B3D  body copy
+   --hx-muted       #5C5C5A  secondary copy, captions, meta (≥4.5:1 on every light ground)
+   --hx-accent      #625646  warm bronze-graphite — the ONE warm text accent (labels,
+                             step numbers). ≥4.5:1 on every light ground. Use sparingly.
+   Restrained dark (only where a photo or the closing needs it)
+   --hx-night       #17181A  near-black graphite (never pure #000)
+   --hx-night-2     #232427  raised dark surface
+   --hx-on-dark     #F2EFE8  text on dark (15.5:1 on night)
+   --hx-on-dark-2   #BDB8AE  secondary on dark (9.0:1 on night, 7.2 on night-2)
+   Lines
+   --hx-line        hairline on light (ink @14%) · --hx-line-strong (ink @28%)
+   --hx-line-dark   hairline on dark (ivory @20%)
+   Semantic (flip under .hx-on-dark)
+   --hx-fg / --hx-fg-2 / --hx-fg-3   headline / body / muted colour of the current context
+   --hx-bg                            current ground (for buttons that knock out)
+   Focus: --hx-focus-color, --hx-focus-width (2px), --hx-focus-offset (4px)
+
+   ── TYPE ───────────────────────────────────────────────────────────────────────
+   Families: --hx-serif (Cormorant Garamond), --hx-sans (Inter)
+   Role        token(size)          390px → 1440px   face / weight / lh / tracking
+   display     --hx-fs-display      44 → 88px        serif 300 · 1.0  · -0.018em   (hero, closing)
+   heading     --hx-fs-heading      34 → 60px        serif 300 · 1.06 · -0.012em   (section titles)
+   title       --hx-fs-title        24 → 30px        serif 400 · 1.18 · -0.004em   (product names, cards)
+   lead        --hx-fs-lead         17 → 19px        sans  300 · 1.6  · 0          (intro paragraph)
+   body        --hx-fs-body         16px             sans  400 · 1.7  · 0          (reading copy)
+   detail      --hx-fs-detail       14px             sans  400 · 1.55 · 0.005em    (captions, meta, price)
+   label       --hx-fs-label        11.5px           sans  500 · 1.4  · 0.2em UPPER (eyebrows; ≤1 per section)
+   numeral     --hx-fs-numeral      56 → 104px       serif 300 · 0.9  · -0.02em lnum (figures: +47%)
+   step        --hx-fs-step         18px             serif 400 · 1    · 0.06em lnum (step "01")
+   Line-height / tracking tokens: --hx-lh-*, --hx-tr-* (same role names).
+
+   ── SPACE & LAYOUT ─────────────────────────────────────────────────────────────
+   --hx-s-1 … --hx-s-10   4 8 12 16 24 32 48 64 96 128 px (fixed rhythm steps)
+   --hx-margin            page side margin: 24px (phone) → 80px (≥1540px); shared by all sections
+   --hx-gap               grid gutter: 16px → 32px
+   --hx-section           section block padding: 96px (phone) → 192px (desktop)
+   --hx-section-sm        tighter section padding: 72px → 128px
+   --hx-stack             title→copy gap: 20px → 28px
+   --hx-max               content max width 1440px · --hx-max-wide 1760px (full-bleed frames)
+   --hx-measure           reading measure 34em · --hx-measure-narrow 24em
+   --hx-radius            0 (Swiss precision) · --hx-radius-hair 1px (only for focus/tiny tags)
+
+   ── MOTION ─────────────────────────────────────────────────────────────────────
+   --hx-ease          cubic-bezier(.19,1,.22,1)   long, silky deceleration (reveals)
+   --hx-ease-soft     cubic-bezier(.33,.0,.2,1)   UI hover / colour
+   --hx-ease-inout    cubic-bezier(.65,0,.35,1)   symmetric (curtains, crossfades)
+   --hx-dur-ui 320ms · --hx-dur-reveal 1200ms · --hx-dur-image 1800ms · --hx-stagger 120ms
+   --hx-rise 28px (fade-rise distance)
+
+   ── UTILITIES ──────────────────────────────────────────────────────────────────
+   .hx-display .hx-heading .hx-title .hx-lead .hx-body .hx-detail .hx-label
+   .hx-numeral .hx-step       — type roles above (colour from context)
+     <h2 class="hx-heading">Four formulas. <em>One ritual.</em></h2>   (<em> = italic 300)
+   .hx-muted .hx-accent       — colour modifiers
+   .hx-wrap                   — centred container: max --hx-max, side padding --hx-margin
+   .hx-section                — block padding --hx-section (add .hx-section--sm for tighter)
+   .hx-measure                — caps a text block at the reading measure
+   .hx-rule                   — 1px hairline (<hr class="hx-rule"> or a div)
+   .hx-on-dark                — flips context colours to the dark set (does NOT paint a bg)
+   .hx-link                   — refined text link: resting hairline, hover draws a full
+                                 ink hairline left→right (no jump); ≥44px tap height
+     <a class="hx-link" href="…">Discover the science<span class="hx-arrow" aria-hidden="true"></span></a>
+   .hx-btn                    — THE primary button: graphite, ivory label, 52px tall,
+                                 inner champagne frame drawn on hover. .hx-btn--ivory for
+                                 dark/photo grounds. .hx-btn--block = full width (phones).
+     <a class="hx-btn" href="/products/the-complete-ritual/">Shop the Complete Ritual<span class="hx-arrow" aria-hidden="true"></span></a>
+   .hx-arrow                  — 18px hairline arrow drawn in CSS; slides 4px on hover
+   .hx-sr                     — visually hidden, available to screen readers
+   .hx-frame                  — image frame: overflow clip + block img/picture (use with
+                                 data-hx-reveal="mask"/"settle" and data-hx-drift)
+   Load-time motion (CSS only, no JS, for content visible at first paint e.g. the hero):
+   .hx-load-fade .hx-load-rise .hx-load-settle (+ style="--hx-i:2" for stagger)
+
+   Scroll reveals & drift live in assets/js/hx-motion.js — see its header for the API.
+   ========================================================================== */
+
+body.cos-h26{
+	/* colour — grounds */
+	--hx-white:#FBFAF7;
+	--hx-pearl:#F2F2EF;
+	--hx-ivory:#F3EFE7;
+	--hx-champagne:#E8E0D2;
+	--hx-stone:#DDD8CF;
+	--hx-silver:#D4D7DA;
+	/* colour — metals (decorative only) */
+	--hx-chrome:#A7ACB2;
+	--hx-chrome-2:#C6CACE;
+	--hx-champagne-2:#CDBFA8;
+	/* colour — inks */
+	--hx-ink:#1C1D1F;
+	--hx-text:#3A3B3D;
+	--hx-muted:#5C5C5A;
+	--hx-accent:#625646;
+	/* colour — restrained dark */
+	--hx-night:#17181A;
+	--hx-night-2:#232427;
+	--hx-on-dark:#F2EFE8;
+	--hx-on-dark-2:#BDB8AE;
+	/* lines */
+	--hx-line:rgba(28,29,31,.14);
+	--hx-line-strong:rgba(28,29,31,.28);
+	--hx-line-dark:rgba(242,239,232,.2);
+	/* semantic (light context) */
+	--hx-bg:var(--hx-pearl);
+	--hx-fg:var(--hx-ink);
+	--hx-fg-2:var(--hx-text);
+	--hx-fg-3:var(--hx-muted);
+	--hx-fg-accent:var(--hx-accent);
+	--hx-rule:var(--hx-line);
+	--hx-focus-color:var(--hx-ink);
+	--hx-focus-width:2px;
+	--hx-focus-offset:4px;
+	--hx-selection-bg:#E3D8C5;
+	--hx-selection-fg:var(--hx-ink);
+
+	/* type — families */
+	--hx-serif:'Cormorant Garamond','EB Garamond',Georgia,'Times New Roman',serif;
+	--hx-sans:'Inter',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+	/* type — sizes (fluid between 390px and 1440px) */
+	--hx-fs-display:clamp(2.75rem,1.73rem + 4.19vw,5.5rem);
+	--hx-fs-heading:clamp(2.125rem,1.52rem + 2.48vw,3.75rem);
+	--hx-fs-title:clamp(1.5rem,1.36rem + .57vw,1.875rem);
+	--hx-fs-lead:clamp(1.0625rem,1.016rem + .19vw,1.1875rem);
+	--hx-fs-body:1rem;
+	--hx-fs-detail:.875rem;
+	--hx-fs-label:.71875rem;
+	--hx-fs-numeral:clamp(3.5rem,2.38rem + 4.57vw,6.5rem);
+	--hx-fs-step:1.125rem;
+	/* type — line-heights */
+	--hx-lh-display:1;
+	--hx-lh-heading:1.06;
+	--hx-lh-title:1.18;
+	--hx-lh-lead:1.6;
+	--hx-lh-body:1.7;
+	--hx-lh-detail:1.55;
+	--hx-lh-label:1.4;
+	--hx-lh-numeral:.9;
+	/* type — tracking */
+	--hx-tr-display:-.018em;
+	--hx-tr-heading:-.012em;
+	--hx-tr-title:-.004em;
+	--hx-tr-detail:.005em;
+	--hx-tr-label:.2em;
+	--hx-tr-numeral:-.02em;
+	--hx-tr-step:.06em;
+	--hx-tr-btn:.16em;
+
+	/* space */
+	--hx-s-1:4px;
+	--hx-s-2:8px;
+	--hx-s-3:12px;
+	--hx-s-4:16px;
+	--hx-s-5:24px;
+	--hx-s-6:32px;
+	--hx-s-7:48px;
+	--hx-s-8:64px;
+	--hx-s-9:96px;
+	--hx-s-10:128px;
+	--hx-margin:clamp(24px,5.2vw,80px);
+	--hx-gap:clamp(16px,2.2vw,32px);
+	--hx-section:clamp(96px,6.2rem + 6.5vw,192px);
+	--hx-section-sm:clamp(72px,4rem + 4vw,128px);
+	--hx-stack:clamp(20px,1.1rem + .6vw,28px);
+	/* layout */
+	--hx-max:1440px;
+	--hx-max-wide:1760px;
+	--hx-measure:34em;
+	--hx-measure-narrow:24em;
+	--hx-radius:0;
+	--hx-radius-hair:1px;
+
+	/* motion */
+	--hx-ease:cubic-bezier(.19,1,.22,1);
+	--hx-ease-soft:cubic-bezier(.33,0,.2,1);
+	--hx-ease-inout:cubic-bezier(.65,0,.35,1);
+	--hx-dur-ui:320ms;
+	--hx-dur-reveal:1200ms;
+	--hx-dur-image:1800ms;
+	--hx-stagger:120ms;
+	--hx-rise:28px;
+}
+
+/* Dark context: flips the semantic tokens; paint the background yourself. */
+body.cos-h26 .hx-on-dark{
+	--hx-bg:var(--hx-night);
+	--hx-fg:var(--hx-on-dark);
+	--hx-fg-2:var(--hx-on-dark);
+	--hx-fg-3:var(--hx-on-dark-2);
+	--hx-fg-accent:var(--hx-on-dark-2);
+	--hx-rule:var(--hx-line-dark);
+	--hx-focus-color:var(--hx-on-dark);
+	--hx-selection-bg:#5A5246;
+	--hx-selection-fg:var(--hx-on-dark);
+	color:var(--hx-fg-2);
+}
+
+body.cos-h26 .h26 ::selection{background:var(--hx-selection-bg);color:var(--hx-selection-fg)}
+
+/* ─── Type roles ─────────────────────────────────────────────────── */
+.hx-display,.hx-heading,.hx-title,.hx-numeral,.hx-step{
+	font-family:var(--hx-serif);
+	color:var(--hx-fg);
+	font-style:normal;
+	font-optical-sizing:auto;
+	font-kerning:normal;
+	text-rendering:optimizeLegibility;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+}
+.hx-display{font-size:var(--hx-fs-display);font-weight:300;line-height:var(--hx-lh-display);letter-spacing:var(--hx-tr-display);text-wrap:balance}
+.hx-heading{font-size:var(--hx-fs-heading);font-weight:300;line-height:var(--hx-lh-heading);letter-spacing:var(--hx-tr-heading);text-wrap:balance}
+.hx-title{font-size:var(--hx-fs-title);font-weight:400;line-height:var(--hx-lh-title);letter-spacing:var(--hx-tr-title);text-wrap:balance}
+/* <em> inside serif roles = the house italic (only weight 300 exists in italic) */
+:is(.hx-display,.hx-heading,.hx-title) em{font-style:italic;font-weight:300;letter-spacing:-.005em}
+
+.hx-numeral{font-size:var(--hx-fs-numeral);font-weight:300;line-height:var(--hx-lh-numeral);letter-spacing:var(--hx-tr-numeral);font-variant-numeric:lining-nums proportional-nums;font-feature-settings:"lnum" 1,"pnum" 1}
+.hx-numeral sup,.hx-numeral small{font-size:.42em;letter-spacing:0;vertical-align:.95em;margin-left:.06em;font-weight:400}
+.hx-step{display:inline-block;font-size:var(--hx-fs-step);font-weight:400;line-height:1;letter-spacing:var(--hx-tr-step);font-variant-numeric:lining-nums tabular-nums;font-feature-settings:"lnum" 1,"tnum" 1;color:var(--hx-fg-accent)}
+
+.hx-lead,.hx-body,.hx-detail,.hx-label{font-family:var(--hx-sans);font-style:normal;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.hx-lead{font-size:var(--hx-fs-lead);font-weight:300;line-height:var(--hx-lh-lead);letter-spacing:0;color:var(--hx-fg-2);text-wrap:pretty}
+.hx-body{font-size:var(--hx-fs-body);font-weight:400;line-height:var(--hx-lh-body);letter-spacing:0;color:var(--hx-fg-2);text-wrap:pretty}
+.hx-detail{font-size:var(--hx-fs-detail);font-weight:400;line-height:var(--hx-lh-detail);letter-spacing:var(--hx-tr-detail);color:var(--hx-fg-3);font-variant-numeric:tabular-nums}
+.hx-label{display:block;font-size:var(--hx-fs-label);font-weight:500;line-height:var(--hx-lh-label);letter-spacing:var(--hx-tr-label);text-transform:uppercase;color:var(--hx-fg-accent)}
+.hx-label + .hx-display,.hx-label + .hx-heading{margin-top:var(--hx-stack)}
+
+.hx-muted{color:var(--hx-fg-3)}
+.hx-accent{color:var(--hx-fg-accent)}
+.hx-measure{max-width:var(--hx-measure)}
+.hx-measure--narrow{max-width:var(--hx-measure-narrow)}
+
+/* ─── Layout ─────────────────────────────────────────────────────── */
+.hx-wrap{box-sizing:border-box;width:100%;max-width:calc(var(--hx-max) + 2 * var(--hx-margin));margin-inline:auto;padding-inline:var(--hx-margin)}
+.hx-section{padding-block:var(--hx-section)}
+.hx-section--sm{padding-block:var(--hx-section-sm)}
+.hx-rule{display:block;width:100%;height:0;margin:0;border:0;border-top:1px solid var(--hx-rule)}
+.hx-frame{position:relative;overflow:clip;display:block}
+.hx-frame :where(picture,img){display:block;width:100%;height:100%}
+.hx-frame :where(img){object-fit:cover}
+
+/* ─── Arrow (CSS-drawn, inherits colour) ─────────────────────────── */
+.hx-arrow{position:relative;display:inline-block;flex:none;width:18px;height:9px;margin-left:14px;transition:transform var(--hx-dur-ui) var(--hx-ease-soft)}
+.hx-arrow::before{content:"";position:absolute;left:0;right:1px;top:50%;height:1px;margin-top:-.5px;background:currentColor}
+.hx-arrow::after{content:"";position:absolute;right:1px;top:50%;width:6px;height:6px;border-top:1px solid currentColor;border-right:1px solid currentColor;transform:translateY(-50%) rotate(45deg);transform-origin:center}
+
+/* ─── Link: resting hairline + drawn ink hairline on hover ───────── */
+.hx-link{
+	position:relative;
+	display:inline-flex;
+	align-items:center;
+	min-height:44px;
+	font-family:var(--hx-sans);
+	font-size:var(--hx-fs-detail);
+	font-weight:500;
+	line-height:1.4;
+	letter-spacing:.02em;
+	color:var(--hx-fg);
+	text-decoration:none;
+	/* two stacked 1px lines at the same baseline: faint rest line + drawn line */
+	background-image:linear-gradient(currentColor,currentColor),linear-gradient(var(--hx-rule),var(--hx-rule));
+	background-repeat:no-repeat;
+	background-position:0 calc(50% + .95em),0 calc(50% + .95em);
+	background-size:0 1px,100% 1px;
+	padding-bottom:0;
+	transition:background-size 700ms var(--hx-ease),color var(--hx-dur-ui) var(--hx-ease-soft);
+}
+.hx-link:hover{background-size:100% 1px,100% 1px}
+.hx-link:hover .hx-arrow,.hx-btn:hover .hx-arrow{transform:translateX(4px)}
+.hx-link:visited{color:var(--hx-fg)}
+
+/* ─── Button: the one primary button ─────────────────────────────── */
+.hx-btn{
+	--hx-btn-bg:var(--hx-ink);
+	--hx-btn-bg-hover:#2B2C2F;
+	--hx-btn-fg:var(--hx-white);
+	--hx-btn-frame:rgba(205,191,168,.55);
+	position:relative;
+	isolation:isolate;
+	display:inline-flex;
+	align-items:center;
+	justify-content:center;
+	box-sizing:border-box;
+	min-height:52px;
+	padding:0 34px;
+	margin:0;
+	border:0;
+	border-radius:var(--hx-radius);
+	background:var(--hx-btn-bg);
+	color:var(--hx-btn-fg);
+	font-family:var(--hx-sans);
+	font-size:.75rem;
+	font-weight:500;
+	line-height:1.3;
+	letter-spacing:var(--hx-tr-btn);
+	text-transform:uppercase;
+	text-align:center;
+	text-decoration:none;
+	white-space:nowrap;
+	cursor:pointer;
+	-webkit-tap-highlight-color:transparent;
+	transition:background-color var(--hx-dur-ui) var(--hx-ease-soft),color var(--hx-dur-ui) var(--hx-ease-soft);
+}
+/* jewel-box detail: a fine inner frame that settles in on hover */
+.hx-btn::after{content:"";position:absolute;inset:5px;border:1px solid var(--hx-btn-frame);opacity:0;transform:scale(1.025);transition:opacity 600ms var(--hx-ease),transform 600ms var(--hx-ease);pointer-events:none;z-index:-1}
+.hx-btn:hover{background:var(--hx-btn-bg-hover);color:var(--hx-btn-fg)}
+.hx-btn:hover::after{opacity:1;transform:scale(1)}
+.hx-btn:active{transform:translateY(1px)}
+.hx-btn:visited{color:var(--hx-btn-fg)}
+.hx-btn--ivory,.hx-on-dark .hx-btn:not(.hx-btn--ink){--hx-btn-bg:var(--hx-white);--hx-btn-bg-hover:var(--hx-ivory);--hx-btn-fg:var(--hx-ink);--hx-btn-frame:rgba(98,86,70,.4)}
+.hx-btn--block{display:flex;width:100%;white-space:normal}
+@media (max-width:359.98px){.hx-btn{padding-inline:20px;letter-spacing:.12em;white-space:normal}}
+
+/* ─── Focus ──────────────────────────────────────────────────────── */
+:is(.hx-link,.hx-btn):focus{outline:none}
+:is(.hx-link,.hx-btn,[class*="hx"] a,[class*="hx"] button,[class*="hx"] [tabindex]):focus-visible{outline:var(--hx-focus-width) solid var(--hx-focus-color);outline-offset:var(--hx-focus-offset);border-radius:0}
+.hx-btn:focus-visible{outline-offset:3px}
+
+/* ─── Screen-reader only ─────────────────────────────────────────── */
+.hx-sr{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;clip-path:inset(50%)!important;white-space:nowrap!important;border:0!important}
+
+/* ─── Scroll reveals (state classes are set by hx-motion.js) ─────────
+   Content is hidden ONLY when html.hx-motion is present, i.e. JS ran, motion is
+   allowed, and the element was below the fold at start. Anything that fails stays visible. */
+html.hx-motion [data-hx-reveal]{
+	transition-property:opacity,transform,clip-path;
+	transition-duration:var(--hx-dur-reveal);
+	transition-timing-function:var(--hx-ease);
+	transition-delay:calc(var(--hx-i,0) * var(--hx-stagger) + var(--hx-delay,0ms));
+}
+html.hx-motion [data-hx-reveal]:not(.is-in){opacity:0}
+html.hx-motion [data-hx-reveal=""]:not(.is-in),
+html.hx-motion [data-hx-reveal="rise"]:not(.is-in){transform:translate3d(0,var(--hx-rise),0)}
+html.hx-motion [data-hx-reveal="fade"]{transition-duration:1400ms;transition-timing-function:var(--hx-ease-soft)}
+/* mask: curtain lifts from the bottom edge; image inside settles 1.06 → 1 */
+html.hx-motion [data-hx-reveal="mask"]{transition-duration:var(--hx-dur-image);transition-timing-function:var(--hx-ease-inout),var(--hx-ease-inout),var(--hx-ease-inout)}
+html.hx-motion [data-hx-reveal="mask"]:not(.is-in){opacity:1;clip-path:inset(100% 0 0 0)}
+html.hx-motion [data-hx-reveal="mask"].is-in{clip-path:inset(0 0 0 0)}
+html.hx-motion [data-hx-reveal="mask-x"]{transition-duration:var(--hx-dur-image);transition-timing-function:var(--hx-ease-inout)}
+html.hx-motion [data-hx-reveal="mask-x"]:not(.is-in){opacity:1;clip-path:inset(0 100% 0 0)}
+html.hx-motion [data-hx-reveal="mask-x"].is-in{clip-path:inset(0 0 0 0)}
+/* settle: fade in while the image eases from 1.04 → 1 (transform the <img>, not a
+   mix-blend wrapper — see brief §7) */
+html.hx-motion [data-hx-reveal="settle"]{transition-duration:var(--hx-dur-image)}
+html.hx-motion :is([data-hx-reveal="mask"],[data-hx-reveal="mask-x"],[data-hx-reveal="settle"]) img{transition:transform calc(var(--hx-dur-image) + 400ms) var(--hx-ease);transition-delay:inherit}
+html.hx-motion :is([data-hx-reveal="mask"],[data-hx-reveal="mask-x"]):not(.is-in) img{transform:scale(1.08)}
+html.hx-motion [data-hx-reveal="settle"]:not(.is-in) img{transform:scale(1.04)}
+/* data-hx-reveal on an <img> directly with "settle" */
+html.hx-motion img[data-hx-reveal="settle"]:not(.is-in){transform:scale(1.04)}
+/* no transition for elements revealed at start (already in view) */
+html.hx-motion [data-hx-reveal].hx-instant,html.hx-motion [data-hx-reveal].hx-instant img{transition:none!important}
+
+/* Drift (parallax) uses the independent `translate` property, so it composes with any
+   reveal transform. JS writes --hx-dy only ≥900px and without reduced motion. */
+[data-hx-drift]{translate:0 var(--hx-dy,0px)}
+
+/* ─── Load-time motion (CSS only; for above-the-fold content) ────── */
+@media (prefers-reduced-motion:no-preference){
+	.hx-load-fade,.hx-load-rise,.hx-load-settle{animation-duration:var(--hx-dur-reveal);animation-timing-function:var(--hx-ease);animation-fill-mode:both;animation-delay:calc(200ms + var(--hx-i,0) * 140ms)}
+	.hx-load-fade{animation-name:hx-fade;animation-duration:1600ms;animation-timing-function:var(--hx-ease-soft)}
+	.hx-load-rise{animation-name:hx-rise}
+	.hx-load-settle{animation-name:hx-settle;animation-duration:2400ms;animation-delay:calc(var(--hx-i,0) * 140ms)}
+}
+@keyframes hx-fade{from{opacity:0}to{opacity:1}}
+@keyframes hx-rise{from{opacity:0;transform:translate3d(0,22px,0)}to{opacity:1;transform:none}}
+@keyframes hx-settle{from{opacity:0;transform:scale(1.04)}to{opacity:1;transform:none}}
+
+@media (prefers-reduced-motion:reduce){
+	html.hx-motion [data-hx-reveal]{opacity:1!important;transform:none!important;clip-path:none!important;transition:none!important}
+	[data-hx-drift]{translate:none!important}
+	.hx-btn,.hx-btn::after,.hx-link,.hx-arrow{transition:none}
+}
+@media print{
+	html.hx-motion [data-hx-reveal]{opacity:1!important;transform:none!important;clip-path:none!important}
+}
+
+/* ─── Orchestrator, 14 Oct: the site footer on the homepage shares the page's
+   container (same left edge as every hx section). Homepage only; the footer
+   itself lives in inc/navigation.php. */
+body.cos-h26 #cos-footer :is(.cos-nl-wrap,.cos-footer-cols,.cos-footer-bottom){box-sizing:border-box;max-width:calc(var(--hx-max) + 2 * var(--hx-margin));padding-left:var(--hx-margin);padding-right:var(--hx-margin)}
+
+/* ─── Orchestrator, 14 Oct (critic round 1): the homepage header.
+   Transparent over the hero at the top of the page (all sizes); once the page
+   scrolls, or the mobile menu opens, a solid warm pearl (#FBFAF7, not the cool
+   sitewide grey) with a hairline. No backdrop blur: it produced soft "pill"
+   halos behind the logo and icons over photographs. Homepage only. */
+html body.cos-h26.cos-h26-nocturne #cos-nav-wrap,
+html body.cos-h26.cos-h26-nocturne #cos-nav-wrap.scrolled{background:#FBFAF7;-webkit-backdrop-filter:none;backdrop-filter:none;border-bottom-color:rgba(28,29,31,.08);box-shadow:none;transition:background-color .5s var(--hx-ease-soft),border-color .5s var(--hx-ease-soft)}
+html body.cos-h26.cos-h26-nocturne #cos-nav-wrap:not(.scrolled):not(:has([aria-expanded="true"])){background:transparent;border-bottom-color:transparent}
+html body.cos-h26.cos-h26-nocturne #cos-nav-wrap :is(.cos-nav-links a,.cos-nav-utils a,.cos-mob-btn){color:var(--hx-ink)}
+html body.cos-h26.cos-h26-nocturne #cos-nav-wrap .cos-nav-logo img{filter:brightness(.6) contrast(1.15)}
+html body.cos-h26.cos-h26-nocturne #cos-nav-wrap .cos-bag-count{background:var(--hx-ink);color:var(--hx-white)}
+@media (prefers-reduced-motion:reduce){ html body.cos-h26.cos-h26-nocturne #cos-nav-wrap{transition:none} }
+/* Orchestrator, 15 Oct (critic round 2): in-page anchors land below the fixed header with air. */
+body.cos-h26 :is(#collection,#caviar,#evidence,#heritage,#ritual,#closing){scroll-margin-top:calc(var(--cos-nav-h,80px) + 40px)}

@@ -1,0 +1,132 @@
+/* ==========================================================================
+   hx/hero.css — 01 Hero (14 Oct 2026 rebuild). Prefix hxh-. Owner: hero agent.
+   Markup: template-parts/home-2026/hero.php. Images: build_hxh_hero.py.
+
+   Art direction: one object, one light. The 24h Regeneration Cream sits right of
+   centre in a wide champagne field (landscape) or centred under the headline
+   (portrait), never cropped, never crowded. Type is graphite on the photograph's
+   own light silk; one headline, one line, one action.
+
+   Header: transparent over the hero at the top of the page on every size (handled
+   in the shared header code); the copy is inset by the nav height.
+   ========================================================================== */
+
+/* the legacy hook class carries old section styles — neutralise them */
+body.cos-h26 .hxh.h26-hero--pearl{background:#E7DED6}
+
+.hxh{
+	--hxh-nav:var(--cos-nav-h,80px);
+	--hxh-pos-x:50%;
+	position:relative;
+	isolation:isolate;
+	box-sizing:border-box;
+	display:flex;
+	min-height:max(560px,100svh);
+	overflow:clip;
+	background:#E7DED6; /* mean tone of the photograph: no flash before it paints */
+	color:var(--hx-text);
+}
+
+/* ─── Photograph ─────────────────────────────────────────────────── */
+.hxh__media{position:absolute;inset:0;z-index:-1;overflow:clip}
+.hxh__drift{position:absolute;inset:0}
+.hxh__picture,.hxh__picture img{display:block;width:100%;height:100%}
+.hxh__picture img{object-fit:cover;object-position:var(--hxh-pos-x) 50%;transform-origin:62% 62%}
+.hxh__veil{position:absolute;inset:0;background:var(--hx-ivory);opacity:0;pointer-events:none}
+
+/* ─── Copy ───────────────────────────────────────────────────────── */
+.hxh__inner{
+	position:relative;
+	box-sizing:border-box;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	width:100%;
+	padding:calc(var(--hxh-nav) + clamp(28px,4.5svh,48px)) var(--hx-margin) clamp(28px,4.2svh,44px);
+	text-align:center;
+}
+.hxh__title{
+	margin:0;
+	font-size:2.375rem;            /* 38px  <360px  */
+	line-height:1.04;
+	color:var(--hx-ink);
+}
+.hxh__line{display:block}
+.hxh__title em{font-style:italic;font-weight:300}
+.hxh__lead{
+	margin:var(--hx-s-4) 0 0;
+	font-family:var(--hx-sans);
+	font-size:var(--hx-fs-body);
+	font-weight:400;
+	line-height:1.55;
+	letter-spacing:.01em;
+	color:var(--hx-ink); /* ink, not body grey: the portrait frame puts this line over the silk's darker fold (measured 5.4:1 worst-case vs 3.6:1 in --hx-text) */
+	text-wrap:balance;
+}
+.hxh__credit{
+	margin:var(--hx-s-3) 0 0;
+	text-wrap:balance;
+	font-family:var(--hx-sans);
+	font-size:.8125rem;
+	font-weight:500;
+	line-height:1.5;
+	letter-spacing:.04em;
+	color:var(--hx-ink);
+}
+.hxh__sep{white-space:pre;color:var(--hx-text)}
+
+/* The action: a measured graphite button, sized to its words (no full-width slab) */
+.hxh__action{margin-top:auto;display:flex;justify-content:center}
+.hxh__cta{
+	--hx-btn-bg:#2A2A2A;          /* graphite on phones/tablets: sits softer on the champagne; label #FBFAF7 on it = 13.8:1 */
+	--hx-btn-bg-hover:#1C1D1F;
+	min-height:48px;
+	padding-inline:28px;
+	font-size:.6875rem;
+	letter-spacing:.12em;
+}
+.hxh__cta .hx-arrow{width:16px;margin-left:12px}
+
+/* 320px phones: keep the action on one line (system lets it wrap below 360px) */
+@media (max-width:359.98px){
+	.hxh__cta{padding-inline:22px;letter-spacing:.11em;white-space:nowrap}
+	.hxh__cta .hx-arrow{display:none}
+}
+@media (min-width:360px){.hxh__title{font-size:2.5rem}}   /* 40px */
+@media (min-width:700px){.hxh__title{font-size:3rem}}     /* 48px */
+
+/* ─── Wide frame on portrait tablets: object centred under the headline ─ */
+@media (min-width:600px){.hxh{--hxh-pos-x:68.5%}}
+
+/* ─── Landscape layout: headline left, object right of centre ─────── */
+@media (min-width:768px) and (min-aspect-ratio:1/1){
+	.hxh{--hxh-pos-x:58%;min-height:max(600px,100svh)}
+	.hxh__inner{
+		display:grid;
+		grid-template-columns:minmax(0,1fr);
+		align-content:center; /* copy block centred on the jar's own centre line */
+		justify-items:start;
+		max-width:calc(var(--hx-max) + 2 * var(--hx-margin));
+		margin-inline:auto;
+		padding-top:var(--hxh-nav);
+		padding-bottom:0;
+		text-align:left;
+	}
+	.hxh__copy{max-width:min(36vw,480px)}
+	.hxh__lead{margin-top:var(--hx-stack);color:var(--hx-ink);font-size:var(--hx-fs-body);font-weight:400;line-height:var(--hx-lh-body);letter-spacing:.005em}
+	.hxh__credit{margin-top:var(--hx-s-2);font-size:var(--hx-fs-detail);font-weight:400;letter-spacing:.01em;color:var(--hx-ink)} /* sentence case, like phones: not an eyebrow */
+	.hxh__action{margin-top:clamp(40px,6svh,64px);justify-content:flex-start}
+	.hxh__cta{--hx-btn-bg:var(--hx-ink);--hx-btn-bg-hover:#2B2C2F;padding-inline:30px;letter-spacing:.14em}
+}
+@media (min-width:1100px) and (min-aspect-ratio:1/1){.hxh{--hxh-pos-x:63%}}
+/* bleed for the scroll drift (hx-motion.js drives it from 900px) */
+@media (min-width:900px){.hxh__drift{inset:-56px 0}}
+@media (min-width:1440px){.hxh__title{font-size:3.75rem}} /* 60px */
+
+/* ─── Entrance: the light comes up, the object settles, then the words ─ */
+@media (prefers-reduced-motion:no-preference){
+	.hxh__veil{animation:hxh-veil 2600ms var(--hx-ease-soft) 80ms both}
+	.hxh__picture img{animation:hxh-settle 3400ms var(--hx-ease) both}
+}
+@keyframes hxh-veil{from{opacity:.72}to{opacity:0}}
+@keyframes hxh-settle{from{transform:scale(1.045)}to{transform:none}}

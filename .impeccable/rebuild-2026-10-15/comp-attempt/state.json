@@ -1,0 +1,253 @@
+{
+  "tool": "build-phase",
+  "version": 2,
+  "startedAt": "2026-10-15T17:01:53.746Z",
+  "comp": ".impeccable/mocks/swiss-atelier-1.png",
+  "direction": "5da65e19",
+  "breakpoint": "853x1844",
+  "artifact": "wp-content/themes/cos-child/page-home-2026.php",
+  "phase": "plates",
+  "phases": {
+    "comps": {
+      "status": "closed",
+      "openedAt": "2026-10-15T17:01:53.746Z",
+      "closedAt": "2026-10-15T17:08:05.737Z",
+      "attempts": 1,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "3 comps, 1 approved",
+        "approved": ".impeccable/mocks/swiss-atelier-1.png",
+        "at": "2026-10-15T17:08:05.737Z"
+      },
+      "forced": null
+    },
+    "spec": {
+      "status": "closed",
+      "openedAt": "2026-10-15T17:08:05.772Z",
+      "closedAt": "2026-10-15T17:09:31.927Z",
+      "attempts": 2,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "11 regions, 5 plates, 3 text regions measured",
+        "at": "2026-10-15T17:09:31.927Z"
+      },
+      "forced": null
+    },
+    "plates": {
+      "status": "open",
+      "openedAt": "2026-10-15T17:09:31.927Z",
+      "closedAt": null,
+      "attempts": 2,
+      "notes": [],
+      "gate": {
+        "ok": false,
+        "reasons": [
+          "plate assets/plates/campaign.png is 720px wide; the comp region is 853px and a shipping plate needs at least 1280px. Regenerate at asset size, do not crop the comp.",
+          "plate assets/plates/collection-object-a.png: scores 30% against the comp region collection-object-a (structure 57%, color 51%, detail 10%); regenerate with the crop as --ref and the comp-spec plate prompt",
+          "plate assets/plates/collection-object-b.png: structure 36% against the comp region collection-object-b: the composition of the plate is not the region's (different subject, orientation, or crop); regenerate with comp-spec.mjs --crop collection-object-b as the reference image",
+          "plate assets/plates/collection-object-b.png: scores 35% against the comp region collection-object-b (structure 36%, color 60%, detail 28%); regenerate with the crop as --ref and the comp-spec plate prompt"
+        ],
+        "summary": "2/5 plates",
+        "at": "2026-10-15T17:11:39.252Z"
+      },
+      "forced": null
+    },
+    "hero": {
+      "status": "pending",
+      "openedAt": null,
+      "closedAt": null,
+      "attempts": 0,
+      "notes": [],
+      "gate": null,
+      "forced": null
+    },
+    "sections": {
+      "status": "pending",
+      "openedAt": null,
+      "closedAt": null,
+      "attempts": 0,
+      "notes": [],
+      "gate": null,
+      "forced": null
+    },
+    "motion": {
+      "status": "pending",
+      "openedAt": null,
+      "closedAt": null,
+      "attempts": 0,
+      "notes": [],
+      "gate": null,
+      "forced": null
+    },
+    "responsive": {
+      "status": "pending",
+      "openedAt": null,
+      "closedAt": null,
+      "attempts": 0,
+      "notes": [],
+      "gate": null,
+      "forced": null
+    },
+    "review": {
+      "status": "pending",
+      "openedAt": null,
+      "closedAt": null,
+      "attempts": 0,
+      "notes": [],
+      "gate": null,
+      "forced": null
+    }
+  },
+  "finish": {
+    "disposition": "rebuild",
+    "at": "2026-10-15T17:13:56.202Z",
+    "phaseAtFinish": "plates",
+    "artifactSha256": "fdc0792275619ad5ff8e5f810de9f1ad70d346d00c51348846446ba51a831c3f"
+  },
+  "sessionId": "01a107cd-5ada-7b31-a9d4-a7d2e4fd6ee6",
+  "plates": {
+    "wordmark": {
+      "id": "wordmark",
+      "file": "assets/plates/wordmark.png",
+      "status": "ok",
+      "assetHash": "b31d96810c376bad8bd3278aaea4fac4050ee858191d08c9eca14c5cbd2f2385",
+      "regionHash": "71ed9b6e285268d200285e7c2298f657096d83a65420cec0f04cc7ca1264cd0c",
+      "referenceHash": "24ab78464fc242d77f14bf3136fffdb9aee2f0e2325011775a58dc7699fa3819",
+      "reference": {
+        "policy": "plate-reference-v2",
+        "excludedPixels": 0,
+        "totalPixels": 14076,
+        "remainingPixels": 14076,
+        "excludedFraction": 0.0,
+        "fullyExcluded": false,
+        "regions": [],
+        "ignoredContainers": []
+      },
+      "compHash": "fb08e5629f9857d358c3455bd2cc717b78fbb63c873d171cd2159a571076b229",
+      "size": "500x190",
+      "score": 0.5464
+    },
+    "campaign": {
+      "id": "campaign",
+      "file": "assets/plates/campaign.png",
+      "status": "invalid",
+      "assetHash": "7183396b9f1812dfa38235b8f0c880640f7feff93ca2a63eca7319d7e936bb2c",
+      "regionHash": "56c4ba7ba807fd8e98a2d1eb6a394cd21b8435dd3c25f9ae072fb659238c3dc4",
+      "referenceHash": "24ab78464fc242d77f14bf3136fffdb9aee2f0e2325011775a58dc7699fa3819",
+      "reference": {
+        "policy": "plate-reference-v2",
+        "excludedPixels": 207487,
+        "totalPixels": 1143020,
+        "remainingPixels": 935533,
+        "excludedFraction": 0.18152525765078475,
+        "fullyExcluded": false,
+        "regions": [
+          {
+            "id": "headline",
+            "kind": "text",
+            "cropPx": {
+              "x": 71,
+              "y": 143,
+              "w": 507,
+              "h": 252
+            },
+            "pixels": 127764
+          },
+          {
+            "id": "proposition",
+            "kind": "text",
+            "cropPx": {
+              "x": 72,
+              "y": 435,
+              "w": 704,
+              "h": 37
+            },
+            "pixels": 26048
+          },
+          {
+            "id": "cta",
+            "kind": "control",
+            "cropPx": {
+              "x": 144,
+              "y": 1167,
+              "w": 565,
+              "h": 95
+            },
+            "pixels": 53675
+          }
+        ],
+        "ignoredContainers": []
+      },
+      "compHash": "fb08e5629f9857d358c3455bd2cc717b78fbb63c873d171cd2159a571076b229",
+      "size": "720x1391",
+      "score": 0.6486
+    },
+    "collection-object-a": {
+      "id": "collection-object-a",
+      "file": "assets/plates/collection-object-a.png",
+      "status": "invalid",
+      "assetHash": "3be4e3e30824c8471035b237c6a42d8d9bdd8f32702c463a040f2047e9a7c90a",
+      "regionHash": "d26ec2e623bc4bf2a00290eb2d0746dbe35b59c33532eb1a3b6041779bc1130f",
+      "referenceHash": "24ab78464fc242d77f14bf3136fffdb9aee2f0e2325011775a58dc7699fa3819",
+      "reference": {
+        "policy": "plate-reference-v2",
+        "excludedPixels": 0,
+        "totalPixels": 28776,
+        "remainingPixels": 28776,
+        "excludedFraction": 0.0,
+        "fullyExcluded": false,
+        "regions": [],
+        "ignoredContainers": []
+      },
+      "compHash": "fb08e5629f9857d358c3455bd2cc717b78fbb63c873d171cd2159a571076b229",
+      "size": "960x1200",
+      "score": 0.3028
+    },
+    "collection-object-b": {
+      "id": "collection-object-b",
+      "file": "assets/plates/collection-object-b.png",
+      "status": "invalid",
+      "assetHash": "e25934424cd0390c7cf9d6b989f4586a94a848e2c85953725c9ad316deb5625d",
+      "regionHash": "8a7e3158b2ec7e08cd18448a6bc1fc1df963c4eabab19ff18507c14b39745d56",
+      "referenceHash": "24ab78464fc242d77f14bf3136fffdb9aee2f0e2325011775a58dc7699fa3819",
+      "reference": {
+        "policy": "plate-reference-v2",
+        "excludedPixels": 0,
+        "totalPixels": 34450,
+        "remainingPixels": 34450,
+        "excludedFraction": 0.0,
+        "fullyExcluded": false,
+        "regions": [],
+        "ignoredContainers": []
+      },
+      "compHash": "fb08e5629f9857d358c3455bd2cc717b78fbb63c873d171cd2159a571076b229",
+      "size": "960x1200",
+      "score": 0.3484
+    },
+    "collection-object-c": {
+      "id": "collection-object-c",
+      "file": "assets/plates/collection-object-c.png",
+      "status": "ok",
+      "assetHash": "f8d3a31c9d43b1b0a212a1635e2fbae14c96fe575dd3137174c0b495f92ee26e",
+      "regionHash": "932cc6ae78c35ccc330853884c8d7f3650f4e5a84c28a090c3838778bc8cb66b",
+      "referenceHash": "24ab78464fc242d77f14bf3136fffdb9aee2f0e2325011775a58dc7699fa3819",
+      "reference": {
+        "policy": "plate-reference-v2",
+        "excludedPixels": 0,
+        "totalPixels": 52942,
+        "remainingPixels": 52942,
+        "excludedFraction": 0.0,
+        "fullyExcluded": false,
+        "regions": [],
+        "ignoredContainers": []
+      },
+      "compHash": "fb08e5629f9857d358c3455bd2cc717b78fbb63c873d171cd2159a571076b229",
+      "size": "960x1200",
+      "score": 0.4327
+    }
+  }
+}

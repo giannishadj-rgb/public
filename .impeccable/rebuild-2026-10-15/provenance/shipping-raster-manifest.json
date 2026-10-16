@@ -1,0 +1,1054 @@
+{
+  "scope_patterns": [
+    "hxh-campaign-.*",
+    "hxh-tall-.*",
+    "collection-object-(cleanser|serum|eye|cream)-.*",
+    "card-(cleanser|serum|eye|cream)-photo-.*",
+    "hxv-field.*",
+    "philosophy-lab-.*",
+    "hxr-(cleanser|serum|eye|cream)-(480|720|960)\\..*"
+  ],
+  "records": [
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/card-cleanser-photo-480.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/card-cleanser-photo-480.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "a61ab301b217a6c9adbcf490d5333ed75352ab1d15d27e89cd4a20568e30f3fd",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\card-cleanser-photo-480.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/card-cleanser-photo-480.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/card-cleanser-photo-480.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "d7fd202566d1295a4a955f769443e621d6c709e1618f0c0b2cf5acff201e5b8f",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\card-cleanser-photo-480.jpg (jpeg COM, 352 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/card-cleanser-photo-480.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/card-cleanser-photo-480.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "f4a21318a3ce6081b2c19c9b40188792a492622cd7146743638d63944dfe8914",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\card-cleanser-photo-480.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/card-cleanser-photo-720.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/card-cleanser-photo-720.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "4c10e1aeeb805491d5c9dacbacbe0035c927e1505463555fc4dc3fb14d901bae",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\card-cleanser-photo-720.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/card-cleanser-photo-720.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/card-cleanser-photo-720.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "512d379a3ba038afa6f1af22f5d3ff14c26d7aeb24a19b27be7dbef4b7527212",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\card-cleanser-photo-720.jpg (jpeg COM, 352 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/card-cleanser-photo-720.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/card-cleanser-photo-720.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "3657969d0ad27481c6d6d65ffa7125b7f911c0fe0d89475fa657d59ee0be7e58",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\card-cleanser-photo-720.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/card-cleanser-photo-960.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/card-cleanser-photo-960.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "1a775d0fd6b17b3681c10c9e8fb7ee736d9f2ed9cd9e299ff5a6d5cdcf0124f6",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\card-cleanser-photo-960.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/card-cleanser-photo-960.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/card-cleanser-photo-960.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "ade707ffde5ba6750f774e693736ee594f50b1b05cde3f5917067cfe5e9d8ce4",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\card-cleanser-photo-960.jpg (jpeg COM, 352 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/card-cleanser-photo-960.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/card-cleanser-photo-960.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "6dbea6ab1396fc0b9cf8459f8517f9b8b0f6561b899b89aa20dae5ea1302ede5",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\card-cleanser-photo-960.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/card-cream-photo-480.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/card-cream-photo-480.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "0893b433c8293fabdf4c84aa261319f2c4a22e99a764e00ac59056792ed0a6ff",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\card-cream-photo-480.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/card-cream-photo-480.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/card-cream-photo-480.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "93b2a08a4b28ca0b401f271f5aa522bd56af702a63ca6e033b34528bced05988",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\card-cream-photo-480.jpg (jpeg COM, 349 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/card-cream-photo-480.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/card-cream-photo-480.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "0aa5d4b3d61f5064e7cf6fcedd4779ed6e3ec92a30b477b4dab04f566dbd5836",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\card-cream-photo-480.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/card-cream-photo-720.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/card-cream-photo-720.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "067d9fe70adbfd3529d1cdf21f10ef818cfe3be6222c9eb00e47bde149a53235",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\card-cream-photo-720.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/card-cream-photo-720.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/card-cream-photo-720.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "53ff90352a00dc1427cc51355a99d231b41976d5d397da6aa92ad5be138dfa81",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\card-cream-photo-720.jpg (jpeg COM, 349 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/card-cream-photo-720.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/card-cream-photo-720.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "d4a8dc1080df3b0a13e6aa0f44a8bdcec9f586a0d8562f7fdfb4ae990f6e12d0",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\card-cream-photo-720.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/card-cream-photo-960.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/card-cream-photo-960.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "ff317a96efcb8ab4bd06b4e4beee948c9cc5da617f1e95ef987de8398d871f85",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\card-cream-photo-960.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/card-cream-photo-960.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/card-cream-photo-960.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "d81fe45148202055143f0e5e202d7607321c8c90c5557916578d2082085199d2",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\card-cream-photo-960.jpg (jpeg COM, 349 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/card-cream-photo-960.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/card-cream-photo-960.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "bdc3cccfd2f2a07cdfd5f30475d0a4480af8db94f515636a91c11f9b2cddb84d",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\card-cream-photo-960.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/card-eye-photo-480.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/card-eye-photo-480.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "81d27aea09f00befcdec23a8d632f76c09b504919128fe6e0351e9667c34cc8e",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\card-eye-photo-480.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/card-eye-photo-480.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/card-eye-photo-480.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "4e8ccf10b4fb458cdc5d02c2c1cd914ae0f3f6c1c8d20a9a937ac7cbd11b6d16",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\card-eye-photo-480.jpg (jpeg COM, 347 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/card-eye-photo-480.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/card-eye-photo-480.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "81ba9053ccaa2bdeea1df1245749f03036096842fc9ba638405d7846d3adbb84",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\card-eye-photo-480.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/card-eye-photo-720.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/card-eye-photo-720.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "c1a64375dfdd7f0950c5c1353952a59680d645fd536a3a2f554eb4ed806c95d1",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\card-eye-photo-720.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/card-eye-photo-720.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/card-eye-photo-720.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "b64cd08520924d3339f5bdd40ff465f4b7861cf1f92653a2bd1e85aa7edbaba1",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\card-eye-photo-720.jpg (jpeg COM, 347 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/card-eye-photo-720.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/card-eye-photo-720.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "03b956a31da4c5396a90ee7f26a7866c84f210525c3c89edcdb4f9632b1f641f",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\card-eye-photo-720.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/card-eye-photo-960.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/card-eye-photo-960.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "64d70d84628cd1558dcb261b983d26f384259940c79a85043e5bca51457edfa2",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\card-eye-photo-960.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/card-eye-photo-960.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/card-eye-photo-960.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "4c0fd9036c9ff33570f6e9e87e31b79a0ef4515b591a5924a95ab3e7b6a96931",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\card-eye-photo-960.jpg (jpeg COM, 347 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/card-eye-photo-960.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/card-eye-photo-960.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "b32e651811683eea17eaeec8022d57dcdef5105f8929eef1038541e5ba0d30da",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\card-eye-photo-960.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/card-serum-photo-480.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/card-serum-photo-480.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "5cec19161dc5778d4a0e5a89737938da13559a1d32f231252ae40c5092c98978",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\card-serum-photo-480.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/card-serum-photo-480.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/card-serum-photo-480.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "15de01c42dfbd5c2cf10cf8bd8723ef0e7e2a9e1c66979c0346a01526afea515",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\card-serum-photo-480.jpg (jpeg COM, 349 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/card-serum-photo-480.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/card-serum-photo-480.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "8b73a4857826b70c90eee4aac3ebe420b1f5e9ca2319996324fcbcabe078ac10",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\card-serum-photo-480.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/card-serum-photo-720.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/card-serum-photo-720.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "f7ed667d52252fa1cba1887ab951ef4228d368675414a7a2c2358c454b0636dc",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\card-serum-photo-720.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/card-serum-photo-720.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/card-serum-photo-720.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "d01f8f39fd6cd823593f92a41d7e822a38262b0a9a0dd344656f81fd00b99d63",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\card-serum-photo-720.jpg (jpeg COM, 349 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/card-serum-photo-720.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/card-serum-photo-720.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "aa7662ff2385d09ea7fac56052be7e0aca4f8934102060700922c49022d77783",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\card-serum-photo-720.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/card-serum-photo-960.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/card-serum-photo-960.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "e5c79df80b7aaa7729ac01eaee2b19f53aaff2919d324dd8ebe9df66692c8e7b",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\card-serum-photo-960.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/card-serum-photo-960.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/card-serum-photo-960.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "49a4bd948a49f79b3c0fa24ba1e300dc042528cde728d3ec69bae550a398d3dd",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\card-serum-photo-960.jpg (jpeg COM, 349 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/card-serum-photo-960.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/card-serum-photo-960.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "0f1f82c4eb2460c7fd40095f5ac42195eb3dc7ac2efc99c2c9cb0b985b8ab81c",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\card-serum-photo-960.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-480.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-480.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "ea75b4da7ffb1cc2d0eb40f8bd29ad2000b2923eed1c29a3a86d6cc8c01a9b3a",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-cleanser-480.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-480.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-480.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "8d266b1611327e3b47274628a39b2995b93690d83e80bbac17fd7e4967f7f372",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-cleanser-480.jpg (jpeg COM, 359 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-480.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-480.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "bbb28515f818bfc6fa01fb5c630f3bca300d1b99aae65457a6e4d390d822b547",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-cleanser-480.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-720.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-720.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "0960b74be86abd1e44bc399b813a5f9f69e53cdebd7b94f3190a08c4cbb66941",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-cleanser-720.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-720.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-720.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "27fde247bbe3ab7f9abc2f354277f4de90713c15ea4c1cda374cf64918984d22",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-cleanser-720.jpg (jpeg COM, 359 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-720.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-720.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "cf749e1f12d23cb0459bf99540d8fb0f8a409fc7a7fd8370486a2c4bcc47777f",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-cleanser-720.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-960.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-960.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "93a0c442757318b711ea7af4b9aec6f1838faa98b291dce700d8c50a47aca53f",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-cleanser-960.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-960.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-960.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "271cbe70ecb8367296d1c3a1312184ef93068c0a8727a05ec5f21a78246e85ab",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-cleanser-960.jpg (jpeg COM, 359 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-960.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-960.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "a38447a01d63c42f4f3e1c8b5f32f62e49e81becc4dfe5c721caf015cffb0541",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-cleanser-960.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-480.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-480.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "0732d5710215c15f115b743f30d0528a6451966249c3c38e430028f88340241d",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-cream-480.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-480.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-480.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "1f31c6b4548b72a533a210d601ff4a178bc25ae2ee3500b538ae84d6a6dd7b67",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-cream-480.jpg (jpeg COM, 356 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-480.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-480.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "d1934502d37501e7211ad0ca18f91b4fa306644fd4daa4824cae8f725bb674cd",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-cream-480.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-720.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-720.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "57f046f397dc2e9c0c053335b4a3aff54094bc00a44f562525c1ea24a83242b7",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-cream-720.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-720.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-720.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "c7bf80e2681c3244a5762fe3410a9e85f530c7370600417aeb29d50cbdcf40e1",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-cream-720.jpg (jpeg COM, 356 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-720.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-720.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "eefbb1519c8ed86e0e4b8d25651126f781795f501bb9d694a6f3f86012e06eae",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-cream-720.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-960.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-960.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "9d5e42749ce4652f42331d578789b2f00cfe57f174d2d4242bf3a4fd3a28f8b6",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-cream-960.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-960.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-960.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "882e01fd42e7c3a54cf90600ea2db4a3531276e06e9bd1dbcbf62588d28f561f",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-cream-960.jpg (jpeg COM, 356 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-960.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-960.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "d03cbeae7e3fae8a433687a134f61049dbcf5b0af57f55039db27b72d59d0a8a",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-cream-960.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-480.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-480.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "1d4cf28e6381ca92f1d92527647f506d4a1a9b61c2c8ac1526e8eea04b88f161",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-eye-480.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-480.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-480.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "498c194b26de573b19d1cb526740eb665f917fcbb538a99e62678e103ea745ba",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-eye-480.jpg (jpeg COM, 354 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-480.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-480.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "b91763c5dcee8f9267f3ee7ff1e0175abe348db8d6543027eea5a69ecbb2a110",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-eye-480.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-720.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-720.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "097b492cb564bf42eb019ebb6db2caeb9a0acba43293b31f0064d6e41741d68b",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-eye-720.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-720.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-720.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "ea9e61895de4b6a42d7bf6fbd05c681e8c3d38c40a37469b543d35dd47afb116",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-eye-720.jpg (jpeg COM, 354 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-720.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-720.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "6771f7f9b879eae15bed7d779393b8896b2d9d65c245070a253dda9517f0c5c1",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-eye-720.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-960.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-960.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "c31332b441ec54400b6058787743ba4eed54043120635184d97a6ba495932f1a",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-eye-960.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-960.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-960.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "c6b59e31c748053eb1dc63681109e4228ab005ec4ccc0bbe41ae82faafbd9406",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-eye-960.jpg (jpeg COM, 354 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-960.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-960.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "1dc4971eb9fb9a783fd8196d2409ff57d7313fed6df1ef1efaa466e77a0b1e57",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-eye-960.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-480.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-480.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "d7bf1917eb6f6e40109d209569252252b129b6cb4fbfb93088a19b3316f4c766",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-serum-480.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-480.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-480.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "f4ab456eaea7b2bb858063af85a920f87bf45423c0032626c1c0dad7607dd637",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-serum-480.jpg (jpeg COM, 356 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-480.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-480.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "a1986219b978cefaad785052951d427261a04b73c54950f4132d2ac2006033d4",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-serum-480.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-720.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-720.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "630dbd46837db5bd620872448f46d303d32d1e6b1416542a2424ef576965e71e",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-serum-720.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-720.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-720.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "477e61d6d543043945c1139368f09859a26b1e92b60f0cb6dbbe110e7c4bf756",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-serum-720.jpg (jpeg COM, 356 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-720.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-720.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "18ccf5c5fdb6620142fbe76e862d99147f6657aec54fa2fd64911be5acb287b9",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-serum-720.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-960.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-960.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "5046dee5fd6afdd192dd5a9136216993dba2fb6f5fb92117a969bf7165252d2a",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-serum-960.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-960.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-960.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "48d88c4c4bf66f53e7d171d8b14754725cd6bf27a7657df36d656fd7aefa8c16",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-serum-960.jpg (jpeg COM, 356 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-960.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-960.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "d782ab34ebcf37c525aaa8625bab1542db28f511b1990cec7bcbcbdc64103289",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-serum-960.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxh-campaign-1280.avif",
+      "status": "preserved existing provenance",
+      "origin": "Origin: pre-existing owner-selected artwork app/design-sources/home-2026/hero-jar_master.png (1672x941), selected 11 October 2026. Conversion and proportional resizing only on 15 October 2026; no product, label, logo, lid or cream redraw. Native 1672px retained; 1280px reduced with Lanczos."
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxh-campaign-1280.jpg",
+      "status": "preserved existing provenance",
+      "origin": "Origin: pre-existing owner-selected artwork app/design-sources/home-2026/hero-jar_master.png (1672x941), selected 11 October 2026. Conversion and proportional resizing only on 15 October 2026; no product, label, logo, lid or cream redraw. Native 1672px retained; 1280px reduced with Lanczos."
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxh-campaign-1280.webp",
+      "status": "preserved existing provenance",
+      "origin": "Origin: pre-existing owner-selected artwork app/design-sources/home-2026/hero-jar_master.png (1672x941), selected 11 October 2026. Conversion and proportional resizing only on 15 October 2026; no product, label, logo, lid or cream redraw. Native 1672px retained; 1280px reduced with Lanczos."
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxh-campaign-1672.avif",
+      "status": "preserved existing provenance",
+      "origin": "Origin: pre-existing owner-selected artwork app/design-sources/home-2026/hero-jar_master.png (1672x941), selected 11 October 2026. Conversion and proportional resizing only on 15 October 2026; no product, label, logo, lid or cream redraw. Native 1672px retained; 1280px reduced with Lanczos."
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxh-campaign-1672.jpg",
+      "status": "preserved existing provenance",
+      "origin": "Origin: pre-existing owner-selected artwork app/design-sources/home-2026/hero-jar_master.png (1672x941), selected 11 October 2026. Conversion and proportional resizing only on 15 October 2026; no product, label, logo, lid or cream redraw. Native 1672px retained; 1280px reduced with Lanczos."
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxh-campaign-1672.webp",
+      "status": "preserved existing provenance",
+      "origin": "Origin: pre-existing owner-selected artwork app/design-sources/home-2026/hero-jar_master.png (1672x941), selected 11 October 2026. Conversion and proportional resizing only on 15 October 2026; no product, label, logo, lid or cream redraw. Native 1672px retained; 1280px reduced with Lanczos."
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-540.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-540.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "ee1b801e8706b0f841c626ce228fb56ebbacd67b171d5926887312a01b63cffc",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxh-tall-540.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-540.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-540.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "dab3eae5e959074af1ae92d7228ffb661135a0c9d4a728c8cf35b1a0588b3845",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxh-tall-540.jpg (jpeg COM, 341 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-540.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-540.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "1bc942bc612a84953a984886bbb5d00539307e49f940331bcf6132887587372d",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxh-tall-540.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-720.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-720.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "a4a41ad6f1350fc9c17dee52341994734863018fe192f29bc249a55d22cc1f35",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxh-tall-720.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-720.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-720.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "f78bddbff250758b1680ea994e5ff705363f024b9fff6c2b6c27806ab8daf531",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxh-tall-720.jpg (jpeg COM, 341 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-720.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-720.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "55e39276336b550600b6b189a279a5d81b0c0cd6310123e4333fe6ee88f89984",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxh-tall-720.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-480.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-480.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "7d2b6c7a0f574f49dda5a5a05e9ce4bcab0e9f50eaae5ca4d5e4fc2c51dce76e",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxr-cleanser-480.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-480.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-480.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "34800a38d663bea3dc247f043fe9a431f6f58e37e31315fc1ba685a6d4d955a6",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxr-cleanser-480.jpg (jpeg COM, 345 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-480.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-480.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "aa20966f688a9d0b4bb53c3c737cb76c3361059f47c7c54466c9c21523c6ecb0",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxr-cleanser-480.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-720.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-720.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "258d32aa4ccd2b2d1aec5d5c6277b70cb13ac2cdefbf4e571a7ebaaf2dd9704c",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxr-cleanser-720.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-720.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-720.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "2f05796b1be13fc5bc8ee28ddc4ba1a06fc12b47b4845334a595d91e8f87813c",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxr-cleanser-720.jpg (jpeg COM, 345 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-720.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-720.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "1f69ff410490becec54c91ec82cae91df536cf9ebc9b0c5365ebce204ed300f0",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxr-cleanser-720.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-960.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-960.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "1ca6fa75c7985af41b48706f2e0a024e47803a9e4dac88a5a227ca646e04be44",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxr-cleanser-960.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-960.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-960.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "ecd1e011590b08a41bf451211bd9f215f2ecccd48b065e407cd04f475cdac423",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxr-cleanser-960.jpg (jpeg COM, 345 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-960.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-960.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "60b5a06d8766281d8432221b34272136305e188c91f45f7385ab27871298775e",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxr-cleanser-960.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-480.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-480.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "b19eb492860648358945b97c37fe6054b4f8a8fd956b301ba298c6a9c60cc0ce",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxr-cream-480.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-480.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-480.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "b32ffce54ae3925bebdb6c47ae7d14e6c4a8e78e0a647dae24b538c56b147a52",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxr-cream-480.jpg (jpeg COM, 342 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-480.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-480.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "69a2118a7ea67fe43741e19fef56fa5d0e6b10ea8072270e2891cde6154f3755",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxr-cream-480.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-720.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-720.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "c78f003cc56cdc5f0f532af928a038f706f2ecdaa52e22f57e7134a422e4ade2",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxr-cream-720.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-720.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-720.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "b30bf35d2d2d62489690fe65ff9133ed7a9cb76cd52a3e06a72244682dffe210",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxr-cream-720.jpg (jpeg COM, 342 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-720.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-720.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "7d3b73416b44f2fe253d8d19e76899be768d3d02ab7519b3febacd0b1b555c2e",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxr-cream-720.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-960.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-960.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "a3d146c1837e2b94615f66958eeea51e3f98e453e3f64603628ebc505775f8de",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxr-cream-960.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-960.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-960.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "8b42761d58e20655e39b96eef7c7b4085507849c43fc018fa73ae4d04df95f47",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxr-cream-960.jpg (jpeg COM, 342 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-960.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-960.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "e5908cd431fd7bdb1a12050a344332109153d62631163231df53dbbc39d07d1b",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxr-cream-960.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-480.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-480.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "da23aa0df853e25c20d7b66e14b38ceedd4b23ae655f3eb1a6509e58c808fc90",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxr-eye-480.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-480.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-480.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "6c6b57b53bfc7e2fac21ea7734e1a44ba80881a517e95896b39a6f9a1b4d85c2",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxr-eye-480.jpg (jpeg COM, 340 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-480.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-480.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "1385cde7dbfa32d82208783a7c7793fbd4c73c77440695571e0f31a6aca95138",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxr-eye-480.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-720.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-720.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "b3354576e0b1ac1e4bd7a79fd3c8c2b5b353089c8ee202562b357f641ea7b499",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxr-eye-720.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-720.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-720.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "e277884d97d3e9e1638cb6841f8d1d17a69a51673e41ad22d3165fa22edd6bcc",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxr-eye-720.jpg (jpeg COM, 340 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-720.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-720.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "90c9bd9e785600693650dd87003e75ac7dcc55cf0930bf635be5c1e6c69bc70f",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxr-eye-720.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-960.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-960.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "8f03ac3943eae4bf7c83859343f640944572fe34c326e73438b6075108648b4e",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxr-eye-960.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-960.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-960.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "dbd233f4b46d1f7816190b59d1e4991040e8c5a1c514428a47884a35818c4033",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxr-eye-960.jpg (jpeg COM, 340 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-960.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-960.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "325df1c1bcda33db89bc11c560ffd83ccba8ae06d0f7426c6104722a112480e7",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxr-eye-960.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-480.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-480.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "f4fee77d108a29c21e4bfed69b9eefb03e35e3189318bef33d020a01b5aa1b26",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxr-serum-480.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-480.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-480.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "1898d24ac0c3a322e98e372b12a3b16011a7821bd9c43e534f164d2f62346c6e",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxr-serum-480.jpg (jpeg COM, 342 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-480.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-480.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "78ed5af06485abf9c2e04104daa505e07680c3fccec9f937d091088e8bd21eaa",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxr-serum-480.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-720.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-720.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "810c35a65b338a8ac88a74bfa8fcfc6f1972867ab52d392a24d5eb2ac50e9385",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxr-serum-720.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-720.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-720.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "656e41babc0309abfe4c64ce4bd2f0a7a176db43f8a3e6f6b222a6e9bf1c3ec9",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxr-serum-720.jpg (jpeg COM, 342 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-720.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-720.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "68f77921a9765917c799c8ab55ec7128fbfaeaab569f6d74ce38f38a1d7e2465",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxr-serum-720.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-960.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-960.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "a2df9deaf38d32a3c25977d1cf8d66729057e53a02768875fe1c83938e9f2071",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxr-serum-960.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-960.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-960.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "1da9fdf66890c559f9d747a2ec56d6caedb073e2585a92c2bb12db7a52f2266e",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxr-serum-960.jpg (jpeg COM, 342 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-960.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-960.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "37bf2aaca25e23e255ebfa807ade2c444fb6a2856f5c4f11d91881a2485aa9ba",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxr-serum-960.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxv-field-1440.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxv-field-1440.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "beee42820bc3737d25460fb87ebcdfb1b529060f5c99cf745fb5c0da2c7d4774",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxv-field-1440.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxv-field-1440.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxv-field-1440.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "c3f5bba4822719072b9880248e13bf3a7485427b6c4222dfa5849bcc7b1555ce",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxv-field-1440.jpg (jpeg COM, 343 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxv-field-1440.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxv-field-1440.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "23b96c4114a4da1e9e4b3d7eb38a8162069d8361cf899de65249eb73a0168835",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxv-field-1440.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxv-field-2048.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxv-field-2048.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "67e59a52ac7f3abc4a84dd982e153446fa52af89cce059b3904bb41c78b5cc07",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxv-field-2048.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxv-field-2048.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxv-field-2048.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "31e529db154b71abbaa7288da294ddaafb2f799151deb0a1ccd424e25b50336b",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxv-field-2048.jpg (jpeg COM, 343 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxv-field-2048.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxv-field-2048.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "f0f6b9225f920e15f6fde269e7699527bcd918464badb795287fcd9318d0097c",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxv-field-2048.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxv-field-2880.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxv-field-2880.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "9ea4ab7c4827fa12f3d86134fdf5f656e0f7ac30ef8ef683d06b842d9c59a793",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxv-field-2880.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxv-field-2880.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxv-field-2880.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "5d3397dd5bae666768575bcc66c8b4c9c7093a9c4ec443b9ceed4f7bed6bdf11",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxv-field-2880.jpg (jpeg COM, 343 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxv-field-2880.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxv-field-2880.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "865397a08b83e9bd4ca7d124f7115302737402591a2f53660161a7508827efbc",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxv-field-2880.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxv-field-4000.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxv-field-4000.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "06f5d2a682b66ec24652fc3cf22d1ed4e6ae226346eed9f878918c3206aeed98",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxv-field-4000.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxv-field-4000.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxv-field-4000.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "ff87801dd0ffe20d524b26b25c14a5236de83d0cb1979ac75158942d32bbfd56",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxv-field-4000.jpg (jpeg COM, 343 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxv-field-4000.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxv-field-4000.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "66ed5de919db4bfa0fad7accbf6cdf5e8bdab8b57bc4e98633f9463f98352b7e",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxv-field-4000.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-1280.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-1280.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "e5fc310178c41789395ffd63ea9535b118e4eb7fad58ea77c092184358e8442c",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxv-field-tall-1280.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-1280.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-1280.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "228b22175ad1785cc1568d06ffce00bfaa9c752741d28b7f42fb0437d1676996",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxv-field-tall-1280.jpg (jpeg COM, 348 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-1280.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-1280.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "b79f45b999598a5066dfa4b88a0d137281a45643007ee2dd81e77cd90d1e5f02",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxv-field-tall-1280.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-1600.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-1600.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "136f8b73e52a472f560324223f6bac4fff08ae0d919b6aeeed48251fc00591e5",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxv-field-tall-1600.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-1600.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-1600.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "830753fae6fbeae595a349deec5e38c102eae579f2c23b2a8021462af5a609b9",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxv-field-tall-1600.jpg (jpeg COM, 348 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-1600.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-1600.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "4e518035696c94b656fae42a41333e7f9fe579001c606875886b03fdbdaa9854",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxv-field-tall-1600.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-640.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-640.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "94e0ad1123d28fe6ff1ffab374d4bda720caf57676a8d271c27920df6896efd3",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxv-field-tall-640.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-640.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-640.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "2408ca537c8f01e0af8c12b5d483dc4b3340a12a665895b916fa2e247d791c2b",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxv-field-tall-640.jpg (jpeg COM, 347 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-640.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-640.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "e4b8474872c1bdc8188e58e5bd3574aca83f9bc11b2cab9467dcd7e1c2c8ca75",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxv-field-tall-640.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-960.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-960.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "b53ed8c7f5bb11aac8a91982d6153b8417b4395208d9f5a87c73b31327e7c71c",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxv-field-tall-960.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-960.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-960.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "30e2de7cebf7181aaafed51d1452c5017d5d820c92113421f23db5c31e4ada66",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxv-field-tall-960.jpg (jpeg COM, 347 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-960.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-960.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "f183ddb232f5a97e5ea0d12f8356f4406b9460a3a9e0dacc94cf0366ab13bd7f",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxv-field-tall-960.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/philosophy-lab-1122.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/philosophy-lab-1122.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "43edf096cdc5e906e3793238475fbc9ceec07612976d53365f7197e51b05357b",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\philosophy-lab-1122.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/philosophy-lab-1122.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/philosophy-lab-1122.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "fe32c3b0e67a42d1b1bdef5652dd9a4435d53027a14ab727d217d808e2dbcc5c",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\philosophy-lab-1122.jpg (jpeg COM, 348 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/philosophy-lab-1122.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/philosophy-lab-1122.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "89b4caafd07d10723fce8bebe16598172ba72e7d2abc57f923cace3428449b5f",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\philosophy-lab-1122.webp.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/philosophy-lab-640.avif",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/philosophy-lab-640.avif. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "7d935815a638ce08a62fe76d34ef0735094ddc73f6a737c01936a7468e5e5ce0",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\philosophy-lab-640.avif.json (sidecar fallback for this format)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/philosophy-lab-640.jpg",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/philosophy-lab-640.jpg. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "111385d10e9815f34cfe04480419753081301f0f217146cb78c0d8d9877c3a73",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\philosophy-lab-640.jpg (jpeg COM, 347 chars)"
+    },
+    {
+      "file": "wp-content/themes/cos-child/assets/images/home-2026/philosophy-lab-640.webp",
+      "status": "origin tagged; decoded pixels unchanged",
+      "origin": "Origin: existing repository asset wp-content/themes/cos-child/assets/images/home-2026/philosophy-lab-640.webp. Incumbent artwork and prior production history preserved; original generation prompt or documentary photographic provenance is not established by this metadata record. No pixel edits made during provenance bookkeeping on 15 October 2026.",
+      "pixel_sha256": "a703b27b687625da0077e6c43ab54ab56c2b4340f7c036864b6abeeeab5c8ef1",
+      "result": "EMBEDDED: wp-content\\themes\\cos-child\\assets\\images\\home-2026\\philosophy-lab-640.webp.json (sidecar fallback for this format)"
+    }
+  ],
+  "acknowledgement": "The directory scan includes unused incumbent assets outside this shipping-pattern scope. Those files were neither tagged nor deleted. Original provenance preserved wherever already present. New records identify origin only and do not invent generation prompts or documentary truth.",
+  "scan_before": "scan-before.txt",
+  "scan_after": "scan-after.txt"
+}

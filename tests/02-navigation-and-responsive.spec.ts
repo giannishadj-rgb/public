@@ -50,6 +50,10 @@ test.describe('Navigation, accessibility, and responsive scenarios', () => {
     await page.keyboard.press('Tab');
     const skipLink = page.getByRole('link', { name: /skip to main content/i });
     await expect(skipLink).toBeFocused();
+    const skipBounds = await skipLink.boundingBox();
+    expect(skipBounds).not.toBeNull();
+    expect(skipBounds!.x, 'Focused skip link must be onscreen').toBeGreaterThanOrEqual(0);
+    expect(skipBounds!.height, 'Focused skip link must be a usable target').toBeGreaterThanOrEqual(44);
 
     await page.keyboard.press('Enter');
     await expect(page.locator('#cos-main-content, main').first()).toBeVisible();

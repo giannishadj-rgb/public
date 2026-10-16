@@ -37,6 +37,18 @@ export default defineConfig({
       use: {
         ...devices['Pixel 7']
       }
+    },
+    {
+      name: 'mobile-webkit',
+      testMatch: [
+        '01-public-routes.spec.ts',
+        '02-navigation-and-responsive.spec.ts',
+        '03-commerce-flows.spec.ts',
+        '06-accessibility.spec.ts'
+      ],
+      use: {
+        ...devices['iPhone 13']
+      }
     }
   ]
 });

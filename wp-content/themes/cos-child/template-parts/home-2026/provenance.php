@@ -1,62 +1,73 @@
 <?php
 /**
- * 06b — Swiss heritage (owner, 11 Oct 2026: "this needs to show the Swiss
- * heritage — change the style, image and text"). A full-bleed plate of the
- * Matterhorn in cloud, cropped above the village so it reads as landscape,
- * not postcard (design-sources/home-2026/build_heritage_matterhorn.py), with
- * the label, the shared section heading and the lede on its calm sky; a small
- * caption names the place, so the photograph is never mistaken for Zug.
- * Below, a Swiss-grid band: three facts as large serif figures on hairlines.
- * Facts only from PRODUCT.md (20+ years, confirmed) and /science/swiss-formulation/
- * (page 348: GMP / ISO 22716:2007 in Zug, batch release and traceability).
- * Styles: .h26h in assets/css/home-2026.css.
+ * 05 — Swiss provenance (homepage rebuild, 14–15 Oct 2026). Styles: assets/css/hx/provenance.css (hxp-).
+ *
+ * Owner decision (14 Oct): keep the Matterhorn — the only landscape photography there is — refined,
+ * never a postcard. Round 1 critique (15 Oct): the summit must be unmistakable and the field must sit
+ * in the warm sequence. So: a tight crop on the north/east face with cloud streaming off it
+ * (design-sources/home-2026/build_provenance_matterhorn.py), a full-range silver print with a slight
+ * split tone (cool graphite shadows, warm ivory highlights). Only the label, the plate caption and the
+ * heading sit on the photograph (owner: text on the photo); the reading copy, links and facts sit on a
+ * warm ivory band directly beneath it — a clean edge, no fade. The caption names the place, so the
+ * mountain is never mistaken for Zug, where the formulas are made.
+ *
+ * Facts (brief §4, PRODUCT.md, page 348): created and filled in Zug, for more than 20 years,
+ * under cosmetic GMP / ISO 22716. No parallax drift here (it exposed the frame edge — round 1 seam).
+ * Restored 16 Oct to the round-3-approved state (owner) after an unrequested evening rewrite.
  */
 defined( 'ABSPATH' ) || exit;
 
-$facts = array(
-	array( '20+', 'Years', 'A Swiss skincare house for more than two decades.' ),
-	array( 'Zug', 'Switzerland', 'Every formula developed and produced here, from formulation to final fill.' ),
-	array( 'ISO 22716', 'GMP-certified', 'Every batch checked before release. Every jar and bottle traceable.' ),
-);
+$hxp_arrow = '<span class="hx-arrow" aria-hidden="true"></span>';
 ?>
-<section class="h26h" aria-labelledby="h26-provenance-title">
-	<figure class="h26h__plate">
-		<div class="h26h__photo" data-h26-parallax=".05">
+<section id="heritage" class="hxp" aria-labelledby="hxp-title">
+	<div class="hxp__plate">
+		<figure class="hxp__photo hx-frame" data-hx-reveal="settle">
 			<?php
 			echo cos_h26_picture(
-				'heritage-alps-tall',
+				'provenance-summit-tall',
 				array( 640, 960 ),
-				array( 4, 5 ),
-				'The Matterhorn rising through cloud above a forested ridge in the Swiss Alps',
+				array( 1100, 1540 ),
+				'The north and east faces of the Matterhorn, cloud streaming from the summit, printed in silver tones',
 				array(
 					'sizes' => '100vw',
 					'w'     => 960,
 					'art'   => array(
-						array( 'media' => '(min-width: 900px)', 'base' => 'heritage-alps-wide', 'widths' => array( 1440, 1920, 2400 ), 'sizes' => '100vw' ),
+						array( 'media' => '(min-width: 760px)', 'base' => 'provenance-summit-wide', 'widths' => array( 1440, 1920 ), 'sizes' => '100vw' ),
 					),
 				)
 			);
 			?>
+			<figcaption class="hxp__caption"><span class="hxp__place">Matterhorn<span class="hxp__region">, Valais</span></span> <span class="hxp__alt">4&#8239;478&nbsp;m</span></figcaption>
+		</figure>
+
+		<div class="hxp__over hx-wrap" data-hx-stagger>
+			<p class="hx-label hxp__label" data-hx-reveal="fade">Swiss provenance</p>
+			<h2 id="hxp-title" class="hx-heading hxp__title" data-hx-reveal>Fewer things, made&nbsp;well.</h2>
 		</div>
-		<div class="h26h__copy">
-			<p class="h26h__label">Swiss heritage</p>
-			<h2 id="h26-provenance-title" class="h26-provenance__title">A Swiss house, made in Zug</h2>
-			<p class="h26h__lede">For more than 20 years, Caviar of Switzerland has developed and produced every formula in Zug, from formulation to final fill.</p>
+	</div>
+
+	<div class="hxp__band hx-wrap">
+		<div class="hxp__intro" data-hx-stagger>
+			<p class="hx-lead hxp__lede" data-hx-reveal>Precision is not a style here; it is how the work is done. Each formula is made in one place, patiently, and with care.</p>
+			<p class="hxp__links" data-hx-reveal>
+				<a class="hx-link" href="<?php echo esc_url( home_url( '/heritage/' ) ); ?>">Our Swiss heritage<?php echo $hxp_arrow; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+				<a class="hx-link" href="<?php echo esc_url( home_url( '/science/swiss-formulation/' ) ); ?>">How we formulate in Zug<?php echo $hxp_arrow; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+			</p>
 		</div>
-		<figcaption class="h26h__caption">The Matterhorn, Valais</figcaption>
-	</figure>
-	<div class="h26h__band">
-		<dl class="h26h__facts">
-			<?php foreach ( $facts as [ $fig, $k, $v ] ) : ?>
-			<div class="h26h__fact">
-				<dt><span class="h26h__fig"><?php echo esc_html( $fig ); ?></span><span class="h26h__key"><?php echo esc_html( $k ); ?></span></dt>
-				<dd><?php echo esc_html( $v ); ?></dd>
+
+		<dl class="hxp__facts" data-hx-stagger>
+			<div class="hxp__fact" data-hx-reveal>
+				<dt>Zug, Switzerland</dt>
+				<dd>Where every formula is created and filled</dd>
 			</div>
-			<?php endforeach; ?>
+			<div class="hxp__fact" data-hx-reveal>
+				<dt>20+&nbsp;years</dt>
+				<dd>Making skincare in Zug</dd>
+			</div>
+			<div class="hxp__fact" data-hx-reveal>
+				<dt>ISO&nbsp;22716</dt>
+				<dd>Good manufacturing practice (GMP) for cosmetics</dd>
+			</div>
 		</dl>
-		<p class="h26h__links">
-			<a class="h26-link" href="<?php echo esc_url( home_url( '/heritage/' ) ); ?>">Our Swiss heritage <?php echo cos_h26_arrow(); ?></a>
-			<a class="h26-link" href="<?php echo esc_url( home_url( '/science/swiss-formulation/' ) ); ?>">How we formulate in Zug <?php echo cos_h26_arrow(); ?></a>
-		</p>
 	</div>
 </section>

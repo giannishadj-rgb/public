@@ -1,0 +1,116 @@
+/* ==========================================================================
+   hx/caviar.css — 03 Caviar, the signature ingredient (14 Oct 2026 rebuild, prefix hxv-;
+   round-1 fixes 15 Oct). Markup: template-parts/home-2026/caviar.php · images: build_hxv_caviar.py
+   One warm-ivory ground (--hx-ivory). The photograph's light field is graded to that exact
+   tone, so the heading sits on the photograph itself and nothing frames it. One photograph,
+   one statement, two facts, one link. Clean edges top and bottom; nothing drifts, so nothing
+   can ever overlap.
+   ≥1000px  the macro is one screen tall (100svh − header); heading on its light field, left.
+   <1000px  heading on ivory directly above the photograph (4:5 crop below 700px, 2:1 above).
+   ========================================================================== */
+
+body.cos-h26 .hxv{
+	position:relative;
+	overflow:clip;
+	background:var(--hx-ivory);
+	color:var(--hx-text);
+	--hxv-nav:var(--cos-nav-h,80px);
+	--hxv-wrap:calc(var(--hx-max) + 2 * var(--hx-margin));
+}
+
+/* ─── Plate ─────────────────────────────────────────────────────────── */
+.hxv__plate{position:relative}
+.hxv__head{
+	box-sizing:border-box;
+	width:100%;
+	max-width:var(--hxv-wrap);
+	margin-inline:auto;
+	padding:var(--hx-section-sm) var(--hx-margin) var(--hx-s-7);
+}
+.hxv__title{margin:0}
+.hxv__species{
+	margin:var(--hx-s-4) 0 0;
+	font-family:var(--hx-serif);
+	font-size:var(--hx-fs-title);
+	font-weight:400;
+	line-height:var(--hx-lh-title);
+	letter-spacing:var(--hx-tr-title);
+	color:var(--hx-text);
+}
+/* the Latin binomial is italic by convention (not the heading accent device) */
+.hxv__species em{font-style:italic;font-weight:300}
+.hxv__photo{width:100%}
+.hxv__photo img{aspect-ratio:4/5;height:auto}
+@media (min-width:700px){.hxv__photo img{aspect-ratio:2/1}}
+
+/* ≥1000: one screen of photograph, the heading on its own light field */
+@media (min-width:1000px){
+	.hxv__plate{display:grid;grid-template-areas:"plate"}
+	.hxv__plate > *{grid-area:plate;min-width:0}
+	.hxv__photo{position:relative;z-index:0;height:clamp(560px,calc(100svh - var(--hxv-nav)),1000px)}
+	.hxv__photo img{aspect-ratio:auto;height:100%;object-position:22% 60%}
+	.hxv__head{position:relative;z-index:1;align-self:start;padding-top:clamp(160px,15vw,240px);padding-bottom:0;pointer-events:none}
+	.hxv__head > *{width:fit-content;max-width:min(40%,600px);pointer-events:auto}
+	.hxv__head > .hxv__title{max-width:none;white-space:nowrap}
+}
+
+/* ─── Notes: statement · two facts · link ───────────────────────────── */
+.hxv__notes{
+	box-sizing:border-box;
+	width:100%;
+	max-width:var(--hxv-wrap);
+	margin-inline:auto;
+	padding:var(--hx-s-7) var(--hx-margin) var(--hx-s-8);
+	display:grid;
+	grid-template-columns:minmax(0,1fr);
+	row-gap:var(--hx-s-6);
+}
+.hxv__statement{
+	margin:0;
+	max-width:15em;
+	font-family:var(--hx-serif);
+	font-size:clamp(1.75rem,1.43rem + 1.3vw,2.625rem);
+	font-weight:300;
+	line-height:1.16;
+	letter-spacing:-.008em;
+	color:var(--hx-ink);
+	text-wrap:balance;
+}
+.hxv__facts{margin:0;padding:0;display:grid;grid-template-columns:minmax(0,1fr);row-gap:var(--hx-s-5)}
+.hxv__fact{margin:0;padding-top:var(--hx-s-4);border-top:1px solid var(--hx-line)}
+.hxv__k{
+	margin:0 0 var(--hx-s-1);
+	font-family:var(--hx-serif);
+	font-size:1.375rem;
+	font-weight:400;
+	line-height:1.2;
+	color:var(--hx-ink);
+}
+.hxv__v{
+	margin:0;
+	max-width:24em;
+	font-family:var(--hx-sans);
+	font-size:var(--hx-fs-body);
+	font-weight:400;
+	line-height:1.6;
+	color:var(--hx-text);
+	text-wrap:pretty;
+}
+.hxv__more{margin:calc(-1 * var(--hx-s-3)) 0 0}
+
+@media (min-width:700px){
+	.hxv__facts{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--hx-gap)}
+}
+@media (min-width:1000px){
+	.hxv__notes{
+		grid-template-columns:repeat(12,minmax(0,1fr));
+		column-gap:var(--hx-gap);
+		row-gap:0;
+		align-items:start;
+		padding-top:var(--hx-s-8);
+		padding-bottom:var(--hx-s-8);
+	}
+	.hxv__statement{grid-column:1 / span 5;grid-row:1}
+	.hxv__facts{grid-column:7 / -1;grid-row:1;margin-top:var(--hx-s-2)}
+	.hxv__more{grid-column:1 / span 5;grid-row:2;margin-top:var(--hx-s-5)}
+}

@@ -1,124 +1,379 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-07T00:00:00Z",
+  "generatedAt": "2026-10-15T17:30:59.628149+00:00",
   "title": "Design System: Caviar of Switzerland",
   "extensions": {
     "colorMeta": {
-      "pearl-canvas": { "role": "neutral", "displayName": "Pearl Canvas", "tonalRamp": ["#262624", "#3E3E3B", "#5A5A57", "#7A7A76", "#9C9C98", "#BFBFBB", "#E8E8E5", "#F2F2EF"] },
-      "graphite-ink": { "role": "primary", "displayName": "Graphite Ink", "tonalRamp": ["#0A0A0A", "#1C1C1C", "#3A3A3A", "#5E5E5E", "#848484", "#ABABAB", "#D2D2D2", "#F0F0F0"] },
-      "obsidian": { "role": "neutral", "displayName": "Obsidian", "tonalRamp": ["#080909", "#0C0E12", "#1A1D22", "#2E3238", "#4A4F56", "#6E747C", "#9AA0A8", "#C7CBD1"] },
-      "platinum": { "role": "secondary", "displayName": "Platinum", "tonalRamp": ["#2B2E31", "#45494E", "#62676D", "#8E949B", "#B4B9BF", "#C9CDD2", "#D9DDE1", "#EEF0F2"] },
-      "swiss-red": { "role": "tertiary", "displayName": "Swiss Red (logo only)", "tonalRamp": ["#3D0C08", "#661510", "#931F17", "#B9271C", "#D52B1E", "#E2594F", "#EE9089", "#F8C9C5"] }
+      "warm-ivory": {
+        "role": "neutral",
+        "displayName": "Warm Ivory",
+        "canonical": "#F4F1EA",
+        "tonalRamp": [
+          "oklch(15% 0.012 85)",
+          "oklch(26% 0.012 85)",
+          "oklch(38% 0.012 85)",
+          "oklch(49% 0.012 85)",
+          "oklch(61% 0.012 85)",
+          "oklch(72% 0.012 85)",
+          "oklch(84% 0.012 85)",
+          "oklch(95% 0.012 85)"
+        ],
+        "tonalRampPurpose": "Preview-only synthesized lightness ramp; does not add application tokens."
+      },
+      "pearl": {
+        "role": "neutral",
+        "displayName": "Pearl",
+        "canonical": "#FCFBF8",
+        "tonalRamp": [
+          "oklch(15% 0.005 85)",
+          "oklch(26% 0.005 85)",
+          "oklch(38% 0.005 85)",
+          "oklch(49% 0.005 85)",
+          "oklch(61% 0.005 85)",
+          "oklch(72% 0.005 85)",
+          "oklch(84% 0.005 85)",
+          "oklch(95% 0.005 85)"
+        ],
+        "tonalRampPurpose": "Preview-only synthesized lightness ramp; does not add application tokens."
+      },
+      "champagne": {
+        "role": "neutral",
+        "displayName": "Champagne",
+        "canonical": "#E8E0D2",
+        "tonalRamp": [
+          "oklch(15% 0.023 85)",
+          "oklch(26% 0.023 85)",
+          "oklch(38% 0.023 85)",
+          "oklch(49% 0.023 85)",
+          "oklch(61% 0.023 85)",
+          "oklch(72% 0.023 85)",
+          "oklch(84% 0.023 85)",
+          "oklch(95% 0.023 85)"
+        ],
+        "tonalRampPurpose": "Preview-only synthesized lightness ramp; does not add application tokens."
+      },
+      "pale-stone": {
+        "role": "neutral",
+        "displayName": "Pale Stone",
+        "canonical": "#DDD8CF",
+        "tonalRamp": [
+          "oklch(15% 0.012 85)",
+          "oklch(26% 0.012 85)",
+          "oklch(38% 0.012 85)",
+          "oklch(49% 0.012 85)",
+          "oklch(61% 0.012 85)",
+          "oklch(72% 0.012 85)",
+          "oklch(84% 0.012 85)",
+          "oklch(95% 0.012 85)"
+        ],
+        "tonalRampPurpose": "Preview-only synthesized lightness ramp; does not add application tokens."
+      },
+      "graphite": {
+        "role": "primary",
+        "displayName": "Graphite",
+        "canonical": "#202221",
+        "tonalRamp": [
+          "oklch(15% 0.004 155)",
+          "oklch(26% 0.004 155)",
+          "oklch(38% 0.004 155)",
+          "oklch(49% 0.004 155)",
+          "oklch(61% 0.004 155)",
+          "oklch(72% 0.004 155)",
+          "oklch(84% 0.004 155)",
+          "oklch(95% 0.004 155)"
+        ],
+        "tonalRampPurpose": "Preview-only synthesized lightness ramp; does not add application tokens."
+      },
+      "body-graphite": {
+        "role": "neutral",
+        "displayName": "Body Graphite",
+        "canonical": "#3A3B3D",
+        "tonalRamp": [
+          "oklch(15% 0.004 260)",
+          "oklch(26% 0.004 260)",
+          "oklch(38% 0.004 260)",
+          "oklch(49% 0.004 260)",
+          "oklch(61% 0.004 260)",
+          "oklch(72% 0.004 260)",
+          "oklch(84% 0.004 260)",
+          "oklch(95% 0.004 260)"
+        ],
+        "tonalRampPurpose": "Preview-only synthesized lightness ramp; does not add application tokens."
+      },
+      "muted-graphite": {
+        "role": "neutral",
+        "displayName": "Muted Graphite",
+        "canonical": "#5D5F60",
+        "tonalRamp": [
+          "oklch(15% 0.003 230)",
+          "oklch(26% 0.003 230)",
+          "oklch(38% 0.003 230)",
+          "oklch(49% 0.003 230)",
+          "oklch(61% 0.003 230)",
+          "oklch(72% 0.003 230)",
+          "oklch(84% 0.003 230)",
+          "oklch(95% 0.003 230)"
+        ],
+        "tonalRampPurpose": "Preview-only synthesized lightness ramp; does not add application tokens."
+      },
+      "warm-accent": {
+        "role": "neutral",
+        "displayName": "Warm Accent",
+        "canonical": "#625646",
+        "tonalRamp": [
+          "oklch(15% 0.028 75)",
+          "oklch(26% 0.028 75)",
+          "oklch(38% 0.028 75)",
+          "oklch(49% 0.028 75)",
+          "oklch(61% 0.028 75)",
+          "oklch(72% 0.028 75)",
+          "oklch(84% 0.028 75)",
+          "oklch(95% 0.028 75)"
+        ],
+        "tonalRampPurpose": "Preview-only synthesized lightness ramp; does not add application tokens."
+      },
+      "chrome": {
+        "role": "neutral",
+        "displayName": "Chrome",
+        "canonical": "#A7ACB2",
+        "tonalRamp": [
+          "oklch(15% 0.01 250)",
+          "oklch(26% 0.01 250)",
+          "oklch(38% 0.01 250)",
+          "oklch(49% 0.01 250)",
+          "oklch(61% 0.01 250)",
+          "oklch(72% 0.01 250)",
+          "oklch(84% 0.01 250)",
+          "oklch(95% 0.01 250)"
+        ],
+        "tonalRampPurpose": "Preview-only synthesized lightness ramp; does not add application tokens."
+      },
+      "footer-linen": {
+        "role": "neutral",
+        "displayName": "Footer Linen",
+        "canonical": "#EDE8DE",
+        "tonalRamp": [
+          "oklch(15% 0.016 85)",
+          "oklch(26% 0.016 85)",
+          "oklch(38% 0.016 85)",
+          "oklch(49% 0.016 85)",
+          "oklch(61% 0.016 85)",
+          "oklch(72% 0.016 85)",
+          "oklch(84% 0.016 85)",
+          "oklch(95% 0.016 85)"
+        ],
+        "tonalRampPurpose": "Preview-only synthesized lightness ramp; does not add application tokens."
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "rgba(28,29,31,.14)",
+        "tonalRamp": [
+          "oklch(15% 0.004 260)",
+          "oklch(26% 0.004 260)",
+          "oklch(38% 0.004 260)",
+          "oklch(49% 0.004 260)",
+          "oklch(61% 0.004 260)",
+          "oklch(72% 0.004 260)",
+          "oklch(84% 0.004 260)",
+          "oklch(95% 0.004 260)"
+        ],
+        "tonalRampPurpose": "Preview-only synthesized lightness ramp; does not add application tokens."
+      },
+      "rule-strong": {
+        "role": "neutral",
+        "displayName": "Strong Hairline",
+        "canonical": "rgba(28,29,31,.28)",
+        "tonalRamp": [
+          "oklch(15% 0.004 260)",
+          "oklch(26% 0.004 260)",
+          "oklch(38% 0.004 260)",
+          "oklch(49% 0.004 260)",
+          "oklch(61% 0.004 260)",
+          "oklch(72% 0.004 260)",
+          "oklch(84% 0.004 260)",
+          "oklch(95% 0.004 260)"
+        ],
+        "tonalRampPurpose": "Preview-only synthesized lightness ramp; does not add application tokens."
+      }
     },
     "typographyMeta": {
-      "display": { "displayName": "Display", "purpose": "The hero line only." },
-      "headline": { "displayName": "Headline", "purpose": "Section headings and the texture statement." },
-      "figure": { "displayName": "Figure", "purpose": "Clinical results, prices and the 01–04 ritual numerals." },
-      "title": { "displayName": "Title", "purpose": "Product names on cards." },
-      "body": { "displayName": "Body", "purpose": "Ledes and reading copy." },
-      "small": { "displayName": "Small", "purpose": "Methods, glosses, cues and captions." },
-      "label": { "displayName": "Label", "purpose": "Short spaced-caps eyebrows and ritual verbs." },
-      "action": { "displayName": "Action", "purpose": "Buttons and text links." }
+      "display": {
+        "displayName": "Atelier display",
+        "purpose": "Unna regular and genuine italic; composition-specific hero sizes override the shared fluid role."
+      },
+      "body": {
+        "displayName": "Reading",
+        "purpose": "Inter regular, minimum 16px for main reading copy."
+      }
     },
     "shadows": [],
     "motion": [
-      { "name": "ease-standard", "value": "cubic-bezier(.22,.61,.36,1)", "purpose": "All state transitions and scroll reveals." },
-      { "name": "reveal", "value": "opacity .4s, translateY(12px) → 0, 30ms stagger", "purpose": "Section entrance; skipped under prefers-reduced-motion and without JS." },
-      { "name": "arrow-nudge", "value": "translateX(5px) on hover", "purpose": "Trailing arrow on buttons and text links." }
+      {
+        "name": "hero-arrive",
+        "value": "1000ms cubic-bezier(.19,1,.22,1)",
+        "purpose": "One entrance: opacity .86 to 1 and 12px rise; disabled for reduced motion."
+      },
+      {
+        "name": "ui-transition",
+        "value": "320ms cubic-bezier(.33,0,.2,1)",
+        "purpose": "Button fill and arrow response."
+      },
+      {
+        "name": "object-hover",
+        "value": "500ms cubic-bezier(.19,1,.22,1)",
+        "purpose": "Homepage collection object rises 6px; reduced motion disables it."
+      },
+      {
+        "name": "ritual-hover",
+        "value": "600ms cubic-bezier(.19,1,.22,1)",
+        "purpose": "Ritual image scales to 1.025; reduced motion disables it."
+      }
     ],
     "breakpoints": [
-      { "name": "tablet", "value": "700px" },
-      { "name": "split", "value": "900px" },
-      { "name": "desktop", "value": "1100px" }
-    ]
+      {
+        "name": "ritual-two-column",
+        "value": "640px"
+      },
+      {
+        "name": "science-columns-editorial-stack",
+        "value": "700px"
+      },
+      {
+        "name": "landscape-hero",
+        "value": "768px",
+        "condition": "Also requires min-aspect-ratio 1/1."
+      },
+      {
+        "name": "collection-provenance-columns",
+        "value": "900px"
+      },
+      {
+        "name": "desktop-navigation",
+        "value": "1024px"
+      },
+      {
+        "name": "ritual-four-column-science-proof",
+        "value": "1100px"
+      }
+    ],
+    "provenance": {
+      "sourceFiles": [
+        "wp-content/themes/cos-child/assets/css/hx/system.css",
+        "wp-content/themes/cos-child/assets/css/hx/hero.css",
+        "wp-content/themes/cos-child/assets/css/hx/collection.css",
+        "wp-content/themes/cos-child/assets/css/hx/caviar.css",
+        "wp-content/themes/cos-child/assets/css/hx/science.css",
+        "wp-content/themes/cos-child/assets/css/hx/provenance.css",
+        "wp-content/themes/cos-child/assets/css/hx/ritual.css",
+        "wp-content/themes/cos-child/assets/css/hx/closing.css",
+        "wp-content/themes/cos-child/assets/css/storefront-2026.css",
+        "wp-content/themes/cos-child/assets/css/editorial-2026.css",
+        "wp-content/themes/cos-child/assets/js/hx-motion.js"
+      ],
+      "assetRules": [
+        "Exact products, labels, pack proportions and supplied marks are immutable.",
+        "Generated direction studies are references, not shipping product artwork.",
+        "Hero derives from app/design-sources/home-2026/hero-jar_master.png by proportional resizing and format conversion only.",
+        "Every shipping raster retains adjacent source/transformation provenance; invented craft imagery must not be represented as the actual facility."
+      ],
+      "previewRules": "Tonal ramps are synthesized previews, not new tokens. Component specimens show canonical interaction and text structure, not replacement product artwork. Fonts inherit project-loaded local Unna and Inter with system fallbacks."
+    }
   },
   "components": [
     {
-      "name": "Primary Button",
+      "name": "Primary button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "The one filled action per view, on pearl.",
-      "html": "<button class=\"ds-btn-primary\">Shop the Complete Ritual <span class=\"ds-arrow\">→</span></button>",
-      "css": ".ds-btn-primary{display:inline-flex;align-items:center;gap:12px;height:54px;padding:0 30px;background:#1C1C1C;color:#F2F2EF;border:1px solid #1C1C1C;border-radius:0;font:500 15px/1.5 Inter,system-ui,sans-serif;letter-spacing:.01em;cursor:pointer;transition:background-color .35s cubic-bezier(.22,.61,.36,1)}.ds-btn-primary:hover{background:#3A3A3A;border-color:#3A3A3A}.ds-btn-primary .ds-arrow{transition:transform .35s cubic-bezier(.22,.61,.36,1)}.ds-btn-primary:hover .ds-arrow{transform:translateX(5px)}.ds-btn-primary:focus-visible{outline:2px solid #1C1C1C;outline-offset:4px}"
+      "description": "Square purchase action with an understated hover response.",
+      "html": "<button class=\"ds-primary\">Shop the collection <span aria-hidden=\"true\">?</span></button>",
+      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:52px;padding:0 34px;background:var(--hx-ink,#202221);color:var(--hx-white,#FCFBF8);font:500 15px/1.3 Inter,system-ui,sans-serif;letter-spacing:.015em;border:0;border-radius:0;cursor:pointer;transition:background-color 320ms cubic-bezier(.33,0,.2,1)}.ds-primary:hover{background:#2B2C2F}.ds-primary:focus-visible{outline:2px solid var(--hx-ink,#202221);outline-offset:4px}.ds-primary:active{transform:translateY(1px)}.ds-primary span{transition:transform 320ms ease}.ds-primary:hover span{transform:translateX(4px)}@media(prefers-reduced-motion:reduce){.ds-primary,.ds-primary span{transition:none}}"
     },
     {
-      "name": "Button on Dark",
-      "kind": "button",
-      "refersTo": "button-on-dark",
-      "description": "The filled hero action over the dark desktop hero.",
-      "html": "<div class=\"ds-dark\"><button class=\"ds-btn-ondark\">Shop the Complete Ritual <span>→</span></button></div>",
-      "css": ".ds-dark{background:#080909;padding:32px}.ds-btn-ondark{display:inline-flex;align-items:center;gap:12px;height:54px;padding:0 30px;background:#FAFAF8;color:#151515;border:1px solid #FAFAF8;border-radius:0;font:500 15px/1.5 Inter,system-ui,sans-serif;cursor:pointer;transition:background-color .35s}.ds-btn-ondark:hover{background:#E4E6E9;border-color:#E4E6E9}.ds-btn-ondark:focus-visible{outline:2px solid #D9DDE1;outline-offset:4px}"
-    },
-    {
-      "name": "Text Link",
+      "name": "Editorial link",
       "kind": "custom",
       "refersTo": "text-link",
-      "description": "Secondary actions; the underline draws in on hover.",
-      "html": "<a class=\"ds-link\" href=\"#\">Read the studies →</a>",
-      "css": ".ds-link{display:inline-flex;align-items:center;min-height:44px;color:#1C1C1C;font:500 15px/1.5 Inter,system-ui,sans-serif;text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 calc(100% - 10px)/0 1px no-repeat;transition:background-size .45s cubic-bezier(.22,.61,.36,1)}.ds-link:hover{background-size:calc(100% - 26px) 1px}.ds-link:focus-visible{outline:2px solid #1C1C1C;outline-offset:4px}"
+      "description": "Visible underlining with a comfortable action height.",
+      "html": "<a class=\"ds-link\" href=\"#details\">Discover the ritual <span aria-hidden=\"true\">?</span></a>",
+      "css": ".ds-link{display:inline-flex;align-items:center;gap:14px;min-height:48px;color:var(--hx-ink,#202221);font:500 16px/1.4 Inter,system-ui,sans-serif;text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1px}.ds-link:hover{text-decoration-thickness:2px}.ds-link:focus-visible{outline:2px solid var(--hx-ink,#202221);outline-offset:4px}"
     },
     {
-      "name": "Newsletter Input",
+      "name": "Newsletter field",
       "kind": "input",
-      "refersTo": "input-on-dark",
-      "description": "Footer email field on the blue-black footer.",
-      "html": "<div class=\"ds-foot\"><input class=\"ds-input\" type=\"email\" placeholder=\"Email for Caviar of Switzerland updates\"></div>",
-      "css": ".ds-foot{background:#0D1117;padding:24px}.ds-input{width:100%;box-sizing:border-box;height:44px;padding:0 16px;background:#0C0E12;border:1px solid rgba(250,250,248,.22);border-radius:0;color:#FAFAF8;font:300 16px/1.5 Inter,system-ui,sans-serif}.ds-input::placeholder{color:#9AA0A8}.ds-input:focus{border-color:#B4B9BF;outline:2px solid #D9DDE1;outline-offset:2px}"
+      "refersTo": "input",
+      "description": "Readable square input on the warm footer surface.",
+      "html": "<label class=\"ds-field-label\" for=\"ds-email\">Email address</label><input class=\"ds-field\" id=\"ds-email\" type=\"email\" placeholder=\"Your email address\" autocomplete=\"email\">",
+      "css": ".ds-field-label{display:block;margin-bottom:8px;font:400 16px/1.5 Inter,system-ui,sans-serif;color:#202221}.ds-field{min-height:52px;padding:0 16px;border:1px solid #B4AEA4;border-radius:0;background:var(--hx-white,#FCFBF8);color:#202221;font:400 16px/1.7 Inter,system-ui,sans-serif}.ds-field::placeholder{color:#5D5F60;opacity:1}.ds-field:hover{border-color:#625646}.ds-field:focus-visible{outline:2px solid var(--hx-ink,#202221);outline-offset:4px}"
     },
     {
-      "name": "Ritual Step",
+      "name": "Navigation links",
+      "kind": "nav",
+      "description": "Sentence-case links on a light warm ground; the supplied logo remains an external identity asset.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Collection navigation\"><a href=\"#collection\">The collection</a><a href=\"#science\">Our science</a><a href=\"#ritual\">The ritual</a></nav>",
+      "css": ".ds-nav{display:flex;flex-wrap:wrap;gap:22px;padding:16px 24px;background:#F4F1EA;border-bottom:1px solid #DDD8CF}.ds-nav a{display:inline-flex;align-items:center;min-height:44px;color:#202221;text-decoration:none;font:400 14px/1.5 Inter,system-ui,sans-serif;letter-spacing:.015em}.ds-nav a:hover{text-decoration:underline;text-underline-offset:6px}.ds-nav a:focus-visible{outline:2px solid var(--hx-ink,#202221);outline-offset:4px}"
+    },
+    {
+      "name": "Collection decision",
+      "kind": "card",
+      "description": "The always-visible text portion of an unboxed product object; prices are dynamic in production.",
+      "html": "<a class=\"ds-object\" href=\"#product\"><span class=\"ds-object-step\">02 Treat</span><strong>Advanced Repair Serum</strong><span>For firmer, smoother-looking skin.</span><span class=\"ds-object-meta\">30 ml ? Current price</span><span class=\"ds-object-action\">Discover the formula</span></a>",
+      "css": ".ds-object{display:grid;justify-items:center;gap:14px;max-width:280px;padding:24px 0;background:#FCFBF8;text-align:center;color:#3A3B3D;text-decoration:none;font:400 16px/1.55 Inter,system-ui,sans-serif}.ds-object strong{font:400 28px/1.14 Unna,Georgia,serif;color:#202221}.ds-object-step,.ds-object-meta{color:#5D5F60}.ds-object-action{display:inline-flex;align-items:center;min-height:48px;text-decoration:underline;text-underline-offset:6px;text-decoration-color:#A7ACB2;color:#202221}.ds-object:hover .ds-object-action{text-decoration-color:#202221}.ds-object:focus-visible{outline:2px solid var(--hx-ink,#202221);outline-offset:4px}"
+    },
+    {
+      "name": "Measured finding",
       "kind": "custom",
-      "description": "Signature numeral + verb + rule heading each collection card.",
-      "html": "<div class=\"ds-step\"><span class=\"ds-step-num\">01</span><span class=\"ds-step-verb\">Cleanse</span></div><p class=\"ds-step-cue\">Sweep with a cotton pad. No rinsing.</p>",
-      "css": ".ds-step{display:flex;align-items:baseline;gap:14px;background:#F2F2EF;color:#1C1C1C}.ds-step::after{content:'';flex:1;height:1px;background:rgba(28,28,28,.2);align-self:center}.ds-step-num{font:300 48px/1 'Cormorant Garamond',Georgia,serif;font-variant-numeric:lining-nums}.ds-step-verb{font:500 13px/1.5 Inter,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase}.ds-step-cue{margin:6px 0 0;font:400 14px/1.5 Inter,system-ui,sans-serif;color:#5E5E5E}"
+      "description": "A finding remains inseparable from its product and study attribution.",
+      "html": "<section class=\"ds-proof\"><h3>Advanced Repair Serum</h3><strong>+47<span>%</span></strong><p class=\"ds-proof-finding\">Skin firmness</p><p>Instrument-measured ? 28 days<br>Cutometry (R2), 32 women aged 45?60.</p></section>",
+      "css": ".ds-proof{max-width:380px;border-top:1px solid rgba(28,29,31,.28);padding-top:32px;color:#3A3B3D;font:400 16px/1.7 Inter,system-ui,sans-serif}.ds-proof h3{font:500 16px/1.5 Inter,system-ui,sans-serif;color:#202221;margin:0 0 18px}.ds-proof strong{font:400 56px/1.05 Unna,Georgia,serif;color:#202221}.ds-proof strong span{font-size:.6em}.ds-proof p{margin:16px 0 0}.ds-proof .ds-proof-finding{font:400 26px/1.2 Unna,Georgia,serif;color:#202221}"
     },
     {
-      "name": "Clinical Figure",
+      "name": "Visible ritual instruction",
       "kind": "custom",
-      "description": "An instrument-measured result, always named with product, method and panel.",
-      "html": "<div class=\"ds-stat\"><p class=\"ds-stat-p\">Advanced Repair Serum</p><p class=\"ds-stat-fig\">+47%</p><span class=\"ds-stat-rule\"></span><p class=\"ds-stat-l\">Skin firmness</p><p class=\"ds-stat-k\">● Instrument-measured</p><p class=\"ds-stat-m\">32 women aged 45–60, 28 days</p></div>",
-      "css": ".ds-stat{display:flex;flex-direction:column;align-items:center;text-align:center;background:#E8E8E5;padding:28px;color:#151515;font-family:Inter,system-ui,sans-serif}.ds-stat p{margin:0}.ds-stat-p{font-size:14px;font-weight:500}.ds-stat-fig{margin-top:10px!important;font:400 48px/1 'Cormorant Garamond',Georgia,serif;font-variant-numeric:lining-nums tabular-nums}.ds-stat-rule{width:44px;height:1px;background:rgba(21,21,21,.3);margin:16px 0}.ds-stat-l{font-size:17px}.ds-stat-k{margin-top:10px!important;font-size:14px}.ds-stat-m{font-size:14px;color:#5E5E5E}"
-    },
-    {
-      "name": "Self-reported Tag",
-      "kind": "chip",
-      "refersTo": "tag-self-reported",
-      "description": "Marks a self-reported result as secondary.",
-      "html": "<span class=\"ds-tag\">Self-reported</span>",
-      "css": ".ds-tag{display:inline-block;padding:1px 8px;border:1px solid rgba(21,21,21,.22);border-radius:2px;font:500 12px/1.5 Inter,system-ui,sans-serif;color:#3A3A3A;background:#E8E8E5}"
+      "description": "The text portion of a ritual step is present without hover.",
+      "html": "<a class=\"ds-step\" href=\"#cleanse\"><h3>01 Cleanse</h3><p>Begin with Micellar Water. Follow the product directions as the first step of your ritual.</p><span>Explore the formula ?</span></a>",
+      "css": ".ds-step{display:block;max-width:340px;padding-top:24px;border-top:1px solid #DDD8CF;color:#3A3B3D;text-decoration:none}.ds-step h3{margin:0;font:400 25px/1.2 Unna,Georgia,serif;color:#202221}.ds-step p{font:400 16px/1.7 Inter,system-ui,sans-serif;margin:14px 0}.ds-step span{display:inline-flex;align-items:center;min-height:48px;font:400 16px/1.5 Inter,system-ui,sans-serif;text-decoration:underline;text-underline-offset:6px;color:#202221}.ds-step:hover span{text-decoration-thickness:2px}.ds-step:focus-visible{outline:2px solid var(--hx-ink,#202221);outline-offset:4px}"
     }
   ],
   "narrative": {
-    "northStar": "The Quiet Ritual",
-    "overview": "The site is a small, unhurried daily ceremony made visible. There are four steps and nothing extra, and every element earns its place by helping her understand or want one of the four formulas. The page is light-led, with a pearl canvas and graphite type. Darkness is punctuation, reserved for photographic moments: the desktop hero, the caviar macro and the footer. Type pairs a fine high-contrast serif for voice with a light sans for reading, and short spaced-caps labels for wayfinding.\n\nRestraint is the method. Elements are spaced generously and set in a narrow palette. The ornaments are the photography of the real objects (chrome caps, mirrored glass, a silver tray, a fingertip of cream) and the ritual numerals 01–04. Precision shows in the details: lining numerals, hairline rules, figures always named with their product, method and panel. Intimacy comes from scale. The interface never shouts, and the objects are photographed close.",
+    "northStar": "The Swiss Atelier",
+    "overview": "Four real formulas are presented as a considered collection of precious objects. Warm light, chrome, cream, water and stone give the photography material presence; the interface supplies quiet structure and clear decisions. Upright Unna, selective genuine italic and readable Inter establish a restrained editorial voice.\n\nThe homepage expresses desire through the campaign; the storefront supports choice and purchase; editorial chapters make provenance, science and practice understandable. They share the same light material world without forcing the same composition onto every surface.",
     "keyCharacteristics": [
-      "Pearl canvas (#F2F2EF) with graphite ink; dark only behind photography.",
-      "Cormorant Garamond 300 for voice, Inter 300/400 for reading, Inter 500 tracked caps for short labels.",
-      "Square corners, hairline rules, no shadows.",
-      "The 01–04 ritual numerals as the page's recurring structural device.",
-      "Real, label-accurate product photography as the primary ornament."
+      "Warm tonal surfaces and graphite text.",
+      "Exact packaging and a supplied, unchanged silver wordmark with Swiss cross.",
+      "Unboxed compositions, square controls, generous spacing and fine rules.",
+      "Visible benefits, readable evidence and natural scrolling."
     ],
     "rules": [
-      { "name": "The Punctuation Rule", "body": "Dark surfaces appear only behind photography (desktop hero, caviar macro) and in the footer. A text-only section is never dark.", "section": "colors" },
-      { "name": "The One Red Rule", "body": "Swiss red belongs to the logo's cross. It never colours a button, link, badge or sale price.", "section": "colors" },
-      { "name": "The Achromatic Rule", "body": "No hue enters the palette. Warmth comes from photography, not from tinted UI.", "section": "colors" },
-      { "name": "The Short Caps Rule", "body": "Spaced caps are only for labels of four words or fewer. Anything longer is sentence case.", "section": "typography" },
-      { "name": "The Lining Numeral Rule", "body": "Any numeral set in Cormorant (prices, figures, 01–04) uses lining numerals; old-style figures read as \"o1\".", "section": "typography" },
-      { "name": "The Flat Surface Rule", "body": "If something needs separating, use space first, a hairline second, and a tone change third. Never a shadow.", "section": "elevation" }
+      {
+        "name": "The Material Rule",
+        "body": "Depth belongs to the photograph; interface color remains a quiet material ground.",
+        "section": "colors"
+      },
+      {
+        "name": "The Reading Floor Rule",
+        "body": "Main reading copy stays at least 16px; purchase actions stay at least 15px. The 14px tier is reserved for secondary metadata, credits and supporting navigation details.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Surface Rule",
+        "body": "Use space, tone and hairlines to establish hierarchy; do not add decorative elevation.",
+        "section": "elevation"
+      }
     ],
     "dos": [
-      "Do use the pearl canvas (#F2F2EF) for every text-led section; reserve obsidian for photography and the footer.",
-      "Do name every clinical figure with its product, method and panel, and mark self-reported results as secondary.",
-      "Do keep tap targets at 44px or more and small text at muted graphite (#5E5E5E) or darker.",
-      "Do use lining numerals for any Cormorant numeral.",
-      "Do photograph the real packaging with accurate labels; product imagery is the ornament."
+      "**Do** preserve exact products, labels, pack proportions and the supplied official mark.",
+      "**Do** keep benefits and purchase information visible on every device.",
+      "**Do** scope every study result to its actual product, method, panel and duration.",
+      "**Do** keep reading copy at least 16px and meaningful touch targets at least 44px.",
+      "**Do** keep each shipping raster traceable to its source and transformation in its adjacent provenance sidecar.",
+      "**Do** use original hero artwork through proportional resizing and format conversion only."
     ],
     "donts": [
-      "Don't add shadows, rounded corners or gradients to UI elements.",
-      "Don't use Swiss red anywhere except the logo.",
-      "Don't set long phrases in spaced caps.",
-      "Don't add star ratings, testimonials or press logos.",
-      "Don't echo cobalt blue with caviar (another house's signature)."
+      "**Don't** ship generated direction studies as product artwork or treat their invented packs as approved assets.",
+      "**Don't** redraw packaging, wordmarks or the Swiss cross, or recolor the official logo.",
+      "**Don't** add decorative shadows, rounded cards, cobalt styling or theatrical interface effects.",
+      "**Don't** add invented reviews, press marks, scarcity, clinical claims or facility provenance.",
+      "**Don't** hide explanations behind hover, scroll-gate content or introduce compulsory parallax."
     ]
   }
 }

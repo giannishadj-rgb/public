@@ -2,29 +2,31 @@
 /**
  * COS Child Theme — Forms
  *
- * The footer newsletter signup (Klaviyo). Split into two functions —
- * markup and submit-handler script — because inc/navigation.php's
+ * The footer newsletter signup, "The Caviar Circle" (Klaviyo). Split into two
+ * functions — markup and submit-handler script — because inc/navigation.php's
  * cos_child_global_footer() prints them at two different points in the
- * footer (form inline in .cos-nl-wrap, script after the footer element),
- * and preserving that exact output order matters more than having a
- * single call site.
+ * footer (form inline in .hxf-nl, script after the footer element).
+ *
+ * Styles: assets/css/hx/chrome.css (.hxf-form*, .hxf-consent, .hxf-status).
+ * The legacy .cos-nl-* class names stay on the elements: the script below and
+ * the test suite select by them.
  */
 
 function cos_child_newsletter_form(): void { ?>
-<form class="cos-nl-form" method="post" aria-label="Newsletter sign-up">
-      <div class="cos-nl-row">
-        <label for="cos-nl-email" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Email address</label>
-        <input id="cos-nl-email" class="cos-nl-input" type="email" name="email" placeholder="Email for Caviar of Switzerland updates" autocomplete="email" aria-describedby="cos-nl-status" required/>
-        <button type="submit" class="cos-nl-btn">Join the Caviar Circle</button>
+<form class="hxf-form cos-nl-form" method="post" aria-label="Join the Caviar Circle" novalidate>
+      <div class="hxf-form__row cos-nl-row">
+        <label for="cos-nl-email" class="hx-sr">Email address</label>
+        <input id="cos-nl-email" class="hxf-form__input cos-nl-input" type="email" name="email" placeholder="Email address" autocomplete="email" inputmode="email" spellcheck="false" aria-describedby="cos-nl-status" required/>
+        <button type="submit" class="hxf-form__btn cos-nl-btn">Join<span class="hx-sr"> the Caviar Circle</span><span class="hx-arrow" aria-hidden="true"></span></button>
       </div>
-      <label class="cos-nl-consent">
+      <label class="hxf-consent cos-nl-consent">
         <input type="checkbox" name="gdpr" required/>
-        <span class="cos-nl-consent-text">I agree to receive communications from Caviar of Switzerland. <a href="/privacy/" style="color:rgba(248,247,244,.6);text-decoration:underline">Privacy Policy</a>.</span>
+        <span class="cos-nl-consent-text">I agree to receive communications from Caviar of Switzerland. <a href="/privacy/">Privacy Policy</a>.</span>
       </label>
       <?php /* Persistent live region (critique 11 Oct 2026, P1): pending, success and
          error are announced here; the form fields are hidden, never destroyed. */ ?>
-      <p id="cos-nl-status" class="cos-nl-status" role="status" aria-live="polite" tabindex="-1" style="font-size:14px;line-height:1.6;margin-top:8px;color:rgba(248,247,244,.82)"></p>
-      <noscript><p style="font-size:13px;color:rgba(248,247,244,.6);margin-top:8px">JavaScript is required to join the Caviar Circle here. Please email us instead — see the Contact page.</p></noscript>
+      <p id="cos-nl-status" class="hxf-status cos-nl-status" role="status" aria-live="polite" tabindex="-1"></p>
+      <noscript><p class="hxf-noscript">JavaScript is required to join the Caviar Circle here. Please email us instead — see the Contact page.</p></noscript>
     </form>
 <?php }
 
@@ -35,24 +37,27 @@ function cos_child_newsletter_form_script(): void { ?>
   if(!form)return;
   var btn=form.querySelector('.cos-nl-btn');
   var input=form.querySelector('.cos-nl-input');
+  var consent=form.querySelector('input[name="gdpr"]');
   var status=form.querySelector('.cos-nl-status');
-  var originalText=btn.textContent;
+  var originalHTML=btn.innerHTML;
   function say(html,tone){
-    status.style.color=tone==='error'?'#E0A3A3':'rgba(248,247,244,.82)';
+    if(tone) status.setAttribute('data-tone',tone); else status.removeAttribute('data-tone');
     status.innerHTML=html;
   }
-  function resetBtn(){btn.textContent=originalText;btn.disabled=false;}
+  function resetBtn(){btn.innerHTML=originalHTML;btn.disabled=false;}
   function fail(){
     // Keep the email, give the field back, and offer a second route.
     resetBtn();
-    say('We couldn’t add you just now. Please try again, or <a href="/contact/" style="color:inherit;text-decoration:underline">contact us</a> and we’ll add you.','error');
+    say('We couldn’t add you just now. Please try again, or <a href="/contact/">contact us</a> and we’ll add you.','error');
     input.focus();
   }
   form.addEventListener('submit',function(e){
     e.preventDefault();
     var email=input.value.trim();
-    if(!email)return;
-    btn.textContent='Subscribing…';
+    // novalidate: the browser bubbles are replaced by messages in the live region.
+    if(!email||!input.checkValidity()){say('Please enter a valid email address.','error');input.focus();return;}
+    if(consent&&!consent.checked){say('Please tick the box to agree to receive our emails.','error');consent.focus();return;}
+    btn.textContent='Joining…';
     btn.disabled=true;
     say('Subscribing…');
     fetch('https://a.klaviyo.com/client/subscriptions/?company_id=Rd6DHd',{
@@ -64,7 +69,7 @@ function cos_child_newsletter_form_script(): void { ?>
         // Hide the fields (not innerHTML-replace) so the live region survives,
         // then move focus to the confirmation the submit button used to hold.
         Array.prototype.forEach.call(form.querySelectorAll('.cos-nl-row,.cos-nl-consent'),function(el){el.style.display='none';});
-        say('Thank you, you’re on the list. Welcome to the world of Caviar of Switzerland.');
+        say('Thank you, you’re on the list. Welcome to the Caviar Circle.');
         status.focus();
       }else{fail();}
     }).catch(fail);

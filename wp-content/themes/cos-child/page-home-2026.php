@@ -26,7 +26,7 @@ $cos_h26 = array(
 <?php wp_body_open(); ?>
 <main id="cos-main-content" class="h26">
 <?php
-foreach ( array( 'hero', 'collection', 'caviar', 'trust', 'provenance', 'final' ) as $cos_h26_part ) {
+foreach ( array( 'hero', 'collection', 'caviar', 'trust', 'provenance', 'final', 'closing' ) as $cos_h26_part ) { // 14 Oct rebuild brief: hero, collection, caviar, science (trust.php), provenance, ritual (final.php), closing statement
 	get_template_part( 'template-parts/home-2026/' . $cos_h26_part, null, $cos_h26 );
 }
 ?>

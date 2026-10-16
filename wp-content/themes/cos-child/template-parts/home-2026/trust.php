@@ -1,85 +1,88 @@
 <?php
 /**
- * 06 — Clinical evidence as measurement callouts (owner brief, 10 Oct 2026:
- * annotated-photograph references; a single model, no product in shot; the
- * text is part of the picture, no colour band above or below it).
- * The two instrument results are pinned to the skin they describe on the
- * DSC_4392 portrait: firmness to a cheek, crow's-feet depth to an eye corner.
- * Critique 11 Oct 2026: the 24h cream's self-reported satisfaction measures no
- * place on the face, so it is no longer pinned; it is a separate secondary
- * caption, and the portrait is labelled illustrative. The heading sits in the
- * headroom above her and "Read the studies" on the photo.
- * Desktop (≥1100px): the section is one full-bleed plate (backdrop extended by
- * design-sources/home-2026/build_evidence_portrait.py) with hairline leaders
- * running to figures on the grey. Narrower screens: numbered markers on a 5:7
- * crop, keyed to the figures listed beneath it.
- * Each figure is named with its single product, method and panel — never
- * aggregated into a ritual claim (the cleanser has no study).
- * Source: /science/clinical-studies/ (page 347).
- * Styles: .h26e in assets/css/home-2026.css.
+ * 04 — Swiss science: "Protect. Repair. Rejuvenate." (14 Oct 2026 rebuild, science agent;
+ * round 1 critique: no icon diagrams, one sentence per verb, upright heading;
+ * round 2: each instrument-measured figure stands beside its own product).
+ *
+ * The three verbs are the statement: set large in Cormorant across one row, under a
+ * single hairline measuring scale (one tick per verb) that opens left→right once in view.
+ * Each verb carries one sentence; the ingredient names live in the small line beneath.
+ * Then the measured results as large serif numerals with quiet method notes.
+ *
+ * Claim sources (keep in step with them):
+ *   Verbs — ingredient roles as published on /science/the-high-tech-complex/ (page 346)
+ *     and PRODUCT.md: caviar extract micro-encapsulated (potency protected); SOD +
+ *     Resveratrol (antioxidant defence); phospholipids close to skin's own lipids
+ *     (barrier); hyaluronic acid in three molecular weights (three depths); SYN®-COLL
+ *     (collagen research — in-vitro only, so NO figure). Cosmetic wording only.
+ *   Results — /science/clinical-studies/ (page 347), BRIEF §4. Each figure stays with its
+ *     single product, method and panel; separate per-product studies; no complete-ritual
+ *     study and none for the cleanser; the cream's figure is self-reported and secondary.
+ *     The CRO is not named (PRODUCT.md: undecided).
+ * Styles: assets/css/hx/science.css (prefix hxs-).
  */
 defined( 'ABSPATH' ) || exit;
 
-// figure, finding, product, method, panel, [x,y] on the 5:7 crop, [x,y] on the wide plate, side.
-// Coordinates printed by build_evidence_portrait.py from points on the original photo.
-$calls = array(
-	array( '+47%', 'Skin firmness', 'Advanced Repair Serum', 'Skin-elasticity measurement (cutometry)', '32 women aged 45–60, 28 days', array( 28.75, 68.3 ), array( 40.06, 71.01 ), 'left' ),
-	array( '−38%', 'Crow’s-feet depth', 'Revitalizing Eye Cream', 'Skin-surface measurement (optical profilometry)', '30 women aged 42–65, 28 days', array( 68.12, 56.91 ), array( 58.44, 58.7 ), 'right' ),
+$pillars = array(
+	array( 'Protect', 'Micro‑encapsulated caviar keeps its potency, while two antioxidants help defend skin against daily environmental stress.', array( 'Caviar extract', 'Superoxide Dismutase', 'Resveratrol' ) ),
+	array( 'Repair', 'Caviar lipids, close to the skin’s own, help replenish its barrier as hyaluronic acid holds moisture at three depths.', array( 'Caviar phospholipids', 'Hyaluronic acid' ) ),
+	array( 'Rejuvenate', 'A peptide studied in collagen research joins caviar extract, for skin that looks firmer and smoother.', array( 'SYN®‑COLL peptide', 'Caviar extract' ) ),
 );
-$h26e_pos = static function ( array $c ): string {
-	return sprintf( '--x:%s%%;--y:%s%%;--xd:%s%%;--yd:%s%%', $c[5][0], $c[5][1], $c[6][0], $c[6][1] );
-};
+
+// sign + number, finding, product, method, panel, product image key — page 347.
+$measured = array(
+	array( '+47', 'Skin firmness', 'Advanced Repair Serum', 'Cutometry', '32 women <span>aged 45–60</span>', 'serum' ),
+	array( '−38', 'Crow’s‑feet depth', 'Revitalizing Eye Cream', 'Optical profilometry', '30 women <span>aged 42–65</span>', 'eye' ),
+);
 ?>
-<section class="h26e" aria-labelledby="h26-trust-title">
-	<div class="h26e__plate h26-reveal" data-h26-parallax="-.05">
-		<figure class="h26e__photo">
-			<?php
-			echo cos_h26_picture(
-				'evidence-portrait',
-				array( 640, 960, 1280 ),
-				array( 5, 7 ),
-				'Portrait of a woman with fair skin and her hair drawn back, one hand resting beneath her chin',
-				array(
-					'sizes' => '(min-width: 700px) 640px, 100vw',
-					'w'     => 960,
-					'art'   => array(
-						array( 'media' => '(min-width: 1100px)', 'base' => 'evidence-wide', 'widths' => array( 1440, 1920, 2400 ), 'sizes' => '100vw' ),
-					),
-				)
-			);
-			?>
-			<?php foreach ( $calls as $i => $c ) : ?>
-			<span class="h26e__mark h26e__mark--<?php echo esc_attr( $c[7] ); ?>" style="<?php echo esc_attr( $h26e_pos( $c ) ); ?>" aria-hidden="true"><span class="h26e__mark-n"><?php echo (int) $i + 1; ?></span></span>
-			<?php endforeach; ?>
-		</figure>
-		<header class="h26e__head">
-			<h2 id="h26-trust-title" class="h26e__title">Clinical evidence</h2>
-			<span class="h26e__rule" aria-hidden="true"></span>
-			<?php /* Testing body per page 347: not named there; name it only once the owner supplies it. */ ?>
-			<p class="h26e__lede">Evaluated over 28 days by an independent contract research organisation.</p>
-		</header>
-		<ul class="h26e__calls" role="list">
-			<?php foreach ( $calls as $i => $c ) : [ $fig, $finding, $product, $method, $panel ] = $c; ?>
-			<li class="h26e__call h26e__call--<?php echo esc_attr( $c[7] ); ?>" style="<?php echo esc_attr( $h26e_pos( $c ) ); ?>">
-				<span class="h26e__call-n" aria-hidden="true"><?php echo (int) $i + 1; ?></span>
-				<span class="h26e__above">
-					<span class="h26e__product"><?php echo esc_html( $product ); ?></span>
-					<span class="h26e__fig"><?php echo esc_html( $fig ); ?></span>
-				</span>
-				<span class="h26e__lead" aria-hidden="true"></span>
-				<span class="h26e__below">
-					<span class="h26e__finding"><?php echo esc_html( $finding ); ?></span>
-					<span class="h26e__kind"><span class="h26e__dot" aria-hidden="true"></span>Instrument-measured<span class="h26-sr">:</span></span>
-					<span class="h26e__panel"><?php echo esc_html( $panel ); ?></span>
-					<span class="h26e__method"><?php echo esc_html( $method ); ?></span>
-				</span>
+<section id="evidence" class="hxs" aria-labelledby="hxs-title">
+	<div class="hxs__wrap hx-wrap">
+		<p class="hx-label hxs__label" data-hx-reveal="fade">Swiss science</p>
+		<h2 id="hxs-title" class="hx-sr">Protect. Repair. Rejuvenate.</h2>
+
+		<div class="hxs__scale" data-hx-reveal="mask-x" aria-hidden="true"><span></span><span></span><span></span></div>
+		<ol class="hxs__pillars" role="list" data-hx-stagger>
+			<?php foreach ( $pillars as $p ) : ?>
+			<li class="hxs__pillar" data-hx-reveal>
+				<h3 class="hx-heading hxs__verb"><?php echo esc_html( $p[0] ); ?>.</h3>
+				<p class="hx-body hxs__text"><?php echo esc_html( $p[1] ); ?></p>
+				<p class="hx-detail hxs__actives"><span class="hx-sr">Key actives: </span><?php
+				$last = count( $p[2] ) - 1;
+				foreach ( $p[2] as $i => $a ) {
+					// the separator travels with the name before it, so a wrapped line never starts with "·"
+					echo '<span class="hxs__active">' . esc_html( $a ) . ( $i < $last ? '<span aria-hidden="true"> ·</span><span class="hx-sr">,</span>' : '' ) . '</span>' . ( $i < $last ? ' ' : '' );
+				}
+				?></p>
 			</li>
 			<?php endforeach; ?>
-		</ul>
-		<div class="h26e__aside">
-			<p class="h26e__note"><span class="h26e__tag">Self-reported</span> 24h Regeneration Cream: <strong>100%</strong> panellist-reported satisfaction<span class="h26-sr">,</span> <span class="h26e__note-panel">34 women aged 40–65, 28 days</span></p>
-			<p class="h26e__credit">Illustrative portrait; not a study participant.</p>
+		</ol>
+
+		<div class="hxs__proof">
+			<div class="hxs__proof-head" data-hx-reveal>
+				<h3 class="hxs__proof-title">Measured, formula by formula.</h3>
+				<p class="hx-detail hxs__proof-note">Separate 28‑day studies, each of a single formula, by an independent contract research organisation.</p>
+			</div>
+			<div class="hxs__proof-body">
+				<ul class="hxs__results" role="list" data-hx-stagger>
+					<?php foreach ( $measured as $m ) : [ $fig, $finding, $product, $method, $panel, $obj ] = $m; ?>
+					<li class="hxs__result" data-hx-reveal>
+						<?php /* the owner's product, unaltered (transparent AVIF/WebP; JPEG fallback on the same #FBFAF6 ground); decorative — the name follows in text */ ?>
+						<?php echo cos_h26_picture( 'collection-object-' . $obj, array( 480, 720, 960 ), array( 2, 3 ), '', array( 'class' => 'hxs__object', 'sizes' => '(min-width: 1100px) 160px, 112px', 'w' => 480 ) ); // phpcs:ignore ?>
+						<p class="hxs__product"><?php echo esc_html( $product ); ?></p>
+						<p class="hx-numeral hxs__fig-n"><?php echo esc_html( $fig ); ?><span class="hxs__pct">%</span></p>
+						<p class="hxs__finding"><?php echo esc_html( $finding ); ?></p>
+						<p class="hx-detail hxs__method"><span class="hxs__kind">Instrument‑<wbr>measured</span><span class="hx-sr">:</span> <?php echo esc_html( $method ); ?>, <?php echo wp_kses( $panel, array( 'span' => array() ) ); ?>, <span>28 days</span></p>
+					</li>
+					<?php endforeach; ?>
+					<li class="hxs__result hxs__result--reported" data-hx-reveal>
+						<p class="hxs__product">24h Regeneration Cream</p>
+						<p class="hxs__fig-n hxs__fig-n--sm">100<span class="hxs__pct">%</span></p>
+						<p class="hxs__finding">Panellist‑reported satisfaction</p>
+						<p class="hx-detail hxs__method"><span class="hxs__kind">Self‑reported</span><span class="hx-sr">:</span> 34 women <span>aged 40–65</span>, <span>28 days</span></p>
+					</li>
+				</ul>
+				<p class="hxs__more" data-hx-reveal><a class="hx-link" href="<?php echo esc_url( home_url( '/science/clinical-studies/' ) ); ?>">Read the studies<span class="hx-arrow" aria-hidden="true"></span></a></p>
+			</div>
 		</div>
-		<p class="h26e__more"><a class="h26-link" href="<?php echo esc_url( home_url( '/science/clinical-studies/' ) ); ?>">Read the studies <?php echo cos_h26_arrow(); ?></a></p>
 	</div>
 </section>
