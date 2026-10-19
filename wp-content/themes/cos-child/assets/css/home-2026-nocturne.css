@@ -162,11 +162,11 @@ body.cos-h26-nocturne #cos-nav-wrap :focus-visible{outline-color:#1C1C1C}
 @media (max-width:1099.98px){
 	body.cos-h26.cos-h26-nocturne #cos-nav-wrap:not(.scrolled):not(:has([aria-expanded="true"])){background:rgba(242,242,239,.94);border-bottom-color:var(--n-line)}
 	body.cos-h26.cos-h26-nocturne #cos-nav-wrap:not(.scrolled):not(:has([aria-expanded="true"])) :is(.cos-nav-links a,.cos-nav-utils a,.cos-mob-btn){color:#3A3A3A}
-	body.cos-h26.cos-h26-nocturne #cos-nav-wrap:not(.scrolled):not(:has([aria-expanded="true"])) .cos-nav-logo img{filter:brightness(.6) contrast(1.15)}
+	body.cos-h26.cos-h26-nocturne #cos-nav-wrap:not(.scrolled):not(:has([aria-expanded="true"])) .cos-nav-logo img{filter:none}
 	body.cos-h26.cos-h26-nocturne #cos-nav-wrap:not(.scrolled):not(:has([aria-expanded="true"])) :focus-visible{outline-color:#1C1C1C}
 }
 /* Desktop: transparent over the dark hero (home-2026.css), light glass once scrolled. */
-body.cos-h26-nocturne #cos-nav-wrap.scrolled .cos-nav-logo img{filter:brightness(.6) contrast(1.15)}
+body.cos-h26-nocturne #cos-nav-wrap.scrolled .cos-nav-logo img{filter:none}
 body.cos-h26-nocturne #cos-mob-menu{background:var(--n-950)}
 body.cos-h26-nocturne .cos-mob-links a{color:var(--n-white);border-bottom-color:var(--n-line)}
 body.cos-h26-nocturne .cos-mob-links a:hover{color:var(--n-muted)}
@@ -359,7 +359,7 @@ body.cos-h26-nocturne #cos-footer .cos-nl-consent{min-height:44px}
 	body.cos-h26-nocturne .h26-hero--pearl .h26-btn--light:hover{background:#1C1C1C;border-color:#1C1C1C;color:#F2F2EF}
 	body.cos-h26-nocturne .h26-hero--pearl :focus-visible{outline-color:#1C1C1C}
 	body.cos-h26.cos-h26-nocturne:has(.h26-hero--pearl) #cos-nav-wrap:not(.scrolled):not(:has([aria-expanded="true"])) :is(.cos-nav-links a,.cos-nav-utils a,.cos-mob-btn){color:#1C1C1C}
-	body.cos-h26.cos-h26-nocturne:has(.h26-hero--pearl) #cos-nav-wrap:not(.scrolled):not(:has([aria-expanded="true"])) .cos-nav-logo img{filter:brightness(.6) contrast(1.15)}
+	body.cos-h26.cos-h26-nocturne:has(.h26-hero--pearl) #cos-nav-wrap:not(.scrolled):not(:has([aria-expanded="true"])) .cos-nav-logo img{filter:none}
 	body.cos-h26.cos-h26-nocturne:has(.h26-hero--pearl) #cos-nav-wrap:not(.scrolled):not(:has([aria-expanded="true"])) .cos-bag-count{background:#1C1C1C;color:#F2F2EF}
 	body.cos-h26.cos-h26-nocturne:has(.h26-hero--pearl) #cos-nav-wrap:not(.scrolled):not(:has([aria-expanded="true"])) :focus-visible{outline-color:#1C1C1C}
 }

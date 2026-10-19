@@ -1,0 +1,194 @@
+{
+ "date": "2026-10-19",
+ "script": "design-sources\\home-2026\\build_pack_canvas.py",
+ "canvas": [
+  960,
+  1440
+ ],
+ "base_y": 1330,
+ "outputs": {
+  "pack-cleanser-480.avif": {
+   "sha256": "5822825a176269d8104f3f559bf3f5cb46b47824b29f7c5b8bd294895eb51c18",
+   "bytes": 7824
+  },
+  "pack-cleanser-480.webp": {
+   "sha256": "4541f38d67405651dda490ad9a41658492c0ca323bd4f0d1bf016e4b7e51daba",
+   "bytes": 12040
+  },
+  "pack-cleanser-480.jpg": {
+   "sha256": "9d5f30d4cb84fa9765a44c4c7fede09d3e39b25d802413b3111dd5a4fba5b6d2",
+   "bytes": 11289
+  },
+  "pack-cleanser-720.avif": {
+   "sha256": "c36cf3a144bdb198b14bf68196a87481ea00c0b4f04270270c0c4efa5e8178b4",
+   "bytes": 12461
+  },
+  "pack-cleanser-720.webp": {
+   "sha256": "f0465998912702e10aba9daa201e506a9f290f2218ce0d4522aea3473cf70339",
+   "bytes": 20152
+  },
+  "pack-cleanser-720.jpg": {
+   "sha256": "90c6b92d8af231aaacef0134291107906dd2690b3b87f4bae5651a1f5797f304",
+   "bytes": 21712
+  },
+  "pack-cleanser-960.avif": {
+   "sha256": "6becaa3952ca3bc7ce96ad02c3ee3bd9af80f1c214b99b0dec8110c174fd54e4",
+   "bytes": 18204
+  },
+  "pack-cleanser-960.webp": {
+   "sha256": "0e7a6a85f1e9cb3c7a61bd2ca68a0bd3fdccb300c07e3a1ee082abe46dc3023a",
+   "bytes": 27434
+  },
+  "pack-cleanser-960.jpg": {
+   "sha256": "b797e6ea10781977c2b0acccb28753276578c704e27db77a8aa1a4e0a0df5a51",
+   "bytes": 33868
+  },
+  "pack-serum-480.avif": {
+   "sha256": "0f0c8341fc6065f2e97151d28d652047e7c06341252686ca21e064d6de036739",
+   "bytes": 10250
+  },
+  "pack-serum-480.webp": {
+   "sha256": "dd79339a761027713b9bf7700a6752dbc2d2f4b9c9952f67eaccb12f036b91bb",
+   "bytes": 16016
+  },
+  "pack-serum-480.jpg": {
+   "sha256": "69290c4b0b2b5bbf0f15ce1a1a08e42a63ef1d16bd69445f49456358342031b0",
+   "bytes": 14919
+  },
+  "pack-serum-720.avif": {
+   "sha256": "8751b731b67ba7e7e176d833d8718e8dac8658d304d86db7fc38add25c709fd5",
+   "bytes": 16044
+  },
+  "pack-serum-720.webp": {
+   "sha256": "3b813ed527235fbef189d24a69d5a45cbf10f93aa0e34de3bafb8daea02051d6",
+   "bytes": 25882
+  },
+  "pack-serum-720.jpg": {
+   "sha256": "9164ff7a81e2ebc3663fe6168610402e3506046da7a6dc9e9b78a56dca76c50e",
+   "bytes": 28003
+  },
+  "pack-serum-960.avif": {
+   "sha256": "117d19c12825566030edf7430f7c82d32b23ced76d4b4cdfb1b9dfd0fead7d98",
+   "bytes": 22319
+  },
+  "pack-serum-960.webp": {
+   "sha256": "858a1d3c120918a2d6ac6c20ce0ef90f6190e0fb78884457d8e464c9fd96a88c",
+   "bytes": 34328
+  },
+  "pack-serum-960.jpg": {
+   "sha256": "c8c0660f72ce1fd1b49b78934cd8989ff19043977801d8ff7a41bc416acdaa35",
+   "bytes": 43621
+  },
+  "pack-eye-480.avif": {
+   "sha256": "cc772af9b44f2d1dffd10e95a44548bb1f11c70c8abfd7f9688c4413837fbcee",
+   "bytes": 9302
+  },
+  "pack-eye-480.webp": {
+   "sha256": "d52b71feb708607dfc699552b9d4dc3841432141e0c173c72238f777711bdd07",
+   "bytes": 14134
+  },
+  "pack-eye-480.jpg": {
+   "sha256": "46ad51aadb53c82e7ac97a5d3eedf06196592e8fbff5c4a1e672e44e01cccfdd",
+   "bytes": 15397
+  },
+  "pack-eye-720.avif": {
+   "sha256": "0da6ab3d4d88b5b1e4e69b48fd0cac0c6c2d3a64f225b36c93518f1dc51a8c80",
+   "bytes": 14974
+  },
+  "pack-eye-720.webp": {
+   "sha256": "51b8f11eea17ca5c88a7a49ffd5247aff4c5f8546d3caf9c27a2856142fed9b3",
+   "bytes": 23380
+  },
+  "pack-eye-720.jpg": {
+   "sha256": "2671168d72f224117dd11e149c41b112c12645ca6c0f9b8292e2c4bb118cc940",
+   "bytes": 27624
+  },
+  "pack-eye-960.avif": {
+   "sha256": "05468a33296fd0d9c57d295d900e1af1fc22f82168aa0931490fffef69abdfc7",
+   "bytes": 20408
+  },
+  "pack-eye-960.webp": {
+   "sha256": "c7c28afc63eebaea7148d1fbf4ae8914e3a81bc045ca62338f664c68f6893a5e",
+   "bytes": 31420
+  },
+  "pack-eye-960.jpg": {
+   "sha256": "48bc35632fb50551c30e98ddefa9a576efa40fdbfe6d8e7df47ed76a414c6d77",
+   "bytes": 43269
+  },
+  "pack-cream-480.avif": {
+   "sha256": "679cfa7b5575124c262032dda860be19b5ef14b7090294ee2a3876c81d52d59d",
+   "bytes": 8036
+  },
+  "pack-cream-480.webp": {
+   "sha256": "12ad649d72ded5fa8b0e5d2b244fb8bf4ac9618d65dfb3f333f53c273cae5947",
+   "bytes": 13094
+  },
+  "pack-cream-480.jpg": {
+   "sha256": "dd8299e3597b6c195087e1d828cdeb483c19d8c77ba92b72f5f222d48121c07b",
+   "bytes": 13380
+  },
+  "pack-cream-720.avif": {
+   "sha256": "ecf60cf689272290cf550ac05c524099904cd5a7a91c322e9d9c7fb7193e21f1",
+   "bytes": 13219
+  },
+  "pack-cream-720.webp": {
+   "sha256": "ef2fa1c6aa7fd689d5a6c27044cacfdfae0378dfe24cad5412b24803f7a4ff3c",
+   "bytes": 22764
+  },
+  "pack-cream-720.jpg": {
+   "sha256": "5ee98ec0f6fcf287f8e3c94504599a1daa2e0b0c4160394f0b6623b6ce199485",
+   "bytes": 25212
+  },
+  "pack-cream-960.avif": {
+   "sha256": "69e50c1f84ea4cdaa8af2601293236d8d7a2e14d850f65f83269b8dbad0593cd",
+   "bytes": 18423
+  },
+  "pack-cream-960.webp": {
+   "sha256": "ece755ce229887cb9a7ff9ffa82364551fb8deaeda0652290623a402bb29abbb",
+   "bytes": 30862
+  },
+  "pack-cream-960.jpg": {
+   "sha256": "0ff0a22344867aa82bdb56987e7a33973219b73d08b69a5d6524e2111fd03eeb",
+   "bytes": 38363
+  }
+ },
+ "sources": {
+  "cleanser": {
+   "path": "design-sources\\home-2026\\rebuild-2026-10-18\\collection\\work\\wc-coll-cleanser-master.png",
+   "sha256": "c36d8d23b1d402f5fcc290a1d2b2e1b44a564ebc8db55f6e2db1d101f11aa86c",
+   "scale": 0.25388,
+   "offset": [
+    193,
+    150
+   ]
+  },
+  "serum": {
+   "path": "design-sources\\home-2026\\rebuild-2026-10-18\\collection\\work\\wc-coll-serum-master.png",
+   "sha256": "3c2c3b5e119628fdc7e3c31ba38ad1d34c01235984ecaaa8ad7bf453afd43cb4",
+   "scale": 0.37299,
+   "offset": [
+    57,
+    140
+   ]
+  },
+  "eye": {
+   "path": "design-sources\\home-2026\\rebuild-2026-10-18\\collection\\work\\wc-coll-eye-master.png",
+   "sha256": "1188ec934baea9348fc4ef29fb4e7bf8fd30b39207fd515673f1c9702f48e6d5",
+   "scale": 0.42182,
+   "offset": [
+    1,
+    136
+   ]
+  },
+  "cream": {
+   "path": "design-sources\\home-2026\\rebuild-2026-10-18\\collection\\work\\wc-coll-cream-master.png",
+   "sha256": "85051fc6e8537260a4824f1f067a9ba9257bf397cb8c5e1221e7ecec1950c4d4",
+   "scale": 0.29655,
+   "offset": [
+    139,
+    780
+   ]
+  }
+ },
+ "provenance": "Masters cut by build_wc_collection.py from all_high_res.jpg (supplied studio photograph, May 2021, current silver-foil print); see wc-coll.origin.json for the source photograph hash."
+}

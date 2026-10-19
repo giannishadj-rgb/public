@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-17",
+  "tool": "built-in image_gen.imagegen",
+  "prefix": "swiss-material-study-20261017",
+  "source": "../design-sources/home-2026/swiss-material-study-20261017-master.png",
+  "original": "C:/Users/giann/.codex/generated_images/01a1483b-c75e-7b03-8e5d-35e7ab2c461a/exec-e335ef86-abb6-4a09-9201-2463c792cb5e.png",
+  "prompt": "Use case: ads-marketing. Create one extraordinary photoreal editorial still-life photograph for Caviar of Switzerland luxury skincare website's Swiss precision chapter. PORTRAIT 4:5 composition. A quiet, abstract architectural study in true optical glass, brushed silver, pale cool limestone and utterly clear water. One thick clear optical glass plane with a perfectly polished edge stands vertically in a very shallow pool over pale natural stone; a second low horizontal glass block rests precisely beside it, beautiful understated silver reflections and a single controlled caustic cast by morning light. The precision and care of a Swiss architectural monograph or globally prestigious beauty campaign. Elegant negative space, tactile stone grain, physically believable refined reflection, soft pearl white highlights, restrained champagne warmth, graphite only in narrow reflective edges. Medium-format photography, real optical depth, exceptionally sophisticated light, no CGI gloss, no decorative clutter. Cropped close enough to feel almost abstract yet materials unmistakable. Composition carries silent precision, not wellness/spa imagery. Absolutely NO products, jars, bottles, packaging, logos, Swiss crosses, letters, text, people, lab apparatus, architecture claimed as a real facility, mountains or gold. No beige gradient backdrop. No stacked balancing stones, foliage, flowers or cosmetics. This is illustrative art direction, not documentary facility photography.",
+  "kind": "Illustrative campaign art; no packaging or product marks",
+  "derivatives": {
+    "widths": [
+      640,
+      1122
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "jpg"
+    ],
+    "operation": "Proportional FFmpeg conversion only. No retouching or compositing."
+  }
+}

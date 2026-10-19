@@ -9,7 +9,8 @@
    (transparent over the hero, solid once scrolled), set at the end of system.css
    and in the legacy homepage sheets, which out-specify these base rules. Base values
    here equal the homepage's scrolled state, so both read as one header.
-   Mobile (<1024px): menu button → logo → bag, in visual AND tab order.
+   Below 1280px (17 Oct 2026; was 1024): menu button → logo → bag, in visual AND tab order.
+   The five tracked labels need ~530px; under 1280 they would run into the centred logo.
 
    MOBILE MENU (#cos-mob-menu) — warm white sheet under the header: five serif
    destinations, then Help / Account / Contact, then the house line. Fades in;
@@ -27,70 +28,89 @@
    stay on the markup: the form script, cart fragments and tests rely on them.
    ========================================================================== */
 
-/* ═══ HEADER ════════════════════════════════════════════════════════ */
+/* ═══ HEADER ════════════════════════════════════════════════════════
+   17 Oct 2026 luxury pass (system agent). Calibrated against La Prairie / Clé de Peau
+   headers: graphite vector logo from the official master (40px desktop, 32px phones),
+   nav in Inter 450 · 11.5px · 0.13em caps, 1.25px icon strokes, warm-white ground with
+   one ink hairline once scrolled. Selectors double the id (#cos-nav-wrap#cos-nav-wrap)
+   so they beat the legacy homepage sheets (home-2026.css, home-2026-nocturne.css) and
+   stale copies embedded in old post_content, without !important. */
 #cos-nav-wrap{
 	position:fixed;top:0;left:0;right:0;z-index:90;
 	height:var(--cos-nav-h);
-	background:#FBFAF7;
-	border-bottom:1px solid rgba(28,29,31,.08);
-	backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:none;
-	transition:background-color var(--hx-dur-ui,320ms) var(--hx-ease-soft,ease),border-color var(--hx-dur-ui,320ms) var(--hx-ease-soft,ease);
 }
-#cos-nav{position:relative;max-width:1600px;margin:0 auto;height:100%;display:flex;align-items:center;justify-content:space-between;padding:0 48px;gap:24px;box-sizing:border-box}
-.cos-nav-links{display:flex;align-items:center;gap:28px;flex:1}
-.cos-nav-links a{
+#cos-nav-wrap#cos-nav-wrap{
+	background:var(--hx-white,#FBFAF7);
+	border-bottom:1px solid var(--hx-line-hair,rgba(28,29,31,.09));
+	backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:none;
+	transition:background-color 480ms var(--hx-ease-soft,ease),border-color 480ms var(--hx-ease-soft,ease);
+}
+/* Shares the section grid: same max width and side margin as .hx-wrap, so the first nav
+   label sits on the hero's text edge and the bag icon on the right margin. */
+#cos-nav{position:relative;max-width:calc(var(--hx-max,1440px) + 2 * var(--hx-margin,48px));margin:0 auto;height:100%;display:flex;align-items:center;justify-content:space-between;padding:0 var(--hx-margin,48px);gap:24px;box-sizing:border-box}
+.cos-nav-links{display:flex;align-items:center;gap:30px;flex:1}
+#cos-nav-wrap#cos-nav-wrap .cos-nav-links a{
 	position:relative;
 	font-family:var(--hx-sans,'Inter',system-ui,sans-serif);
-	font-size:.75rem;font-weight:500;line-height:1.5;letter-spacing:.14em;text-transform:uppercase;
-	color:var(--hx-ink,#1C1D1F);
+	font-size:var(--hx-fs-nav,.71875rem);font-weight:450;line-height:1.5;letter-spacing:var(--hx-tr-nav,.13em);text-transform:uppercase;
+	color:var(--hx-graphite,#2A2B2D);
 	white-space:nowrap;text-decoration:none;
-	-webkit-font-smoothing:antialiased;
+	-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
 }
 /* Hover + current page: a hairline drawn under the label (no colour jump, no layout shift).
    The tap/click box is extended to 44px by the ::before without moving the label. */
-.cos-nav-links a::before{content:"";position:absolute;left:-6px;right:-6px;top:50%;height:44px;transform:translateY(-50%)}
-.cos-nav-links a::after{content:"";position:absolute;left:0;right:.14em;bottom:-5px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left center;transition:transform 520ms var(--hx-ease,cubic-bezier(.19,1,.22,1))}
+.cos-nav-links a::before{content:"";position:absolute;left:-8px;right:-8px;top:50%;height:44px;transform:translateY(-50%)}
+.cos-nav-links a::after{content:"";position:absolute;left:0;right:.13em;bottom:-6px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left center;transition:transform 620ms var(--hx-ease,cubic-bezier(.19,1,.22,1))}
 .cos-nav-links a:hover::after,.cos-nav-links a[aria-current="page"]:not([href="/"])::after{transform:scaleX(1)}
-.cos-nav-links a:hover,.cos-nav-links a:visited{color:var(--hx-ink,#1C1D1F)}
-@media (min-width:1024px) and (max-width:1439.98px){.cos-nav-links{gap:20px}}
+#cos-nav-wrap#cos-nav-wrap .cos-nav-links a:is(:hover,:visited){color:var(--hx-graphite,#2A2B2D)}
+@media (min-width:1280px) and (max-width:1439.98px){.cos-nav-links{gap:22px}}
 
-.cos-nav-logo{flex:0 0 auto}
-/* The supplied mark (light silver + Swiss red) is darkened for contrast on the light
-   header — unchanged since 19 Sep (see git history); no crop, no recolour of the cross. */
-.cos-nav-logo img{height:42px;width:auto;max-width:none;object-fit:contain;display:block;filter:brightness(.6) contrast(1.15)}
+/* Optically centred on the viewport axis at every width (not between unequal flex groups). */
+.cos-nav-logo{flex:0 0 auto;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
+.cos-nav-logo a{display:block;padding:6px 0}
+/* Vector logo (assets/images/logo-graphite.svg): already graphite, so no filter. The
+   !important clears legacy brightness/contrast filters written for the old silver PNG
+   (they would also darken the Swiss red). */
+#cos-nav-wrap .cos-nav-logo img{height:34px;width:auto;max-width:none;display:block;filter:none!important;opacity:1!important}
 
-.cos-nav-utils{display:flex;align-items:center;gap:0;flex:1;justify-content:flex-end}
+.cos-nav-utils{display:flex;align-items:center;gap:2px;flex:1;justify-content:flex-end;margin-right:-12px}
 /* !important on size: some legacy post_content pages still embed stale, smaller copies
    of these selectors that render later in the document. */
-.cos-nav-utils a{display:flex;align-items:center;justify-content:center;width:44px!important;height:44px!important;flex:0 0 44px!important;color:var(--hx-ink,#1C1D1F);text-decoration:none;transition:opacity var(--hx-dur-ui,320ms) var(--hx-ease-soft,ease)}
-.cos-nav-utils a:hover{color:var(--hx-ink,#1C1D1F);opacity:.62}
-.cos-nav-utils svg{width:19px;height:19px}
+#cos-nav-wrap#cos-nav-wrap .cos-nav-utils a{display:flex;align-items:center;justify-content:center;width:44px!important;height:44px!important;flex:0 0 44px!important;color:var(--hx-graphite,#2A2B2D);text-decoration:none;transition:opacity var(--hx-dur-ui,320ms) var(--hx-ease-soft,ease)}
+#cos-nav-wrap#cos-nav-wrap .cos-nav-utils a:hover{color:var(--hx-graphite,#2A2B2D);opacity:.6}
+.cos-nav-utils svg{width:20px;height:20px}
 .cos-bag-link{position:relative}
-/* Bag count: a small graphite disc, legible figures (was 8px bold). Filled by
-   inc/commerce.php (cart fragments) + inc/analytics.php; empty = hidden. */
-.cos-bag-count{position:absolute;top:7px;right:3px;min-width:17px;height:17px;padding:0 5px;border-radius:9px;box-sizing:border-box;background:var(--hx-ink,#1C1D1F);color:#FBFAF7;font-family:var(--hx-sans,'Inter',sans-serif);font-size:10px;font-weight:500;line-height:17px;letter-spacing:0;text-align:center;font-variant-numeric:tabular-nums;display:none;pointer-events:none}
-.cos-bag-count:not(:empty){display:block}
+/* Bag count: a small graphite disc, legible figures. Filled by inc/commerce.php
+   (cart fragments) + inc/analytics.php; empty = hidden. */
+#cos-nav-wrap#cos-nav-wrap .cos-bag-count{position:absolute;top:6px;right:2px;min-width:16px;height:16px;padding:0 4px;border-radius:8px;box-sizing:border-box;background:var(--hx-graphite,#2A2B2D);color:var(--hx-white,#FBFAF7);font-family:var(--hx-sans,'Inter',sans-serif);font-size:10px;font-weight:500;line-height:16px;letter-spacing:0;text-align:center;font-variant-numeric:tabular-nums;display:none;pointer-events:none}
+#cos-nav-wrap#cos-nav-wrap .cos-bag-count:not(:empty){display:block}
 
-/* Menu button (phones/tablets) — three hairlines that cross into an ×. */
-.cos-mob-btn{display:none;width:44px!important;height:44px!important;align-items:center;justify-content:center;flex-direction:column;gap:5px;padding:0;margin:0;cursor:pointer;border:none;background:none;color:var(--hx-ink,#1C1D1F);-webkit-tap-highlight-color:transparent}
-.cos-mob-btn span{display:block;width:20px;height:1px;background:currentColor;transition:transform 420ms var(--hx-ease,ease),opacity 240ms var(--hx-ease-soft,ease)}
+/* Menu button (phones/tablets) — two hairlines that cross into an × (the middle span is
+   kept in the markup for older scripts but hidden). */
+#cos-nav-wrap#cos-nav-wrap .cos-mob-btn{display:none;width:44px!important;height:44px!important;align-items:center;justify-content:center;flex-direction:column;gap:8px;padding:0;margin:0;cursor:pointer;border:none;background:none;color:var(--hx-graphite,#2A2B2D);-webkit-tap-highlight-color:transparent}
+.cos-mob-btn span{display:block;width:22px;height:1px;background:currentColor;transition:transform 520ms var(--hx-ease,ease),opacity 240ms var(--hx-ease-soft,ease)}
+.cos-mob-btn #cos-h2{display:none}
 
 /* Focus: one visible ring everywhere in the header. */
 #cos-nav-wrap :is(a,button):focus{outline:none}
-#cos-nav-wrap :is(a,button):focus-visible{outline:2px solid var(--hx-ink,#1C1D1F);outline-offset:4px;border-radius:0}
-.cos-nav-logo a:focus-visible{outline-offset:6px}
+#cos-nav-wrap#cos-nav-wrap :is(a,button):focus-visible{outline:var(--hx-focus-width,2px) solid var(--hx-focus-color,#1C1D1F);outline-offset:4px;border-radius:0;box-shadow:none;background-color:transparent}
+#cos-nav-wrap#cos-nav-wrap .cos-nav-logo a:focus-visible{outline-offset:2px}
 
-@media (max-width:1023.98px){
-	#cos-nav{padding:0 20px}
+/* Homepage: transparent over the light hero until scrolled (or the menu opens). */
+html body.cos-h26 #cos-nav-wrap#cos-nav-wrap:not(.scrolled):not(:has([aria-expanded="true"])){background:transparent;border-bottom-color:transparent}
+/* Over the photograph the solid graphite mark would read as a sticker: let it sit into the
+   light a touch, back to full strength once the bar turns solid. */
+html body.cos-h26 #cos-nav-wrap:not(.scrolled):not(:has([aria-expanded="true"])) .cos-nav-logo img{opacity:.88!important}
+#cos-nav-wrap .cos-nav-logo img{transition:opacity 480ms var(--hx-ease-soft,ease)}
+
+@media (max-width:1279.98px){
 	.cos-nav-links{display:none}
-	.cos-mob-btn{display:flex;position:absolute;left:20px;top:50%;transform:translateY(-50%)}
-	.cos-nav-utils{margin-right:-10px}
-	/* Help + Account live in the menu below 1024px; only the bag stays in the bar. */
-	.cos-nav-utils a.cos-nav-help,.cos-nav-utils a.cos-nav-account{display:none}
-	.cos-nav-logo{position:absolute;left:50%;transform:translateX(-50%)}
-	/* Scales with the clear space between menu button and bag (21px floor). */
-	.cos-nav-logo img{height:clamp(21px,38.2vw - 93px,42px)}
+	#cos-nav-wrap#cos-nav-wrap .cos-mob-btn{display:flex;position:absolute;left:calc(var(--hx-margin,24px) - 11px);top:50%;transform:translateY(-50%)}
+	/* Help + Account live in the menu below 1280px; only the bag stays in the bar. */
+	#cos-nav-wrap#cos-nav-wrap .cos-nav-utils a:is(.cos-nav-help,.cos-nav-account){display:none}
+	#cos-nav-wrap .cos-nav-logo img{height:22px}
 }
+@media (max-width:339.98px){#cos-nav-wrap .cos-nav-logo img{height:20px}}
 
 /* ═══ MOBILE MENU ═══════════════════════════════════════════════════ */
 #cos-mob-menu{
@@ -112,23 +132,23 @@ html body #cos-mob-menu.hxn-sheet{background:#FBFAF7}
 #cos-mob-menu .hxn-menu__link{
 	display:flex;align-items:center;justify-content:space-between;
 	min-height:64px;padding:0;margin:0;
-	border-bottom:1px solid rgba(28,29,31,.1);
+	border-bottom:1px solid var(--hx-line-hair,rgba(28,29,31,.09));
 	font-family:var(--hx-serif,'Cormorant Garamond',Georgia,serif);
 	font-style:normal;font-weight:300;font-size:1.875rem;line-height:1.1;letter-spacing:-.008em;
 	color:var(--hx-ink,#1C1D1F);text-decoration:none;
 	-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent;
 	transition:color var(--hx-dur-ui,320ms) var(--hx-ease-soft,ease);
 }
-#cos-mob-menu .hxn-menu__link:last-child{border-bottom:1px solid rgba(28,29,31,.1)}
+#cos-mob-menu .hxn-menu__link:last-child{border-bottom:1px solid var(--hx-line-hair,rgba(28,29,31,.09))}
 #cos-mob-menu .hxn-menu__link .hx-arrow{opacity:.45;margin-left:16px}
 #cos-mob-menu .hxn-menu__link:is(:hover,:active){color:var(--hx-accent,#625646)}
 #cos-mob-menu .hxn-menu__link[aria-current="page"]{color:var(--hx-accent,#625646)}
 #cos-mob-menu .hxn-menu__link[aria-current="page"] .hx-arrow{opacity:1}
-#cos-mob-menu .hxn-menu__secondary{display:flex;flex-wrap:wrap;gap:0 28px;margin-top:28px}
+#cos-mob-menu .hxn-menu__secondary{display:flex;flex-wrap:wrap;gap:0 32px;margin-top:32px}
 #cos-mob-menu .hxn-menu__small{
 	display:inline-flex;align-items:center;min-height:44px;
-	font-family:var(--hx-sans,'Inter',sans-serif);font-size:.875rem;font-weight:400;line-height:1.4;letter-spacing:.01em;
-	color:var(--hx-text,#3A3B3D);text-decoration:none;
+	font-family:var(--hx-sans,'Inter',sans-serif);font-size:var(--hx-fs-nav,.71875rem);font-weight:450;line-height:1.4;letter-spacing:var(--hx-tr-nav,.13em);text-transform:uppercase;
+	color:var(--hx-graphite,#2A2B2D);text-decoration:none;
 }
 #cos-mob-menu .hxn-menu__small:is(:hover,:active){color:var(--hx-ink,#1C1D1F)}
 #cos-mob-menu .hxn-menu__foot{margin-top:auto;padding-top:48px;display:flex;align-items:center;gap:10px}
@@ -144,7 +164,7 @@ html body #cos-mob-menu.hxn-sheet{background:#FBFAF7}
 	#cos-mob-menu :is(.hxn-menu__link,.hxn-menu__secondary,.hxn-menu__foot){opacity:0;transform:translate3d(0,14px,0);transition:opacity 200ms var(--hx-ease-soft,ease),transform 0s linear 200ms}
 	#cos-mob-menu.open :is(.hxn-menu__link,.hxn-menu__secondary,.hxn-menu__foot){opacity:1;transform:none;transition:opacity 700ms var(--hx-ease,ease),transform 900ms var(--hx-ease,ease);transition-delay:calc(80ms + var(--hxn-i,0) * 55ms)}
 }
-@media (min-width:1024px){#cos-mob-menu{display:none!important}}
+@media (min-width:1280px){#cos-mob-menu{display:none!important}}
 @media (prefers-reduced-motion:reduce){#cos-mob-menu,#cos-mob-menu.open,.cos-mob-btn span,#cos-nav-wrap{transition:none}}
 
 /* ═══ FOOTER ════════════════════════════════════════════════════════ */
@@ -235,7 +255,7 @@ html body #cos-mob-menu.hxn-sheet{background:#FBFAF7}
 #cos-footer#cos-footer .hxf-cols{display:grid;grid-template-columns:1fr;gap:0;padding:0;border-top:1px solid var(--hxf-line)}
 #cos-footer#cos-footer .hxf-brand{order:4;padding:48px 0 40px}
 #cos-footer#cos-footer .hxf-brand__logo{display:inline-block;padding:4px 0}
-#cos-footer#cos-footer .hxf-brand__logo img{display:block;height:40px;width:auto;max-width:none;opacity:1;filter:none}
+#cos-footer#cos-footer .hxf-brand__logo img{display:block;height:30px;width:auto;max-width:none;opacity:1;filter:none}
 #cos-footer#cos-footer .hxf-assure{display:flex;flex-direction:column;gap:6px;margin-top:24px;padding:0;border:0}
 #cos-footer#cos-footer .hxf-assure li{display:block;margin:0;padding:0;font-size:.8125rem;font-weight:400;line-height:1.5;letter-spacing:0;text-transform:none;color:var(--hxf-fg-3)}
 /* The homepage closing statement sits directly above with the same services line. */
@@ -352,6 +372,11 @@ body.cos-h26 #cos-footer#cos-footer .hxf-assure{display:none}
 .hxn-bag__item{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:start;padding:0 0 18px;border-bottom:1px solid rgba(28,29,31,.1)}
 .hxn-bag__media{width:72px;height:90px;background:#F2F2EF;overflow:hidden}
 .hxn-bag__media[hidden]{display:none}
+.hxn-bag__media.is-wide{width:140px;height:90px;background:#FBFAF6}
+.hxn-bag__media.is-wide .hxn-bag__img{object-fit:contain}
+/* Add buttons keep the .hx-btn hover frame only while they invite a click: while busy or
+   showing "Added", the resting cursor must not paint an inset frame that reads as a focus ring. */
+.hx-btn:is([aria-busy="true"],.is-busy,.is-added)::after{opacity:0!important}
 .hxn-bag__img{display:block;width:100%;height:100%;object-fit:cover}
 .hxn-bag__info{min-width:0;padding-top:2px}
 .hxn-bag__name{display:block;font-family:var(--hx-serif,'Cormorant Garamond',Georgia,serif);font-size:1.3125rem;font-weight:400;line-height:1.18;letter-spacing:-.004em;color:var(--hx-ink,#1C1D1F);text-decoration:none;text-wrap:balance}
@@ -371,3 +396,63 @@ body.cos-h26 #cos-footer#cos-footer .hxf-assure{display:none}
 	.hxn-bag__head{margin:0 -12px 10px 0}
 }
 @media (prefers-reduced-motion:reduce){.hxn-bag,.hxn-bag.is-open{transition:none;transform:none}}
+
+/* ═══ FOOTER, round 2 (17 Oct 2026): the page's single dark band ════════
+   Graphite #1C1D1F (= --hx-ink) with pearl type; the newsletter joins it as its top band.
+   Contrast on #1C1D1F: fg #F2F2EF 15.0 · fg-2 #C9C7C1 10.0 · fg-3 #A9A7A1 7.0. The logo is
+   the official artwork in its original colours (logo-master.svg: silver #BCBEC0 lettering
+   9.0:1, red Swiss square), centred above the copyright as the closing seal. */
+#cos-footer#cos-footer{
+	--hxf-bg:var(--hx-ink,#1C1D1F);--hxf-fg:#F2F2EF;--hxf-fg-2:#C9C7C1;--hxf-fg-3:#A9A7A1;
+	--hxf-line:rgba(242,242,239,.14);--hxf-line-strong:rgba(242,242,239,.4);color-scheme:dark;
+}
+#cos-footer#cos-footer .hxf-links a,#cos-footer#cos-footer .hxf-house address{font-size:15px}
+/* three equal link columns; the promise list (inner pages only) runs as one quiet line below */
+#cos-footer#cos-footer .hxf-brand{order:5;padding:32px 0 0}
+#cos-footer#cos-footer .hxf-brand:not(:has(.hxf-assure:not([hidden]))){display:none}
+body.cos-h26 #cos-footer#cos-footer .hxf-brand{display:none}
+@media (min-width:768px){
+	#cos-footer#cos-footer .hxf-cols{grid-template-columns:repeat(3,minmax(0,1fr))}
+	#cos-footer#cos-footer .hxf-brand{order:5;grid-column:1/-1;display:block;padding:40px 0 0}
+	#cos-footer#cos-footer .hxf-assure{flex-direction:row;flex-wrap:wrap;gap:4px 32px;margin:0}
+}
+@media (min-width:1024px){
+	#cos-footer#cos-footer .hxf-cols{grid-template-columns:repeat(12,minmax(0,1fr))}
+	#cos-footer#cos-footer .hxf-group:nth-of-type(1){grid-column:1/5}
+	#cos-footer#cos-footer .hxf-group:nth-of-type(2){grid-column:5/9}
+	#cos-footer#cos-footer .hxf-group:nth-of-type(3){grid-column:9/13}
+	#cos-footer#cos-footer .hxf-brand{grid-column:1/-1}
+	#cos-footer#cos-footer .hxf-assure{flex-direction:row;margin:0}
+}
+/* the seal + small print, centred */
+#cos-footer#cos-footer .hxf-base{flex-direction:column;justify-content:center;align-items:center;gap:20px;padding:56px 0 calc(40px + env(safe-area-inset-bottom,0px));text-align:center}
+#cos-footer#cos-footer .hxf-seal{display:inline-block;padding:6px}
+#cos-footer#cos-footer .hxf-seal img{display:block;height:38px;width:auto;max-width:none;filter:none;opacity:1}
+#cos-footer#cos-footer .hxf-base__end:not(:has(*)){display:none}
+@media (min-width:768px){#cos-footer#cos-footer .hxf-base{padding-bottom:48px}}
+/* consent: the label starts 12px after the drawn 18px box (was ~33px away) */
+#cos-footer#cos-footer .hxf-consent{gap:12px;align-items:flex-start}
+#cos-footer#cos-footer .hxf-consent input{margin:-12px -13px -12px -13px}
+#cos-footer#cos-footer .hxf-consent .cos-nl-consent-text{padding-top:0}
+@media (max-width:1023.98px){#cos-footer#cos-footer .hxf-consent{justify-content:flex-start;text-align:left}}
+/* newsletter band: the same rhythm as the sections; tighter close under the consent on phones */
+#cos-footer#cos-footer .hxf-nl{padding:var(--hx-section-y,88px) 0 56px}
+@media (min-width:1024px){#cos-footer#cos-footer .hxf-nl{padding:var(--hx-section-y,130px) 0 80px}}
+
+/* ═══ Audit fixes, 17 Oct 2026 (audit-c P1-1, P2-6, P2-10) ══════════════ */
+/* 44px tap targets: header logo, footer seal, footer links at every width */
+#cos-nav-wrap .cos-nav-logo a{display:flex;align-items:center;min-height:44px;padding:0}
+#cos-footer#cos-footer .hxf-seal{display:inline-flex;align-items:center;min-height:44px}
+@media (min-width:768px){#cos-footer#cos-footer :is(.hxf-links a,.hxf-house__mail){min-height:44px}}
+/* newsletter: an unmistakable focus state (2px pearl outline round the whole field row) */
+#cos-footer#cos-footer .hxf-form__row:focus-within{border-bottom-color:var(--hxf-fg);box-shadow:none;outline:2px solid var(--hxf-fg);outline-offset:6px}
+#cos-footer#cos-footer .hxf-form__btn:focus-visible{outline-offset:2px}
+/* phones: reading text ≥15px, uppercase labels ≥12px */
+#cos-mob-menu .hxn-menu__small{font-size:.75rem}
+#cos-mob-menu .hxn-menu__foot p{font-size:.75rem}
+#cos-footer#cos-footer .hxf-group__title{font-size:.75rem}
+@media (max-width:767.98px){
+	#cos-footer#cos-footer :is(.hxf-consent,.hxf-base__copy,.hxf-assure li,.cos-footer-cookie-link,.hxf-noscript){font-size:.9375rem}
+	#cos-footer#cos-footer .hxf-status{font-size:.9375rem}
+}
+#cos-footer#cos-footer .hxf-consent input{accent-color:#B4B9BF}

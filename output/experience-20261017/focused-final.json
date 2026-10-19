@@ -1,0 +1,221 @@
+[
+  {
+    "name": "iphone",
+    "route": "/shop/",
+    "overflow": 0,
+    "actions": [
+      {
+        "text": "Add to bag",
+        "size": "15px",
+        "width": 342,
+        "height": 52,
+        "overflow": 0
+      },
+      {
+        "text": "Add to bag",
+        "size": "15px",
+        "width": 164.375,
+        "height": 48,
+        "overflow": 0
+      },
+      {
+        "text": "Add to bag",
+        "size": "15px",
+        "width": 164.375,
+        "height": 48,
+        "overflow": 0
+      },
+      {
+        "text": "Add to bag",
+        "size": "15px",
+        "width": 164.375,
+        "height": 48,
+        "overflow": 0
+      },
+      {
+        "text": "Add to bag",
+        "size": "15px",
+        "width": 164.375,
+        "height": 48,
+        "overflow": 0
+      }
+    ],
+    "benefits": [
+      "16px",
+      "16px",
+      "16px",
+      "16px"
+    ],
+    "violations": []
+  },
+  {
+    "name": "iphone",
+    "route": "/products/24h-regeneration-cream/",
+    "overflow": 0,
+    "actions": [
+      {
+        "text": "Add to bag",
+        "size": "15px",
+        "width": 206,
+        "height": 52,
+        "overflow": 0
+      },
+      {
+        "text": "Add to bag",
+        "size": "12px",
+        "width": 141.015625,
+        "height": 48,
+        "overflow": 0
+      }
+    ],
+    "benefits": [],
+    "gallery": "0",
+    "violations": []
+  },
+  {
+    "name": "narrow",
+    "route": "/shop/",
+    "overflow": 0,
+    "actions": [
+      {
+        "text": "Add to bag",
+        "size": "15px",
+        "width": 272,
+        "height": 52,
+        "overflow": 0
+      },
+      {
+        "text": "Add to bag",
+        "size": "15px",
+        "width": 130,
+        "height": 48,
+        "overflow": 0
+      },
+      {
+        "text": "Add to bag",
+        "size": "15px",
+        "width": 130,
+        "height": 48,
+        "overflow": 0
+      },
+      {
+        "text": "Add to bag",
+        "size": "15px",
+        "width": 130,
+        "height": 48,
+        "overflow": 0
+      },
+      {
+        "text": "Add to bag",
+        "size": "15px",
+        "width": 130,
+        "height": 48,
+        "overflow": 0
+      }
+    ],
+    "benefits": [
+      "16px",
+      "16px",
+      "16px",
+      "16px"
+    ],
+    "violations": []
+  },
+  {
+    "name": "narrow",
+    "route": "/products/24h-regeneration-cream/",
+    "overflow": 0,
+    "actions": [
+      {
+        "text": "Add to bag",
+        "size": "15px",
+        "width": 136,
+        "height": 52,
+        "overflow": 0
+      },
+      {
+        "text": "Add to bag",
+        "size": "12px",
+        "width": 136.21875,
+        "height": 48,
+        "overflow": 0
+      }
+    ],
+    "benefits": [],
+    "gallery": "0",
+    "violations": []
+  },
+  {
+    "name": "desktop",
+    "route": "/shop/",
+    "overflow": 0,
+    "actions": [
+      {
+        "text": "Add to bag",
+        "size": "15px",
+        "width": 172.265625,
+        "height": 52,
+        "overflow": 0
+      },
+      {
+        "text": "Add to bag",
+        "size": "15px",
+        "width": 240,
+        "height": 48,
+        "overflow": 0
+      },
+      {
+        "text": "Add to bag",
+        "size": "15px",
+        "width": 240,
+        "height": 48,
+        "overflow": 0
+      },
+      {
+        "text": "Add to bag",
+        "size": "15px",
+        "width": 240,
+        "height": 48,
+        "overflow": 0
+      },
+      {
+        "text": "Add to bag",
+        "size": "15px",
+        "width": 240,
+        "height": 48,
+        "overflow": 0
+      }
+    ],
+    "benefits": [
+      "16px",
+      "16px",
+      "16px",
+      "16px"
+    ],
+    "violations": []
+  },
+  {
+    "name": "desktop",
+    "route": "/products/24h-regeneration-cream/",
+    "overflow": 0,
+    "actions": [
+      {
+        "text": "Add to bag",
+        "size": "15px",
+        "width": 344,
+        "height": 52,
+        "overflow": 0
+      },
+      {
+        "text": "Add to bag",
+        "size": "15px",
+        "width": 0,
+        "height": 0,
+        "overflow": 0
+      }
+    ],
+    "benefits": [],
+    "gallery": "0",
+    "violations": []
+  }
+]

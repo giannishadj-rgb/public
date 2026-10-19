@@ -1,0 +1,466 @@
+{
+  "date": "2026-10-18",
+  "scope": "World-class hero (wc-hero-wide, wc-hero-tall)",
+  "paths_relative_to": "WordPress public directory",
+  "source": {
+    "path": "../design-sources/home-2026/hero-jar_master.png",
+    "sha256": "23bb13b13f181606efc3a7117df24fd24930faa4c5b72828937251c7d4798641",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "supplied_by": "owner, 11 Oct 2026 (see build_hero_jar.py)"
+  },
+  "builder": {
+    "path": "../design-sources/home-2026/build_wc_hero.py",
+    "sha256": "46e463403e691494b6132b4f08d31ffbd7b139f47f5e7c619e5381f86f91fc66"
+  },
+  "operations": [
+    "Global grade on every pixel (product included): {\"lift\": 0.1, \"sat\": 0.62, \"cool\": 0.035, \"gamma\": 0.92}",
+    "Product zone (traced LID + JAR polygons; the cream crown above y=470 pulled in 2px to the true cream edge) kept as the graded photograph; real floor reflection kept, fading over 210px below the base line",
+    "Environment outside the product replaced: built ivory/champagne studio cove (soft-horizon wall + glossy floor + light pool), with the photograph\u2019s own fine light detail decaying over 160px from the silhouette",
+    "Fine monochrome grain (sigma 1.1 levels) on the built set only, against banding",
+    "Whole composite uniformly scaled (no mirroring, rotation or warping); output unsharp mask on the whole frame {\"radius\": 1.1, \"percent\": 38, \"threshold\": 2}",
+    "AVIF/WebP/JPEG export {\"avif\": {\"quality\": 80, \"speed\": 4}, \"webp\": {\"quality\": 82, \"method\": 6}, \"jpg\": {\"quality\": 84, \"optimize\": true, \"progressive\": true}}"
+  ],
+  "protected": {
+    "polygons": {
+      "LID": [
+        [
+          685,
+          572
+        ],
+        [
+          687,
+          550
+        ],
+        [
+          697,
+          525
+        ],
+        [
+          712,
+          500
+        ],
+        [
+          722,
+          478
+        ],
+        [
+          735,
+          452
+        ],
+        [
+          755,
+          425
+        ],
+        [
+          780,
+          400
+        ],
+        [
+          800,
+          383
+        ],
+        [
+          830,
+          366
+        ],
+        [
+          850,
+          360
+        ],
+        [
+          862,
+          362
+        ],
+        [
+          872,
+          370
+        ],
+        [
+          926,
+          413
+        ],
+        [
+          927,
+          450
+        ],
+        [
+          920,
+          453
+        ],
+        [
+          905,
+          490
+        ],
+        [
+          892,
+          505
+        ],
+        [
+          877,
+          532
+        ],
+        [
+          850,
+          565
+        ],
+        [
+          820,
+          600
+        ],
+        [
+          790,
+          627
+        ],
+        [
+          760,
+          639
+        ],
+        [
+          750,
+          641
+        ],
+        [
+          735,
+          625
+        ],
+        [
+          705,
+          595
+        ],
+        [
+          692,
+          587
+        ]
+      ],
+      "JAR": [
+        [
+          930,
+          452
+        ],
+        [
+          940,
+          440
+        ],
+        [
+          944,
+          418
+        ],
+        [
+          960,
+          404
+        ],
+        [
+          1000,
+          393
+        ],
+        [
+          1050,
+          388
+        ],
+        [
+          1062,
+          382
+        ],
+        [
+          1072,
+          364
+        ],
+        [
+          1078,
+          367
+        ],
+        [
+          1088,
+          388
+        ],
+        [
+          1100,
+          391
+        ],
+        [
+          1140,
+          397
+        ],
+        [
+          1160,
+          408
+        ],
+        [
+          1176,
+          423
+        ],
+        [
+          1183,
+          438
+        ],
+        [
+          1184,
+          456
+        ],
+        [
+          1200,
+          466
+        ],
+        [
+          1213,
+          476
+        ],
+        [
+          1216,
+          490
+        ],
+        [
+          1216,
+          650
+        ],
+        [
+          1046,
+          662
+        ],
+        [
+          884,
+          650
+        ],
+        [
+          884,
+          540
+        ],
+        [
+          895,
+          500
+        ],
+        [
+          915,
+          470
+        ]
+      ],
+      "REFLECTION": [
+        [
+          676,
+          640
+        ],
+        [
+          1216,
+          640
+        ],
+        [
+          1216,
+          800
+        ],
+        [
+          1046,
+          812
+        ],
+        [
+          880,
+          808
+        ],
+        [
+          800,
+          840
+        ],
+        [
+          690,
+          836
+        ]
+      ]
+    },
+    "note": "inside LID/JAR every pixel is the graded master pixel (verified below before scaling)",
+    "verification": {
+      "MAE_8bit_inside_polygons": 0.0,
+      "max_abs_8bit_core": 0.0
+    }
+  },
+  "fidelity_note": "The master is owner-supplied. Its label reads \"50 mL\" and the product name is darker than on the 2020 packshot (packshots-2026-10-12/cream.jpg, \"50ml\"); this is the photograph as supplied, not an edit.",
+  "frames": {
+    "wide": {
+      "offset": [
+        266.7,
+        -29.5
+      ],
+      "scale": 1.45,
+      "size": [
+        2560,
+        1300
+      ]
+    },
+    "tall": {
+      "offset": [
+        -1106.04,
+        381.9
+      ],
+      "scale": 1.74,
+      "size": [
+        1080,
+        2340
+      ]
+    }
+  },
+  "derivatives": [
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-hero-wide-1440.avif",
+      "bytes": 17987,
+      "dimensions": [
+        1440,
+        731
+      ],
+      "sha256": "edc7fb7f6137a90fc98c87223bd6fb8d6d40080451541d5e937a07d53e3df654"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-hero-wide-1440.webp",
+      "bytes": 14878,
+      "dimensions": [
+        1440,
+        731
+      ],
+      "sha256": "5c06fefa3e0ef3038e5c6c9cae38bd3b1722f45faacade231ef368a9749ffa41"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-hero-wide-1440.jpg",
+      "bytes": 33083,
+      "dimensions": [
+        1440,
+        731
+      ],
+      "sha256": "7aa8e4169066d46a060a92290df3cc6105bae4781f5e9115057baf5a7acbfa23"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-hero-wide-1920.avif",
+      "bytes": 26446,
+      "dimensions": [
+        1920,
+        975
+      ],
+      "sha256": "f9e5fbd018a3fbe4c1c7fab9127908cb442d2e3c7dc053d652c405ebaf03feab"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-hero-wide-1920.webp",
+      "bytes": 22048,
+      "dimensions": [
+        1920,
+        975
+      ],
+      "sha256": "b86148e182129ee778753520b6d35814a2736e3d813f51b58e5df5b9915768ef"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-hero-wide-1920.jpg",
+      "bytes": 58757,
+      "dimensions": [
+        1920,
+        975
+      ],
+      "sha256": "b784d2832661139f52964fea27d1bca98c9de2f492fb40858f234a0ab4793331"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-hero-wide-2560.avif",
+      "bytes": 40897,
+      "dimensions": [
+        2560,
+        1300
+      ],
+      "sha256": "fcb11117457ab72799b917d884347fefd6adac303442ed631f0ad207f7ce1de8"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-hero-wide-2560.webp",
+      "bytes": 31944,
+      "dimensions": [
+        2560,
+        1300
+      ],
+      "sha256": "543e1dcae9423a70968b0c1f4d16c8d1ebccaea8742ac29c5812a5b71119970a"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-hero-wide-2560.jpg",
+      "bytes": 110150,
+      "dimensions": [
+        2560,
+        1300
+      ],
+      "sha256": "d37d72747d5359e585bd3bf553799a8a7b9d9c95777b0ac8a416f49c94741627"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-hero-tall-640.avif",
+      "bytes": 22138,
+      "dimensions": [
+        640,
+        1387
+      ],
+      "sha256": "cbedbb8877ac4aea8c13b90271102892f6e23709de618490a02ebbd67ecdf32b"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-hero-tall-640.webp",
+      "bytes": 18140,
+      "dimensions": [
+        640,
+        1387
+      ],
+      "sha256": "4df5a69d7b7e73f284a349c527c4d191fa6276eda33f0428343dedad4cd7d177"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-hero-tall-640.jpg",
+      "bytes": 40132,
+      "dimensions": [
+        640,
+        1387
+      ],
+      "sha256": "dc99b35312644e0719ae4dd4671cc42d20adbbe92557bf702e5a94e8ef3e4742"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-hero-tall-860.avif",
+      "bytes": 32141,
+      "dimensions": [
+        860,
+        1863
+      ],
+      "sha256": "6f84433df0d946fe7843aad74a9f465d8c87c84033ef3dfa9b086f4782386f80"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-hero-tall-860.webp",
+      "bytes": 25502,
+      "dimensions": [
+        860,
+        1863
+      ],
+      "sha256": "bed86fc20d772376c4247aeda032857b789c7ab93dcf892cb954a27c0611caa4"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-hero-tall-860.jpg",
+      "bytes": 66575,
+      "dimensions": [
+        860,
+        1863
+      ],
+      "sha256": "c901a0c4e5800b01018bf896a754734261017404a3677cd8e242c85da5bbb3ec"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-hero-tall-1080.avif",
+      "bytes": 43131,
+      "dimensions": [
+        1080,
+        2340
+      ],
+      "sha256": "910e4fb5c99914d4a96235bc3b40342b9dc14d0cdfa226226c53fdb64265dcd8"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-hero-tall-1080.webp",
+      "bytes": 33362,
+      "dimensions": [
+        1080,
+        2340
+      ],
+      "sha256": "5f6d219e95e42a5ed2b8a2cf20a9054aca892c38c6a5ab2b94c3b9be19cc21a2"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-hero-tall-1080.jpg",
+      "bytes": 101698,
+      "dimensions": [
+        1080,
+        2340
+      ],
+      "sha256": "92dad53db6d7f7881b5b06fcda1700f6e064789024d83fccb858bc8b992b61f0"
+    }
+  ]
+}

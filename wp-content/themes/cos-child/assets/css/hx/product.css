@@ -2,7 +2,7 @@
    hx/product.css — the five product pages (hxpd-, 16 Oct 2026). Loaded only by
    woocommerce/single-product.php, after system.css. Tokens: system.css header.
    Layout: ≥1024px gallery stack (7 cols) + sticky purchase column (5 cols);
-   below, a swipe row then the purchase panel, with a fixed add-to-bag bar.
+   below, product introduction, swipe row, then purchase controls and a fixed add-to-bag bar.
    ========================================================================== */
 
 /* Sticky needs a non-scrolling ancestor chain: navigation.php sets overflow-x:hidden on
@@ -10,7 +10,7 @@
 html:has(body.hxpd-page),body.hxpd-page{overflow-x:clip}
 body.hxpd-page{background:var(--hx-white)}
 
-.hxpd{padding-top:var(--cos-nav-h,80px);background:var(--hx-white);color:var(--hx-text);font-family:var(--hx-sans)}
+.hxpd{padding-top:var(--cos-nav-h,80px);background:var(--hx-white);color:var(--hx-text);font-family:var(--hx-sans);overflow-wrap:anywhere}
 .hxpd :where(h1,h2,h3,p,ul,ol,dl,dd,figure){margin:0;padding:0}
 .hxpd :where(ul,ol){list-style:none}
 .hxpd *{box-sizing:border-box}
@@ -71,13 +71,14 @@ body.hxpd-page{background:var(--hx-white)}
 /* Form */
 .hxpd-notices{margin-top:20px;font-size:var(--hx-fs-detail);color:var(--hx-ink)}
 .hxpd-notices :where(ul,div){margin:0;padding:12px 16px;list-style:none;border-left:2px solid var(--hx-accent);background:var(--hx-ivory)}
-.hxpd-form{display:flex;gap:10px;margin-top:28px}
-.hxpd-qty{display:flex;align-items:stretch;flex:none;height:52px;border:1px solid var(--hx-line-strong);background:var(--hx-white)}
+.hxpd-form{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.hxpd-qty{display:flex;align-items:stretch;flex:none;min-height:52px;border:1px solid var(--hx-line-strong);background:var(--hx-white)}
 .hxpd-qty__btn{width:44px;padding:0;border:0;background:none;color:var(--hx-ink);font:300 20px/1 var(--hx-sans);cursor:pointer;transition:background-color var(--hx-dur-ui) var(--hx-ease-soft)}
 .hxpd-qty__btn:hover{background:var(--hx-pearl)}
 .hxpd-qty__input{width:36px;border:0;background:none;text-align:center;font:400 15px/1 var(--hx-sans);color:var(--hx-ink);-moz-appearance:textfield;appearance:textfield;font-variant-numeric:tabular-nums}
 .hxpd-qty__input::-webkit-inner-spin-button,.hxpd-qty__input::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
-.hxpd-add{flex:1;min-width:0}
+.hxpd-add{flex:1 1 8em;min-width:0;white-space:normal;height:auto;padding-block:14px;line-height:1.3}
+.hxpd-add,.hxpd-bar__btn{font-size:.9375rem;letter-spacing:.08em}
 .hxpd-add.is-busy,.hxpd-bar__btn.is-busy{opacity:.7;cursor:progress}
 .hxpd-unavailable{margin-top:28px;font-size:var(--hx-fs-body);color:var(--hx-ink)}
 .hxpd-confirm{min-height:0;margin-top:12px;font-size:var(--hx-fs-detail);color:var(--hx-ink)}
@@ -85,7 +86,7 @@ body.hxpd-page{background:var(--hx-white)}
 .hxpd-confirm__link{color:var(--hx-ink);text-underline-offset:3px;display:inline-flex;align-items:center;min-height:44px}
 .hxpd-wcform{margin-top:28px}
 
-.hxpd-assure{display:flex;flex-wrap:wrap;gap:0 22px;margin-top:14px;font-size:13px;line-height:1.5;color:var(--hx-muted)}
+.hxpd-assure{display:flex;flex-wrap:wrap;gap:0 22px;margin-top:14px;font-size:.875rem;line-height:1.5;color:var(--hx-muted)}
 .hxpd-assure li{display:flex;align-items:center;min-height:44px}
 .hxpd-assure li + li::before{content:"";width:3px;height:3px;border-radius:50%;background:var(--hx-chrome);margin-right:22px}
 .hxpd-assure a{color:inherit;text-decoration:underline;text-decoration-color:var(--hx-line-strong);text-underline-offset:3px}
@@ -93,27 +94,27 @@ body.hxpd-page{background:var(--hx-white)}
 .hxpd-assure a:hover{color:var(--hx-ink);text-decoration-color:currentColor}
 
 .hxpd-benefits{margin-top:24px;padding-top:22px;border-top:1px solid var(--hx-line)}
-.hxpd-benefits li{position:relative;padding-left:22px;font-size:15px;line-height:1.6;color:var(--hx-text)}
+.hxpd-benefits li{position:relative;padding-left:22px;font-size:1rem;line-height:1.6;color:var(--hx-text)}
 .hxpd-benefits li + li{margin-top:6px}
 .hxpd-benefits li::before{content:"";position:absolute;left:0;top:.8em;width:10px;height:1px;background:var(--hx-accent)}
 
 /* Accordions (panel + FAQ) */
 .hxpd-acc{margin-top:28px;border-top:1px solid var(--hx-line)}
 .hxpd-acc__item{border-bottom:1px solid var(--hx-line)}
-.hxpd-acc__sum{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:56px;padding:10px 0;cursor:pointer;list-style:none;font-size:var(--hx-fs-label);font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--hx-ink)}
+.hxpd-acc__sum{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:56px;padding:10px 0;cursor:pointer;list-style:none;font-size:.9375rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--hx-ink)}
 .hxpd-acc__sum::-webkit-details-marker{display:none}
 .hxpd-acc__icon{position:relative;flex:none;width:11px;height:11px}
 .hxpd-acc__icon::before,.hxpd-acc__icon::after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;margin-top:-.5px;background:currentColor;transition:transform var(--hx-dur-ui) var(--hx-ease-soft)}
 .hxpd-acc__icon::after{transform:rotate(90deg)}
 details[open] > .hxpd-acc__sum .hxpd-acc__icon::after{transform:rotate(0)}
-.hxpd-acc__text,.hxpd-inci{padding:0 0 20px;font-size:14px;line-height:1.7;color:var(--hx-text)}
+.hxpd-acc__text,.hxpd-inci{padding:0 0 20px;font-size:1rem;line-height:1.7;color:var(--hx-text)}
 .hxpd-acc__text a{color:var(--hx-ink);text-underline-offset:3px}
-.hxpd-inci{font-size:13px;line-height:1.8;letter-spacing:.01em;color:var(--hx-muted)}
+.hxpd-inci{line-height:1.8;letter-spacing:.01em;color:var(--hx-muted)}
 .hxpd-inci strong{font-weight:500;color:var(--hx-ink)}
 .hxpd-inci + .hxpd-inci{margin-top:-6px}
 .hxpd-inci__note{padding:0 0 20px;font-size:12px;color:var(--hx-muted)}
 .hxpd-specs{padding:0 0 18px}
-.hxpd-specs div{display:grid;grid-template-columns:40% 1fr;gap:12px;padding:8px 0;font-size:14px;line-height:1.5}
+.hxpd-specs div{display:grid;grid-template-columns:40% 1fr;gap:12px;padding:8px 0;font-size:1rem;line-height:1.5}
 .hxpd-specs dt{color:var(--hx-muted)}
 .hxpd-specs dd{color:var(--hx-ink)}
 
@@ -131,6 +132,26 @@ details[open] > .hxpd-acc__sum .hxpd-acc__icon::after{transform:rotate(0)}
 }
 @media (min-width:1024px) and (min-height:760px){
 	.hxpd-panel{position:sticky;top:calc(var(--cos-nav-h,80px) + 16px)}
+}
+
+/* The formula and its purpose introduce the mobile photo. The purchase controls
+   follow immediately; desktop retains its complete adjacent purchase column. */
+@media (max-width:1023.98px){
+	.hxpd-buy__grid{display:flex;flex-direction:column}
+	.hxpd-panel,.hxpd-panel__inner{display:contents}
+	.hxpd-summary{order:-1;padding:24px var(--hx-margin) 20px}
+	.hxpd-summary .hxpd-step{margin-bottom:12px;font-size:.875rem}
+	.hxpd-summary .hxpd-promise{margin-top:12px}
+	.hxpd-purchase{padding:20px var(--hx-margin) 56px}
+	.hxpd-purchase>.hxpd-price{margin-top:0}
+	.hxpd-purchase .hxpd-form{margin-top:20px}
+}
+@media (max-width:639.98px){
+	.hxpd-gallery__frame{aspect-ratio:auto;height:min(64vw,250px)}
+	.hxpd-gallery__frame img{object-position:50% 80%}
+	.hxpd-gallery__item--lead img{object-fit:contain}
+	.hxpd-gallery--cream .hxpd-gallery__item--lead img{object-fit:cover;object-position:50% 80%}
+	.hxpd-gallery__meter{bottom:12px}
 }
 
 /* ─── Sections below ────────────────────────────────────────────── */
@@ -155,7 +176,7 @@ details[open] > .hxpd-acc__sum .hxpd-acc__icon::after{transform:rotate(0)}
 .hxpd-actives__item{padding-top:20px;border-top:1px solid var(--hx-line)}
 .hxpd-actives__num{display:block;margin-bottom:18px}
 .hxpd-actives__name{font-family:var(--hx-serif);font-weight:400;font-size:var(--hx-fs-title);line-height:var(--hx-lh-title);color:var(--hx-ink);margin-bottom:10px;text-wrap:balance}
-.hxpd-actives__text{font-size:15px;line-height:1.65;color:var(--hx-text)}
+.hxpd-actives__text{font-size:1rem;line-height:1.65;color:var(--hx-text)}
 .hxpd-actives__more{margin-top:36px}
 @media (min-width:640px){.hxpd-actives__list{grid-template-columns:1fr 1fr}}
 @media (min-width:1100px){.hxpd-actives__list{grid-template-columns:repeat(4,1fr)}}
@@ -224,7 +245,7 @@ a.hxpd-ritual__link:hover .hxpd-ritual__object img{transform:translateY(-6px)}
 .hxpd-set__step .hx-step{font-size:15px}
 .hxpd-set__step .hxpd-step__rule{width:20px}
 .hxpd-set__name{margin-top:10px;font-family:var(--hx-serif);font-size:var(--hx-fs-title);line-height:var(--hx-lh-title);color:var(--hx-ink);text-wrap:balance}
-.hxpd-set__copy{margin-top:10px;max-width:22em;font-size:15px;line-height:1.6;color:var(--hx-text)}
+.hxpd-set__copy{margin-top:10px;max-width:22em;font-size:1rem;line-height:1.6;color:var(--hx-text)}
 .hxpd-set__meta{margin-top:12px;font-size:13px;color:var(--hx-muted);font-variant-numeric:tabular-nums}
 .hxpd-set__cta{display:inline-flex;align-items:center;margin-top:10px;min-height:44px;font-size:var(--hx-fs-detail);font-weight:500;color:var(--hx-ink)}
 .hxpd-set__link:hover .hx-arrow{transform:translateX(4px)}
@@ -238,13 +259,13 @@ a.hxpd-ritual__link:hover .hxpd-ritual__object img{transform:translateY(-6px)}
 .hxpd-faq__a{padding:0 0 22px;max-width:40em}
 
 /* ─── Phone add-to-bag bar ─────────────────────────────────────── */
-.hxpd-bar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;align-items:center;gap:16px;padding:10px var(--hx-margin) calc(10px + env(safe-area-inset-bottom,0px));background:rgba(251,250,247,.97);border-top:1px solid var(--hx-line);transform:translateY(105%);visibility:hidden;transition:transform 420ms var(--hx-ease),visibility 0s 420ms}
+.hxpd-bar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;padding:10px var(--hx-margin) calc(10px + env(safe-area-inset-bottom,0px));background:rgba(251,250,247,.97);border-top:1px solid var(--hx-line);transform:translateY(105%);visibility:hidden;transition:transform 420ms var(--hx-ease),visibility 0s 420ms}
 .hxpd-bar.is-on{transform:none;visibility:visible;transition:transform 420ms var(--hx-ease),visibility 0s}
-.hxpd-bar__info{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.hxpd-bar__info{flex:1 1 8em;min-width:0;display:flex;flex-direction:column;gap:2px}
 .hxpd-bar__name{font-family:var(--hx-serif);font-size:17px;line-height:1.2;color:var(--hx-ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .hxpd-bar__price{font-size:13px;color:var(--hx-muted);font-variant-numeric:tabular-nums}
-.hxpd-bar__btn{flex:none;min-height:48px;padding:0 24px}
-body.hxpd-bar-on{padding-bottom:calc(70px + env(safe-area-inset-bottom,0px))}
+.hxpd-bar__btn{flex:1 1 8em;min-width:0;min-height:48px;height:auto;padding:12px 20px;white-space:normal;line-height:1.3}
+body.hxpd-bar-on{padding-bottom:calc(7em + env(safe-area-inset-bottom,0px))}
 @media (min-width:1024px){.hxpd-bar{display:none}body.hxpd-bar-on{padding-bottom:0}}
 
 @media (prefers-reduced-motion:reduce){
@@ -256,3 +277,5 @@ body.hxpd-bar-on{padding-bottom:calc(70px + env(safe-area-inset-bottom,0px))}
 /* Tap targets: inline links in the assurances and accordions keep a 44px hit area. */
 .hxpd-assure a,.hxpd-acc__text a{display:inline-flex;align-items:center;min-height:44px}
 .hxpd-acc__text a{vertical-align:middle}
+/* Set label on phones: two clean lines, no dangling rule. */
+@media (max-width:599.98px){.hxpd--set .hxpd-step__rule{display:none}.hxpd--set .hxpd-step__of{flex-basis:100%;margin-left:0}}

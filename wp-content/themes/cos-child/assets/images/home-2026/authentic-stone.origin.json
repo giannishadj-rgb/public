@@ -1,0 +1,290 @@
+{
+  "operations": [
+    "Crop only photographic surround to4:5; complete packages retained",
+    "Proportional Lanczos scaling and encoding only; no retouching or package edits"
+  ],
+  "sources": {
+    "cleanser": {
+      "file": "design-sources\\home-2026\\gauntlet-supplied-20261018\\product-photo-candidates\\5580.JPG",
+      "sha256": "057004ca2b11c2cf340714f8961b562fbcf1d3742ae7d3f7830c2df715c7f1a8",
+      "crop": [
+        1242,
+        0,
+        2836,
+        3545
+      ]
+    },
+    "serum": {
+      "file": "design-sources\\home-2026\\gauntlet-supplied-20261018\\product-photo-candidates\\5491.JPG",
+      "sha256": "8b86e6946b7618b5a11f9f869cda34cf37c3d4a1abefc40d9b1fe9dc4a76056c",
+      "crop": [
+        1254,
+        0,
+        2864,
+        3580
+      ]
+    },
+    "eye": {
+      "file": "design-sources\\home-2026\\gauntlet-supplied-20261018\\product-photo-candidates\\5517a.JPG",
+      "sha256": "ceeb7050881d0630366739de1b1f45dae715cc32083e9b0c7c5438561d5033ea",
+      "crop": [
+        1230,
+        2,
+        2808,
+        3510
+      ]
+    },
+    "cream": {
+      "file": "design-sources\\home-2026\\gauntlet-supplied-20261018\\product-photo-candidates\\5438.JPG",
+      "sha256": "eabe136250332a693129e7470877fc45c18275b3608f4e3a58e47038c1fea043",
+      "crop": [
+        1214,
+        0,
+        2772,
+        3465
+      ]
+    }
+  },
+  "outputs": [
+    {
+      "file": "auth-stone-cleanser-320.avif",
+      "sha256": "6e595990a86037d2e111f180e36fc0f263e54a2578743beff417af3a87918465",
+      "bytes": 4132
+    },
+    {
+      "file": "auth-stone-cleanser-320.webp",
+      "sha256": "dbe26c23a543d386b39cad542f6661d58b57099258b58651d98ba89710f52b05",
+      "bytes": 7998
+    },
+    {
+      "file": "auth-stone-cleanser-320.jpg",
+      "sha256": "31f2aca3f1e8e0e3f81f985c4163a486aae9053faf1b40aec88ef45715406380",
+      "bytes": 14395
+    },
+    {
+      "file": "auth-stone-cleanser-480.avif",
+      "sha256": "42733f477ae9d5b106eb3ff0534df1b67f9c5c0fd054f65072ddc77afb566697",
+      "bytes": 7300
+    },
+    {
+      "file": "auth-stone-cleanser-480.webp",
+      "sha256": "53ca51c0169e1595505052539e9d4d10474e7a1ed7ba467bf2d4d7b866eae90b",
+      "bytes": 15988
+    },
+    {
+      "file": "auth-stone-cleanser-480.jpg",
+      "sha256": "9b0c62f000162bdea045d9741cc244b0535c27994b68a0ec784c4e788e918b14",
+      "bytes": 24984
+    },
+    {
+      "file": "auth-stone-cleanser-640.avif",
+      "sha256": "55ef689987391febf978785e560e5f39a168ea435f24fa0709525e9e826ee005",
+      "bytes": 10821
+    },
+    {
+      "file": "auth-stone-cleanser-640.webp",
+      "sha256": "0c0ae4aed09d5dc6c717d63872ef5fea26b28e1fd7309885020b9d6e8bdab6c3",
+      "bytes": 25254
+    },
+    {
+      "file": "auth-stone-cleanser-640.jpg",
+      "sha256": "5c07f3da4cbd372fb6a3a90820a7f1e79ba203fcf8a94e9fdaa7694d1552f00f",
+      "bytes": 38275
+    },
+    {
+      "file": "auth-stone-cleanser-960.avif",
+      "sha256": "a629712fb5184a7bbbc246cc5f7b41c953d039e16e6aa714ed7873f32c765a67",
+      "bytes": 19009
+    },
+    {
+      "file": "auth-stone-cleanser-960.webp",
+      "sha256": "427a00d0b701a7388e0fb1d8ea83d85f9121d4cdfeee21186bcd7f1f83a80511",
+      "bytes": 51542
+    },
+    {
+      "file": "auth-stone-cleanser-960.jpg",
+      "sha256": "b7d1cc03d22bebb673ce2fd301a7a40abf30d9eae7bd25bcf2d371fdb6cb8cf6",
+      "bytes": 70691
+    },
+    {
+      "file": "auth-stone-serum-320.avif",
+      "sha256": "ea937cd0fe3ff406dae5409af9f0b550d12dcf8aaea4f39bbaa94b2fcfe42ee7",
+      "bytes": 4658
+    },
+    {
+      "file": "auth-stone-serum-320.webp",
+      "sha256": "189cd0f349d4a25df54bc9ef5f816914bb43b6443b73ad10629f57bf73a677cf",
+      "bytes": 9272
+    },
+    {
+      "file": "auth-stone-serum-320.jpg",
+      "sha256": "007b52626c0271d29daf437f07d5d79e5026883795b6d724e7975b735ebf4d66",
+      "bytes": 15584
+    },
+    {
+      "file": "auth-stone-serum-480.avif",
+      "sha256": "7bfe66012b708da831a2eb02019e3be5962e499b0a2993de0a424c81aabd3cc9",
+      "bytes": 8764
+    },
+    {
+      "file": "auth-stone-serum-480.webp",
+      "sha256": "fe410c8193612dd1f6cb57017c9de26cbab184a605e864ce367a848b54fa8712",
+      "bytes": 19316
+    },
+    {
+      "file": "auth-stone-serum-480.jpg",
+      "sha256": "ea8fb39e5f25e9f71bf044973a641cd0c1a5f7b9cc3f128f2cf29c71ea9c6b23",
+      "bytes": 28507
+    },
+    {
+      "file": "auth-stone-serum-640.avif",
+      "sha256": "320b71fb75513e4347fcfcc4a6b50551b2105e7cf93e1fccfad8f002aaa73def",
+      "bytes": 13652
+    },
+    {
+      "file": "auth-stone-serum-640.webp",
+      "sha256": "10321b61bd98576f019c48550a67b1211df214cf84f56195522d6c92dfe91858",
+      "bytes": 31252
+    },
+    {
+      "file": "auth-stone-serum-640.jpg",
+      "sha256": "bfeaed3c60d1d8b888056317c9a850f7a2c9e1b63d64434e5451bf7de6ebb714",
+      "bytes": 43911
+    },
+    {
+      "file": "auth-stone-serum-960.avif",
+      "sha256": "f0df94f4a68f75e9260b7127a0eca891d7b3182ad80697e5e9a8555a7b381140",
+      "bytes": 25974
+    },
+    {
+      "file": "auth-stone-serum-960.webp",
+      "sha256": "f888513661695f77fda96a24c5fb73b1955ff251056e83cd2feae0a32a33fe26",
+      "bytes": 65602
+    },
+    {
+      "file": "auth-stone-serum-960.jpg",
+      "sha256": "306724841a0e00d55f2ff9ddc7d535d3faef5c2aa04b1961a1984a37534ece85",
+      "bytes": 85277
+    },
+    {
+      "file": "auth-stone-eye-320.avif",
+      "sha256": "f10e740eea6368f7f983c4cac93887962b6ad4a702a4cc37ec6da6d8b7a1a60a",
+      "bytes": 4398
+    },
+    {
+      "file": "auth-stone-eye-320.webp",
+      "sha256": "6e199584c7cb510b9e9203dad4ef629bc6fba905f70b221d51bdb00a6cd6d6ff",
+      "bytes": 8134
+    },
+    {
+      "file": "auth-stone-eye-320.jpg",
+      "sha256": "f2c3eab8fddb82b9c7a5d64a1343a3394d0b9366eff72f6909751d8e619048d8",
+      "bytes": 14328
+    },
+    {
+      "file": "auth-stone-eye-480.avif",
+      "sha256": "dd8dd74716099ee0ad1aba555647466c786909a892abd3de7ea902ca1bf2e7af",
+      "bytes": 7539
+    },
+    {
+      "file": "auth-stone-eye-480.webp",
+      "sha256": "a19fd8927ea7f4f535db789b7527914c7e69f6d4a07caded3e2bc5b560b31009",
+      "bytes": 15532
+    },
+    {
+      "file": "auth-stone-eye-480.jpg",
+      "sha256": "82b171729f489a77c0592f1985ca3788e3c095c25a8bec8d222772ae11d3af86",
+      "bytes": 25482
+    },
+    {
+      "file": "auth-stone-eye-640.avif",
+      "sha256": "4a774e7f7fcb957411b130aa343db981f28b7d2a3b5a98ac0e50facb91b87d6f",
+      "bytes": 11131
+    },
+    {
+      "file": "auth-stone-eye-640.webp",
+      "sha256": "892cba83a52ecd9f9c7bb240e9205edc59ae4bc58a8098d8860f95d03fc3ba0f",
+      "bytes": 24678
+    },
+    {
+      "file": "auth-stone-eye-640.jpg",
+      "sha256": "f09490346f7043c13dc67eefe8a498548b9f18a116ba6271e0183a9227c0ce77",
+      "bytes": 37898
+    },
+    {
+      "file": "auth-stone-eye-960.avif",
+      "sha256": "a087d414bb49861ad48580c380f2640621a0342d8288a5f3331138b8297bba5b",
+      "bytes": 19973
+    },
+    {
+      "file": "auth-stone-eye-960.webp",
+      "sha256": "5a0a955200fe5cccfbbddb7f16c56aa9084c294650fb0802289499caf099e7ef",
+      "bytes": 49680
+    },
+    {
+      "file": "auth-stone-eye-960.jpg",
+      "sha256": "bf805779e526a167930185caddbd3774cda5ec1531ecf7d943cc707d8bb18c13",
+      "bytes": 70721
+    },
+    {
+      "file": "auth-stone-cream-320.avif",
+      "sha256": "874eb39560532ea11518de50bfdcbc233b24f8f8fba2627cdb2a6ffc0da3f2ef",
+      "bytes": 5796
+    },
+    {
+      "file": "auth-stone-cream-320.webp",
+      "sha256": "75ecfd1cf7f18886bea6e020e39f1c6a7018bab0c574f4c32a90eaab759b32f5",
+      "bytes": 12664
+    },
+    {
+      "file": "auth-stone-cream-320.jpg",
+      "sha256": "55e434b5eb572090d6bda0c256dab5ca9acdc26353219fdb9e6c6f6f582b9860",
+      "bytes": 17793
+    },
+    {
+      "file": "auth-stone-cream-480.avif",
+      "sha256": "727f07ee8f30d0cd8a0431b26afa6dc94956069db6d86e14ee54781f1bec6a8e",
+      "bytes": 10769
+    },
+    {
+      "file": "auth-stone-cream-480.webp",
+      "sha256": "9373c42531f55c004edf0e75cc2227a2b9db57eed3eb89467f5a27adfe434606",
+      "bytes": 25260
+    },
+    {
+      "file": "auth-stone-cream-480.jpg",
+      "sha256": "23d94d8f71e17cb06e204fdb5f085196ae9948e2bcd7ad36c46e8ce2d3e13f16",
+      "bytes": 32920
+    },
+    {
+      "file": "auth-stone-cream-640.avif",
+      "sha256": "d657c7ff9cc5f936b4774de812e38baad35b93f0a348944396e663b731633a9a",
+      "bytes": 17060
+    },
+    {
+      "file": "auth-stone-cream-640.webp",
+      "sha256": "ee08ae2c73d24f40c0295dab820028a63e9640ea5864d4c726d25c0f5078169b",
+      "bytes": 44230
+    },
+    {
+      "file": "auth-stone-cream-640.jpg",
+      "sha256": "2f3ab22077bb1b9cc6ddb971c86bc1cf1089461433f6a255a6bd9fd420cca3cf",
+      "bytes": 52436
+    },
+    {
+      "file": "auth-stone-cream-960.avif",
+      "sha256": "4e03f1b0ace5bf77996b12bec4ab9a7527bb8bc5542bd2ed1da94ffb4250bcf0",
+      "bytes": 34560
+    },
+    {
+      "file": "auth-stone-cream-960.webp",
+      "sha256": "fdca2fbe4c9ba88b8309421ffff47dc443c3f867a686ab48ad9d519ae35c0fd0",
+      "bytes": 93852
+    },
+    {
+      "file": "auth-stone-cream-960.jpg",
+      "sha256": "999bbd5d1be5d3ea297095e58ffd7f1ba7c9e3971a92cb5de379a2aa1c4595f5",
+      "bytes": 106147
+    }
+  ]
+}

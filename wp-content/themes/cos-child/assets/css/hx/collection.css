@@ -3,12 +3,11 @@
    Markup: template-parts/home-2026/collection.php · prefix hxc- · tokens from hx/system.css
 
    Four objects, not four cards: the products stand free on the pearl-white
-   ground (transparent cut-outs with their own studio shadow, no tile/box/border),
-   one presence, ONE baseline (baked into collection-object-* by
-   design-sources/home-2026/build_collection_objects.py; 2:3 stages).
+   ground (wc-coll-* transparent cut-outs at true relative scale, only their own
+   photographed contact shadow, no tile/box/border), ONE baseline, 2:3 stages.
    <1100px (phones included): two by two. ≥1100px: four across. Text rows are
-   aligned across each row by subgrid (step / name / benefit / price / cue).
-   Phones drop the benefit line (it would run to three lines in a half column).
+   left-aligned and lined up across each row by subgrid (verb / name / benefit /
+   price line). Four type sizes in the section: heading, name, lead, 16px body.
    ========================================================================== */
 
 body.cos-h26 .hxc{
@@ -44,7 +43,7 @@ body.cos-h26 .hxc__list{
 body.cos-h26 .hxc__item{
 	list-style:none;
 	display:grid;
-	grid-row:span 6;
+	grid-row:span 5; /* stage / verb / name / benefit / price line */
 	grid-template-rows:subgrid;
 }
 body.cos-h26 .hxc__item::marker{content:none}
@@ -55,63 +54,59 @@ body.cos-h26 .hxc__link,
 body.cos-h26 .hxc__link:visited,
 body.cos-h26 .hxc__link:hover{
 	display:grid;
-	grid-row:span 6;
+	grid-row:span 5;
 	grid-template-rows:subgrid;
-	justify-items:center;
+	justify-items:start; /* left-aligned under each object (19 Oct 2026) */
 	align-items:start;
-	text-align:center;
+	text-align:left;
 	color:inherit;
 	text-decoration:none;
 	-webkit-tap-highlight-color:transparent;
 }
 body.cos-h26 .hxc__link *{text-decoration:none}
 
-/* stage: no box, just air around the object */
+/* stage: no box, just air around the object. 19 Oct 2026: the wc-coll-* cut-outs share one
+   scale (a 1000px canvas = the same physical width for every pack), so all four render at the
+   same width (67% of the stage), bottom-aligned on one baseline: their true relative sizes,
+   with the tallest pack (the 150 ml cleanser, canvas 1000×2167) filling the 2:3 stage. Each
+   carries only its own photographed contact shadow and reflection; no painted drop shadow. */
 body.cos-h26 .hxc__stage{
-	display:block;
+	display:flex;
+	align-items:flex-end;
+	justify-content:center;
 	width:100%;
 	aspect-ratio:2 / 3;
 	overflow:clip;
 	background:transparent;
 }
-body.cos-h26 .hxc__object,
-body.cos-h26 .hxc__object img{display:block;width:100%;height:100%}
+body.cos-h26 .hxc__object{display:block;width:67%}
 body.cos-h26 .hxc__object img{
-	object-fit:contain;
+	display:block;
+	width:100%;
+	height:auto;
 	transform:none;
-	transform-origin:53% 86%; /* the shared baseline */
+	transform-origin:50% 100%; /* the shared baseline */
 	transition:transform 1200ms var(--hx-ease);
 	background:transparent;
 }
 
-/* step: "01 — Cleanse" in the serif voice; numeral upright, verb italic */
+/* step: the ritual verb alone, in the serif italic (no numeral or dash: the <ol> and the
+   left-to-right order carry the sequence) */
 body.cos-h26 .hxc__step{
-	display:inline-flex;
-	align-items:center;
-	gap:10px;
-	margin-top:var(--hx-s-3);
+	display:block;
+	margin-top:var(--hx-s-4);
 	font-family:var(--hx-serif);
-	font-size:1rem;
-	line-height:1;
+	font-size:var(--hx-fs-lead); /* the lead size: Cormorant italic at 16px reads like 13px beside Inter */
+	line-height:1.2;
 	color:var(--hx-fg-accent);
 }
-body.cos-h26 .hxc__num{
-	display:inline-flex;
-	align-items:center;
-	gap:10px;
-	font-weight:400;
-	letter-spacing:var(--hx-tr-step);
-	font-variant-numeric:lining-nums tabular-nums;
-	font-feature-settings:"lnum" 1,"tnum" 1;
-}
-body.cos-h26 .hxc__num::after{content:"";width:16px;height:1px;background:var(--hx-chrome)}
-body.cos-h26 .hxc__verb{font-style:italic;font-weight:300;font-size:1.1em;letter-spacing:.01em}
+body.cos-h26 .hxc__verb{font-style:italic;font-weight:300;letter-spacing:.01em}
 
 /* name: two lines (house name / product) */
 body.cos-h26 .hxc__name{
 	margin-top:var(--hx-s-3);
 	font-family:var(--hx-serif);
-	font-size:1.1875rem;
+	font-size:var(--hx-fs-title);
 	font-weight:400;
 	line-height:1.18;
 	letter-spacing:var(--hx-tr-title);
@@ -119,10 +114,17 @@ body.cos-h26 .hxc__name{
 	text-wrap:balance;
 	text-transform:none;
 }
-body.cos-h26 .hxc__name span{display:block}
+body.cos-h26 .hxc__name span{
+	display:block;
+	text-decoration-line:underline;
+	text-decoration-thickness:1px;
+	text-underline-offset:.18em;
+	text-decoration-color:transparent; /* drawn only on hover / keyboard focus */
+	transition:text-decoration-color 400ms var(--hx-ease);
+}
 
 body.cos-h26 .hxc__benefit{
-	display:none;
+	display:block;
 	max-width:19em;
 	margin-top:var(--hx-s-3);
 	font-family:var(--hx-sans);
@@ -133,65 +135,35 @@ body.cos-h26 .hxc__benefit{
 	text-wrap:balance;
 }
 
-/* price line: price in ink, size lighter behind a hairline */
+/* price line: one quiet line, "€150 · 50 ml", at the body size (no separate cue row) */
 body.cos-h26 .hxc__meta{
-	display:inline-flex;
-	align-items:center;
+	display:block;
 	margin-top:var(--hx-s-3);
+	padding-bottom:var(--hx-s-2);
 	font-family:var(--hx-sans);
-	font-size:var(--hx-fs-detail);
-	line-height:var(--hx-lh-detail);
-	letter-spacing:.02em;
+	font-size:var(--hx-fs-body);
+	line-height:1.5;
+	letter-spacing:0;
 	font-variant-numeric:lining-nums tabular-nums;
 }
 body.cos-h26 .hxc__price{color:var(--hx-fg);font-weight:500}
+body.cos-h26 .hxc__sep,
 body.cos-h26 .hxc__size{color:var(--hx-fg-3)}
-body.cos-h26 .hxc__dot{display:inline-block;width:1px;height:11px;margin-inline:10px;background:var(--hx-line-strong)}
-
-/* cue: no resting line; a hairline draws beneath it on hover / focus */
-body.cos-h26 .hxc__cta{
-	display:inline-flex;
-	align-items:center;
-	min-height:44px;
-	font-family:var(--hx-sans);
-	font-size:var(--hx-fs-detail);
-	font-weight:500;
-	letter-spacing:.02em;
-	color:var(--hx-fg);
-	background-image:linear-gradient(currentColor,currentColor);
-	background-repeat:no-repeat;
-	background-position:0 calc(50% + .95em);
-	background-size:0 1px;
-	transition:background-size 700ms var(--hx-ease);
-}
-body.cos-h26 .hxc__cta .hx-arrow{margin-left:12px}
 
 @media (hover:hover){
-	/* the object lifts and comes forward; the name never underlines */
+	/* the object lifts and comes forward; the name underlines */
 	body.cos-h26 .hxc__link:hover .hxc__object img{transform:translate3d(0,-10px,0) scale(1.06)}
-	body.cos-h26 .hxc__link:hover .hxc__cta{background-size:calc(100% - 30px) 1px}
-	body.cos-h26 .hxc__link:hover .hx-arrow{transform:translateX(4px)}
+	body.cos-h26 .hxc__link:hover .hxc__name span{text-decoration-color:currentColor}
 }
-body.cos-h26 .hxc__link:focus-visible .hxc__cta{background-size:calc(100% - 30px) 1px}
+body.cos-h26 .hxc__link:focus-visible .hxc__name span{text-decoration-color:currentColor}
 body.cos-h26 .hxc__link:focus{outline:none}
 body.cos-h26 .hxc__link:focus-visible{outline:var(--hx-focus-width) solid var(--hx-focus-color);outline-offset:var(--hx-focus-offset)}
-
-@media (max-width:359.98px){
-	body.cos-h26 .hxc__name{font-size:1.0625rem}
-	body.cos-h26 .hxc__num::after{display:none}
-}
 
 /* ─── ≥640px: two by two with room to breathe ─────────────────────── */
 @media (min-width:640px){
 	body.cos-h26 .hxc{--hxc-col-gap:var(--hx-gap)}
 	body.cos-h26 .hxc__stage{width:min(100%,300px)}
-	body.cos-h26 .hxc__benefit{display:block}
-	body.cos-h26 .hxc__name{font-size:var(--hx-fs-title)}
-	body.cos-h26 .hxc__step{font-size:var(--hx-fs-step);gap:14px;margin-top:var(--hx-s-4)}
-	body.cos-h26 .hxc__num{gap:14px}
-	body.cos-h26 .hxc__num::after{width:24px}
 	body.cos-h26 .hxc__meta{margin-top:var(--hx-s-4)}
-	body.cos-h26 .hxc__dot{margin-inline:14px;height:12px}
 }
 
 /* ─── ≥1100px: four across ────────────────────────────────────────── */
@@ -204,6 +176,6 @@ body.cos-h26 .hxc__link:focus-visible{outline:var(--hx-focus-width) solid var(--
 
 @media (prefers-reduced-motion:reduce){
 	body.cos-h26 .hxc__object img,
-	body.cos-h26 .hxc__cta{transition:none}
+	body.cos-h26 .hxc__name span{transition:none}
 	body.cos-h26 .hxc__link:hover .hxc__object img{transform:none}
 }

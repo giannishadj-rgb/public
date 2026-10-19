@@ -68,3 +68,4 @@ defined( 'ABSPATH' ) || exit;
 		<p class="hxv__more" data-hx-reveal><a class="hx-link" href="<?php echo esc_url( home_url( '/science/why-caviar/' ) ); ?>">Why caviar<span class="hx-arrow" aria-hidden="true"></span></a></p>
 	</div>
 </section>
+

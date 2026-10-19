@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "design-system-font",
+        "value": "cormorant garamond",
+        "createdAt": "2026-10-17T04:04:11.808Z",
+        "reason": "Cormorant Garamond is the brand's established display face (homepage approved by owner through three critique rounds); DESIGN.md predates the rebuild and is stale"
+      }
+    ]
+  }
+}

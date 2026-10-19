@@ -28,5 +28,6 @@ add_action( 'wp_enqueue_scripts', static function (): void {
 		wp_enqueue_style( 'cos-hx-system', $uri . '/assets/css/hx/system.css', array(), (string) filemtime( $dir . '/assets/css/hx/system.css' ) );
 		wp_enqueue_script( 'cos-hx-motion', $uri . '/assets/js/hx-motion.js', array(), (string) filemtime( $dir . '/assets/js/hx-motion.js' ), array( 'strategy' => 'defer', 'in_footer' => true ) );
 	}
-	wp_enqueue_style( 'cos-hx-chrome', $uri . '/assets/css/hx/chrome.css', array( $is_home ? 'cos-hx-closing' : 'cos-hx-system' ), (string) filemtime( $dir . '/assets/css/hx/chrome.css' ) );
+	$chrome = $is_home ? '/assets/css/home-staging/chrome.css' : '/assets/css/hx/chrome.css';
+	wp_enqueue_style( 'cos-hx-chrome', $uri . $chrome, array( $is_home ? 'cos-hx-closing' : 'cos-hx-system' ), (string) filemtime( $dir . $chrome ) );
 }, 20 );

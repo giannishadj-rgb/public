@@ -1,0 +1,260 @@
+[
+  {
+    "width": 320,
+    "src": "auth-ritual-counter-640.avif?v=1792318850",
+    "overflow": false,
+    "preloads": [
+      {
+        "media": "(min-width: 600px) and (max-width: 1279.98px)",
+        "active": false
+      },
+      {
+        "media": "(max-width: 599.98px), (min-width: 1280px)",
+        "active": true
+      }
+    ],
+    "photo": [
+      0,
+      60,
+      319.984375,
+      512
+    ],
+    "requested": [
+      "auth-ritual-counter-640.avif?v=1792318850"
+    ]
+  },
+  {
+    "width": 360,
+    "src": "auth-ritual-counter-640.avif?v=1792318850",
+    "overflow": false,
+    "preloads": [
+      {
+        "media": "(min-width: 600px) and (max-width: 1279.98px)",
+        "active": false
+      },
+      {
+        "media": "(max-width: 599.98px), (min-width: 1280px)",
+        "active": true
+      }
+    ],
+    "photo": [
+      0,
+      60,
+      359.984375,
+      576
+    ],
+    "requested": [
+      "auth-ritual-counter-640.avif?v=1792318850"
+    ]
+  },
+  {
+    "width": 390,
+    "src": "auth-ritual-counter-640.avif?v=1792318850",
+    "overflow": false,
+    "preloads": [
+      {
+        "media": "(min-width: 600px) and (max-width: 1279.98px)",
+        "active": false
+      },
+      {
+        "media": "(max-width: 599.98px), (min-width: 1280px)",
+        "active": true
+      }
+    ],
+    "photo": [
+      0,
+      60,
+      389.984375,
+      624
+    ],
+    "requested": [
+      "auth-ritual-counter-640.avif?v=1792318850"
+    ]
+  },
+  {
+    "width": 430,
+    "src": "auth-ritual-counter-640.avif?v=1792318850",
+    "overflow": false,
+    "preloads": [
+      {
+        "media": "(min-width: 600px) and (max-width: 1279.98px)",
+        "active": false
+      },
+      {
+        "media": "(max-width: 599.98px), (min-width: 1280px)",
+        "active": true
+      }
+    ],
+    "photo": [
+      0,
+      60,
+      429.984375,
+      688
+    ],
+    "requested": [
+      "auth-ritual-counter-640.avif?v=1792318850"
+    ]
+  },
+  {
+    "width": 599,
+    "src": "auth-ritual-counter-640.avif?v=1792318850",
+    "overflow": false,
+    "preloads": [
+      {
+        "media": "(min-width: 600px) and (max-width: 1279.98px)",
+        "active": false
+      },
+      {
+        "media": "(max-width: 599.98px), (min-width: 1280px)",
+        "active": true
+      }
+    ],
+    "photo": [
+      0,
+      60,
+      598.984375,
+      760
+    ],
+    "requested": [
+      "auth-ritual-counter-640.avif?v=1792318850"
+    ]
+  },
+  {
+    "width": 600,
+    "src": "yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+    "overflow": false,
+    "preloads": [
+      {
+        "media": "(min-width: 600px) and (max-width: 1279.98px)",
+        "active": true
+      },
+      {
+        "media": "(max-width: 599.98px), (min-width: 1280px)",
+        "active": false
+      }
+    ],
+    "photo": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "requested": []
+  },
+  {
+    "width": 768,
+    "src": "yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+    "overflow": false,
+    "preloads": [
+      {
+        "media": "(min-width: 600px) and (max-width: 1279.98px)",
+        "active": true
+      },
+      {
+        "media": "(max-width: 599.98px), (min-width: 1280px)",
+        "active": false
+      }
+    ],
+    "photo": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "requested": []
+  },
+  {
+    "width": 1024,
+    "src": "yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+    "overflow": false,
+    "preloads": [
+      {
+        "media": "(min-width: 600px) and (max-width: 1279.98px)",
+        "active": true
+      },
+      {
+        "media": "(max-width: 599.98px), (min-width: 1280px)",
+        "active": false
+      }
+    ],
+    "photo": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "requested": []
+  },
+  {
+    "width": 1280,
+    "src": "auth-ritual-counter-640.avif?v=1792318850",
+    "overflow": false,
+    "preloads": [
+      {
+        "media": "(min-width: 600px) and (max-width: 1279.98px)",
+        "active": false
+      },
+      {
+        "media": "(max-width: 599.98px), (min-width: 1280px)",
+        "active": true
+      }
+    ],
+    "photo": [
+      537.59375,
+      80,
+      563.1875,
+      800
+    ],
+    "requested": [
+      "auth-ritual-counter-640.avif?v=1792318850"
+    ]
+  },
+  {
+    "width": 1440,
+    "src": "auth-ritual-counter-640.avif?v=1792318850",
+    "overflow": false,
+    "preloads": [
+      {
+        "media": "(min-width: 600px) and (max-width: 1279.98px)",
+        "active": false
+      },
+      {
+        "media": "(max-width: 599.98px), (min-width: 1280px)",
+        "active": true
+      }
+    ],
+    "photo": [
+      604.796875,
+      80,
+      633.59375,
+      864
+    ],
+    "requested": [
+      "auth-ritual-counter-640.avif?v=1792318850"
+    ]
+  },
+  {
+    "width": 1920,
+    "src": "auth-ritual-counter-960.avif?v=1792318852",
+    "overflow": false,
+    "preloads": [
+      {
+        "media": "(min-width: 600px) and (max-width: 1279.98px)",
+        "active": false
+      },
+      {
+        "media": "(max-width: 599.98px), (min-width: 1280px)",
+        "active": true
+      }
+    ],
+    "photo": [
+      806.390625,
+      80,
+      844.796875,
+      1080
+    ],
+    "requested": [
+      "auth-ritual-counter-960.avif?v=1792318852"
+    ]
+  }
+]

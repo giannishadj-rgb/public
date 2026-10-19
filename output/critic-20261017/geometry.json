@@ -1,0 +1,128 @@
+[
+  {
+    "cls": "hxh__copy",
+    "w": 357,
+    "h": 207,
+    "display": "block",
+    "columns": "none",
+    "gap": "normal",
+    "font": "16px"
+  },
+  {
+    "cls": "hxc__list",
+    "w": 1290,
+    "h": 710,
+    "display": "grid",
+    "columns": "298.797px 298.812px 298.812px 298.812px",
+    "gap": "0px 31.68px",
+    "font": "16px"
+  },
+  {
+    "cls": "hxc__stage",
+    "w": 299,
+    "h": 448,
+    "display": "block",
+    "columns": "none",
+    "gap": "normal",
+    "font": "16px"
+  },
+  {
+    "cls": "hxc__name",
+    "w": 237,
+    "h": 71,
+    "display": "block",
+    "columns": "none",
+    "gap": "normal",
+    "font": "29.968px"
+  },
+  {
+    "cls": "hxc__stage",
+    "w": 299,
+    "h": 448,
+    "display": "block",
+    "columns": "none",
+    "gap": "normal",
+    "font": "16px"
+  },
+  {
+    "cls": "hxc__name",
+    "w": 201,
+    "h": 71,
+    "display": "block",
+    "columns": "none",
+    "gap": "normal",
+    "font": "29.968px"
+  },
+  {
+    "cls": "hxc__stage",
+    "w": 299,
+    "h": 448,
+    "display": "block",
+    "columns": "none",
+    "gap": "normal",
+    "font": "16px"
+  },
+  {
+    "cls": "hxc__name",
+    "w": 139,
+    "h": 71,
+    "display": "block",
+    "columns": "none",
+    "gap": "normal",
+    "font": "29.968px"
+  },
+  {
+    "cls": "hxc__stage",
+    "w": 299,
+    "h": 448,
+    "display": "block",
+    "columns": "none",
+    "gap": "normal",
+    "font": "16px"
+  },
+  {
+    "cls": "hxc__name",
+    "w": 201,
+    "h": 71,
+    "display": "block",
+    "columns": "none",
+    "gap": "normal",
+    "font": "29.968px"
+  },
+  {
+    "cls": "hxs__pillars",
+    "w": 1290,
+    "h": 195,
+    "display": "grid",
+    "columns": "397.438px 397.453px 397.438px",
+    "gap": "32px 48.96px",
+    "font": "16px"
+  },
+  {
+    "cls": "hxs__results",
+    "w": 1290,
+    "h": 396,
+    "display": "grid",
+    "columns": "620.641px 620.656px",
+    "gap": "48px 48.96px",
+    "font": "16px"
+  },
+  {
+    "cls": "hxr__steps",
+    "w": 1290,
+    "h": 519,
+    "display": "grid",
+    "columns": "301.562px 301.562px 301.562px 301.562px",
+    "gap": "28px",
+    "font": "16px"
+  },
+  {
+    "cls": "hx-display hxz__title is-in hx-instant",
+    "w": 1290,
+    "h": 252,
+    "display": "block",
+    "columns": "none",
+    "gap": "normal",
+    "font": "114.4px"
+  }
+]

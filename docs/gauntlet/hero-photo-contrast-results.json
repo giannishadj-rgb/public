@@ -1,0 +1,395 @@
+{
+  "method": "Conservative RGB channel maxima across actual text-node line rectangles mapped to original photo; no image editing",
+  "results": [
+    {
+      "width": 320,
+      "selector": ".hxh__title",
+      "text": "Caviar,",
+      "conservativeContrast": 13.55
+    },
+    {
+      "width": 320,
+      "selector": ".hxh__title",
+      "text": "in every formula.",
+      "conservativeContrast": 8.51
+    },
+    {
+      "width": 320,
+      "selector": ".hxh__lead",
+      "text": "Swiss-made skincare.",
+      "conservativeContrast": 7.62
+    },
+    {
+      "width": 320,
+      "selector": ".hxh__lead",
+      "text": "For firmer-looking, hydrated skin.",
+      "conservativeContrast": 7.15
+    },
+    {
+      "width": 320,
+      "selector": ".hxh__inclusion",
+      "text": "4 full-size formulas",
+      "conservativeContrast": 11.05
+    },
+    {
+      "width": 320,
+      "selector": ".hxh__inclusion",
+      "text": "\u00e2\u201a\u00ac450",
+      "conservativeContrast": 9.95
+    },
+    {
+      "width": 320,
+      "selector": ".hxh__explore",
+      "text": "View collection",
+      "conservativeContrast": 11.12
+    },
+    {
+      "width": 360,
+      "selector": ".hxh__title",
+      "text": "Caviar,",
+      "conservativeContrast": 14.75
+    },
+    {
+      "width": 360,
+      "selector": ".hxh__title",
+      "text": "in every formula.",
+      "conservativeContrast": 9.35
+    },
+    {
+      "width": 360,
+      "selector": ".hxh__lead",
+      "text": "Swiss-made skincare.",
+      "conservativeContrast": 7.9
+    },
+    {
+      "width": 360,
+      "selector": ".hxh__lead",
+      "text": "For firmer-looking, hydrated skin.",
+      "conservativeContrast": 7.65
+    },
+    {
+      "width": 360,
+      "selector": ".hxh__inclusion",
+      "text": "4 full-size formulas",
+      "conservativeContrast": 10.7
+    },
+    {
+      "width": 360,
+      "selector": ".hxh__inclusion",
+      "text": "\u00e2\u201a\u00ac450",
+      "conservativeContrast": 13.69
+    },
+    {
+      "width": 360,
+      "selector": ".hxh__explore",
+      "text": "View collection",
+      "conservativeContrast": 9.95
+    },
+    {
+      "width": 390,
+      "selector": ".hxh__title",
+      "text": "Caviar,",
+      "conservativeContrast": 15.03
+    },
+    {
+      "width": 390,
+      "selector": ".hxh__title",
+      "text": "in every formula.",
+      "conservativeContrast": 9.63
+    },
+    {
+      "width": 390,
+      "selector": ".hxh__lead",
+      "text": "Swiss-made skincare.",
+      "conservativeContrast": 8.4
+    },
+    {
+      "width": 390,
+      "selector": ".hxh__lead",
+      "text": "For firmer-looking, hydrated skin.",
+      "conservativeContrast": 7.9
+    },
+    {
+      "width": 390,
+      "selector": ".hxh__inclusion",
+      "text": "4 full-size formulas",
+      "conservativeContrast": 8.04
+    },
+    {
+      "width": 390,
+      "selector": ".hxh__inclusion",
+      "text": "\u00e2\u201a\u00ac450",
+      "conservativeContrast": 10.7
+    },
+    {
+      "width": 390,
+      "selector": ".hxh__explore",
+      "text": "View collection",
+      "conservativeContrast": 11.74
+    },
+    {
+      "width": 430,
+      "selector": ".hxh__title",
+      "text": "Caviar,",
+      "conservativeContrast": 15.14
+    },
+    {
+      "width": 430,
+      "selector": ".hxh__title",
+      "text": "in every formula.",
+      "conservativeContrast": 10.36
+    },
+    {
+      "width": 430,
+      "selector": ".hxh__lead",
+      "text": "Swiss-made skincare.",
+      "conservativeContrast": 8.51
+    },
+    {
+      "width": 430,
+      "selector": ".hxh__lead",
+      "text": "For firmer-looking, hydrated skin.",
+      "conservativeContrast": 7.63
+    },
+    {
+      "width": 430,
+      "selector": ".hxh__inclusion",
+      "text": "4 full-size formulas",
+      "conservativeContrast": 7.65
+    },
+    {
+      "width": 430,
+      "selector": ".hxh__inclusion",
+      "text": "\u00e2\u201a\u00ac450",
+      "conservativeContrast": 6.31
+    },
+    {
+      "width": 430,
+      "selector": ".hxh__explore",
+      "text": "View collection",
+      "conservativeContrast": 12.67
+    },
+    {
+      "width": 599,
+      "selector": ".hxh__title",
+      "text": "Caviar,",
+      "conservativeContrast": 8.51
+    },
+    {
+      "width": 599,
+      "selector": ".hxh__title",
+      "text": "in every formula.",
+      "conservativeContrast": 7.63
+    },
+    {
+      "width": 599,
+      "selector": ".hxh__lead",
+      "text": "Swiss-made skincare.",
+      "conservativeContrast": 7.6
+    },
+    {
+      "width": 599,
+      "selector": ".hxh__lead",
+      "text": "For firmer-looking, hydrated skin.",
+      "conservativeContrast": 7.07
+    },
+    {
+      "width": 599,
+      "selector": ".hxh__inclusion",
+      "text": "4 full-size formulas",
+      "conservativeContrast": 5.67
+    },
+    {
+      "width": 599,
+      "selector": ".hxh__inclusion",
+      "text": "\u00e2\u201a\u00ac450",
+      "conservativeContrast": 11.33
+    },
+    {
+      "width": 599,
+      "selector": ".hxh__explore",
+      "text": "View collection",
+      "conservativeContrast": 13.03
+    },
+    {
+      "width": 1280,
+      "selector": ".hxh__title",
+      "text": "Caviar,",
+      "conservativeContrast": 11.05
+    },
+    {
+      "width": 1280,
+      "selector": ".hxh__title",
+      "text": "in every formula.",
+      "conservativeContrast": 8.03
+    },
+    {
+      "width": 1280,
+      "selector": ".hxh__lead",
+      "text": "Swiss-made skincare.",
+      "conservativeContrast": 7.73
+    },
+    {
+      "width": 1280,
+      "selector": ".hxh__lead",
+      "text": "For firmer-looking, hydrated skin.",
+      "conservativeContrast": 7.6
+    },
+    {
+      "width": 1280,
+      "selector": ".hxh__inclusion",
+      "text": "4 full-size formulas",
+      "conservativeContrast": 5.96
+    },
+    {
+      "width": 1280,
+      "selector": ".hxh__inclusion",
+      "text": "\u00c2\u00b7",
+      "conservativeContrast": 12.59
+    },
+    {
+      "width": 1280,
+      "selector": ".hxh__inclusion",
+      "text": "\u00e2\u201a\u00ac450",
+      "conservativeContrast": 11.92
+    },
+    {
+      "width": 1280,
+      "selector": ".hxh__explore",
+      "text": "View collection",
+      "conservativeContrast": 11.36
+    },
+    {
+      "width": 1280,
+      "selector": ".hxh__assurance",
+      "text": "Free worldwide shipping.",
+      "conservativeContrast": 6.6
+    },
+    {
+      "width": 1280,
+      "selector": ".hxh__assurance",
+      "text": "30-day returns.",
+      "conservativeContrast": 6.15
+    },
+    {
+      "width": 1440,
+      "selector": ".hxh__title",
+      "text": "Caviar,",
+      "conservativeContrast": 9.17
+    },
+    {
+      "width": 1440,
+      "selector": ".hxh__title",
+      "text": "in every formula.",
+      "conservativeContrast": 7.63
+    },
+    {
+      "width": 1440,
+      "selector": ".hxh__lead",
+      "text": "Swiss-made skincare.",
+      "conservativeContrast": 7.6
+    },
+    {
+      "width": 1440,
+      "selector": ".hxh__lead",
+      "text": "For firmer-looking, hydrated skin.",
+      "conservativeContrast": 7.15
+    },
+    {
+      "width": 1440,
+      "selector": ".hxh__inclusion",
+      "text": "4 full-size formulas",
+      "conservativeContrast": 5.96
+    },
+    {
+      "width": 1440,
+      "selector": ".hxh__inclusion",
+      "text": "\u00c2\u00b7",
+      "conservativeContrast": 12.7
+    },
+    {
+      "width": 1440,
+      "selector": ".hxh__inclusion",
+      "text": "\u00e2\u201a\u00ac450",
+      "conservativeContrast": 12.01
+    },
+    {
+      "width": 1440,
+      "selector": ".hxh__explore",
+      "text": "View collection",
+      "conservativeContrast": 11.52
+    },
+    {
+      "width": 1440,
+      "selector": ".hxh__assurance",
+      "text": "Free worldwide shipping.",
+      "conservativeContrast": 6.84
+    },
+    {
+      "width": 1440,
+      "selector": ".hxh__assurance",
+      "text": "30-day returns.",
+      "conservativeContrast": 7.02
+    },
+    {
+      "width": 1920,
+      "selector": ".hxh__title",
+      "text": "Caviar,",
+      "conservativeContrast": 8.51
+    },
+    {
+      "width": 1920,
+      "selector": ".hxh__title",
+      "text": "in every formula.",
+      "conservativeContrast": 7.6
+    },
+    {
+      "width": 1920,
+      "selector": ".hxh__lead",
+      "text": "Swiss-made skincare.",
+      "conservativeContrast": 7.16
+    },
+    {
+      "width": 1920,
+      "selector": ".hxh__lead",
+      "text": "For firmer-looking, hydrated skin.",
+      "conservativeContrast": 7.07
+    },
+    {
+      "width": 1920,
+      "selector": ".hxh__inclusion",
+      "text": "4 full-size formulas",
+      "conservativeContrast": 5.97
+    },
+    {
+      "width": 1920,
+      "selector": ".hxh__inclusion",
+      "text": "\u00c2\u00b7",
+      "conservativeContrast": 12.84
+    },
+    {
+      "width": 1920,
+      "selector": ".hxh__inclusion",
+      "text": "\u00e2\u201a\u00ac450",
+      "conservativeContrast": 12.84
+    },
+    {
+      "width": 1920,
+      "selector": ".hxh__explore",
+      "text": "View collection",
+      "conservativeContrast": 9.19
+    },
+    {
+      "width": 1920,
+      "selector": ".hxh__assurance",
+      "text": "Free worldwide shipping.",
+      "conservativeContrast": 7.27
+    },
+    {
+      "width": 1920,
+      "selector": ".hxh__assurance",
+      "text": "30-day returns.",
+      "conservativeContrast": 7.59
+    }
+  ]
+}

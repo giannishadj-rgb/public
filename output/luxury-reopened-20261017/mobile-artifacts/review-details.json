@@ -1,0 +1,184 @@
+{
+  "home": {
+    "width": 390,
+    "visibleOverflow": [
+      {
+        "text": "04Restore\n\t\t\t\t\t24h Regeneration Cream\n\t\t\t\t\tLasting hydration & barrier support\n\t\t\t\t\t\n\t\t\t\t\t\t€150, \t\t\t\t\t\t50 ml\n\t\t\t\t\t\n\t\t\t\t\t",
+        "class": "hxc__link",
+        "r": {
+          "x": 201.625,
+          "y": 834,
+          "width": 226.796875,
+          "height": 870.390625,
+          "top": 834,
+          "right": 428.421875,
+          "bottom": 1704.390625,
+          "left": 201.625
+        }
+      },
+      {
+        "text": "24h Regeneration Cream",
+        "class": "hxc__name",
+        "r": {
+          "x": 201.625,
+          "y": 1233.375,
+          "width": 226.796875,
+          "height": 155.734375,
+          "top": 1233.375,
+          "right": 428.421875,
+          "bottom": 1389.109375,
+          "left": 201.625
+        }
+      },
+      {
+        "text": "Revitalizing Eye Cream",
+        "class": "hxs__product",
+        "r": {
+          "x": 203,
+          "y": 5691.875,
+          "width": 289.15625,
+          "height": 86.796875,
+          "top": 5691.875,
+          "right": 492.15625,
+          "bottom": 5778.671875,
+          "left": 203
+        }
+      },
+      {
+        "text": "−38%",
+        "class": "hx-numeral hxs__fig-n",
+        "r": {
+          "x": 203,
+          "y": 5790.671875,
+          "width": 289.15625,
+          "height": 104.546875,
+          "top": 5790.671875,
+          "right": 492.15625,
+          "bottom": 5895.21875,
+          "left": 203
+        }
+      },
+      {
+        "text": "Crow’s‑feet depth",
+        "class": "hxs__finding",
+        "r": {
+          "x": 203,
+          "y": 5907.21875,
+          "width": 289.15625,
+          "height": 50,
+          "top": 5907.21875,
+          "right": 492.15625,
+          "bottom": 5957.21875,
+          "left": 203
+        }
+      },
+      {
+        "text": "Instrument‑measured: Optical profilometry, 30 women aged 42–65, 28 days",
+        "class": "hx-detail hxs__method",
+        "r": {
+          "x": 203,
+          "y": 5965.21875,
+          "width": 289.15625,
+          "height": 173.578125,
+          "top": 5965.21875,
+          "right": 492.15625,
+          "bottom": 6138.796875,
+          "left": 203
+        }
+      }
+    ]
+  },
+  "shop": {
+    "width": 390,
+    "visibleOverflow": [
+      {
+        "text": "",
+        "class": "hxshop-item__stage cos-select-item",
+        "r": {
+          "x": 201.625,
+          "y": 715.0625,
+          "width": 195.875,
+          "height": 293.8125,
+          "top": 715.0625,
+          "right": 397.5,
+          "bottom": 1008.875,
+          "left": 201.625
+        }
+      },
+      {
+        "text": "24h Regeneration Cream",
+        "class": "hxshop-item__name",
+        "r": {
+          "x": 201.625,
+          "y": 1068.0625,
+          "width": 195.875,
+          "height": 140.5,
+          "top": 1068.0625,
+          "right": 397.5,
+          "bottom": 1208.5625,
+          "left": 201.625
+        }
+      },
+      {
+        "text": "24h Regeneration Cream",
+        "class": "cos-select-item",
+        "r": {
+          "x": 201.625,
+          "y": 1068.0625,
+          "width": 195.875,
+          "height": 140.5,
+          "top": 1068.0625,
+          "right": 397.5,
+          "bottom": 1208.5625,
+          "left": 201.625
+        }
+      },
+      {
+        "text": "Lasting hydration & barrier support",
+        "class": "hxshop-item__benefit",
+        "r": {
+          "x": 201.625,
+          "y": 1216.5625,
+          "width": 195.875,
+          "height": 192,
+          "top": 1216.5625,
+          "right": 397.5,
+          "bottom": 1408.5625,
+          "left": 201.625
+        }
+      },
+      {
+        "text": "Add to bag",
+        "class": "hxshop-item__add hxshop-add cos-card-btn add_to_cart_button ajax_add_to_cart",
+        "r": {
+          "x": 201.625,
+          "y": 1475.953125,
+          "width": 195.875,
+          "height": 78,
+          "top": 1475.953125,
+          "right": 397.5,
+          "bottom": 1553.953125,
+          "left": 201.625
+        }
+      },
+      {
+        "text": "",
+        "class": "hx-sr",
+        "r": {
+          "x": -1,
+          "y": 3437.484375,
+          "width": 1,
+          "height": 1,
+          "top": 3437.484375,
+          "right": 0,
+          "bottom": 3438.484375,
+          "left": -1
+        }
+      }
+    ]
+  },
+  "ritual": {
+    "width": 390,
+    "visibleOverflow": []
+  }
+}

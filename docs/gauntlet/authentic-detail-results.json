@@ -1,0 +1,1285 @@
+[
+  {
+    "width": 360,
+    "overflow": false,
+    "hero": [
+      {
+        "class": "hx-btn hxh__cta",
+        "text": "Shop the ritual",
+        "rect": {
+          "x": 24,
+          "y": 261.1875,
+          "width": 138.125,
+          "height": 52,
+          "top": 261.1875,
+          "right": 162.125,
+          "bottom": 313.1875,
+          "left": 24
+        }
+      },
+      {
+        "class": "hxh__inclusion",
+        "text": "4 full-size formulas\n€450",
+        "rect": {
+          "x": 24,
+          "y": 323.1875,
+          "width": 139.984375,
+          "height": 53.59375,
+          "top": 323.1875,
+          "right": 163.984375,
+          "bottom": 376.78125,
+          "left": 24
+        }
+      },
+      {
+        "class": "hxh__price",
+        "text": "€450",
+        "rect": {
+          "x": 24,
+          "y": 348.1875,
+          "width": 139.984375,
+          "height": 28.59375,
+          "top": 348.1875,
+          "right": 163.984375,
+          "bottom": 376.78125,
+          "left": 24
+        }
+      },
+      {
+        "class": "hxh__set",
+        "text": "",
+        "rect": {
+          "x": 175.984375,
+          "y": 262.484375,
+          "width": 160,
+          "height": 161,
+          "top": 262.484375,
+          "right": 335.984375,
+          "bottom": 423.484375,
+          "left": 175.984375
+        }
+      }
+    ],
+    "sources": [
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-ritual-spoon-original-320.avif?v=1792316895",
+        "rect": {
+          "x": 175.984375,
+          "y": 262.484375,
+          "width": 160,
+          "height": 161,
+          "top": 262.484375,
+          "right": 335.984375,
+          "bottom": 423.484375,
+          "left": 175.984375
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-pack-cleanser-320.avif?v=1792316075",
+        "rect": {
+          "x": 49.921875,
+          "y": 1282.5625,
+          "width": 164.15625,
+          "height": 261.609375,
+          "top": 1282.5625,
+          "right": 214.078125,
+          "bottom": 1544.171875,
+          "left": 49.921875
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-pack-serum-320.avif?v=1792316079",
+        "rect": {
+          "x": 280.3125,
+          "y": 1282.5625,
+          "width": 164.15625,
+          "height": 261.609375,
+          "top": 1282.5625,
+          "right": 444.46875,
+          "bottom": 1544.171875,
+          "left": 280.3125
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-pack-eye-320.avif?v=1792316083",
+        "rect": {
+          "x": 510.703125,
+          "y": 1282.5625,
+          "width": 164.15625,
+          "height": 261.609375,
+          "top": 1282.5625,
+          "right": 674.859375,
+          "bottom": 1544.171875,
+          "left": 510.703125
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-pack-cream-320.avif?v=1792316086",
+        "rect": {
+          "x": 741.09375,
+          "y": 1282.5625,
+          "width": 164.15625,
+          "height": 261.609375,
+          "top": 1282.5625,
+          "right": 905.25,
+          "bottom": 1544.171875,
+          "left": 741.09375
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-ritual-nocturne-540.avif?v=1792316905",
+        "rect": {
+          "x": 0,
+          "y": 2919.8125,
+          "width": 360,
+          "height": 240,
+          "top": 2919.8125,
+          "right": 360,
+          "bottom": 3159.8125,
+          "left": 0
+        }
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "overflow": false,
+    "hero": [
+      {
+        "class": "hx-btn hxh__cta",
+        "text": "Shop the ritual",
+        "rect": {
+          "x": 24,
+          "y": 265.5,
+          "width": 138.125,
+          "height": 52,
+          "top": 265.5,
+          "right": 162.125,
+          "bottom": 317.5,
+          "left": 24
+        }
+      },
+      {
+        "class": "hxh__inclusion",
+        "text": "4 full-size formulas\n€450",
+        "rect": {
+          "x": 24,
+          "y": 327.5,
+          "width": 169.984375,
+          "height": 53.59375,
+          "top": 327.5,
+          "right": 193.984375,
+          "bottom": 381.09375,
+          "left": 24
+        }
+      },
+      {
+        "class": "hxh__price",
+        "text": "€450",
+        "rect": {
+          "x": 24,
+          "y": 352.5,
+          "width": 169.984375,
+          "height": 28.59375,
+          "top": 352.5,
+          "right": 193.984375,
+          "bottom": 381.09375,
+          "left": 24
+        }
+      },
+      {
+        "class": "hxh__set",
+        "text": "",
+        "rect": {
+          "x": 205.984375,
+          "y": 266.796875,
+          "width": 160,
+          "height": 161,
+          "top": 266.796875,
+          "right": 365.984375,
+          "bottom": 427.796875,
+          "left": 205.984375
+        }
+      }
+    ],
+    "sources": [
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-ritual-spoon-original-320.avif?v=1792316895",
+        "rect": {
+          "x": 205.984375,
+          "y": 266.796875,
+          "width": 160,
+          "height": 161,
+          "top": 266.796875,
+          "right": 365.984375,
+          "bottom": 427.796875,
+          "left": 205.984375
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-pack-cleanser-320.avif?v=1792316075",
+        "rect": {
+          "x": 52.078125,
+          "y": 1283.28125,
+          "width": 177.828125,
+          "height": 283.40625,
+          "top": 1283.28125,
+          "right": 229.90625,
+          "bottom": 1566.6875,
+          "left": 52.078125
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-pack-serum-320.avif?v=1792316079",
+        "rect": {
+          "x": 301.671875,
+          "y": 1283.28125,
+          "width": 177.828125,
+          "height": 283.40625,
+          "top": 1283.28125,
+          "right": 479.5,
+          "bottom": 1566.6875,
+          "left": 301.671875
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-pack-eye-320.avif?v=1792316083",
+        "rect": {
+          "x": 551.265625,
+          "y": 1283.28125,
+          "width": 177.828125,
+          "height": 283.40625,
+          "top": 1283.28125,
+          "right": 729.09375,
+          "bottom": 1566.6875,
+          "left": 551.265625
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-pack-cream-320.avif?v=1792316086",
+        "rect": {
+          "x": 800.859375,
+          "y": 1283.28125,
+          "width": 177.828125,
+          "height": 283.40625,
+          "top": 1283.28125,
+          "right": 978.6875,
+          "bottom": 1566.6875,
+          "left": 800.859375
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-ritual-nocturne-540.avif?v=1792316905",
+        "rect": {
+          "x": 0,
+          "y": 2918.15625,
+          "width": 390,
+          "height": 260,
+          "top": 2918.15625,
+          "right": 390,
+          "bottom": 3178.15625,
+          "left": 0
+        }
+      }
+    ],
+    "focus": {
+      "outline": "rgb(28, 29, 31) solid 2px",
+      "background": "rgb(158, 45, 49)",
+      "color": "rgb(251, 250, 247)"
+    }
+  },
+  {
+    "width": 430,
+    "overflow": false,
+    "hero": [
+      {
+        "class": "hx-btn hxh__cta",
+        "text": "Shop the ritual",
+        "rect": {
+          "x": 24,
+          "y": 274.3125,
+          "width": 138.125,
+          "height": 52,
+          "top": 274.3125,
+          "right": 162.125,
+          "bottom": 326.3125,
+          "left": 24
+        }
+      },
+      {
+        "class": "hxh__inclusion",
+        "text": "4 full-size formulas\n€450",
+        "rect": {
+          "x": 24,
+          "y": 336.3125,
+          "width": 209.984375,
+          "height": 53.59375,
+          "top": 336.3125,
+          "right": 233.984375,
+          "bottom": 389.90625,
+          "left": 24
+        }
+      },
+      {
+        "class": "hxh__price",
+        "text": "€450",
+        "rect": {
+          "x": 24,
+          "y": 361.3125,
+          "width": 209.984375,
+          "height": 28.59375,
+          "top": 361.3125,
+          "right": 233.984375,
+          "bottom": 389.90625,
+          "left": 24
+        }
+      },
+      {
+        "class": "hxh__set",
+        "text": "",
+        "rect": {
+          "x": 245.984375,
+          "y": 275.609375,
+          "width": 160,
+          "height": 161,
+          "top": 275.609375,
+          "right": 405.984375,
+          "bottom": 436.609375,
+          "left": 245.984375
+        }
+      }
+    ],
+    "sources": [
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-ritual-spoon-original-320.avif?v=1792316895",
+        "rect": {
+          "x": 245.984375,
+          "y": 275.609375,
+          "width": 160,
+          "height": 161,
+          "top": 275.609375,
+          "right": 405.984375,
+          "bottom": 436.609375,
+          "left": 245.984375
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-pack-cleanser-320.avif?v=1792316075",
+        "rect": {
+          "x": 54.953125,
+          "y": 1304.09375,
+          "width": 196.078125,
+          "height": 312.484375,
+          "top": 1304.09375,
+          "right": 251.03125,
+          "bottom": 1616.578125,
+          "left": 54.953125
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-pack-serum-320.avif?v=1792316079",
+        "rect": {
+          "x": 330.140625,
+          "y": 1304.09375,
+          "width": 196.078125,
+          "height": 312.484375,
+          "top": 1304.09375,
+          "right": 526.21875,
+          "bottom": 1616.578125,
+          "left": 330.140625
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-pack-eye-320.avif?v=1792316083",
+        "rect": {
+          "x": 605.328125,
+          "y": 1304.09375,
+          "width": 196.078125,
+          "height": 312.484375,
+          "top": 1304.09375,
+          "right": 801.40625,
+          "bottom": 1616.578125,
+          "left": 605.328125
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-pack-cream-320.avif?v=1792316086",
+        "rect": {
+          "x": 880.515625,
+          "y": 1304.09375,
+          "width": 196.078125,
+          "height": 312.484375,
+          "top": 1304.09375,
+          "right": 1076.59375,
+          "bottom": 1616.578125,
+          "left": 880.515625
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-ritual-nocturne-540.avif?v=1792316905",
+        "rect": {
+          "x": 0,
+          "y": 2950.8125,
+          "width": 430,
+          "height": 286.65625,
+          "top": 2950.8125,
+          "right": 430,
+          "bottom": 3237.46875,
+          "left": 0
+        }
+      }
+    ]
+  },
+  {
+    "width": 600,
+    "overflow": false,
+    "hero": [
+      {
+        "class": "hx-btn hxh__cta",
+        "text": "Shop the ritual",
+        "rect": {
+          "x": 48,
+          "y": 326.125,
+          "width": 138.125,
+          "height": 52,
+          "top": 326.125,
+          "right": 186.125,
+          "bottom": 378.125,
+          "left": 48
+        }
+      },
+      {
+        "class": "hxh__inclusion",
+        "text": "4 full-size formulas\n€450",
+        "rect": {
+          "x": 48,
+          "y": 388.125,
+          "width": 238,
+          "height": 53.59375,
+          "top": 388.125,
+          "right": 286,
+          "bottom": 441.71875,
+          "left": 48
+        }
+      },
+      {
+        "class": "hxh__price",
+        "text": "€450",
+        "rect": {
+          "x": 48,
+          "y": 413.125,
+          "width": 238,
+          "height": 28.59375,
+          "top": 413.125,
+          "right": 286,
+          "bottom": 441.71875,
+          "left": 48
+        }
+      },
+      {
+        "class": "hxh__set",
+        "text": "",
+        "rect": {
+          "x": 392,
+          "y": 327.421875,
+          "width": 160,
+          "height": 161,
+          "top": 327.421875,
+          "right": 552,
+          "bottom": 488.421875,
+          "left": 392
+        }
+      }
+    ],
+    "sources": [
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-ritual-spoon-original-320.avif?v=1792316895",
+        "rect": {
+          "x": 392,
+          "y": 327.421875,
+          "width": 160,
+          "height": 161,
+          "top": 327.421875,
+          "right": 552,
+          "bottom": 488.421875,
+          "left": 392
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-pack-cleanser-320.avif?v=1792316075",
+        "rect": {
+          "x": 74.390625,
+          "y": 1481.9375,
+          "width": 273.59375,
+          "height": 436.03125,
+          "top": 1481.9375,
+          "right": 347.984375,
+          "bottom": 1917.96875,
+          "left": 74.390625
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-pack-serum-320.avif?v=1792316079",
+        "rect": {
+          "x": 454.390625,
+          "y": 1481.9375,
+          "width": 273.59375,
+          "height": 436.03125,
+          "top": 1481.9375,
+          "right": 727.984375,
+          "bottom": 1917.96875,
+          "left": 454.390625
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-pack-eye-320.avif?v=1792316083",
+        "rect": {
+          "x": 834.390625,
+          "y": 1481.9375,
+          "width": 273.59375,
+          "height": 436.03125,
+          "top": 1481.9375,
+          "right": 1107.984375,
+          "bottom": 1917.96875,
+          "left": 834.390625
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-pack-cream-320.avif?v=1792316086",
+        "rect": {
+          "x": 1214.390625,
+          "y": 1481.9375,
+          "width": 273.59375,
+          "height": 436.03125,
+          "top": 1481.9375,
+          "right": 1487.984375,
+          "bottom": 1917.96875,
+          "left": 1214.390625
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-ritual-nocturne-800.avif?v=1792316906",
+        "rect": {
+          "x": 0,
+          "y": 3253.640625,
+          "width": 600,
+          "height": 399.75,
+          "top": 3253.640625,
+          "right": 600,
+          "bottom": 3653.390625,
+          "left": 0
+        }
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "overflow": false,
+    "hero": [
+      {
+        "class": "hx-btn hxh__cta",
+        "text": "Shop the ritual",
+        "rect": {
+          "x": 385.265625,
+          "y": 328.90625,
+          "width": 130.125,
+          "height": 52,
+          "top": 328.90625,
+          "right": 515.390625,
+          "bottom": 380.90625,
+          "left": 385.265625
+        }
+      },
+      {
+        "class": "hxh__inclusion",
+        "text": "4 full-size formulas · €450",
+        "rect": {
+          "x": 385.265625,
+          "y": 390.90625,
+          "width": 188.71875,
+          "height": 22.5,
+          "top": 390.90625,
+          "right": 573.984375,
+          "bottom": 413.40625,
+          "left": 385.265625
+        }
+      },
+      {
+        "class": "hxh__price",
+        "text": "· €450",
+        "rect": {
+          "x": 526.53125,
+          "y": 391.90625,
+          "width": 46.609375,
+          "height": 19,
+          "top": 391.90625,
+          "right": 573.140625,
+          "bottom": 410.90625,
+          "left": 526.53125
+        }
+      },
+      {
+        "class": "hxh__set",
+        "text": "",
+        "rect": {
+          "x": 585.984375,
+          "y": 250.1875,
+          "width": 150,
+          "height": 150.9375,
+          "top": 250.1875,
+          "right": 735.984375,
+          "bottom": 401.125,
+          "left": 585.984375
+        }
+      }
+    ],
+    "sources": [
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-ritual-spoon-original-320.avif?v=1792316895",
+        "rect": {
+          "x": 585.984375,
+          "y": 250.1875,
+          "width": 150,
+          "height": 150.9375,
+          "top": 250.1875,
+          "right": 735.984375,
+          "bottom": 401.125,
+          "left": 585.984375
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-pack-cleanser-320.avif?v=1792316075",
+        "rect": {
+          "x": 56.96875,
+          "y": 999.875,
+          "width": 300,
+          "height": 478.125,
+          "top": 999.875,
+          "right": 356.96875,
+          "bottom": 1478,
+          "left": 56.96875
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-pack-serum-320.avif?v=1792316079",
+        "rect": {
+          "x": 411.015625,
+          "y": 999.875,
+          "width": 300,
+          "height": 478.125,
+          "top": 999.875,
+          "right": 711.015625,
+          "bottom": 1478,
+          "left": 411.015625
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-pack-eye-320.avif?v=1792316083",
+        "rect": {
+          "x": 56.96875,
+          "y": 1726.203125,
+          "width": 300,
+          "height": 478.125,
+          "top": 1726.203125,
+          "right": 356.96875,
+          "bottom": 2204.328125,
+          "left": 56.96875
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-pack-cream-320.avif?v=1792316086",
+        "rect": {
+          "x": 411.015625,
+          "y": 1726.203125,
+          "width": 300,
+          "height": 478.125,
+          "top": 1726.203125,
+          "right": 711.015625,
+          "bottom": 2204.328125,
+          "left": 411.015625
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-ritual-nocturne-800.avif?v=1792316906",
+        "rect": {
+          "x": 0,
+          "y": 3458.65625,
+          "width": 768,
+          "height": 511.671875,
+          "top": 3458.65625,
+          "right": 768,
+          "bottom": 3970.328125,
+          "left": 0
+        }
+      }
+    ]
+  },
+  {
+    "width": 900,
+    "overflow": false,
+    "hero": [
+      {
+        "class": "hx-btn hxh__cta",
+        "text": "Shop the ritual",
+        "rect": {
+          "x": 446,
+          "y": 282.40625,
+          "width": 130.125,
+          "height": 52,
+          "top": 282.40625,
+          "right": 576.125,
+          "bottom": 334.40625,
+          "left": 446
+        }
+      },
+      {
+        "class": "hxh__inclusion",
+        "text": "4 full-size formulas · €450",
+        "rect": {
+          "x": 446,
+          "y": 344.40625,
+          "width": 255,
+          "height": 22.5,
+          "top": 344.40625,
+          "right": 701,
+          "bottom": 366.90625,
+          "left": 446
+        }
+      },
+      {
+        "class": "hxh__price",
+        "text": "· €450",
+        "rect": {
+          "x": 587.265625,
+          "y": 345.40625,
+          "width": 46.609375,
+          "height": 19,
+          "top": 345.40625,
+          "right": 633.875,
+          "bottom": 364.40625,
+          "left": 587.265625
+        }
+      },
+      {
+        "class": "hxh__set",
+        "text": "",
+        "rect": {
+          "x": 718,
+          "y": 226.9375,
+          "width": 150,
+          "height": 150.9375,
+          "top": 226.9375,
+          "right": 868,
+          "bottom": 377.875,
+          "left": 718
+        }
+      }
+    ],
+    "sources": [
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-ritual-spoon-original-320.avif?v=1792316895",
+        "rect": {
+          "x": 718,
+          "y": 226.9375,
+          "width": 150,
+          "height": 150.9375,
+          "top": 226.9375,
+          "right": 868,
+          "bottom": 377.875,
+          "left": 718
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-pack-cleanser-320.avif?v=1792316075",
+        "rect": {
+          "x": 92.546875,
+          "y": 872.65625,
+          "width": 300,
+          "height": 478.125,
+          "top": 872.65625,
+          "right": 392.546875,
+          "bottom": 1350.78125,
+          "left": 92.546875
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-pack-serum-320.avif?v=1792316079",
+        "rect": {
+          "x": 507.4375,
+          "y": 872.65625,
+          "width": 300,
+          "height": 478.125,
+          "top": 872.65625,
+          "right": 807.4375,
+          "bottom": 1350.78125,
+          "left": 507.4375
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-pack-eye-320.avif?v=1792316083",
+        "rect": {
+          "x": 92.546875,
+          "y": 1599.78125,
+          "width": 300,
+          "height": 478.125,
+          "top": 1599.78125,
+          "right": 392.546875,
+          "bottom": 2077.90625,
+          "left": 92.546875
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-pack-cream-320.avif?v=1792316086",
+        "rect": {
+          "x": 507.4375,
+          "y": 1599.78125,
+          "width": 300,
+          "height": 478.125,
+          "top": 1599.78125,
+          "right": 807.4375,
+          "bottom": 2077.90625,
+          "left": 507.4375
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-ritual-nocturne-540.avif?v=1792316905",
+        "rect": {
+          "x": 378,
+          "y": 3227.1875,
+          "width": 522,
+          "height": 348,
+          "top": 3227.1875,
+          "right": 900,
+          "bottom": 3575.1875,
+          "left": 378
+        }
+      }
+    ]
+  },
+  {
+    "width": 1024,
+    "overflow": false,
+    "hero": [
+      {
+        "class": "hx-btn hxh__cta",
+        "text": "Shop the ritual",
+        "rect": {
+          "x": 503.03125,
+          "y": 293.125,
+          "width": 130.125,
+          "height": 52,
+          "top": 293.125,
+          "right": 633.15625,
+          "bottom": 345.125,
+          "left": 503.03125
+        }
+      },
+      {
+        "class": "hxh__inclusion",
+        "text": "4 full-size formulas · €450",
+        "rect": {
+          "x": 503.03125,
+          "y": 355.125,
+          "width": 255,
+          "height": 22.5,
+          "top": 355.125,
+          "right": 758.03125,
+          "bottom": 377.625,
+          "left": 503.03125
+        }
+      },
+      {
+        "class": "hxh__price",
+        "text": "· €450",
+        "rect": {
+          "x": 644.296875,
+          "y": 356.125,
+          "width": 46.609375,
+          "height": 19,
+          "top": 356.125,
+          "right": 690.90625,
+          "bottom": 375.125,
+          "left": 644.296875
+        }
+      },
+      {
+        "class": "hxh__set",
+        "text": "",
+        "rect": {
+          "x": 841.984375,
+          "y": 237.65625,
+          "width": 150,
+          "height": 150.9375,
+          "top": 237.65625,
+          "right": 991.984375,
+          "bottom": 388.59375,
+          "left": 841.984375
+        }
+      }
+    ],
+    "sources": [
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-ritual-spoon-original-320.avif?v=1792316895",
+        "rect": {
+          "x": 841.984375,
+          "y": 237.65625,
+          "width": 150,
+          "height": 150.9375,
+          "top": 237.65625,
+          "right": 991.984375,
+          "bottom": 388.59375,
+          "left": 841.984375
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-pack-cleanser-320.avif?v=1792316075",
+        "rect": {
+          "x": 125.953125,
+          "y": 891.328125,
+          "width": 300,
+          "height": 478.125,
+          "top": 891.328125,
+          "right": 425.953125,
+          "bottom": 1369.453125,
+          "left": 125.953125
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-pack-serum-320.avif?v=1792316079",
+        "rect": {
+          "x": 598.03125,
+          "y": 891.328125,
+          "width": 300,
+          "height": 478.125,
+          "top": 891.328125,
+          "right": 898.03125,
+          "bottom": 1369.453125,
+          "left": 598.03125
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-pack-eye-320.avif?v=1792316083",
+        "rect": {
+          "x": 125.953125,
+          "y": 1619.203125,
+          "width": 300,
+          "height": 478.125,
+          "top": 1619.203125,
+          "right": 425.953125,
+          "bottom": 2097.328125,
+          "left": 125.953125
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-pack-cream-320.avif?v=1792316086",
+        "rect": {
+          "x": 598.03125,
+          "y": 1619.203125,
+          "width": 300,
+          "height": 478.125,
+          "top": 1619.203125,
+          "right": 898.03125,
+          "bottom": 2097.328125,
+          "left": 598.03125
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-ritual-nocturne-800.avif?v=1792316906",
+        "rect": {
+          "x": 430.078125,
+          "y": 3227.109375,
+          "width": 593.90625,
+          "height": 395.6875,
+          "top": 3227.109375,
+          "right": 1023.984375,
+          "bottom": 3622.796875,
+          "left": 430.078125
+        }
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "overflow": false,
+    "hero": [
+      {
+        "class": "hx-btn hxh__cta",
+        "text": "Shop the ritual",
+        "rect": {
+          "x": 676.796875,
+          "y": 438.203125,
+          "width": 138.125,
+          "height": 52,
+          "top": 438.203125,
+          "right": 814.921875,
+          "bottom": 490.203125,
+          "left": 676.796875
+        }
+      },
+      {
+        "class": "hxh__inclusion",
+        "text": "4 full-size formulas · €450",
+        "rect": {
+          "x": 676.796875,
+          "y": 500.203125,
+          "width": 255,
+          "height": 22.5,
+          "top": 500.203125,
+          "right": 931.796875,
+          "bottom": 522.703125,
+          "left": 676.796875
+        }
+      },
+      {
+        "class": "hxh__price",
+        "text": "· €450",
+        "rect": {
+          "x": 818.0625,
+          "y": 501.203125,
+          "width": 46.609375,
+          "height": 19,
+          "top": 501.203125,
+          "right": 864.671875,
+          "bottom": 520.203125,
+          "left": 818.0625
+        }
+      },
+      {
+        "class": "hxh__set",
+        "text": "",
+        "rect": {
+          "x": 1007.984375,
+          "y": 275.90625,
+          "width": 360,
+          "height": 361.5,
+          "top": 275.90625,
+          "right": 1367.984375,
+          "bottom": 637.40625,
+          "left": 1007.984375
+        }
+      }
+    ],
+    "sources": [
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-ritual-spoon-original-480.avif?v=1792316897",
+        "rect": {
+          "x": 1007.984375,
+          "y": 275.90625,
+          "width": 360,
+          "height": 361.5,
+          "top": 275.90625,
+          "right": 1367.984375,
+          "bottom": 637.40625,
+          "left": 1007.984375
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-pack-cleanser-320.avif?v=1792316075",
+        "rect": {
+          "x": 96.96875,
+          "y": 1165.140625,
+          "width": 250.296875,
+          "height": 398.90625,
+          "top": 1165.140625,
+          "right": 347.265625,
+          "bottom": 1564.046875,
+          "left": 96.96875
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-pack-serum-320.avif?v=1792316079",
+        "rect": {
+          "x": 428.890625,
+          "y": 1165.140625,
+          "width": 250.296875,
+          "height": 398.90625,
+          "top": 1165.140625,
+          "right": 679.1875,
+          "bottom": 1564.046875,
+          "left": 428.890625
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-pack-eye-320.avif?v=1792316083",
+        "rect": {
+          "x": 760.8125,
+          "y": 1165.140625,
+          "width": 250.296875,
+          "height": 398.90625,
+          "top": 1165.140625,
+          "right": 1011.109375,
+          "bottom": 1564.046875,
+          "left": 760.8125
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-pack-cream-320.avif?v=1792316086",
+        "rect": {
+          "x": 1092.734375,
+          "y": 1165.140625,
+          "width": 250.296875,
+          "height": 398.90625,
+          "top": 1165.140625,
+          "right": 1343.03125,
+          "bottom": 1564.046875,
+          "left": 1092.734375
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-ritual-nocturne-1200.avif?v=1792316908",
+        "rect": {
+          "x": 604.796875,
+          "y": 2606.9375,
+          "width": 835.1875,
+          "height": 556.78125,
+          "top": 2606.9375,
+          "right": 1439.984375,
+          "bottom": 3163.71875,
+          "left": 604.796875
+        }
+      }
+    ]
+  },
+  {
+    "width": 1920,
+    "overflow": false,
+    "hero": [
+      {
+        "class": "hx-btn hxh__cta",
+        "text": "Shop the ritual",
+        "rect": {
+          "x": 902.390625,
+          "y": 504.140625,
+          "width": 138.125,
+          "height": 52,
+          "top": 504.140625,
+          "right": 1040.515625,
+          "bottom": 556.140625,
+          "left": 902.390625
+        }
+      },
+      {
+        "class": "hxh__inclusion",
+        "text": "4 full-size formulas · €450",
+        "rect": {
+          "x": 902.390625,
+          "y": 566.140625,
+          "width": 255,
+          "height": 22.5,
+          "top": 566.140625,
+          "right": 1157.390625,
+          "bottom": 588.640625,
+          "left": 902.390625
+        }
+      },
+      {
+        "class": "hxh__price",
+        "text": "· €450",
+        "rect": {
+          "x": 1043.65625,
+          "y": 567.140625,
+          "width": 46.609375,
+          "height": 19,
+          "top": 567.140625,
+          "right": 1090.265625,
+          "bottom": 586.140625,
+          "left": 1043.65625
+        }
+      },
+      {
+        "class": "hxh__set",
+        "text": "",
+        "rect": {
+          "x": 1443.984375,
+          "y": 331.8125,
+          "width": 380,
+          "height": 381.578125,
+          "top": 331.8125,
+          "right": 1823.984375,
+          "bottom": 713.390625,
+          "left": 1443.984375
+        }
+      }
+    ],
+    "sources": [
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-ritual-spoon-original-480.avif?v=1792316897",
+        "rect": {
+          "x": 1443.984375,
+          "y": 331.8125,
+          "width": 380,
+          "height": 381.578125,
+          "top": 331.8125,
+          "right": 1823.984375,
+          "bottom": 713.390625,
+          "left": 1443.984375
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-pack-cleanser-480.avif?v=1792316076",
+        "rect": {
+          "x": 264.53125,
+          "y": 1243.09375,
+          "width": 277.9375,
+          "height": 442.953125,
+          "top": 1243.09375,
+          "right": 542.46875,
+          "bottom": 1686.046875,
+          "left": 264.53125
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-pack-serum-480.avif?v=1792316080",
+        "rect": {
+          "x": 635.53125,
+          "y": 1243.09375,
+          "width": 277.9375,
+          "height": 442.953125,
+          "top": 1243.09375,
+          "right": 913.46875,
+          "bottom": 1686.046875,
+          "left": 635.53125
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-pack-eye-480.avif?v=1792316083",
+        "rect": {
+          "x": 1006.53125,
+          "y": 1243.09375,
+          "width": 277.9375,
+          "height": 442.953125,
+          "top": 1243.09375,
+          "right": 1284.46875,
+          "bottom": 1686.046875,
+          "left": 1006.53125
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-pack-cream-480.avif?v=1792316087",
+        "rect": {
+          "x": 1377.53125,
+          "y": 1243.09375,
+          "width": 277.9375,
+          "height": 442.953125,
+          "top": 1243.09375,
+          "right": 1655.46875,
+          "bottom": 1686.046875,
+          "left": 1377.53125
+        }
+      },
+      {
+        "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-ritual-nocturne-1200.avif?v=1792316908",
+        "rect": {
+          "x": 806.390625,
+          "y": 2687.34375,
+          "width": 1113.59375,
+          "height": 742.390625,
+          "top": 2687.34375,
+          "right": 1919.984375,
+          "bottom": 3429.734375,
+          "left": 806.390625
+        }
+      }
+    ]
+  }
+]

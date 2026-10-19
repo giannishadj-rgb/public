@@ -1,0 +1,107 @@
+{
+  "title": "Luxury Caviar Skincare Made in Switzerland | Caviar of Switzerland",
+  "body": "home wp-singular page-template-default page page-id-23793 wp-embed-responsive wp-theme-twentytwentyfive wp-child-theme-cos-child theme-twentytwentyfive woocommerce-uses-block-theme woocommerce-block-theme-has-button-styles woocommerce-js cos-h26 cos-h26-nocturne",
+  "overflow": 0,
+  "sections": [
+    {
+      "cls": "hxh h26-hero--pearl",
+      "text": "The Swiss art of\ncaviar skincare\n\nFour caviar formulas. One complete ritual.\n\nSwiss science. Made in Zug.\n\nShop the Complete Ritual",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 844
+      },
+      "display": "flex",
+      "padding": "0px",
+      "grid": "none"
+    },
+    {
+      "cls": "hxc",
+      "text": "The Collection\n\nCleanse, treat, revive, restore. A complete ritual, distilled to four precise steps.\n\n01\nCleanse\nMicellar Water\nAll‑in‑One Cleanser\nRemoves make‑up & replenishes li",
+      "rect": {
+        "x": 0,
+        "y": 843.984375,
+        "w": 390,
+        "h": 1300
+      },
+      "display": "block",
+      "padding": "64px 0px 56px",
+      "grid": "none"
+    },
+    {
+      "cls": "hxv",
+      "text": "THE SIGNATURE INGREDIENT\n\nCaviar in every formula\n\nSiberian sturgeon, Acipenser baerii\n\nRich in the lipids, amino acids and minerals skin relies on.\n\nOrigin\nSustainably farmed, ful",
+      "rect": {
+        "x": 0,
+        "y": 2143.828125,
+        "w": 390,
+        "h": 1226
+      },
+      "display": "block",
+      "padding": "0px",
+      "grid": "none"
+    },
+    {
+      "cls": "hxs",
+      "text": "SWISS SCIENCE\n\nProtect. Repair. Rejuvenate.\nProtect.\n\nMicro‑encapsulated caviar keeps its potency, while two antioxidants help defend skin against daily environmental stress.\n\nKey ",
+      "rect": {
+        "x": 0,
+        "y": 3369.453125,
+        "w": 390,
+        "h": 1567
+      },
+      "display": "block",
+      "padding": "79.599998px 0px",
+      "grid": "none"
+    },
+    {
+      "cls": "hxp",
+      "text": "Swiss precision.\nConsidered care.\n\nCreated and filled in Zug. Four formulas, shaped by more than twenty years of Swiss skincare expertise.\n\nOne place\nZug, Switzerland. From formula",
+      "rect": {
+        "x": 0,
+        "y": 4963.296875,
+        "w": 390,
+        "h": 1145
+      },
+      "display": "block",
+      "padding": "64px 0px",
+      "grid": "none"
+    },
+    {
+      "cls": "hxr",
+      "text": "The Ritual\n\nAlways in this order, from the lightest texture to the richest.\n\n01 Cleanse\nSweep over face and neck with a cotton pad. Lift away make‑up and impurities. No rinsing.\n(M",
+      "rect": {
+        "x": 0,
+        "y": 6108.03125,
+        "w": 390,
+        "h": 1145
+      },
+      "display": "block",
+      "padding": "64px 0px",
+      "grid": "none"
+    },
+    {
+      "cls": "hxz",
+      "text": "Swiss skincare,\nrefined to the essential.\nShop the Complete Ritual\nFree worldwide shipping\n30-day returns\n\nCAVIAR OF SWITZERLAND",
+      "rect": {
+        "x": 0,
+        "y": 7253.375,
+        "w": 390,
+        "h": 552
+      },
+      "display": "block",
+      "padding": "130.777496px 0px 32px",
+      "grid": "none"
+    }
+  ],
+  "images": [
+    "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-2048.jpg?v=1792134896",
+    "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/philosophy-lab-640.jpg?v=1792085785",
+    "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-720.jpg?v=1792134884",
+    "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-720.jpg?v=1792134914",
+    "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-720.jpg?v=1792134966",
+    "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-720.jpg?v=1792134997",
+    "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/logo-light.png"
+  ]
+}

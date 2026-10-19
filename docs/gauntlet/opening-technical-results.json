@@ -1,0 +1,709 @@
+{
+  "viewports": [
+    {
+      "width": 360,
+      "overflow": false,
+      "h1": "Four formulas.\nOne daily ritual.",
+      "titleRect": {
+        "x": 24,
+        "y": 92,
+        "width": 233.5625,
+        "height": 81.59375,
+        "top": 92,
+        "right": 257.5625,
+        "bottom": 173.59375,
+        "left": 24
+      },
+      "titleChildren": [
+        {
+          "text": "Four formulas.",
+          "width": 233.5625,
+          "scrollWidth": 234,
+          "height": 40.796875,
+          "font": "40px"
+        },
+        {
+          "text": "One daily ritual.",
+          "width": 233.5625,
+          "scrollWidth": 234,
+          "height": 40.796875,
+          "font": "40px"
+        }
+      ],
+      "heroLinks": [
+        {
+          "text": "Shop the ritual",
+          "href": "http://caviarofswitzerland.local/products/the-complete-ritual/",
+          "width": 138.125,
+          "height": 52
+        },
+        {
+          "text": "Explore formulas",
+          "href": "#collection",
+          "width": 169.703125,
+          "height": 44
+        },
+        {
+          "text": "01\nCleanse\nCleanser\n: Micellar Water All-in-One Cleanser, 150 ml",
+          "href": "http://caviarofswitzerland.local/products/micellar-water-cleanser/",
+          "width": 71.984375,
+          "height": 78
+        },
+        {
+          "text": "02\nTreat\nSerum\n: Advanced Repair Serum, 30 ml",
+          "href": "http://caviarofswitzerland.local/products/advanced-repair-serum/",
+          "width": 72,
+          "height": 78
+        },
+        {
+          "text": "03\nRevive\nEye cream\n: Revitalizing Eye Cream, 15 ml",
+          "href": "http://caviarofswitzerland.local/products/revitalizing-eye-cream/",
+          "width": 72,
+          "height": 85
+        },
+        {
+          "text": "04\nRestore\n24h cream\n: 24h Regeneration Cream, 50 ml",
+          "href": "http://caviarofswitzerland.local/products/24h-regeneration-cream/",
+          "width": 72,
+          "height": 85
+        },
+        {
+          "text": "Why caviar",
+          "href": "http://caviarofswitzerland.local/science/why-caviar/",
+          "width": 115.28125,
+          "height": 44
+        }
+      ],
+      "images": [
+        {
+          "class": "hxh__campaign",
+          "currentSrc": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/ritual-campaign-june-2026-720.avif?v=1792304746",
+          "complete": true,
+          "naturalWidth": 259,
+          "width": 259,
+          "height": 360,
+          "position": "50% 46%"
+        },
+        {
+          "class": "hxr__portrait hxr__portrait--cream",
+          "currentSrc": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-540.avif?v=1792265234",
+          "complete": true,
+          "naturalWidth": 311,
+          "width": 312,
+          "height": 390,
+          "position": "50% 40%"
+        }
+      ],
+      "broken": [],
+      "animations": [],
+      "cls": [],
+      "accessibleHero": "- region \"Four formulas. One daily ritual.\":\n  - heading \"Four formulas. One daily ritual.\" [level=1]:\n    - text: Four formulas.\n    - emphasis: One daily ritual.\n  - paragraph: Swiss-made caviar skincare. For firmer-looking, hydrated skin.\n  - link \"Shop the ritual\":\n    - /url: http://caviarofswitzerland.local/products/the-complete-ritual/\n  - paragraph: Four full-size formulas €450\n  - link \"Explore formulas\":\n    - /url: \"#collection\"\n  - 'img \"The Complete Ritual: the cleanser, serum, eye cream and 24h cream together\"'\n  - list \"Your four-step skincare ritual\":\n    - listitem:\n      - 'link \"01 Cleanse Cleanser : Micellar Water All-in-One Cleanser, 150 ml\"':\n        - /url: http://caviarofswitzerland.local/products/micellar-water-cleanser/\n    - listitem:\n      - 'link \"02 Treat Serum : Advanced Repair Serum, 30 ml\"':\n        - /url: http://caviarofswitzerland.local/products/advanced-repair-serum/\n    - listitem:\n      - 'link \"03 Revive Eye cream : Revitalizing Eye Cream, 15 ml\"':\n        - /url: http://caviarofswitzerland.local/products/revitalizing-eye-cream/\n    - listitem:\n      - 'link \"04 Restore 24h cream : 24h Regeneration Cream, 50 ml\"':\n        - /url: http://caviarofswitzerland.local/products/24h-regeneration-cream/\n  - img \"Two women resting with eyes closed in warm light, from the Caviar of Switzerland June 2026 campaign\"\n  - img \"Glossy caviar pearls in close-up\"\n  - paragraph: Aquitaine caviar. Swiss extraction.\n  - paragraph: Farmed in France. Rich in lipids, proteins and minerals.\n  - link \"Why caviar\":\n    - /url: http://caviarofswitzerland.local/science/why-caviar/",
+      "axe": []
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "h1": "Four formulas.\nOne daily ritual.",
+      "titleRect": {
+        "x": 24,
+        "y": 92,
+        "width": 245.953125,
+        "height": 85.90625,
+        "top": 92,
+        "right": 269.953125,
+        "bottom": 177.90625,
+        "left": 24
+      },
+      "titleChildren": [
+        {
+          "text": "Four formulas.",
+          "width": 245.953125,
+          "scrollWidth": 246,
+          "height": 42.953125,
+          "font": "42.12px"
+        },
+        {
+          "text": "One daily ritual.",
+          "width": 245.953125,
+          "scrollWidth": 246,
+          "height": 42.953125,
+          "font": "42.12px"
+        }
+      ],
+      "heroLinks": [
+        {
+          "text": "Shop the ritual",
+          "href": "http://caviarofswitzerland.local/products/the-complete-ritual/",
+          "width": 138.125,
+          "height": 52
+        },
+        {
+          "text": "Explore formulas",
+          "href": "#collection",
+          "width": 169.703125,
+          "height": 44
+        },
+        {
+          "text": "01\nCleanse\nCleanser\n: Micellar Water All-in-One Cleanser, 150 ml",
+          "href": "http://caviarofswitzerland.local/products/micellar-water-cleanser/",
+          "width": 79.484375,
+          "height": 78
+        },
+        {
+          "text": "02\nTreat\nSerum\n: Advanced Repair Serum, 30 ml",
+          "href": "http://caviarofswitzerland.local/products/advanced-repair-serum/",
+          "width": 79.5,
+          "height": 78
+        },
+        {
+          "text": "03\nRevive\nEye cream\n: Revitalizing Eye Cream, 15 ml",
+          "href": "http://caviarofswitzerland.local/products/revitalizing-eye-cream/",
+          "width": 79.5,
+          "height": 78
+        },
+        {
+          "text": "04\nRestore\n24h cream\n: 24h Regeneration Cream, 50 ml",
+          "href": "http://caviarofswitzerland.local/products/24h-regeneration-cream/",
+          "width": 79.5,
+          "height": 78
+        },
+        {
+          "text": "Why caviar",
+          "href": "http://caviarofswitzerland.local/science/why-caviar/",
+          "width": 115.28125,
+          "height": 44
+        }
+      ],
+      "images": [
+        {
+          "class": "hxh__campaign",
+          "currentSrc": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/ritual-campaign-june-2026-720.avif?v=1792304746",
+          "complete": true,
+          "naturalWidth": 280,
+          "width": 281,
+          "height": 390,
+          "position": "50% 46%"
+        },
+        {
+          "class": "hxr__portrait hxr__portrait--cream",
+          "currentSrc": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-540.avif?v=1792265234",
+          "complete": true,
+          "naturalWidth": 342,
+          "width": 342,
+          "height": 428,
+          "position": "50% 40%"
+        }
+      ],
+      "broken": [],
+      "animations": [],
+      "cls": [],
+      "accessibleHero": "- region \"Four formulas. One daily ritual.\":\n  - heading \"Four formulas. One daily ritual.\" [level=1]:\n    - text: Four formulas.\n    - emphasis: One daily ritual.\n  - paragraph: Swiss-made caviar skincare. For firmer-looking, hydrated skin.\n  - link \"Shop the ritual\":\n    - /url: http://caviarofswitzerland.local/products/the-complete-ritual/\n  - paragraph: Four full-size formulas €450\n  - link \"Explore formulas\":\n    - /url: \"#collection\"\n  - 'img \"The Complete Ritual: the cleanser, serum, eye cream and 24h cream together\"'\n  - list \"Your four-step skincare ritual\":\n    - listitem:\n      - 'link \"01 Cleanse Cleanser : Micellar Water All-in-One Cleanser, 150 ml\"':\n        - /url: http://caviarofswitzerland.local/products/micellar-water-cleanser/\n    - listitem:\n      - 'link \"02 Treat Serum : Advanced Repair Serum, 30 ml\"':\n        - /url: http://caviarofswitzerland.local/products/advanced-repair-serum/\n    - listitem:\n      - 'link \"03 Revive Eye cream : Revitalizing Eye Cream, 15 ml\"':\n        - /url: http://caviarofswitzerland.local/products/revitalizing-eye-cream/\n    - listitem:\n      - 'link \"04 Restore 24h cream : 24h Regeneration Cream, 50 ml\"':\n        - /url: http://caviarofswitzerland.local/products/24h-regeneration-cream/\n  - img \"Two women resting with eyes closed in warm light, from the Caviar of Switzerland June 2026 campaign\"\n  - img \"Glossy caviar pearls in close-up\"\n  - paragraph: Aquitaine caviar. Swiss extraction.\n  - paragraph: Farmed in France. Rich in lipids, proteins and minerals.\n  - link \"Why caviar\":\n    - /url: http://caviarofswitzerland.local/science/why-caviar/",
+      "axe": []
+    },
+    {
+      "width": 430,
+      "overflow": false,
+      "h1": "Four formulas.\nOne daily ritual.",
+      "titleRect": {
+        "x": 24,
+        "y": 92,
+        "width": 271.171875,
+        "height": 94.71875,
+        "top": 92,
+        "right": 295.171875,
+        "bottom": 186.71875,
+        "left": 24
+      },
+      "titleChildren": [
+        {
+          "text": "Four formulas.",
+          "width": 271.171875,
+          "scrollWidth": 271,
+          "height": 47.359375,
+          "font": "46.44px"
+        },
+        {
+          "text": "One daily ritual.",
+          "width": 271.171875,
+          "scrollWidth": 271,
+          "height": 47.359375,
+          "font": "46.44px"
+        }
+      ],
+      "heroLinks": [
+        {
+          "text": "Shop the ritual",
+          "href": "http://caviarofswitzerland.local/products/the-complete-ritual/",
+          "width": 138.125,
+          "height": 52
+        },
+        {
+          "text": "Explore formulas",
+          "href": "#collection",
+          "width": 169.703125,
+          "height": 44
+        },
+        {
+          "text": "01\nCleanse\nCleanser\n: Micellar Water All-in-One Cleanser, 150 ml",
+          "href": "http://caviarofswitzerland.local/products/micellar-water-cleanser/",
+          "width": 89.484375,
+          "height": 78
+        },
+        {
+          "text": "02\nTreat\nSerum\n: Advanced Repair Serum, 30 ml",
+          "href": "http://caviarofswitzerland.local/products/advanced-repair-serum/",
+          "width": 89.5,
+          "height": 78
+        },
+        {
+          "text": "03\nRevive\nEye cream\n: Revitalizing Eye Cream, 15 ml",
+          "href": "http://caviarofswitzerland.local/products/revitalizing-eye-cream/",
+          "width": 89.5,
+          "height": 78
+        },
+        {
+          "text": "04\nRestore\n24h cream\n: 24h Regeneration Cream, 50 ml",
+          "href": "http://caviarofswitzerland.local/products/24h-regeneration-cream/",
+          "width": 89.5,
+          "height": 78
+        },
+        {
+          "text": "Why caviar",
+          "href": "http://caviarofswitzerland.local/science/why-caviar/",
+          "width": 115.28125,
+          "height": 44
+        }
+      ],
+      "images": [
+        {
+          "class": "hxh__campaign",
+          "currentSrc": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/ritual-campaign-june-2026-720.avif?v=1792304746",
+          "complete": true,
+          "naturalWidth": 309,
+          "width": 310,
+          "height": 430,
+          "position": "50% 46%"
+        },
+        {
+          "class": "hxr__portrait hxr__portrait--cream",
+          "currentSrc": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-540.avif?v=1792265234",
+          "complete": true,
+          "naturalWidth": 382,
+          "width": 382,
+          "height": 478,
+          "position": "50% 40%"
+        }
+      ],
+      "broken": [],
+      "animations": [],
+      "cls": [],
+      "accessibleHero": "- region \"Four formulas. One daily ritual.\":\n  - heading \"Four formulas. One daily ritual.\" [level=1]:\n    - text: Four formulas.\n    - emphasis: One daily ritual.\n  - paragraph: Swiss-made caviar skincare. For firmer-looking, hydrated skin.\n  - link \"Shop the ritual\":\n    - /url: http://caviarofswitzerland.local/products/the-complete-ritual/\n  - paragraph: Four full-size formulas €450\n  - link \"Explore formulas\":\n    - /url: \"#collection\"\n  - 'img \"The Complete Ritual: the cleanser, serum, eye cream and 24h cream together\"'\n  - list \"Your four-step skincare ritual\":\n    - listitem:\n      - 'link \"01 Cleanse Cleanser : Micellar Water All-in-One Cleanser, 150 ml\"':\n        - /url: http://caviarofswitzerland.local/products/micellar-water-cleanser/\n    - listitem:\n      - 'link \"02 Treat Serum : Advanced Repair Serum, 30 ml\"':\n        - /url: http://caviarofswitzerland.local/products/advanced-repair-serum/\n    - listitem:\n      - 'link \"03 Revive Eye cream : Revitalizing Eye Cream, 15 ml\"':\n        - /url: http://caviarofswitzerland.local/products/revitalizing-eye-cream/\n    - listitem:\n      - 'link \"04 Restore 24h cream : 24h Regeneration Cream, 50 ml\"':\n        - /url: http://caviarofswitzerland.local/products/24h-regeneration-cream/\n  - img \"Two women resting with eyes closed in warm light, from the Caviar of Switzerland June 2026 campaign\"\n  - img \"Glossy caviar pearls in close-up\"\n  - paragraph: Aquitaine caviar. Swiss extraction.\n  - paragraph: Farmed in France. Rich in lipids, proteins and minerals.\n  - link \"Why caviar\":\n    - /url: http://caviarofswitzerland.local/science/why-caviar/",
+      "axe": []
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "h1": "Four formulas.\nOne daily ritual.",
+      "titleRect": {
+        "x": 385.265625,
+        "y": 92,
+        "width": 280.28125,
+        "height": 97.90625,
+        "top": 92,
+        "right": 665.546875,
+        "bottom": 189.90625,
+        "left": 385.265625
+      },
+      "titleChildren": [
+        {
+          "text": "Four formulas.",
+          "width": 280.28125,
+          "scrollWidth": 280,
+          "height": 48.953125,
+          "font": "48px"
+        },
+        {
+          "text": "One daily ritual.",
+          "width": 280.28125,
+          "scrollWidth": 280,
+          "height": 48.953125,
+          "font": "48px"
+        }
+      ],
+      "heroLinks": [
+        {
+          "text": "Shop the ritual",
+          "href": "http://caviarofswitzerland.local/products/the-complete-ritual/",
+          "width": 130.125,
+          "height": 52
+        },
+        {
+          "text": "Explore formulas",
+          "href": "#collection",
+          "width": 169.703125,
+          "height": 44
+        },
+        {
+          "text": "01\nCleanse\nCleanser\n: Micellar Water All-in-One Cleanser, 150 ml",
+          "href": "http://caviarofswitzerland.local/products/micellar-water-cleanser/",
+          "width": 157.03125,
+          "height": 55.25
+        },
+        {
+          "text": "02\nTreat\nSerum\n: Advanced Repair Serum, 30 ml",
+          "href": "http://caviarofswitzerland.local/products/advanced-repair-serum/",
+          "width": 157.03125,
+          "height": 55.25
+        },
+        {
+          "text": "03\nRevive\nEye cream\n: Revitalizing Eye Cream, 15 ml",
+          "href": "http://caviarofswitzerland.local/products/revitalizing-eye-cream/",
+          "width": 157.03125,
+          "height": 55.25
+        },
+        {
+          "text": "04\nRestore\n24h cream\n: 24h Regeneration Cream, 50 ml",
+          "href": "http://caviarofswitzerland.local/products/24h-regeneration-cream/",
+          "width": 157.046875,
+          "height": 55.25
+        },
+        {
+          "text": "Why caviar",
+          "href": "http://caviarofswitzerland.local/science/why-caviar/",
+          "width": 115.28125,
+          "height": 44
+        }
+      ],
+      "images": [
+        {
+          "class": "hxh__campaign",
+          "currentSrc": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/ritual-campaign-june-2026-720.avif?v=1792304746",
+          "complete": true,
+          "naturalWidth": 353,
+          "width": 353,
+          "height": 693,
+          "position": "50% 46%"
+        },
+        {
+          "class": "hxr__portrait hxr__portrait--cream",
+          "currentSrc": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-540.avif?v=1792265234",
+          "complete": true,
+          "naturalWidth": 540,
+          "width": 540,
+          "height": 675,
+          "position": "50% 40%"
+        }
+      ],
+      "broken": [],
+      "animations": [],
+      "cls": [],
+      "accessibleHero": "- region \"Four formulas. One daily ritual.\":\n  - heading \"Four formulas. One daily ritual.\" [level=1]:\n    - text: Four formulas.\n    - emphasis: One daily ritual.\n  - paragraph: Swiss-made caviar skincare. For firmer-looking, hydrated skin.\n  - link \"Shop the ritual\":\n    - /url: http://caviarofswitzerland.local/products/the-complete-ritual/\n  - paragraph: Four full-size formulas €450\n  - link \"Explore formulas\":\n    - /url: \"#collection\"\n  - 'img \"The Complete Ritual: the cleanser, serum, eye cream and 24h cream together\"'\n  - list \"Your four-step skincare ritual\":\n    - listitem:\n      - 'link \"01 Cleanse Cleanser : Micellar Water All-in-One Cleanser, 150 ml\"':\n        - /url: http://caviarofswitzerland.local/products/micellar-water-cleanser/\n    - listitem:\n      - 'link \"02 Treat Serum : Advanced Repair Serum, 30 ml\"':\n        - /url: http://caviarofswitzerland.local/products/advanced-repair-serum/\n    - listitem:\n      - 'link \"03 Revive Eye cream : Revitalizing Eye Cream, 15 ml\"':\n        - /url: http://caviarofswitzerland.local/products/revitalizing-eye-cream/\n    - listitem:\n      - 'link \"04 Restore 24h cream : 24h Regeneration Cream, 50 ml\"':\n        - /url: http://caviarofswitzerland.local/products/24h-regeneration-cream/\n  - img \"Two women resting with eyes closed in warm light, from the Caviar of Switzerland June 2026 campaign\"\n  - img \"Glossy caviar pearls in close-up\"\n  - paragraph: Aquitaine caviar. Swiss extraction.\n  - paragraph: Farmed in France. Rich in lipids, proteins and minerals.\n  - link \"Why caviar\":\n    - /url: http://caviarofswitzerland.local/science/why-caviar/",
+      "axe": []
+    },
+    {
+      "width": 1024,
+      "overflow": false,
+      "h1": "Four formulas.\nOne daily ritual.",
+      "titleRect": {
+        "x": 503.03125,
+        "y": 92,
+        "width": 310.875,
+        "height": 108.625,
+        "top": 92,
+        "right": 813.90625,
+        "bottom": 200.625,
+        "left": 503.03125
+      },
+      "titleChildren": [
+        {
+          "text": "Four formulas.",
+          "width": 310.875,
+          "scrollWidth": 311,
+          "height": 54.3125,
+          "font": "53.248px"
+        },
+        {
+          "text": "One daily ritual.",
+          "width": 310.875,
+          "scrollWidth": 311,
+          "height": 54.3125,
+          "font": "53.248px"
+        }
+      ],
+      "heroLinks": [
+        {
+          "text": "Shop the ritual",
+          "href": "http://caviarofswitzerland.local/products/the-complete-ritual/",
+          "width": 130.125,
+          "height": 52
+        },
+        {
+          "text": "Explore formulas",
+          "href": "#collection",
+          "width": 169.703125,
+          "height": 44
+        },
+        {
+          "text": "01\nCleanse\nCleanser\n: Micellar Water All-in-One Cleanser, 150 ml",
+          "href": "http://caviarofswitzerland.local/products/micellar-water-cleanser/",
+          "width": 214.375,
+          "height": 55.25
+        },
+        {
+          "text": "02\nTreat\nSerum\n: Advanced Repair Serum, 30 ml",
+          "href": "http://caviarofswitzerland.local/products/advanced-repair-serum/",
+          "width": 214.375,
+          "height": 55.25
+        },
+        {
+          "text": "03\nRevive\nEye cream\n: Revitalizing Eye Cream, 15 ml",
+          "href": "http://caviarofswitzerland.local/products/revitalizing-eye-cream/",
+          "width": 214.375,
+          "height": 55.25
+        },
+        {
+          "text": "04\nRestore\n24h cream\n: 24h Regeneration Cream, 50 ml",
+          "href": "http://caviarofswitzerland.local/products/24h-regeneration-cream/",
+          "width": 214.390625,
+          "height": 55.25
+        },
+        {
+          "text": "Why caviar",
+          "href": "http://caviarofswitzerland.local/science/why-caviar/",
+          "width": 115.28125,
+          "height": 44
+        }
+      ],
+      "images": [
+        {
+          "class": "hxh__campaign",
+          "currentSrc": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/ritual-campaign-june-2026-720.avif?v=1792304746",
+          "complete": true,
+          "naturalWidth": 471,
+          "width": 471,
+          "height": 659,
+          "position": "50% 46%"
+        },
+        {
+          "class": "hxr__portrait hxr__portrait--cream",
+          "currentSrc": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-540.avif?v=1792265234",
+          "complete": true,
+          "naturalWidth": 409,
+          "width": 389,
+          "height": 486,
+          "position": "50% 40%"
+        }
+      ],
+      "broken": [],
+      "animations": [],
+      "cls": [],
+      "accessibleHero": "- region \"Four formulas. One daily ritual.\":\n  - heading \"Four formulas. One daily ritual.\" [level=1]:\n    - text: Four formulas.\n    - emphasis: One daily ritual.\n  - paragraph: Swiss-made caviar skincare. For firmer-looking, hydrated skin.\n  - link \"Shop the ritual\":\n    - /url: http://caviarofswitzerland.local/products/the-complete-ritual/\n  - paragraph: Four full-size formulas €450\n  - link \"Explore formulas\":\n    - /url: \"#collection\"\n  - 'img \"The Complete Ritual: the cleanser, serum, eye cream and 24h cream together\"'\n  - list \"Your four-step skincare ritual\":\n    - listitem:\n      - 'link \"01 Cleanse Cleanser : Micellar Water All-in-One Cleanser, 150 ml\"':\n        - /url: http://caviarofswitzerland.local/products/micellar-water-cleanser/\n    - listitem:\n      - 'link \"02 Treat Serum : Advanced Repair Serum, 30 ml\"':\n        - /url: http://caviarofswitzerland.local/products/advanced-repair-serum/\n    - listitem:\n      - 'link \"03 Revive Eye cream : Revitalizing Eye Cream, 15 ml\"':\n        - /url: http://caviarofswitzerland.local/products/revitalizing-eye-cream/\n    - listitem:\n      - 'link \"04 Restore 24h cream : 24h Regeneration Cream, 50 ml\"':\n        - /url: http://caviarofswitzerland.local/products/24h-regeneration-cream/\n  - img \"Two women resting with eyes closed in warm light, from the Caviar of Switzerland June 2026 campaign\"\n  - img \"Glossy caviar pearls in close-up\"\n  - paragraph: Aquitaine caviar. Swiss extraction.\n  - paragraph: Farmed in France. Rich in lipids, proteins and minerals.\n  - link \"Why caviar\":\n    - /url: http://caviarofswitzerland.local/science/why-caviar/",
+      "axe": []
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "h1": "Four formulas.\nOne daily ritual.",
+      "titleRect": {
+        "x": 734.390625,
+        "y": 123.1875,
+        "width": 437.171875,
+        "height": 152.71875,
+        "top": 123.1875,
+        "right": 1171.5625,
+        "bottom": 275.90625,
+        "left": 734.390625
+      },
+      "titleChildren": [
+        {
+          "text": "Four formulas.",
+          "width": 437.171875,
+          "scrollWidth": 437,
+          "height": 76.359375,
+          "font": "74.88px"
+        },
+        {
+          "text": "One daily ritual.",
+          "width": 437.171875,
+          "scrollWidth": 437,
+          "height": 76.359375,
+          "font": "74.88px"
+        }
+      ],
+      "heroLinks": [
+        {
+          "text": "Shop the ritual",
+          "href": "http://caviarofswitzerland.local/products/the-complete-ritual/",
+          "width": 138.125,
+          "height": 52
+        },
+        {
+          "text": "Explore formulas",
+          "href": "#collection",
+          "width": 169.703125,
+          "height": 44
+        },
+        {
+          "text": "01\nCleanse\nCleanser\n: Micellar Water All-in-One Cleanser, 150 ml",
+          "href": "http://caviarofswitzerland.local/products/micellar-water-cleanser/",
+          "width": 301.546875,
+          "height": 54
+        },
+        {
+          "text": "02\nTreat\nSerum\n: Advanced Repair Serum, 30 ml",
+          "href": "http://caviarofswitzerland.local/products/advanced-repair-serum/",
+          "width": 301.5625,
+          "height": 54
+        },
+        {
+          "text": "03\nRevive\nEye cream\n: Revitalizing Eye Cream, 15 ml",
+          "href": "http://caviarofswitzerland.local/products/revitalizing-eye-cream/",
+          "width": 301.5625,
+          "height": 54
+        },
+        {
+          "text": "04\nRestore\n24h cream\n: 24h Regeneration Cream, 50 ml",
+          "href": "http://caviarofswitzerland.local/products/24h-regeneration-cream/",
+          "width": 301.5625,
+          "height": 54
+        },
+        {
+          "text": "Why caviar",
+          "href": "http://caviarofswitzerland.local/science/why-caviar/",
+          "width": 115.28125,
+          "height": 44
+        }
+      ],
+      "images": [
+        {
+          "class": "hxh__campaign",
+          "currentSrc": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/ritual-campaign-june-2026-720.avif?v=1792304746",
+          "complete": true,
+          "naturalWidth": 662,
+          "width": 662,
+          "height": 806,
+          "position": "50% 46%"
+        },
+        {
+          "class": "hxr__portrait hxr__portrait--cream",
+          "currentSrc": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-540.avif?v=1792265234",
+          "complete": true,
+          "naturalWidth": 480,
+          "width": 480,
+          "height": 600,
+          "position": "50% 40%"
+        }
+      ],
+      "broken": [],
+      "animations": [],
+      "cls": [],
+      "accessibleHero": "- region \"Four formulas. One daily ritual.\":\n  - heading \"Four formulas. One daily ritual.\" [level=1]:\n    - text: Four formulas.\n    - emphasis: One daily ritual.\n  - paragraph: Swiss-made caviar skincare. For firmer-looking, hydrated skin.\n  - link \"Shop the ritual\":\n    - /url: http://caviarofswitzerland.local/products/the-complete-ritual/\n  - paragraph: Four full-size formulas €450\n  - link \"Explore formulas\":\n    - /url: \"#collection\"\n  - 'img \"The Complete Ritual: the cleanser, serum, eye cream and 24h cream together\"'\n  - list \"Your four-step skincare ritual\":\n    - listitem:\n      - 'link \"01 Cleanse Cleanser : Micellar Water All-in-One Cleanser, 150 ml\"':\n        - /url: http://caviarofswitzerland.local/products/micellar-water-cleanser/\n    - listitem:\n      - 'link \"02 Treat Serum : Advanced Repair Serum, 30 ml\"':\n        - /url: http://caviarofswitzerland.local/products/advanced-repair-serum/\n    - listitem:\n      - 'link \"03 Revive Eye cream : Revitalizing Eye Cream, 15 ml\"':\n        - /url: http://caviarofswitzerland.local/products/revitalizing-eye-cream/\n    - listitem:\n      - 'link \"04 Restore 24h cream : 24h Regeneration Cream, 50 ml\"':\n        - /url: http://caviarofswitzerland.local/products/24h-regeneration-cream/\n  - img \"Two women resting with eyes closed in warm light, from the Caviar of Switzerland June 2026 campaign\"\n  - img \"Glossy caviar pearls in close-up\"\n  - paragraph: Aquitaine caviar. Swiss extraction.\n  - paragraph: Farmed in France. Rich in lipids, proteins and minerals.\n  - link \"Why caviar\":\n    - /url: http://caviarofswitzerland.local/science/why-caviar/",
+      "axe": []
+    },
+    {
+      "width": 1920,
+      "overflow": false,
+      "h1": "Four formulas.\nOne daily ritual.",
+      "titleRect": {
+        "x": 979.1875,
+        "y": 136,
+        "width": 560.546875,
+        "height": 195.8125,
+        "top": 136,
+        "right": 1539.734375,
+        "bottom": 331.8125,
+        "left": 979.1875
+      },
+      "titleChildren": [
+        {
+          "text": "Four formulas.",
+          "width": 560.546875,
+          "scrollWidth": 561,
+          "height": 97.90625,
+          "font": "96px"
+        },
+        {
+          "text": "One daily ritual.",
+          "width": 560.546875,
+          "scrollWidth": 561,
+          "height": 97.90625,
+          "font": "96px"
+        }
+      ],
+      "heroLinks": [
+        {
+          "text": "Shop the ritual",
+          "href": "http://caviarofswitzerland.local/products/the-complete-ritual/",
+          "width": 138.125,
+          "height": 52
+        },
+        {
+          "text": "Explore formulas",
+          "href": "#collection",
+          "width": 169.703125,
+          "height": 44
+        },
+        {
+          "text": "01\nCleanse\nCleanser\n: Micellar Water All-in-One Cleanser, 150 ml",
+          "href": "http://caviarofswitzerland.local/products/micellar-water-cleanser/",
+          "width": 418.984375,
+          "height": 54
+        },
+        {
+          "text": "02\nTreat\nSerum\n: Advanced Repair Serum, 30 ml",
+          "href": "http://caviarofswitzerland.local/products/advanced-repair-serum/",
+          "width": 419,
+          "height": 54
+        },
+        {
+          "text": "03\nRevive\nEye cream\n: Revitalizing Eye Cream, 15 ml",
+          "href": "http://caviarofswitzerland.local/products/revitalizing-eye-cream/",
+          "width": 419,
+          "height": 54
+        },
+        {
+          "text": "04\nRestore\n24h cream\n: 24h Regeneration Cream, 50 ml",
+          "href": "http://caviarofswitzerland.local/products/24h-regeneration-cream/",
+          "width": 419,
+          "height": 54
+        },
+        {
+          "text": "Why caviar",
+          "href": "http://caviarofswitzerland.local/science/why-caviar/",
+          "width": 115.28125,
+          "height": 44
+        }
+      ],
+      "images": [
+        {
+          "class": "hxh__campaign",
+          "currentSrc": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/ritual-campaign-june-2026-1080.avif?v=1792304749",
+          "complete": true,
+          "naturalWidth": 883,
+          "width": 883,
+          "height": 889,
+          "position": "50% 46%"
+        },
+        {
+          "class": "hxr__portrait hxr__portrait--cream",
+          "currentSrc": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-540.avif?v=1792265234",
+          "complete": true,
+          "naturalWidth": 480,
+          "width": 480,
+          "height": 600,
+          "position": "50% 40%"
+        }
+      ],
+      "broken": [],
+      "animations": [],
+      "cls": [],
+      "accessibleHero": "- region \"Four formulas. One daily ritual.\":\n  - heading \"Four formulas. One daily ritual.\" [level=1]:\n    - text: Four formulas.\n    - emphasis: One daily ritual.\n  - paragraph: Swiss-made caviar skincare. For firmer-looking, hydrated skin.\n  - link \"Shop the ritual\":\n    - /url: http://caviarofswitzerland.local/products/the-complete-ritual/\n  - paragraph: Four full-size formulas €450\n  - link \"Explore formulas\":\n    - /url: \"#collection\"\n  - 'img \"The Complete Ritual: the cleanser, serum, eye cream and 24h cream together\"'\n  - list \"Your four-step skincare ritual\":\n    - listitem:\n      - 'link \"01 Cleanse Cleanser : Micellar Water All-in-One Cleanser, 150 ml\"':\n        - /url: http://caviarofswitzerland.local/products/micellar-water-cleanser/\n    - listitem:\n      - 'link \"02 Treat Serum : Advanced Repair Serum, 30 ml\"':\n        - /url: http://caviarofswitzerland.local/products/advanced-repair-serum/\n    - listitem:\n      - 'link \"03 Revive Eye cream : Revitalizing Eye Cream, 15 ml\"':\n        - /url: http://caviarofswitzerland.local/products/revitalizing-eye-cream/\n    - listitem:\n      - 'link \"04 Restore 24h cream : 24h Regeneration Cream, 50 ml\"':\n        - /url: http://caviarofswitzerland.local/products/24h-regeneration-cream/\n  - img \"Two women resting with eyes closed in warm light, from the Caviar of Switzerland June 2026 campaign\"\n  - img \"Glossy caviar pearls in close-up\"\n  - paragraph: Aquitaine caviar. Swiss extraction.\n  - paragraph: Farmed in France. Rich in lipids, proteins and minerals.\n  - link \"Why caviar\":\n    - /url: http://caviarofswitzerland.local/science/why-caviar/",
+      "axe": []
+    }
+  ],
+  "errors": [],
+  "webkit": {
+    "overflow": false,
+    "names": "- region \"Four formulas. One daily ritual.\":\n  - heading \"Four formulas. One daily ritual.\" [level=1]:\n    - text: Four formulas.\n    - emphasis: One daily ritual.\n  - paragraph: Swiss-made caviar skincare. For firmer-looking, hydrated skin.\n  - link \"Shop the ritual\":\n    - /url: http://caviarofswitzerland.local/products/the-complete-ritual/\n  - paragraph: Four full-size formulas €450\n  - link \"Explore formulas\":\n    - /url: \"#collection\"\n  - 'img \"The Complete Ritual: the cleanser, serum, eye cream and 24h cream together\"'\n  - list \"Your four-step skincare ritual\":\n    - listitem:\n      - 'link \"01 Cleanse Cleanser : Micellar Water All-in-One Cleanser, 150 ml\"':\n        - /url: http://caviarofswitzerland.local/products/micellar-water-cleanser/\n    - listitem:\n      - 'link \"02 Treat Serum : Advanced Repair Serum, 30 ml\"':\n        - /url: http://caviarofswitzerland.local/products/advanced-repair-serum/\n    - listitem:\n      - 'link \"03 Revive Eye cream : Revitalizing Eye Cream, 15 ml\"':\n        - /url: http://caviarofswitzerland.local/products/revitalizing-eye-cream/\n    - listitem:\n      - 'link \"04 Restore 24h cream : 24h Regeneration Cream, 50 ml\"':\n        - /url: http://caviarofswitzerland.local/products/24h-regeneration-cream/\n  - img \"Two women resting with eyes closed in warm light, from the Caviar of Switzerland June 2026 campaign\"\n  - img \"Glossy caviar pearls in close-up\"\n  - paragraph: Aquitaine caviar. Swiss extraction.\n  - paragraph: Farmed in France. Rich in lipids, proteins and minerals.\n  - link \"Why caviar\":\n    - /url: http://caviarofswitzerland.local/science/why-caviar/"
+  }
+}

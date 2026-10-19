@@ -1,0 +1,946 @@
+{
+  "tests": [
+    {
+      "test": "hxh-wide work protected product versus owner master",
+      "size": [
+        620,
+        500
+      ],
+      "MAE_8bit": 0.0,
+      "max_8bit": 0.0,
+      "exact_pixel_fraction": 1.0
+    },
+    {
+      "test": "hxh-wide-1440.jpg versus documented export",
+      "size": [
+        1440,
+        608
+      ],
+      "MAE_8bit": 0.0,
+      "max_8bit": 0.0,
+      "exact_pixel_fraction": 1.0,
+      "byte_identical_reexport": true
+    },
+    {
+      "test": "hxh-wide-1440.avif versus expected uncompressed pixels",
+      "size": [
+        1440,
+        608
+      ],
+      "MAE_8bit": 0.9174581962719298,
+      "max_8bit": 70.0,
+      "exact_pixel_fraction": 0.049239309210526314
+    },
+    {
+      "test": "hxh-wide-1920.jpg versus documented export",
+      "size": [
+        1920,
+        810
+      ],
+      "MAE_8bit": 0.0,
+      "max_8bit": 0.0,
+      "exact_pixel_fraction": 1.0,
+      "byte_identical_reexport": true
+    },
+    {
+      "test": "hxh-wide-1920.avif versus expected uncompressed pixels",
+      "size": [
+        1920,
+        810
+      ],
+      "MAE_8bit": 0.8738091563786008,
+      "max_8bit": 64.0,
+      "exact_pixel_fraction": 0.05483989197530864
+    },
+    {
+      "test": "hxh-wide-2560.jpg versus documented export",
+      "size": [
+        2560,
+        1081
+      ],
+      "MAE_8bit": 0.0,
+      "max_8bit": 0.0,
+      "exact_pixel_fraction": 1.0,
+      "byte_identical_reexport": true
+    },
+    {
+      "test": "hxh-wide-2560.avif versus expected uncompressed pixels",
+      "size": [
+        2560,
+        1081
+      ],
+      "MAE_8bit": 0.8339371579170521,
+      "max_8bit": 58.0,
+      "exact_pixel_fraction": 0.05758303943108233
+    },
+    {
+      "test": "hxh-tall work protected product versus owner master",
+      "size": [
+        620,
+        500
+      ],
+      "MAE_8bit": 0.0,
+      "max_8bit": 0.0,
+      "exact_pixel_fraction": 1.0
+    },
+    {
+      "test": "hxh-tall-540.jpg versus documented export",
+      "size": [
+        540,
+        1043
+      ],
+      "MAE_8bit": 0.0,
+      "max_8bit": 0.0,
+      "exact_pixel_fraction": 1.0,
+      "byte_identical_reexport": true
+    },
+    {
+      "test": "hxh-tall-540.avif versus expected uncompressed pixels",
+      "size": [
+        540,
+        1043
+      ],
+      "MAE_8bit": 1.0921345122687405,
+      "max_8bit": 59.0,
+      "exact_pixel_fraction": 0.03638720215901424
+    },
+    {
+      "test": "hxh-tall-720.jpg versus documented export",
+      "size": [
+        720,
+        1391
+      ],
+      "MAE_8bit": 0.0,
+      "max_8bit": 0.0,
+      "exact_pixel_fraction": 1.0,
+      "byte_identical_reexport": true
+    },
+    {
+      "test": "hxh-tall-720.avif versus expected uncompressed pixels",
+      "size": [
+        720,
+        1391
+      ],
+      "MAE_8bit": 1.00711618340123,
+      "max_8bit": 49.0,
+      "exact_pixel_fraction": 0.04094476395878265
+    },
+    {
+      "test": "hxh-campaign-1280.jpg versus original proportional resize",
+      "size": [
+        1280,
+        720
+      ],
+      "MAE_8bit": 0.7903135850694445,
+      "max_8bit": 61.0,
+      "exact_pixel_fraction": 0.08032552083333333
+    },
+    {
+      "test": "hxh-campaign-1672.jpg versus original proportional resize",
+      "size": [
+        1672,
+        941
+      ],
+      "MAE_8bit": 0.7300396435974489,
+      "max_8bit": 58.0,
+      "exact_pixel_fraction": 0.09100061524693775
+    },
+    {
+      "test": "collection-object-cleanser-480.jpg versus source builder",
+      "size": [
+        480,
+        720
+      ],
+      "MAE_8bit": 0.0,
+      "max_8bit": 0.0,
+      "exact_pixel_fraction": 1.0,
+      "byte_identical_reexport": true
+    },
+    {
+      "test": "collection-object-cleanser-720.jpg versus source builder",
+      "size": [
+        720,
+        1080
+      ],
+      "MAE_8bit": 0.0,
+      "max_8bit": 0.0,
+      "exact_pixel_fraction": 1.0,
+      "byte_identical_reexport": true
+    },
+    {
+      "test": "collection-object-cleanser-960.jpg versus source builder",
+      "size": [
+        960,
+        1440
+      ],
+      "MAE_8bit": 0.0,
+      "max_8bit": 0.0,
+      "exact_pixel_fraction": 1.0,
+      "byte_identical_reexport": true
+    },
+    {
+      "test": "collection-object-serum-480.jpg versus source builder",
+      "size": [
+        480,
+        720
+      ],
+      "MAE_8bit": 0.0,
+      "max_8bit": 0.0,
+      "exact_pixel_fraction": 1.0,
+      "byte_identical_reexport": true
+    },
+    {
+      "test": "collection-object-serum-720.jpg versus source builder",
+      "size": [
+        720,
+        1080
+      ],
+      "MAE_8bit": 0.0,
+      "max_8bit": 0.0,
+      "exact_pixel_fraction": 1.0,
+      "byte_identical_reexport": true
+    },
+    {
+      "test": "collection-object-serum-960.jpg versus source builder",
+      "size": [
+        960,
+        1440
+      ],
+      "MAE_8bit": 0.0,
+      "max_8bit": 0.0,
+      "exact_pixel_fraction": 1.0,
+      "byte_identical_reexport": true
+    },
+    {
+      "test": "collection-object-eye-480.jpg versus source builder",
+      "size": [
+        480,
+        720
+      ],
+      "MAE_8bit": 0.0,
+      "max_8bit": 0.0,
+      "exact_pixel_fraction": 1.0,
+      "byte_identical_reexport": true
+    },
+    {
+      "test": "collection-object-eye-720.jpg versus source builder",
+      "size": [
+        720,
+        1080
+      ],
+      "MAE_8bit": 0.0,
+      "max_8bit": 0.0,
+      "exact_pixel_fraction": 1.0,
+      "byte_identical_reexport": true
+    },
+    {
+      "test": "collection-object-eye-960.jpg versus source builder",
+      "size": [
+        960,
+        1440
+      ],
+      "MAE_8bit": 0.0,
+      "max_8bit": 0.0,
+      "exact_pixel_fraction": 1.0,
+      "byte_identical_reexport": true
+    },
+    {
+      "test": "collection-object-cream-480.jpg versus source builder",
+      "size": [
+        480,
+        720
+      ],
+      "MAE_8bit": 0.0,
+      "max_8bit": 0.0,
+      "exact_pixel_fraction": 1.0,
+      "byte_identical_reexport": true
+    },
+    {
+      "test": "collection-object-cream-720.jpg versus source builder",
+      "size": [
+        720,
+        1080
+      ],
+      "MAE_8bit": 0.0,
+      "max_8bit": 0.0,
+      "exact_pixel_fraction": 1.0,
+      "byte_identical_reexport": true
+    },
+    {
+      "test": "collection-object-cream-960.jpg versus source builder",
+      "size": [
+        960,
+        1440
+      ],
+      "MAE_8bit": 0.0,
+      "max_8bit": 0.0,
+      "exact_pixel_fraction": 1.0,
+      "byte_identical_reexport": true
+    },
+    {
+      "test": "lab-filling_flat-logo plus house grade versus philosophy_graded",
+      "size": [
+        1122,
+        1402
+      ],
+      "MAE_8bit": 0.0,
+      "max_8bit": 0.0,
+      "exact_pixel_fraction": 1.0
+    },
+    {
+      "test": "philosophy-lab-640.jpg versus philosophy_graded",
+      "size": [
+        640,
+        800
+      ],
+      "MAE_8bit": 1.2250247395833334,
+      "max_8bit": 52.0,
+      "exact_pixel_fraction": 0.045392578125
+    },
+    {
+      "test": "philosophy-lab-640.avif versus philosophy_graded",
+      "size": [
+        640,
+        800
+      ],
+      "MAE_8bit": 1.4203287760416667,
+      "max_8bit": 45.0,
+      "exact_pixel_fraction": 0.02133984375
+    },
+    {
+      "test": "philosophy-lab-1122.jpg versus philosophy_graded",
+      "size": [
+        1122,
+        1402
+      ],
+      "MAE_8bit": 1.0184182175874716,
+      "max_8bit": 52.0,
+      "exact_pixel_fraction": 0.05671424321252298
+    },
+    {
+      "test": "philosophy-lab-1122.avif versus philosophy_graded",
+      "size": [
+        1122,
+        1402
+      ],
+      "MAE_8bit": 1.2106232671601473,
+      "max_8bit": 49.0,
+      "exact_pixel_fraction": 0.02521099219093681
+    },
+    {
+      "test": "caviar-macro-light-960.jpg versus hyaluronic source builder",
+      "size": [
+        960,
+        640
+      ],
+      "MAE_8bit": 0.0,
+      "max_8bit": 0.0,
+      "exact_pixel_fraction": 1.0,
+      "byte_identical_reexport": true
+    },
+    {
+      "test": "caviar-macro-light-1440.jpg versus hyaluronic source builder",
+      "size": [
+        1440,
+        960
+      ],
+      "MAE_8bit": 0.0,
+      "max_8bit": 0.0,
+      "exact_pixel_fraction": 1.0,
+      "byte_identical_reexport": true
+    },
+    {
+      "test": "caviar-macro-light-2400.jpg versus hyaluronic source builder",
+      "size": [
+        2400,
+        1600
+      ],
+      "MAE_8bit": 0.0,
+      "max_8bit": 0.0,
+      "exact_pixel_fraction": 1.0,
+      "byte_identical_reexport": true
+    }
+  ],
+  "sources": [
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\design-sources\\home-2026\\hero-jar_master.png",
+      "sha256": "23bb13b13f181606efc3a7117df24fd24930faa4c5b72828937251c7d4798641",
+      "bytes": 1568145,
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\design-sources\\home-2026\\rebuild-2026-10-14\\work\\hero\\hxh-wide_master.png",
+      "sha256": "86a9d33174cdb853f58963f7f18861727b4b1c48dbd0c15601cd3d1d3531d96f",
+      "bytes": 1449595,
+      "size": [
+        2632,
+        1111
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxh-wide-1440.jpg",
+      "sha256": "e8a302ecb340439708bccb1fd2da2999608e97f907ed30ef908250cfb8fef0ac",
+      "bytes": 49157,
+      "size": [
+        1440,
+        608
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxh-wide-1440.avif",
+      "sha256": "cb8138726bdb7ab29df436343e16a117e174b44be1d5211c3699604c0e66d911",
+      "bytes": 12807,
+      "size": [
+        1440,
+        608
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxh-wide-1920.jpg",
+      "sha256": "702e89796f06bd83da0f6d50a941d4a635e49692000df6ac69d7407f88d4a1da",
+      "bytes": 75200,
+      "size": [
+        1920,
+        810
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxh-wide-1920.avif",
+      "sha256": "edae51f6115f62d70e54e4d6e55ec3b5822e8da19afd5a767f96663f4e3a5764",
+      "bytes": 17948,
+      "size": [
+        1920,
+        810
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxh-wide-2560.jpg",
+      "sha256": "d5bd3ddf2e51ebbf305e3709427b07cab0b0096adc289e5eaaff6da43c0da862",
+      "bytes": 115148,
+      "size": [
+        2560,
+        1081
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxh-wide-2560.avif",
+      "sha256": "a8ebcf62a85eeb2d50adcdc69c147884d1b830cbfd385df675e4eb2f4fe7e7fb",
+      "bytes": 25809,
+      "size": [
+        2560,
+        1081
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\design-sources\\home-2026\\rebuild-2026-10-14\\work\\hero\\hxh-tall_master.png",
+      "sha256": "8da58af22d6fe052857375dd82805cbf6ae9a332f8e8a6ac504f1e5d9a1c7e34",
+      "bytes": 671999,
+      "size": [
+        720,
+        1391
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxh-tall-540.jpg",
+      "sha256": "4e52091908387ca451be0f0011d8b16c8878fdf38cf912299945a2089585b318",
+      "bytes": 42481,
+      "size": [
+        540,
+        1043
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxh-tall-540.avif",
+      "sha256": "0b7eed504bfb499aaf4e57674df0c0a0f143faa4132fc5ebc16d3599ab80473c",
+      "bytes": 13091,
+      "size": [
+        540,
+        1043
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxh-tall-720.jpg",
+      "sha256": "74ea3fa0e65dca7d240b80f8ea4667b24355fe1086f819cd2f087b343fbc1c0e",
+      "bytes": 63964,
+      "size": [
+        720,
+        1391
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxh-tall-720.avif",
+      "sha256": "e28f6a911b2b1f2acc5658556d7cec6819dbd34befb3df6867d2357c3809056e",
+      "bytes": 18370,
+      "size": [
+        720,
+        1391
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxh-campaign-1280.jpg",
+      "sha256": "3469488e56277f0b65c2e9b75ec7789e04c1f50b33bada282353426728e938d5",
+      "bytes": 93321,
+      "size": [
+        1280,
+        720
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\hxh-campaign-1672.jpg",
+      "sha256": "0ece78b8acba5ca75c34c07ee69977c3547afdfd15f962b14440be4cd79771b0",
+      "bytes": 140687,
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\design-sources\\home-2026\\packshots-2026-10-12\\cleanser-flat-2026-10-13.png",
+      "sha256": "1a915b922874b25635b728ced06ce226d77b6f84e234e101b7c248de1796a4e2",
+      "bytes": 1529554,
+      "size": [
+        1122,
+        1402
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-cleanser-480.jpg",
+      "sha256": "33c0d2fe92521a50ab34067b072f3daa97a4ec6a47f464577ae8564a41cc45cf",
+      "bytes": 14984,
+      "size": [
+        480,
+        720
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-cleanser-480.avif",
+      "sha256": "0073fa35fe7c21b91f7346f4081772e3e64ee73b438d2fe50024da9ad2313688",
+      "bytes": 23675,
+      "size": [
+        480,
+        720
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-cleanser-720.jpg",
+      "sha256": "7405673a32801c4b0a2fe6f32b82fe17dcd3968759bd3195efc6d8fa994e1301",
+      "bytes": 27595,
+      "size": [
+        720,
+        1080
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-cleanser-720.avif",
+      "sha256": "9a7e2d2c2e92562f052ccab50088891cbe49d225dd5990add6b51c318044ce9b",
+      "bytes": 51918,
+      "size": [
+        720,
+        1080
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-cleanser-960.jpg",
+      "sha256": "3ed91be2d5619e4b7a44cf6c5a9a8b7dfef96f50807072740178975e249ab1d0",
+      "bytes": 42050,
+      "size": [
+        960,
+        1440
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-cleanser-960.avif",
+      "sha256": "1702dc900e6232cb3623cfb3cf050dc679973a0714eb2558151f7b5d5179e13a",
+      "bytes": 82895,
+      "size": [
+        960,
+        1440
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\design-sources\\home-2026\\packshots-2026-10-12\\serum-flat-2026-10-13.png",
+      "sha256": "32264f0c4a21b5261a86c15d82a82fbfb8caf4303da38780228fbafd8a6a96fb",
+      "bytes": 1608472,
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-serum-480.jpg",
+      "sha256": "aa57d3659712eeb6c66ce8bd1016b303f13ff5c7dbc582d276d4e98be9d5996a",
+      "bytes": 18834,
+      "size": [
+        480,
+        720
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-serum-480.avif",
+      "sha256": "e61e061dffbfd250e082ea96639e1d51e78a8d0f1c5c516202697f7d3d7548ab",
+      "bytes": 19539,
+      "size": [
+        480,
+        720
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-serum-720.jpg",
+      "sha256": "49d8edf812f66411cc0308fb8d71a655d76e8703dcfeb2d2dae6c763342287a5",
+      "bytes": 34579,
+      "size": [
+        720,
+        1080
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-serum-720.avif",
+      "sha256": "12854aaba9ed9baad55b83dacc5ff6ff4e99e1581da9c4214b23b3d32676c5da",
+      "bytes": 46790,
+      "size": [
+        720,
+        1080
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-serum-960.jpg",
+      "sha256": "de89e45db1fee084e290541b19bbcc7fff9ad7b5b89b85d48777ffa7acf30340",
+      "bytes": 53524,
+      "size": [
+        960,
+        1440
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-serum-960.avif",
+      "sha256": "e2a8d4b86883dbdc2c68918821d5b83f236b7c445db27799bfa027ec1e60c946",
+      "bytes": 74343,
+      "size": [
+        960,
+        1440
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\design-sources\\home-2026\\packshots-2026-10-12\\eye-flat-2026-10-13.png",
+      "sha256": "d302b18966785c5f91cd774dba69c49dbccd762d2863b68ccf6a3de1d1e0aeb3",
+      "bytes": 1069086,
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-eye-480.jpg",
+      "sha256": "e7059970d89e04c3246793004b9401ef334bd9e29d36785a355058e0f95295d5",
+      "bytes": 16415,
+      "size": [
+        480,
+        720
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-eye-480.avif",
+      "sha256": "ba23c15b0de1683f08e5757b348f49c20957e1458c8da4c4c905cc8cb2a7e419",
+      "bytes": 20471,
+      "size": [
+        480,
+        720
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-eye-720.jpg",
+      "sha256": "4330981a91163bf99054b67626551792a046368a68fd24d196ad5dc2d18f6868",
+      "bytes": 29726,
+      "size": [
+        720,
+        1080
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-eye-720.avif",
+      "sha256": "7008ad6c35483f247627186cc6c842c895e1c019201cb0585ccd93a4f9fcb39a",
+      "bytes": 43570,
+      "size": [
+        720,
+        1080
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-eye-960.jpg",
+      "sha256": "03f40952406407ccfb588282bf7cfa549c5a1f85ff0ee644be4895821d596d36",
+      "bytes": 43243,
+      "size": [
+        960,
+        1440
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-eye-960.avif",
+      "sha256": "136daf3e28759ee46f8abebf352f8e758ef56e50447b50a2b580deb24fb720ab",
+      "bytes": 67483,
+      "size": [
+        960,
+        1440
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\design-sources\\home-2026\\packshots-2026-10-12\\cream-flat-2026-10-13.png",
+      "sha256": "b87dfe31442067d9290b27b775213c9b3362743e4885a815db0d308f3eb5aba7",
+      "bytes": 1166193,
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-cream-480.jpg",
+      "sha256": "038c2e5f86eda045e945d7eadc5eccefc4f486748e9d987a819391fbb9ae2fa4",
+      "bytes": 15991,
+      "size": [
+        480,
+        720
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-cream-480.avif",
+      "sha256": "f29e87687398cb3524197f047293e87eb719dee188b3b7dfcad3c018e54a60eb",
+      "bytes": 20503,
+      "size": [
+        480,
+        720
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-cream-720.jpg",
+      "sha256": "e5556194b207ac27c928d08c346e90d85fdf09efbfd88feb9abdb496d1fb1e4c",
+      "bytes": 29427,
+      "size": [
+        720,
+        1080
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-cream-720.avif",
+      "sha256": "301f78cbc840ae88108d5aab4874f2f27e123c6a7af1da8bd35cfdf7d63b4473",
+      "bytes": 45250,
+      "size": [
+        720,
+        1080
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-cream-960.jpg",
+      "sha256": "30bc0111e2377eab472ff490455e3682948cafee808587680ef2047bd530b172",
+      "bytes": 44543,
+      "size": [
+        960,
+        1440
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\collection-object-cream-960.avif",
+      "sha256": "5ada639fe9dc981fe8a8d783822ef52dcbed027696926501f35bc3af9ddcdaf3",
+      "bytes": 71959,
+      "size": [
+        960,
+        1440
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\design-sources\\home-2026\\philosophy_graded.png",
+      "sha256": "fdf6b11799fda21084b02da88e6ee9675b6c55187a6c963239739f1d1a50635a",
+      "bytes": 1494713,
+      "size": [
+        1122,
+        1402
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\design-sources\\home-2026\\lab-filling_flat-logo.png",
+      "sha256": "38cce34462d53e67b5abe19a859e76233cc7d6f7399b72428347f71abeb06b4a",
+      "bytes": 1512902,
+      "size": [
+        1122,
+        1402
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\philosophy-lab-640.jpg",
+      "sha256": "6dbf9db2a6391cf29876b17f4f4d6bb9c2c92307d6a7e83f485d9b6e73dfa8ba",
+      "bytes": 48330,
+      "size": [
+        640,
+        800
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\philosophy-lab-640.avif",
+      "sha256": "a65f18105f4dbffc6b15891d3e7db83a521ddf6b0048a260b74bc036be0de512",
+      "bytes": 16351,
+      "size": [
+        640,
+        800
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\philosophy-lab-1122.jpg",
+      "sha256": "17f9084323bda4cf32f9048bee5932c449b2d27b6faf4b9299e8ddde8a29e874",
+      "bytes": 113001,
+      "size": [
+        1122,
+        1402
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\philosophy-lab-1122.avif",
+      "sha256": "621701b45e1158af3eb278175c5742db27c934f9f718c021b1e860be3d2014b7",
+      "bytes": 33476,
+      "size": [
+        1122,
+        1402
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\uploads\\2026\\05\\hyaluronic-acid.jpg",
+      "sha256": "6b64eb32ae38b74cfc414d5f1fe29ba70e801495ac880b13665f7be9fe69da75",
+      "bytes": 329585,
+      "size": [
+        2400,
+        1600
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\caviar-macro-light-960.jpg",
+      "sha256": "78d08c28d49a565ce19c779674f12780bff19977093a0ec059ca5a65657c248b",
+      "bytes": 58374,
+      "size": [
+        960,
+        640
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\caviar-macro-light-960.avif",
+      "sha256": "7d4a9f2dacab7e42ed3b3cc0e2c8a8826c444cd3fca050bfd62ecafbe184cfd3",
+      "bytes": 18322,
+      "size": [
+        960,
+        640
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\caviar-macro-light-1440.jpg",
+      "sha256": "1300c3d3cf5af4e8e3126ca7844c6a9e974e9a1d872da078d6f33d663a3aedd0",
+      "bytes": 140455,
+      "size": [
+        1440,
+        960
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\caviar-macro-light-1440.avif",
+      "sha256": "377a9edfbf900fdf315fa81b57187c11bacfdf87ed261e89c737293b83bc685c",
+      "bytes": 38131,
+      "size": [
+        1440,
+        960
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\caviar-macro-light-2400.jpg",
+      "sha256": "80f15b6e4556b25ef59e74745f12962fb472f594929d0a87e7781612a132a7f1",
+      "bytes": 311708,
+      "size": [
+        2400,
+        1600
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\caviar-macro-light-2400.avif",
+      "sha256": "f2c0c630c0dbd200bbca79242054a62d5c4f52e2e5a83d1a5413d72f878b6249",
+      "bytes": 188359,
+      "size": [
+        2400,
+        1600
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\design-sources\\home-2026\\build_hxh_hero.py",
+      "sha256": "a1ef171871710a36a74465cb68f3f9d3ea0bb5aca6cb8683933f9887dc91f0b4",
+      "bytes": 6986
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\design-sources\\home-2026\\build_collection_objects.py",
+      "sha256": "c6aa625c3504f4eafa976c1240646f2179f613874954553dc690cb37e3d87fdb",
+      "bytes": 4860
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\design-sources\\home-2026\\fix_lab.py",
+      "sha256": "608e53b8c3a1f733d682bbfe8b8e2b4bc58d8b9f06a2c6832c2d0e0eab80a8a2",
+      "bytes": 2173
+    },
+    {
+      "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\design-sources\\home-2026\\build_caviar_macro_light.py",
+      "sha256": "f55a32a7de5ae04e5582357421c18deaaf9fa2849953899361ae7b494660665c",
+      "bytes": 2053
+    }
+  ]
+}

@@ -1,0 +1,684 @@
+{
+  "viewports": [
+    {
+      "width": 360,
+      "hero": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 1064.65625,
+        "top": 0,
+        "right": 360,
+        "bottom": 1064.65625,
+        "left": 0
+      },
+      "portrait": {
+        "x": 0,
+        "y": 513.6875,
+        "width": 259.1875,
+        "height": 360,
+        "top": 513.6875,
+        "right": 259.1875,
+        "bottom": 873.6875,
+        "left": 0
+      },
+      "macro": {
+        "x": 259.1875,
+        "y": 513.6875,
+        "width": 100.796875,
+        "height": 360,
+        "top": 513.6875,
+        "right": 359.984375,
+        "bottom": 873.6875,
+        "left": 259.1875
+      },
+      "formulas": [
+        {
+          "text": "01\nCleanse\nCleanser\n: Micellar Water All-in-One Cleanser, 150 ml",
+          "rect": {
+            "x": 24,
+            "y": 420.6875,
+            "width": 71.984375,
+            "height": 70,
+            "top": 420.6875,
+            "right": 95.984375,
+            "bottom": 490.6875,
+            "left": 24
+          }
+        },
+        {
+          "text": "02\nTreat\nSerum\n: Advanced Repair Serum, 30 ml",
+          "rect": {
+            "x": 103.984375,
+            "y": 420.6875,
+            "width": 72,
+            "height": 70,
+            "top": 420.6875,
+            "right": 175.984375,
+            "bottom": 490.6875,
+            "left": 103.984375
+          }
+        },
+        {
+          "text": "03\nRevive\nEye cream\n: Revitalizing Eye Cream, 15 ml",
+          "rect": {
+            "x": 183.984375,
+            "y": 420.6875,
+            "width": 72,
+            "height": 73,
+            "top": 420.6875,
+            "right": 255.984375,
+            "bottom": 493.6875,
+            "left": 183.984375
+          }
+        },
+        {
+          "text": "04\nRestore\n24h cream\n: 24h Regeneration Cream, 50 ml",
+          "rect": {
+            "x": 263.984375,
+            "y": 420.6875,
+            "width": 72,
+            "height": 73,
+            "top": 420.6875,
+            "right": 335.984375,
+            "bottom": 493.6875,
+            "left": 263.984375
+          }
+        }
+      ],
+      "lead": "Swiss-made caviar skincare.\nFor firmer-looking, hydrated skin.",
+      "inclusion": "Four full-size formulas · €450",
+      "scoreBottom": 513.6875
+    },
+    {
+      "width": 390,
+      "hero": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 1095.96875,
+        "top": 0,
+        "right": 390,
+        "bottom": 1095.96875,
+        "left": 0
+      },
+      "portrait": {
+        "x": 0,
+        "y": 515,
+        "width": 280.796875,
+        "height": 390,
+        "top": 515,
+        "right": 280.796875,
+        "bottom": 905,
+        "left": 0
+      },
+      "macro": {
+        "x": 280.796875,
+        "y": 515,
+        "width": 109.1875,
+        "height": 390,
+        "top": 515,
+        "right": 389.984375,
+        "bottom": 905,
+        "left": 280.796875
+      },
+      "formulas": [
+        {
+          "text": "01\nCleanse\nCleanser\n: Micellar Water All-in-One Cleanser, 150 ml",
+          "rect": {
+            "x": 24,
+            "y": 425,
+            "width": 79.484375,
+            "height": 70,
+            "top": 425,
+            "right": 103.484375,
+            "bottom": 495,
+            "left": 24
+          }
+        },
+        {
+          "text": "02\nTreat\nSerum\n: Advanced Repair Serum, 30 ml",
+          "rect": {
+            "x": 111.484375,
+            "y": 425,
+            "width": 79.5,
+            "height": 70,
+            "top": 425,
+            "right": 190.984375,
+            "bottom": 495,
+            "left": 111.484375
+          }
+        },
+        {
+          "text": "03\nRevive\nEye cream\n: Revitalizing Eye Cream, 15 ml",
+          "rect": {
+            "x": 198.984375,
+            "y": 425,
+            "width": 79.5,
+            "height": 70,
+            "top": 425,
+            "right": 278.484375,
+            "bottom": 495,
+            "left": 198.984375
+          }
+        },
+        {
+          "text": "04\nRestore\n24h cream\n: 24h Regeneration Cream, 50 ml",
+          "rect": {
+            "x": 286.484375,
+            "y": 425,
+            "width": 79.5,
+            "height": 70,
+            "top": 425,
+            "right": 365.984375,
+            "bottom": 495,
+            "left": 286.484375
+          }
+        }
+      ],
+      "lead": "Swiss-made caviar skincare.\nFor firmer-looking, hydrated skin.",
+      "inclusion": "Four full-size formulas · €450",
+      "scoreBottom": 515
+    },
+    {
+      "width": 430,
+      "hero": {
+        "x": 0,
+        "y": 0,
+        "width": 430,
+        "height": 1114.546875,
+        "top": 0,
+        "right": 430,
+        "bottom": 1114.546875,
+        "left": 0
+      },
+      "portrait": {
+        "x": 0,
+        "y": 523.8125,
+        "width": 309.59375,
+        "height": 430,
+        "top": 523.8125,
+        "right": 309.59375,
+        "bottom": 953.8125,
+        "left": 0
+      },
+      "macro": {
+        "x": 309.59375,
+        "y": 523.8125,
+        "width": 120.390625,
+        "height": 430,
+        "top": 523.8125,
+        "right": 429.984375,
+        "bottom": 953.8125,
+        "left": 309.59375
+      },
+      "formulas": [
+        {
+          "text": "01\nCleanse\nCleanser\n: Micellar Water All-in-One Cleanser, 150 ml",
+          "rect": {
+            "x": 24,
+            "y": 433.8125,
+            "width": 89.484375,
+            "height": 70,
+            "top": 433.8125,
+            "right": 113.484375,
+            "bottom": 503.8125,
+            "left": 24
+          }
+        },
+        {
+          "text": "02\nTreat\nSerum\n: Advanced Repair Serum, 30 ml",
+          "rect": {
+            "x": 121.484375,
+            "y": 433.8125,
+            "width": 89.5,
+            "height": 70,
+            "top": 433.8125,
+            "right": 210.984375,
+            "bottom": 503.8125,
+            "left": 121.484375
+          }
+        },
+        {
+          "text": "03\nRevive\nEye cream\n: Revitalizing Eye Cream, 15 ml",
+          "rect": {
+            "x": 218.984375,
+            "y": 433.8125,
+            "width": 89.5,
+            "height": 70,
+            "top": 433.8125,
+            "right": 308.484375,
+            "bottom": 503.8125,
+            "left": 218.984375
+          }
+        },
+        {
+          "text": "04\nRestore\n24h cream\n: 24h Regeneration Cream, 50 ml",
+          "rect": {
+            "x": 316.484375,
+            "y": 433.8125,
+            "width": 89.5,
+            "height": 70,
+            "top": 433.8125,
+            "right": 405.984375,
+            "bottom": 503.8125,
+            "left": 316.484375
+          }
+        }
+      ],
+      "lead": "Swiss-made caviar skincare.\nFor firmer-looking, hydrated skin.",
+      "inclusion": "Four full-size formulas · €450",
+      "scoreBottom": 523.8125
+    },
+    {
+      "width": 768,
+      "hero": {
+        "x": 0,
+        "y": 0,
+        "width": 768,
+        "height": 854.40625,
+        "top": 0,
+        "right": 768,
+        "bottom": 854.40625,
+        "left": 0
+      },
+      "portrait": {
+        "x": 0,
+        "y": 60,
+        "width": 353.265625,
+        "height": 700.15625,
+        "top": 60,
+        "right": 353.265625,
+        "bottom": 760.15625,
+        "left": 0
+      },
+      "macro": {
+        "x": 353.265625,
+        "y": 580.15625,
+        "width": 414.71875,
+        "height": 180,
+        "top": 580.15625,
+        "right": 767.984375,
+        "bottom": 760.15625,
+        "left": 353.265625
+      },
+      "formulas": [
+        {
+          "text": "01\nCleanse\nCleanser\n: Micellar Water All-in-One Cleanser, 150 ml",
+          "rect": {
+            "x": 39.921875,
+            "y": 783.15625,
+            "width": 157.03125,
+            "height": 55.25,
+            "top": 783.15625,
+            "right": 196.953125,
+            "bottom": 838.40625,
+            "left": 39.921875
+          }
+        },
+        {
+          "text": "02\nTreat\nSerum\n: Advanced Repair Serum, 30 ml",
+          "rect": {
+            "x": 216.953125,
+            "y": 783.15625,
+            "width": 157.03125,
+            "height": 55.25,
+            "top": 783.15625,
+            "right": 373.984375,
+            "bottom": 838.40625,
+            "left": 216.953125
+          }
+        },
+        {
+          "text": "03\nRevive\nEye cream\n: Revitalizing Eye Cream, 15 ml",
+          "rect": {
+            "x": 393.984375,
+            "y": 783.15625,
+            "width": 157.03125,
+            "height": 55.25,
+            "top": 783.15625,
+            "right": 551.015625,
+            "bottom": 838.40625,
+            "left": 393.984375
+          }
+        },
+        {
+          "text": "04\nRestore\n24h cream\n: 24h Regeneration Cream, 50 ml",
+          "rect": {
+            "x": 571.015625,
+            "y": 783.15625,
+            "width": 157.046875,
+            "height": 55.25,
+            "top": 783.15625,
+            "right": 728.0625,
+            "bottom": 838.40625,
+            "left": 571.015625
+          }
+        }
+      ],
+      "lead": "Swiss-made caviar skincare.\nFor firmer-looking, hydrated skin.",
+      "inclusion": "Four full-size formulas · €450",
+      "scoreBottom": 854.40625
+    },
+    {
+      "width": 1024,
+      "hero": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 843.4375,
+        "top": 0,
+        "right": 1024,
+        "bottom": 843.4375,
+        "left": 0
+      },
+      "portrait": {
+        "x": 0,
+        "y": 60,
+        "width": 471.03125,
+        "height": 689.1875,
+        "top": 60,
+        "right": 471.03125,
+        "bottom": 749.1875,
+        "left": 0
+      },
+      "macro": {
+        "x": 471.03125,
+        "y": 569.1875,
+        "width": 552.953125,
+        "height": 180,
+        "top": 569.1875,
+        "right": 1023.984375,
+        "bottom": 749.1875,
+        "left": 471.03125
+      },
+      "formulas": [
+        {
+          "text": "01\nCleanse\nCleanser\n: Micellar Water All-in-One Cleanser, 150 ml",
+          "rect": {
+            "x": 53.234375,
+            "y": 772.1875,
+            "width": 214.375,
+            "height": 55.25,
+            "top": 772.1875,
+            "right": 267.609375,
+            "bottom": 827.4375,
+            "left": 53.234375
+          }
+        },
+        {
+          "text": "02\nTreat\nSerum\n: Advanced Repair Serum, 30 ml",
+          "rect": {
+            "x": 287.609375,
+            "y": 772.1875,
+            "width": 214.375,
+            "height": 55.25,
+            "top": 772.1875,
+            "right": 501.984375,
+            "bottom": 827.4375,
+            "left": 287.609375
+          }
+        },
+        {
+          "text": "03\nRevive\nEye cream\n: Revitalizing Eye Cream, 15 ml",
+          "rect": {
+            "x": 521.984375,
+            "y": 772.1875,
+            "width": 214.375,
+            "height": 55.25,
+            "top": 772.1875,
+            "right": 736.359375,
+            "bottom": 827.4375,
+            "left": 521.984375
+          }
+        },
+        {
+          "text": "04\nRestore\n24h cream\n: 24h Regeneration Cream, 50 ml",
+          "rect": {
+            "x": 756.359375,
+            "y": 772.1875,
+            "width": 214.390625,
+            "height": 55.25,
+            "top": 772.1875,
+            "right": 970.75,
+            "bottom": 827.4375,
+            "left": 756.359375
+          }
+        }
+      ],
+      "lead": "Swiss-made caviar skincare.\nFor firmer-looking, hydrated skin.",
+      "inclusion": "Four full-size formulas · €450",
+      "scoreBottom": 843.4375
+    },
+    {
+      "width": 1440,
+      "hero": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 961.546875,
+        "top": 0,
+        "right": 1440,
+        "bottom": 961.546875,
+        "left": 0
+      },
+      "portrait": {
+        "x": 0,
+        "y": 80,
+        "width": 662.390625,
+        "height": 788.546875,
+        "top": 80,
+        "right": 662.390625,
+        "bottom": 868.546875,
+        "left": 0
+      },
+      "macro": {
+        "x": 662.390625,
+        "y": 658.546875,
+        "width": 777.59375,
+        "height": 210,
+        "top": 658.546875,
+        "right": 1439.984375,
+        "bottom": 868.546875,
+        "left": 662.390625
+      },
+      "formulas": [
+        {
+          "text": "01\nCleanse\nCleanser\n: Micellar Water All-in-One Cleanser, 150 ml",
+          "rect": {
+            "x": 74.875,
+            "y": 891.546875,
+            "width": 301.546875,
+            "height": 54,
+            "top": 891.546875,
+            "right": 376.421875,
+            "bottom": 945.546875,
+            "left": 74.875
+          }
+        },
+        {
+          "text": "02\nTreat\nSerum\n: Advanced Repair Serum, 30 ml",
+          "rect": {
+            "x": 404.421875,
+            "y": 891.546875,
+            "width": 301.5625,
+            "height": 54,
+            "top": 891.546875,
+            "right": 705.984375,
+            "bottom": 945.546875,
+            "left": 404.421875
+          }
+        },
+        {
+          "text": "03\nRevive\nEye cream\n: Revitalizing Eye Cream, 15 ml",
+          "rect": {
+            "x": 733.984375,
+            "y": 891.546875,
+            "width": 301.5625,
+            "height": 54,
+            "top": 891.546875,
+            "right": 1035.546875,
+            "bottom": 945.546875,
+            "left": 733.984375
+          }
+        },
+        {
+          "text": "04\nRestore\n24h cream\n: 24h Regeneration Cream, 50 ml",
+          "rect": {
+            "x": 1063.546875,
+            "y": 891.546875,
+            "width": 301.5625,
+            "height": 54,
+            "top": 891.546875,
+            "right": 1365.109375,
+            "bottom": 945.546875,
+            "left": 1063.546875
+          }
+        }
+      ],
+      "lead": "Swiss-made caviar skincare.\nFor firmer-looking, hydrated skin.",
+      "inclusion": "Four full-size formulas · €450",
+      "scoreBottom": 961.546875
+    },
+    {
+      "width": 1920,
+      "hero": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1019.421875,
+        "top": 0,
+        "right": 1920,
+        "bottom": 1019.421875,
+        "left": 0
+      },
+      "portrait": {
+        "x": 0,
+        "y": 80,
+        "width": 883.1875,
+        "height": 846.421875,
+        "top": 80,
+        "right": 883.1875,
+        "bottom": 926.421875,
+        "left": 0
+      },
+      "macro": {
+        "x": 883.1875,
+        "y": 716.421875,
+        "width": 1036.796875,
+        "height": 210,
+        "top": 716.421875,
+        "right": 1919.984375,
+        "bottom": 926.421875,
+        "left": 883.1875
+      },
+      "formulas": [
+        {
+          "text": "01\nCleanse\nCleanser\n: Micellar Water All-in-One Cleanser, 150 ml",
+          "rect": {
+            "x": 80,
+            "y": 949.421875,
+            "width": 418.984375,
+            "height": 54,
+            "top": 949.421875,
+            "right": 498.984375,
+            "bottom": 1003.421875,
+            "left": 80
+          }
+        },
+        {
+          "text": "02\nTreat\nSerum\n: Advanced Repair Serum, 30 ml",
+          "rect": {
+            "x": 526.984375,
+            "y": 949.421875,
+            "width": 419,
+            "height": 54,
+            "top": 949.421875,
+            "right": 945.984375,
+            "bottom": 1003.421875,
+            "left": 526.984375
+          }
+        },
+        {
+          "text": "03\nRevive\nEye cream\n: Revitalizing Eye Cream, 15 ml",
+          "rect": {
+            "x": 973.984375,
+            "y": 949.421875,
+            "width": 419,
+            "height": 54,
+            "top": 949.421875,
+            "right": 1392.984375,
+            "bottom": 1003.421875,
+            "left": 973.984375
+          }
+        },
+        {
+          "text": "04\nRestore\n24h cream\n: 24h Regeneration Cream, 50 ml",
+          "rect": {
+            "x": 1420.984375,
+            "y": 949.421875,
+            "width": 419,
+            "height": 54,
+            "top": 949.421875,
+            "right": 1839.984375,
+            "bottom": 1003.421875,
+            "left": 1420.984375
+          }
+        }
+      ],
+      "lead": "Swiss-made caviar skincare.\nFor firmer-looking, hydrated skin.",
+      "inclusion": "Four full-size formulas · €450",
+      "scoreBottom": 1019.421875
+    }
+  ],
+  "keyboard": [
+    {
+      "text": "Discover your essentials",
+      "href": "#collection",
+      "outline": "rgb(28, 29, 31) solid 2px"
+    },
+    {
+      "text": "01\nCleanse\nCleanser\n: Micellar Water All-in-One Cleanser, 150 ml",
+      "href": "http://caviarofswitzerland.local/products/micellar-water-cleanser/",
+      "outline": "rgb(28, 29, 31) solid 3px"
+    },
+    {
+      "text": "02\nTreat\nSerum\n: Advanced Repair Serum, 30 ml",
+      "href": "http://caviarofswitzerland.local/products/advanced-repair-serum/",
+      "outline": "rgb(28, 29, 31) solid 3px"
+    },
+    {
+      "text": "03\nRevive\nEye cream\n: Revitalizing Eye Cream, 15 ml",
+      "href": "http://caviarofswitzerland.local/products/revitalizing-eye-cream/",
+      "outline": "rgb(28, 29, 31) solid 3px"
+    },
+    {
+      "text": "04\nRestore\n24h cream\n: 24h Regeneration Cream, 50 ml",
+      "href": "http://caviarofswitzerland.local/products/24h-regeneration-cream/",
+      "outline": "rgb(28, 29, 31) solid 3px"
+    },
+    {
+      "text": "Why caviar",
+      "href": "http://caviarofswitzerland.local/science/why-caviar/",
+      "outline": "rgb(28, 29, 31) solid 2px"
+    },
+    {
+      "text": "Cleanser",
+      "href": null,
+      "outline": "rgb(28, 29, 31) solid 3px"
+    }
+  ],
+  "anchor": {
+    "hash": "#collection",
+    "titleTop": 163.96875,
+    "headerBottom": 61
+  },
+  "keyboardProduct": {
+    "url": "http://caviarofswitzerland.local/products/advanced-repair-serum/",
+    "heading": "Advanced Repair Serum"
+  },
+  "mobileFirstProduct": {
+    "top": 1347.1875,
+    "height": 372.9375
+  }
+}

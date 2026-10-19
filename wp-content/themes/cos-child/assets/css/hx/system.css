@@ -23,6 +23,8 @@
    --hx-ivory       #F3EFE7  warm ivory       ink 14.7 · text  9.8 · muted 5.8 · accent 6.2
    --hx-champagne   #E8E0D2  soft champagne   ink 12.9 · text  8.6 · muted 5.1 · accent 5.5
    --hx-stone       #DDD8CF  stone            ink 11.9 · text  7.9 · muted 4.7 · accent 5.0
+   --hx-ground      = --hx-white #FBFAF7 — THE homepage section ground (one ground, no bands)
+   --hx-ground-stone #EDE9E1 Provenance only (ink 13.9:1, muted 5.5:1, accent 5.9:1)
    --hx-silver      #D4D7DA  silver ground    ink 11.7 · text  7.8 · muted 4.6 · accent 4.9
    Metals (DECORATIVE ONLY — hairlines, rules, numerals ≥40px; never body text)
    --hx-chrome      #A7ACB2  chrome           --hx-chrome-2 #C6CACE light chrome
@@ -31,6 +33,7 @@
    --hx-ink         #1C1D1F  graphite ink — headings, buttons, numerals
    --hx-text        #3A3B3D  body copy
    --hx-muted       #5C5C5A  secondary copy, captions, meta (≥4.5:1 on every light ground)
+   --hx-graphite    #2A2B2D  logo lettering + header/nav ink (17 Oct 2026)
    --hx-accent      #625646  warm bronze-graphite — the ONE warm text accent (labels,
                              step numbers). ≥4.5:1 on every light ground. Use sparingly.
    Restrained dark (only where a photo or the closing needs it)
@@ -40,7 +43,7 @@
    --hx-on-dark-2   #BDB8AE  secondary on dark (9.0:1 on night, 7.2 on night-2)
    Lines
    --hx-line        hairline on light (ink @14%) · --hx-line-strong (ink @28%)
-   --hx-line-dark   hairline on dark (ivory @20%)
+   --hx-line-dark   hairline on dark (ivory @20%) · --hx-line-hair (ink @9%, header)
    Semantic (flip under .hx-on-dark)
    --hx-fg / --hx-fg-2 / --hx-fg-3   headline / body / muted colour of the current context
    --hx-bg                            current ground (for buttons that knock out)
@@ -54,8 +57,8 @@
    title       --hx-fs-title        24 → 30px        serif 400 · 1.18 · -0.004em   (product names, cards)
    lead        --hx-fs-lead         17 → 19px        sans  300 · 1.6  · 0          (intro paragraph)
    body        --hx-fs-body         16px             sans  400 · 1.7  · 0          (reading copy)
-   detail      --hx-fs-detail       14px             sans  400 · 1.55 · 0.005em    (captions, meta, price)
-   label       --hx-fs-label        11.5px           sans  500 · 1.4  · 0.2em UPPER (eyebrows; ≤1 per section)
+   detail      --hx-fs-detail       15px phones / 14px ≥768           sans  400 · 1.55 · 0.005em    (captions, meta, price)
+   label       --hx-fs-label        12px             sans  500 · 1.4  · 0.2em UPPER (eyebrows; ≤1 per section)
    numeral     --hx-fs-numeral      56 → 104px       serif 300 · 0.9  · -0.02em lnum (figures: +47%)
    step        --hx-fs-step         18px             serif 400 · 1    · 0.06em lnum (step "01")
    Line-height / tracking tokens: --hx-lh-*, --hx-tr-* (same role names).
@@ -66,6 +69,8 @@
    --hx-gap               grid gutter: 16px → 32px
    --hx-section           section block padding: 96px (phone) → 192px (desktop)
    --hx-section-sm        tighter section padding: 72px → 128px
+   --hx-section-y         STANDARD section rhythm (17 Oct 2026): 88px @390 → 130px @1440. Use it for
+                          every homepage section's padding-block unless the design needs otherwise.
    --hx-stack             title→copy gap: 20px → 28px
    --hx-max               content max width 1440px · --hx-max-wide 1760px (full-bleed frames)
    --hx-measure           reading measure 34em · --hx-measure-narrow 24em
@@ -109,6 +114,20 @@
    file, so one download); declared here so every page that loads the system has it. */
 @font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300 700;font-display:swap;src:url('../../fonts/cormorant-garamond-var-latin.woff2') format('woff2')}
 
+/* ─── Homepage base (carried over 17 Oct 2026 from home-2026.css + home-2026-nocturne.css,
+   which are no longer loaded on the homepage: inc/home-2026.php). Only what the live page
+   still used, verified by a computed-style diff (zero differences) and screenshot diff.
+   Resets stay at zero specificity (:where) so section classes always win. ─────────────── */
+body.cos-h26{font-family:var(--cos-body,'Inter',system-ui,-apple-system,'Segoe UI',Arial,sans-serif);font-weight:400;letter-spacing:0;color:#3A3A3A;color-scheme:light}
+body.cos-h26 .h26{display:block;background:var(--hx-ground,#F2F2EF);color:#1C1C1C;font-family:var(--cos-body,'Inter',system-ui,sans-serif);font-size:1rem;font-weight:400;letter-spacing:0;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:clip}
+.h26 *,.h26 *::before,.h26 *::after{box-sizing:border-box}
+.h26 :where(h1,h2,h3,p,ul,ol,li,figure){margin:0;padding:0}
+.h26 :where(ul,ol){list-style:none}
+.h26 :where(img){display:block;max-width:100%;height:auto}
+.h26 :where(picture){display:block}
+.h26 :where(a){color:inherit;text-decoration:none}
+@media (prefers-reduced-motion:no-preference){html:has(.h26){scroll-behavior:smooth}}
+
 /* Tokens: sitewide on :root since 16 Oct 2026 (loaded on every page by inc/hx-system.php);
    body.cos-h26 kept so the homepage resolves exactly as before. */
 :root,body.cos-h26{
@@ -119,6 +138,10 @@
 	--hx-champagne:#E8E0D2;
 	--hx-stone:#DDD8CF;
 	--hx-silver:#D4D7DA;
+	/* colour — the homepage ground (17 Oct 2026 round 2): ONE ground for every section,
+	   stone only for Provenance; the graphite footer is the single dark band. */
+	--hx-ground:var(--hx-white);
+	--hx-ground-stone:#EDE9E1;
 	/* colour — metals (decorative only) */
 	--hx-chrome:#A7ACB2;
 	--hx-chrome-2:#C6CACE;
@@ -128,6 +151,7 @@
 	--hx-text:#3A3B3D;
 	--hx-muted:#5C5C5A;
 	--hx-accent:#625646;
+	--hx-graphite:#2A2B2D;   /* logo lettering, header/nav ink (12.6:1 on pearl, 13.6 on white) */
 	/* colour — restrained dark */
 	--hx-night:#17181A;
 	--hx-night-2:#232427;
@@ -137,6 +161,7 @@
 	--hx-line:rgba(28,29,31,.14);
 	--hx-line-strong:rgba(28,29,31,.28);
 	--hx-line-dark:rgba(242,239,232,.2);
+	--hx-line-hair:rgba(28,29,31,.09);   /* header / quiet dividers */
 	/* semantic (light context) */
 	--hx-bg:var(--hx-pearl);
 	--hx-fg:var(--hx-ink);
@@ -160,7 +185,7 @@
 	--hx-fs-lead:clamp(1.0625rem,1.016rem + .19vw,1.1875rem);
 	--hx-fs-body:1rem;
 	--hx-fs-detail:.875rem;
-	--hx-fs-label:.71875rem;
+	--hx-fs-label:.75rem;   /* 12px floor for uppercase labels (17 Oct 2026 audit) */
 	--hx-fs-numeral:clamp(3.5rem,2.38rem + 4.57vw,6.5rem);
 	--hx-fs-step:1.125rem;
 	/* type — line-heights */
@@ -181,6 +206,8 @@
 	--hx-tr-numeral:-.02em;
 	--hx-tr-step:.06em;
 	--hx-tr-btn:.16em;
+	--hx-fs-nav:.71875rem;   /* header nav: Inter 450, 11.5px */
+	--hx-tr-nav:.13em;
 
 	/* space */
 	--hx-s-1:4px;
@@ -197,6 +224,7 @@
 	--hx-gap:clamp(16px,2.2vw,32px);
 	--hx-section:clamp(96px,6.2rem + 6.5vw,192px);
 	--hx-section-sm:clamp(72px,4rem + 4vw,128px);
+	--hx-section-y:clamp(88px,72.4px + 4vw,130px);   /* standard section top/bottom: 88 @390 → 130 @1440 */
 	--hx-stack:clamp(20px,1.1rem + .6vw,28px);
 	/* layout */
 	--hx-max:1440px;
@@ -216,6 +244,9 @@
 	--hx-stagger:120ms;
 	--hx-rise:28px;
 }
+
+/* Phones: reading text never below 15px (45–65 audience; 17 Oct 2026 audit P1-1). */
+@media (max-width:767.98px){:root,body.cos-h26{--hx-fs-detail:.9375rem}}
 
 /* Dark context: flips the semantic tokens; paint the background yourself. */
 body .hx-on-dark{
@@ -355,39 +386,32 @@ body.cos-h26 .h26 ::selection{background:var(--hx-selection-bg);color:var(--hx-s
 /* ─── Screen-reader only ─────────────────────────────────────────── */
 .hx-sr{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;clip-path:inset(50%)!important;white-space:nowrap!important;border:0!important}
 
-/* ─── Scroll reveals (state classes are set by hx-motion.js) ─────────
-   Content is hidden ONLY when html.hx-motion is present, i.e. JS ran, motion is
-   allowed, and the element was below the fold at start. Anything that fails stays visible. */
-html.hx-motion [data-hx-reveal]{
-	transition-property:opacity,transform,clip-path;
-	transition-duration:var(--hx-dur-reveal);
-	transition-timing-function:var(--hx-ease);
-	transition-delay:calc(var(--hx-i,0) * var(--hx-stagger) + var(--hx-delay,0ms));
-}
-html.hx-motion [data-hx-reveal]:not(.is-in){opacity:0}
-html.hx-motion [data-hx-reveal=""]:not(.is-in),
-html.hx-motion [data-hx-reveal="rise"]:not(.is-in){transform:translate3d(0,var(--hx-rise),0)}
-html.hx-motion [data-hx-reveal="fade"]{transition-duration:1400ms;transition-timing-function:var(--hx-ease-soft)}
-/* mask: curtain lifts from the bottom edge; image inside settles 1.06 → 1 */
-html.hx-motion [data-hx-reveal="mask"]{transition-duration:var(--hx-dur-image);transition-timing-function:var(--hx-ease-inout),var(--hx-ease-inout),var(--hx-ease-inout)}
-html.hx-motion [data-hx-reveal="mask"]:not(.is-in){opacity:1;clip-path:inset(100% 0 0 0)}
-html.hx-motion [data-hx-reveal="mask"].is-in{clip-path:inset(0 0 0 0)}
-html.hx-motion [data-hx-reveal="mask-x"]{transition-duration:var(--hx-dur-image);transition-timing-function:var(--hx-ease-inout)}
-html.hx-motion [data-hx-reveal="mask-x"]:not(.is-in){opacity:1;clip-path:inset(0 100% 0 0)}
-html.hx-motion [data-hx-reveal="mask-x"].is-in{clip-path:inset(0 0 0 0)}
-/* settle: fade in while the image eases from 1.04 → 1 (transform the <img>, not a
-   mix-blend wrapper — see brief §7) */
-html.hx-motion [data-hx-reveal="settle"]{transition-duration:var(--hx-dur-image)}
-html.hx-motion :is([data-hx-reveal="mask"],[data-hx-reveal="mask-x"],[data-hx-reveal="settle"]) img{transition:transform calc(var(--hx-dur-image) + 400ms) var(--hx-ease);transition-delay:inherit}
-html.hx-motion :is([data-hx-reveal="mask"],[data-hx-reveal="mask-x"]):not(.is-in) img{transform:scale(1.08)}
-html.hx-motion [data-hx-reveal="settle"]:not(.is-in) img{transform:scale(1.04)}
-/* data-hx-reveal on an <img> directly with "settle" */
-html.hx-motion img[data-hx-reveal="settle"]:not(.is-in){transform:scale(1.04)}
-/* no transition for elements revealed at start (already in view) */
+/* ─── Scroll motion (hx-motion.js) — 17 Oct 2026 policy ───────────────
+   NOTHING is ever hidden waiting for a scroll: text, prices, CTAs and product images are
+   fully visible (opacity 1, no clip) at first paint, with or without JS. What remains:
+   • data-hx-reveal="settle|mask|mask-x" (or on an <img>): the image inside eases from
+     scale 1.035 → 1 as it enters (a slow optical settle; the frame clips the overscan).
+   • data-hx-reveal on anything else ("", "rise", "fade"): no visual effect, kept so
+     section markup stays valid. hx-motion.js marks every one .is-in on load.
+   • data-hx-drift="<factor>": vertical parallax, clamped to ±6px (≥900px wide only).
+   • .hx-line / [data-hx-line]: a hairline that draws left→right once in view (scaleX);
+     the line is decoration, never content. Visible by default without JS.
+   html.hx-motion is set only by JS, only without prefers-reduced-motion. */
+html.hx-motion :is([data-hx-reveal="settle"],[data-hx-reveal="mask"],[data-hx-reveal="mask-x"]) img,
+html.hx-motion img[data-hx-reveal="settle"]{transition:transform 2200ms var(--hx-ease);transform-origin:50% 60%}
+html.hx-motion :is([data-hx-reveal="settle"],[data-hx-reveal="mask"],[data-hx-reveal="mask-x"]):not(.is-in) img,
+html.hx-motion img[data-hx-reveal="settle"]:not(.is-in){transform:scale(1.035)}
 html.hx-motion [data-hx-reveal].hx-instant,html.hx-motion [data-hx-reveal].hx-instant img{transition:none!important}
+/* belt and braces: no reveal state may ever hide or clip content */
+[data-hx-reveal]{opacity:1;clip-path:none}
+
+/* Hairline draw (opt-in decoration). */
+.hx-line{display:block;height:1px;background:var(--hx-rule);transform-origin:left center}
+html.hx-motion :is(.hx-line,[data-hx-line]){transition:transform 1400ms var(--hx-ease)}
+html.hx-motion :is(.hx-line,[data-hx-line]):not(.is-drawn){transform:scaleX(0)}
 
 /* Drift (parallax) uses the independent `translate` property, so it composes with any
-   reveal transform. JS writes --hx-dy only ≥900px and without reduced motion. */
+   other transform. JS writes --hx-dy (±6px max) only ≥900px and without reduced motion. */
 [data-hx-drift]{translate:0 var(--hx-dy,0px)}
 
 /* ─── Load-time motion (CSS only; for above-the-fold content) ────── */
@@ -402,7 +426,8 @@ html.hx-motion [data-hx-reveal].hx-instant,html.hx-motion [data-hx-reveal].hx-in
 @keyframes hx-settle{from{opacity:0;transform:scale(1.04)}to{opacity:1;transform:none}}
 
 @media (prefers-reduced-motion:reduce){
-	html.hx-motion [data-hx-reveal]{opacity:1!important;transform:none!important;clip-path:none!important;transition:none!important}
+	[data-hx-reveal],[data-hx-reveal] img{opacity:1!important;transform:none!important;clip-path:none!important;transition:none!important}
+	.hx-line,[data-hx-line]{transform:none!important}
 	[data-hx-drift]{translate:none!important}
 	.hx-btn,.hx-btn::after,.hx-link,.hx-arrow{transition:none}
 }
@@ -415,20 +440,17 @@ html.hx-motion [data-hx-reveal].hx-instant,html.hx-motion [data-hx-reveal].hx-in
 /* Homepage footer: same container as the sections (shared max width + page margin). */
 body.cos-h26 #cos-footer :is(.cos-nl-wrap,.cos-footer-cols,.cos-footer-bottom){box-sizing:border-box;max-width:calc(var(--hx-max) + 2 * var(--hx-margin));padding-left:var(--hx-margin);padding-right:var(--hx-margin)}
 
-/* Homepage header: transparent over the light hero until scrolled (or the menu opens);
-   then solid pearl white with a fine hairline. No backdrop blur. Ink links and mark. */
-html body.cos-h26.cos-h26-nocturne #cos-nav-wrap{backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:none;transition:background-color var(--hx-dur-ui) var(--hx-ease-soft),border-color var(--hx-dur-ui) var(--hx-ease-soft)}
-html body.cos-h26.cos-h26-nocturne #cos-nav-wrap:not(.scrolled):not(:has([aria-expanded="true"])){background:transparent;border-bottom-color:transparent}
-html body.cos-h26.cos-h26-nocturne #cos-nav-wrap.scrolled,
-html body.cos-h26.cos-h26-nocturne #cos-nav-wrap:has([aria-expanded="true"]){background:#FBFAF7;border-bottom:1px solid rgba(28,29,31,.08)}
-html body.cos-h26.cos-h26-nocturne #cos-nav-wrap :is(.cos-nav-links a,.cos-nav-utils a,.cos-mob-btn),
-html body.cos-h26.cos-h26-nocturne #cos-nav-wrap:not(.scrolled):not(:has([aria-expanded="true"])) :is(.cos-nav-links a,.cos-nav-utils a,.cos-mob-btn){color:var(--hx-ink)}
-html body.cos-h26.cos-h26-nocturne #cos-nav-wrap .cos-nav-logo img,
-html body.cos-h26.cos-h26-nocturne #cos-nav-wrap:not(.scrolled):not(:has([aria-expanded="true"])) .cos-nav-logo img{filter:brightness(.6) contrast(1.15)}
-html body.cos-h26.cos-h26-nocturne #cos-nav-wrap .cos-bag-count,
-html body.cos-h26.cos-h26-nocturne #cos-nav-wrap:not(.scrolled):not(:has([aria-expanded="true"])) .cos-bag-count{background:var(--hx-ink);color:#fff}
-html body.cos-h26.cos-h26-nocturne #cos-nav-wrap:not(.scrolled):not(:has([aria-expanded="true"])) :focus-visible{outline-color:var(--hx-ink)}
-@media (prefers-reduced-motion:reduce){html body.cos-h26.cos-h26-nocturne #cos-nav-wrap{transition:none}}
+/* Homepage header (transparent over the hero until scrolled): see hx/chrome.css, 17 Oct 2026. */
 
-/* In-page anchors land clear of the fixed header. */
+/* One ground under the whole homepage (sections that paint their own ground should use
+   var(--hx-ground), or var(--hx-ground-stone) for Provenance). */
+body.cos-h26{background-color:var(--hx-ground)}
+
+/* In-page anchors land clear of the fixed header (60px bar below 1280px, 80px above). */
 body.cos-h26 :is(#collection,#caviar,#evidence,#heritage,#ritual,#closing){scroll-margin-top:calc(var(--cos-nav-h,80px) + 40px)}
+
+/* Visible content is the default; only the complete hero has an entrance. */
+.hx-load-rise,.hx-load-fade,.hx-load-settle{animation:none!important}
+.hx-btn{font-size:15px;letter-spacing:.01em;text-transform:none;white-space:normal}
+.hx-btn::after{display:none}
+.hx-link{font-size:15px}

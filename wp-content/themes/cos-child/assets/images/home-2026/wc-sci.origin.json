@@ -1,0 +1,344 @@
+{
+  "date": "2026-10-18",
+  "scope": "Science section (hxs): caviar pearl core + two instrument-measured product packs",
+  "paths_relative_to": "WordPress public directory",
+  "sources": {
+    "pearl": {
+      "path": "../design-sources/home-2026/caviar-backlit-macro-2_master.png",
+      "sha256": "80ddb58fe128fbf64c2a875d5f06338f85685d94be065f0ce12c6c1782caab4d",
+      "bytes": 4009156,
+      "dimensions": [
+        3000,
+        2000
+      ],
+      "kind": "owner photograph"
+    },
+    "serum": {
+      "path": "../design-sources/home-2026/packshots-2026-10-12/serum.jpg",
+      "sha256": "d99744d5cc4289455dd97881230e57b44b371d55199513b5e626d18dc0509e95",
+      "bytes": 3359066,
+      "dimensions": [
+        1514,
+        5336
+      ],
+      "kind": "approved raw packshot (product-fidelity-audit.md)"
+    },
+    "eye": {
+      "path": "../design-sources/home-2026/packshots-2026-10-12/eye.jpg",
+      "sha256": "1cba460fe366520e5e30e9ead3c77f60d9d1b1ebdd8bd482688f1754f352f3f8",
+      "bytes": 2562001,
+      "dimensions": [
+        1097,
+        4807
+      ],
+      "kind": "approved raw packshot (product-fidelity-audit.md)"
+    }
+  },
+  "builder": {
+    "path": "../design-sources/home-2026/build_wc_science.py",
+    "sha256": "597b7591a5438f7d344c28e0c646631631652daf27d01f3e8d2e1f127076bde8"
+  },
+  "transformation": {
+    "pearl": [
+      "Crop box (2318, 514, 2746, 942) (centre (2532, 728), rim radius 212px), outside the Caviar section heap crop x0-2400",
+      "Shadows +12*(1-v)^2, mids warmed R+5 G+2 B-3",
+      "1.2px anti-aliased circular alpha at the rim (cut-out; no pixels added)"
+    ],
+    "packs": [
+      "ICC CMYK->sRGB relative colorimetric",
+      "Crop to pack + 7.5% of its height of photographed reflection",
+      "Reflection eased to white over that band (below the base only)",
+      "Per-channel multiply white -> #FBFAF7 (equivalent to CSS multiply on the section ground)",
+      "Proportional Lanczos downscale only"
+    ],
+    "packs_detail": {
+      "serum": {
+        "crop_box": [
+          183,
+          200,
+          1330,
+          4519
+        ],
+        "base_row_in_crop": 4018,
+        "crop_size": [
+          1147,
+          4319
+        ]
+      },
+      "eye": {
+        "crop_box": [
+          79,
+          139,
+          1024,
+          3960
+        ],
+        "base_row_in_crop": 3555,
+        "crop_size": [
+          945,
+          3821
+        ]
+      }
+    },
+    "not_done": "No repainting, relabelling, packaging recolour, geometry/perspective change or mirroring; no generative content.",
+    "format_settings": {
+      "avif": {
+        "quality": 66,
+        "speed": 4
+      },
+      "webp": {
+        "quality": 86,
+        "method": 6
+      },
+      "jpg": {
+        "quality": 88,
+        "optimize": true,
+        "progressive": true
+      }
+    }
+  },
+  "derivatives": [
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-sci-pearl-240.avif",
+      "sha256": "c65fba645377caccda719e78df9101843860c5b6c770f8bef30a71db56cf4e46",
+      "bytes": 5868,
+      "dimensions": [
+        240,
+        240
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-sci-pearl-240.webp",
+      "sha256": "67cc561b199d3e7579b3eee5b5b9abb00d31ce217fc3a633b5b415766dbd28f6",
+      "bytes": 7808,
+      "dimensions": [
+        240,
+        240
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-sci-pearl-240.jpg",
+      "sha256": "57c856920f640906fdffe60a7d3b7c835a39bebfbbed364ff3eab8a855a2e8b9",
+      "bytes": 10897,
+      "dimensions": [
+        240,
+        240
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-sci-pearl-360.avif",
+      "sha256": "3efb0ddd91130e64b9bd98aa085949e47bcfdb8567d3b7e9482960887884acbe",
+      "bytes": 9325,
+      "dimensions": [
+        360,
+        360
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-sci-pearl-360.webp",
+      "sha256": "b9a19ba8de9f67790a1ab062b16eff49dff747ac97ffec1de86ce960424c4dae",
+      "bytes": 12492,
+      "dimensions": [
+        360,
+        360
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-sci-pearl-360.jpg",
+      "sha256": "0475fed3cecd2708658ea501dcf41c0638a12e560d614cdb0ee0a402e2f511ab",
+      "bytes": 19269,
+      "dimensions": [
+        360,
+        360
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-sci-pearl-424.avif",
+      "sha256": "2240df366fc27667d63639b50c51150c11a9bed5655e67fcf039d285467a3679",
+      "bytes": 10921,
+      "dimensions": [
+        424,
+        424
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-sci-pearl-424.webp",
+      "sha256": "59c051a78abfaa04ee39ffd22a6c67e05658db761ae8e1b3c3fa5eea278bd2af",
+      "bytes": 14672,
+      "dimensions": [
+        424,
+        424
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-sci-pearl-424.jpg",
+      "sha256": "561b39ec36ba9f62a61efefe48378496b0f6984f26d1d3e4ee14995f08ffd354",
+      "bytes": 23741,
+      "dimensions": [
+        424,
+        424
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-sci-serum-160.avif",
+      "sha256": "426bec0637f6df525c97ec092acc9ec3aa155463a2a09a855f84b39a6339da5e",
+      "bytes": 4346,
+      "dimensions": [
+        160,
+        602
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-sci-serum-160.webp",
+      "sha256": "9cabaab5f659f418a762116c8472a9e0ed8e018122a89035420de161a07c93b0",
+      "bytes": 5606,
+      "dimensions": [
+        160,
+        602
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-sci-serum-160.jpg",
+      "sha256": "3030488ee4440b619669513b834e95f8d4436818380ddeb59db243d008892a3e",
+      "bytes": 13843,
+      "dimensions": [
+        160,
+        602
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-sci-serum-240.avif",
+      "sha256": "db750c843cfd4ecb90c8e1f14e4ddf20a715a1e68acfa4c144fc6f362a91979f",
+      "bytes": 6929,
+      "dimensions": [
+        240,
+        904
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-sci-serum-240.webp",
+      "sha256": "8bd3741724d890906b5932d5756a7b0c627ef5aa3fbb27cca977a712e20d7cc4",
+      "bytes": 9468,
+      "dimensions": [
+        240,
+        904
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-sci-serum-240.jpg",
+      "sha256": "8110c1046d887c1137e58bfa9563732e7d6dd422b031e9463f52270f5a6771c7",
+      "bytes": 24808,
+      "dimensions": [
+        240,
+        904
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-sci-serum-360.avif",
+      "sha256": "5a6c1c4771f0f55a360b2e4c696db63873def1f84594c587f21c2b6ee5fdc962",
+      "bytes": 11192,
+      "dimensions": [
+        360,
+        1356
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-sci-serum-360.webp",
+      "sha256": "47aba0fc64e022f60ee28cdafaec988ab6a48ff161a73b892a0b054b5ec313b2",
+      "bytes": 15628,
+      "dimensions": [
+        360,
+        1356
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-sci-serum-360.jpg",
+      "sha256": "ab2920fbfbc09711ed8fef69486849914d2847473b8cc6935c3a1b72f2573cb1",
+      "bytes": 46260,
+      "dimensions": [
+        360,
+        1356
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-sci-eye-160.avif",
+      "sha256": "bc3cfc707dd25d50e2aee1485fdba3fc4ac30b1c802f8223d5854b369883daa6",
+      "bytes": 4549,
+      "dimensions": [
+        160,
+        647
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-sci-eye-160.webp",
+      "sha256": "2a835f1d20785364b0f6709176b7f85657c3985c26506d56868962f6d9bea7f9",
+      "bytes": 5926,
+      "dimensions": [
+        160,
+        647
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-sci-eye-160.jpg",
+      "sha256": "078402a294b6bb93988ed0ac30b923ad9a7800e5948fb6ebcf1b34233dfa8c9b",
+      "bytes": 14431,
+      "dimensions": [
+        160,
+        647
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-sci-eye-240.avif",
+      "sha256": "74e968c66c9d312b2c63de762d4695dbe66297f4d06c2d875f1554c2b58eef92",
+      "bytes": 7164,
+      "dimensions": [
+        240,
+        970
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-sci-eye-240.webp",
+      "sha256": "b9eb73ebe31c1f56379234fb6853afae0a5adcb21c4ef25a0553b7dbb4a02130",
+      "bytes": 9524,
+      "dimensions": [
+        240,
+        970
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-sci-eye-240.jpg",
+      "sha256": "c99ab8b836ecf376ae77675b91e0f4cc632eb658d455052ff670beddf657fa7e",
+      "bytes": 26448,
+      "dimensions": [
+        240,
+        970
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-sci-eye-360.avif",
+      "sha256": "27282fc802afef06197cc84b9c4764f7c93fb2b67b58665fb89769d781eb0c65",
+      "bytes": 11786,
+      "dimensions": [
+        360,
+        1456
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-sci-eye-360.webp",
+      "sha256": "fdb2d46e7a8fe45a154dd321c5fef91dbbe42f4d6daff85a9e47268710e3c72a",
+      "bytes": 17040,
+      "dimensions": [
+        360,
+        1456
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-sci-eye-360.jpg",
+      "sha256": "dca87d844871c398045d4fe97182f8fc663fe61756f4b2a3983f5ab13241d8f1",
+      "bytes": 49688,
+      "dimensions": [
+        360,
+        1456
+      ]
+    }
+  ]
+}

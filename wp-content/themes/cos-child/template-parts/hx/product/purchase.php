@@ -17,6 +17,7 @@ $plus    = '<span class="hxpd-acc__icon" aria-hidden="true"></span>';
 ?>
 <div class="hxpd-panel">
 	<div class="hxpd-panel__inner">
+		<div class="hxpd-summary">
 		<?php if ( $is_set ) : ?>
 		<p class="hxpd-step"><span class="hxpd-step__verb">The four steps</span><span class="hxpd-step__rule" aria-hidden="true"></span><span class="hxpd-step__of">Cleanse · Treat · Revive · Restore</span></p>
 		<?php elseif ( $me ) : ?>
@@ -25,17 +26,15 @@ $plus    = '<span class="hxpd-acc__icon" aria-hidden="true"></span>';
 
 		<h1 id="hxpd-name" class="hxpd-name"><?php echo esc_html( $args['name'] ); ?></h1>
 		<?php if ( $args['promise'] ) : ?><p class="hxpd-promise"><?php echo esc_html( $args['promise'] ); ?></p><?php endif; ?>
+		</div>
 
+		<div class="hxpd-purchase">
 		<p class="hxpd-price">
 			<span class="hxpd-price__amt"><?php echo esc_html( $args['price_txt'] ); ?></span>
 			<?php if ( $args['size'] && ! $is_set ) : ?><span class="hxpd-price__dot" aria-hidden="true"></span><span class="hx-sr">, </span><span class="hxpd-price__size"><?php echo esc_html( $args['size'] ); ?></span><?php endif; ?>
 		</p>
 		<?php if ( $is_set && $args['saving'] > 0 ) : ?>
 		<p class="hxpd-saving"><?php echo esc_html( cos_hxpd_money( $args['individual'] ) ); ?> when bought separately <span aria-hidden="true">·</span> you save <?php echo esc_html( cos_hxpd_money( $args['saving'] ) ); ?></p>
-		<?php endif; ?>
-
-		<?php if ( $study ) : ?>
-		<p class="hxpd-evidence"><a href="#hxpd-result" class="hxpd-evidence__link"><span class="hxpd-evidence__fig"><?php echo esc_html( $study['sign'] . $study['n'] . $study['unit'] ); ?></span> <?php echo esc_html( strtolower( $study['finding'] ) ); ?> <span class="hxpd-evidence__kind">(<?php echo esc_html( strtolower( $study['kind'] ) ); ?>, 28 days)</span></a></p>
 		<?php endif; ?>
 
 		<?php if ( $is_set ) : ?>
@@ -68,6 +67,10 @@ $plus    = '<span class="hxpd-acc__icon" aria-hidden="true"></span>';
 		<?php endif; ?>
 
 		<p class="hxpd-confirm" role="status" aria-live="polite" data-hxpd-confirm><?php if ( $args['added'] ) : ?>Added to your bag. <a class="hxpd-confirm__link" href="<?php echo esc_url( $args['cart_url'] ); ?>">View bag</a><?php endif; ?></p>
+
+		<?php if ( $study ) : ?>
+		<p class="hxpd-evidence"><a href="#hxpd-result" class="hxpd-evidence__link"><span class="hxpd-evidence__fig"><?php echo esc_html( $study['sign'] . $study['n'] . $study['unit'] ); ?></span> <?php echo esc_html( strtolower( $study['finding'] ) ); ?> <span class="hxpd-evidence__kind">(<?php echo esc_html( strtolower( $study['kind'] ) ); ?>, 28 days)</span></a></p>
+		<?php endif; ?>
 
 		<ul class="hxpd-assure">
 			<li><?php echo esc_html( $args['shipping'] ); ?></li>
@@ -113,6 +116,7 @@ $plus    = '<span class="hxpd-acc__icon" aria-hidden="true"></span>';
 				<summary class="hxpd-acc__sum">Delivery &amp; returns<?php echo $plus; // phpcs:ignore ?></summary>
 				<p class="hxpd-acc__text"><?php echo esc_html( $args['shipping'] ); ?> Returns are accepted within 30 days. <a href="<?php echo esc_url( home_url( '/shipping-returns/' ) ); ?>">Delivery and returns in full</a></p>
 			</details>
+		</div>
 		</div>
 	</div>
 </div>

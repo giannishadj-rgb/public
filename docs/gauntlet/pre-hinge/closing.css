@@ -1,0 +1,51 @@
+/* Closing (hxz): the house statement as the last beat, then the four formulas as one set
+   beside a quiet Complete Ritual offer. Set image: build_hxz_set.py (alpha over the ground). */
+body.cos-h26 .hxz{background:var(--hx-ground);color:var(--hx-text);padding-block:var(--hx-section-y);overflow-x:clip}
+
+/* Statement: two deliberate lines, flush left on the page edge the offer shares */
+.hxz__title{margin:0;font-size:clamp(2.75rem,1.6rem + 4.6vw,6rem);line-height:1.02;letter-spacing:-.022em;text-wrap:initial}
+.hxz__line{display:block}
+.hxz__keep{white-space:nowrap}
+
+/* Set + offer */
+.hxz__stage{display:grid;grid-template-areas:"set" "offer";margin-top:clamp(8px,2vw,24px)}
+.hxz__set{grid-area:set;display:block;margin-inline:calc(-1 * var(--hx-margin))}
+.hxz__set img{display:block;width:100%;height:auto;aspect-ratio:115/144}
+.hxz__offer{grid-area:offer;max-width:26rem}
+.hxz__set-title{margin:0}
+.hxz__price{margin:12px 0 0;font-family:var(--hx-serif);font-size:2.1875rem;font-weight:300;line-height:1.2;letter-spacing:-.005em;color:var(--hx-ink);font-variant-numeric:lining-nums}
+.hxz__inclusion{margin:12px 0 0;font-family:var(--hx-sans);font-size:1rem;line-height:1.6;color:var(--hx-text);text-wrap:pretty}
+.hxz__individual{display:block}
+
+/* CTA: the system button, drawn as a quiet hairline frame that fills on hover */
+body.cos-h26 .hxz__cta{--hx-btn-bg:transparent;--hx-btn-bg-hover:var(--hx-ink);--hx-btn-fg:var(--hx-ink);margin-top:28px;box-shadow:inset 0 0 0 1px rgba(28,29,31,.55);transition:background-color var(--hx-dur-ui) var(--hx-ease-soft),color var(--hx-dur-ui) var(--hx-ease-soft),box-shadow var(--hx-dur-ui) var(--hx-ease-soft)}
+body.cos-h26 .hxz__cta:hover{box-shadow:inset 0 0 0 1px var(--hx-ink)}
+body.cos-h26 .hxz__cta:hover{color:var(--hx-white)}
+body.cos-h26 .hxz__cta:visited{color:var(--hx-ink)}
+body.cos-h26 .hxz__cta:visited:hover{color:var(--hx-white)}
+
+.hxz__assure{display:flex;flex-wrap:wrap;gap:6px 0;list-style:none;margin:18px 0 0;padding:0}
+.hxz__assure li{font-family:var(--hx-sans);font-size:.8125rem;line-height:1.5;letter-spacing:.01em;color:var(--hx-text)}
+.hxz__assure li + li::before{content:"\00B7";margin-inline:10px}
+
+@media (max-width:899.98px){
+ /* never wider than the 1150px master at DPR 3 (1150 / 3 = 383 CSS px) */
+ .hxz__set{width:min(383px,calc(100% + 2 * var(--hx-margin)));margin:-2% auto 4px}
+ .hxz__offer{margin-top:4px}
+ .hxz__cta{width:100%}
+}
+@media (min-width:900px){
+ /* one screen: statement across the top, offer bottom-left, the set standing to the right.
+    The title may run into the set column: that part of the image is empty ground. */
+ .hxz__inner{display:grid;grid-template-columns:minmax(0,1fr) clamp(320px,36vw,540px);grid-template-rows:auto 1fr;column-gap:0;row-gap:clamp(32px,4vw,56px)}
+ .hxz__title{grid-column:1/-1;grid-row:1;position:relative;z-index:1}
+ .hxz__stage{display:contents}
+ .hxz__set{grid-column:2;grid-row:1/3;margin:0;align-self:center;position:relative;top:40px}   /* cap clears the headline band */
+ .hxz__offer{grid-column:1;grid-row:2;align-self:end;padding-bottom:clamp(24px,5vw,80px)}
+ body.cos-h26 .hxz{padding-bottom:96px}
+}
+@media (min-width:1600px){
+ /* close the empty middle: one ~1280px composition (offer ~416px, set 540px). 1280, not 1200:
+    the 96px headline needs ~740px before it would reach the cleanser cap */
+ .hxz__inner{max-width:calc(1280px + 2 * var(--hx-margin));grid-template-columns:minmax(0,1fr) 540px}
+}

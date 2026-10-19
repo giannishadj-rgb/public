@@ -56,7 +56,6 @@ function cos_get_product_copy( string $sku ): ?array {
 				array( 'Is it suitable for sensitive skin?', 'The formula is designed to be gentle for most skin types, including sensitive and reactive skin. We recommend a patch test before first use if you have specific concerns.' ),
 				array( 'When should I use it in my routine?', 'Use morning and evening as Step 1 of the Caviar of Switzerland ritual, before applying Advanced Repair Serum and 24h Regeneration Cream.' ),
 				array( 'What is the Caviar of Switzerland High-Tech Complex?', 'The High-Tech Complex is the signature active blend of Caviar Extract, SYN®-COLL, Hyaluronic Acid, Superoxide Dismutase, and Resveratrol — chosen to help support hydration, visible firmness, antioxidant care, and a more youthful-looking complexion.' ),
-				array( 'How long will one bottle last?', 'With twice-daily use at the recommended amount, one 150 ml bottle lasts approximately 8&ndash;10 weeks.' ),
 				array( 'Why does this cleanser cost more than a typical micellar water?', 'The price reflects Swiss development and manufacture, and a formula built around Caviar Extract and a dedicated micellar complex rather than a generic surfactant base — chosen to remove impurities without compromising the skin barrier the following steps depend on.' ),
 			),
 			'actives' => array(
@@ -115,7 +114,6 @@ function cos_get_product_copy( string $sku ): ?array {
 				array( 'When will I notice results?', 'In an independent 28-day study of 32 women aged 45–60, skin firmness improved by 47% on average, measured by cutometry. The full methodology is on our Clinical Studies page.' ),
 				array( 'How much should I use?', 'Dispense 2–3 drops into the palm and press gently across the face and neck. A small amount goes a long way.' ),
 				array( 'What is the Caviar of Switzerland High-Tech Complex?', 'The High-Tech Complex is the signature active blend of Caviar Extract, SYN®-COLL, Hyaluronic Acid, Superoxide Dismutase, and Resveratrol — chosen to help support hydration, visible firmness, antioxidant care, and a more youthful-looking complexion.' ),
-				array( 'How long will one bottle last?', 'With twice-daily use at the recommended amount, one 30 ml bottle lasts approximately 6&ndash;8 weeks.' ),
 				array( 'Why does this serum cost what it does?', 'The price reflects the concentration of its actives — including micro-encapsulated caviar extract and SYN®-COLL peptide — and the independent 28-day study behind its +47% firmness result, not the packaging or the brand name alone.' ),
 			),
 			'actives' => array(
@@ -172,7 +170,6 @@ function cos_get_product_copy( string $sku ): ?array {
 				array( 'Can I wear it under make-up?', 'Yes. Allow a moment to absorb before applying make-up or SPF.' ),
 				array( 'How long before I see results for dark circles?', 'Results vary from person to person. In an independent 28-day study, crow’s-feet depth was reduced by 38% on average, measured by optical profilometry; dark circles were not instrument-measured. The full methodology is on our Clinical Studies page.' ),
 				array( 'What is the Caviar of Switzerland High-Tech Complex?', 'The High-Tech Complex is the signature active blend of Caviar Extract, SYN®-COLL, Hyaluronic Acid, Superoxide Dismutase, and Resveratrol — chosen to help support hydration, visible firmness, antioxidant care, and a more youthful-looking complexion.' ),
-				array( 'How long will one jar last?', 'With twice-daily use at the recommended amount, one 15 ml jar lasts approximately 6&ndash;8 weeks.' ),
 				array( 'Why does this eye cream cost more than a general face cream?', 'The price reflects a formula engineered specifically for the periorbital area — precision-encapsulated actives, Vitamin K2, and triple-weight hyaluronic acid — rather than a scaled-down version of the face serum, plus the independent study behind its −38% crow’s-feet depth result.' ),
 			),
 			'actives' => array(
@@ -227,9 +224,8 @@ function cos_get_product_copy( string $sku ): ?array {
 				array( 'Can I use it both morning and evening?', 'Yes. The formula is designed for both day and night use — rich enough for the night, light enough to wear comfortably beneath SPF.' ),
 				array( 'Do I need SPF on top in the morning?', 'Yes. We recommend applying a broad-spectrum SPF 50+ over the cream during daylight hours for complete environmental protection.' ),
 				array( 'Can I use it without the serum?', 'The cream works beautifully on its own. For the complete ritual and maximum results, we recommend applying it after Advanced Repair Serum.' ),
-				array( 'How long does the hydration last?', 'The cream is formulated for extended hydration; in our independent consumer panel study, 100% of panellists reported satisfaction at 28 days — see our Clinical Studies page for the full results.' ),
+				array( 'How long does the hydration last?', 'The cream is formulated for lasting hydration and comfort through the day, with a triple-weight hyaluronic acid complex and a caviar lipid complex that supports the skin\'s barrier.' ),
 				array( 'What is the Caviar of Switzerland High-Tech Complex?', 'The High-Tech Complex is the signature active blend of Caviar Extract, SYN®-COLL, Hyaluronic Acid, Superoxide Dismutase, and Resveratrol — chosen to help support hydration, visible firmness, antioxidant care, and a more youthful-looking complexion.' ),
-				array( 'How long will one jar last?', 'With twice-daily use at the recommended amount, one 50 ml jar lasts approximately 6&ndash;8 weeks.' ),
 				array( 'Why does this cream cost what it does?', 'The price reflects Swiss glacier meltwater as the formula\'s base, a triple-weight hyaluronic acid complex, and Superoxide Dismutase at a concentration intended for both day and night use.' ),
 			),
 			'actives' => array(

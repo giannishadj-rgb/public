@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-18",
+  "source_kind": "Authentic supplied June 2026 Caviar of Switzerland campaign",
+  "source": {
+    "path_relative_to_public": "../design-sources/home-2026/gauntlet-supplied-20261018/CAV58789.jpg",
+    "sha256": "d60dad0601bfd8de2491383c666efa18be0d7ac30fa1a841e687c93ed4589a04",
+    "dimensions": [
+      5504,
+      8256
+    ],
+    "url": "https://www.dropbox.com/scl/fo/zd80oz5ogpqdsdhubyd5r/AMMuXYZwiSRvGQPuNLokfwg/Graphics/Photoshoots/June%202026/CAV58789.jpg?rlkey=nk7x62fbfper2kko2exy0np6r&dl=0"
+  },
+  "operations": [
+    "Proportional FFmpeg scale to 720x1080, 1080x1620, 1440x2160 and 1920x2880",
+    "AVIF libaom-av1 still-picture CRF24 cpu-used6; WebP quality88; JPEG q:v2",
+    "No generative editing, compositing, grading, skin retouching, mirroring or sharpening",
+    "CSS object-fit cover: desktop tall left panel; mobile 72%-width portrait within square diptych alongside original caviar macro. Both faces retained; no image pixel edits."
+  ],
+  "product_packaging_present": false,
+  "usage": "Homepage caviar-to-skin material composition; not a testimonial, clinical result, study participant or visual mechanism"
+}

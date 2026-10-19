@@ -1,0 +1,1175 @@
+<!DOCTYPE html><html lang="en-US" class="hx-motion"><head>
+<meta charset="UTF-8">
+<title>Luxury Caviar Skincare Made in Switzerland | Caviar of Switzerland</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preload" href="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/fonts/cormorant-garamond-300-italic-latin.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/fonts/cormorant-garamond-var-latin.woff2" as="font" type="font/woff2" crossorigin="">
+<script nonce="">
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied','wait_for_update':500});
+</script>
+	<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#F2F2EF">
+<link rel="alternate" type="application/rss+xml" title="Caviar Of Switzerland » Feed" href="http://caviarofswitzerland.local/feed/">
+<link rel="alternate" type="application/rss+xml" title="Caviar Of Switzerland » Comments Feed" href="http://caviarofswitzerland.local/comments/feed/">
+<link rel="preload" as="image" type="image/avif" fetchpriority="high" media="(min-width: 600px)" imagesrcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxh-wide-1440.avif?v=1792324023 1440w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxh-wide-1920.avif?v=1792324023 1920w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxh-wide-2560.avif?v=1792324023 2560w" imagesizes="(min-aspect-ratio: 237/100) 100vw, 237vh">
+<link rel="preload" as="image" type="image/avif" fetchpriority="high" media="(max-width: 599.98px)" imagesrcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-540.avif?v=1792324023 540w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-720.avif?v=1792324023 720w" imagesizes="(max-aspect-ratio: 518/1000) 51.8vh, 100vw">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="http://caviarofswitzerland.local/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fcaviarofswitzerland.local%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="http://caviarofswitzerland.local/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fcaviarofswitzerland.local%2F&amp;format=xml">
+<script nonce="">
+window.dataLayer=window.dataLayer||[];
+window.cos=window.cos||{};
+cos.track=function(event,params){window.dataLayer.push(Object.assign({event:event},params));};
+cos.cart=JSON.parse(localStorage.getItem('cos_cart')||'[]');
+cos.currency='EUR';
+cos.products={
+  'micellar-water-cleanser':{id:'COS-001',name:'Micellar Water Cleanser',price:55,step:1,category:'Cleanse'},
+  'advanced-repair-serum':{id:'COS-002',name:'Advanced Repair Serum',price:150,step:2,category:'Treat'},
+  'revitalizing-eye-cream':{id:'COS-003',name:'Revitalizing Eye Cream',price:145,step:3,category:'Eye'},
+  '24h-regeneration-cream':{id:'COS-004',name:'24h Regeneration Cream',price:150,step:4,category:'Moisturise'},
+  'the-complete-ritual':{id:'COS-BUNDLE',name:'The Complete Ritual',price:450,step:0,category:'Bundle'}
+};
+cos.addToCart=function(slug,qty,subscribe){
+  // Cosmetic "ritual completion" tracking only — NOT the analytics source.
+  // Real add_to_cart GA4 events fire server-side-confirmed, from the
+  // woocommerce_add_to_cart hook (see below), for both the AJAX fragment
+  // path and the plain-form-post pageload path.
+  qty=qty||1;
+  var p=cos.products[slug];if(!p)return;
+  var cart=JSON.parse(localStorage.getItem('cos_cart')||'[]');
+  var existing=cart.find(function(i){return i.id===p.id&&i.subscribe===(subscribe||false);});
+  if(existing){existing.qty+=qty;}else{cart.push({id:p.id,slug:slug,name:p.name,price:p.price,step:p.step,qty:qty,subscribe:subscribe||false});}
+  localStorage.setItem('cos_cart',JSON.stringify(cart));
+  cos.updateBagCount();
+  return cart;
+};
+cos.updateBagCount=function(){
+  // The visible bag count is the WooCommerce cart/session count — the only
+  // authoritative source. localStorage is never blended in, since a stale
+  // local copy could only ever inflate the badge and never self-correct.
+  var total = window.cosWooCount || 0;
+  document.querySelectorAll('.cos-bag-count').forEach(function(el){el.textContent=total>0?String(total):'';});
+  var cart=JSON.parse(localStorage.getItem('cos_cart')||'[]');
+  var hasBundle=cart.some(function(i){return i.id==='COS-BUNDLE';});
+  var steps=cart.filter(function(i){return i.step>0;}).map(function(i){return i.step;});
+  var completion=hasBundle?4:(new Set(steps)).size;
+  document.querySelectorAll('.cos-ritual-completion').forEach(function(el){el.textContent=completion+' of 4';});
+};
+document.addEventListener('DOMContentLoaded',cos.updateBagCount);
+// Server-confirmed add_to_cart for the AJAX path (shop grid "Add to Bag"
+// buttons): WooCommerce's own added_to_cart event fires after the AJAX
+// fragments response is applied; #cos-atc-data is one of those fragments,
+// populated with the real product/price WooCommerce just added — see
+// cos_child_track_add_to_cart_fragment() in PHP. Never the static map above.
+if (window.jQuery) {
+  jQuery(document.body).on('added_to_cart', function () {
+    try {
+      var el = document.getElementById('cos-atc-data');
+      var data = el && el.textContent ? JSON.parse(el.textContent) : null;
+      if (data && data.item_id) {
+        cos.track('add_to_cart', { currency: cos.currency, value: data.price * data.quantity,
+          items: [{ item_id: data.item_id, item_name: data.item_name, price: data.price, quantity: data.quantity, item_category: data.item_category }] });
+      }
+    } catch (e) {}
+  });
+}
+// Sitewide CTA tracking — a single delegated listener rather than one
+// inline handler per button, so every data-cro-cta-tagged element (home/shop
+// hero CTAs, PDP add-to-bag/sticky-bag/bundle-nudge/learn-ritual, cart
+// checkout/continue/returns, checkout place-order, and any future one) is
+// covered automatically just by adding the attribute — no JS change needed
+// per new CTA. Plain addEventListener, not jQuery, so this still works on
+// pages WooCommerce's own scripts aren't loaded on.
+document.addEventListener('click', function (event) {
+  var el = event.target.closest('[data-cro-cta]');
+  if (!el || !(window.cos && cos.track)) return;
+  cos.track('cta_click', {
+    cta_name: el.getAttribute('data-cro-cta'),
+    page: location.pathname,
+    destination: el.getAttribute('href') || null
+  });
+});
+</script>
+<script type="application/json" id="cos-atc-data">{}</script>
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="woocommerce-inline-inline-css">
+.woocommerce form .form-row .required { visibility: visible; }
+/*# sourceURL=woocommerce-inline-inline-css */
+</style>
+<link rel="stylesheet" id="cos-home-2026-css" href="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/css/home-2026.css?ver=1791917431" media="all">
+<link rel="stylesheet" id="cos-home-2026-nocturne-css" href="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/css/home-2026-nocturne.css?ver=1792349872" media="all">
+<link rel="stylesheet" id="cos-hx-system-css" href="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/css/home-staging/system.css?ver=1792349880" media="all">
+<link rel="stylesheet" id="cos-hx-hero-css" href="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/css/hx/hero.css?ver=1792349873" media="all">
+<link rel="stylesheet" id="cos-hx-collection-css" href="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/css/hx/collection.css?ver=1792349874" media="all">
+<link rel="stylesheet" id="cos-hx-caviar-css" href="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/css/hx/caviar.css?ver=1792349875" media="all">
+<link rel="stylesheet" id="cos-hx-science-css" href="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/css/hx/science.css?ver=1792349876" media="all">
+<link rel="stylesheet" id="cos-hx-provenance-css" href="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/css/hx/provenance.css?ver=1792349876" media="all">
+<link rel="stylesheet" id="cos-hx-ritual-css" href="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/css/hx/ritual.css?ver=1792349877" media="all">
+<link rel="stylesheet" id="cos-hx-closing-css" href="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/css/hx/closing.css?ver=1792349878" media="all">
+<style id="twentytwentyfive-style-inline-css">
+a{text-decoration-thickness:1px!important;text-underline-offset:.1em}:where(.wp-site-blocks :focus){outline-style:solid;outline-width:2px}.wp-block-navigation .wp-block-navigation-submenu .wp-block-navigation-item:not(:last-child){margin-bottom:3px}.wp-block-navigation .wp-block-navigation-item .wp-block-navigation-item__content{outline-offset:4px}.wp-block-navigation .wp-block-navigation-item ul.wp-block-navigation__submenu-container .wp-block-navigation-item__content{outline-offset:0}blockquote,caption,figcaption,h1,h2,h3,h4,h5,h6,p{text-wrap:pretty}.more-link{display:block}:where(pre){overflow-x:auto}
+/*# sourceURL=http://caviarofswitzerland.local/wp-content/themes/twentytwentyfive/style.min.css */
+</style>
+<link rel="stylesheet" id="cos-hx-chrome-css" href="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/css/home-staging/chrome.css?ver=1792349881" media="all">
+<style id="cos-child-style-inline" nonce="">
+
+/* Self-hosted fonts — latin subset, font-display: swap */
+/* One variable-font file (weights 300-600 in a single ~47KB WOFF2) replaces
+   the 4 static per-weight files (~48KB each, ~192KB combined) previously
+   loaded here. Sourced from Google Fonts' own CSS2 API (which serves the
+   official Inter variable font, SIL Open Font License 1.1 — see
+   assets/fonts/OFL-inter.txt), latin subset only, matching the coverage of
+   the static files it replaces. */
+@font-face{font-family:'Inter';font-style:normal;font-weight:300 600;font-display:swap;src:url('http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/fonts/inter-var-latin.woff2') format('woff2-variations'),url('http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/fonts/inter-var-latin.woff2') format('woff2')}
+@font-face{font-family:'Source Serif 4';font-style:normal;font-weight:300;font-display:swap;src:url('http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/fonts/source-serif4-300-latin.woff2') format('woff2')}
+@font-face{font-family:'Source Serif 4';font-style:normal;font-weight:400;font-display:swap;src:url('http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/fonts/source-serif4-400-latin.woff2') format('woff2')}
+@font-face{font-family:'Source Serif 4';font-style:italic;font-weight:300;font-display:swap;src:url('http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/fonts/source-serif4-300-italic-latin.woff2') format('woff2')}
+@font-face{font-family:'Source Serif 4';font-style:italic;font-weight:400;font-display:swap;src:url('http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/fonts/source-serif4-400-italic-latin.woff2') format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300;font-display:swap;src:url('http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/fonts/cormorant-garamond-300-italic-latin.woff2') format('woff2')}
+
+/* Browser reset — global-styles is dequeued for performance; apply body margin reset here. */
+body {
+	margin: 0;
+	padding: 0;
+	font-family: var(--cos-body, 'Inter', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif);
+	color: var(--cos-ink, #111111);
+	background: var(--cos-pearl, #F2F2EF);
+}
+
+button,
+input,
+select,
+textarea { font-family: inherit; }
+
+/* Journal collection hubs. Four hand-authored hub pages lost their original
+   style tags during content sanitisation, leaving this component as browser-
+   default text. Keep the component styling in the theme, where it belongs,
+   so every hub shares the same type, palette, and responsive grid. */
+.cos-jnl-hub {
+	font-family: var(--cos-body, 'Inter', sans-serif);
+	color: var(--cos-ink, #111111);
+}
+.cos-jnl-hub,
+.cos-jnl-hub * { box-sizing: border-box; }
+.cos-jnl-hub-intro {
+	background: var(--cos-navy, #050505);
+	color: #fff;
+	padding: calc(var(--cos-promo-h, 0px) + var(--cos-nav-h, 80px) + 56px) 24px 56px;
+}
+.cos-jnl-hub-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.cos-jnl-hub-back {
+	display: inline-flex; align-items: center; gap: 8px; margin-bottom: 24px;
+	font-size: 9px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase;
+	color: rgba(247,243,237,.7); text-decoration: none;
+}
+.cos-jnl-hub-back:hover { color: #fff; }
+.cos-jnl-hub-eyebrow {
+	display: flex; align-items: center; gap: 12px; margin-bottom: 16px;
+	font-size: 9px; font-weight: 600; letter-spacing: .3em; text-transform: uppercase;
+	color: var(--cos-gold-l, #B79A5B);
+}
+.cos-jnl-hub-eyebrow::before {
+	content: ''; display: inline-block; width: 24px; height: 1px; flex-shrink: 0;
+	background: var(--cos-gold-l, #B79A5B);
+}
+.cos-jnl-hub-h1 {
+	max-width: 720px; margin: 0 0 18px;
+	font-family: var(--cos-display, 'Cormorant Garamond', Georgia, serif);
+	font-style: italic; font-weight: 300; font-size: clamp(30px, 4.5vw, 52px); line-height: 1.1;
+}
+.cos-jnl-hub-dek {
+	max-width: 560px; margin: 0;
+	font-size: 14px; font-weight: 300; color: rgba(247,243,237,.78); line-height: 1.8;
+}
+.cos-jnl-hub-grid-wrap { background: var(--cos-pearl, #F2F2EF); padding: 56px 0 72px; }
+.cos-jnl-hub-grid {
+	display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2px;
+	width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px;
+}
+.cos-jnl-hub-card {
+	display: flex; flex-direction: column; min-width: 0;
+	background: #fff; color: inherit; text-decoration: none; transition: box-shadow .25s;
+}
+.cos-jnl-hub-card:hover { box-shadow: 0 12px 32px rgba(0,0,0,.07); }
+.cos-jnl-hub-card-img {
+	display: block; width: 100%; max-width: 100%; aspect-ratio: 4 / 3;
+	object-fit: cover; background: var(--cos-stone, #E5DED4);
+}
+.cos-jnl-hub-card-body { display: flex; flex: 1; flex-direction: column; gap: 10px; padding: 24px; }
+.cos-jnl-hub-card-title {
+	font-family: var(--cos-display, 'Cormorant Garamond', Georgia, serif);
+	font-style: italic; font-size: 18px; line-height: 1.3; color: var(--cos-ink, #111111);
+}
+.cos-jnl-hub-card-excerpt { flex: 1; font-size: 12px; font-weight: 300; line-height: 1.7; color: var(--cos-slate, #5C6675); }
+.cos-jnl-hub-card-meta { font-size: 10px; font-weight: 500; letter-spacing: .1em; color: var(--cos-slate, #5C6675); }
+.cos-jnl-hub-card-cta {
+	align-self: flex-start; margin-top: 4px; padding-bottom: 2px;
+	font-size: 9px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase;
+	color: var(--cos-ink, #111111); border-bottom: 1px solid currentColor;
+}
+.cos-jnl-hub-cta-band {
+	padding: 56px 24px; text-align: center;
+	background: #fff; border-top: 1px solid var(--cos-stone, #E5DED4);
+}
+.cos-jnl-hub-cta-band h2 {
+	margin: 0 0 20px;
+	font-family: var(--cos-display, 'Cormorant Garamond', Georgia, serif);
+	font-style: italic; font-weight: 300; font-size: clamp(20px, 2.2vw, 28px);
+	color: var(--cos-ink, #111111);
+}
+.cos-jnl-hub-cta-link {
+	display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 36px;
+	background: var(--cos-navy, #050505); color: #fff; text-decoration: none;
+	font-size: 10px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase;
+}
+.cos-jnl-hub-cta-link:hover { background: var(--cos-ink, #111111); }
+@media (max-width: 1023px) {
+	.cos-jnl-hub-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 767px) {
+	.cos-jnl-hub-intro { padding-right: 20px; padding-left: 20px; }
+	.cos-jnl-hub-inner { padding: 0; }
+	.cos-jnl-hub-grid { padding: 0 20px; }
+}
+
+/* Tighten the spacing between the basket and profile icons in the top nav. */
+body.home #cos-home-v3 nav .flex-1.flex.justify-end.items-center.gap-4.md\:gap-6 {
+	gap: 4px !important;
+}
+
+/* ── Block-theme wrapper resets for raw-HTML pages ─────────────── */
+/* twentytwentyfive injects padding into .wp-block-group and .wp-block-post-content
+   which breaks full-bleed section backgrounds on our custom pages. */
+body.page #cos-main-content.wp-block-group,
+body.page .wp-block-post-content,
+body.page .entry-content {
+	padding: 0 !important;
+	margin: 0 !important;
+	max-width: none !important;
+}
+
+/* ── WooCommerce Cart & Checkout — COS styling ─────────────────── */
+.woocommerce,
+.woocommerce-page {
+	font-family: var(--cos-body, 'Inter', sans-serif);
+	color: var(--cos-ink, #111111);
+	background: var(--cos-pearl, #F2F2EF);
+}
+
+/* page wrapper */
+.woocommerce .woocommerce-notices-wrapper,
+.woocommerce-page .woocommerce-notices-wrapper { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+/* hide default WC breadcrumb */
+.woocommerce .woocommerce-breadcrumb { display: none; }
+
+/* tables */
+.woocommerce table.shop_table {
+	width: 100%; border-collapse: collapse;
+	font-size: 13px; font-weight: 300;
+	border: 1px solid var(--cos-stone, #E5DED4);
+}
+.woocommerce table.shop_table th {
+	font-size: 9px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase;
+	color: var(--cos-slate, #5C6675); padding: 14px 16px;
+	border-bottom: 1px solid var(--cos-stone); background: #fff;
+}
+.woocommerce table.shop_table td { padding: 18px 16px; border-bottom: 1px solid var(--cos-stone); vertical-align: middle; }
+.woocommerce table.shop_table .product-name { font-weight: 400; }
+.woocommerce table.shop_table .product-price,
+.woocommerce table.shop_table .product-subtotal { font-variant-numeric: lining-nums tabular-nums; }
+
+/* quantity input */
+.woocommerce .quantity input.qty {
+	width: 60px; height: 38px; text-align: center;
+	border: 1px solid var(--cos-stone); background: #fff;
+	font-size: 14px; font-weight: 300; font-family: inherit; outline: none; border-radius: 0;
+}
+
+/* buttons */
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce #respond input#submit {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 44px;
+	box-sizing: border-box;
+	padding: 13px 28px;
+	background: var(--cos-navy, #050505);
+	color: #fff !important;
+	font-family: var(--cos-body); font-size: 9px; font-weight: 600;
+	letter-spacing: .18em; text-transform: uppercase; text-decoration: none;
+	border: none; cursor: pointer; border-radius: 0; transition: background .2s;
+}
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce input.button:hover,
+.woocommerce #respond input#submit:hover { background: var(--cos-ink, #111111); }
+
+.woocommerce a.button.alt,
+.woocommerce button.button.alt { background: var(--cos-navy); }
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover { background: var(--cos-ink); }
+
+/* coupon / remove links */
+.woocommerce a.remove { color: var(--cos-slate) !important; font-size: 18px; font-weight: 300; text-decoration: none; transition: color .2s; }
+.woocommerce a.remove:hover { color: var(--cos-error, #A13B3B) !important; background: none; }
+
+/* order totals */
+.woocommerce .cart_totals,
+.woocommerce-page .cart_totals { background: #fff; padding: 32px; border: 1px solid var(--cos-stone); }
+.woocommerce .cart_totals h2,
+.woocommerce-checkout h3 {
+	font-family: var(--cos-display, Georgia, serif); font-style: italic; font-weight: 300;
+	font-size: 22px; color: var(--cos-ink); margin-bottom: 20px;
+}
+.woocommerce .cart_totals table th,
+.woocommerce .cart_totals table td { padding: 12px 0; border-bottom: 1px solid var(--cos-stone); font-size: 13px; font-weight: 300; }
+
+/* form fields */
+.woocommerce form .form-row label { font-size: 10px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--cos-slate); margin-bottom: 6px; display: block; }
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea,
+.woocommerce form .form-row select {
+	width: 100%; min-height: 44px; padding: 12px 14px; box-sizing: border-box;
+	border: 1px solid var(--cos-stone, #E5DED4); border-radius: 0; background: #fff;
+	font-family: inherit; font-size: 13px; font-weight: 300; color: var(--cos-ink); outline: none;
+	transition: border-color .2s;
+}
+
+/* Native checkbox/radio controls default to ~13-16px — below the 24x24
+   CSS-pixel WCAG 2.5.8 minimum tap target — across every WooCommerce form
+   (checkout terms, alternate shipping, payment methods, "create account"
+   toggle, my-account edit-address forms, etc). */
+.woocommerce form input[type="checkbox"],
+.woocommerce form input[type="radio"] {
+	width: 24px; height: 24px; flex-shrink: 0;
+	accent-color: var(--cos-navy, #050505); cursor: pointer;
+}
+.woocommerce form .form-row input.input-text:focus,
+.woocommerce form .form-row textarea:focus,
+.woocommerce form .form-row select:focus { border-color: var(--cos-navy); }
+
+/* checkout layout */
+.woocommerce-checkout #customer_details,
+.woocommerce-checkout #order_review_heading,
+.woocommerce-checkout #order_review { max-width: 1000px; }
+.woocommerce-checkout .woocommerce { max-width: 1100px; margin: 0 auto; padding: 48px 24px; }
+
+/* cart page layout */
+.woocommerce-cart .woocommerce { max-width: 1100px; margin: 0 auto; padding: 48px 24px; }
+
+/* notices */
+.woocommerce-message,
+.woocommerce-info,
+.woocommerce-error {
+	padding: 14px 20px; margin-bottom: 20px; border-left: 3px solid var(--cos-navy);
+	background: #fff; font-size: 13px; font-weight: 300; color: var(--cos-ink);
+	list-style: none;
+}
+.woocommerce-message { border-color: var(--cos-teal, #46656B); }
+.woocommerce-error  { border-color: var(--cos-error, #A13B3B); }
+
+/* cart/checkout page top spacer */
+.woocommerce-cart .woocommerce,
+.woocommerce-checkout .woocommerce { margin-top: var(--cos-nav-h, 80px); }
+
+/* product images in cart */
+.woocommerce td.product-thumbnail img { width: 60px; height: 60px; object-fit: contain; }
+
+/* Hide "View cart" link injected by WooCommerce AJAX add-to-cart */
+a.added_to_cart { display: none !important; }
+
+/* Remove focus outline on shop product image links */
+.cos-sv3-card-img-link:focus,
+.cos-sv3-card-img-link:focus-visible,
+.cos-sv3-card-img-link:active { outline: none; }
+
+@media (max-width: 767px) {
+	.woocommerce-cart .woocommerce,
+	.woocommerce-checkout .woocommerce { padding: 24px 16px; }
+}
+</style>
+<link rel="https://api.w.org/" href="http://caviarofswitzerland.local/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="http://caviarofswitzerland.local/wp-json/wp/v2/pages/23793"><link rel="canonical" href="http://caviarofswitzerland.local/">
+<link rel="shortlink" href="http://caviarofswitzerland.local/">
+<meta property="og:site_name" content="Caviar of Switzerland">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:url" content="http://caviarofswitzerland.local/">
+<meta property="og:title" content="Luxury Caviar Skincare Made in Switzerland | Caviar of Switzerland">
+<meta property="og:description" content="Discover four caviar skincare formulas, developed and made in Switzerland. Explore your daily essentials or shop the Complete Ritual.">
+<meta property="og:image" content="http://caviarofswitzerland.local/wp-content/uploads/2026/04/DSC_3849b-1365x2048.jpg">
+<meta name="description" content="Discover four caviar skincare formulas, developed and made in Switzerland. Explore your daily essentials or shop the Complete Ritual.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Luxury Caviar Skincare Made in Switzerland | Caviar of Switzerland">
+<meta name="twitter:description" content="Discover four caviar skincare formulas, developed and made in Switzerland. Explore your daily essentials or shop the Complete Ritual.">
+<meta name="twitter:image" content="http://caviarofswitzerland.local/wp-content/uploads/2026/04/DSC_3849b-1365x2048.jpg">
+	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<style id="cos-global" nonce="">
+:root{--cos-ink:#111111!important;--cos-navy:#050505!important;--cos-pearl:#F2F2EF!important;--cos-gallery-bg:#E8E8E5!important;--cos-stone:#E5DED4!important;--cos-silver:#C4CAD1!important;--cos-slate:#5C6675!important;--cos-gold:#8B692F!important;--cos-gold-l:#B79A5B!important;--cos-teal:#46656B!important;--cos-focus:#2F6FED!important;--cos-success:#2D6A57!important;--cos-warning:#A56712!important;--cos-error:#A13B3B!important;--cos-display:'Cormorant Garamond','EB Garamond','Source Serif 4',Georgia,serif!important;--cos-body:'Inter',system-ui,-apple-system,'Segoe UI',Arial,sans-serif!important;--cos-nav-h:80px;--cos-black:#111111!important;--cos-mid:#5C6675!important;--cos-light:#E5DED4!important;--cos-red:#050505!important;--cos-promo-h:0px}
+/* The off-canvas mobile menu (#cos-mob-menu) is a fixed, inset:0 panel moved
+   off-screen with translateX — mobile browsers still count its full-width
+   layout box toward the page's scrollable area, producing a phantom
+   horizontal scrollbar even though nothing is visibly clipped. */
+html,body{overflow-x:hidden;max-width:100%}
+.cos-spot-price,.cos-step-price,.cos-stat-big,.cos-spot-price *,.cos-step-price *{font-variant-numeric:lining-nums tabular-nums}
+/* Header, mobile menu and footer styles: assets/css/home-staging/chrome.css (homepage
+   only, enqueued by inc/hx-system.php). Only page-level bits stay inline here. */
+/* Page top spacer (non-hero pages) */
+.cos-page-top{height:var(--cos-nav-h)}
+/* Hide old nav wrappers from legacy page designs */
+.cos-ritual-nav,.cos-shop-nav,.cos-journal-nav,.cos-about-nav,.cos-contact-nav,
+#cos-ritual .nav,#cos-shop .nav,#cos-journal .nav,#cos-about .nav,#cos-contact .nav,
+#cos-ritual .nav-spacer,#cos-shop .nav-spacer,#cos-journal .nav-spacer,#cos-about .nav-spacer{display:none!important}
+.cos-stat-fn{color:var(--cos-slate,#5C6675)!important}
+#crv3 .crv3-stat-label{color:var(--cos-silver,#C4CAD1)!important}
+#cos-main-content{scroll-margin-top:calc(var(--cos-nav-h,80px) + 8px)}
+@media(max-width:600px){
+  #crv3 .crv3-reveal{transform:translateY(24px)!important}
+  #crv3 .crv3-reveal.is-visible{transform:none!important}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+}
+</style>
+<style class="wp-fonts-local">
+@font-face{font-family:Manrope;font-style:normal;font-weight:200 800;font-display:fallback;src:url('http://caviarofswitzerland.local/wp-content/themes/twentytwentyfive/assets/fonts/manrope/Manrope-VariableFont_wght.woff2') format('woff2');}
+@font-face{font-family:"Fira Code";font-style:normal;font-weight:300 700;font-display:fallback;src:url('http://caviarofswitzerland.local/wp-content/themes/twentytwentyfive/assets/fonts/fira-code/FiraCode-VariableFont_wght.woff2') format('woff2');}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"http://caviarofswitzerland.local/#organization","name":"Caviar of Switzerland","url":"http://caviarofswitzerland.local/","logo":"http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/logo.png","address":{"@type":"PostalAddress","streetAddress":"Chamerstrasse 115","addressLocality":"Zug","postalCode":"6300","addressCountry":"CH"},"sameAs":["https://www.instagram.com/caviarofswitzerland/","https://www.facebook.com/caviarofswitzerland/","https://www.youtube.com/@caviarofswitzerland"]},{"@type":"WebSite","@id":"http://caviarofswitzerland.local/#website","name":"Caviar of Switzerland","url":"http://caviarofswitzerland.local/","publisher":{"@id":"http://caviarofswitzerland.local/#organization"}}]}</script>
+<link rel="icon" href="http://caviarofswitzerland.local/wp-content/uploads/2026/05/favicon.ico" sizes="32x32">
+<link rel="icon" href="http://caviarofswitzerland.local/wp-content/uploads/2026/05/favicon.ico" sizes="192x192">
+<link rel="apple-touch-icon" href="http://caviarofswitzerland.local/wp-content/uploads/2026/05/favicon.ico">
+<meta name="msapplication-TileImage" content="http://caviarofswitzerland.local/wp-content/uploads/2026/05/favicon.ico">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"http://caviarofswitzerland.local/"},{"@type":"ListItem","position":2,"name":"Home (2026 editorial)"}]}]}</script>
+</head>
+<body class="home wp-singular page-template-default page page-id-23793 wp-embed-responsive wp-theme-twentytwentyfive wp-child-theme-cos-child theme-twentytwentyfive woocommerce-uses-block-theme woocommerce-block-theme-has-button-styles woocommerce-js cos-h26 cos-h26-nocturne">
+<a class="cos-skip-link screen-reader-text" tabindex="0" href="#cos-main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;background:var(--cos-navy,#050505);color:var(--cos-pearl,#F2F2EF);padding:12px 20px;font-family:sans-serif;font-size:15px;font-weight:600;text-decoration:none">
+Skip to main content
+</a>
+<style nonce="">
+.cos-skip-link:focus{left:8px!important;top:8px!important;width:auto!important;height:auto!important;min-height:44px;box-sizing:border-box;overflow:visible!important}
+:focus-visible{outline:2px solid #2F6FED;outline-offset:2px;box-shadow:0 0 0 2px #F2F2EF}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid #2F6FED;outline-offset:2px;box-shadow:0 0 0 2px #F2F2EF}
+</style>
+<header id="cos-nav-wrap" class="hxn" role="banner">
+  <nav id="cos-nav" aria-label="Primary navigation">
+        <button type="button" class="cos-mob-btn" id="cos-mob-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="cos-mob-menu">
+      <span id="cos-h1"></span><span id="cos-h2"></span><span id="cos-h3"></span>
+    </button>
+    <div class="cos-nav-links">
+            <a href="/" aria-current="page">Home</a>
+            <a href="/shop/">Shop</a>
+            <a href="/the-ritual/">The Ritual</a>
+            <a href="/science/">Swiss Science</a>
+            <a href="/heritage/">Swiss Heritage</a>
+          </div>
+    <div class="cos-nav-logo">
+      <a href="/" aria-label="Caviar of Switzerland — Home">
+                <img class="hxn-logo" src="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/logo-graphite.svg?v=1792246322" alt="Caviar of Switzerland" width="128" height="40" fetchpriority="high" loading="eager" decoding="sync">
+      </a>
+    </div>
+    <div class="cos-nav-utils">
+      <a href="/help/" aria-label="Help" class="cos-nav-help"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 17v.5"></path><path d="M12 13.5a2.5 2.5 0 1 0-2.5-2.5"></path></svg></a>
+      <a href="/account/" aria-label="Account" class="cos-nav-account"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.25"></circle><path d="M5.5 18.5a6.5 6.5 0 0 1 13 0"></path></svg></a>
+      <a href="/cart/" aria-label="Bag" class="cos-bag-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12l-1 11H7L6 8Z"></path><path d="M9 8a3 3 0 1 1 6 0"></path></svg><span class="cos-bag-count" aria-live="polite"></span></a>
+    </div>
+  </nav>
+</header>
+<div id="cos-mob-menu" class="hxn-sheet" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <div class="hxn-menu">
+    <nav class="hxn-menu__primary" aria-label="Menu">
+            <a class="hxn-menu__link" style="--hxn-i:0" href="/" aria-current="page" tabindex="-1">Home<span class="hx-arrow" aria-hidden="true"></span></a>
+            <a class="hxn-menu__link" style="--hxn-i:1" href="/shop/" tabindex="-1">Shop<span class="hx-arrow" aria-hidden="true"></span></a>
+            <a class="hxn-menu__link" style="--hxn-i:2" href="/the-ritual/" tabindex="-1">The Ritual<span class="hx-arrow" aria-hidden="true"></span></a>
+            <a class="hxn-menu__link" style="--hxn-i:3" href="/science/" tabindex="-1">Swiss Science<span class="hx-arrow" aria-hidden="true"></span></a>
+            <a class="hxn-menu__link" style="--hxn-i:4" href="/heritage/" tabindex="-1">Swiss Heritage<span class="hx-arrow" aria-hidden="true"></span></a>
+          </nav>
+    <nav class="hxn-menu__secondary" style="--hxn-i:5" aria-label="Customer service">
+      <a class="hxn-menu__small" href="/help/" tabindex="-1">Help</a>
+      <a class="hxn-menu__small" href="/account/" tabindex="-1">Account</a>
+      <a class="hxn-menu__small" href="/contact/" tabindex="-1">Contact</a>
+    </nav>
+    <ul class="hxn-menu__assure" role="list" style="--hxn-i:6">
+      <li>Free worldwide shipping</li>
+      <li>30-day returns</li>
+    </ul>
+    <div class="hxn-menu__foot" style="--hxn-i:7"><span class="hxn-cross" aria-hidden="true"></span><p>Caviar of Switzerland · Zug</p></div>
+  </div>
+</div>
+<main id="cos-main-content" class="h26 h26-motion">
+<section class="hxh h26-hero--pearl" aria-labelledby="hxh-title">
+	<div class="hxh__media">
+		<div class="hxh__drift" data-hx-drift="0.07" style="--hx-dy: 0.00px;">
+			<picture class="hxh__picture"><source media="(min-width: 600px)" type="image/avif" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxh-wide-1440.avif?v=1792324023 1440w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxh-wide-1920.avif?v=1792324023 1920w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxh-wide-2560.avif?v=1792324023 2560w" sizes="(min-aspect-ratio: 237/100) 100vw, 237vh"><source media="(min-width: 600px)" type="image/webp" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxh-wide-1440.webp?v=1792324023 1440w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxh-wide-1920.webp?v=1792324023 1920w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxh-wide-2560.webp?v=1792324023 2560w" sizes="(min-aspect-ratio: 237/100) 100vw, 237vh"><source media="(min-width: 600px)" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxh-wide-1440.jpg?v=1792324023 1440w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxh-wide-1920.jpg?v=1792324023 1920w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxh-wide-2560.jpg?v=1792324023 2560w" sizes="(min-aspect-ratio: 237/100) 100vw, 237vh"><source type="image/avif" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-540.avif?v=1792324023 540w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-720.avif?v=1792324023 720w" sizes="(max-aspect-ratio: 518/1000) 51.8vh, 100vw"><source type="image/webp" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-540.webp?v=1792324023 540w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-720.webp?v=1792324023 720w" sizes="(max-aspect-ratio: 518/1000) 51.8vh, 100vw"><img src="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-540.jpg?v=1792324023" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-540.jpg?v=1792324023 540w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-720.jpg?v=1792324023 720w" sizes="(max-aspect-ratio: 518/1000) 51.8vh, 100vw" width="720" height="1391" alt="The 24h Regeneration Cream, open and filled with white cream, its polished chrome lid with the Swiss cross resting against the jar, reflected on a pale champagne silk surface" loading="eager" fetchpriority="high" decoding="async"></picture>		</div>
+		<span class="hxh__veil" aria-hidden="true"></span>
+	</div>
+
+	<div class="hxh__inner">
+		<div class="hxh__copy">
+			<h1 id="hxh-title" class="hxh__title hx-display">
+				<span class="hxh__line hx-load-rise" style="--hx-i:3">The Swiss art of</span>
+				<span class="hxh__line hx-load-rise" style="--hx-i:4"><em>caviar skincare</em></span>
+			</h1>
+			<p class="hxh__lead hx-load-rise" style="--hx-i:6">Four caviar formulas. One complete&nbsp;ritual.</p>
+						<p class="hxh__credit hx-load-rise" style="--hx-i:7">Made&nbsp;in&nbsp;Zug<span class="hxh__sep">&nbsp;· </span>Instrument‑measured&nbsp;results</p>
+		</div>
+		<div class="hxh__action hx-load-rise" style="--hx-i:8">
+			<a class="hx-btn hxh__cta" href="http://caviarofswitzerland.local/products/the-complete-ritual/" data-cro-cta="home-hero-primary">Shop the Complete Ritual<span class="hx-arrow" aria-hidden="true"></span></a>
+		</div>
+	</div>
+</section>
+
+<section id="collection" class="hxc" aria-labelledby="hxc-title">
+	<div class="hx-wrap">
+		<header class="hxc__head">
+			<h2 id="hxc-title" class="hx-heading hxc__title" data-hx-reveal="">The Collection</h2>
+			<p class="hx-lead hxc__lede" data-hx-reveal="" data-hx-delay="160" style="--hx-delay: 160ms;">Cleanse, treat, revive, restore. Four formulas in white and polished silver, each made for one precise step.</p>
+		</header>
+
+		<ol class="hxc__list" data-hx-stagger="">
+						<li class="hxc__item" data-hx-reveal="" style="--hx-i: 0;">
+				<a class="hxc__link" href="http://caviarofswitzerland.local/products/micellar-water-cleanser/">
+					<span class="hxc__stage">
+						<picture class="hxc__object"><source type="image/avif" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-480.avif?v=1792134859 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-720.avif?v=1792134860 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-960.avif?v=1792134869 960w" sizes="(min-width: 1100px) min(24vw, 360px), (min-width: 640px) 300px, 46vw"><source type="image/webp" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-480.webp?v=1792134859 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-720.webp?v=1792134865 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-960.webp?v=1792134874 960w" sizes="(min-width: 1100px) min(24vw, 360px), (min-width: 640px) 300px, 46vw"><img src="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-720.jpg?v=1792134865" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-480.jpg?v=1792134859 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-720.jpg?v=1792134865 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-960.jpg?v=1792134874 960w" sizes="(min-width: 1100px) min(24vw, 360px), (min-width: 640px) 300px, 46vw" width="720" height="1080" alt="Micellar Water All-in-One Cleanser bottle with a polished silver cap" loading="lazy" decoding="async"></picture>					</span>
+					<span class="hxc__step"><span class="hxc__num">01</span><span class="hxc__verb">Cleanse</span></span>
+					<h3 class="hxc__name"><span>Micellar Water</span> <span>All‑in‑One Cleanser</span></h3>
+					<span class="hxc__benefit">Removes make‑up &amp; replenishes lipids</span>
+					<span class="hxc__meta">
+						<span class="hxc__price">€55</span><span class="hxc__dot" aria-hidden="true"></span><span class="hx-sr">, </span>						<span class="hxc__size">150 ml</span>
+					</span>
+					<span class="hxc__cta" aria-hidden="true">Discover<span class="hx-arrow"></span></span>
+				</a>
+			</li>
+						<li class="hxc__item" data-hx-reveal="" style="--hx-i: 1;">
+				<a class="hxc__link" href="http://caviarofswitzerland.local/products/advanced-repair-serum/">
+					<span class="hxc__stage">
+						<picture class="hxc__object"><source type="image/avif" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-480.avif?v=1792134877 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-720.avif?v=1792134882 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-960.avif?v=1792134889 960w" sizes="(min-width: 1100px) min(24vw, 360px), (min-width: 640px) 300px, 46vw"><source type="image/webp" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-480.webp?v=1792134878 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-720.webp?v=1792134884 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-960.webp?v=1792134896 960w" sizes="(min-width: 1100px) min(24vw, 360px), (min-width: 640px) 300px, 46vw"><img src="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-720.jpg?v=1792134884" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-480.jpg?v=1792134878 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-720.jpg?v=1792134884 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-960.jpg?v=1792134896 960w" sizes="(min-width: 1100px) min(24vw, 360px), (min-width: 640px) 300px, 46vw" width="720" height="1080" alt="Advanced Repair Serum bottle with polished silver caps" loading="lazy" decoding="async"></picture>					</span>
+					<span class="hxc__step"><span class="hxc__num">02</span><span class="hxc__verb">Treat</span></span>
+					<h3 class="hxc__name"><span>Advanced Repair</span> <span>Serum</span></h3>
+					<span class="hxc__benefit">Visibly firms &amp; smooths</span>
+					<span class="hxc__meta">
+						<span class="hxc__price">€150</span><span class="hxc__dot" aria-hidden="true"></span><span class="hx-sr">, </span>						<span class="hxc__size">30 ml</span>
+					</span>
+					<span class="hxc__cta" aria-hidden="true">Discover<span class="hx-arrow"></span></span>
+				</a>
+			</li>
+						<li class="hxc__item" data-hx-reveal="" style="--hx-i: 2;">
+				<a class="hxc__link" href="http://caviarofswitzerland.local/products/revitalizing-eye-cream/">
+					<span class="hxc__stage">
+						<picture class="hxc__object"><source type="image/avif" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-480.avif?v=1792134907 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-720.avif?v=1792134913 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-960.avif?v=1792134940 960w" sizes="(min-width: 1100px) min(24vw, 360px), (min-width: 640px) 300px, 46vw"><source type="image/webp" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-480.webp?v=1792134909 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-720.webp?v=1792134918 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-960.webp?v=1792134943 960w" sizes="(min-width: 1100px) min(24vw, 360px), (min-width: 640px) 300px, 46vw"><img src="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-720.jpg?v=1792134920" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-480.jpg?v=1792134909 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-720.jpg?v=1792134920 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-960.jpg?v=1792134944 960w" sizes="(min-width: 1100px) min(24vw, 360px), (min-width: 640px) 300px, 46vw" width="720" height="1080" alt="Revitalizing Eye Cream bottle with polished silver caps" loading="lazy" decoding="async"></picture>					</span>
+					<span class="hxc__step"><span class="hxc__num">03</span><span class="hxc__verb">Revive</span></span>
+					<h3 class="hxc__name"><span>Revitalizing</span> <span>Eye Cream</span></h3>
+					<span class="hxc__benefit">Softens the look of dark circles &amp; fine lines</span>
+					<span class="hxc__meta">
+						<span class="hxc__price">€145</span><span class="hxc__dot" aria-hidden="true"></span><span class="hx-sr">, </span>						<span class="hxc__size">15 ml</span>
+					</span>
+					<span class="hxc__cta" aria-hidden="true">Discover<span class="hx-arrow"></span></span>
+				</a>
+			</li>
+						<li class="hxc__item" data-hx-reveal="" style="--hx-i: 3;">
+				<a class="hxc__link" href="http://caviarofswitzerland.local/products/24h-regeneration-cream/">
+					<span class="hxc__stage">
+						<picture class="hxc__object"><source type="image/avif" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-480.avif?v=1792134949 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-720.avif?v=1792134956 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-960.avif?v=1792134967 960w" sizes="(min-width: 1100px) min(24vw, 360px), (min-width: 640px) 300px, 46vw"><source type="image/webp" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-480.webp?v=1792134952 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-720.webp?v=1792134962 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-960.webp?v=1792134972 960w" sizes="(min-width: 1100px) min(24vw, 360px), (min-width: 640px) 300px, 46vw"><img src="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-720.jpg?v=1792134962" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-480.jpg?v=1792134952 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-720.jpg?v=1792134962 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-960.jpg?v=1792134972 960w" sizes="(min-width: 1100px) min(24vw, 360px), (min-width: 640px) 300px, 46vw" width="720" height="1080" alt="24h Regeneration Cream jar with a polished silver lid" loading="lazy" decoding="async"></picture>					</span>
+					<span class="hxc__step"><span class="hxc__num">04</span><span class="hxc__verb">Restore</span></span>
+					<h3 class="hxc__name"><span>24h Regeneration</span> <span>Cream</span></h3>
+					<span class="hxc__benefit">Lasting hydration &amp; barrier support</span>
+					<span class="hxc__meta">
+						<span class="hxc__price">€150</span><span class="hxc__dot" aria-hidden="true"></span><span class="hx-sr">, </span>						<span class="hxc__size">50 ml</span>
+					</span>
+					<span class="hxc__cta" aria-hidden="true">Discover<span class="hx-arrow"></span></span>
+				</a>
+			</li>
+					</ol>
+	</div>
+</section>
+
+<section id="caviar" class="hxv" aria-labelledby="hxv-title">
+	<div class="hxv__plate">
+		<header class="hxv__head">
+			<p class="hx-label hxv__label" data-hx-reveal="fade">The signature ingredient</p>
+			<h2 id="hxv-title" class="hx-heading hxv__title" data-hx-reveal="">Caviar in every formula</h2>
+			<p class="hxv__species" data-hx-reveal="" style="--hx-i:1">Siberian sturgeon, <em lang="la">Acipenser baerii</em></p>
+		</header>
+		<div class="hxv__photo hx-frame" data-hx-reveal="settle">
+			<picture><source media="(max-width: 699.98px)" type="image/avif" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-640.avif?v=1792134972 640w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-960.avif?v=1792134978 960w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-1280.avif?v=1792134986 1280w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-1600.avif?v=1792134999 1600w" sizes="100vw"><source media="(max-width: 699.98px)" type="image/webp" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-640.webp?v=1792134973 640w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-960.webp?v=1792134978 960w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-1280.webp?v=1792134988 1280w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-1600.webp?v=1792135000 1600w" sizes="100vw"><source media="(max-width: 699.98px)" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-640.jpg?v=1792134973 640w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-960.jpg?v=1792134978 960w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-1280.jpg?v=1792134988 1280w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-1600.jpg?v=1792135000 1600w" sizes="100vw"><source type="image/avif" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-1440.avif?v=1792134888 1440w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-2048.avif?v=1792134895 2048w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-2880.avif?v=1792134912 2880w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-4000.avif?v=1792134955 4000w" sizes="(min-width: 1000px) 116vw, 100vw"><source type="image/webp" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-1440.webp?v=1792134889 1440w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-2048.webp?v=1792134896 2048w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-2880.webp?v=1792134916 2880w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-4000.webp?v=1792134968 4000w" sizes="(min-width: 1000px) 116vw, 100vw"><img src="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-2048.jpg?v=1792134896" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-1440.jpg?v=1792134889 1440w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-2048.jpg?v=1792134896 2048w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-2880.jpg?v=1792134917 2880w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-4000.jpg?v=1792134968 4000w" sizes="(min-width: 1000px) 116vw, 100vw" width="2048" height="1024" alt="Glossy black caviar pearls heaped on a pale, reflective surface, a few rolling loose into the light" loading="lazy" decoding="async"></picture>		</div>
+	</div>
+
+	<div class="hxv__notes" data-hx-stagger="">
+		<p class="hxv__statement" data-hx-reveal="" style="--hx-i: 0;">Rich in the lipids, amino acids and minerals skin relies&nbsp;on.</p>
+		<dl class="hxv__facts">
+			<div class="hxv__fact" data-hx-reveal="" style="--hx-i: 1;">
+				<dt class="hxv__k">Origin</dt>
+				<dd class="hxv__v">Sustainably farmed, fully traceable, never wild‑harvested.</dd>
+			</div>
+			<div class="hxv__fact" data-hx-reveal="" style="--hx-i: 2;">
+				<dt class="hxv__k">Formulation</dt>
+				<dd class="hxv__v">Micro‑encapsulated, so the extract keeps its potency and is released over time.</dd>
+			</div>
+		</dl>
+		<p class="hxv__more" data-hx-reveal="" style="--hx-i: 3;"><a class="hx-link" href="http://caviarofswitzerland.local/science/why-caviar/">Why caviar<span class="hx-arrow" aria-hidden="true"></span></a></p>
+	</div>
+</section>
+
+<section id="evidence" class="hxs" aria-labelledby="hxs-title">
+	<div class="hxs__wrap hx-wrap">
+		<p class="hx-label hxs__label" data-hx-reveal="fade">Swiss science</p>
+		<h2 id="hxs-title" class="hx-sr">Protect. Repair. Rejuvenate.</h2>
+
+		<div class="hxs__scale" data-hx-reveal="mask-x" aria-hidden="true"><span></span><span></span><span></span></div>
+		<ol class="hxs__pillars" role="list" data-hx-stagger="">
+						<li class="hxs__pillar" data-hx-reveal="" style="--hx-i: 0;">
+				<h3 class="hx-heading hxs__verb">Protect.</h3>
+				<p class="hx-body hxs__text">Micro‑encapsulated caviar keeps its potency, while two antioxidants help defend skin against daily environmental stress.</p>
+				<p class="hx-detail hxs__actives"><span class="hx-sr">Key actives: </span><span class="hxs__active">Caviar extract<span aria-hidden="true"> ·</span><span class="hx-sr">,</span></span> <span class="hxs__active">Superoxide Dismutase<span aria-hidden="true"> ·</span><span class="hx-sr">,</span></span> <span class="hxs__active">Resveratrol</span></p>
+			</li>
+						<li class="hxs__pillar" data-hx-reveal="" style="--hx-i: 1;">
+				<h3 class="hx-heading hxs__verb">Repair.</h3>
+				<p class="hx-body hxs__text">Caviar lipids, close to the skin’s own, help replenish its barrier as hyaluronic acid holds moisture at three depths.</p>
+				<p class="hx-detail hxs__actives"><span class="hx-sr">Key actives: </span><span class="hxs__active">Caviar phospholipids<span aria-hidden="true"> ·</span><span class="hx-sr">,</span></span> <span class="hxs__active">Hyaluronic acid</span></p>
+			</li>
+						<li class="hxs__pillar" data-hx-reveal="" style="--hx-i: 2;">
+				<h3 class="hx-heading hxs__verb">Rejuvenate.</h3>
+				<p class="hx-body hxs__text">A peptide studied in collagen research joins caviar extract, for skin that looks firmer and smoother.</p>
+				<p class="hx-detail hxs__actives"><span class="hx-sr">Key actives: </span><span class="hxs__active">SYN®‑COLL peptide<span aria-hidden="true"> ·</span><span class="hx-sr">,</span></span> <span class="hxs__active">Caviar extract</span></p>
+			</li>
+					</ol>
+
+		<div class="hxs__proof">
+			<div class="hxs__proof-head" data-hx-reveal="">
+				<h3 class="hxs__proof-title">Measured, formula by formula.</h3>
+				<p class="hx-detail hxs__proof-note">Separate 28‑day studies, each of a single formula, by an independent contract research organisation.</p>
+			</div>
+			<div class="hxs__proof-body">
+				<ul class="hxs__results" role="list" data-hx-stagger="">
+										<li class="hxs__result" data-hx-reveal="" style="--hx-i: 0;">
+												<picture class="hxs__object"><source type="image/avif" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-480.avif?v=1792134877 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-720.avif?v=1792134882 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-960.avif?v=1792134889 960w" sizes="(min-width: 1100px) 160px, 112px"><source type="image/webp" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-480.webp?v=1792134878 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-720.webp?v=1792134884 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-960.webp?v=1792134896 960w" sizes="(min-width: 1100px) 160px, 112px"><img src="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-720.jpg?v=1792134884" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-480.jpg?v=1792134878 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-720.jpg?v=1792134884 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-960.jpg?v=1792134896 960w" sizes="(min-width: 1100px) 160px, 112px" width="480" height="720" alt="" loading="lazy" decoding="async"></picture>						<p class="hxs__product">Advanced Repair Serum</p>
+						<p class="hx-numeral hxs__fig-n">+47<span class="hxs__pct">%</span></p>
+						<p class="hxs__finding">Skin firmness</p>
+						<p class="hx-detail hxs__method"><span class="hxs__kind">Instrument‑<wbr>measured</span><span class="hx-sr">:</span> Cutometry, 32 women <span>aged 45–60</span>, <span>28 days</span></p>
+					</li>
+										<li class="hxs__result" data-hx-reveal="" style="--hx-i: 1;">
+												<picture class="hxs__object"><source type="image/avif" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-480.avif?v=1792134907 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-720.avif?v=1792134913 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-960.avif?v=1792134940 960w" sizes="(min-width: 1100px) 160px, 112px"><source type="image/webp" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-480.webp?v=1792134909 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-720.webp?v=1792134918 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-960.webp?v=1792134943 960w" sizes="(min-width: 1100px) 160px, 112px"><img src="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-720.jpg?v=1792134920" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-480.jpg?v=1792134909 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-720.jpg?v=1792134920 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-960.jpg?v=1792134944 960w" sizes="(min-width: 1100px) 160px, 112px" width="480" height="720" alt="" loading="lazy" decoding="async"></picture>						<p class="hxs__product">Revitalizing Eye Cream</p>
+						<p class="hx-numeral hxs__fig-n">−38<span class="hxs__pct">%</span></p>
+						<p class="hxs__finding">Crow’s‑feet depth</p>
+						<p class="hx-detail hxs__method"><span class="hxs__kind">Instrument‑<wbr>measured</span><span class="hx-sr">:</span> Optical profilometry, 30 women <span>aged 42–65</span>, <span>28 days</span></p>
+					</li>
+										<li class="hxs__result hxs__result--reported" data-hx-reveal="" style="--hx-i: 2;">
+						<p class="hxs__product">24h Regeneration Cream</p>
+						<p class="hxs__fig-n hxs__fig-n--sm">100<span class="hxs__pct">%</span></p>
+						<p class="hxs__finding">Panellist‑reported satisfaction</p>
+						<p class="hx-detail hxs__method"><span class="hxs__kind">Self‑reported</span><span class="hx-sr">:</span> 34 women <span>aged 40–65</span>, <span>28 days</span></p>
+					</li>
+				</ul>
+				<p class="hxs__more" data-hx-reveal=""><a class="hx-link" href="http://caviarofswitzerland.local/science/clinical-studies/">Read the studies<span class="hx-arrow" aria-hidden="true"></span></a></p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="heritage" class="hxp" aria-labelledby="hxp-title">
+	<div class="hxp__plate">
+		<figure class="hxp__photo hx-frame" data-hx-reveal="settle">
+			<picture><source media="(min-width: 760px)" type="image/avif" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/provenance-summit-wide-1440.avif?v=1792067690 1440w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/provenance-summit-wide-1920.avif?v=1792067695 1920w" sizes="100vw"><source media="(min-width: 760px)" type="image/webp" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/provenance-summit-wide-1440.webp?v=1792067690 1440w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/provenance-summit-wide-1920.webp?v=1792067696 1920w" sizes="100vw"><source media="(min-width: 760px)" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/provenance-summit-wide-1440.jpg?v=1792067690 1440w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/provenance-summit-wide-1920.jpg?v=1792067696 1920w" sizes="100vw"><source type="image/avif" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/provenance-summit-tall-640.avif?v=1792067698 640w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/provenance-summit-tall-960.avif?v=1792067701 960w" sizes="100vw"><source type="image/webp" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/provenance-summit-tall-640.webp?v=1792067698 640w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/provenance-summit-tall-960.webp?v=1792067702 960w" sizes="100vw"><img src="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/provenance-summit-tall-640.jpg?v=1792067698" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/provenance-summit-tall-640.jpg?v=1792067698 640w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/provenance-summit-tall-960.jpg?v=1792067702 960w" sizes="100vw" width="960" height="1344" alt="The north and east faces of the Matterhorn, cloud streaming from the summit, printed in silver tones" loading="lazy" decoding="async"></picture>			<figcaption class="hxp__caption"><span class="hxp__place">Matterhorn<span class="hxp__region">, Valais</span></span> <span class="hxp__alt">4 478&nbsp;m</span></figcaption>
+		</figure>
+
+		<div class="hxp__over hx-wrap" data-hx-stagger="">
+			<p class="hx-label hxp__label" data-hx-reveal="fade" style="--hx-i: 0;">Swiss provenance</p>
+			<h2 id="hxp-title" class="hx-heading hxp__title" data-hx-reveal="" style="--hx-i: 1;">Fewer things, made&nbsp;well.</h2>
+		</div>
+	</div>
+
+	<div class="hxp__band hx-wrap">
+		<div class="hxp__intro" data-hx-stagger="">
+			<p class="hx-lead hxp__lede" data-hx-reveal="" style="--hx-i: 0;">Precision is not a style here; it is how the work is done. Each formula is made in one place, patiently, and with care.</p>
+			<p class="hxp__links" data-hx-reveal="" style="--hx-i: 1;">
+				<a class="hx-link" href="http://caviarofswitzerland.local/heritage/">Our Swiss heritage<span class="hx-arrow" aria-hidden="true"></span></a>
+				<a class="hx-link" href="http://caviarofswitzerland.local/science/swiss-formulation/">How we formulate in Zug<span class="hx-arrow" aria-hidden="true"></span></a>
+			</p>
+		</div>
+
+		<dl class="hxp__facts" data-hx-stagger="">
+			<div class="hxp__fact" data-hx-reveal="" style="--hx-i: 0;">
+				<dt>Zug, Switzerland</dt>
+				<dd>Where every formula is created and filled</dd>
+			</div>
+			<div class="hxp__fact" data-hx-reveal="" style="--hx-i: 1;">
+				<dt>20+&nbsp;years</dt>
+				<dd>Making skincare in Zug</dd>
+			</div>
+			<div class="hxp__fact" data-hx-reveal="" style="--hx-i: 2;">
+				<dt>ISO&nbsp;22716</dt>
+				<dd>Good manufacturing practice (GMP) for cosmetics</dd>
+			</div>
+		</dl>
+	</div>
+</section>
+
+<section id="ritual" class="hxr" aria-labelledby="hxr-title">
+	<header class="hxr__head">
+		<h2 id="hxr-title" class="hxr__title"><span>The</span> <em>Ritual</em></h2>
+				<p class="hxr__lede">Always in this order, from the lightest texture to the richest.</p>
+	</header>
+
+	<div class="hxr__stage">
+		<ol class="hxr__steps" aria-label="The four steps">
+						<li class="hxr__step">
+				<a class="hxr__link" href="http://caviarofswitzerland.local/products/micellar-water-cleanser/">
+					<span class="hxr__frame">
+						<picture class="hxr__shot"><source media="(min-width: 900px)" type="image/avif" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-tall-480.avif?v=1792134877 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-tall-720.avif?v=1792134879 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-tall-960.avif?v=1792134881 960w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-tall-1200.avif?v=1792134884 1200w" sizes="(min-width: 1540px) 360px, 23vw"><source media="(min-width: 900px)" type="image/webp" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-tall-480.webp?v=1792134877 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-tall-720.webp?v=1792134878 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-tall-960.webp?v=1792134881 960w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-tall-1200.webp?v=1792134883 1200w" sizes="(min-width: 1540px) 360px, 23vw"><source media="(min-width: 900px)" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-tall-480.jpg?v=1792134876 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-tall-720.jpg?v=1792134877 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-tall-960.jpg?v=1792134880 960w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-tall-1200.jpg?v=1792134882 1200w" sizes="(min-width: 1540px) 360px, 23vw"><source type="image/avif" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-480.avif?v=1792134884 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-720.avif?v=1792134887 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-960.avif?v=1792134889 960w" sizes="(min-width: 700px) 46vw, 86vw"><source type="image/webp" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-480.webp?v=1792134884 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-720.webp?v=1792134886 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-960.webp?v=1792134888 960w" sizes="(min-width: 700px) 46vw, 86vw"><img src="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-720.jpg?v=1792134884" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-480.jpg?v=1792134884 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-720.jpg?v=1792134884 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-960.jpg?v=1792134887 960w" sizes="(min-width: 700px) 46vw, 86vw" width="480" height="600" alt="" loading="lazy" decoding="async"></picture>						<span class="hxr__word" aria-hidden="true">Cleanse</span>
+					</span>
+					<span class="hxr__text">
+						<span class="hxr__stepno">Step 1</span><span class="hx-sr">: Cleanse. </span>
+						<span class="hxr__more"><span class="hxr__inner"><span class="hxr__rule" aria-hidden="true"></span><span class="hxr__how">Sweep a soaked cotton pad over face and neck to lift make‑up and the day’s impurities. No rinsing: the skin is ready for what follows.</span></span></span>
+						<span class="hx-sr"> (Micellar Water All-in-One Cleanser)</span>
+					</span>
+				</a>
+			</li>
+						<li class="hxr__step">
+				<a class="hxr__link" href="http://caviarofswitzerland.local/products/advanced-repair-serum/">
+					<span class="hxr__frame">
+						<picture class="hxr__shot"><source media="(min-width: 900px)" type="image/avif" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-tall-480.avif?v=1792134905 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-tall-720.avif?v=1792134907 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-tall-960.avif?v=1792134909 960w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-tall-1200.avif?v=1792134913 1200w" sizes="(min-width: 1540px) 360px, 23vw"><source media="(min-width: 900px)" type="image/webp" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-tall-480.webp?v=1792134902 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-tall-720.webp?v=1792134906 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-tall-960.webp?v=1792134908 960w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-tall-1200.webp?v=1792134913 1200w" sizes="(min-width: 1540px) 360px, 23vw"><source media="(min-width: 900px)" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-tall-480.jpg?v=1792134896 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-tall-720.jpg?v=1792134905 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-tall-960.jpg?v=1792134907 960w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-tall-1200.jpg?v=1792134910 1200w" sizes="(min-width: 1540px) 360px, 23vw"><source type="image/avif" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-480.avif?v=1792134914 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-720.avif?v=1792134916 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-960.avif?v=1792134933 960w" sizes="(min-width: 700px) 46vw, 86vw"><source type="image/webp" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-480.webp?v=1792134914 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-720.webp?v=1792134915 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-960.webp?v=1792134932 960w" sizes="(min-width: 700px) 46vw, 86vw"><img src="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-720.jpg?v=1792134914" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-480.jpg?v=1792134914 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-720.jpg?v=1792134914 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-960.jpg?v=1792134917 960w" sizes="(min-width: 700px) 46vw, 86vw" width="480" height="600" alt="" loading="lazy" decoding="async"></picture>						<span class="hxr__word" aria-hidden="true">Treat</span>
+					</span>
+					<span class="hxr__text">
+						<span class="hxr__stepno">Step 2</span><span class="hx-sr">: Treat. </span>
+						<span class="hxr__more"><span class="hxr__inner"><span class="hxr__rule" aria-hidden="true"></span><span class="hxr__how">The most concentrated step. Press two or three drops into face and neck, then give them a minute to absorb.</span></span></span>
+						<span class="hx-sr"> (Advanced Repair Serum)</span>
+					</span>
+				</a>
+			</li>
+						<li class="hxr__step">
+				<a class="hxr__link" href="http://caviarofswitzerland.local/products/revitalizing-eye-cream/">
+					<span class="hxr__frame">
+						<picture class="hxr__shot"><source media="(min-width: 900px)" type="image/avif" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-tall-480.avif?v=1792134945 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-tall-720.avif?v=1792134947 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-tall-960.avif?v=1792134955 960w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-tall-1200.avif?v=1792134961 1200w" sizes="(min-width: 1540px) 360px, 23vw"><source media="(min-width: 900px)" type="image/webp" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-tall-480.webp?v=1792134944 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-tall-720.webp?v=1792134946 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-tall-960.webp?v=1792134952 960w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-tall-1200.webp?v=1792134959 1200w" sizes="(min-width: 1540px) 360px, 23vw"><source media="(min-width: 900px)" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-tall-480.jpg?v=1792134944 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-tall-720.jpg?v=1792134945 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-tall-960.jpg?v=1792134948 960w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-tall-1200.jpg?v=1792134956 1200w" sizes="(min-width: 1540px) 360px, 23vw"><source type="image/avif" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-480.avif?v=1792134965 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-720.avif?v=1792134967 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-960.avif?v=1792134969 960w" sizes="(min-width: 700px) 46vw, 86vw"><source type="image/webp" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-480.webp?v=1792134963 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-720.webp?v=1792134967 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-960.webp?v=1792134968 960w" sizes="(min-width: 700px) 46vw, 86vw"><img src="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-720.jpg?v=1792134966" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-480.jpg?v=1792134962 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-720.jpg?v=1792134966 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-960.jpg?v=1792134967 960w" sizes="(min-width: 700px) 46vw, 86vw" width="480" height="600" alt="" loading="lazy" decoding="async"></picture>						<span class="hxr__word" aria-hidden="true">Revive</span>
+					</span>
+					<span class="hxr__text">
+						<span class="hxr__stepno">Step 3</span><span class="hx-sr">: Revive. </span>
+						<span class="hxr__more"><span class="hxr__inner"><span class="hxr__rule" aria-hidden="true"></span><span class="hxr__how">Care for the thinnest skin of the face. Pat a little along the orbital bone, from the inner to the outer corner. Never drag.</span></span></span>
+						<span class="hx-sr"> (Revitalizing Eye Cream)</span>
+					</span>
+				</a>
+			</li>
+						<li class="hxr__step">
+				<a class="hxr__link" href="http://caviarofswitzerland.local/products/24h-regeneration-cream/">
+					<span class="hxr__frame">
+						<picture class="hxr__shot"><source media="(min-width: 900px)" type="image/avif" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-tall-480.avif?v=1792134979 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-tall-720.avif?v=1792134985 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-tall-960.avif?v=1792134987 960w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-tall-1200.avif?v=1792134996 1200w" sizes="(min-width: 1540px) 360px, 23vw"><source media="(min-width: 900px)" type="image/webp" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-tall-480.webp?v=1792134978 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-tall-720.webp?v=1792134985 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-tall-960.webp?v=1792134986 960w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-tall-1200.webp?v=1792134995 1200w" sizes="(min-width: 1540px) 360px, 23vw"><source media="(min-width: 900px)" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-tall-480.jpg?v=1792134978 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-tall-720.jpg?v=1792134984 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-tall-960.jpg?v=1792134985 960w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-tall-1200.jpg?v=1792134987 1200w" sizes="(min-width: 1540px) 360px, 23vw"><source type="image/avif" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-480.avif?v=1792134996 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-720.avif?v=1792134997 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-960.avif?v=1792134998 960w" sizes="(min-width: 700px) 46vw, 86vw"><source type="image/webp" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-480.webp?v=1792134996 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-720.webp?v=1792134997 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-960.webp?v=1792134998 960w" sizes="(min-width: 700px) 46vw, 86vw"><img src="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-720.jpg?v=1792134997" srcset="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-480.jpg?v=1792134996 480w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-720.jpg?v=1792134997 720w, http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-960.jpg?v=1792134997 960w" sizes="(min-width: 700px) 46vw, 86vw" width="480" height="600" alt="" loading="lazy" decoding="async"></picture>						<span class="hxr__word" aria-hidden="true">Restore</span>
+					</span>
+					<span class="hxr__text">
+						<span class="hxr__stepno">Step 4</span><span class="hx-sr">: Restore. </span>
+						<span class="hxr__more"><span class="hxr__inner"><span class="hxr__rule" aria-hidden="true"></span><span class="hxr__how">The final step seals the ritual. Warm a pea‑sized amount between your palms and press it in, under SPF by day and overnight by night.</span></span></span>
+						<span class="hx-sr"> (24h Regeneration Cream)</span>
+					</span>
+				</a>
+			</li>
+					</ol>
+		<span class="hxr__track" aria-hidden="true"><span class="hxr__thumb"></span></span>
+	</div>
+</section>
+
+<section id="closing" class="hxz" aria-labelledby="hxz-title">
+	<div class="hx-wrap hxz__inner">
+		<h2 id="hxz-title" class="hx-display hxz__title" data-hx-reveal=""><span class="hxz__line">Swiss skincare,</span> <span class="hxz__line"><em>refined to the essential.</em></span></h2>
+
+		<div class="hxz__act" data-hx-reveal="" data-hx-delay="240" style="--hx-delay: 240ms;">
+			<a class="hxz__cta" href="http://caviarofswitzerland.local/products/the-complete-ritual/" data-cro-cta="home-final-ritual"><span class="hxz__cta-text">Shop the Complete Ritual</span><span class="hxz__cta-rule" aria-hidden="true"></span></a>
+			<ul class="hxz__assure" role="list" aria-label="Delivery and returns">
+				<li>Free worldwide shipping</li>
+				<li>30-day returns</li>
+			</ul>
+		</div>
+
+		<div class="hxz__sign" data-hx-reveal="fade">
+			<span class="hxz__rule" aria-hidden="true"></span>
+			<p class="hxz__house">
+				<svg class="hxz__cross" viewBox="0 0 33 33" aria-hidden="true" focusable="false"><rect width="33" height="33" fill="#E33A41"></rect><path d="M13.2 6h6.6v7.2H27v6.6h-7.2V27h-6.6v-7.2H6v-6.6h7.2z" fill="#fff"></path></svg>
+				<span class="hx-label">Caviar of Switzerland</span>
+				<span class="hx-label hxz__place">Made in Zug</span>
+			</p>
+		</div>
+	</div>
+</section>
+
+</main>
+<script nonce="">
+document.addEventListener('cmplz_status_change', function(e){
+  if (!window.gtag || !e.detail || !e.detail.category) return;
+  var granted = e.detail.status === 'allow';
+  var update = {};
+  if (e.detail.category === 'statistics') {
+    update.analytics_storage = granted ? 'granted' : 'denied';
+  } else if (e.detail.category === 'marketing') {
+    update.ad_storage = granted ? 'granted' : 'denied';
+    update.ad_user_data = granted ? 'granted' : 'denied';
+    update.ad_personalization = granted ? 'granted' : 'denied';
+  } else {
+    return;
+  }
+  gtag('consent', 'update', update);
+});
+</script>
+	<script nonce="">
+(function(){
+  function applyFxOff(){ if (window.jQuery) { jQuery.fx.off = true; } }
+  var mq = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
+  if (mq && mq.matches) applyFxOff();
+  if (mq && mq.addEventListener) {
+    mq.addEventListener('change', function(e){ if (e.matches) applyFxOff(); });
+  }
+})();
+</script>
+	<script nonce="">
+window.cosWooCount = 0;
+(function(){
+  var els = document.querySelectorAll('.cos-bag-count');
+  var n = window.cosWooCount;
+  els.forEach(function(el){ el.textContent = n > 0 ? String(n) : ''; });
+})();
+</script>
+	<footer id="cos-footer" class="hxf" role="contentinfo">
+  <div class="hxf__inner">
+    <section class="hxf-nl" aria-labelledby="hxf-nl-title">
+      <div class="hxf-nl__intro">
+        <h2 id="hxf-nl-title" class="hxf-nl__title cos-nl-headline">The Caviar Circle</h2>
+        <p class="hxf-nl__sub">Ritual guidance, product news and brand updates.</p>
+      </div>
+      <form class="hxf-form cos-nl-form" method="post" aria-label="Join the Caviar Circle" novalidate="">
+      <div class="hxf-form__row cos-nl-row">
+        <label for="cos-nl-email" class="hx-sr">Email address</label>
+        <input id="cos-nl-email" class="hxf-form__input cos-nl-input" type="email" name="email" placeholder="Email address" autocomplete="email" inputmode="email" spellcheck="false" aria-describedby="cos-nl-status" required="">
+        <button type="submit" class="hxf-form__btn cos-nl-btn">Join<span class="hx-sr"> the Caviar Circle</span><span class="hx-arrow" aria-hidden="true"></span></button>
+      </div>
+      <label class="hxf-consent cos-nl-consent">
+        <input type="checkbox" name="gdpr" required="">
+        <span class="cos-nl-consent-text">I agree to receive communications from Caviar of Switzerland. <a href="/privacy/">Privacy Policy</a>.</span>
+      </label>
+            <p id="cos-nl-status" class="hxf-status cos-nl-status" role="status" aria-live="polite" tabindex="-1"></p>
+      <noscript><p class="hxf-noscript">JavaScript is required to join the Caviar Circle here. Please email us instead — see the Contact page.</p></noscript>
+    </form>
+    </section>
+
+    <div class="hxf-cols">
+      <div class="hxf-brand">
+        <a class="hxf-brand__logo" href="/" aria-label="Caviar of Switzerland — Home">
+                        <img src="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/logo-graphite.svg?v=1792246322" alt="Caviar of Switzerland" width="128" height="40" loading="lazy" decoding="async">
+        </a>
+                <ul class="hxf-assure" role="list" aria-label="Our promise">
+          <li class="cos-trust-item">Made in Switzerland</li>
+          <li class="cos-trust-item">Free worldwide shipping</li>
+          <li class="cos-trust-item">30-day returns</li>
+          <li class="cos-trust-item">Secure checkout</li>
+        </ul>
+      </div>
+            <details class="hxf-group cos-footer-details" open="">
+        <summary class="hxf-group__summary cos-footer-col-summary"><h3 class="hxf-group__title">Customer Care</h3><span class="hxf-plus" aria-hidden="true"></span></summary>
+        <div class="hxf-group__body cos-footer-col-body"><ul class="hxf-links">
+          <li><a href="/contact/">Contact</a></li><li><a href="/shipping-returns/">Shipping &amp; Returns</a></li><li><a href="/faq/#tracking">Track My Order</a></li><li><a href="/account/">My Account</a></li><li><a href="/terms/">Terms &amp; Conditions</a></li><li><a href="/privacy/">Privacy Policy</a></li>        </ul></div>
+      </details>
+            <details class="hxf-group cos-footer-details" open="">
+        <summary class="hxf-group__summary cos-footer-col-summary"><h3 class="hxf-group__title">Explore</h3><span class="hxf-plus" aria-hidden="true"></span></summary>
+        <div class="hxf-group__body cos-footer-col-body"><ul class="hxf-links">
+          <li><a href="/shop/">Shop</a></li><li><a href="/the-ritual/">The Ritual</a></li><li><a href="/science/">Swiss Science</a></li><li><a href="/heritage/">Swiss Heritage</a></li><li><a href="/journal/">Journal</a></li><li><a href="/heritage/sustainability/">Sustainability</a></li><li><a href="/sitemap/">Sitemap</a></li>        </ul></div>
+      </details>
+            <details class="hxf-group hxf-house cos-footer-details" open="">
+        <summary class="hxf-group__summary cos-footer-col-summary"><h3 class="hxf-group__title">The House in Zug</h3><span class="hxf-plus" aria-hidden="true"></span></summary>
+        <div class="hxf-group__body cos-footer-col-body">
+          <address>Caviar of Switzerland<br>Chamerstrasse 115<br>6300 Zug, Switzerland</address>
+          <a class="hxf-house__mail" href="mailto:info@caviarofswitzerland.com">info@caviarofswitzerland.com</a>
+          <div class="hxf-social">
+                        <a href="https://www.instagram.com/caviarofswitzerland/" rel="noopener noreferrer" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4.25"></circle><circle cx="17.25" cy="6.75" r=".6" fill="currentColor" stroke="none"></circle></svg></a>
+                        <a href="https://www.facebook.com/caviarofswitzerland/" rel="noopener noreferrer" target="_blank" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 3h-2.5A4.5 4.5 0 0 0 10 7.5V10H7v3.5h3V21h3.5v-7.5H16l.75-3.5H13.5V7.75c0-.55.45-1 1-1H17z"></path></svg></a>
+                        <a href="https://www.youtube.com/@caviarofswitzerland" rel="noopener noreferrer" target="_blank" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.6 7.2a2.6 2.6 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4a2.6 2.6 0 0 0-1.8 1.8C2 8.8 2 12 2 12s0 3.2.4 4.8a2.6 2.6 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.6 2.6 0 0 0 1.8-1.8c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8z"></path><path d="M10 15.2 15.2 12 10 8.8z" fill="currentColor" stroke="none"></path></svg></a>
+                      </div>
+        </div>
+      </details>
+    </div>
+
+    <div class="hxf-base">
+      <p class="hxf-base__copy">© 2026 Caviar of Switzerland. All rights reserved.</p>
+      <div class="hxf-base__end">
+                <p class="hxf-base__place"><span class="hxf-cross" aria-hidden="true"></span>Zug, Switzerland</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script nonce="">
+(function(){
+  var navWrap=document.getElementById('cos-nav-wrap');
+  window.addEventListener('scroll',function(){navWrap.classList.toggle('scrolled',window.scrollY>10);},{passive:true});
+  var mobBtn=document.getElementById('cos-mob-btn');
+  var mobMenu=document.getElementById('cos-mob-menu');
+  var h1=document.getElementById('cos-h1');
+  var h2=document.getElementById('cos-h2');
+  var h3=document.getElementById('cos-h3');
+  var open=false;
+  var lockedScrollY=0;
+  function focusable(){return Array.prototype.slice.call(mobMenu.querySelectorAll('a'));}
+  function setMenuFocusable(enabled){
+    focusable().forEach(function(a){
+      if(enabled) a.removeAttribute('tabindex');
+      else a.setAttribute('tabindex','-1');
+    });
+  }
+  function lockPage(){
+    lockedScrollY=window.scrollY||window.pageYOffset||0;
+    document.documentElement.style.overflow='hidden';
+    document.body.style.overflow='hidden';
+    document.body.style.position='fixed';
+    document.body.style.top='-'+lockedScrollY+'px';
+    document.body.style.left='0';
+    document.body.style.right='0';
+    document.body.style.width='100%';
+  }
+  function unlockPage(){
+    document.documentElement.style.overflow='';
+    document.body.style.overflow='';
+    document.body.style.position='';
+    document.body.style.top='';
+    document.body.style.left='';
+    document.body.style.right='';
+    document.body.style.width='';
+    window.scrollTo(0,lockedScrollY);
+  }
+  function preventBackgroundScroll(e){
+    // Block page scroll behind the sheet, but let the sheet itself scroll (short phones, zoom).
+    if(open && !mobMenu.contains(e.target)) e.preventDefault();
+  }
+  function setMenu(next, restoreFocus){
+    if(next===open) return;
+    open=next;
+    mobMenu.classList.toggle('open',open);
+    mobMenu.setAttribute('aria-hidden',String(!open));
+    mobBtn.setAttribute('aria-expanded',String(open));
+    setMenuFocusable(open);
+    if(open) lockPage();
+    else unlockPage();
+    h1.style.transform=open?'translateY(6px) rotate(45deg)':'';
+    h2.style.opacity=open?'0':'';
+    h3.style.transform=open?'translateY(-6px) rotate(-45deg)':'';
+    if(open){
+      var first=focusable()[0];
+      if(first) first.focus({preventScroll:true});
+    }else if(restoreFocus!==false){
+      mobBtn.focus({preventScroll:true});
+    }
+  }
+  function toggleMenu(){setMenu(!open);}
+  setMenuFocusable(false);
+  mobBtn.addEventListener('click',toggleMenu);
+  window.addEventListener('wheel',preventBackgroundScroll,{passive:false});
+  window.addEventListener('touchmove',preventBackgroundScroll,{passive:false});
+  mobMenu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){if(open)setMenu(false,false);});});
+  // Rotating a tablet past 1280px hides the sheet: close it so the page is never left locked.
+  var wide=window.matchMedia('(min-width: 1280px)');
+  function onWide(e){if(e.matches&&open)setMenu(false,false);}
+  if(wide.addEventListener) wide.addEventListener('change',onWide); else if(wide.addListener) wide.addListener(onWide);
+  document.addEventListener('keydown',function(e){
+    if(!open) return;
+    if(e.key==='Escape'){setMenu(false);return;}
+    if(e.key==='Tab'){
+      // Focus stays in the open menu: links cycle (Shift+Tab on the first goes to the
+      // last), and Tab past the last link reaches the close button, then wraps.
+      var items=focusable(); if(!items.length) return;
+      var first=items[0], last=items[items.length-1], cur=document.activeElement;
+      if(e.shiftKey && (cur===first||cur===mobBtn)){e.preventDefault();last.focus();}
+      else if(!e.shiftKey && cur===last){e.preventDefault();mobBtn.focus();}
+      else if(!e.shiftKey && cur===mobBtn){e.preventDefault();first.focus();}
+      else if(cur!==mobBtn && !mobMenu.contains(cur)){e.preventDefault();first.focus();}
+    }
+  });
+})();
+</script>
+<script nonce="">
+(function(){
+  // Footer groups render open (no-JS safe); on phones JS closes them into
+  // accordions. ≥768px they stay open: the summary is inert by CSS and this
+  // `toggle` backstop reopens a group closed from the keyboard.
+  var mq = window.matchMedia('(max-width: 767px)');
+  var groups = document.querySelectorAll('.cos-footer-details');
+  function applyCollapse(isMobile){
+    groups.forEach(function(d){
+      if (isMobile) d.removeAttribute('open');
+      else d.setAttribute('open','');
+    });
+  }
+  applyCollapse(mq.matches);
+  if (mq.addEventListener) mq.addEventListener('change', function(e){ applyCollapse(e.matches); });
+  groups.forEach(function(d){
+    d.addEventListener('toggle', function(){
+      if (!mq.matches && !d.open) d.open = true;
+    });
+  });
+})();
+</script>
+<script nonce="">
+(function(){
+  var form=document.querySelector('.cos-nl-form');
+  if(!form)return;
+  var btn=form.querySelector('.cos-nl-btn');
+  var input=form.querySelector('.cos-nl-input');
+  var consent=form.querySelector('input[name="gdpr"]');
+  var status=form.querySelector('.cos-nl-status');
+  var originalHTML=btn.innerHTML;
+  function say(html,tone){
+    if(tone) status.setAttribute('data-tone',tone); else status.removeAttribute('data-tone');
+    status.innerHTML=html;
+  }
+  function resetBtn(){btn.innerHTML=originalHTML;btn.disabled=false;}
+  function fail(){
+    // Keep the email, give the field back, and offer a second route.
+    resetBtn();
+    say('We couldn’t add you just now. Please try again, or <a href="/contact/">contact us</a> and we’ll add you.','error');
+    input.focus();
+  }
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var email=input.value.trim();
+    // novalidate: the browser bubbles are replaced by messages in the live region.
+    if(!email||!input.checkValidity()){say('Please enter a valid email address.','error');input.focus();return;}
+    if(consent&&!consent.checked){say('Please tick the box to agree to receive our emails.','error');consent.focus();return;}
+    btn.textContent='Joining…';
+    btn.disabled=true;
+    say('Subscribing…');
+    fetch('https://a.klaviyo.com/client/subscriptions/?company_id=Rd6DHd',{
+      method:'POST',
+      headers:{'content-type':'application/json','revision':'2024-02-15'},
+      body:JSON.stringify({data:{type:'subscription',attributes:{list_id:'XuVPEG',email:email}}})
+    }).then(function(res){
+      if(res.ok||res.status===202){
+        // Hide the fields (not innerHTML-replace) so the live region survives,
+        // then move focus to the confirmation the submit button used to hold.
+        Array.prototype.forEach.call(form.querySelectorAll('.cos-nl-row,.cos-nl-consent'),function(el){el.style.display='none';});
+        say('Thank you, you’re on the list. Welcome to the Caviar Circle.');
+        status.focus();
+      }else{fail();}
+    }).catch(fail);
+  });
+})();
+</script>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/cos-child/*","/wp-content/themes/twentytwentyfive/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+	<script>
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+	<script data-wp-strategy="defer" defer="" id="cos-home-2026-js" src="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/js/home-2026.js?ver=1792349879"></script>
+<script data-wp-strategy="defer" defer="" id="cos-hx-motion-js" src="http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/home-staging/hx-motion.js?ver=1792349882"></script>
+<script type="application/json" id="hxn-bag-data">{}</script><p id="hxn-bag-live" class="hx-sr" role="status" aria-live="polite"></p>
+<section id="hxn-bag" class="hxn-bag" role="dialog" aria-modal="false" aria-labelledby="hxn-bag-title" hidden="">
+  <div class="hxn-bag__head">
+    <h2 id="hxn-bag-title" class="hxn-bag__title" tabindex="-1">Added to your bag</h2>
+    <button type="button" class="hxn-bag__close" aria-label="Close"><span aria-hidden="true"></span></button>
+  </div>
+  <div class="hxn-bag__item">
+    <div class="hxn-bag__media"><img class="hxn-bag__img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" width="80" height="100" decoding="async"></div>
+    <div class="hxn-bag__info">
+      <a class="hxn-bag__name" href="#"></a>
+      <p class="hxn-bag__qty"></p>
+    </div>
+    <p class="hxn-bag__line"></p>
+  </div>
+  <div class="hxn-bag__total"><span class="hxn-bag__count">Bag subtotal</span><span class="hxn-bag__subtotal"></span></div>
+  <div class="hxn-bag__actions">
+    <a class="hx-btn hx-btn--block hxn-bag__checkout" href="http://caviarofswitzerland.local/checkout/" data-cro-cta="minibag-checkout">Checkout<span class="hx-arrow" aria-hidden="true"></span></a>
+    <a class="hx-link hxn-bag__view" href="http://caviarofswitzerland.local/cart/" data-cro-cta="minibag-view-bag">View bag</a>
+  </div>
+  <p class="hxn-bag__note">Free worldwide shipping · 30-day returns</p>
+</section>
+<script nonce="">
+(function(){
+  var panel=document.getElementById('hxn-bag'); if(!panel) return;
+  var live=document.getElementById('hxn-bag-live');
+  var title=panel.querySelector('.hxn-bag__title');
+  var closeBtn=panel.querySelector('.hxn-bag__close');
+  var lastInput='pointer', trigger=null, timer=null, hideT=null, hovering=false;
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '||e.key==='Escape'||e.key==='Tab') lastInput='key'; },true);
+  document.addEventListener('pointerdown',function(){ lastInput='pointer'; },true);
+  function q(s){return panel.querySelector(s);}
+  function parse(str){
+    if(!str) return null;
+    var m=String(str).match(/>([\s\S]*)<\/script>/); try{ var d=JSON.parse(m?m[1]:str); return d&&d.name?d:null; }catch(e){ return null; }
+  }
+  function fill(d){
+    var img=q('.hxn-bag__img'), media=q('.hxn-bag__media');
+    if(d.image){ img.src=d.image; img.alt=''; media.hidden=false; } else { media.hidden=true; }
+    media.classList.toggle('is-wide',!!d.wide);
+    var name=q('.hxn-bag__name'); name.textContent=''; name.href=d.url||'#';
+    // keep hyphenated words ("All-in-One") on one line
+    String(d.name).split(/(\s+)/).forEach(function(part){ if(part.indexOf('-')>0){ var s=document.createElement('span'); s.style.whiteSpace='nowrap'; s.textContent=part; name.appendChild(s); } else name.appendChild(document.createTextNode(part)); });
+    q('.hxn-bag__qty').textContent='Quantity '+d.qty;
+    q('.hxn-bag__line').textContent=d.line||'';
+    q('.hxn-bag__count').textContent='Bag subtotal'+(d.count?' ('+d.count+(d.count===1?' item)':' items)'):'');
+    q('.hxn-bag__subtotal').textContent=d.subtotal||'';
+    if(d.cart) q('.hxn-bag__view').href=d.cart;
+    if(d.checkout) q('.hxn-bag__checkout').href=d.checkout;
+  }
+  function schedule(){
+    clearTimeout(timer);
+    timer=setTimeout(function(){ if(!hovering && !panel.contains(document.activeElement)) close(false); else schedule(); },7000);
+  }
+  function open(d,from){
+    fill(d);
+    trigger=from||null;
+    clearTimeout(hideT);
+    panel.hidden=false;
+    panel.offsetWidth; // commit the start state before animating in
+    panel.classList.add('is-open');
+    live.textContent='';
+    setTimeout(function(){ live.textContent=d.name+' added to your bag. Bag subtotal '+(d.subtotal||'')+'.'; },60);
+    if(lastInput==='key'){ title.focus({preventScroll:true}); }
+    schedule();
+  }
+  function close(restore){
+    if(panel.hidden) return;
+    clearTimeout(timer);
+    var hadFocus=panel.contains(document.activeElement);
+    panel.classList.remove('is-open');
+    hideT=setTimeout(function(){ panel.hidden=true; }, reduce?0:420);
+    // Return focus to the control that added the item only for keyboard users; after a
+    // mouse/touch close just release focus (programmatic focus can paint a ring).
+    if(hadFocus){
+      if(lastInput==='key'){
+        var back=(trigger&&document.contains(trigger))?trigger:document.querySelector('.cos-bag-link');
+        if(back) back.focus({preventScroll:true});
+      } else if(document.activeElement && document.activeElement.blur){ document.activeElement.blur(); }
+    }
+  }
+  closeBtn.addEventListener('click',function(){ close(true); });
+  panel.addEventListener('mouseenter',function(){ hovering=true; });
+  panel.addEventListener('mouseleave',function(){ hovering=false; schedule(); });
+  panel.addEventListener('focusout',function(){ setTimeout(function(){ if(!panel.contains(document.activeElement)) schedule(); },0); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape' && !panel.hidden) close(true); });
+  // AJAX adds (WooCommerce triggers this jQuery event after applying the fragments).
+  function bindJQ(){
+    if(!window.jQuery) return false;
+    window.jQuery(document.body).on('added_to_cart',function(e,fragments,hash,btn){
+      var d=parse(fragments&&fragments['#hxn-bag-data']);
+      if(!d){ var el=document.getElementById('hxn-bag-data'); d=parse(el&&el.textContent); }
+      if(d) open(d, btn&&btn[0]?btn[0]:null);
+    });
+    return true;
+  }
+  // Form-post add (product page reload): data printed with the page.
+  function boot(){
+    bindJQ();
+    var el=document.getElementById('hxn-bag-data'); var d=parse(el&&el.textContent);
+    if(d) open(d,null);
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',boot); else boot();
+})();
+</script>
+	
+
+</body></html>

@@ -1,0 +1,172 @@
+[
+  {
+    "prefix": "swiss-material-study-20261017",
+    "source": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\design-sources\\home-2026\\swiss-material-study-20261017-master.png",
+    "source_sha256": "77c0393f9a9b31cb378de25f679005af3f349256b0391177d18815c23d066c7e",
+    "original": "C:\\Users\\giann\\.codex\\generated_images\\01a1483b-c75e-7b03-8e5d-35e7ab2c461a\\exec-e335ef86-abb6-4a09-9201-2463c792cb5e.png",
+    "source_identical_to_generated_original": true,
+    "source_size": [
+      1122,
+      1402
+    ],
+    "derivatives": [
+      {
+        "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\swiss-material-study-20261017-640.avif",
+        "sha256": "72348c6468c982cc04561de98ae0bc8a485160fe265b30e7ff12b2b6fe6ce133",
+        "bytes": 51343,
+        "size": [
+          640,
+          800
+        ],
+        "aspect_ratio_difference": -0.00028530670470749975,
+        "MAE_from_proportional_source": 2.3265891927083335,
+        "max_difference": 35.0
+      },
+      {
+        "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\swiss-material-study-20261017-640.webp",
+        "sha256": "ff0fdbe917764e1b096816520433db5517e2294a26819424f4feb9c120856498",
+        "bytes": 76476,
+        "size": [
+          640,
+          800
+        ],
+        "aspect_ratio_difference": -0.00028530670470749975,
+        "MAE_from_proportional_source": 2.2153580729166666,
+        "max_difference": 57.0
+      },
+      {
+        "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\swiss-material-study-20261017-640.jpg",
+        "sha256": "1adec7deb7d35cfc2e4884dd423613ab80bf8d821ae2c32b81f6ef8c37816344",
+        "bytes": 100875,
+        "size": [
+          640,
+          800
+        ],
+        "aspect_ratio_difference": -0.00028530670470749975,
+        "MAE_from_proportional_source": 2.0335462239583335,
+        "max_difference": 29.0
+      },
+      {
+        "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\swiss-material-study-20261017-1122.avif",
+        "sha256": "7568b7a807830532c7b5aa74673c36c33faa6f93bd4958029cba29654655eb19",
+        "bytes": 106375,
+        "size": [
+          1122,
+          1402
+        ],
+        "aspect_ratio_difference": 0.0,
+        "MAE_from_proportional_source": 1.7426088102642605,
+        "max_difference": 30.0
+      },
+      {
+        "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\swiss-material-study-20261017-1122.webp",
+        "sha256": "45fdb3368788fea8cd4b4703966b42793776c07ca04f42a426a16e6dd2aeef87",
+        "bytes": 164718,
+        "size": [
+          1122,
+          1402
+        ],
+        "aspect_ratio_difference": 0.0,
+        "MAE_from_proportional_source": 1.753664233168303,
+        "max_difference": 33.0
+      },
+      {
+        "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\swiss-material-study-20261017-1122.jpg",
+        "sha256": "2b8c74a24e4641860556e3ea04288664d6650d6f62455ad6faf09e8273692cab",
+        "bytes": 230253,
+        "size": [
+          1122,
+          1402
+        ],
+        "aspect_ratio_difference": 0.0,
+        "MAE_from_proportional_source": 1.6129059327011832,
+        "max_difference": 22.0
+      }
+    ]
+  },
+  {
+    "prefix": "ritual-portrait-20261017",
+    "source": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\design-sources\\home-2026\\ritual-portrait-20261017-master.png",
+    "source_sha256": "edb12a91f11514f8523dbf1226b2883e01c62c806898e471dff008a37bfa0f8a",
+    "original": "C:\\Users\\giann\\.codex\\generated_images\\01a1483b-c75e-7b03-8e5d-35e7ab2c461a\\exec-136e99e7-4ece-4d1a-ba7c-dd0fbfee81f9.png",
+    "source_identical_to_generated_original": true,
+    "source_size": [
+      1122,
+      1402
+    ],
+    "derivatives": [
+      {
+        "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\ritual-portrait-20261017-640.avif",
+        "sha256": "37362f7fb9bcd88ee8ce1aa1641134394c05f835ea90c7ce20b216d10d39ce32",
+        "bytes": 35750,
+        "size": [
+          640,
+          800
+        ],
+        "aspect_ratio_difference": -0.00028530670470749975,
+        "MAE_from_proportional_source": 2.343830078125,
+        "max_difference": 30.0
+      },
+      {
+        "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\ritual-portrait-20261017-640.webp",
+        "sha256": "fb4d076e101ef2b6dd4ef76638607b1e541c54e28dd9baa9ed9d2bf60891610b",
+        "bytes": 59242,
+        "size": [
+          640,
+          800
+        ],
+        "aspect_ratio_difference": -0.00028530670470749975,
+        "MAE_from_proportional_source": 2.1267760416666666,
+        "max_difference": 24.0
+      },
+      {
+        "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\ritual-portrait-20261017-640.jpg",
+        "sha256": "7cad1a1e6ac348540bb4275439b2403e80a0f633e39278e24dfd5f8564b20504",
+        "bytes": 76102,
+        "size": [
+          640,
+          800
+        ],
+        "aspect_ratio_difference": -0.00028530670470749975,
+        "MAE_from_proportional_source": 2.143060546875,
+        "max_difference": 26.0
+      },
+      {
+        "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\ritual-portrait-20261017-1122.avif",
+        "sha256": "44538e6241e42335e0bae25aa4f76563d6d6f99da7fa8302bed87d2b55aca9e1",
+        "bytes": 94221,
+        "size": [
+          1122,
+          1402
+        ],
+        "aspect_ratio_difference": 0.0,
+        "MAE_from_proportional_source": 1.9697009958611034,
+        "max_difference": 26.0
+      },
+      {
+        "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\ritual-portrait-20261017-1122.webp",
+        "sha256": "f37fcad0f133d0b1836e76ef3409afd231e6b052b8ea51900a3d8df44e6c2231",
+        "bytes": 165742,
+        "size": [
+          1122,
+          1402
+        ],
+        "aspect_ratio_difference": 0.0,
+        "MAE_from_proportional_source": 1.8369757404539648,
+        "max_difference": 22.0
+      },
+      {
+        "file": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\wp-content\\themes\\cos-child\\assets\\images\\home-2026\\ritual-portrait-20261017-1122.jpg",
+        "sha256": "e552ef61855f11ce789e5e6fa0759955f7869e3994d3abdd053128c92cafb55e",
+        "bytes": 207526,
+        "size": [
+          1122,
+          1402
+        ],
+        "aspect_ratio_difference": 0.0,
+        "MAE_from_proportional_source": 1.8242556046323772,
+        "max_difference": 23.0
+      }
+    ]
+  }
+]

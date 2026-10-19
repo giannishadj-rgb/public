@@ -12,22 +12,11 @@ defined( 'ABSPATH' ) || exit;
 $times = array(
 	'morning' => array(
 		'title' => 'Morning',
-		'steps' => array(
-			array( 'Cleanse', 'One soaked pad. No rinsing.' ),
-			array( 'Treat', 'Two or three drops; 60 seconds to absorb.' ),
-			array( 'Revive', 'A grain of rice per eye.' ),
-			array( 'Restore', 'A pea-sized amount, pressed in.' ),
-		),
 		'close' => 'Finish with a broad-spectrum SPF 50+.',
 	),
 	'evening' => array(
 		'title' => 'Evening',
-		'steps' => array(
-			array( 'Cleanse', 'Lift the day’s make-up and SPF.' ),
-			array( 'Treat', 'Two or three drops, unhurried.' ),
-			array( 'Revive', 'Patted along the orbital bone.' ),
-			array( 'Restore', 'Your overnight treatment.' ),
-		),
+		'note'  => 'Lift the day’s make-up and SPF.',
 		'close' => 'Allow the cream to absorb fully before sleeping.',
 	),
 );
@@ -42,11 +31,7 @@ $times = array(
 			<?php foreach ( $times as $k => $t ) : ?>
 			<div class="hxrt-day__col hxrt-day__col--<?php echo esc_attr( $k ); ?>" data-hx-reveal="fade">
 				<h3 class="hx-title hxrt-day__title"><?php echo esc_html( $t['title'] ); ?></h3>
-				<ol class="hxrt-day__list">
-					<?php foreach ( $t['steps'] as $j => [ $verb, $text ] ) : ?>
-					<li class="hxrt-day__step"><span class="hx-step"><?php echo esc_html( sprintf( '%02d', $j + 1 ) ); ?></span><span class="hxrt-day__verb"><?php echo esc_html( $verb ); ?></span><span class="hxrt-day__text"><?php echo esc_html( str_replace( '-', "\u{2011}", $text ) ); ?></span></li>
-					<?php endforeach; ?>
-				</ol>
+				<?php if ( ! empty( $t['note'] ) ) : ?><p class="hxrt-day__close"><?php echo esc_html( $t['note'] ); ?></p><?php endif; ?>
 				<p class="hxrt-day__close"><?php echo esc_html( $t['close'] ); ?></p>
 			</div>
 			<?php endforeach; ?>

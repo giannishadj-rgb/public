@@ -1,0 +1,106 @@
+{
+  "date": "2026-10-18",
+  "area": "closing (hxz), round 2",
+  "script": "design-sources/home-2026/build_wc_closing.py",
+  "source": {
+    "path": "design-sources/home-2026/gauntlet-supplied-20261018/DSC_5783.jpg",
+    "sha256": "b8d2ccc236c14192781789af6261268bea5106716e2025bb866b225e0bbaa0e9",
+    "size": [
+      3449,
+      5174
+    ],
+    "description": "November 2022 shoot: 24h Regeneration Cream, Advanced Repair Serum, Micellar Water All-in-One Cleanser, Revitalizing Eye Cream on a stone counter before reeded glass"
+  },
+  "operations": [
+    "crop box [127, 1049, 3427, 5174] (4:5; all four packages whole)",
+    "proportional Lanczos downscale",
+    "encode AVIF/WebP/JPEG",
+    "no retouching, recolouring, mirroring, extension or generative pixels"
+  ],
+  "outputs": [
+    {
+      "file": "wc-close-print-480.avif",
+      "width": 480,
+      "height": 600,
+      "bytes": 12683,
+      "sha256": "a0f9626972569484865379281b58ac2056226db7c0bf1b0918a557304de4c949"
+    },
+    {
+      "file": "wc-close-print-480.webp",
+      "width": 480,
+      "height": 600,
+      "bytes": 15486,
+      "sha256": "35d1473efd078602ea4b0a6cfaaa3cb6d28b0f106a679f13d5167ff4e98e360d"
+    },
+    {
+      "file": "wc-close-print-480.jpg",
+      "width": 480,
+      "height": 600,
+      "bytes": 32811,
+      "sha256": "be2586695875cf3e8061c1881ea074b7c2498eef1ec6b00341259753dc917f7d"
+    },
+    {
+      "file": "wc-close-print-720.avif",
+      "width": 720,
+      "height": 900,
+      "bytes": 20232,
+      "sha256": "f6f9201e3d86446bb9394a2d837a3b33f08a76071dd2334ab6726dfb3c50e162"
+    },
+    {
+      "file": "wc-close-print-720.webp",
+      "width": 720,
+      "height": 900,
+      "bytes": 24872,
+      "sha256": "6eda447e1f6046fd8ae613f93a09ab05f3bf58133953a85da1b632c115843615"
+    },
+    {
+      "file": "wc-close-print-720.jpg",
+      "width": 720,
+      "height": 900,
+      "bytes": 59110,
+      "sha256": "2dcfb40669c01e7d01af26e094419fc31d1ddf8dd57d19e8fbf25abe5a801ccf"
+    },
+    {
+      "file": "wc-close-print-960.avif",
+      "width": 960,
+      "height": 1200,
+      "bytes": 28519,
+      "sha256": "23b877a6333e2c392966e03f7407bfaaa78fe840d752be0ec2f5020bb5081893"
+    },
+    {
+      "file": "wc-close-print-960.webp",
+      "width": 960,
+      "height": 1200,
+      "bytes": 36552,
+      "sha256": "20307925d3adf63bc759cd77436b8dccec6b0ed188b253bfe4940d2a0771a45f"
+    },
+    {
+      "file": "wc-close-print-960.jpg",
+      "width": 960,
+      "height": 1200,
+      "bytes": 92043,
+      "sha256": "b23ee164dc87ba0f879e3632fc7e1edeb0c0c781a72cde2deb94c6b4d0de3aa5"
+    },
+    {
+      "file": "wc-close-print-1200.avif",
+      "width": 1200,
+      "height": 1500,
+      "bytes": 37875,
+      "sha256": "b4478fe56014da2069b0993902b960b35d03096b95062f750e87419c2a92297c"
+    },
+    {
+      "file": "wc-close-print-1200.webp",
+      "width": 1200,
+      "height": 1500,
+      "bytes": 49164,
+      "sha256": "83972615710ba2ae63b5eff8d38855440196c6ff1e3853ec6e9f2ebbaaed8eb6"
+    },
+    {
+      "file": "wc-close-print-1200.jpg",
+      "width": 1200,
+      "height": 1500,
+      "bytes": 132137,
+      "sha256": "3ba6725562ca0f6fe3bf3e39a0f883324311bed550a9ff5db4f9b147a346e2e5"
+    }
+  ]
+}

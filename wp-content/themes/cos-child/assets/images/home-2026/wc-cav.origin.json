@@ -1,0 +1,319 @@
+{
+  "date": "2026-10-18",
+  "scope": "Caviar section (hxv): editorial spread, heap macro (whole) + one-pearl detail cut from the same master (round 2)",
+  "paths_relative_to": "WordPress public directory",
+  "source_kind": "Owner-supplied caviar macro photographs (no packaging in frame)",
+  "sources": {
+    "heap": {
+      "path": "../design-sources/home-2026/caviar-backlit-macro-2_master.png",
+      "sha256": "80ddb58fe128fbf64c2a875d5f06338f85685d94be065f0ce12c6c1782caab4d",
+      "bytes": 4009156,
+      "dimensions": [
+        3000,
+        2000
+      ],
+      "kind": "owner photograph"
+    }
+  },
+  "builder": {
+    "path": "../design-sources/home-2026/build_wc_caviar.py",
+    "sha256": "2c4129cf38c7987f955d240fd42ae0ee95f0fb47f6d23507cf6a97cf5cd8a52b"
+  },
+  "transformation": {
+    "operations": [
+      "Per-channel multiply mapping the photograph light field (244,240,235) to #EDECE8 (one cool shade under --hx-white #FBFAF7)",
+      "Floor-only highlight roll-off (mask: 40px-blurred luminance 0.80-0.92): values above #EDECE8 compressed to 40%; pearl speculars untouched",
+      "Heap: shadows +10*(1-v)^2, mids warmed R+4 G+1.5 B-3",
+      "Crops: heap x0-2400 y0-2000 (6:5); heap-tall x60-1660 y0-2000 (4:5); glass x690-1490 y890-1890 (same heap master: the loose front pearl and its reflection) (4:5)",
+      "Lanczos downscale only (never upscaled)"
+    ],
+    "generative_content": false,
+    "format_settings": {
+      "avif": {
+        "quality": 64,
+        "speed": 4
+      },
+      "webp": {
+        "quality": 84,
+        "method": 6
+      },
+      "jpg": {
+        "quality": 86,
+        "optimize": true,
+        "progressive": true
+      }
+    }
+  },
+  "derivatives": [
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-cav-heap-1200.avif",
+      "sha256": "6f707902e9878246d9ad8304d7a2f502bfa442b0e886c77def6d77a3feb91311",
+      "bytes": 36722,
+      "dimensions": [
+        1200,
+        1000
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-cav-heap-1200.webp",
+      "sha256": "4af81392bdd241096b9a4439a7702821af590a6a6d177e7559202994daee13e6",
+      "bytes": 48654,
+      "dimensions": [
+        1200,
+        1000
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-cav-heap-1200.jpg",
+      "sha256": "2910481e52d980ef2bbc9d3492ac4f162cadeb9622c79f58cf0696c5748a818c",
+      "bytes": 101254,
+      "dimensions": [
+        1200,
+        1000
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-cav-heap-1800.avif",
+      "sha256": "606d861c276873aa45921c6733ed0a8e85f6fb42d636a41b3820e64db03022b1",
+      "bytes": 57893,
+      "dimensions": [
+        1800,
+        1500
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-cav-heap-1800.webp",
+      "sha256": "142437168679bf6d78bde56d43a75778d9267f3ccdf3910f8bea48c67e3cf8cd",
+      "bytes": 79988,
+      "dimensions": [
+        1800,
+        1500
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-cav-heap-1800.jpg",
+      "sha256": "eead217f9791307e4f730d6d0fedd82d718ca080e4ff1eb29669f605187c4a6c",
+      "bytes": 185969,
+      "dimensions": [
+        1800,
+        1500
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-cav-heap-2400.avif",
+      "sha256": "d1267358ebff250e1bde4c81b6aaca6b493dd189e7bb3225ab4ede92450b596e",
+      "bytes": 80457,
+      "dimensions": [
+        2400,
+        2000
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-cav-heap-2400.webp",
+      "sha256": "1d0a88052af3d84f22ab66f6f48ef3e5932e00b72b01903b9771f675be8ef162",
+      "bytes": 112060,
+      "dimensions": [
+        2400,
+        2000
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-cav-heap-2400.jpg",
+      "sha256": "949a149a1d670b83289af75fe228950ab1546886299d9dce21ce1d0e2557da21",
+      "bytes": 289054,
+      "dimensions": [
+        2400,
+        2000
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-cav-heap-tall-640.avif",
+      "sha256": "d832e42aecb7c7e78bdaf3ddd5aab91d2a537a54cf0f5c4e339f3458f54a023c",
+      "bytes": 14492,
+      "dimensions": [
+        640,
+        800
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-cav-heap-tall-640.webp",
+      "sha256": "63603a6785322e1686ab80243f4fd0ed8ad5acb97c7870dff1213900ee2d85da",
+      "bytes": 18922,
+      "dimensions": [
+        640,
+        800
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-cav-heap-tall-640.jpg",
+      "sha256": "eaac1935902a6af370ee7016a91972d4641033e15a552d21dbdae7eb50041997",
+      "bytes": 39960,
+      "dimensions": [
+        640,
+        800
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-cav-heap-tall-960.avif",
+      "sha256": "b2c4206dc107b47fa4b6fb5442ff98b9e5193c795e77211a2d1119d147a7406f",
+      "bytes": 23154,
+      "dimensions": [
+        960,
+        1200
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-cav-heap-tall-960.webp",
+      "sha256": "d83d171110dc7770002365d31c79d33510c864525b665934f1a3e9a273fbe4f6",
+      "bytes": 31046,
+      "dimensions": [
+        960,
+        1200
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-cav-heap-tall-960.jpg",
+      "sha256": "b8527517b5d673057949fb7476a9adcf61fb1a162cfb87d741d24c162e1a7484",
+      "bytes": 73004,
+      "dimensions": [
+        960,
+        1200
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-cav-heap-tall-1290.avif",
+      "sha256": "a632455477a61765b696967b88cecbb0270893011aed5883aa6a92612b00eb04",
+      "bytes": 32678,
+      "dimensions": [
+        1290,
+        1612
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-cav-heap-tall-1290.webp",
+      "sha256": "17264d2bcf9299f72e0b29d255b99a4c4fcbbe11e4b1612cfea4ec99d15dd85c",
+      "bytes": 45258,
+      "dimensions": [
+        1290,
+        1612
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-cav-heap-tall-1290.jpg",
+      "sha256": "fb0f96cffc6577731fe74637bc881a30e40099b80e02403618f82bd38e49e21e",
+      "bytes": 115789,
+      "dimensions": [
+        1290,
+        1612
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-cav-heap-tall-1600.avif",
+      "sha256": "7061c0e05e36129430a6a7d2bc9004bb0ced8be48bb88f76d647c598a1e8e454",
+      "bytes": 41522,
+      "dimensions": [
+        1600,
+        2000
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-cav-heap-tall-1600.webp",
+      "sha256": "d22a34dbf56309c8b21a9b683c5f4915a14a5f3d383c5f7e7c8f93fe04b28a58",
+      "bytes": 59172,
+      "dimensions": [
+        1600,
+        2000
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-cav-heap-tall-1600.jpg",
+      "sha256": "a48b2bd269c8018c9505a879101058f321667a685f5448f57adb67a67a66a1d7",
+      "bytes": 161408,
+      "dimensions": [
+        1600,
+        2000
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-cav-glass-480.avif",
+      "sha256": "83869704f52f7ba61f35cd5bcfea5b76e8c6a24a7ea7b307eacc3413a8fa156a",
+      "bytes": 11561,
+      "dimensions": [
+        480,
+        600
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-cav-glass-480.webp",
+      "sha256": "bfca5dfe7c5cf9e5063bf8eebc797d7cbe6e8471d3129005df8eab3fbdd6ead5",
+      "bytes": 14780,
+      "dimensions": [
+        480,
+        600
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-cav-glass-480.jpg",
+      "sha256": "8ce4007a90e568722b8a148ec984222ba99df1b79a88307b04dd6c10d64fe63d",
+      "bytes": 31638,
+      "dimensions": [
+        480,
+        600
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-cav-glass-640.avif",
+      "sha256": "93b06d032534a409d5bcffa32fd8c64b7d450e769cee3462231951313ef8ee7a",
+      "bytes": 15486,
+      "dimensions": [
+        640,
+        800
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-cav-glass-640.webp",
+      "sha256": "e4dc84b885bdc10639bc112e92f7d01b7d96bdbc92809b38e77e9c0269de809f",
+      "bytes": 20448,
+      "dimensions": [
+        640,
+        800
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-cav-glass-640.jpg",
+      "sha256": "5e9de42e1c961f6bd0d620c4178225efc512ebe08a779e2392557182220c0b7c",
+      "bytes": 48255,
+      "dimensions": [
+        640,
+        800
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-cav-glass-800.avif",
+      "sha256": "cffc99cf511c28dffc063c1ea6bb8d89cb846cf50ee559b0d3068ede12a30437",
+      "bytes": 20028,
+      "dimensions": [
+        800,
+        1000
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-cav-glass-800.webp",
+      "sha256": "8dab5a78fc52f076094762179a2ab624adebd530e20faaf60ff93ffe3c020e58",
+      "bytes": 27076,
+      "dimensions": [
+        800,
+        1000
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-cav-glass-800.jpg",
+      "sha256": "bd6a2ecb6a0f6b3ba15e3763b06c0c70d7aa072b3971c20a8d352bee5f8a8f4c",
+      "bytes": 66594,
+      "dimensions": [
+        800,
+        1000
+      ]
+    }
+  ]
+}

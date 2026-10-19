@@ -50,13 +50,14 @@ body.hxco-page{background:var(--hx-pearl)}
 .hxco-notices:empty{display:none}
 .hxco.hxco :is(.woocommerce-error,.woocommerce-message,.woocommerce-info,.wc-block-components-notice-banner){
 	display:flex;align-items:flex-start;gap:var(--hx-s-3);
-	margin:0 0 var(--hx-s-4);padding:16px 20px;
-	background:var(--hxco-panel);border:0;border-left:2px solid var(--hx-chrome);border-radius:0;
+	margin:0 0 var(--hx-s-4);padding:16px 20px!important;
+	background:var(--hxco-panel);border:0!important;border-radius:0;
 	font-family:var(--hx-sans);font-size:15px;font-weight:400;line-height:1.55;color:var(--hx-text);
 	list-style:none;box-shadow:none;
 }
-.hxco :is(.woocommerce-error,.wc-block-components-notice-banner.is-error){border-left-color:var(--hxco-error)}
-.hxco :is(.woocommerce-message,.wc-block-components-notice-banner.is-success){border-left-color:var(--hx-accent)}
+/* tone, not a side tab: errors sit on a faint warm tint with the message in the error ink */
+.hxco.hxco :is(.woocommerce-error,.wc-block-components-notice-banner.is-error){background:#F7F0EC;color:var(--hxco-error)}
+.hxco.hxco :is(.woocommerce-error,.wc-block-components-notice-banner.is-error) :is(strong,a){color:var(--hxco-error)}
 .hxco .wc-block-components-notice-banner > svg{display:none}
 .hxco .wc-block-components-notice-banner__content{flex:1;min-width:0}
 .hxco .wc-block-components-notice-banner__content ul,.hxco ul.woocommerce-error{margin:0;padding:0;list-style:none;display:grid;gap:4px}
@@ -129,7 +130,7 @@ a.hxco-line__thumb:hover{opacity:.9}
 @media (max-width:599.98px){
 	.hxco-line{grid-template-columns:96px minmax(0,1fr);grid-template-areas:"thumb step" "thumb name" "thumb meta" "thumb price" "thumb ." "act act";grid-template-rows:auto auto auto auto 1fr auto;row-gap:4px;align-content:start}
 	.hxco-line__body{display:contents}
-	.hxco-line__thumb{grid-area:thumb;grid-row:auto;align-self:start}
+	.hxco-line__thumb{grid-area:thumb;align-self:start}
 	.hxco-line__step{grid-area:step;margin:0}
 	.hxco-line__name{grid-area:name}
 	.hxco-line__meta{grid-area:meta}
@@ -206,7 +207,7 @@ a.hxco-line__thumb:hover{opacity:.9}
 
 /* coupon toggle: one quiet line, not a banner */
 .hxco.hxco .woocommerce-form-coupon-toggle{margin:0 0 var(--hx-s-5)}
-.hxco.hxco .woocommerce-form-coupon-toggle :is(.woocommerce-info,.wc-block-components-notice-banner){display:block;padding:0;background:none;border:0;font-size:15px;color:var(--hx-text)}
+.hxco.hxco .woocommerce-form-coupon-toggle :is(.woocommerce-info,.wc-block-components-notice-banner){display:block;padding:0!important;margin:0;background:none;border:0!important;font-size:15px;color:var(--hx-text)}
 .hxco.hxco .woocommerce-form-coupon-toggle .wc-block-components-notice-banner__content{padding:0;margin:0}
 .hxco.hxco .woocommerce-form-coupon-toggle .showcoupon{display:inline-flex;align-items:center;min-height:44px;margin-left:4px;color:var(--hx-ink);text-decoration:underline;text-decoration-color:var(--hx-line-strong);text-decoration-thickness:1px;text-underline-offset:4px}
 .hxco.hxco .woocommerce-form-coupon-toggle .showcoupon:hover{text-decoration-color:currentColor}

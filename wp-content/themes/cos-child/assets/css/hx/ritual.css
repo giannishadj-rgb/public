@@ -58,7 +58,7 @@ body.cos-h26 .hxr__lede{
 	margin:var(--hx-stack) 0 0;
 	font-family:var(--hx-sans);
 	font-size:var(--hx-fs-body);
-	font-weight:300;
+	font-weight:400;
 	line-height:var(--hx-lh-lead);
 	color:var(--hx-text);
 	text-wrap:balance;
@@ -318,10 +318,9 @@ body.cos-h26 .hxr__link:focus-visible .hxr__frame::after{
 		max-width:28ch;
 		text-wrap:balance;
 		margin-top:var(--hx-s-4);
-		/* light type on a dark shade blooms (irradiation) and reads a step heavier than the
-		   same weight on ivory; 360 on the variable Inter matches the optical weight of the
-		   page's 400 captions. No shadow, no synthesis. */
-		font-weight:360;
+		/* Regular Inter holds its shape over the photograph at this reading size.
+		   No shadow or synthetic weight. */
+		font-weight:400;
 		font-synthesis:none;
 		line-height:1.6;
 		letter-spacing:.01em;

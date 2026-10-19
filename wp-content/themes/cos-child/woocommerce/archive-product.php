@@ -3,11 +3,11 @@
  * COS — WooCommerce Shop Archive (/shop/). Whole-site rebuild, 16 Oct 2026 (prefix hxshop-).
  *
  * Same world as the homepage Collection: the four formulas stand free as objects on the
- * pearl-white ground (owner flat-lays, collection-object-*), with The Complete Ritual offered
+ * pearl-white ground (pack-* single-product canvases from the May 2021 studio photograph), with The Complete Ritual offered
  * on the owner's silver-tray photograph. Order:
  *   1. Hero — owner's glass-blocks photograph CAV59851 (owner pick 27 Sep), light; quiet link to the formulas.
- *   2. The Complete Ritual (#cos-ritual) — real price + saving from WooCommerce.
- *   3. The four formulas (#cos-products) — step, name, one benefit, size, price, add to bag.
+ *   2. The four formulas (#cos-products) — step, name, one benefit, size, price, add to bag.
+ *   3. The Complete Ritual (#cos-ritual) — real price + saving from WooCommerce.
  *   4. "About the collection" (category copy, native <details>); services sit in the footer.
  * Styles: assets/css/hx/shop.css (enqueued below, shop only). Tokens/utilities: hx/system.css.
  * Legacy hook classes kept for analytics/tests: cos-shop-hero-eyebrow, cos-shop-hero-img,
@@ -123,9 +123,8 @@ foreach ( array(
 		</div>
 		<div class="hx-wrap hxshop-hero__wrap">
 			<div class="hxshop-hero__copy">
-				<p class="hx-label hxshop-hero__label cos-shop-hero-eyebrow hx-load-fade" style="--hx-i:0">The Collection</p>
 				<h1 id="hxshop-title" class="hx-display hxshop-hero__title hx-load-rise" style="--hx-i:1">Swiss caviar skincare</h1>
-				<p class="hx-lead hxshop-hero__lede hx-load-rise" style="--hx-i:2">Four formulas, each made for one precise step, and The Complete Ritual that unites them.</p>
+				<p class="hx-lead hxshop-hero__lede hx-load-rise" style="--hx-i:2">Four formulas. One complete ritual.</p>
 				<div class="hxshop-hero__cta hx-load-rise" style="--hx-i:3">
 					<a href="#cos-products" class="hx-link hxshop-hero__link" data-cro-cta="shop-hero-primary">View the four formulas<span class="hx-arrow hxshop-hero__down" aria-hidden="true"></span></a>
 				</div>
@@ -137,7 +136,69 @@ foreach ( array(
 	<div class="hx-wrap hxshop-notices"><?php woocommerce_output_all_notices(); ?></div>
 	<?php endif; ?>
 
-	<!-- 2. The Complete Ritual -->
+	<!-- 2. The four formulas -->
+	<section class="hxshop-list" id="cos-products" aria-labelledby="hxshop-list-title">
+		<div class="hx-wrap">
+			<header class="hxshop-list__head">
+				<h2 id="hxshop-list-title" class="hx-heading hxshop-list__title" data-hx-reveal>The four formulas</h2>
+				<p class="hx-lead hxshop-list__lede" data-hx-reveal data-hx-delay="160">Each made for one step, each complete on its own. Choose one, or follow all four.</p>
+			</header>
+			<ol class="hxshop-list__items" data-hx-stagger>
+				<?php foreach ( $individual as $product ) :
+					$slug    = $product->get_slug();
+					$d       = $h26[ $slug ] ?? null;
+					$key     = $objects[ $slug ] ?? '';
+					$url     = get_permalink( $product->get_id() );
+					$name    = $product->get_name();
+					$can_buy = $product->is_type( 'simple' ) && $product->is_purchasable() && $product->is_in_stock();
+					$size    = $d['size'] ?? '';
+					if ( ! $size ) {
+						foreach ( $product->get_attributes() as $attr ) {
+							if ( strtolower( $attr->get_name() ) === 'size' ) { $size = $attr->get_options()[0] ?? ''; break; }
+						}
+					}
+					?>
+				<li class="hxshop-item cos-card" data-hx-reveal>
+					<a class="hxshop-item__stage cos-select-item" href="<?php echo esc_url( $url ); ?>" data-product_id="<?php echo esc_attr( $product->get_id() ); ?>" tabindex="-1" aria-hidden="true">
+						<?php
+						if ( $key ) {
+							echo cos_h26_picture( 'pack-' . $key, array( 480, 720, 960 ), array( 2, 3 ), '', array( 'class' => 'hxshop-item__object', 'sizes' => '(min-width: 1100px) min(24vw, 360px), (min-width: 640px) 300px, 46vw', 'w' => 720 ) );
+						} else {
+							echo $product->get_image( 'woocommerce_single', array( 'class' => 'hxshop-item__wcimg', 'alt' => '' ) ); // phpcs:ignore
+						}
+						?>
+					</a>
+					<?php if ( $d ) : ?>
+					<p class="hxshop-item__step"><span class="hx-sr">Step </span><span class="hxshop-item__num"><?php echo esc_html( $d['num'] ); ?></span><span class="hxshop-item__verb"><?php echo esc_html( $d['verb'] ); ?></span></p>
+					<?php else : ?>
+					<p class="hxshop-item__step" aria-hidden="true"></p>
+					<?php endif; ?>
+					<h3 class="hxshop-item__name">
+						<a class="cos-select-item" href="<?php echo esc_url( $url ); ?>" data-product_id="<?php echo esc_attr( $product->get_id() ); ?>">
+							<?php if ( $d ) : ?><span><?php echo $nb( $d['name'][0] ); ?></span> <span><?php echo $nb( $d['name'][1] ); ?></span><?php else : echo esc_html( $name ); endif; ?>
+						</a>
+					</h3>
+					<p class="hxshop-item__benefit"><?php echo $d ? $nb( $d['benefit'] ) : esc_html( wp_trim_words( wp_strip_all_tags( $product->get_short_description() ), 10, '…' ) ); ?></p>
+					<p class="hxshop-item__meta">
+						<span class="hxshop-item__price"><?php echo wp_kses_post( wc_price( (float) $product->get_price() ) ); ?></span>
+						<?php if ( $size ) : ?><span class="hxshop-item__dot" aria-hidden="true"></span><span class="hx-sr"> for </span><span class="hxshop-item__size"><?php echo esc_html( $size ); ?></span><?php endif; ?>
+					</p>
+					<div class="hxshop-item__actions">
+						<?php if ( $can_buy ) : ?>
+						<a href="<?php echo esc_url( add_query_arg( 'add-to-cart', $product->get_id(), wc_get_cart_url() ) ); ?>" class="hxshop-item__add hxshop-add cos-card-btn add_to_cart_button ajax_add_to_cart" data-product_id="<?php echo esc_attr( $product->get_id() ); ?>" data-product_sku="<?php echo esc_attr( $product->get_sku() ); ?>" data-quantity="1" data-hxshop-name="<?php echo esc_attr( $name ); ?>" aria-label="<?php echo esc_attr( sprintf( 'Add %s to bag', $name ) ); ?>" rel="nofollow"><span class="hxshop-add__label">Add to bag</span></a>
+						<?php elseif ( ! $product->is_in_stock() ) : ?>
+						<p class="hx-detail hxshop-unavailable">Currently unavailable</p>
+						<?php else : ?>
+						<a href="<?php echo esc_url( $url ); ?>" class="hxshop-item__add">Choose<span class="hx-sr"> <?php echo esc_html( $name ); ?></span></a>
+						<?php endif; ?>
+					</div>
+				</li>
+				<?php endforeach; ?>
+			</ol>
+		</div>
+	</section>
+
+	<!-- 3. The Complete Ritual -->
 	<?php if ( $bundle ) :
 		$bundle_url     = get_permalink( $bundle->get_id() );
 		$bundle_atc_url = add_query_arg( 'add-to-cart', $bundle->get_id(), wc_get_cart_url() );
@@ -164,7 +225,7 @@ foreach ( array(
 				<div class="hxshop-ritual__price" data-hx-reveal>
 					<span class="hxshop-ritual__amount"><span class="hx-sr">Price: </span><?php echo wp_kses_post( wc_price( $bundle_price ) ); ?></span>
 					<?php if ( $bundle_saving > 0 ) : ?>
-					<span class="hxshop-ritual__compare"><?php echo wp_kses_post( wc_price( $separate_total ) ); ?> bought separately<span class="hxshop-ritual__sep" aria-hidden="true"></span><span class="hxshop-ritual__save">you save <?php echo wp_kses_post( wc_price( $bundle_saving ) ); ?></span></span>
+					<span class="hxshop-ritual__compare"><?php echo wp_kses_post( wc_price( $separate_total ) ); ?> bought separately<span class="hxshop-ritual__sep" aria-hidden="true"></span><span class="hx-sr">; </span><span class="hxshop-ritual__save">you save <?php echo wp_kses_post( wc_price( $bundle_saving ) ); ?></span></span>
 					<?php endif; ?>
 				</div>
 				<div class="hxshop-ritual__actions" data-hx-reveal>
@@ -180,68 +241,6 @@ foreach ( array(
 		</div>
 	</section>
 	<?php endif; ?>
-
-	<!-- 3. The four formulas -->
-	<section class="hxshop-list" id="cos-products" aria-labelledby="hxshop-list-title">
-		<div class="hx-wrap">
-			<header class="hxshop-list__head">
-				<h2 id="hxshop-list-title" class="hx-heading hxshop-list__title" data-hx-reveal>The four formulas</h2>
-				<p class="hx-lead hxshop-list__lede" data-hx-reveal data-hx-delay="160">Each made for one step, each complete on its own. Choose one, or follow all four.</p>
-			</header>
-			<ol class="hxshop-list__items" data-hx-stagger>
-				<?php foreach ( $individual as $product ) :
-					$slug    = $product->get_slug();
-					$d       = $h26[ $slug ] ?? null;
-					$key     = $objects[ $slug ] ?? '';
-					$url     = get_permalink( $product->get_id() );
-					$name    = $product->get_name();
-					$can_buy = $product->is_type( 'simple' ) && $product->is_purchasable() && $product->is_in_stock();
-					$size    = $d['size'] ?? '';
-					if ( ! $size ) {
-						foreach ( $product->get_attributes() as $attr ) {
-							if ( strtolower( $attr->get_name() ) === 'size' ) { $size = $attr->get_options()[0] ?? ''; break; }
-						}
-					}
-					?>
-				<li class="hxshop-item cos-card" data-hx-reveal>
-					<a class="hxshop-item__stage cos-select-item" href="<?php echo esc_url( $url ); ?>" data-product_id="<?php echo esc_attr( $product->get_id() ); ?>" tabindex="-1" aria-hidden="true">
-						<?php
-						if ( $key ) {
-							echo cos_h26_picture( 'collection-object-' . $key, array( 480, 720, 960 ), array( 2, 3 ), '', array( 'class' => 'hxshop-item__object', 'sizes' => '(min-width: 1100px) min(24vw, 360px), (min-width: 640px) 300px, 46vw', 'w' => 720 ) );
-						} else {
-							echo $product->get_image( 'woocommerce_single', array( 'class' => 'hxshop-item__wcimg', 'alt' => '' ) ); // phpcs:ignore
-						}
-						?>
-					</a>
-					<?php if ( $d ) : ?>
-					<p class="hxshop-item__step"><span class="hx-sr">Step </span><span class="hxshop-item__num"><?php echo esc_html( $d['num'] ); ?></span><span class="hxshop-item__verb"><?php echo esc_html( $d['verb'] ); ?></span></p>
-					<?php else : ?>
-					<p class="hxshop-item__step" aria-hidden="true"></p>
-					<?php endif; ?>
-					<h3 class="hxshop-item__name">
-						<a class="cos-select-item" href="<?php echo esc_url( $url ); ?>" data-product_id="<?php echo esc_attr( $product->get_id() ); ?>">
-							<?php if ( $d ) : ?><span><?php echo $nb( $d['name'][0] ); ?></span> <span><?php echo $nb( $d['name'][1] ); ?></span><?php else : echo esc_html( $name ); endif; ?>
-						</a>
-					</h3>
-					<p class="hxshop-item__benefit"><?php echo $d ? $nb( $d['benefit'] ) : esc_html( wp_trim_words( wp_strip_all_tags( $product->get_short_description() ), 10, '…' ) ); ?></p>
-					<p class="hxshop-item__meta">
-						<span class="hxshop-item__price"><?php echo wp_kses_post( wc_price( (float) $product->get_price() ) ); ?></span>
-						<?php if ( $size ) : ?><span class="hxshop-item__dot" aria-hidden="true"></span><span class="hx-sr">, </span><span class="hxshop-item__size"><?php echo esc_html( $size ); ?></span><?php endif; ?>
-					</p>
-					<div class="hxshop-item__actions">
-						<?php if ( $can_buy ) : ?>
-						<a href="<?php echo esc_url( add_query_arg( 'add-to-cart', $product->get_id(), wc_get_cart_url() ) ); ?>" class="hxshop-item__add hxshop-add cos-card-btn add_to_cart_button ajax_add_to_cart" data-product_id="<?php echo esc_attr( $product->get_id() ); ?>" data-product_sku="<?php echo esc_attr( $product->get_sku() ); ?>" data-quantity="1" data-hxshop-name="<?php echo esc_attr( $name ); ?>" aria-label="<?php echo esc_attr( sprintf( 'Add %s to bag', $name ) ); ?>" rel="nofollow"><span class="hxshop-add__label">Add to bag</span></a>
-						<?php elseif ( ! $product->is_in_stock() ) : ?>
-						<p class="hx-detail hxshop-unavailable">Currently unavailable</p>
-						<?php else : ?>
-						<a href="<?php echo esc_url( $url ); ?>" class="hxshop-item__add">Choose<span class="hx-sr"> <?php echo esc_html( $name ); ?></span></a>
-						<?php endif; ?>
-					</div>
-				</li>
-				<?php endforeach; ?>
-			</ol>
-		</div>
-	</section>
 
 	<!-- 4. About the collection (services live in the sitewide footer) -->
 	<section class="hxshop-about" aria-labelledby="hxshop-about-title">

@@ -1,7 +1,7 @@
 <?php
 /**
  * The Ritual — the Complete Ritual offer (hxrt-offer), the page's ONE primary action.
- * The four formulas stand as objects (collection-object-*, the homepage Collection's
+ * The four formulas stand as objects (pack-*, single-product canvases cut like the homepage Collection's
  * transparent packshots; never altered). Price, the separate total and the saving are live
  * WooCommerce prices (page-the-ritual.php); the saving line only shows when it is real.
  * What is included: the bundle data in inc/product-data.php (COS-BUNDLE).
@@ -16,7 +16,7 @@ $o     = $args['offer'] ?? array();
 		<ol class="hxrt-offer__objects" aria-label="Included" data-hx-stagger>
 			<?php foreach ( $steps as $s ) : ?>
 			<li class="hxrt-offer__object" data-hx-reveal>
-				<?php echo cos_h26_picture( 'collection-object-' . $s['key'], array( 480, 720, 960 ), array( 2, 3 ), $s['cardalt'], array( 'class' => 'hxrt-offer__pic', 'sizes' => '(min-width: 900px) 13vw, 24vw', 'w' => 480 ) ); ?>
+				<?php echo cos_h26_picture( 'pack-' . $s['key'], array( 480, 720, 960 ), array( 2, 3 ), $s['cardalt'], array( 'class' => 'hxrt-offer__pic', 'sizes' => '(min-width: 900px) 13vw, 24vw', 'w' => 480 ) ); ?>
 				<span class="hxrt-offer__cap"><span class="hxrt-offer__num"><?php echo esc_html( $s['num'] ); ?></span> <?php echo esc_html( $s['verb'] ); ?></span>
 			</li>
 			<?php endforeach; ?>

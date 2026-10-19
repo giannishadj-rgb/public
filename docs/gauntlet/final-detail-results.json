@@ -1,0 +1,506 @@
+{
+  "viewports": [
+    {
+      "width": 360,
+      "overflow": false,
+      "heroOffer": [
+        {
+          "class": "hx-btn hxh__cta",
+          "text": "Shop the ritual",
+          "rect": {
+            "x": 24,
+            "y": 268.71875,
+            "width": 138.125,
+            "height": 52,
+            "top": 268.71875,
+            "right": 162.125,
+            "bottom": 320.71875,
+            "left": 24
+          },
+          "scrollWidth": 136
+        },
+        {
+          "class": "hxh__inclusion",
+          "text": "Four full-size formulas · €450",
+          "rect": {
+            "x": 24,
+            "y": 345.796875,
+            "width": 139.984375,
+            "height": 45,
+            "top": 345.796875,
+            "right": 163.984375,
+            "bottom": 390.796875,
+            "left": 24
+          },
+          "scrollWidth": 140
+        },
+        {
+          "class": "hx-link hxh__explore",
+          "text": "Explore formulas",
+          "rect": {
+            "x": 24,
+            "y": 409.890625,
+            "width": 139.984375,
+            "height": 44,
+            "top": 409.890625,
+            "right": 163.984375,
+            "bottom": 453.890625,
+            "left": 24
+          },
+          "scrollWidth": 140
+        },
+        {
+          "class": "hxh__set",
+          "text": "",
+          "rect": {
+            "x": 175.984375,
+            "y": 261.1875,
+            "width": 160,
+            "height": 200.25,
+            "top": 261.1875,
+            "right": 335.984375,
+            "bottom": 461.4375,
+            "left": 175.984375
+          },
+          "scrollWidth": 160
+        }
+      ],
+      "closingLinks": [
+        {
+          "text": "Shop the Complete Ritual",
+          "height": 52,
+          "href": "http://caviarofswitzerland.local/products/the-complete-ritual/"
+        },
+        {
+          "text": "Explore the ritual, step by step",
+          "height": 44,
+          "href": "http://caviarofswitzerland.local/the-ritual/"
+        },
+        {
+          "text": "Free worldwide shipping",
+          "height": 44,
+          "href": "http://caviarofswitzerland.local/shipping-returns/"
+        },
+        {
+          "text": "30-day returns",
+          "height": 44,
+          "href": "http://caviarofswitzerland.local/shipping-returns/"
+        }
+      ],
+      "press": [
+        {
+          "text": "Michele Elyzabeth, LATF USA, 2022\n(opens in a new tab)",
+          "height": 44,
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "heroOffer": [
+        {
+          "class": "hx-btn hxh__cta",
+          "text": "Shop the ritual",
+          "rect": {
+            "x": 24,
+            "y": 273.03125,
+            "width": 138.125,
+            "height": 52,
+            "top": 273.03125,
+            "right": 162.125,
+            "bottom": 325.03125,
+            "left": 24
+          },
+          "scrollWidth": 136
+        },
+        {
+          "class": "hxh__inclusion",
+          "text": "Four full-size formulas · €450",
+          "rect": {
+            "x": 24,
+            "y": 350.109375,
+            "width": 169.984375,
+            "height": 45,
+            "top": 350.109375,
+            "right": 193.984375,
+            "bottom": 395.109375,
+            "left": 24
+          },
+          "scrollWidth": 170
+        },
+        {
+          "class": "hx-link hxh__explore",
+          "text": "Explore formulas",
+          "rect": {
+            "x": 24,
+            "y": 414.203125,
+            "width": 165.703125,
+            "height": 44,
+            "top": 414.203125,
+            "right": 189.703125,
+            "bottom": 458.203125,
+            "left": 24
+          },
+          "scrollWidth": 166
+        },
+        {
+          "class": "hxh__set",
+          "text": "",
+          "rect": {
+            "x": 205.984375,
+            "y": 265.5,
+            "width": 160,
+            "height": 200.25,
+            "top": 265.5,
+            "right": 365.984375,
+            "bottom": 465.75,
+            "left": 205.984375
+          },
+          "scrollWidth": 160
+        }
+      ],
+      "closingLinks": [
+        {
+          "text": "Shop the Complete Ritual",
+          "height": 52,
+          "href": "http://caviarofswitzerland.local/products/the-complete-ritual/"
+        },
+        {
+          "text": "Explore the ritual, step by step",
+          "height": 44,
+          "href": "http://caviarofswitzerland.local/the-ritual/"
+        },
+        {
+          "text": "Free worldwide shipping",
+          "height": 44,
+          "href": "http://caviarofswitzerland.local/shipping-returns/"
+        },
+        {
+          "text": "30-day returns",
+          "height": 44,
+          "href": "http://caviarofswitzerland.local/shipping-returns/"
+        }
+      ],
+      "press": [
+        {
+          "text": "Michele Elyzabeth, LATF USA, 2022\n(opens in a new tab)",
+          "height": 44,
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ]
+    },
+    {
+      "width": 600,
+      "overflow": false,
+      "heroOffer": [
+        {
+          "class": "hx-btn hxh__cta",
+          "text": "Shop the ritual",
+          "rect": {
+            "x": 48,
+            "y": 337.40625,
+            "width": 138.125,
+            "height": 52,
+            "top": 337.40625,
+            "right": 186.125,
+            "bottom": 389.40625,
+            "left": 48
+          },
+          "scrollWidth": 136
+        },
+        {
+          "class": "hxh__inclusion",
+          "text": "Four full-size formulas · €450",
+          "rect": {
+            "x": 48,
+            "y": 421.984375,
+            "width": 255,
+            "height": 22.5,
+            "top": 421.984375,
+            "right": 303,
+            "bottom": 444.484375,
+            "left": 48
+          },
+          "scrollWidth": 255
+        },
+        {
+          "class": "hx-link hxh__explore",
+          "text": "Explore formulas",
+          "rect": {
+            "x": 48,
+            "y": 471.078125,
+            "width": 165.703125,
+            "height": 44,
+            "top": 471.078125,
+            "right": 213.703125,
+            "bottom": 515.078125,
+            "left": 48
+          },
+          "scrollWidth": 166
+        },
+        {
+          "class": "hxh__set",
+          "text": "",
+          "rect": {
+            "x": 392,
+            "y": 326.125,
+            "width": 160,
+            "height": 200.25,
+            "top": 326.125,
+            "right": 552,
+            "bottom": 526.375,
+            "left": 392
+          },
+          "scrollWidth": 160
+        }
+      ],
+      "closingLinks": [
+        {
+          "text": "Shop the Complete Ritual",
+          "height": 52,
+          "href": "http://caviarofswitzerland.local/products/the-complete-ritual/"
+        },
+        {
+          "text": "Explore the ritual, step by step",
+          "height": 44,
+          "href": "http://caviarofswitzerland.local/the-ritual/"
+        },
+        {
+          "text": "Free worldwide shipping",
+          "height": 44,
+          "href": "http://caviarofswitzerland.local/shipping-returns/"
+        },
+        {
+          "text": "30-day returns",
+          "height": 44,
+          "href": "http://caviarofswitzerland.local/shipping-returns/"
+        }
+      ],
+      "press": [
+        {
+          "text": "Michele Elyzabeth, LATF USA, 2022\n(opens in a new tab)",
+          "height": 44,
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "heroOffer": [
+        {
+          "class": "hx-btn hxh__cta",
+          "text": "Shop the ritual",
+          "rect": {
+            "x": 385.265625,
+            "y": 328.90625,
+            "width": 130.125,
+            "height": 52,
+            "top": 328.90625,
+            "right": 515.390625,
+            "bottom": 380.90625,
+            "left": 385.265625
+          },
+          "scrollWidth": 128
+        },
+        {
+          "class": "hxh__inclusion",
+          "text": "Four full-size formulas · €450",
+          "rect": {
+            "x": 385.265625,
+            "y": 390.90625,
+            "width": 188.71875,
+            "height": 45,
+            "top": 390.90625,
+            "right": 573.984375,
+            "bottom": 435.90625,
+            "left": 385.265625
+          },
+          "scrollWidth": 189
+        },
+        {
+          "class": "hx-link hxh__explore",
+          "text": "Explore formulas",
+          "rect": {
+            "x": 385.265625,
+            "y": 439.90625,
+            "width": 169.703125,
+            "height": 44,
+            "top": 439.90625,
+            "right": 554.96875,
+            "bottom": 483.90625,
+            "left": 385.265625
+          },
+          "scrollWidth": 170
+        },
+        {
+          "class": "hxh__set",
+          "text": "",
+          "rect": {
+            "x": 585.984375,
+            "y": 243.03125,
+            "width": 150,
+            "height": 187.734375,
+            "top": 243.03125,
+            "right": 735.984375,
+            "bottom": 430.765625,
+            "left": 585.984375
+          },
+          "scrollWidth": 150
+        }
+      ],
+      "closingLinks": [
+        {
+          "text": "Shop the Complete Ritual",
+          "height": 52,
+          "href": "http://caviarofswitzerland.local/products/the-complete-ritual/"
+        },
+        {
+          "text": "Explore the ritual, step by step",
+          "height": 44,
+          "href": "http://caviarofswitzerland.local/the-ritual/"
+        },
+        {
+          "text": "Free worldwide shipping",
+          "height": 44,
+          "href": "http://caviarofswitzerland.local/shipping-returns/"
+        },
+        {
+          "text": "30-day returns",
+          "height": 44,
+          "href": "http://caviarofswitzerland.local/shipping-returns/"
+        }
+      ],
+      "press": [
+        {
+          "text": "Michele Elyzabeth, LATF USA, 2022\n(opens in a new tab)",
+          "height": 44,
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "overflow": false,
+      "heroOffer": [
+        {
+          "class": "hx-btn hxh__cta",
+          "text": "Shop the ritual",
+          "rect": {
+            "x": 503.03125,
+            "y": 293.125,
+            "width": 130.125,
+            "height": 52,
+            "top": 293.125,
+            "right": 633.15625,
+            "bottom": 345.125,
+            "left": 503.03125
+          },
+          "scrollWidth": 128
+        },
+        {
+          "class": "hxh__inclusion",
+          "text": "Four full-size formulas · €450",
+          "rect": {
+            "x": 503.03125,
+            "y": 355.125,
+            "width": 255,
+            "height": 22.5,
+            "top": 355.125,
+            "right": 758.03125,
+            "bottom": 377.625,
+            "left": 503.03125
+          },
+          "scrollWidth": 255
+        },
+        {
+          "class": "hx-link hxh__explore",
+          "text": "Explore formulas",
+          "rect": {
+            "x": 503.03125,
+            "y": 381.625,
+            "width": 169.703125,
+            "height": 44,
+            "top": 381.625,
+            "right": 672.734375,
+            "bottom": 425.625,
+            "left": 503.03125
+          },
+          "scrollWidth": 170
+        },
+        {
+          "class": "hxh__set",
+          "text": "",
+          "rect": {
+            "x": 841.984375,
+            "y": 219.25,
+            "width": 150,
+            "height": 187.734375,
+            "top": 219.25,
+            "right": 991.984375,
+            "bottom": 406.984375,
+            "left": 841.984375
+          },
+          "scrollWidth": 150
+        }
+      ],
+      "closingLinks": [
+        {
+          "text": "Shop the Complete Ritual",
+          "height": 52,
+          "href": "http://caviarofswitzerland.local/products/the-complete-ritual/"
+        },
+        {
+          "text": "Explore the ritual, step by step",
+          "height": 44,
+          "href": "http://caviarofswitzerland.local/the-ritual/"
+        },
+        {
+          "text": "Free worldwide shipping",
+          "height": 44,
+          "href": "http://caviarofswitzerland.local/shipping-returns/"
+        },
+        {
+          "text": "30-day returns",
+          "height": 44,
+          "href": "http://caviarofswitzerland.local/shipping-returns/"
+        }
+      ],
+      "press": [
+        {
+          "text": "Michele Elyzabeth, LATF USA, 2022\n(opens in a new tab)",
+          "height": 44,
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ]
+    }
+  ],
+  "sourceAccessible": "- figure \"On the 24h Regeneration Cream Michele Elyzabeth, LATF USA, 2022 (opens in a new tab)\":\n  - blockquote:\n    - paragraph: “What I liked the most about this cream is its lightweight texture.”\n  - text: On the 24h Regeneration Cream\n  - link \"Michele Elyzabeth, LATF USA, 2022 (opens in a new tab)\":\n    - /url: https://www.latfusa.com/article/2022/07/caviar-for-your-skin",
+  "closingKeyboard": [
+    {
+      "text": "Shop the Complete Ritual",
+      "outline": "rgb(28, 29, 31) solid 2px"
+    },
+    {
+      "text": "Explore the ritual, step by step",
+      "outline": "rgb(28, 29, 31) solid 2px",
+      "href": "http://caviarofswitzerland.local/the-ritual/"
+    },
+    {
+      "text": "Free worldwide shipping",
+      "outline": "rgb(58, 59, 61) solid 3px",
+      "href": "http://caviarofswitzerland.local/shipping-returns/"
+    },
+    {
+      "text": "30-day returns",
+      "outline": "rgb(58, 59, 61) solid 3px",
+      "href": "http://caviarofswitzerland.local/shipping-returns/"
+    }
+  ]
+}

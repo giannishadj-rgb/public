@@ -1,0 +1,133 @@
+{
+  "shortHeights": [
+    {
+      "viewport": {
+        "width": 360,
+        "height": 640
+      },
+      "overflow": false,
+      "hero": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 640,
+        "top": 0,
+        "right": 360,
+        "bottom": 640,
+        "left": 0
+      },
+      "elements": [
+        {
+          "class": "hxh__title hx-display",
+          "text": "The Swiss art of\ncaviar skincare",
+          "rect": {
+            "x": 63.109375,
+            "y": 335.7859191894531,
+            "width": 233.78125,
+            "height": 79.03125,
+            "top": 335.7859191894531,
+            "right": 296.890625,
+            "bottom": 414.8171691894531,
+            "left": 63.109375
+          }
+        },
+        {
+          "class": "hxh__lead",
+          "text": "Four caviar formulas, one complete ritual.\nSwiss science, made in Zug.",
+          "rect": {
+            "x": 24,
+            "y": 426.8171691894531,
+            "width": 312,
+            "height": 74.390625,
+            "top": 426.8171691894531,
+            "right": 336,
+            "bottom": 501.2077941894531,
+            "left": 24
+          }
+        },
+        {
+          "class": "hxh__action",
+          "text": "Shop the Complete Ritual",
+          "rect": {
+            "x": 56.71875,
+            "y": 521.207763671875,
+            "width": 246.546875,
+            "height": 48,
+            "top": 521.207763671875,
+            "right": 303.265625,
+            "bottom": 569.207763671875,
+            "left": 56.71875
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "overflow": false,
+      "hero": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 800,
+        "top": 0,
+        "right": 360,
+        "bottom": 800,
+        "left": 0
+      },
+      "elements": [
+        {
+          "class": "hxh__title hx-display",
+          "text": "The Swiss art of\ncaviar skincare",
+          "rect": {
+            "x": 50.796875,
+            "y": 470.6927185058594,
+            "width": 258.390625,
+            "height": 87.34378051757812,
+            "top": 470.6927185058594,
+            "right": 309.1875,
+            "bottom": 558.0364990234375,
+            "left": 50.796875
+          }
+        },
+        {
+          "class": "hxh__lead",
+          "text": "Four caviar formulas, one complete ritual.\nSwiss science, made in Zug.",
+          "rect": {
+            "x": 24,
+            "y": 574.0364990234375,
+            "width": 312,
+            "height": 74.390625,
+            "top": 574.0364990234375,
+            "right": 336,
+            "bottom": 648.4271240234375,
+            "left": 24
+          }
+        },
+        {
+          "class": "hxh__action",
+          "text": "Shop the Complete Ritual",
+          "rect": {
+            "x": 56.71875,
+            "y": 672.4271240234375,
+            "width": 246.546875,
+            "height": 48,
+            "top": 672.4271240234375,
+            "right": 303.265625,
+            "bottom": 720.4271240234375,
+            "left": 56.71875
+          }
+        }
+      ]
+    }
+  ],
+  "webkit": {
+    "title": "Luxury Caviar Skincare Made in Switzerland | Caviar of Switzerland",
+    "overflow": false,
+    "h1": "The Swiss art of\ncaviar skincare",
+    "cta": true,
+    "menuOpen": "true"
+  }
+}

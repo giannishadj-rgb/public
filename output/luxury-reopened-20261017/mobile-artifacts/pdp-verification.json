@@ -1,0 +1,1826 @@
+{
+  "390-cream": {
+    "width": 390,
+    "viewport": 390,
+    "title": {
+      "text": "24h Regeneration Cream",
+      "x": 24,
+      "y": 135.59375,
+      "w": 342,
+      "h": 37.4375,
+      "display": "block"
+    },
+    "promise": {
+      "text": "A silky day-and-night cream that seals in lasting hydration and comfort.",
+      "x": 24,
+      "y": 185.03125,
+      "w": 342,
+      "h": 52.6875,
+      "display": "block"
+    },
+    "price": {
+      "text": "€150\n,\n50 ml",
+      "x": 24,
+      "y": 527.3125,
+      "w": 342,
+      "h": 28,
+      "display": "flex"
+    },
+    "form": {
+      "text": "Quantity\n−\n+\nAdd to bag",
+      "x": 24,
+      "y": 575.3125,
+      "w": 342,
+      "h": 52,
+      "display": "flex"
+    },
+    "bar": {
+      "text": "",
+      "x": 0,
+      "y": 667.4500122070312,
+      "w": 390,
+      "h": 69,
+      "display": "flex"
+    },
+    "qty": {
+      "text": "Quantity\n−\n+",
+      "x": 24,
+      "y": 575.3125,
+      "w": 126,
+      "h": 52,
+      "display": "flex"
+    },
+    "button": {
+      "text": "Add to bag",
+      "x": 160,
+      "y": 575.3125,
+      "w": 206,
+      "h": 52,
+      "display": "flex"
+    },
+    "main": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 6190.875,
+      "top": 0,
+      "right": 390,
+      "bottom": 6190.875,
+      "left": 0
+    }
+  },
+  "390-axe": [],
+  "text200-390-cream": {
+    "width": 390,
+    "viewport": 390,
+    "title": {
+      "text": "24h Regeneration Cream",
+      "x": 24,
+      "y": 194.375,
+      "w": 342,
+      "h": 224.625,
+      "display": "block"
+    },
+    "promise": {
+      "text": "A silky day-and-night cream that seals in lasting hydration and comfort.",
+      "x": 24,
+      "y": 431,
+      "w": 342,
+      "h": 210.796875,
+      "display": "block"
+    },
+    "price": {
+      "text": "€150\n,\n50 ml",
+      "x": 24,
+      "y": 931.390625,
+      "w": 342,
+      "h": 56,
+      "display": "flex"
+    },
+    "form": {
+      "text": "Quantity\n−\n+\nAdd to bag",
+      "x": 24,
+      "y": 1007.390625,
+      "w": 342,
+      "h": 129,
+      "display": "flex"
+    },
+    "bar": {
+      "text": "",
+      "x": 0,
+      "y": 672.2531127929688,
+      "w": 390,
+      "h": 167.796875,
+      "display": "flex"
+    },
+    "qty": {
+      "text": "Quantity\n−\n+",
+      "x": 24,
+      "y": 1007.390625,
+      "w": 126,
+      "h": 52,
+      "display": "flex"
+    },
+    "button": {
+      "text": "Add to bag",
+      "x": 24,
+      "y": 1069.390625,
+      "w": 342,
+      "h": 67,
+      "display": "flex"
+    },
+    "main": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 12203.234375,
+      "top": 0,
+      "right": 390,
+      "bottom": 12203.234375,
+      "left": 0
+    }
+  },
+  "text200-390-cream-form": {
+    "width": 390,
+    "viewport": 390,
+    "title": {
+      "text": "24h Regeneration Cream",
+      "x": 24,
+      "y": 194.375,
+      "w": 342,
+      "h": 224.625,
+      "display": "block"
+    },
+    "promise": {
+      "text": "A silky day-and-night cream that seals in lasting hydration and comfort.",
+      "x": 24,
+      "y": 431,
+      "w": 342,
+      "h": 210.796875,
+      "display": "block"
+    },
+    "price": {
+      "text": "€150\n,\n50 ml",
+      "x": 24,
+      "y": 931.390625,
+      "w": 342,
+      "h": 56,
+      "display": "flex"
+    },
+    "form": {
+      "text": "Quantity\n−\n+\nAdd to bag",
+      "x": 24,
+      "y": 1007.390625,
+      "w": 342,
+      "h": 129,
+      "display": "flex"
+    },
+    "bar": {
+      "text": "",
+      "x": 0,
+      "y": 1412.253173828125,
+      "w": 390,
+      "h": 167.796875,
+      "display": "flex"
+    },
+    "qty": {
+      "text": "Quantity\n−\n+",
+      "x": 24,
+      "y": 1007.390625,
+      "w": 126,
+      "h": 52,
+      "display": "flex"
+    },
+    "button": {
+      "text": "Add to bag",
+      "x": 24,
+      "y": 1069.390625,
+      "w": 342,
+      "h": 67,
+      "display": "flex"
+    },
+    "main": {
+      "x": 0,
+      "y": -740,
+      "width": 390,
+      "height": 12203.234375,
+      "top": -740,
+      "right": 390,
+      "bottom": 11463.234375,
+      "left": 0
+    }
+  },
+  "390-serum": {
+    "width": 390,
+    "viewport": 390,
+    "title": {
+      "text": "Advanced Repair Serum",
+      "x": 24,
+      "y": 135.59375,
+      "w": 342,
+      "h": 37.4375,
+      "display": "block"
+    },
+    "promise": {
+      "text": "A lightweight, concentrated serum for skin that looks firmer and smoother.",
+      "x": 24,
+      "y": 185.03125,
+      "w": 342,
+      "h": 52.6875,
+      "display": "block"
+    },
+    "price": {
+      "text": "€150\n,\n30 ml",
+      "x": 24,
+      "y": 527.3125,
+      "w": 342,
+      "h": 28,
+      "display": "flex"
+    },
+    "form": {
+      "text": "Quantity\n−\n+\nAdd to bag",
+      "x": 24,
+      "y": 575.3125,
+      "w": 342,
+      "h": 52,
+      "display": "flex"
+    },
+    "bar": {
+      "text": "",
+      "x": 0,
+      "y": 667.4500122070312,
+      "w": 390,
+      "h": 69,
+      "display": "flex"
+    },
+    "qty": {
+      "text": "Quantity\n−\n+",
+      "x": 24,
+      "y": 575.3125,
+      "w": 126,
+      "h": 52,
+      "display": "flex"
+    },
+    "button": {
+      "text": "Add to bag",
+      "x": 160,
+      "y": 575.3125,
+      "w": 206,
+      "h": 52,
+      "display": "flex"
+    },
+    "main": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 5755.90625,
+      "top": 0,
+      "right": 390,
+      "bottom": 5755.90625,
+      "left": 0
+    }
+  },
+  "text200-390-serum": {
+    "width": 390,
+    "viewport": 390,
+    "title": {
+      "text": "Advanced Repair Serum",
+      "x": 24,
+      "y": 194.375,
+      "w": 342,
+      "h": 224.625,
+      "display": "block"
+    },
+    "promise": {
+      "text": "A lightweight, concentrated serum for skin that looks firmer and smoother.",
+      "x": 24,
+      "y": 431,
+      "w": 342,
+      "h": 210.796875,
+      "display": "block"
+    },
+    "price": {
+      "text": "€150\n,\n30 ml",
+      "x": 24,
+      "y": 931.390625,
+      "w": 342,
+      "h": 56,
+      "display": "flex"
+    },
+    "form": {
+      "text": "Quantity\n−\n+\nAdd to bag",
+      "x": 24,
+      "y": 1007.390625,
+      "w": 342,
+      "h": 129,
+      "display": "flex"
+    },
+    "bar": {
+      "text": "",
+      "x": 0,
+      "y": 672.2531127929688,
+      "w": 390,
+      "h": 167.796875,
+      "display": "flex"
+    },
+    "qty": {
+      "text": "Quantity\n−\n+",
+      "x": 24,
+      "y": 1007.390625,
+      "w": 126,
+      "h": 52,
+      "display": "flex"
+    },
+    "button": {
+      "text": "Add to bag",
+      "x": 24,
+      "y": 1069.390625,
+      "w": 342,
+      "h": 67,
+      "display": "flex"
+    },
+    "main": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 11320.75,
+      "top": 0,
+      "right": 390,
+      "bottom": 11320.75,
+      "left": 0
+    }
+  },
+  "390-eye": {
+    "width": 390,
+    "viewport": 390,
+    "title": {
+      "text": "Revitalizing Eye Cream",
+      "x": 24,
+      "y": 135.59375,
+      "w": 342,
+      "h": 37.4375,
+      "display": "block"
+    },
+    "promise": {
+      "text": "A rich, melting eye cream that softens the look of fine lines and dark circles.",
+      "x": 24,
+      "y": 185.03125,
+      "w": 342,
+      "h": 52.6875,
+      "display": "block"
+    },
+    "price": {
+      "text": "€145\n,\n15 ml",
+      "x": 24,
+      "y": 527.3125,
+      "w": 342,
+      "h": 28,
+      "display": "flex"
+    },
+    "form": {
+      "text": "Quantity\n−\n+\nAdd to bag",
+      "x": 24,
+      "y": 575.3125,
+      "w": 342,
+      "h": 52,
+      "display": "flex"
+    },
+    "bar": {
+      "text": "",
+      "x": 0,
+      "y": 667.4500122070312,
+      "w": 390,
+      "h": 69,
+      "display": "flex"
+    },
+    "qty": {
+      "text": "Quantity\n−\n+",
+      "x": 24,
+      "y": 575.3125,
+      "w": 126,
+      "h": 52,
+      "display": "flex"
+    },
+    "button": {
+      "text": "Add to bag",
+      "x": 160,
+      "y": 575.3125,
+      "w": 206,
+      "h": 52,
+      "display": "flex"
+    },
+    "main": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 5814.046875,
+      "top": 0,
+      "right": 390,
+      "bottom": 5814.046875,
+      "left": 0
+    }
+  },
+  "text200-390-eye": {
+    "width": 390,
+    "viewport": 390,
+    "title": {
+      "text": "Revitalizing Eye Cream",
+      "x": 24,
+      "y": 194.375,
+      "w": 342,
+      "h": 149.75,
+      "display": "block"
+    },
+    "promise": {
+      "text": "A rich, melting eye cream that softens the look of fine lines and dark circles.",
+      "x": 24,
+      "y": 356.125,
+      "w": 342,
+      "h": 210.796875,
+      "display": "block"
+    },
+    "price": {
+      "text": "€145\n,\n15 ml",
+      "x": 24,
+      "y": 856.515625,
+      "w": 342,
+      "h": 56,
+      "display": "flex"
+    },
+    "form": {
+      "text": "Quantity\n−\n+\nAdd to bag",
+      "x": 24,
+      "y": 932.515625,
+      "w": 342,
+      "h": 129,
+      "display": "flex"
+    },
+    "bar": {
+      "text": "",
+      "x": 0,
+      "y": 672.2531127929688,
+      "w": 390,
+      "h": 167.796875,
+      "display": "flex"
+    },
+    "qty": {
+      "text": "Quantity\n−\n+",
+      "x": 24,
+      "y": 932.515625,
+      "w": 126,
+      "h": 52,
+      "display": "flex"
+    },
+    "button": {
+      "text": "Add to bag",
+      "x": 24,
+      "y": 994.515625,
+      "w": 342,
+      "h": 67,
+      "display": "flex"
+    },
+    "main": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 11484.859375,
+      "top": 0,
+      "right": 390,
+      "bottom": 11484.859375,
+      "left": 0
+    }
+  },
+  "390-cleanser": {
+    "width": 390,
+    "viewport": 390,
+    "title": {
+      "text": "Micellar Water All‑in‑One Cleanser",
+      "x": 24,
+      "y": 135.59375,
+      "w": 342,
+      "h": 74.875,
+      "display": "block"
+    },
+    "promise": {
+      "text": "A no-rinse micellar water that lifts make-up and the day’s impurities in one gentle gesture.",
+      "x": 24,
+      "y": 222.46875,
+      "w": 342,
+      "h": 79.03125,
+      "display": "block"
+    },
+    "price": {
+      "text": "€55\n,\n150 ml",
+      "x": 24,
+      "y": 591.09375,
+      "w": 342,
+      "h": 28,
+      "display": "flex"
+    },
+    "form": {
+      "text": "Quantity\n−\n+\nAdd to bag",
+      "x": 24,
+      "y": 639.09375,
+      "w": 342,
+      "h": 52,
+      "display": "flex"
+    },
+    "bar": {
+      "text": "",
+      "x": 0,
+      "y": 667.4500122070312,
+      "w": 390,
+      "h": 69,
+      "display": "flex"
+    },
+    "qty": {
+      "text": "Quantity\n−\n+",
+      "x": 24,
+      "y": 639.09375,
+      "w": 126,
+      "h": 52,
+      "display": "flex"
+    },
+    "button": {
+      "text": "Add to bag",
+      "x": 160,
+      "y": 639.09375,
+      "w": 206,
+      "h": 52,
+      "display": "flex"
+    },
+    "main": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 5232.171875,
+      "top": 0,
+      "right": 390,
+      "bottom": 5232.171875,
+      "left": 0
+    }
+  },
+  "text200-390-cleanser": {
+    "width": 390,
+    "viewport": 390,
+    "title": {
+      "text": "Micellar Water All‑in‑One Cleanser",
+      "x": 24,
+      "y": 194.375,
+      "w": 342,
+      "h": 299.515625,
+      "display": "block"
+    },
+    "promise": {
+      "text": "A no-rinse micellar water that lifts make-up and the day’s impurities in one gentle gesture.",
+      "x": 24,
+      "y": 505.890625,
+      "w": 342,
+      "h": 263.5,
+      "display": "block"
+    },
+    "price": {
+      "text": "€55\n,\n150 ml",
+      "x": 24,
+      "y": 1058.984375,
+      "w": 342,
+      "h": 56,
+      "display": "flex"
+    },
+    "form": {
+      "text": "Quantity\n−\n+\nAdd to bag",
+      "x": 24,
+      "y": 1134.984375,
+      "w": 342,
+      "h": 129,
+      "display": "flex"
+    },
+    "bar": {
+      "text": "",
+      "x": 0,
+      "y": 672.2531127929688,
+      "w": 390,
+      "h": 167.796875,
+      "display": "flex"
+    },
+    "qty": {
+      "text": "Quantity\n−\n+",
+      "x": 24,
+      "y": 1134.984375,
+      "w": 126,
+      "h": 52,
+      "display": "flex"
+    },
+    "button": {
+      "text": "Add to bag",
+      "x": 24,
+      "y": 1196.984375,
+      "w": 342,
+      "h": 67,
+      "display": "flex"
+    },
+    "main": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 10481.25,
+      "top": 0,
+      "right": 390,
+      "bottom": 10481.25,
+      "left": 0
+    }
+  },
+  "390-set": {
+    "width": 390,
+    "viewport": 390,
+    "title": {
+      "text": "The Complete Ritual",
+      "x": 24,
+      "y": 155.1875,
+      "w": 342,
+      "h": 37.4375,
+      "display": "block"
+    },
+    "promise": {
+      "text": "The four formulas of the house, made to be used in sequence, morning and evening.",
+      "x": 24,
+      "y": 204.625,
+      "w": 342,
+      "h": 79.03125,
+      "display": "block"
+    },
+    "price": {
+      "text": "€450",
+      "x": 24,
+      "y": 573.25,
+      "w": 342,
+      "h": 28,
+      "display": "flex"
+    },
+    "form": {
+      "text": "Quantity\n−\n+\nAdd to bag",
+      "x": 24,
+      "y": 870.25,
+      "w": 342,
+      "h": 52,
+      "display": "flex"
+    },
+    "bar": {
+      "text": "The Complete Ritual\n€450\nAdd to bag",
+      "x": 0,
+      "y": 595,
+      "w": 390,
+      "h": 69,
+      "display": "flex"
+    },
+    "qty": {
+      "text": "Quantity\n−\n+",
+      "x": 24,
+      "y": 870.25,
+      "w": 126,
+      "h": 52,
+      "display": "flex"
+    },
+    "button": {
+      "text": "Add to bag",
+      "x": 160,
+      "y": 870.25,
+      "w": 206,
+      "h": 52,
+      "display": "flex"
+    },
+    "main": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 6624.171875,
+      "top": 0,
+      "right": 390,
+      "bottom": 6624.171875,
+      "left": 0
+    }
+  },
+  "text200-390-set": {
+    "width": 390,
+    "viewport": 390,
+    "title": {
+      "text": "The Complete Ritual",
+      "x": 24,
+      "y": 233.578125,
+      "w": 342,
+      "h": 224.625,
+      "display": "block"
+    },
+    "promise": {
+      "text": "The four formulas of the house, made to be used in sequence, morning and evening.",
+      "x": 24,
+      "y": 470.203125,
+      "w": 342,
+      "h": 263.5,
+      "display": "block"
+    },
+    "price": {
+      "text": "€450",
+      "x": 24,
+      "y": 1023.296875,
+      "w": 342,
+      "h": 56,
+      "display": "flex"
+    },
+    "form": {
+      "text": "Quantity\n−\n+\nAdd to bag",
+      "x": 24,
+      "y": 1680.296875,
+      "w": 342,
+      "h": 129,
+      "display": "flex"
+    },
+    "bar": {
+      "text": "The Complete Ritual\n€450\nAdd to bag",
+      "x": 0,
+      "y": 496.203125,
+      "w": 390,
+      "h": 167.796875,
+      "display": "flex"
+    },
+    "qty": {
+      "text": "Quantity\n−\n+",
+      "x": 24,
+      "y": 1680.296875,
+      "w": 126,
+      "h": 52,
+      "display": "flex"
+    },
+    "button": {
+      "text": "Add to bag",
+      "x": 24,
+      "y": 1742.296875,
+      "w": 342,
+      "h": 67,
+      "display": "flex"
+    },
+    "main": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 12289.4375,
+      "top": 0,
+      "right": 390,
+      "bottom": 12289.4375,
+      "left": 0
+    }
+  },
+  "text200-390-set-form": {
+    "width": 390,
+    "viewport": 390,
+    "title": {
+      "text": "The Complete Ritual",
+      "x": 24,
+      "y": 233.578125,
+      "w": 342,
+      "h": 224.625,
+      "display": "block"
+    },
+    "promise": {
+      "text": "The four formulas of the house, made to be used in sequence, morning and evening.",
+      "x": 24,
+      "y": 470.203125,
+      "w": 342,
+      "h": 263.5,
+      "display": "block"
+    },
+    "price": {
+      "text": "€450",
+      "x": 24,
+      "y": 1023.296875,
+      "w": 342,
+      "h": 56,
+      "display": "flex"
+    },
+    "form": {
+      "text": "Quantity\n−\n+\nAdd to bag",
+      "x": 24,
+      "y": 1680.296875,
+      "w": 342,
+      "h": 129,
+      "display": "flex"
+    },
+    "bar": {
+      "text": "",
+      "x": 0,
+      "y": 2085.253173828125,
+      "w": 390,
+      "h": 167.796875,
+      "display": "flex"
+    },
+    "qty": {
+      "text": "Quantity\n−\n+",
+      "x": 24,
+      "y": 1680.296875,
+      "w": 126,
+      "h": 52,
+      "display": "flex"
+    },
+    "button": {
+      "text": "Add to bag",
+      "x": 24,
+      "y": 1742.296875,
+      "w": 342,
+      "h": 67,
+      "display": "flex"
+    },
+    "main": {
+      "x": 0,
+      "y": -1413,
+      "width": 390,
+      "height": 12289.4375,
+      "top": -1413,
+      "right": 390,
+      "bottom": 10876.4375,
+      "left": 0
+    }
+  },
+  "320-cream": {
+    "width": 320,
+    "viewport": 320,
+    "title": {
+      "text": "24h Regeneration Cream",
+      "x": 24,
+      "y": 155.1875,
+      "w": 272,
+      "h": 74.875,
+      "display": "block"
+    },
+    "promise": {
+      "text": "A silky day-and-night cream that seals in lasting hydration and comfort.",
+      "x": 24,
+      "y": 242.0625,
+      "w": 272,
+      "h": 79.03125,
+      "display": "block"
+    },
+    "price": {
+      "text": "€150\n,\n50 ml",
+      "x": 24,
+      "y": 565.890625,
+      "w": 272,
+      "h": 28,
+      "display": "flex"
+    },
+    "form": {
+      "text": "Quantity\n−\n+\nAdd to bag",
+      "x": 24,
+      "y": 613.890625,
+      "w": 272,
+      "h": 52,
+      "display": "flex"
+    },
+    "bar": {
+      "text": "",
+      "x": 0,
+      "y": 668.2000122070312,
+      "w": 320,
+      "h": 84,
+      "display": "flex"
+    },
+    "qty": {
+      "text": "Quantity\n−\n+",
+      "x": 24,
+      "y": 613.890625,
+      "w": 126,
+      "h": 52,
+      "display": "flex"
+    },
+    "button": {
+      "text": "Add to bag",
+      "x": 160,
+      "y": 613.890625,
+      "w": 136,
+      "h": 52,
+      "display": "flex"
+    },
+    "main": {
+      "x": 0,
+      "y": 0,
+      "width": 320,
+      "height": 6184.25,
+      "top": 0,
+      "right": 320,
+      "bottom": 6184.25,
+      "left": 0
+    }
+  },
+  "320-axe": [],
+  "text200-320-cream": {
+    "width": 320,
+    "viewport": 320,
+    "title": {
+      "text": "24h Regeneration Cream",
+      "x": 24,
+      "y": 194.375,
+      "w": 272,
+      "h": 299.515625,
+      "display": "block"
+    },
+    "promise": {
+      "text": "A silky day-and-night cream that seals in lasting hydration and comfort.",
+      "x": 24,
+      "y": 505.890625,
+      "w": 272,
+      "h": 263.5,
+      "display": "block"
+    },
+    "price": {
+      "text": "€150\n,\n50 ml",
+      "x": 24,
+      "y": 1014.1875,
+      "w": 272,
+      "h": 56,
+      "display": "flex"
+    },
+    "form": {
+      "text": "Quantity\n−\n+\nAdd to bag",
+      "x": 24,
+      "y": 1090.1875,
+      "w": 272,
+      "h": 129,
+      "display": "flex"
+    },
+    "bar": {
+      "text": "",
+      "x": 0,
+      "y": 1121.253173828125,
+      "w": 320,
+      "h": 167.796875,
+      "display": "flex"
+    },
+    "qty": {
+      "text": "Quantity\n−\n+",
+      "x": 24,
+      "y": 1090.1875,
+      "w": 126,
+      "h": 52,
+      "display": "flex"
+    },
+    "button": {
+      "text": "Add to bag",
+      "x": 24,
+      "y": 1152.1875,
+      "w": 272,
+      "h": 67,
+      "display": "flex"
+    },
+    "main": {
+      "x": 0,
+      "y": -449,
+      "width": 320,
+      "height": 13994.875,
+      "top": -449,
+      "right": 320,
+      "bottom": 13545.875,
+      "left": 0
+    }
+  },
+  "text200-320-cream-form": {
+    "width": 320,
+    "viewport": 320,
+    "title": {
+      "text": "24h Regeneration Cream",
+      "x": 24,
+      "y": 194.375,
+      "w": 272,
+      "h": 299.515625,
+      "display": "block"
+    },
+    "promise": {
+      "text": "A silky day-and-night cream that seals in lasting hydration and comfort.",
+      "x": 24,
+      "y": 505.890625,
+      "w": 272,
+      "h": 263.5,
+      "display": "block"
+    },
+    "price": {
+      "text": "€150\n,\n50 ml",
+      "x": 24,
+      "y": 1014.1875,
+      "w": 272,
+      "h": 56,
+      "display": "flex"
+    },
+    "form": {
+      "text": "Quantity\n−\n+\nAdd to bag",
+      "x": 24,
+      "y": 1090.1875,
+      "w": 272,
+      "h": 129,
+      "display": "flex"
+    },
+    "bar": {
+      "text": "",
+      "x": 0,
+      "y": 1228.253173828125,
+      "w": 320,
+      "h": 167.796875,
+      "display": "flex"
+    },
+    "qty": {
+      "text": "Quantity\n−\n+",
+      "x": 24,
+      "y": 1090.1875,
+      "w": 126,
+      "h": 52,
+      "display": "flex"
+    },
+    "button": {
+      "text": "Add to bag",
+      "x": 24,
+      "y": 1152.1875,
+      "w": 272,
+      "h": 67,
+      "display": "flex"
+    },
+    "main": {
+      "x": 0,
+      "y": -556,
+      "width": 320,
+      "height": 13994.875,
+      "top": -556,
+      "right": 320,
+      "bottom": 13438.875,
+      "left": 0
+    }
+  },
+  "text200-normal-add": "passed",
+  "text200-sticky-add": "Added to your bag",
+  "320-serum": {
+    "width": 320,
+    "viewport": 320,
+    "title": {
+      "text": "Advanced Repair Serum",
+      "x": 24,
+      "y": 135.59375,
+      "w": 272,
+      "h": 74.875,
+      "display": "block"
+    },
+    "promise": {
+      "text": "A lightweight, concentrated serum for skin that looks firmer and smoother.",
+      "x": 24,
+      "y": 222.46875,
+      "w": 272,
+      "h": 79.03125,
+      "display": "block"
+    },
+    "price": {
+      "text": "€150\n,\n30 ml",
+      "x": 24,
+      "y": 546.296875,
+      "w": 272,
+      "h": 28,
+      "display": "flex"
+    },
+    "form": {
+      "text": "Quantity\n−\n+\nAdd to bag",
+      "x": 24,
+      "y": 594.296875,
+      "w": 272,
+      "h": 52,
+      "display": "flex"
+    },
+    "bar": {
+      "text": "",
+      "x": 0,
+      "y": 668.2000122070312,
+      "w": 320,
+      "h": 84,
+      "display": "flex"
+    },
+    "qty": {
+      "text": "Quantity\n−\n+",
+      "x": 24,
+      "y": 594.296875,
+      "w": 126,
+      "h": 52,
+      "display": "flex"
+    },
+    "button": {
+      "text": "Add to bag",
+      "x": 160,
+      "y": 594.296875,
+      "w": 136,
+      "h": 52,
+      "display": "flex"
+    },
+    "main": {
+      "x": 0,
+      "y": 0,
+      "width": 320,
+      "height": 6056.640625,
+      "top": 0,
+      "right": 320,
+      "bottom": 6056.640625,
+      "left": 0
+    }
+  },
+  "text200-320-serum": {
+    "width": 320,
+    "viewport": 320,
+    "title": {
+      "text": "Advanced Repair Serum",
+      "x": 24,
+      "y": 194.375,
+      "w": 272,
+      "h": 224.625,
+      "display": "block"
+    },
+    "promise": {
+      "text": "A lightweight, concentrated serum for skin that looks firmer and smoother.",
+      "x": 24,
+      "y": 431,
+      "w": 272,
+      "h": 263.5,
+      "display": "block"
+    },
+    "price": {
+      "text": "€150\n,\n30 ml",
+      "x": 24,
+      "y": 939.296875,
+      "w": 272,
+      "h": 56,
+      "display": "flex"
+    },
+    "form": {
+      "text": "Quantity\n−\n+\nAdd to bag",
+      "x": 24,
+      "y": 1015.296875,
+      "w": 272,
+      "h": 129,
+      "display": "flex"
+    },
+    "bar": {
+      "text": "",
+      "x": 0,
+      "y": 672.2531127929688,
+      "w": 320,
+      "h": 167.796875,
+      "display": "flex"
+    },
+    "qty": {
+      "text": "Quantity\n−\n+",
+      "x": 24,
+      "y": 1015.296875,
+      "w": 126,
+      "h": 52,
+      "display": "flex"
+    },
+    "button": {
+      "text": "Add to bag",
+      "x": 24,
+      "y": 1077.296875,
+      "w": 272,
+      "h": 67,
+      "display": "flex"
+    },
+    "main": {
+      "x": 0,
+      "y": 0,
+      "width": 320,
+      "height": 13424.78125,
+      "top": 0,
+      "right": 320,
+      "bottom": 13424.78125,
+      "left": 0
+    }
+  },
+  "320-eye": {
+    "width": 320,
+    "viewport": 320,
+    "title": {
+      "text": "Revitalizing Eye Cream",
+      "x": 24,
+      "y": 135.59375,
+      "w": 272,
+      "h": 74.875,
+      "display": "block"
+    },
+    "promise": {
+      "text": "A rich, melting eye cream that softens the look of fine lines and dark circles.",
+      "x": 24,
+      "y": 222.46875,
+      "w": 272,
+      "h": 79.03125,
+      "display": "block"
+    },
+    "price": {
+      "text": "€145\n,\n15 ml",
+      "x": 24,
+      "y": 546.296875,
+      "w": 272,
+      "h": 28,
+      "display": "flex"
+    },
+    "form": {
+      "text": "Quantity\n−\n+\nAdd to bag",
+      "x": 24,
+      "y": 594.296875,
+      "w": 272,
+      "h": 52,
+      "display": "flex"
+    },
+    "bar": {
+      "text": "",
+      "x": 0,
+      "y": 668.2000122070312,
+      "w": 320,
+      "h": 84,
+      "display": "flex"
+    },
+    "qty": {
+      "text": "Quantity\n−\n+",
+      "x": 24,
+      "y": 594.296875,
+      "w": 126,
+      "h": 52,
+      "display": "flex"
+    },
+    "button": {
+      "text": "Add to bag",
+      "x": 160,
+      "y": 594.296875,
+      "w": 136,
+      "h": 52,
+      "display": "flex"
+    },
+    "main": {
+      "x": 0,
+      "y": 0,
+      "width": 320,
+      "height": 6088.140625,
+      "top": 0,
+      "right": 320,
+      "bottom": 6088.140625,
+      "left": 0
+    }
+  },
+  "text200-320-eye": {
+    "width": 320,
+    "viewport": 320,
+    "title": {
+      "text": "Revitalizing Eye Cream",
+      "x": 24,
+      "y": 194.375,
+      "w": 272,
+      "h": 224.625,
+      "display": "block"
+    },
+    "promise": {
+      "text": "A rich, melting eye cream that softens the look of fine lines and dark circles.",
+      "x": 24,
+      "y": 431,
+      "w": 272,
+      "h": 263.5,
+      "display": "block"
+    },
+    "price": {
+      "text": "€145\n,\n15 ml",
+      "x": 24,
+      "y": 939.296875,
+      "w": 272,
+      "h": 56,
+      "display": "flex"
+    },
+    "form": {
+      "text": "Quantity\n−\n+\nAdd to bag",
+      "x": 24,
+      "y": 1015.296875,
+      "w": 272,
+      "h": 129,
+      "display": "flex"
+    },
+    "bar": {
+      "text": "",
+      "x": 0,
+      "y": 672.2531127929688,
+      "w": 320,
+      "h": 167.796875,
+      "display": "flex"
+    },
+    "qty": {
+      "text": "Quantity\n−\n+",
+      "x": 24,
+      "y": 1015.296875,
+      "w": 126,
+      "h": 52,
+      "display": "flex"
+    },
+    "button": {
+      "text": "Add to bag",
+      "x": 24,
+      "y": 1077.296875,
+      "w": 272,
+      "h": 67,
+      "display": "flex"
+    },
+    "main": {
+      "x": 0,
+      "y": 0,
+      "width": 320,
+      "height": 13802.375,
+      "top": 0,
+      "right": 320,
+      "bottom": 13802.375,
+      "left": 0
+    }
+  },
+  "320-cleanser": {
+    "width": 320,
+    "viewport": 320,
+    "title": {
+      "text": "Micellar Water All‑in‑One Cleanser",
+      "x": 24,
+      "y": 135.59375,
+      "w": 272,
+      "h": 112.3125,
+      "display": "block"
+    },
+    "promise": {
+      "text": "A no-rinse micellar water that lifts make-up and the day’s impurities in one gentle gesture.",
+      "x": 24,
+      "y": 259.90625,
+      "w": 272,
+      "h": 79.03125,
+      "display": "block"
+    },
+    "price": {
+      "text": "€55\n,\n150 ml",
+      "x": 24,
+      "y": 583.734375,
+      "w": 272,
+      "h": 28,
+      "display": "flex"
+    },
+    "form": {
+      "text": "Quantity\n−\n+\nAdd to bag",
+      "x": 24,
+      "y": 631.734375,
+      "w": 272,
+      "h": 52,
+      "display": "flex"
+    },
+    "bar": {
+      "text": "",
+      "x": 0,
+      "y": 668.2000122070312,
+      "w": 320,
+      "h": 84,
+      "display": "flex"
+    },
+    "qty": {
+      "text": "Quantity\n−\n+",
+      "x": 24,
+      "y": 631.734375,
+      "w": 126,
+      "h": 52,
+      "display": "flex"
+    },
+    "button": {
+      "text": "Add to bag",
+      "x": 160,
+      "y": 631.734375,
+      "w": 136,
+      "h": 52,
+      "display": "flex"
+    },
+    "main": {
+      "x": 0,
+      "y": 0,
+      "width": 320,
+      "height": 5776.1875,
+      "top": 0,
+      "right": 320,
+      "bottom": 5776.1875,
+      "left": 0
+    }
+  },
+  "text200-320-cleanser": {
+    "width": 320,
+    "viewport": 320,
+    "title": {
+      "text": "Micellar Water All‑in‑One Cleanser",
+      "x": 24,
+      "y": 194.375,
+      "w": 272,
+      "h": 374.390625,
+      "display": "block"
+    },
+    "promise": {
+      "text": "A no-rinse micellar water that lifts make-up and the day’s impurities in one gentle gesture.",
+      "x": 24,
+      "y": 580.765625,
+      "w": 272,
+      "h": 316.1875,
+      "display": "block"
+    },
+    "price": {
+      "text": "€55\n,\n150 ml",
+      "x": 24,
+      "y": 1141.75,
+      "w": 272,
+      "h": 56,
+      "display": "flex"
+    },
+    "form": {
+      "text": "Quantity\n−\n+\nAdd to bag",
+      "x": 24,
+      "y": 1217.75,
+      "w": 272,
+      "h": 129,
+      "display": "flex"
+    },
+    "bar": {
+      "text": "",
+      "x": 0,
+      "y": 672.2531127929688,
+      "w": 320,
+      "h": 167.796875,
+      "display": "flex"
+    },
+    "qty": {
+      "text": "Quantity\n−\n+",
+      "x": 24,
+      "y": 1217.75,
+      "w": 126,
+      "h": 52,
+      "display": "flex"
+    },
+    "button": {
+      "text": "Add to bag",
+      "x": 24,
+      "y": 1279.75,
+      "w": 272,
+      "h": 67,
+      "display": "flex"
+    },
+    "main": {
+      "x": 0,
+      "y": 0,
+      "width": 320,
+      "height": 12917.546875,
+      "top": 0,
+      "right": 320,
+      "bottom": 12917.546875,
+      "left": 0
+    }
+  },
+  "320-set": {
+    "width": 320,
+    "viewport": 320,
+    "title": {
+      "text": "The Complete Ritual",
+      "x": 24,
+      "y": 174.78125,
+      "w": 272,
+      "h": 74.875,
+      "display": "block"
+    },
+    "promise": {
+      "text": "The four formulas of the house, made to be used in sequence, morning and evening.",
+      "x": 24,
+      "y": 261.65625,
+      "w": 272,
+      "h": 79.03125,
+      "display": "block"
+    },
+    "price": {
+      "text": "€450",
+      "x": 24,
+      "y": 585.484375,
+      "w": 272,
+      "h": 28,
+      "display": "flex"
+    },
+    "form": {
+      "text": "Quantity\n−\n+\nAdd to bag",
+      "x": 24,
+      "y": 899.484375,
+      "w": 272,
+      "h": 52,
+      "display": "flex"
+    },
+    "bar": {
+      "text": "The Complete Ritual\n€450\nAdd to bag",
+      "x": 0,
+      "y": 580,
+      "w": 320,
+      "h": 84,
+      "display": "flex"
+    },
+    "qty": {
+      "text": "Quantity\n−\n+",
+      "x": 24,
+      "y": 899.484375,
+      "w": 126,
+      "h": 52,
+      "display": "flex"
+    },
+    "button": {
+      "text": "Add to bag",
+      "x": 160,
+      "y": 899.484375,
+      "w": 136,
+      "h": 52,
+      "display": "flex"
+    },
+    "main": {
+      "x": 0,
+      "y": 0,
+      "width": 320,
+      "height": 6980.53125,
+      "top": 0,
+      "right": 320,
+      "bottom": 6980.53125,
+      "left": 0
+    }
+  },
+  "text200-320-set": {
+    "width": 320,
+    "viewport": 320,
+    "title": {
+      "text": "The Complete Ritual",
+      "x": 24,
+      "y": 311.984375,
+      "w": 272,
+      "h": 224.625,
+      "display": "block"
+    },
+    "promise": {
+      "text": "The four formulas of the house, made to be used in sequence, morning and evening.",
+      "x": 24,
+      "y": 548.609375,
+      "w": 272,
+      "h": 368.890625,
+      "display": "block"
+    },
+    "price": {
+      "text": "€450",
+      "x": 24,
+      "y": 1162.296875,
+      "w": 272,
+      "h": 56,
+      "display": "flex"
+    },
+    "form": {
+      "text": "Quantity\n−\n+\nAdd to bag",
+      "x": 24,
+      "y": 1933.296875,
+      "w": 272,
+      "h": 129,
+      "display": "flex"
+    },
+    "bar": {
+      "text": "The Complete Ritual\n€450\nAdd to bag",
+      "x": 0,
+      "y": 496.203125,
+      "w": 320,
+      "h": 167.796875,
+      "display": "flex"
+    },
+    "qty": {
+      "text": "Quantity\n−\n+",
+      "x": 24,
+      "y": 1933.296875,
+      "w": 126,
+      "h": 52,
+      "display": "flex"
+    },
+    "button": {
+      "text": "Add to bag",
+      "x": 24,
+      "y": 1995.296875,
+      "w": 272,
+      "h": 67,
+      "display": "flex"
+    },
+    "main": {
+      "x": 0,
+      "y": 0,
+      "width": 320,
+      "height": 14450.8125,
+      "top": 0,
+      "right": 320,
+      "bottom": 14450.8125,
+      "left": 0
+    }
+  },
+  "text200-320-set-form": {
+    "width": 320,
+    "viewport": 320,
+    "title": {
+      "text": "The Complete Ritual",
+      "x": 24,
+      "y": 311.984375,
+      "w": 272,
+      "h": 224.625,
+      "display": "block"
+    },
+    "promise": {
+      "text": "The four formulas of the house, made to be used in sequence, morning and evening.",
+      "x": 24,
+      "y": 548.609375,
+      "w": 272,
+      "h": 368.890625,
+      "display": "block"
+    },
+    "price": {
+      "text": "€450",
+      "x": 24,
+      "y": 1162.296875,
+      "w": 272,
+      "h": 56,
+      "display": "flex"
+    },
+    "form": {
+      "text": "Quantity\n−\n+\nAdd to bag",
+      "x": 24,
+      "y": 1933.296875,
+      "w": 272,
+      "h": 129,
+      "display": "flex"
+    },
+    "bar": {
+      "text": "",
+      "x": 0,
+      "y": 2338.253173828125,
+      "w": 320,
+      "h": 167.796875,
+      "display": "flex"
+    },
+    "qty": {
+      "text": "Quantity\n−\n+",
+      "x": 24,
+      "y": 1933.296875,
+      "w": 126,
+      "h": 52,
+      "display": "flex"
+    },
+    "button": {
+      "text": "Add to bag",
+      "x": 24,
+      "y": 1995.296875,
+      "w": 272,
+      "h": 67,
+      "display": "flex"
+    },
+    "main": {
+      "x": 0,
+      "y": -1666,
+      "width": 320,
+      "height": 14450.8125,
+      "top": -1666,
+      "right": 320,
+      "bottom": 12784.8125,
+      "left": 0
+    }
+  },
+  "desktop-1440": {
+    "width": 1440,
+    "viewport": 1440,
+    "title": {
+      "text": "24h Regeneration Cream",
+      "x": 857.515625,
+      "y": 178,
+      "w": 480,
+      "h": 107.8125,
+      "display": "block"
+    },
+    "promise": {
+      "text": "A silky day-and-night cream that seals in lasting hydration and comfort.",
+      "x": 857.515625,
+      "y": 301.8125,
+      "w": 480,
+      "h": 58.84375,
+      "display": "block"
+    },
+    "price": {
+      "text": "€150\n,\n50 ml",
+      "x": 857.515625,
+      "y": 382.65625,
+      "w": 480,
+      "h": 28,
+      "display": "flex"
+    },
+    "form": {
+      "text": "Quantity\n−\n+\nAdd to bag",
+      "x": 857.515625,
+      "y": 438.65625,
+      "w": 480,
+      "h": 52,
+      "display": "flex"
+    },
+    "bar": {
+      "text": "\n\t\n\t\t24h Regeneration Cream\n\t\t€150 · 50 ml\n\t\n\tAdd to bag\n",
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0,
+      "display": "none"
+    },
+    "qty": {
+      "text": "Quantity\n−\n+",
+      "x": 857.515625,
+      "y": 438.65625,
+      "w": 126,
+      "h": 52,
+      "display": "flex"
+    },
+    "button": {
+      "text": "Add to bag",
+      "x": 993.515625,
+      "y": 438.65625,
+      "w": 344,
+      "h": 52,
+      "display": "flex"
+    },
+    "main": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 6204.5,
+      "top": 0,
+      "right": 1440,
+      "bottom": 6204.5,
+      "left": 0
+    }
+  },
+  "desktop-720": {
+    "width": 720,
+    "viewport": 720,
+    "title": {
+      "text": "24h Regeneration Cream",
+      "x": 37.4375,
+      "y": 135.59375,
+      "w": 645.125,
+      "h": 41.921875,
+      "display": "block"
+    },
+    "promise": {
+      "text": "A silky day-and-night cream that seals in lasting hydration and comfort.",
+      "x": 37.4375,
+      "y": 189.515625,
+      "w": 528.71875,
+      "h": 54.625,
+      "display": "block"
+    },
+    "price": {
+      "text": "€150\n,\n50 ml",
+      "x": 37.4375,
+      "y": 842.125,
+      "w": 645.125,
+      "h": 28,
+      "display": "flex"
+    },
+    "form": {
+      "text": "Quantity\n−\n+\nAdd to bag",
+      "x": 37.4375,
+      "y": 890.125,
+      "w": 645.125,
+      "h": 52,
+      "display": "flex"
+    },
+    "bar": {
+      "text": "",
+      "x": 0,
+      "y": 953.4500122070312,
+      "w": 720,
+      "h": 69,
+      "display": "flex"
+    },
+    "qty": {
+      "text": "Quantity\n−\n+",
+      "x": 37.4375,
+      "y": 890.125,
+      "w": 126,
+      "h": 52,
+      "display": "flex"
+    },
+    "button": {
+      "text": "Add to bag",
+      "x": 173.4375,
+      "y": 890.125,
+      "w": 509.125,
+      "h": 52,
+      "display": "flex"
+    },
+    "main": {
+      "x": 0,
+      "y": 0,
+      "width": 720,
+      "height": 7099.40625,
+      "top": 0,
+      "right": 720,
+      "bottom": 7099.40625,
+      "left": 0
+    }
+  }
+}

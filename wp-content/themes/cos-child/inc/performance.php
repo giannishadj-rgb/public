@@ -20,58 +20,6 @@ add_filter( 'image_editor_output_format', function ( array $formats ): array {
 	return $formats;
 } );
 
-/* ─── Next-gen format backfill (Shop grid + PDP gallery) ──────────
- * The image_editor_output_format filter above only affects sub-sizes
- * generated from this point forward. 2026-08-17/18: backfilled WebP+AVIF
- * sibling files (same name, .webp/.avif extension) for every JPEG actually
- * referenced by the shop grid and product-detail galleries, via a one-off
- * GD batch script (not tracked in the repo — mirror it if more images need
- * backfilling later). This helper serves them as a <picture> with AVIF and
- * WebP <source>s ahead of the original JPEG <img> fallback, generated only
- * for whichever of the two sibling files actually exist on disk — never
- * assumes both were backfilled, so it degrades cleanly for any image this
- * pass didn't reach.
- */
-function cos_child_nextgen_srcset( string $srcset, string $ext ): string {
-	if ( '' === trim( $srcset ) ) return '';
-	$out = [];
-	foreach ( explode( ',', $srcset ) as $part ) {
-		$part = trim( $part );
-		if ( '' === $part ) continue;
-		$lastSpace  = strrpos( $part, ' ' );
-		$url        = false !== $lastSpace ? substr( $part, 0, $lastSpace ) : $part;
-		$descriptor = false !== $lastSpace ? substr( $part, $lastSpace ) : '';
-		$newUrl     = preg_replace( '/\.jpe?g$/i', '.' . $ext, $url );
-		if ( $newUrl === $url ) continue; // wasn't a .jpg/.jpeg URL
-		$path = ABSPATH . ltrim( (string) wp_parse_url( $newUrl, PHP_URL_PATH ), '/' );
-		if ( file_exists( $path ) ) {
-			$out[] = $newUrl . $descriptor;
-		}
-	}
-	return implode( ', ', $out );
-}
-
-/**
- * Wraps a JPEG <img> tag's src/srcset in a <picture> with AVIF/WebP <source>s
- * for whichever sibling next-gen files exist on disk. $img_html is the
- * complete, already-built <img ...> tag (kept exactly as the caller
- * constructed it, including class/loading/alt/etc.) — this only adds
- * <source> siblings in front of it, never modifies the <img> itself.
- */
-function cos_child_nextgen_picture( string $src, string $srcset, string $sizes, string $img_html ): string {
-	$fallbackSrcset = $srcset ?: ( $src . ' 1x' );
-	$avif = cos_child_nextgen_srcset( $fallbackSrcset, 'avif' );
-	$webp = cos_child_nextgen_srcset( $fallbackSrcset, 'webp' );
-	if ( ! $avif && ! $webp ) return $img_html; // nothing backfilled for this image — plain <img>, no wrapper needed
-
-	$sizesAttr = $sizes ? ' sizes="' . esc_attr( $sizes ) . '"' : '';
-	$out = '<picture>';
-	if ( $avif ) $out .= '<source type="image/avif" srcset="' . esc_attr( $avif ) . '"' . $sizesAttr . '>';
-	if ( $webp ) $out .= '<source type="image/webp" srcset="' . esc_attr( $webp ) . '"' . $sizesAttr . '>';
-	$out .= $img_html . '</picture>';
-	return $out;
-}
-
 // Small portrait sizes for the homepage ritual-rail/spotlight packshots
 // (2:3 source ratio) — the registered size ladder previously jumped straight
 // from 200x300 (thumbnail-ish) to 683x1024 ('large'), with nothing sized for
@@ -252,6 +200,11 @@ function cos_child_preload_fonts(): void {
 	// Cormorant Garamond is self-hosted (see style.css) — only italic/300 is
 	// ever used anywhere in the theme, so only that one variant is preloaded.
 	echo '<link rel="preload" href="' . esc_url( $font_uri . 'cormorant-garamond-300-italic-latin.woff2' ) . '" as="font" type="font/woff2" crossorigin>' . "\n";
+	// 17 Oct 2026 (audit P2-4): the homepage H1 (LCP) opens in upright Cormorant (variable file,
+	// declared in hx/system.css): preload it there so the headline doesn't wait for the CSS.
+	if ( function_exists( 'cos_h26_is_active' ) && cos_h26_is_active() ) {
+		echo '<link rel="preload" href="' . esc_url( $font_uri . 'cormorant-garamond-var-latin.woff2' ) . '" as="font" type="font/woff2" crossorigin>' . "\n";
+	}
 }
 add_action( 'wp_head', 'cos_child_preload_fonts', 1 );
 

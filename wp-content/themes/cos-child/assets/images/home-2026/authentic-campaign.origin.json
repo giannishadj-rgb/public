@@ -1,0 +1,169 @@
+{
+  "date": "2026-10-18",
+  "operations": [
+    "Proportional Lanczos downscale and encoding only; complete original composition retained",
+    "No generative editing, relabeling, package recoloring, backdrop replacement or geometric changes"
+  ],
+  "sources": {
+    "auth-ritual-spoon-original": {
+      "path": "design-sources\\home-2026\\gauntlet-supplied-20261018\\product-photo-candidates\\all CaviarOfSwitzerland_spoon 2018.jpg",
+      "sha256": "a0e42278ff4c3d6947fce6a9434f1038d0e666cf218accb8873a13e3c19ee1dc"
+    },
+    "auth-ritual-nocturne": {
+      "path": "design-sources\\home-2026\\gauntlet-supplied-20261018\\product-photo-candidates\\5419.JPG",
+      "sha256": "bfb13a5aeb802b36b844fdcf4e0267214b90b317726d1c75232c8d10777b92b6"
+    }
+  },
+  "outputs": [
+    {
+      "file": "auth-ritual-spoon-original-320.avif",
+      "bytes": 4683,
+      "sha256": "08b26dbffc11f0bc93f018badc7d100faf99c19dda8885c3e6a9449fc6572253"
+    },
+    {
+      "file": "auth-ritual-spoon-original-320.webp",
+      "bytes": 7202,
+      "sha256": "cf83b42cab4c801bb85dc91f2c93264b7e83ec9d944fcdd7103256f713d3f9e8"
+    },
+    {
+      "file": "auth-ritual-spoon-original-320.jpg",
+      "bytes": 12833,
+      "sha256": "67622e5c9ced17ae04bf3688ea3cd111ea24568f5d5e24fb0cc1714094d75cb7"
+    },
+    {
+      "file": "auth-ritual-spoon-original-480.avif",
+      "bytes": 8001,
+      "sha256": "f766d43e0ee8aab0988bd2e15f914060d4f6a3f27b117038ed0511c2c9dee002"
+    },
+    {
+      "file": "auth-ritual-spoon-original-480.webp",
+      "bytes": 12380,
+      "sha256": "3b18053d3b01d011ca63ad84c2a88c02c4e6ad51d84064ab9c5f0088c72bc425"
+    },
+    {
+      "file": "auth-ritual-spoon-original-480.jpg",
+      "bytes": 22151,
+      "sha256": "80d0bc8576db71523219dc51a9e16f1965393dac48e3d86bb162273e35aba64e"
+    },
+    {
+      "file": "auth-ritual-spoon-original-640.avif",
+      "bytes": 11400,
+      "sha256": "16f1dd7c11a3a50cabd49dff2d0993d55dcb36c4abb0fa37e8d0b19e00ca2921"
+    },
+    {
+      "file": "auth-ritual-spoon-original-640.webp",
+      "bytes": 18470,
+      "sha256": "a4c57db593e7eb9be7e50e5e092797fad8cd976753755de140ae6000a06966d0"
+    },
+    {
+      "file": "auth-ritual-spoon-original-640.jpg",
+      "bytes": 32594,
+      "sha256": "b39374e9f6d7b996c27d68a286376970a4944a47c7df505243bd663e9ae05678"
+    },
+    {
+      "file": "auth-ritual-spoon-original-960.avif",
+      "bytes": 19026,
+      "sha256": "813f550bf87a3e221c82c2ba134f69ce2786398f1d8f0b357e6c3550e74da4f8"
+    },
+    {
+      "file": "auth-ritual-spoon-original-960.webp",
+      "bytes": 32984,
+      "sha256": "811f40a0fe618e8bd1876b5f0c41fb137d8bf7669265c83638082ace6192d760"
+    },
+    {
+      "file": "auth-ritual-spoon-original-960.jpg",
+      "bytes": 61588,
+      "sha256": "6c9b6f66f6225fc1228decf21674c2086a12a88ed0cbac6a5edc92fca7f46c16"
+    },
+    {
+      "file": "auth-ritual-spoon-original-1200.avif",
+      "bytes": 25450,
+      "sha256": "19309e16ad4c5a8c603e76c58e5f7062074cf9537f7f7892c6b2e5238394fe8f"
+    },
+    {
+      "file": "auth-ritual-spoon-original-1200.webp",
+      "bytes": 45524,
+      "sha256": "9c0850fb949b42ad789f72713672c45931a4bb9f7558d30b8abd5efe33131b06"
+    },
+    {
+      "file": "auth-ritual-spoon-original-1200.jpg",
+      "bytes": 85982,
+      "sha256": "0cd13572ff6dd2b25421da2884c1b77cb651922c343ba94d1ad36dd1326b9be0"
+    },
+    {
+      "file": "auth-ritual-nocturne-540.avif",
+      "bytes": 8826,
+      "sha256": "80e9844cc6a1a589749b9d6a83ba85c1cf9acdbb95de9934966d25966e28dead"
+    },
+    {
+      "file": "auth-ritual-nocturne-540.webp",
+      "bytes": 17200,
+      "sha256": "29c46a00d2296cace7acb12fe016aafaab8788b69324e08b3e4d40454131579d"
+    },
+    {
+      "file": "auth-ritual-nocturne-540.jpg",
+      "bytes": 26091,
+      "sha256": "c25fbd50e81ce71feb68cc76535f922ca5e51f7702620f20ec8bb98d48ed3522"
+    },
+    {
+      "file": "auth-ritual-nocturne-800.avif",
+      "bytes": 15288,
+      "sha256": "3553d816d0359c6a9566fd8064f5390cad03d22ad929861a2343e708aca396e4"
+    },
+    {
+      "file": "auth-ritual-nocturne-800.webp",
+      "bytes": 31334,
+      "sha256": "73f64580f68632be4cd12116167977aeb633087ad9d0c824268317c86e030a79"
+    },
+    {
+      "file": "auth-ritual-nocturne-800.jpg",
+      "bytes": 45398,
+      "sha256": "0d70a5af63f9a48c84047ad204005d7471a976aaa081457807273a76df175fad"
+    },
+    {
+      "file": "auth-ritual-nocturne-1200.avif",
+      "bytes": 27176,
+      "sha256": "782b17cd4efb76f118785b14251196a01d66c10b7445230943169a5764df9c9a"
+    },
+    {
+      "file": "auth-ritual-nocturne-1200.webp",
+      "bytes": 59254,
+      "sha256": "61bda8fc7b6ddd9b4239185b613f5bc718a79f6abf2de801cb99e6b32b252abc"
+    },
+    {
+      "file": "auth-ritual-nocturne-1200.jpg",
+      "bytes": 84782,
+      "sha256": "48d0fcae227431dd99b4a13297c1675c5a964cf094a5752e55928193a2a2fc4f"
+    },
+    {
+      "file": "auth-ritual-nocturne-1600.avif",
+      "bytes": 40848,
+      "sha256": "220724bb5ded93af2cba8414f6bcb8bc05ab40e833e356f0b651976ad2cf0c6b"
+    },
+    {
+      "file": "auth-ritual-nocturne-1600.webp",
+      "bytes": 100110,
+      "sha256": "e730c459753938bf517d6438250b2598da3bd9dd554c98c429446b6b9c55b6be"
+    },
+    {
+      "file": "auth-ritual-nocturne-1600.jpg",
+      "bytes": 133120,
+      "sha256": "bdbc9d4550591c8bb9afd1e4326b932bbc268937c66751f4f2a041e3209f12a3"
+    },
+    {
+      "file": "auth-ritual-nocturne-2000.avif",
+      "bytes": 56585,
+      "sha256": "3d59100821180cf99bb9ef2488ae4349ee1ab436f4bb46bc1ef0549a3b9bbbfb"
+    },
+    {
+      "file": "auth-ritual-nocturne-2000.webp",
+      "bytes": 152142,
+      "sha256": "bd7a4e461d3f91d988bc2519fd315fce7d77027712b7534d0d69f526822540b1"
+    },
+    {
+      "file": "auth-ritual-nocturne-2000.jpg",
+      "bytes": 191928,
+      "sha256": "9500a68c8c7dc14b09ed4f0a0def9be0537f845baa65e29f0d1d675448b72673"
+    }
+  ]
+}

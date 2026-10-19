@@ -120,7 +120,7 @@ if ( ! empty( $pd['description'] ) ) {
 				$tag = $f['current'] ? 'div' : 'a'; ?>
 			<li class="hxpd-ritual__item<?php echo $f['current'] ? ' is-current' : ''; ?>" data-hx-reveal>
 				<<?php echo $tag; ?> class="hxpd-ritual__link"<?php echo $f['current'] ? ' aria-current="page"' : ' href="' . esc_url( $f['url'] ) . '"'; ?>>
-					<span class="hxpd-ritual__stage"><?php echo cos_h26_picture( 'collection-object-' . $f['key'], array( 480, 720, 960 ), array( 2, 3 ), '', array( 'class' => 'hxpd-ritual__object', 'sizes' => '(min-width: 1024px) 180px, 22vw', 'w' => 480 ) ); // phpcs:ignore ?></span>
+					<span class="hxpd-ritual__stage"><?php echo cos_h26_picture( 'pack-' . $f['key'], array( 480, 720, 960 ), array( 2, 3 ), '', array( 'class' => 'hxpd-ritual__object', 'sizes' => '(min-width: 1024px) 180px, 22vw', 'w' => 480 ) ); // phpcs:ignore ?></span>
 					<span class="hxpd-ritual__step"><span class="hx-step"><?php echo esc_html( $f['num'] ); ?></span> <?php echo esc_html( $f['verb'] ); ?></span>
 					<span class="hxpd-ritual__name"><?php echo esc_html( $f['full'] ); ?></span>
 					<?php if ( $f['current'] ) : ?><span class="hxpd-ritual__here">This formula</span><?php endif; ?>

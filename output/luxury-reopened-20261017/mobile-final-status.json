@@ -1,0 +1,13 @@
+{
+  "verdict": "No remaining material blocker found in assigned scope",
+  "report": "output/luxury-reopened-20261017/mobile.md",
+  "checks": [
+    "Five product pages at390px and320px, normal and200% synthetic text",
+    "Cream title/benefit/price/ordinary CTA visible in initial mobile view",
+    "Quantity and ordinary/sticky Add to bag at320px and200% text",
+    "Shop formula discovery advanced from2436px to1124px;200% usesonecolumn",
+    "Ritual repeated AM/PM instructions reduced; no tested maintext viewport overflow",
+    "Desktop1440 layout retained"
+  ],
+  "physical_safari": "Unverified"
+}

@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-17",
+  "tool": "built-in image_gen.imagegen",
+  "prefix": "ritual-portrait-20261017",
+  "source": "../design-sources/home-2026/ritual-portrait-20261017-master.png",
+  "original": "C:/Users/giann/.codex/generated_images/01a1483b-c75e-7b03-8e5d-35e7ab2c461a/exec-136e99e7-4ece-4d1a-ba7c-dd0fbfee81f9.png",
+  "prompt": "Use case: ads-marketing. One exquisite photoreal portrait photograph, portrait 4:5, for a Swiss luxury skincare house website ritual chapter. An elegant internationally minded woman approximately 55 years old, natural shoulder-length dark chestnut hair swept back, captured in an intimate three-quarter profile with eyes gently lowered. One relaxed hand with short natural unpolished nails gently presses a very small subtle veil of white moisturiser into her cheek, a believable quiet moment of personal care, hand anatomy exact and graceful. Honest mature skin texture, fine expression lines and freckles, dignified radiance, no artificial plastic smoothing, no exaggerated age marks. Bare shoulders subtly framed by a pearl-white fine cotton wrap at lower edge, modest refined beauty campaign styling. Background pale stone-grey with quiet natural window light, airy silver highlights and very restrained warm skin tones. Timeless medium-format global beauty campaign photography, restrained expensive lighting, calm confidence, extraordinarily sophisticated tonal detail. Face and hand are the narrative, generous breathing room. Avoid stock-spa happiness, broad grin, jewellery, flowers, towels on hair, bathrobe cliches, beige wellness styling, heavy makeup, wet gloss, before-and-after, exaggerated treatment results. NO product containers, jars, bottles, packaging, logos, typography, text, watermarks, medical setting. Fictional illustrative model, no resemblance to any public figure. Must read as beautiful mature woman and careful daily ritual, not product testimonial or study participant.",
+  "kind": "Illustrative campaign art; no packaging or product marks",
+  "derivatives": {
+    "widths": [
+      640,
+      1122
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "jpg"
+    ],
+    "operation": "Proportional FFmpeg conversion only. No retouching or compositing."
+  }
+}

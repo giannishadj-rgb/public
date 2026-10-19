@@ -1,0 +1,258 @@
+{
+  "date": "2026-10-17",
+  "scope": "Shipping hxh-wide and hxh-tall campaign derivatives (17 Oct luxury pass: pearl environment regrade, larger product)",
+  "paths_relative_to": "WordPress public directory",
+  "source_kind": "Supplied campaign master; no documentary facility claim",
+  "source": {
+    "path": "../design-sources/home-2026/hero-jar_master.png",
+    "sha256": "23bb13b13f181606efc3a7117df24fd24930faa4c5b72828937251c7d4798641",
+    "bytes": 1568145,
+    "dimensions": [
+      1672,
+      941
+    ],
+    "mode": "RGB"
+  },
+  "builder": [
+    {
+      "path": "../design-sources/home-2026/build_hxh_pearl.py",
+      "sha256": "fa1bbeb7fc80c86b60793e3556031b451d0346c3d12206817da4ec2dc22ba37f"
+    },
+    {
+      "path": "../design-sources/home-2026/hxh_pearl_grade.py",
+      "sha256": "01191d7896cf9d8d94c3d1847779b361e341d92704db21dcd7b36c33887303fc"
+    }
+  ],
+  "transformation": {
+    "operations": [
+      "Environment regrade outside the protected silhouette: desaturate beige toward pearl, cool mids, champagne highlights, lift ({'sat': 0.46, 'cool': 0.5, 'champ': 1.0, 'lift': 0.12, 'gamma': 0.96}); ramps from 0 at the mask edge to full over 200px",
+      "Wide: crop 61px off the top of the master, extend left 330px and right 83px with blurred bands of the regraded silk (bands graded {'sat': 0.3, 'cool': 1.2, 'champ': 0.8, 'lift': 0.15, 'gamma': 0.96})",
+      "Tall: crop master x590..1310, y20..941, extend bottom 470px the same way",
+      "Round 2: flare streaks behind the lid/jar softened and desaturated (environment-only masked blur, hxh_pearl_grade.FLARES); tall floor warmed to #F2EEE8 and faded to #FBFAF7 on the last row",
+      "Copy fields calmed: blend toward a Gaussian-blurred copy of the environment, never inside the protected mask",
+      "Re-paste every protected-mask pixel from the supplied master at native scale",
+      "Proportional Lanczos resize (the wide 2560 file is a 1.23x upscale of the 2085px composite), then AVIF/WebP/JPEG compression"
+    ],
+    "protected_source_mask": {
+      "path": "../design-sources/home-2026/rebuild-2026-10-17/hero/work/hxh-protected-mask.png",
+      "definition": "hxh_pearl_grade.LID, JAR, REFLECTION polygons (master coords) dilated by 14px",
+      "bounding_box_xyxy": [
+        658,
+        334,
+        1243,
+        851
+      ],
+      "pixels": 266169
+    },
+    "protected_contents": "Jar, cream, lid, label, Swiss cross and both reflections",
+    "protected_region_verification": {
+      "comparison": "Saved pre-compression composed masters versus supplied master, every pixel inside the protected mask",
+      "wide": {
+        "protected_pixels": 266169,
+        "MAE_8bit": 0.0,
+        "exact_pixel_fraction": 1.0
+      },
+      "tall": {
+        "protected_pixels": 266169,
+        "MAE_8bit": 0.0,
+        "exact_pixel_fraction": 1.0
+      }
+    },
+    "note_vs_14_oct": "The 14 Oct record protected the rectangle 640,330,1260,830 (which included silk). This build protects the traced product silhouette instead, so the silk around the product can be regraded; product pixels remain identical.",
+    "whole_photograph_untouched": false,
+    "format_settings": {
+      "avif": {
+        "quality": 60,
+        "speed": 4
+      },
+      "webp": {
+        "quality": 84,
+        "method": 6
+      },
+      "jpg": {
+        "quality": 86,
+        "optimize": true,
+        "progressive": true
+      }
+    }
+  },
+  "saved_composed_masters": [
+    {
+      "path": "../design-sources/home-2026/rebuild-2026-10-17/hero/work/hxh-wide_master.png",
+      "sha256": "d7e9a785598d0452f13ceb2d891f48b38b58e4ef6a9c952f22483444ec4a74ad",
+      "bytes": 1081897,
+      "dimensions": [
+        2085,
+        880
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "../design-sources/home-2026/rebuild-2026-10-17/hero/work/hxh-tall_master.png",
+      "sha256": "b6ead33494589601bc2661eaa1c07dcc71c633f0d676ac5361bfcdad3efeee73",
+      "bytes": 609784,
+      "dimensions": [
+        720,
+        1391
+      ],
+      "mode": "RGB"
+    }
+  ],
+  "derivatives": [
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/hxh-wide-1440.avif",
+      "sha256": "a0b7b1d6207b93b3376f1f10a8e1322b2579c5881822f249bbc3f7caf5882bd0",
+      "bytes": 13548,
+      "dimensions": [
+        1440,
+        608
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/hxh-wide-1440.webp",
+      "sha256": "409170720531809fe2a796792f52b5326800ab6d15c36ac01f8a6694da726994",
+      "bytes": 21438,
+      "dimensions": [
+        1440,
+        608
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/hxh-wide-1440.jpg",
+      "sha256": "f16096d1966a0ed5cc62a29b33b5dbdc0ffa7e08aadacfa6ba6153bba7dded33",
+      "bytes": 50119,
+      "dimensions": [
+        1440,
+        608
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/hxh-wide-1920.avif",
+      "sha256": "e66a6fd0fbea96ebfc40d212be307ad12fdfc2f7261abbd6b94bc284ad68a86b",
+      "bytes": 19110,
+      "dimensions": [
+        1920,
+        810
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/hxh-wide-1920.webp",
+      "sha256": "dab45cfcf0bce85fe1a57de08beb337456173a85732799fc2d481fe3e55863e1",
+      "bytes": 31494,
+      "dimensions": [
+        1920,
+        810
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/hxh-wide-1920.jpg",
+      "sha256": "381e933af8d3f9a53d0e8483b7f33422e7bca6423f43f4b5927f13f003fa2371",
+      "bytes": 76430,
+      "dimensions": [
+        1920,
+        810
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/hxh-wide-2560.avif",
+      "sha256": "d0619ade8dc30373ea84f64538eac1ad343acc30ec0a2207252f2a36b7e0a353",
+      "bytes": 26277,
+      "dimensions": [
+        2560,
+        1080
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/hxh-wide-2560.webp",
+      "sha256": "9b4cfaed90229c1e89e961a089bfec6f56c9e30295b7e67c02c7e8073e11002a",
+      "bytes": 44994,
+      "dimensions": [
+        2560,
+        1080
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/hxh-wide-2560.jpg",
+      "sha256": "0310cd0e626e4da040ad875ccef350de63d0859d24a82caba2dda4eee92cc006",
+      "bytes": 115922,
+      "dimensions": [
+        2560,
+        1080
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-540.avif",
+      "sha256": "6ab99a8f06025294c93416f0f9c5b178684a50f1a32be643e2f86e3e0dd83d8b",
+      "bytes": 12437,
+      "dimensions": [
+        540,
+        1043
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-540.webp",
+      "sha256": "dd919d97290f71ec407cca6b4049db83f337cfecc4f467d35d8ad5690f3c5d76",
+      "bytes": 18966,
+      "dimensions": [
+        540,
+        1043
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-540.jpg",
+      "sha256": "5cf571139204126cf73bd37efa8db9c84433a8ed96c120c76af216906c27e851",
+      "bytes": 40807,
+      "dimensions": [
+        540,
+        1043
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-720.avif",
+      "sha256": "65b747f49749d54c34a3d47fcfea7dbd31f9d4fdcddd8cdf3a8822a129de8feb",
+      "bytes": 17630,
+      "dimensions": [
+        720,
+        1391
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-720.webp",
+      "sha256": "8a7f46192f7a7dd28f097674881af1dc6df1a888361bed359b7881f738a2ccc8",
+      "bytes": 27430,
+      "dimensions": [
+        720,
+        1391
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-720.jpg",
+      "sha256": "0221e388c9126b66f7d93372eede2339e373a2446e2db9b55010a507684cb545",
+      "bytes": 61223,
+      "dimensions": [
+        720,
+        1391
+      ],
+      "mode": "RGB"
+    }
+  ],
+  "usage_limits": [
+    "Retains supplied packaging geometry and label content",
+    "Do not describe whole image as resize-only or wholly unmodified: the environment is regraded and extended",
+    "Compression changes decoded pixels; exact identity refers to the protected pre-compression region"
+  ]
+}

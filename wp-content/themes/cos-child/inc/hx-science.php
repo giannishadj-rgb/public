@@ -54,63 +54,60 @@ function hxsc_route(): ?array {
 /** The five chapters, in reading order (also the sub-navigation). */
 function hxsc_chapters(): array {
 	return array(
-		array( 'num' => '01', 'path' => '/science/why-caviar/', 'title' => 'Why caviar', 'line' => 'The material: a lipid profile close to skin’s own.' ),
-		array( 'num' => '02', 'path' => '/science/high-tech-complex/', 'title' => 'The High-Tech Complex', 'line' => 'Five actives, chosen to work as one.' ),
-		array( 'num' => '03', 'path' => '/science/ingredients/', 'title' => 'The five actives', 'line' => 'Each active, its source and its role.' ),
+		array( 'num' => '01', 'path' => '/science/why-caviar/', 'title' => 'Why caviar', 'line' => 'The material, and why its lipids matter.' ),
+		array( 'num' => '02', 'path' => '/science/high-tech-complex/', 'title' => 'The High-Tech Complex', 'line' => 'Five actives, and how they work together.' ),
+		array( 'num' => '03', 'path' => '/science/ingredients/', 'title' => 'The five actives', 'line' => 'Each active: its source and its role.' ),
 		array( 'num' => '04', 'path' => '/science/clinical-studies/', 'title' => 'Clinical studies', 'line' => 'Every published figure, with its method.' ),
 		array( 'num' => '05', 'path' => '/science/swiss-formulation/', 'title' => 'Swiss formulation', 'line' => 'How a formula is made and released in Zug.' ),
 	);
 }
 
 /**
- * The five actives of the High-Tech Complex. Copy from pages 344 (short role), 346 (in depth,
- * mechanism), 60 (index role + summary). 'roles' = Protect / Repair / Rejuvenate, as published
- * on the homepage science section (trust.php): caviar extract protects (encapsulated potency),
- * repairs (phospholipids) and rejuvenates; SOD + resveratrol protect; HA repairs; SYN®-COLL rejuvenates.
+ * The five actives of the High-Tech Complex (round 2, 17 Oct: cosmetic wording only — brand rule,
+ * BRIEF §2 — no "regeneration", "dermis", "penetration", immune or longevity language).
+ * Sources: pages 344 / 346 / 60. 'roles' = Protect / Repair / Rejuvenate as on the homepage.
+ * 'img' = [ src (theme- or uploads-relative), width, height, alt ] — the ingredient photographs,
+ * shown in one warm monochrome (CSS) so five different stock photographs read as one set.
  */
 function hxsc_actives(): array {
+	$t = get_stylesheet_directory_uri() . '/assets/images/ingredients/';
+	$u = content_url( '/uploads/2026/05/' );
 	return array(
 		array(
 			'num'   => '01',
 			'slug'  => 'caviar-extract',
 			'name'  => 'Precious Caviar Extract',
 			'inci'  => 'Acipenser Baerii Roe Extract (Caviar Extract)',
-			'role'  => 'Biomimetic cellular regeneration', // 344
-			'irole' => 'Biomimetic cellular regeneration', // 60
+			'role'  => 'Barrier lipids',
 			'roles' => array( 'protect', 'repair', 'rejuvenate' ),
-			'index' => 'Full-spectrum Acipenser Baerii sturgeon roe extract. The phospholipid profile mirrors human skin’s own intercellular lipid matrix, enabling genuine structural repair at the barrier level.',
-			'desc'  => 'Full-spectrum extract from Acipenser Baerii (Siberian) sturgeon roe. Rich in phospholipids, amino acids, vitamins A, D and B complex, and trace minerals. Its phospholipid profile is remarkably similar to human skin’s own intercellular lipid matrix, making it genuinely biomimetic in a way that most “cellular” ingredients are not.',
-			'mech'  => 'Replenishes the skin’s lipid bilayer, supports the natural desquamation cycle, and provides the raw materials for collagen and elastin synthesis at the cellular level.',
+			'desc'  => 'Full-spectrum extract of Acipenser Baerii (Siberian) sturgeon roe, rich in phospholipids, amino acids, vitamins and trace minerals. Its phospholipid profile mirrors the skin’s own intercellular lipids, so it helps replenish the barrier with the kind of lipids that cleansing and time remove. Micro-encapsulated to protect its potency.',
+			'img'   => array( $t . 'caviar-extract-700x700.webp', 700, 700, 'Caviar pearls on a silver spoon at the lips, in black and white' ),
 		),
 		array(
 			'num'   => '02',
 			'slug'  => 'syn-coll-peptide',
 			'name'  => 'Syn®‑Coll Peptide',
 			'inci'  => 'Palmitoyl Tripeptide-1',
-			'role'  => 'Collagen synthesis stimulation',
-			'irole' => 'Collagen synthesis stimulation',
+			'role'  => 'Firming peptide',
 			'roles' => array( 'rejuvenate' ),
-			'index' => 'Palmitoyl Tripeptide-1. The primary firming active in the High-Tech Complex.',
-			'desc'  => 'A peptide studied for collagen synthesis. Palmitoyl Tripeptide-1 mimics a collagen fragment, signalling dermal fibroblasts to upregulate Type I collagen production. Not a “collagen booster” in the vague marketing sense, but a specific molecular signal for a specific biological response.',
-			'mech'  => 'A peptide signal pathway activating fibroblast collagen synthesis. The palmitoyl tail improves skin penetration by increasing lipophilicity.',
+			'desc'  => 'Palmitoyl Tripeptide-1, the primary firming active in the High-Tech Complex. The peptide mimics a fragment of collagen, a signal studied in collagen research, for skin that looks firmer and smoother.',
 			// In-vitro ingredient research: always shown with this label, never as a product result.
 			'vitro' => array( '4.5×', 'Type I collagen in treated fibroblasts vs. control', 'Published in-vitro studies of the ingredient on dermal fibroblasts. Ingredient research in cell culture, not a result measured with our products.' ),
+			'img'   => array( $t . 'syn-coll-peptide-700x700.webp', 700, 700, 'A pipette releasing drops of serum onto a glass dish beside a swatch of cream' ),
 		),
 		array(
 			'num'   => '03',
 			'slug'  => 'hyaluronic-acid',
 			'name'  => 'Hyaluronic Acid',
 			'inci'  => 'Sodium Hyaluronate / Hydrolysed Sodium Hyaluronate / Sodium Hyaluronate Crosspolymer',
-			'role'  => 'Triple-depth hydration matrix',
-			'irole' => 'Triple-depth hydration matrix',
+			'role'  => 'Hydration at three depths',
 			'roles' => array( 'repair' ),
-			'index' => 'Three molecular weights delivering surface film, mid-layer hydration and deep epidermal volumising simultaneously. The crosspolymer form sustains moisture release for 24 hours.',
-			'desc'  => 'Three molecular weights in a deliberate, tiered delivery system. Crosspolymer provides the 24-hour sustained release.',
-			'mech'  => 'A moisture-binding matrix at three skin depths simultaneously. One molecule of hyaluronic acid can hold 1,000× its own weight in water.',
+			'desc'  => 'Three molecular weights hold moisture at the surface, in the outer layers and deeper in the epidermis, while a crosspolymer form sustains release for 24 hours. One molecule of hyaluronic acid can hold 1,000× its own weight in water.',
+			'img'   => array( $u . 'hyaluronic-acid-700x700.webp', 700, 700, 'A cluster of clear bubbles in a fluid' ),
 			'depth' => array(
-				array( 'High', '1,500–1,800 kDa', 'Surface', 'Sits on the surface, forming a hydrating film and preventing TEWL.' ),
-				array( 'Medium', '200–500 kDa', 'Stratum corneum', 'Penetrates the stratum corneum, hydrating the outer epidermal layers.' ),
-				array( 'Low', '10–50 kDa', 'Deeper epidermis', 'Reaches the deeper epidermis, providing volumising hydration that lifts from within.' ),
+				array( 'High', '1,500–1,800 kDa', 'Surface', 'Forms a hydrating film on the surface and helps prevent water loss (TEWL).' ),
+				array( 'Medium', '200–500 kDa', 'Stratum corneum', 'Hydrates the outer layers of the epidermis.' ),
+				array( 'Low', '10–50 kDa', 'Deeper epidermis', 'Hydrates the deeper epidermis, for a plumper, smoother look.' ),
 			),
 		),
 		array(
@@ -118,24 +115,20 @@ function hxsc_actives(): array {
 			'slug'  => 'superoxide-dismutase',
 			'name'  => 'Superoxide Dismutase',
 			'inci'  => 'Superoxide Dismutase (SOD)',
-			'role'  => 'Enzymatic antioxidant defence',
-			'irole' => 'Enzymatic antioxidant defence',
+			'role'  => 'Antioxidant enzyme',
 			'roles' => array( 'protect' ),
-			'index' => 'The skin’s primary enzymatic antioxidant. Catalyses superoxide radical conversion before the MMP collagen-degradation cascade begins. Not a scavenger: a catalyst.',
-			'desc'  => 'The primary enzymatic antioxidant of the skin’s own defence system. SOD catalyses the dismutation of the superoxide radical (O<sub>2</sub><sup>•−</sup>), the most abundant and reactive free radical produced in the skin, into hydrogen peroxide and oxygen. Unlike vitamin C or resveratrol, which scavenge free radicals after they form, SOD neutralises them at their source.',
-			'mech'  => 'Enzymatic catalysis of superoxide radical conversion. Prevents the downstream collagen-degrading MMP enzyme cascade before it begins.',
+			'desc'  => 'One of the skin’s own antioxidant enzymes. SOD converts the superoxide radical, the most abundant free radical produced in the skin, into hydrogen peroxide and oxygen: it neutralises the radical at its source, before the chain of stress that degrades collagen begins.',
+			'img'   => array( $u . 'superoxide-dismutase-700x700.webp', 700, 700, 'Clouds of pigment unfolding in water' ),
 		),
 		array(
 			'num'   => '05',
 			'slug'  => 'resveratrol',
 			'name'  => 'Resveratrol',
 			'inci'  => 'Resveratrol (from Polygonum Cuspidatum)',
-			'role'  => 'Sirtuin pathway activation',
-			'irole' => 'Sirtuin activation & UV resilience',
+			'role'  => 'Antioxidant & UV resilience',
 			'roles' => array( 'protect' ),
-			'index' => 'Stilbene polyphenol from Polygonum Cuspidatum. SIRT-1 activator, COX-2 inhibitor and direct radical scavenger. Synergistic with SOD for comprehensive antioxidant coverage.',
-			'desc'  => 'A stilbene polyphenol extracted from Polygonum Cuspidatum root. Resveratrol is a SIRT-1 activator: it stimulates the sirtuin protein family associated with cellular longevity and stress resilience. In skin biology, it increases the expression of SIRT-1, which modulates p53 activity and protects against UV-induced apoptosis. It also provides direct free-radical scavenging and inhibits the COX-2 inflammatory pathway.',
-			'mech'  => 'SIRT-1 activation, UV-stress resilience, anti-inflammatory COX-2 inhibition and direct radical scavenging. Synergistic with SOD in comprehensive antioxidant coverage.',
+			'desc'  => 'A polyphenol extracted from Polygonum Cuspidatum root. A direct antioxidant that helps skin resist daily UV and environmental stress, and works alongside SOD for broader antioxidant cover.',
+			'img'   => array( $u . 'resveratrol-700x700.webp', 700, 700, 'Dark grapes beaded with water' ),
 		),
 	);
 }

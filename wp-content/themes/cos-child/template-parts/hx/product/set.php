@@ -14,7 +14,6 @@ $faqs = array(
 	array( 'Are the clinical results for the ritual as a whole?', 'No. Advanced Repair Serum, Revitalizing Eye Cream and 24h Regeneration Cream were each studied on their own, in separate 28-day studies. The four formulas have not been studied together as a set, and the cleanser has not been clinically studied.' ),
 	array( 'Is this a good gift?', 'Yes. The set is presented in the Caviar of Switzerland ritual box with a written ritual guide, ready to give.' ),
 	array( 'What if I only need one or two steps?', 'Each formula is also sold on its own. The Complete Ritual is for anyone starting the full routine, and costs less than buying the four separately.' ),
-	array( 'How long will the set last?', 'With twice-daily use at the recommended amounts, the serum, eye cream and 24h cream each last approximately 6–8 weeks, and the cleanser 8–10 weeks.' ),
 );
 ?>
 <section class="hxpd-set" aria-labelledby="hxpd-set-title">
@@ -27,7 +26,7 @@ $faqs = array(
 			<?php foreach ( $args['formulas'] as $f ) : ?>
 			<li class="hxpd-set__item" data-hx-reveal>
 				<a class="hxpd-set__link" href="<?php echo esc_url( $f['url'] ); ?>">
-					<span class="hxpd-set__stage"><?php echo cos_h26_picture( 'collection-object-' . $f['key'], array( 480, 720, 960 ), array( 2, 3 ), $f['cardalt'], array( 'class' => 'hxpd-set__object', 'sizes' => '(min-width: 1024px) 240px, 40vw', 'w' => 480 ) ); // phpcs:ignore ?></span>
+					<span class="hxpd-set__stage"><?php echo cos_h26_picture( 'pack-' . $f['key'], array( 480, 720, 960 ), array( 2, 3 ), $f['cardalt'], array( 'class' => 'hxpd-set__object', 'sizes' => '(min-width: 1024px) 240px, 40vw', 'w' => 480 ) ); // phpcs:ignore ?></span>
 					<span class="hxpd-set__step"><span class="hx-step"><?php echo esc_html( $f['num'] ); ?></span><span class="hxpd-step__rule" aria-hidden="true"></span><?php echo esc_html( $f['verb'] ); ?></span>
 					<span class="hxpd-set__name"><?php echo esc_html( $f['full'] ); ?></span>
 					<span class="hxpd-set__copy"><?php echo esc_html( $f['copy'] ); ?></span>

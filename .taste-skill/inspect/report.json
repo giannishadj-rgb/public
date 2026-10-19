@@ -1,0 +1,3039 @@
+{
+ "url": "http://caviarofswitzerland.local/",
+ "at": "2026-10-18T19:05:35.979Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 10,
+   "filled": [
+    0.97,
+    0.99,
+    1,
+    1,
+    0.89,
+    1,
+    1,
+    1,
+    0.91,
+    0.92
+   ],
+   "motion": {
+    "elements": 45,
+    "css": 7,
+    "transitions": 38,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 8149,
+     "screens": 9.1,
+     "words": 616,
+     "img": 16,
+     "video": 0,
+     "canvas": 0,
+     "svg": 7,
+     "sections": 9,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 13,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "hxh-wide-2560.avif?v=1792324023",
+      "collection-object-cleanser-480.avif?v=1792134859",
+      "collection-object-serum-480.avif?v=1792134877",
+      "collection-object-eye-480.avif?v=1792134907",
+      "collection-object-cream-480.avif?v=1792134949",
+      "hxv-field-2048.avif?v=1792134895",
+      "collection-object-serum-480.avif?v=1792134877",
+      "collection-object-eye-480.avif?v=1792134907"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": []
+    },
+    "hero": {
+     "text": "The Swiss art of caviar skincare",
+     "words": 6,
+     "chars": 32,
+     "lines": 2,
+     "size": 60,
+     "vw": 4.2,
+     "font": "Cormorant Garamond",
+     "weight": 300,
+     "tracking": -0.018,
+     "leading": 1.04,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.25,
+     "top": 335,
+     "mixedFonts": [
+      "Cormorant Garamond",
+      "Cormorant Garamond italic"
+     ],
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "The Swiss art of caviar skincare",
+     "words": 6,
+     "lines": 2,
+     "size": 60,
+     "font": "Cormorant Garamond"
+    },
+    "headings": [
+     {
+      "text": "The Swiss art of caviar skincare",
+      "words": 6,
+      "chars": 32,
+      "lines": 2,
+      "size": 60,
+      "vw": 4.2,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.018,
+      "leading": 1.04,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.25,
+      "top": 335,
+      "mixedFonts": [
+       "Cormorant Garamond",
+       "Cormorant Garamond italic"
+      ],
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "The Collection",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 60,
+      "vw": 4.2,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.012,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.51,
+      "top": 1006,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Micellar Water All‑in‑One Cleanser",
+      "words": 4,
+      "chars": 34,
+      "lines": 2,
+      "size": 30,
+      "vw": 2.1,
+      "font": "Cormorant Garamond",
+      "weight": 400,
+      "tracking": -0.004,
+      "leading": 1.18,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0.16,
+      "top": 1651,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Advanced Repair Serum",
+      "words": 3,
+      "chars": 21,
+      "lines": 2,
+      "size": 30,
+      "vw": 2.1,
+      "font": "Cormorant Garamond",
+      "weight": 400,
+      "tracking": -0.004,
+      "leading": 1.18,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0.14,
+      "top": 1651,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Revitalizing Eye Cream",
+      "words": 3,
+      "chars": 22,
+      "lines": 2,
+      "size": 30,
+      "vw": 2.1,
+      "font": "Cormorant Garamond",
+      "weight": 400,
+      "tracking": -0.004,
+      "leading": 1.18,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "right",
+      "widthRatio": 0.1,
+      "top": 1651,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "24h Regeneration Cream",
+      "words": 3,
+      "chars": 22,
+      "lines": 2,
+      "size": 30,
+      "vw": 2.1,
+      "font": "Cormorant Garamond",
+      "weight": 400,
+      "tracking": -0.004,
+      "leading": 1.18,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "right",
+      "widthRatio": 0.14,
+      "top": 1651,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Caviar in every formula",
+      "words": 4,
+      "chars": 23,
+      "lines": 1,
+      "size": 60,
+      "vw": 4.2,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.012,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.37,
+      "top": 2221,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Siberian sturgeon, Acipenser baerii",
+      "words": 4,
+      "chars": 35,
+      "lines": 1,
+      "size": 30,
+      "vw": 2.1,
+      "font": "Cormorant Garamond",
+      "weight": 400,
+      "tracking": -0.004,
+      "leading": 1.18,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.27,
+      "top": 2301,
+      "mixedFonts": [
+       "Cormorant Garamond",
+       "Cormorant Garamond italic"
+      ],
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Rich in the lipids, amino acids and minerals skin relies on.",
+      "words": 11,
+      "chars": 60,
+      "lines": 2,
+      "size": 41.6,
+      "vw": 2.9,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.008,
+      "leading": 1.16,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.36,
+      "top": 2847,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Protect.",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 60,
+      "vw": 4.2,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.012,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.28,
+      "top": 3330,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Repair.",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 60,
+      "vw": 4.2,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.012,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.28,
+      "top": 3330,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Rejuvenate.",
+      "words": 1,
+      "chars": 11,
+      "lines": 1,
+      "size": 60,
+      "vw": 4.2,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.012,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.28,
+      "top": 3330,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Measured, formula by formula.",
+      "words": 4,
+      "chars": 29,
+      "lines": 1,
+      "size": 30,
+      "vw": 2.1,
+      "font": "Cormorant Garamond",
+      "weight": 400,
+      "tracking": -0.004,
+      "leading": 1.18,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.25,
+      "top": 3669,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "+47%",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 103.9,
+      "vw": 7.2,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.02,
+      "leading": 0.9,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.35,
+      "top": 3805,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "−38%",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 103.9,
+      "vw": 7.2,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.02,
+      "leading": 0.9,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.35,
+      "top": 3805,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "100%",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 55.8,
+      "vw": 3.9,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.02,
+      "leading": 0.9,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.06,
+      "top": 4088,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Fewer things, made well.",
+      "words": 4,
+      "chars": 24,
+      "lines": 1,
+      "size": 60,
+      "vw": 4.2,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.012,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.4,
+      "top": 4612,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Zug, Switzerland",
+      "words": 2,
+      "chars": 16,
+      "lines": 1,
+      "size": 30,
+      "vw": 2.1,
+      "font": "Cormorant Garamond",
+      "weight": 400,
+      "tracking": -0.004,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.14,
+      "top": 5162,
+      "tag": "dt",
+      "kind": "heading"
+     },
+     {
+      "text": "20+ years",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 30,
+      "vw": 2.1,
+      "font": "Cormorant Garamond",
+      "weight": 400,
+      "tracking": -0.004,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.07,
+      "top": 5248,
+      "tag": "dt",
+      "kind": "heading"
+     },
+     {
+      "text": "ISO 22716",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 30,
+      "vw": 2.1,
+      "font": "Cormorant Garamond",
+      "weight": 400,
+      "tracking": -0.004,
+      "leading": 1.1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.08,
+      "top": 5314,
+      "tag": "dt",
+      "kind": "heading"
+     },
+     {
+      "text": "The Ritual",
+      "words": 2,
+      "chars": 10,
+      "lines": 1,
+      "size": 60,
+      "vw": 4.2,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.012,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.17,
+      "top": 5588,
+      "mixedFonts": [
+       "Cormorant Garamond",
+       "Cormorant Garamond italic"
+      ],
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Swiss skincare, refined to the essential.",
+      "words": 6,
+      "chars": 41,
+      "lines": 2,
+      "size": 114.4,
+      "vw": 7.9,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.018,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 6681,
+      "mixedFonts": [
+       "Cormorant Garamond",
+       "Cormorant Garamond italic"
+      ],
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "The Caviar Circle",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 43.9,
+      "vw": 3,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.012,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.36,
+      "top": 7438,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 23,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 5,
+     "centered": 5,
+     "medianWords": 3,
+     "mixedFontHeadings": 4
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.82,
+       "mono": false
+      },
+      {
+       "family": "Cormorant Garamond",
+       "share": 0.17,
+       "mono": false
+      },
+      {
+       "family": "sans-serif",
+       "share": 0.01,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      18,
+      19,
+      20,
+      22,
+      24,
+      26,
+      30,
+      42,
+      44,
+      48,
+      56,
+      60,
+      104,
+      114
+     ],
+     "sizeCount": 20,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 16,
+      "leading": 1.6,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 9.8
+     },
+     "measureChars": 33,
+     "max": {
+      "size": 114.4,
+      "vw": 7.9,
+      "font": "Cormorant Garamond",
+      "text": "Swiss skincare,"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 9,
+     "microLabelShare": 0.039,
+     "microSamples": [
+      "The signature ingredient",
+      "Swiss science",
+      "Swiss provenance",
+      "Caviar of Switzerland",
+      "Made in Zug",
+      "Customer Care"
+     ],
+     "upperShare": 0.08,
+     "centerShare": 0.27,
+     "smallText": 10
+    },
+    "eyebrows": [
+     {
+      "text": "The signature ingredient",
+      "above": "Caviar in every formula",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 11.5,
+      "top": 2179
+     },
+     {
+      "text": "Advanced Repair Serum",
+      "above": "+47%",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 14,
+      "top": 3772
+     },
+     {
+      "text": "Revitalizing Eye Cream",
+      "above": "−38%",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 14,
+      "top": 3772
+     },
+     {
+      "text": "Swiss provenance",
+      "above": "Fewer things, made well.",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 11.5,
+      "top": 4541
+     }
+    ],
+    "numbered": [
+     {
+      "text": "01",
+      "size": 18,
+      "top": 1620
+     },
+     {
+      "text": "02",
+      "size": 18,
+      "top": 1620
+     },
+     {
+      "text": "03",
+      "size": 18,
+      "top": 1620
+     },
+     {
+      "text": "04",
+      "size": 18,
+      "top": 1620
+     }
+    ],
+    "color": {
+     "bodyBg": "#f2f2ef",
+     "bodyBgHsl": {
+      "h": 60,
+      "s": 0.1,
+      "l": 0.94
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#f2f2ef",
+       "top": 0,
+       "hsl": {
+        "h": 60,
+        "s": 0.1,
+        "l": 0.94
+       }
+      },
+      {
+       "color": "#e7ded6",
+       "top": 0,
+       "hsl": {
+        "h": 28,
+        "s": 0.26,
+        "l": 0.87
+       }
+      },
+      {
+       "color": "#f3efe7",
+       "top": 0,
+       "hsl": {
+        "h": 40,
+        "s": 0.33,
+        "l": 0.93
+       }
+      },
+      {
+       "color": "#fbfaf7",
+       "top": 900,
+       "hsl": {
+        "h": 45,
+        "s": 0.33,
+        "l": 0.98
+       }
+      },
+      {
+       "color": "#c9cacb",
+       "top": 4357,
+       "hsl": {
+        "h": 210,
+        "s": 0.02,
+        "l": 0.79
+       }
+      },
+      {
+       "color": "#2a2a2c",
+       "top": 7334,
+       "hsl": {
+        "h": 240,
+        "s": 0.02,
+        "l": 0.17
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#1c1d1f",
+       "share": 0.23
+      },
+      {
+       "color": "#3a3b3d",
+       "share": 0.23
+      },
+      {
+       "color": "#5c5c5a",
+       "share": 0.18
+      },
+      {
+       "color": "#f2efe8",
+       "share": 0.16
+      },
+      {
+       "color": "#cac5bb",
+       "share": 0.1
+      }
+     ],
+     "button": {
+      "bg": "#1c1d1f",
+      "hsl": {
+       "h": 220,
+       "s": 0.05,
+       "l": 0.12
+      },
+      "fg": "#1c1d1f"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 5,
+     "inHero": 1,
+     "radius": 0,
+     "height": 44,
+     "withShadow": 0,
+     "withGradient": 4,
+     "mono": 0,
+     "upper": 1,
+     "heroLabels": [
+      "SHOP THE COMPLETE RITUAL"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 12,
+     "hairlineSamples": [
+      "div.hxv__fact.is-in 299px",
+      "div.hxv__fact.is-in 299px",
+      "div.hxs__proof 1290px",
+      "li.hxs__result.hxs__result--reported 1290px",
+      "div.hxp__fact.is-in 629px"
+     ],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 11,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 8,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 1
+     }
+    ],
+    "nav": {
+     "links": 9,
+     "fixed": true,
+     "height": 81,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "cormorant garamond",
+     "inter"
+    ]
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 9,
+   "filled": [
+    0.95,
+    0.99,
+    1,
+    1,
+    0.93,
+    1,
+    1,
+    1,
+    0.88
+   ],
+   "motion": {
+    "elements": 42,
+    "css": 8,
+    "transitions": 34,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 9000,
+     "screens": 8.8,
+     "words": 608,
+     "img": 16,
+     "video": 0,
+     "canvas": 0,
+     "svg": 7,
+     "sections": 9,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 9,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "hxh-wide-2560.avif?v=1792324023",
+      "collection-object-cleanser-480.avif?v=1792134859",
+      "collection-object-serum-480.avif?v=1792134877",
+      "collection-object-eye-480.avif?v=1792134907",
+      "collection-object-cream-480.avif?v=1792134949",
+      "hxv-field-1440.avif?v=1792134888",
+      "provenance-summit-wide-1440.avif?v=1792067690",
+      "hxr-cleanser-480.avif?v=1792134884"
+     ],
+     "blendText": 0,
+     "sideScrollers": 1,
+     "brokenImages": [],
+     "emoji": []
+    },
+    "hero": {
+     "text": "The Swiss art of caviar skincare",
+     "words": 6,
+     "chars": 32,
+     "lines": 2,
+     "size": 48,
+     "vw": 6.3,
+     "font": "Cormorant Garamond",
+     "weight": 300,
+     "tracking": -0.018,
+     "leading": 1.04,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "center",
+     "position": "center",
+     "widthRatio": 0.42,
+     "top": 126,
+     "mixedFonts": [
+      "Cormorant Garamond",
+      "Cormorant Garamond italic"
+     ],
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "The Swiss art of caviar skincare",
+     "words": 6,
+     "lines": 2,
+     "size": 48,
+     "font": "Cormorant Garamond"
+    },
+    "headings": [
+     {
+      "text": "The Swiss art of caviar skincare",
+      "words": 6,
+      "chars": 32,
+      "lines": 2,
+      "size": 48,
+      "vw": 6.3,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.018,
+      "leading": 1.04,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.42,
+      "top": 126,
+      "mixedFonts": [
+       "Cormorant Garamond",
+       "Cormorant Garamond italic"
+      ],
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "The Collection",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 43.4,
+      "vw": 5.7,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.012,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 1103,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Micellar Water All‑in‑One Cleanser",
+      "words": 4,
+      "chars": 34,
+      "lines": 2,
+      "size": 26.1,
+      "vw": 3.4,
+      "font": "Cormorant Garamond",
+      "weight": 400,
+      "tracking": -0.004,
+      "leading": 1.18,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0.27,
+      "top": 1754,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Advanced Repair Serum",
+      "words": 3,
+      "chars": 21,
+      "lines": 2,
+      "size": 26.1,
+      "vw": 3.4,
+      "font": "Cormorant Garamond",
+      "weight": 400,
+      "tracking": -0.004,
+      "leading": 1.18,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "right",
+      "widthRatio": 0.23,
+      "top": 1754,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Revitalizing Eye Cream",
+      "words": 3,
+      "chars": 22,
+      "lines": 2,
+      "size": 26.1,
+      "vw": 3.4,
+      "font": "Cormorant Garamond",
+      "weight": 400,
+      "tracking": -0.004,
+      "leading": 1.18,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0.16,
+      "top": 2493,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "24h Regeneration Cream",
+      "words": 3,
+      "chars": 22,
+      "lines": 2,
+      "size": 26.1,
+      "vw": 3.4,
+      "font": "Cormorant Garamond",
+      "weight": 400,
+      "tracking": -0.004,
+      "leading": 1.18,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "right",
+      "widthRatio": 0.23,
+      "top": 2493,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Caviar in every formula",
+      "words": 4,
+      "chars": 23,
+      "lines": 1,
+      "size": 43.4,
+      "vw": 5.7,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.012,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 2902,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Siberian sturgeon, Acipenser baerii",
+      "words": 4,
+      "chars": 35,
+      "lines": 1,
+      "size": 26.1,
+      "vw": 3.4,
+      "font": "Cormorant Garamond",
+      "weight": 400,
+      "tracking": -0.004,
+      "leading": 1.18,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 2992,
+      "mixedFonts": [
+       "Cormorant Garamond",
+       "Cormorant Garamond italic"
+      ],
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Rich in the lipids, amino acids and minerals skin relies on.",
+      "words": 11,
+      "chars": 60,
+      "lines": 2,
+      "size": 32.9,
+      "vw": 4.3,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.008,
+      "leading": 1.16,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.64,
+      "top": 3475,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Protect.",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 43.4,
+      "vw": 5.7,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.012,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.36,
+      "top": 3953,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Repair.",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 43.4,
+      "vw": 5.7,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.012,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.36,
+      "top": 4113,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Rejuvenate.",
+      "words": 1,
+      "chars": 11,
+      "lines": 1,
+      "size": 43.4,
+      "vw": 5.7,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.012,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.36,
+      "top": 4273,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Measured, formula by formula.",
+      "words": 4,
+      "chars": 29,
+      "lines": 1,
+      "size": 26.1,
+      "vw": 3.4,
+      "font": "Cormorant Garamond",
+      "weight": 400,
+      "tracking": -0.004,
+      "leading": 1.18,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.4,
+      "top": 4471,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "+47%",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 73.2,
+      "vw": 9.5,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.02,
+      "leading": 0.9,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.3,
+      "top": 4635,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "−38%",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 73.2,
+      "vw": 9.5,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.02,
+      "leading": 0.9,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.3,
+      "top": 4635,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "100%",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 45.1,
+      "vw": 5.9,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.02,
+      "leading": 0.9,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.1,
+      "top": 4886,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Fewer things, made well.",
+      "words": 4,
+      "chars": 24,
+      "lines": 1,
+      "size": 43.4,
+      "vw": 5.7,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.012,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.54,
+      "top": 5343,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Zug, Switzerland",
+      "words": 2,
+      "chars": 16,
+      "lines": 1,
+      "size": 26.1,
+      "vw": 3.4,
+      "font": "Cormorant Garamond",
+      "weight": 400,
+      "tracking": -0.004,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.22,
+      "top": 6207,
+      "tag": "dt",
+      "kind": "heading"
+     },
+     {
+      "text": "20+ years",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 26.1,
+      "vw": 3.4,
+      "font": "Cormorant Garamond",
+      "weight": 400,
+      "tracking": -0.004,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.12,
+      "top": 6289,
+      "tag": "dt",
+      "kind": "heading"
+     },
+     {
+      "text": "ISO 22716",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 26.1,
+      "vw": 3.4,
+      "font": "Cormorant Garamond",
+      "weight": 400,
+      "tracking": -0.004,
+      "leading": 1.1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.14,
+      "top": 6351,
+      "tag": "dt",
+      "kind": "heading"
+     },
+     {
+      "text": "The Ritual",
+      "words": 2,
+      "chars": 10,
+      "lines": 1,
+      "size": 43.4,
+      "vw": 5.7,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.012,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.22,
+      "top": 6575,
+      "mixedFonts": [
+       "Cormorant Garamond",
+       "Cormorant Garamond italic"
+      ],
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Swiss skincare, refined to the essential.",
+      "words": 6,
+      "chars": 41,
+      "lines": 2,
+      "size": 77.8,
+      "vw": 10.1,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.018,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 7530,
+      "mixedFonts": [
+       "Cormorant Garamond",
+       "Cormorant Garamond italic"
+      ],
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "The Caviar Circle",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 35.5,
+      "vw": 4.6,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.012,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 8120,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 23,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 5,
+     "centered": 6,
+     "medianWords": 3,
+     "mixedFontHeadings": 4
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.82,
+       "mono": false
+      },
+      {
+       "family": "Cormorant Garamond",
+       "share": 0.18,
+       "mono": false
+      },
+      {
+       "family": "sans-serif",
+       "share": 0.01,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      18,
+      20,
+      21,
+      22,
+      24,
+      26,
+      33,
+      34,
+      36,
+      43,
+      45,
+      48,
+      73,
+      78
+     ],
+     "sizeCount": 20,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 16,
+      "leading": 1.6,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 9.8
+     },
+     "measureChars": 43,
+     "max": {
+      "size": 77.8,
+      "vw": 10.1,
+      "font": "Cormorant Garamond",
+      "text": "Swiss skincare,"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 9,
+     "microLabelShare": 0.04,
+     "microSamples": [
+      "The signature ingredient",
+      "Swiss science",
+      "Swiss provenance",
+      "Caviar of Switzerland",
+      "Made in Zug",
+      "Customer Care"
+     ],
+     "upperShare": 0.06,
+     "centerShare": 0.16,
+     "smallText": 9
+    },
+    "eyebrows": [
+     {
+      "text": "The signature ingredient",
+      "above": "Caviar in every formula",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 11.5,
+      "top": 2864
+     },
+     {
+      "text": "Swiss science",
+      "above": "Protect.",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 11.5,
+      "top": 3904
+     },
+     {
+      "text": "Advanced Repair Serum",
+      "above": "+47%",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 14,
+      "top": 4601
+     },
+     {
+      "text": "Revitalizing Eye Cream",
+      "above": "−38%",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 14,
+      "top": 4601
+     },
+     {
+      "text": "Swiss provenance",
+      "above": "Fewer things, made well.",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 11.5,
+      "top": 5277
+     }
+    ],
+    "numbered": [
+     {
+      "text": "01",
+      "size": 18,
+      "top": 1723
+     },
+     {
+      "text": "02",
+      "size": 18,
+      "top": 1723
+     },
+     {
+      "text": "03",
+      "size": 18,
+      "top": 2463
+     },
+     {
+      "text": "04",
+      "size": 18,
+      "top": 2463
+     }
+    ],
+    "color": {
+     "bodyBg": "#f2f2ef",
+     "bodyBgHsl": {
+      "h": 60,
+      "s": 0.1,
+      "l": 0.94
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#f2f2ef",
+       "top": 0,
+       "hsl": {
+        "h": 60,
+        "s": 0.1,
+        "l": 0.94
+       }
+      },
+      {
+       "color": "#e7ded6",
+       "top": 0,
+       "hsl": {
+        "h": 28,
+        "s": 0.26,
+        "l": 0.87
+       }
+      },
+      {
+       "color": "#f3efe7",
+       "top": 0,
+       "hsl": {
+        "h": 40,
+        "s": 0.33,
+        "l": 0.93
+       }
+      },
+      {
+       "color": "#fbfaf7",
+       "top": 1024,
+       "hsl": {
+        "h": 45,
+        "s": 0.33,
+        "l": 0.98
+       }
+      },
+      {
+       "color": "#c9cacb",
+       "top": 5126,
+       "hsl": {
+        "h": 210,
+        "s": 0.02,
+        "l": 0.79
+       }
+      },
+      {
+       "color": "#2a2a2c",
+       "top": 8032,
+       "hsl": {
+        "h": 240,
+        "s": 0.02,
+        "l": 0.17
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#3a3b3d",
+       "share": 0.38
+      },
+      {
+       "color": "#1c1d1f",
+       "share": 0.24
+      },
+      {
+       "color": "#5c5c5a",
+       "share": 0.19
+      },
+      {
+       "color": "#cac5bb",
+       "share": 0.1
+      },
+      {
+       "color": "#625646",
+       "share": 0.04
+      }
+     ],
+     "button": {
+      "bg": "#1c1d1f",
+      "hsl": {
+       "h": 220,
+       "s": 0.05,
+       "l": 0.12
+      },
+      "fg": "#1c1d1f"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 5,
+     "inHero": 1,
+     "radius": 0,
+     "height": 44,
+     "withShadow": 0,
+     "withGradient": 4,
+     "mono": 0,
+     "upper": 1,
+     "heroLabels": [
+      "SHOP THE COMPLETE RITUAL"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 13,
+     "hairlineSamples": [
+      "div.hxv__fact.is-in 336px",
+      "div.hxv__fact.is-in 336px",
+      "div.hxs__proof 688px",
+      "li.hxs__result.hxs__result--reported 688px",
+      "div.hxp__fact.is-in 688px"
+     ],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 11,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 4,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 1
+     }
+    ],
+    "nav": {
+     "links": 2,
+     "fixed": true,
+     "height": 81,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "cormorant garamond",
+     "inter"
+    ]
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 10,
+   "filled": [
+    0.96,
+    0.98,
+    0.99,
+    1,
+    1,
+    0.89,
+    1,
+    1,
+    1,
+    1
+   ],
+   "motion": {
+    "elements": 47,
+    "css": 12,
+    "transitions": 35,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 8104,
+     "screens": 9.6,
+     "words": 548,
+     "img": 16,
+     "video": 0,
+     "canvas": 0,
+     "svg": 7,
+     "sections": 9,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 9,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "hxh-tall-540.avif?v=1792324023",
+      "collection-object-cleanser-480.avif?v=1792134859",
+      "collection-object-serum-480.avif?v=1792134877",
+      "collection-object-eye-480.avif?v=1792134907",
+      "collection-object-cream-480.avif?v=1792134949",
+      "hxv-field-tall-640.avif?v=1792134972",
+      "provenance-summit-tall-640.avif?v=1792067698",
+      "hxr-cleanser-480.avif?v=1792134884"
+     ],
+     "blendText": 0,
+     "sideScrollers": 1,
+     "brokenImages": [],
+     "emoji": []
+    },
+    "hero": {
+     "text": "The Swiss art of caviar skincare",
+     "words": 6,
+     "chars": 32,
+     "lines": 2,
+     "size": 40,
+     "vw": 10.3,
+     "font": "Cormorant Garamond",
+     "weight": 300,
+     "tracking": -0.018,
+     "leading": 1.04,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "center",
+     "position": "center",
+     "widthRatio": 0.83,
+     "top": 118,
+     "mixedFonts": [
+      "Cormorant Garamond",
+      "Cormorant Garamond italic"
+     ],
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "The Swiss art of caviar skincare",
+     "words": 6,
+     "lines": 2,
+     "size": 40,
+     "font": "Cormorant Garamond"
+    },
+    "headings": [
+     {
+      "text": "The Swiss art of caviar skincare",
+      "words": 6,
+      "chars": 32,
+      "lines": 2,
+      "size": 40,
+      "vw": 10.3,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.018,
+      "leading": 1.04,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 118,
+      "mixedFonts": [
+       "Cormorant Garamond",
+       "Cormorant Garamond italic"
+      ],
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "The Collection",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 34,
+      "vw": 8.7,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.012,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 908,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Caviar in every formula",
+      "words": 4,
+      "chars": 23,
+      "lines": 1,
+      "size": 34,
+      "vw": 8.7,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.012,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 2099,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Siberian sturgeon, Acipenser baerii",
+      "words": 4,
+      "chars": 35,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Cormorant Garamond",
+      "weight": 400,
+      "tracking": -0.004,
+      "leading": 1.18,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 2151,
+      "mixedFonts": [
+       "Cormorant Garamond",
+       "Cormorant Garamond italic"
+      ],
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Rich in the lipids, amino acids and minerals skin relies on.",
+      "words": 11,
+      "chars": 60,
+      "lines": 2,
+      "size": 28,
+      "vw": 7.2,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.008,
+      "leading": 1.16,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 2762,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Origin",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Cormorant Garamond",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 2876,
+      "tag": "dt",
+      "kind": "heading"
+     },
+     {
+      "text": "Formulation",
+      "words": 1,
+      "chars": 11,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Cormorant Garamond",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 2999,
+      "tag": "dt",
+      "kind": "heading"
+     },
+     {
+      "text": "Protect.",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 34,
+      "vw": 8.7,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.012,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 3328,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Repair.",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 34,
+      "vw": 8.7,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.012,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 3520,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Rejuvenate.",
+      "words": 1,
+      "chars": 11,
+      "lines": 1,
+      "size": 34,
+      "vw": 8.7,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.012,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 3711,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Measured, formula by formula.",
+      "words": 4,
+      "chars": 29,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Cormorant Garamond",
+      "weight": 400,
+      "tracking": -0.004,
+      "leading": 1.18,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 3967,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "+47%",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 56,
+      "vw": 14.4,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.02,
+      "leading": 0.9,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.42,
+      "top": 4274,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "−38%",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 56,
+      "vw": 14.4,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.02,
+      "leading": 0.9,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.42,
+      "top": 4274,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "100%",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 40,
+      "vw": 10.3,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.02,
+      "leading": 0.9,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.17,
+      "top": 4515,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Fewer things, made well.",
+      "words": 4,
+      "chars": 24,
+      "lines": 1,
+      "size": 34,
+      "vw": 8.7,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.012,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 4974,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Zug, Switzerland",
+      "words": 2,
+      "chars": 16,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Cormorant Garamond",
+      "weight": 400,
+      "tracking": -0.004,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 5574,
+      "tag": "dt",
+      "kind": "heading"
+     },
+     {
+      "text": "20+ years",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Cormorant Garamond",
+      "weight": 400,
+      "tracking": -0.004,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 5658,
+      "tag": "dt",
+      "kind": "heading"
+     },
+     {
+      "text": "ISO 22716",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Cormorant Garamond",
+      "weight": 400,
+      "tracking": -0.004,
+      "leading": 1.1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 5741,
+      "tag": "dt",
+      "kind": "heading"
+     },
+     {
+      "text": "The Ritual",
+      "words": 2,
+      "chars": 10,
+      "lines": 1,
+      "size": 34,
+      "vw": 8.7,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.012,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.35,
+      "top": 5945,
+      "mixedFonts": [
+       "Cormorant Garamond",
+       "Cormorant Garamond italic"
+      ],
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "CLEANSE",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Cormorant Garamond",
+      "weight": 500,
+      "tracking": 0.3,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.85,
+      "top": 6084,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "TREAT",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Cormorant Garamond",
+      "weight": 500,
+      "tracking": 0.3,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.85,
+      "top": 6084,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "REVIVE",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Cormorant Garamond",
+      "weight": 500,
+      "tracking": 0.3,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.85,
+      "top": 6084,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "RESTORE",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Cormorant Garamond",
+      "weight": 500,
+      "tracking": 0.3,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.85,
+      "top": 6084,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "Step 1",
+      "words": 2,
+      "chars": 6,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Cormorant Garamond",
+      "weight": 400,
+      "tracking": 0.01,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 6513,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "Step 2",
+      "words": 2,
+      "chars": 6,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Cormorant Garamond",
+      "weight": 400,
+      "tracking": 0.01,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.83,
+      "top": 6513,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "Step 3",
+      "words": 2,
+      "chars": 6,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Cormorant Garamond",
+      "weight": 400,
+      "tracking": 0.01,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.83,
+      "top": 6513,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "Step 4",
+      "words": 2,
+      "chars": 6,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Cormorant Garamond",
+      "weight": 400,
+      "tracking": 0.01,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.83,
+      "top": 6513,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "Swiss skincare, refined to the essential.",
+      "words": 6,
+      "chars": 41,
+      "lines": 2,
+      "size": 42.4,
+      "vw": 10.9,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.018,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 6858,
+      "mixedFonts": [
+       "Cormorant Garamond",
+       "Cormorant Garamond italic"
+      ],
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "The Caviar Circle",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Cormorant Garamond",
+      "weight": 300,
+      "tracking": -0.012,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 7351,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 29,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 13,
+     "centered": 2,
+     "medianWords": 2,
+     "mixedFontHeadings": 4
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.81,
+       "mono": false
+      },
+      {
+       "family": "Cormorant Garamond",
+       "share": 0.18,
+       "mono": false
+      },
+      {
+       "family": "sans-serif",
+       "share": 0.01,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      22,
+      24,
+      26,
+      28,
+      32,
+      34,
+      40,
+      42,
+      56
+     ],
+     "sizeCount": 19,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 16,
+      "leading": 1.6,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 9.8
+     },
+     "measureChars": 40,
+     "max": {
+      "size": 56,
+      "vw": 14.4,
+      "font": "Cormorant Garamond",
+      "text": "+47"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 8,
+     "microLabelShare": 0.038,
+     "microSamples": [
+      "The signature ingredient",
+      "Swiss science",
+      "Swiss provenance",
+      "Caviar of Switzerland",
+      "Customer Care",
+      "Explore"
+     ],
+     "upperShare": 0.06,
+     "centerShare": 0.12,
+     "smallText": 9
+    },
+    "eyebrows": [
+     {
+      "text": "The signature ingredient",
+      "above": "Caviar in every formula",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 11.5,
+      "top": 2063
+     },
+     {
+      "text": "Swiss science",
+      "above": "Protect.",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 11.5,
+      "top": 3288
+     },
+     {
+      "text": "Caviar extract",
+      "above": "Repair.",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 14,
+      "top": 3468
+     },
+     {
+      "text": "Caviar phospholipids",
+      "above": "Rejuvenate.",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 14,
+      "top": 3659
+     },
+     {
+      "text": "Advanced Repair Serum",
+      "above": "+47%",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 14,
+      "top": 4219
+     },
+     {
+      "text": "Revitalizing Eye Cream",
+      "above": "−38%",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 14,
+      "top": 4219
+     },
+     {
+      "text": "Swiss provenance",
+      "above": "Fewer things, made well.",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 11.5,
+      "top": 4882
+     }
+    ],
+    "numbered": [
+     {
+      "text": "01",
+      "size": 16,
+      "top": 1325
+     },
+     {
+      "text": "02",
+      "size": 16,
+      "top": 1325
+     },
+     {
+      "text": "03",
+      "size": 16,
+      "top": 1776
+     },
+     {
+      "text": "04",
+      "size": 16,
+      "top": 1776
+     }
+    ],
+    "color": {
+     "bodyBg": "#f2f2ef",
+     "bodyBgHsl": {
+      "h": 60,
+      "s": 0.1,
+      "l": 0.94
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#f2f2ef",
+       "top": 0,
+       "hsl": {
+        "h": 60,
+        "s": 0.1,
+        "l": 0.94
+       }
+      },
+      {
+       "color": "#e7ded6",
+       "top": 0,
+       "hsl": {
+        "h": 28,
+        "s": 0.26,
+        "l": 0.87
+       }
+      },
+      {
+       "color": "#f3efe7",
+       "top": 0,
+       "hsl": {
+        "h": 40,
+        "s": 0.33,
+        "l": 0.93
+       }
+      },
+      {
+       "color": "#fbfaf7",
+       "top": 844,
+       "hsl": {
+        "h": 45,
+        "s": 0.33,
+        "l": 0.98
+       }
+      },
+      {
+       "color": "#c9cacb",
+       "top": 4754,
+       "hsl": {
+        "h": 210,
+        "s": 0.02,
+        "l": 0.79
+       }
+      },
+      {
+       "color": "#ddd8cf",
+       "top": 6084,
+       "hsl": {
+        "h": 39,
+        "s": 0.17,
+        "l": 0.84
+       }
+      },
+      {
+       "color": "#2a2a2c",
+       "top": 7279,
+       "hsl": {
+        "h": 240,
+        "s": 0.02,
+        "l": 0.17
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#3a3b3d",
+       "share": 0.39
+      },
+      {
+       "color": "#1c1d1f",
+       "share": 0.25
+      },
+      {
+       "color": "#5c5c5a",
+       "share": 0.15
+      },
+      {
+       "color": "#cac5bb",
+       "share": 0.11
+      },
+      {
+       "color": "#625646",
+       "share": 0.04
+      }
+     ],
+     "button": {
+      "bg": "#1c1d1f",
+      "hsl": {
+       "h": 220,
+       "s": 0.05,
+       "l": 0.12
+      },
+      "fg": "#1c1d1f"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 5,
+     "inHero": 1,
+     "radius": 0,
+     "height": 44,
+     "withShadow": 0,
+     "withGradient": 4,
+     "mono": 0,
+     "upper": 1,
+     "heroLabels": [
+      "SHOP THE COMPLETE RITUAL"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 2,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 15,
+     "hairlineSamples": [
+      "div.hxv__fact.is-in 342px",
+      "div.hxv__fact.is-in 342px",
+      "div.hxs__proof 342px",
+      "li.hxs__result.hxs__result--reported 342px",
+      "div.hxp__fact.is-in 342px"
+     ],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 7,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 4,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 1
+     }
+    ],
+    "nav": {
+     "links": 2,
+     "fixed": true,
+     "height": 81,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "cormorant garamond",
+     "inter"
+    ]
+   },
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "mixed-font-headline",
+   "width": 1440,
+   "message": "4 headline(s) switch typeface or to italic mid-line (the \"one italic serif word\" move).",
+   "fix": "Set the whole headline in one face. Emphasis comes from the words.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "width": 1440,
+   "message": "4 eyebrow/kicker label(s) above headings: \"The signature ingredient\" above \"Caviar in every formula\"; \"Advanced Repair Serum\" above \"+47%\"; \"Revitalizing Eye Cream\" above \"−38%\"; \"Swiss provenance\" above \"Fewer things, made well.\"",
+   "fix": "Delete them. If the label carried real information, fold it into the headline or the supporting sentence.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "numbering",
+   "width": 1440,
+   "message": "Decorative index numbers: \"01\", \"02\", \"03\", \"04\"",
+   "fix": "Remove them. If order truly matters, write it into the words (\"First, …\") or use a real <ol>.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "micro-label",
+   "width": 1440,
+   "message": "9 tiny uppercase letter-spaced labels (e.g. \"The signature ingredient\", \"Swiss science\", \"Swiss provenance\", \"Caviar of Switzerland\").",
+   "fix": "Use sentence-case text at a readable size, or delete the label.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "text-shadow",
+   "width": 1440,
+   "message": "8 text-shadow(s).",
+   "fix": "Remove; fix legibility with a scrim or a different crop.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "button-fx",
+   "width": 1440,
+   "message": "Buttons with gradient fill.",
+   "fix": "Flat fill, one colour.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "width": 1440,
+   "message": "12 thin rule(s)/divider line(s): div.hxv__fact.is-in 299px | div.hxv__fact.is-in 299px | div.hxs__proof 1290px | li.hxs__result.hxs__result--reported 1290px",
+   "fix": "Delete. Separate with space, a tone change, or scale. Lines are only for real tables and form fields.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "palette-cream",
+   "width": 1440,
+   "message": "Yellow-cream background (section #f3efe7, section #fbfaf7, text #f2efe8).",
+   "fix": "Use the drawn palette. If you want warmth, take a low-chroma stone or bone, not a yellow cream.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 1440,
+   "message": "20 different font sizes (11, 12, 13, 14, 15, 16, 18, 19, 20, 22, 24, 26, 30, 42, 44, 48, 56, 60, 104, 114).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "FAIL",
+   "id": "small-text",
+   "width": 1440,
+   "message": "10 text blocks under 13px.",
+   "fix": "Nothing meant to be read goes below 13px.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "side-scroll",
+   "width": 768,
+   "message": "1 row(s) scroll sideways with content past their edge.",
+   "fix": "Jurors and most visitors read a row cut at the edge as clipped, not as scrollable. Wrap it onto more lines, or end it inside the grid.",
+   "alsoAt": [
+    390
+   ]
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\.taste-skill\\inspect\\desktop-fold.jpg",
+   "pages": [
+    "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\.taste-skill\\inspect\\desktop-page-01.jpg",
+    "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\.taste-skill\\inspect\\desktop-page-02.jpg",
+    "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\.taste-skill\\inspect\\desktop-page-03.jpg"
+   ]
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\.taste-skill\\inspect\\tablet-fold.jpg",
+   "pages": [
+    "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\.taste-skill\\inspect\\tablet-page-01.jpg",
+    "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\.taste-skill\\inspect\\tablet-page-02.jpg"
+   ]
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\.taste-skill\\inspect\\mobile-fold.jpg",
+   "pages": [
+    "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\.taste-skill\\inspect\\mobile-page-01.jpg",
+    "C:\\Users\\giann\\Local Sites\\studio-caviar-of-switzerland-2026-05-28-10-36-43\\app\\public\\.taste-skill\\inspect\\mobile-page-02.jpg"
+   ]
+  }
+ ]
+}

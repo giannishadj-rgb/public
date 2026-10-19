@@ -18,27 +18,31 @@
  */
 defined( 'ABSPATH' ) || exit;
 
-$hxh_wide_media = '(min-width: 600px)'; // tablets (both orientations) and up; the tall frame is for phones only
-$hxh_wide_sizes = '(min-aspect-ratio: 237/100) 100vw, 237vh';   // frame is 2632x1111 (2.37:1), covers by height
-$hxh_tall_sizes = '(max-aspect-ratio: 518/1000) 51.8vh, 100vw'; // frame is 720x1391 (0.518:1)
-$hxh_alt        = 'The 24h Regeneration Cream, open and filled with white cream, its polished chrome lid with the Swiss cross resting against the jar, reflected on a pale champagne silk surface';
+// 19 Oct 2026: the jar now sits in a built ivory studio set (wc-hero-*, build_wc_hero.py; the jar,
+// lid and floor reflection are the owner photograph, pixel-identical, see wc-hero.origin.json).
+// Art direction switches by shape, not width: landscape screens get the wide frame, portrait
+// screens (phones and portrait tablets) the tall one.
+$hxh_wide_media = '(min-aspect-ratio: 1/1)';
+$hxh_wide_sizes = '(min-aspect-ratio: 1969/1000) 100vw, 196.9vh'; // frame is 2560x1300 (1.969:1), covers by height
+$hxh_tall_sizes = '(max-aspect-ratio: 6/13) 46.16vh, 100vw';      // frame is 1080x2340 (0.4615:1)
+$hxh_alt        = 'The 24h Regeneration Cream, open and filled with white cream, its polished chrome lid with the Swiss cross resting against the jar, reflected on a pale ivory studio floor';
 ?>
 <section class="hxh h26-hero--pearl" aria-labelledby="hxh-title">
 	<div class="hxh__media">
 		<div class="hxh__drift" data-hx-drift="0.07">
 			<?php
 			echo cos_h26_picture(
-				'hxh-tall',
-				array( 540, 720 ),
-				array( 720, 1391 ),
+				'wc-hero-tall',
+				array( 640, 860, 1080 ),
+				array( 1080, 2340 ),
 				$hxh_alt,
 				array(
 					'class' => 'hxh__picture',
 					'eager' => true,
 					'sizes' => $hxh_tall_sizes,
-					'w'     => 720,
+					'w'     => 1080,
 					'art'   => array(
-						array( 'media' => $hxh_wide_media, 'base' => 'hxh-wide', 'widths' => array( 1440, 1920, 2560 ), 'sizes' => $hxh_wide_sizes ),
+						array( 'media' => $hxh_wide_media, 'base' => 'wc-hero-wide', 'widths' => array( 1440, 1920, 2560 ), 'sizes' => $hxh_wide_sizes ),
 					),
 				)
 			);
@@ -50,16 +54,16 @@ $hxh_alt        = 'The 24h Regeneration Cream, open and filled with white cream,
 	<div class="hxh__inner">
 		<div class="hxh__copy">
 			<h1 id="hxh-title" class="hxh__title hx-display">
-				<span class="hxh__line hx-load-rise" style="--hx-i:3">The Swiss art of</span>
-				<span class="hxh__line hx-load-rise" style="--hx-i:4"><em>caviar skincare</em></span>
+				<span class="hxh__line hx-load-rise" style="--hx-i:3">Swiss skincare,</span>
+				<span class="hxh__line hx-load-rise" style="--hx-i:4"><em>refined to the essential.</em></span>
 			</h1>
+			<?php /* 19 Oct 2026 (owner): headline is the brand positioning line; the provenance/evidence
+			   facts line was removed from the hero — the science and heritage sections carry those. */ ?>
 			<p class="hxh__lead hx-load-rise" style="--hx-i:6">Four caviar formulas. One complete&nbsp;ritual.</p>
-			<?php /* Round 1 critique: one quiet line for "premium science". Facts: BRIEF §4 — made in
-			   Zug; serum (cutometry) and eye cream (optical profilometry) results are instrument-measured. */ ?>
-			<p class="hxh__credit hx-load-rise" style="--hx-i:7">Made&nbsp;in&nbsp;Zug<span class="hxh__sep">&nbsp;· </span>Instrument&#8209;measured&nbsp;results</p>
 		</div>
 		<div class="hxh__action hx-load-rise" style="--hx-i:8">
 			<a class="hx-btn hxh__cta" href="<?php echo esc_url( home_url( '/products/the-complete-ritual/' ) ); ?>" data-cro-cta="home-hero-primary">Shop the Complete Ritual<span class="hx-arrow" aria-hidden="true"></span></a>
 		</div>
 	</div>
 </section>
+

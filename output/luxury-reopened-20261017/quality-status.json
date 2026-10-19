@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-17",
+  "preview": "http://caviarofswitzerland.local/",
+  "previous_finish_statement": "Premature; reopened with three fresh independent reviewers.",
+  "status": "PASS within the documented review scope; local implementation complete",
+  "reviewed_scope": [
+    "Seven-section homepage art direction",
+    "Hero and collection source fidelity",
+    "Local cold mobile loading and full-page image stability",
+    "Mobile product, shop and ritual usability"
+  ],
+  "art_direction": {
+    "verdict": "PASS",
+    "sections_passed": 7,
+    "first_screen_message": [
+      "Swiss",
+      "Caviar",
+      "Four formulas",
+      "One complete ritual",
+      "Swiss science"
+    ],
+    "independent_statement": "I would confidently present the finished homepage alongside the observed leading luxury skincare references.",
+    "report": "output/luxury-reopened-20261017/art-direction.md"
+  },
+  "asset_performance": {
+    "verdict": "PASS after fixes",
+    "hero": "Protected jar/lid/reflection region pixel-identical to supplied master; silk environment extended outside it.",
+    "collection": "Source packshots verified; backdrop normalization and alpha decomposition documented.",
+    "mobile_local": {
+      "median_lcp_seconds": 1.74,
+      "cls": 0,
+      "profile": "Chromium390x844 DPR3, cold browser contexts,1.6Mbps down/150ms latency/4xCPU"
+    },
+    "desktop_lazy_image_shift": "Fixed by definite provenance figure width; final focused scroll recorded zero shifts.",
+    "report": "output/luxury-reopened-20261017/assets-performance.md"
+  },
+  "new_images": {
+    "tool": "Built-in image_gen.imagegen",
+    "records": [
+      {
+        "prefix": "swiss-material-study-20261017",
+        "source": "../design-sources/home-2026/swiss-material-study-20261017-master.png",
+        "original": "C:/Users/giann/.codex/generated_images/01a1483b-c75e-7b03-8e5d-35e7ab2c461a/exec-e335ef86-abb6-4a09-9201-2463c792cb5e.png",
+        "prompt": "Use case: ads-marketing. Create one extraordinary photoreal editorial still-life photograph for Caviar of Switzerland luxury skincare website's Swiss precision chapter. PORTRAIT 4:5 composition. A quiet, abstract architectural study in true optical glass, brushed silver, pale cool limestone and utterly clear water. One thick clear optical glass plane with a perfectly polished edge stands vertically in a very shallow pool over pale natural stone; a second low horizontal glass block rests precisely beside it, beautiful understated silver reflections and a single controlled caustic cast by morning light. The precision and care of a Swiss architectural monograph or globally prestigious beauty campaign. Elegant negative space, tactile stone grain, physically believable refined reflection, soft pearl white highlights, restrained champagne warmth, graphite only in narrow reflective edges. Medium-format photography, real optical depth, exceptionally sophisticated light, no CGI gloss, no decorative clutter. Cropped close enough to feel almost abstract yet materials unmistakable. Composition carries silent precision, not wellness/spa imagery. Absolutely NO products, jars, bottles, packaging, logos, Swiss crosses, letters, text, people, lab apparatus, architecture claimed as a real facility, mountains or gold. No beige gradient backdrop. No stacked balancing stones, foliage, flowers or cosmetics. This is illustrative art direction, not documentary facility photography."
+      },
+      {
+        "prefix": "ritual-portrait-20261017",
+        "source": "../design-sources/home-2026/ritual-portrait-20261017-master.png",
+        "original": "C:/Users/giann/.codex/generated_images/01a1483b-c75e-7b03-8e5d-35e7ab2c461a/exec-136e99e7-4ece-4d1a-ba7c-dd0fbfee81f9.png",
+        "prompt": "Use case: ads-marketing. One exquisite photoreal portrait photograph, portrait 4:5, for a Swiss luxury skincare house website ritual chapter. An elegant internationally minded woman approximately 55 years old, natural shoulder-length dark chestnut hair swept back, captured in an intimate three-quarter profile with eyes gently lowered. One relaxed hand with short natural unpolished nails gently presses a very small subtle veil of white moisturiser into her cheek, a believable quiet moment of personal care, hand anatomy exact and graceful. Honest mature skin texture, fine expression lines and freckles, dignified radiance, no artificial plastic smoothing, no exaggerated age marks. Bare shoulders subtly framed by a pearl-white fine cotton wrap at lower edge, modest refined beauty campaign styling. Background pale stone-grey with quiet natural window light, airy silver highlights and very restrained warm skin tones. Timeless medium-format global beauty campaign photography, restrained expensive lighting, calm confidence, extraordinarily sophisticated tonal detail. Face and hand are the narrative, generous breathing room. Avoid stock-spa happiness, broad grin, jewellery, flowers, towels on hair, bathrobe cliches, beige wellness styling, heavy makeup, wet gloss, before-and-after, exaggerated treatment results. NO product containers, jars, bottles, packaging, logos, typography, text, watermarks, medical setting. Fictional illustrative model, no resemblance to any public figure. Must read as beautiful mature woman and careful daily ritual, not product testimonial or study participant."
+      }
+    ],
+    "shipping_directory": "wp-content/themes/cos-child/assets/images/home-2026/",
+    "classification": "Illustrative campaign art, no product packaging or marks. Proportional FFmpeg AVIF/WebP/JPEG conversions."
+  },
+  "limitations": [
+    "Literal utter perfection and universal visitor reaction are not certified.",
+    "Chanel blocked direct visual inspection.",
+    "Physical iPhone Safari, production hosting field performance and production payment completion are unverified."
+  ],
+  "deployment": "Local only; no deployment or commit."
+}

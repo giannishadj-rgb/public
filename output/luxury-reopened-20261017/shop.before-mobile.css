@@ -1,0 +1,366 @@
+/* ==========================================================================
+   hx/shop.css — /shop/ (whole-site rebuild, 16 Oct 2026) · prefix hxshop-
+   Markup: woocommerce/archive-product.php · tokens + utilities: hx/system.css
+   Loaded only on the shop archive (enqueued from the template).
+
+   1 Hero        owner's CAV59851 glass-blocks photograph (build_hxshop_hero.py). <1024px: photo above the
+                 copy on pearl; ≥1024px: photo fills the hero, copy on its plain grey left side.
+   2 Ritual      The Complete Ritual on the owner's silver-tray photograph (final-tray-wide,
+                 cropped per breakpoint), live price + bought-separately saving.
+   3 Formulas    the homepage Collection language: objects on pearl white, one baseline,
+                 subgrid-aligned rows (step / name / benefit / price / add to bag).
+   4 About       category copy in native <details> (services: sitewide footer + ritual line).
+   ========================================================================== */
+
+.hxshop{
+	display:block;
+	background:var(--hx-ivory);
+	color:var(--hx-fg-2);
+	font-family:var(--hx-sans);
+	overflow-x:clip;
+}
+.hxshop *,.hxshop *::before,.hxshop *::after{box-sizing:border-box}
+.hxshop :where(h1,h2,h3,p,ol,ul,li,figure){margin:0;padding:0}
+.hxshop :where(ol,ul){list-style:none}
+.hxshop :where(a){-webkit-tap-highlight-color:transparent}
+.hxshop .woocommerce-Price-currencySymbol{font:inherit}
+
+/* ─── 1 Hero ─────────────────────────────────────────────────────────── */
+.hxshop-hero{
+	position:relative;
+	margin-top:var(--cos-nav-h,80px);
+	background:var(--hx-ivory);
+	color:var(--hx-fg);
+}
+.hxshop-hero__media{position:relative;overflow:clip;background:#DEDDDB}
+.hxshop-hero__media picture,
+.hxshop-hero__media img{display:block;width:100%;height:auto}
+.hxshop-hero__media img{aspect-ratio:1080 / 961;object-fit:cover}
+.hxshop-hero__wrap{position:relative;z-index:1}
+.hxshop-hero__copy{padding-block:var(--hx-s-6) var(--hx-s-7)}
+.hxshop-hero__label{margin-bottom:var(--hx-s-4)}
+.hxshop-hero__title{color:var(--hx-fg);max-width:9.5em}
+.hxshop-hero__lede{max-width:26em;margin-top:var(--hx-stack)}
+.hxshop-hero__cta{margin-top:var(--hx-s-5)}
+.hxshop-hero__down{transform:rotate(90deg);width:14px;margin-left:12px}
+.hxshop-hero__link:hover .hxshop-hero__down{transform:rotate(90deg) translateX(3px)}
+@media (max-width:479.98px){
+	.hxshop-hero__copy{padding-block:var(--hx-s-5) var(--hx-s-6)}
+	.hxshop-hero__lede{margin-top:var(--hx-s-4)}
+	.hxshop-hero__cta{margin-top:var(--hx-s-3)}
+}
+@media (min-width:600px) and (max-width:1023.98px){
+	.hxshop-hero__copy{padding-block:var(--hx-s-7) var(--hx-s-8)}
+}
+@media (min-width:1024px){
+	.hxshop-hero{
+		display:flex;
+		align-items:center;
+		/* exactly one view under the header, so the whole arrangement and its floor show */
+		height:clamp(600px,calc(100svh - var(--cos-nav-h,80px)),1000px);
+		background:#D9D8D6;
+	}
+	.hxshop-hero__media{position:absolute;inset:0}
+	.hxshop-hero__media picture,
+	.hxshop-hero__media img{width:100%;height:100%}
+	.hxshop-hero__media img{aspect-ratio:auto;object-fit:cover;object-position:100% 100%}
+	.hxshop-hero__wrap{width:100%}
+	.hxshop-hero__copy{max-width:min(520px,40vw);padding-block:var(--hx-s-8)}
+	/* on the grey backdrop: ink + text only (accent and muted fail AA there) */
+	.hxshop-hero__label{color:var(--hx-ink)}
+	.hxshop-hero__lede{color:var(--hx-text)}
+}
+
+/* ─── Notices (only rendered when WooCommerce has one) ──────────────── */
+.hxshop-notices{padding-block:var(--hx-s-5) 0}
+.hxshop-notices :is(.woocommerce-message,.woocommerce-info,.woocommerce-error){
+	list-style:none;margin:0;padding:var(--hx-s-4) 0;
+	border-top:1px solid var(--hx-line);border-bottom:1px solid var(--hx-line);
+	font-size:var(--hx-fs-detail);line-height:var(--hx-lh-detail);color:var(--hx-fg);
+}
+.hxshop-notices :is(.woocommerce-message,.woocommerce-info,.woocommerce-error):empty{display:none}
+.hxshop-notices .woocommerce-error{color:#8A2C22}
+.hxshop-notices a{color:inherit}
+
+/* ─── 2 The Complete Ritual ──────────────────────────────────────────── */
+.hxshop-ritual{
+	background:var(--hx-ivory);
+	padding-block:var(--hx-s-8) var(--hx-section-sm);
+	scroll-margin-top:var(--cos-nav-h,80px);
+}
+.hxshop-ritual__grid{display:grid;gap:var(--hx-s-7)}
+.hxshop-ritual__media{
+	display:block;
+	aspect-ratio:1 / 1;
+	background:#B9B9B8;
+}
+.hxshop-ritual__media picture,
+.hxshop-ritual__media img{display:block;width:100%;height:100%}
+.hxshop-ritual__media img{object-fit:cover;object-position:86% 55%}
+.hxshop-ritual__body{max-width:34rem}
+.hxshop-ritual__title{margin-top:var(--hx-stack);color:var(--hx-fg);max-width:12em}
+.hxshop-ritual__copy{margin-top:var(--hx-s-5);max-width:30em}
+
+.hxshop-ritual__steps{margin-top:var(--hx-s-5);border-top:1px solid var(--hx-line)}
+.hxshop-ritual__steps li{
+	display:grid;
+	grid-template-columns:8.6em minmax(0,1fr);
+	align-items:baseline;
+	column-gap:var(--hx-s-4);
+	padding-block:12px;
+	border-bottom:1px solid var(--hx-line);
+}
+.hxshop-ritual__step{display:inline-flex;align-items:center;gap:10px;line-height:1}
+.hxshop-ritual__num{
+	display:inline-flex;align-items:center;gap:10px;
+	font-family:var(--hx-serif);font-size:var(--hx-fs-step);font-weight:400;line-height:1;
+	letter-spacing:var(--hx-tr-step);color:var(--hx-fg-accent);
+	font-variant-numeric:lining-nums tabular-nums;font-feature-settings:"lnum" 1,"tnum" 1;
+}
+.hxshop-ritual__num::after{content:"";width:16px;height:1px;background:var(--hx-chrome)}
+.hxshop-ritual__verb{font-family:var(--hx-serif);font-style:italic;font-weight:300;font-size:1.1875rem;line-height:1.1;color:var(--hx-fg-accent)}
+.hxshop-ritual__name{font-size:var(--hx-fs-detail);line-height:var(--hx-lh-detail);color:var(--hx-fg-2)}
+
+.hxshop-ritual__price{
+	display:flex;flex-wrap:wrap;align-items:baseline;gap:var(--hx-s-2) var(--hx-s-5);
+	margin-top:var(--hx-s-5);
+}
+.hxshop-ritual__amount{
+	font-family:var(--hx-serif);font-weight:300;font-size:clamp(2.25rem,1.9rem + 1vw,2.875rem);line-height:1;
+	letter-spacing:-.01em;color:var(--hx-fg);
+	font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1;
+}
+.hxshop-ritual__compare{
+	display:inline;
+	font-size:var(--hx-fs-detail);line-height:var(--hx-lh-detail);color:var(--hx-fg-3);
+	font-variant-numeric:lining-nums tabular-nums;
+}
+.hxshop-ritual__save{color:var(--hx-fg)}
+.hxshop-ritual__sep,.hxshop-dot{display:inline-block;width:1px;height:12px;margin-inline:12px;background:var(--hx-line-strong);vertical-align:middle}
+
+.hxshop-ritual__actions{
+	display:flex;flex-wrap:wrap;align-items:center;gap:var(--hx-s-3) var(--hx-s-6);
+	margin-top:var(--hx-s-5);
+}
+/* mouse clicks show no ring (legacy a:focus rules); keyboard keeps the system ring */
+.hxshop .hxshop-add:focus:not(:focus-visible){outline:none;box-shadow:none}
+.hxshop-ritual__add::before{content:none}
+.hxshop-ritual__add.is-added::before{
+	content:"";flex:none;width:10px;height:6px;margin:-4px 14px 0 0;
+	border-left:1px solid currentColor;border-bottom:1px solid currentColor;transform:rotate(-45deg);
+}
+.hxshop-ritual__service{margin-top:var(--hx-s-5)}
+@media (max-width:599.98px){
+	.hxshop-ritual__add{display:flex;width:100%}
+	.hxshop-ritual__more{margin-inline:auto}
+}
+@media (min-width:900px){
+	.hxshop-ritual{padding-block:var(--hx-s-9)}
+	.hxshop-ritual__grid{grid-template-columns:minmax(0,6fr) minmax(0,5fr);column-gap:clamp(40px,6vw,112px);align-items:center}
+	/* capped so price + Add to bag share one 1440×900 viewport with the photo */
+	.hxshop-ritual__media{aspect-ratio:auto;height:min(640px,calc(100svh - var(--cos-nav-h,80px) - 120px));min-height:460px}
+	.hxshop-ritual__media img{object-position:78% 60%}
+	.hxshop-ritual__title{max-width:11em}
+}
+
+/* ─── 3 The four formulas ────────────────────────────────────────────── */
+.hxshop-list{
+	--hxshop-col-gap:clamp(12px,3.4vw,24px);
+	--hxshop-row-gap:clamp(48px,9vw,80px);
+	background:var(--hx-white);
+	padding-block:var(--hx-section-sm);
+	scroll-margin-top:var(--cos-nav-h,80px);
+}
+.hxshop-list__head{display:grid;gap:var(--hx-s-4);margin-bottom:clamp(24px,.5rem + 3.5vw,64px)}
+.hxshop-list__title{color:var(--hx-fg)}
+.hxshop-list__lede{max-width:26em}
+@media (min-width:900px){
+	.hxshop-list__head{grid-template-columns:minmax(0,7fr) minmax(0,5fr);column-gap:var(--hx-gap);align-items:start}
+	.hxshop-list__lede{justify-self:end;max-width:24em;text-wrap:balance}
+}
+
+.hxshop-list__items{
+	display:grid;
+	grid-template-columns:repeat(2,minmax(0,1fr));
+	column-gap:var(--hxshop-col-gap);
+	row-gap:0;
+}
+.hxshop-item{
+	display:grid;
+	grid-row:span 6;
+	grid-template-rows:subgrid;
+	justify-items:center;
+	align-items:start;
+	text-align:center;
+	list-style:none;
+}
+.hxshop-item::marker{content:none}
+.hxshop-item:nth-child(n+3){margin-top:var(--hxshop-row-gap)}
+
+.hxshop-item__stage{display:block;width:100%;aspect-ratio:2 / 3;overflow:clip;text-decoration:none}
+.hxshop-item__object,
+.hxshop-item__object img,
+.hxshop-item__wcimg{display:block;width:100%;height:100%}
+.hxshop-item__object img,
+.hxshop-item__wcimg{
+	object-fit:contain;
+	transform-origin:53% 86%;
+	transition:transform 1200ms var(--hx-ease);
+}
+
+.hxshop-item__step{
+	display:inline-flex;align-items:center;gap:10px;
+	margin-top:var(--hx-s-3);
+	font-family:var(--hx-serif);font-size:1rem;line-height:1;color:var(--hx-fg-accent);
+}
+.hxshop-item__num{
+	display:inline-flex;align-items:center;gap:10px;
+	font-weight:400;letter-spacing:var(--hx-tr-step);
+	font-variant-numeric:lining-nums tabular-nums;font-feature-settings:"lnum" 1,"tnum" 1;
+}
+.hxshop-item__num::after{content:"";width:16px;height:1px;background:var(--hx-chrome)}
+.hxshop-item__verb{font-style:italic;font-weight:300;font-size:1.1em;letter-spacing:.01em}
+
+.hxshop-item__name{
+	margin-top:var(--hx-s-3);
+	font-family:var(--hx-serif);font-size:1.1875rem;font-weight:400;line-height:1.18;
+	letter-spacing:var(--hx-tr-title);color:var(--hx-fg);text-wrap:balance;
+}
+.hxshop-item__name a,
+.hxshop-item__name a:visited,
+.hxshop-item__name a:hover{color:inherit;text-decoration:none}
+.hxshop-item__name a{display:inline-block;padding-block:3px}
+.hxshop-item__name span{display:block}
+
+.hxshop-item__benefit{
+	max-width:19em;margin-top:var(--hx-s-2);
+	font-size:1rem;line-height:1.5;color:var(--hx-fg-3);text-wrap:balance;
+}
+.hxshop-item__meta{
+	display:inline-flex;align-items:center;
+	margin-top:var(--hx-s-3);
+	font-size:var(--hx-fs-detail);line-height:var(--hx-lh-detail);letter-spacing:.02em;
+	font-variant-numeric:lining-nums tabular-nums;
+}
+.hxshop-item__price{color:var(--hx-fg);font-weight:500}
+.hxshop-item__size{color:var(--hx-fg-3)}
+.hxshop-item__dot{display:inline-block;width:1px;height:11px;margin-inline:10px;background:var(--hx-line-strong)}
+
+.hxshop-item__actions{
+	display:flex;flex-direction:column;align-items:center;
+	width:100%;max-width:240px;margin-top:var(--hx-s-3);
+}
+
+/* Add to bag: a quiet label over a hairline that draws to ink on hover (no box) */
+.hxshop-item__add,
+.hxshop-item__add:visited{
+	position:relative;
+	display:flex;align-items:center;justify-content:center;
+	width:100%;min-height:48px;padding:0 4px;
+	font-family:var(--hx-sans);font-size:.9375rem;font-weight:500;line-height:1.3;
+	letter-spacing:var(--hx-tr-btn,.16em);text-transform:uppercase;
+	color:var(--hx-fg);text-decoration:none;cursor:pointer;
+	background-image:linear-gradient(currentColor,currentColor),linear-gradient(var(--hx-line),var(--hx-line));
+	background-repeat:no-repeat;
+	background-position:50% 100%,0 100%;
+	background-size:0 1px,100% 1px;
+	transition:background-size 700ms var(--hx-ease),color var(--hx-dur-ui) var(--hx-ease-soft),opacity var(--hx-dur-ui);
+}
+.hxshop-item__add::before{
+	content:"";flex:none;width:9px;height:9px;margin-right:12px;
+	background:linear-gradient(currentColor,currentColor) 50% 50%/9px 1px no-repeat,linear-gradient(currentColor,currentColor) 50% 50%/1px 9px no-repeat;
+	transition:transform var(--hx-dur-ui) var(--hx-ease-soft);
+}
+.hxshop-item__add:focus-visible{background-size:100% 1px,100% 1px}
+
+/* states (shared by both add buttons) */
+.hxshop-add.is-busy,.hxshop-add.loading{opacity:.6;pointer-events:none;cursor:progress}
+.hxshop-item__add.is-added{background-size:100% 1px,100% 1px}
+.hxshop-item__add.is-added::before{
+	width:10px;height:6px;margin-top:-4px;
+	background:none;border-left:1px solid currentColor;border-bottom:1px solid currentColor;transform:rotate(-45deg);
+}
+.hxshop .added_to_cart{display:none}
+.hxshop .added_to_cart.hxshop-viewbag{display:inline-flex}
+.hxshop-item__actions .hxshop-viewbag{margin-top:2px}
+.hxshop-ritual__actions .hxshop-viewbag{order:3}
+.hxshop-unavailable{min-height:48px;display:flex;align-items:center}
+
+@media (hover:hover){
+	.hxshop-item:has(.hxshop-item__stage:hover,.hxshop-item__name a:hover) .hxshop-item__object img,
+	.hxshop-item:has(.hxshop-item__stage:hover,.hxshop-item__name a:hover) .hxshop-item__wcimg{transform:translate3d(0,-10px,0) scale(1.05)}
+	.hxshop-item__add:hover{background-size:100% 1px,100% 1px}
+	.hxshop-item__add:not(.is-added):hover::before{transform:rotate(90deg)}
+}
+
+@media (max-width:359.98px){
+	.hxshop-item__name{font-size:1.0625rem}
+	.hxshop-item__num::after{display:none}
+	.hxshop-item__add{letter-spacing:.1em}
+	.hxshop-item__add::before{margin-right:8px}
+}
+@media (min-width:640px){
+	.hxshop-list{--hxshop-col-gap:var(--hx-gap)}
+	.hxshop-item__stage{width:min(100%,300px)}
+	.hxshop-item__name{font-size:var(--hx-fs-title)}
+	.hxshop-item__step{font-size:var(--hx-fs-step);gap:14px;margin-top:var(--hx-s-4)}
+	.hxshop-item__num{gap:14px}
+	.hxshop-item__num::after{width:24px}
+	.hxshop-item__benefit{font-size:var(--hx-fs-body);line-height:1.55;margin-top:var(--hx-s-3)}
+	.hxshop-item__meta{margin-top:var(--hx-s-4)}
+	.hxshop-item__dot{margin-inline:14px;height:12px}
+	.hxshop-item__actions{margin-top:var(--hx-s-4)}
+}
+@media (min-width:1100px){
+	.hxshop-list{--hxshop-col-gap:clamp(24px,2.2vw,40px)}
+	.hxshop-list__items{grid-template-columns:repeat(4,minmax(0,1fr))}
+	.hxshop-item:nth-child(n+3){margin-top:0}
+	.hxshop-item__stage{width:100%}
+}
+
+/* ─── 4 Services + about ─────────────────────────────────────────────── */
+.hxshop-about{background:var(--hx-ivory);padding-block:var(--hx-section-sm)}
+.hxshop-about__grid{display:grid;gap:var(--hx-s-7)}
+.hxshop-about__title{color:var(--hx-fg);margin-bottom:var(--hx-stack)}
+.hxshop-about__intro .hx-body{max-width:var(--hx-measure)}
+@media (min-width:900px){
+	.hxshop-about__grid{grid-template-columns:minmax(0,5fr) minmax(0,7fr);column-gap:clamp(40px,6vw,112px);align-items:start}
+}
+
+.hxshop-faq{border-bottom:1px solid var(--hx-line)}
+.hxshop-faq:first-child{border-top:1px solid var(--hx-line)}
+.hxshop-faq__q{
+	display:flex;align-items:center;justify-content:space-between;gap:var(--hx-s-4);
+	min-height:64px;padding-block:var(--hx-s-4);
+	font-family:var(--hx-serif);font-size:clamp(1.25rem,1.15rem + .4vw,1.5rem);font-weight:400;line-height:1.25;
+	color:var(--hx-fg);cursor:pointer;list-style:none;
+	-webkit-tap-highlight-color:transparent;
+}
+.hxshop-faq__q::-webkit-details-marker{display:none}
+.hxshop-faq__q::marker{content:none}
+.hxshop-faq__q:focus{outline:none}
+.hxshop-faq__q:focus-visible{outline:var(--hx-focus-width) solid var(--hx-focus-color);outline-offset:var(--hx-focus-offset)}
+.hxshop-faq__icon{
+	position:relative;flex:none;width:14px;height:14px;
+	background:linear-gradient(currentColor,currentColor) 50% 50%/14px 1px no-repeat;
+}
+.hxshop-faq__icon::after{
+	content:"";position:absolute;left:50%;top:0;width:1px;height:14px;margin-left:-.5px;background:currentColor;
+	transition:transform var(--hx-dur-ui) var(--hx-ease-soft);
+}
+.hxshop-faq[open] .hxshop-faq__icon::after{transform:scaleY(0)}
+.hxshop-faq__a{padding-bottom:var(--hx-s-6);max-width:var(--hx-measure)}
+.hxshop-faq__a p + p{margin-top:var(--hx-s-4)}
+.hxshop-inline,.hxshop-inline:visited,
+.hxshop-faq__a a,
+.hxshop-faq__a a:visited{color:var(--hx-fg);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:var(--hx-line-strong)}
+.hxshop-inline:hover,.hxshop-faq__a a:hover{text-decoration-color:currentColor}
+
+/* ─── Motion preferences ─────────────────────────────────────────────── */
+@media (prefers-reduced-motion:reduce){
+	.hxshop-item__object img,.hxshop-item__wcimg,.hxshop-item__add,.hxshop-item__add::before,.hxshop-faq__icon::after{transition:none}
+	.hxshop-item:has(.hxshop-item__stage:hover,.hxshop-item__name a:hover) .hxshop-item__object img{transform:none}
+}
+
+/* Keep the purchase decision readable at every viewport. */
+.hxshop-ritual__add{font-size:.9375rem;letter-spacing:.08em}

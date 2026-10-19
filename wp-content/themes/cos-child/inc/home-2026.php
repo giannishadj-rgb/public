@@ -53,10 +53,11 @@ add_action( 'wp_enqueue_scripts', static function (): void {
 	// section (each owns its own template part and class prefix), loaded last.
 	$prev = 'cos-home-2026-nocturne';
 	foreach ( array( 'system', 'hero', 'collection', 'caviar', 'science', 'provenance', 'ritual', 'closing' ) as $hx ) {
-		wp_enqueue_style( 'cos-hx-' . $hx, $uri . '/assets/css/hx/' . $hx . '.css', array( $prev ), (string) filemtime( $dir . '/assets/css/hx/' . $hx . '.css' ) );
+		$asset = 'system' === $hx ? '/assets/css/home-staging/system.css' : '/assets/css/hx/' . $hx . '.css';
+		wp_enqueue_style( 'cos-hx-' . $hx, $uri . $asset, array( $prev ), (string) filemtime( $dir . $asset ) );
 		$prev = 'cos-hx-' . $hx;
 	}
-	wp_enqueue_script( 'cos-hx-motion', $uri . '/assets/js/hx-motion.js', array(), (string) filemtime( $dir . '/assets/js/hx-motion.js' ), array( 'strategy' => 'defer', 'in_footer' => true ) );
+	wp_enqueue_script( 'cos-hx-motion', $uri . '/assets/home-staging/hx-motion.js', array(), (string) filemtime( $dir . '/assets/home-staging/hx-motion.js' ), array( 'strategy' => 'defer', 'in_footer' => true ) );
 } );
 
 // The homepage is light-led (pearl + graphite, 4 Oct 2026): tell the browser, so native
@@ -72,11 +73,11 @@ add_action( 'wp_head', static function (): void {
 // <source media> breakpoints in template-parts/home-2026/hero.php).
 add_action( 'wp_head', static function (): void {
 	if ( ! cos_h26_is_active() ) return;
-	// 14 Oct 2026 rebuild: the hero is the hxh-wide / hxh-tall pair (template-parts/home-2026/hero.php,
+	// 19 Oct 2026: the hero is the wc-hero-wide / wc-hero-tall pair (template-parts/home-2026/hero.php,
 	// $hxh_wide_media / $hxh_*_sizes); keep these in step with that file.
 	foreach ( array(
-		array( '(min-width: 600px)', cos_h26_srcset( 'hxh-wide', array( 1440, 1920, 2560 ), 'avif' ), '(min-aspect-ratio: 237/100) 100vw, 237vh' ),
-		array( '(max-width: 599.98px)', cos_h26_srcset( 'hxh-tall', array( 540, 720 ), 'avif' ), '(max-aspect-ratio: 518/1000) 51.8vh, 100vw' ),
+		array( '(min-aspect-ratio: 1/1)', cos_h26_srcset( 'wc-hero-wide', array( 1440, 1920, 2560 ), 'avif' ), '(min-aspect-ratio: 1969/1000) 100vw, 196.9vh' ),
+		array( 'not all and (min-aspect-ratio: 1/1)', cos_h26_srcset( 'wc-hero-tall', array( 640, 860, 1080 ), 'avif' ), '(max-aspect-ratio: 6/13) 46.16vh, 100vw' ),
 	) as [ $media, $set, $sizes ] ) {
 		echo '<link rel="preload" as="image" type="image/avif" fetchpriority="high" media="' . esc_attr( $media ) . '" imagesrcset="' . esc_attr( $set ) . '" imagesizes="' . esc_attr( $sizes ) . '">' . "\n";
 	}
@@ -278,3 +279,7 @@ function cos_h26_picture( string $base, array $widths, array $ratio, string $alt
 function cos_h26_arrow(): string {
 	return '<span class="h26-arrow" aria-hidden="true">→</span>';
 }
+
+// Staging chrome is selected at query time, exclusively for the homepage.
+require_once __DIR__ . '/home-staging-navigation.php';
+

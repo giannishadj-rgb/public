@@ -1,0 +1,24 @@
+ROUND 1 — review only, 18 October 2026
+Seen in one second: An open cream jar with a polished silver lid.
+Idea (one sentence): The four-formula range becomes a pared-back Swiss daily ritual; coherent positioning, but the visual language remains familiar to luxury skincare.
+Live thing: A horizontally browsable ritual on smaller screens and product discovery links; no distinctive product-selection interaction.
+Layout words by section: hero=campaign / collection=lineup / caviar=overlapping editorial spread / science=diagram-list-and-results / provenance=statement-and-facts / ritual=sequence / closing=split / footer=directory.
+Scores: design 7.5 · usability 7 · creativity 6 · content 7 → weighted 7.0; overall 6.0 after skill cap.
+Caps applied: Inspector FAIL cap of 6.0. Competitor test caps creativity at 6. The house rules also flag eyebrows, index numbering, hairlines, shadows and a three-line mobile provenance heading. These are this skill's aesthetic rules, not universal accessibility standards.
+Top three problems (most visible first), each with the screenshot it shows in and the fix:
+1. The four-formula message repeats through the hero, collection, ritual and closing. The later closing statement adds little new information. Seen in desktop-page-01.jpg, desktop-page-03.jpg and mobile-page-02.jpg. Merge the closing argument into the ritual purchase section, and give each retained section a different question to answer.
+2. Important supporting information is visually subordinate to campaign styling. The inspector finds 15 blocks below 13px, 11 tiny tracked uppercase labels and 21 computed sizes at desktop. Seen in desktop-page-02.jpg and desktop-page-03.jpg. Consolidate the type scale, enlarge study context and service information, and use fewer small uppercase labels.
+3. The caviar and provenance stories offer limited tangible explanation. The caviar inset repeats the same subject; provenance relies on a large statement and three small facts. Seen in mobile-caviar-verified.png and desktop-page-02.jpg. Use the inset for genuinely different detail such as formulation or texture, and add an authentic image or precise detail from the work in Zug if available.
+Additional observations:
+- Keep the hero's product scale, restrained colour and portrait crop. Both mobile and tablet first screens are deliberately composed, with a visible primary action.
+- Product benefits, prices and volumes are present at both widths. Confirmed in collection-1440-verified.png and collection-390-verified.png. The initial contact sheet understated this information because its frames sampled different scroll positions.
+- The science results and study context provide the most substantive differentiation on the page. Keep them readable and visually connected to the formulas they concern. This review does not verify the underlying claims.
+- The mobile ritual visibly exposes part of the next step, which signals horizontal browsing. A vertical sequence or stronger progress/control affordance would make reading all four steps easier.
+- The mobile provenance heading wraps to three lines. Shorten it before reducing its size.
+- The primary hero link promotes the four-product ritual while the picture shows one cream. Make the following transition to the complete range especially clear.
+- Bring confirmed shipping/returns reassurance near a purchase prompt, where it helps someone evaluate a premium order.
+- Motion is present; a video should only be added if it demonstrates something useful and authentic.
+Validation:
+Inspector ran against http://caviarofswitzerland.local/ at 1440, 768 and 390px: 8 FAIL categories, 5 WARN categories. Static lint ran on base homepage files and current section styles/motion. Static counts include inactive or overridden declarations and are not counts of visible defects.
+Every generated inspector screenshot was viewed. Some image regions were blank in the automated contact sheets; direct revisit confirmed the caviar images load, so those blanks are not treated as proven missing content. Slower sequential scrolling also confirmed the collection content at both widths.
+No theme, copy or WordPress settings were changed. No direction draw or redesign was performed.

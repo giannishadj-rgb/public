@@ -1,0 +1,84 @@
+{
+  "source": "design-sources\\home-2026\\gauntlet-supplied-20261018\\DSC_5783.jpg",
+  "sha256": "b8d2ccc236c14192781789af6261268bea5106716e2025bb866b225e0bbaa0e9",
+  "operations": [
+    "Complete original photograph; proportional Lanczos downscale/encoding only; no retouching, background replacement or package alteration"
+  ],
+  "outputs": [
+    {
+      "file": "auth-ritual-counter-640.avif",
+      "bytes": 16895,
+      "sha256": "f05c24ade01687bf0dba891f339b04f2620e99ce5a72f0700d406dcf0d5d77a7"
+    },
+    {
+      "file": "auth-ritual-counter-640.webp",
+      "bytes": 35972,
+      "sha256": "b7c409b322d66a421a9203b1c7b71a6f3c883b144b36b7da2a6dc33de373a2f7"
+    },
+    {
+      "file": "auth-ritual-counter-640.jpg",
+      "bytes": 61770,
+      "sha256": "b3da47f6b11062fc4b108773173fd91820ab411722ecaf296e3e09403ce71fa9"
+    },
+    {
+      "file": "auth-ritual-counter-960.avif",
+      "bytes": 28873,
+      "sha256": "7fb6cfbcec1e62d795847669b18317548e0c452ecff8799fc70f5f5c9132f239"
+    },
+    {
+      "file": "auth-ritual-counter-960.webp",
+      "bytes": 68176,
+      "sha256": "4db4933509d448e7e510236610df646bc00082a8336d507dff0e00156cac0945"
+    },
+    {
+      "file": "auth-ritual-counter-960.jpg",
+      "bytes": 112443,
+      "sha256": "817262c1950981a654522f542536ebb23aafff17fa8bf3b22289a7202d67d6ca"
+    },
+    {
+      "file": "auth-ritual-counter-1280.avif",
+      "bytes": 42329,
+      "sha256": "99330a92ea924c41615b35e7bf1743475093ae8edceddc6052ae01771628fbdc"
+    },
+    {
+      "file": "auth-ritual-counter-1280.webp",
+      "bytes": 110750,
+      "sha256": "270a84e82345be26e00152bea99ece3c5b6cced0aad1cf85d091ecb858d6d500"
+    },
+    {
+      "file": "auth-ritual-counter-1280.jpg",
+      "bytes": 175268,
+      "sha256": "2b0854eed952c91e01d90c93f2d215c3936f66f7514da4a070ead12bff9a2f83"
+    },
+    {
+      "file": "auth-ritual-counter-1600.avif",
+      "bytes": 56062,
+      "sha256": "ea2b138e8a6259f9c999a06e2f4efcf39483d1caf5bb0b1ab1e4099d85fc3bcc"
+    },
+    {
+      "file": "auth-ritual-counter-1600.webp",
+      "bytes": 167576,
+      "sha256": "06b9204beb9f5dab0482b211bc06a2e7ace06137b61ce3b355e2ad4d9a19dbf1"
+    },
+    {
+      "file": "auth-ritual-counter-1600.jpg",
+      "bytes": 251709,
+      "sha256": "8232e5f4066fd7009b3b4a93844b3fa6074d18fcc2a544a74a2b6edc4f7bedd5"
+    },
+    {
+      "file": "auth-ritual-counter-2000.avif",
+      "bytes": 73809,
+      "sha256": "09a44cf9a351b0464513f8618040b69b75dba07f97b0085350835ad86ce1b296"
+    },
+    {
+      "file": "auth-ritual-counter-2000.webp",
+      "bytes": 263494,
+      "sha256": "7849207942b392e968b69b5d1b97e9e85a29adb16c026335f9fa978595d08bba"
+    },
+    {
+      "file": "auth-ritual-counter-2000.jpg",
+      "bytes": 370585,
+      "sha256": "a4746eb956dc4a56aa368745d7d51fd7518a8d95aab056e8112f1dd9b2a01398"
+    }
+  ]
+}

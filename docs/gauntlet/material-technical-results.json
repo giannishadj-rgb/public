@@ -1,0 +1,583 @@
+{
+  "viewports": [
+    {
+      "width": 360,
+      "overflow": false,
+      "h1": "Caviar,\nin every formula.",
+      "titleRect": {
+        "x": 24,
+        "y": 92,
+        "width": 238.125,
+        "height": 81.59375,
+        "top": 92,
+        "right": 262.125,
+        "bottom": 173.59375,
+        "left": 24
+      },
+      "titleChildren": [
+        {
+          "text": "Caviar,",
+          "width": 238.125,
+          "scrollWidth": 238,
+          "height": 40.796875,
+          "font": "40px"
+        },
+        {
+          "text": "in every formula.",
+          "width": 238.125,
+          "scrollWidth": 238,
+          "height": 40.796875,
+          "font": "40px"
+        }
+      ],
+      "heroLinks": [
+        {
+          "text": "Shop the ritual",
+          "href": "http://caviarofswitzerland.local/products/the-complete-ritual/",
+          "width": 138.125,
+          "height": 52
+        },
+        {
+          "text": "View collection",
+          "href": "#collection",
+          "width": 106.0625,
+          "height": 44
+        },
+        {
+          "text": "Free worldwide shipping.\n30-day returns.",
+          "href": "http://caviarofswitzerland.local/shipping-returns/",
+          "width": 273.421875,
+          "height": 52
+        },
+        {
+          "text": "Why caviar",
+          "href": "http://caviarofswitzerland.local/science/why-caviar/",
+          "width": 115.28125,
+          "height": 44
+        }
+      ],
+      "images": [
+        {
+          "class": "hxh__campaign",
+          "currentSrc": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/ritual-campaign-june-2026-720.avif?v=1792304746",
+          "complete": true,
+          "naturalWidth": 259,
+          "width": 259,
+          "height": 360,
+          "position": "50% 46%"
+        },
+        {
+          "class": "hxz__photograph",
+          "currentSrc": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-ritual-nocturne-540.avif?v=1792316905",
+          "complete": true,
+          "naturalWidth": 360,
+          "width": 360,
+          "height": 240,
+          "position": "50% 50%"
+        }
+      ],
+      "broken": [],
+      "animations": [],
+      "cls": [],
+      "accessibleHero": "- region \"Caviar, in every formula.\":\n  - heading \"Caviar, in every formula.\" [level=1]:\n    - text: Caviar,\n    - emphasis: in every formula.\n  - paragraph: Swiss-made skincare. For firmer-looking, hydrated skin.\n  - link \"Shop the ritual\":\n    - /url: http://caviarofswitzerland.local/products/the-complete-ritual/\n  - paragraph: 4 full-size formulas €450\n  - link \"View collection\":\n    - /url: \"#collection\"\n  - link \"Free worldwide shipping. 30-day returns.\":\n    - /url: http://caviarofswitzerland.local/shipping-returns/\n  - img \"Two women resting with eyes closed in warm light, from the Caviar of Switzerland June 2026 campaign\"\n  - img \"The four original Caviar of Switzerland formulas on a reflective stone counter\"\n  - img \"Glossy caviar pearls in close-up\"\n  - paragraph: Aquitaine caviar. Swiss extraction.\n  - paragraph: Farmed in France. Rich in lipids, proteins and minerals.\n  - link \"Why caviar\":\n    - /url: http://caviarofswitzerland.local/science/why-caviar/",
+      "axe": []
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "h1": "Caviar,\nin every formula.",
+      "titleRect": {
+        "x": 24,
+        "y": 92,
+        "width": 250.75,
+        "height": 85.90625,
+        "top": 92,
+        "right": 274.75,
+        "bottom": 177.90625,
+        "left": 24
+      },
+      "titleChildren": [
+        {
+          "text": "Caviar,",
+          "width": 250.75,
+          "scrollWidth": 251,
+          "height": 42.953125,
+          "font": "42.12px"
+        },
+        {
+          "text": "in every formula.",
+          "width": 250.75,
+          "scrollWidth": 251,
+          "height": 42.953125,
+          "font": "42.12px"
+        }
+      ],
+      "heroLinks": [
+        {
+          "text": "Shop the ritual",
+          "href": "http://caviarofswitzerland.local/products/the-complete-ritual/",
+          "width": 138.125,
+          "height": 52
+        },
+        {
+          "text": "View collection",
+          "href": "#collection",
+          "width": 146.0625,
+          "height": 44
+        },
+        {
+          "text": "Free worldwide shipping.\n30-day returns.",
+          "href": "http://caviarofswitzerland.local/shipping-returns/",
+          "width": 273.421875,
+          "height": 52
+        },
+        {
+          "text": "Why caviar",
+          "href": "http://caviarofswitzerland.local/science/why-caviar/",
+          "width": 115.28125,
+          "height": 44
+        }
+      ],
+      "images": [
+        {
+          "class": "hxh__campaign",
+          "currentSrc": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/ritual-campaign-june-2026-720.avif?v=1792304746",
+          "complete": true,
+          "naturalWidth": 280,
+          "width": 281,
+          "height": 390,
+          "position": "50% 46%"
+        },
+        {
+          "class": "hxz__photograph",
+          "currentSrc": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-ritual-nocturne-540.avif?v=1792316905",
+          "complete": true,
+          "naturalWidth": 390,
+          "width": 390,
+          "height": 260,
+          "position": "50% 50%"
+        }
+      ],
+      "broken": [],
+      "animations": [],
+      "cls": [],
+      "accessibleHero": "- region \"Caviar, in every formula.\":\n  - heading \"Caviar, in every formula.\" [level=1]:\n    - text: Caviar,\n    - emphasis: in every formula.\n  - paragraph: Swiss-made skincare. For firmer-looking, hydrated skin.\n  - link \"Shop the ritual\":\n    - /url: http://caviarofswitzerland.local/products/the-complete-ritual/\n  - paragraph: 4 full-size formulas €450\n  - link \"View collection\":\n    - /url: \"#collection\"\n  - link \"Free worldwide shipping. 30-day returns.\":\n    - /url: http://caviarofswitzerland.local/shipping-returns/\n  - img \"Two women resting with eyes closed in warm light, from the Caviar of Switzerland June 2026 campaign\"\n  - img \"The four original Caviar of Switzerland formulas on a reflective stone counter\"\n  - img \"Glossy caviar pearls in close-up\"\n  - paragraph: Aquitaine caviar. Swiss extraction.\n  - paragraph: Farmed in France. Rich in lipids, proteins and minerals.\n  - link \"Why caviar\":\n    - /url: http://caviarofswitzerland.local/science/why-caviar/",
+      "axe": []
+    },
+    {
+      "width": 430,
+      "overflow": false,
+      "h1": "Caviar,\nin every formula.",
+      "titleRect": {
+        "x": 24,
+        "y": 92,
+        "width": 276.46875,
+        "height": 94.71875,
+        "top": 92,
+        "right": 300.46875,
+        "bottom": 186.71875,
+        "left": 24
+      },
+      "titleChildren": [
+        {
+          "text": "Caviar,",
+          "width": 276.46875,
+          "scrollWidth": 276,
+          "height": 47.359375,
+          "font": "46.44px"
+        },
+        {
+          "text": "in every formula.",
+          "width": 276.46875,
+          "scrollWidth": 276,
+          "height": 47.359375,
+          "font": "46.44px"
+        }
+      ],
+      "heroLinks": [
+        {
+          "text": "Shop the ritual",
+          "href": "http://caviarofswitzerland.local/products/the-complete-ritual/",
+          "width": 138.125,
+          "height": 52
+        },
+        {
+          "text": "View collection",
+          "href": "#collection",
+          "width": 146.0625,
+          "height": 44
+        },
+        {
+          "text": "Free worldwide shipping.\n30-day returns.",
+          "href": "http://caviarofswitzerland.local/shipping-returns/",
+          "width": 273.421875,
+          "height": 52
+        },
+        {
+          "text": "Why caviar",
+          "href": "http://caviarofswitzerland.local/science/why-caviar/",
+          "width": 115.28125,
+          "height": 44
+        }
+      ],
+      "images": [
+        {
+          "class": "hxh__campaign",
+          "currentSrc": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/ritual-campaign-june-2026-720.avif?v=1792304746",
+          "complete": true,
+          "naturalWidth": 309,
+          "width": 310,
+          "height": 430,
+          "position": "50% 46%"
+        },
+        {
+          "class": "hxz__photograph",
+          "currentSrc": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-ritual-nocturne-540.avif?v=1792316905",
+          "complete": true,
+          "naturalWidth": 430,
+          "width": 430,
+          "height": 287,
+          "position": "50% 50%"
+        }
+      ],
+      "broken": [],
+      "animations": [],
+      "cls": [],
+      "accessibleHero": "- region \"Caviar, in every formula.\":\n  - heading \"Caviar, in every formula.\" [level=1]:\n    - text: Caviar,\n    - emphasis: in every formula.\n  - paragraph: Swiss-made skincare. For firmer-looking, hydrated skin.\n  - link \"Shop the ritual\":\n    - /url: http://caviarofswitzerland.local/products/the-complete-ritual/\n  - paragraph: 4 full-size formulas €450\n  - link \"View collection\":\n    - /url: \"#collection\"\n  - link \"Free worldwide shipping. 30-day returns.\":\n    - /url: http://caviarofswitzerland.local/shipping-returns/\n  - img \"Two women resting with eyes closed in warm light, from the Caviar of Switzerland June 2026 campaign\"\n  - img \"The four original Caviar of Switzerland formulas on a reflective stone counter\"\n  - img \"Glossy caviar pearls in close-up\"\n  - paragraph: Aquitaine caviar. Swiss extraction.\n  - paragraph: Farmed in France. Rich in lipids, proteins and minerals.\n  - link \"Why caviar\":\n    - /url: http://caviarofswitzerland.local/science/why-caviar/",
+      "axe": []
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "h1": "Caviar,\nin every formula.",
+      "titleRect": {
+        "x": 385.265625,
+        "y": 92,
+        "width": 285.75,
+        "height": 97.90625,
+        "top": 92,
+        "right": 671.015625,
+        "bottom": 189.90625,
+        "left": 385.265625
+      },
+      "titleChildren": [
+        {
+          "text": "Caviar,",
+          "width": 285.75,
+          "scrollWidth": 286,
+          "height": 48.953125,
+          "font": "48px"
+        },
+        {
+          "text": "in every formula.",
+          "width": 285.75,
+          "scrollWidth": 286,
+          "height": 48.953125,
+          "font": "48px"
+        }
+      ],
+      "heroLinks": [
+        {
+          "text": "Shop the ritual",
+          "href": "http://caviarofswitzerland.local/products/the-complete-ritual/",
+          "width": 130.125,
+          "height": 52
+        },
+        {
+          "text": "View collection",
+          "href": "#collection",
+          "width": 157.625,
+          "height": 44
+        },
+        {
+          "text": "Free worldwide shipping.\n30-day returns.",
+          "href": "http://caviarofswitzerland.local/shipping-returns/",
+          "width": 273.421875,
+          "height": 44
+        },
+        {
+          "text": "Why caviar",
+          "href": "http://caviarofswitzerland.local/science/why-caviar/",
+          "width": 115.28125,
+          "height": 44
+        }
+      ],
+      "images": [
+        {
+          "class": "hxh__campaign",
+          "currentSrc": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/ritual-campaign-june-2026-720.avif?v=1792304746",
+          "complete": true,
+          "naturalWidth": 353,
+          "width": 353,
+          "height": 749,
+          "position": "50% 46%"
+        },
+        {
+          "class": "hxz__photograph",
+          "currentSrc": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-ritual-nocturne-800.avif?v=1792316906",
+          "complete": true,
+          "naturalWidth": 768,
+          "width": 768,
+          "height": 512,
+          "position": "50% 50%"
+        }
+      ],
+      "broken": [],
+      "animations": [],
+      "cls": [],
+      "accessibleHero": "- region \"Caviar, in every formula.\":\n  - heading \"Caviar, in every formula.\" [level=1]:\n    - text: Caviar,\n    - emphasis: in every formula.\n  - paragraph: Swiss-made skincare. For firmer-looking, hydrated skin.\n  - link \"Shop the ritual\":\n    - /url: http://caviarofswitzerland.local/products/the-complete-ritual/\n  - paragraph: 4 full-size formulas €450\n  - link \"View collection\":\n    - /url: \"#collection\"\n  - 'img \"The Complete Ritual: the cleanser, serum, eye cream and 24h cream together\"'\n  - link \"Free worldwide shipping. 30-day returns.\":\n    - /url: http://caviarofswitzerland.local/shipping-returns/\n  - img \"Two women resting with eyes closed in warm light, from the Caviar of Switzerland June 2026 campaign\"\n  - img \"Glossy caviar pearls in close-up\"\n  - paragraph: Aquitaine caviar. Swiss extraction.\n  - paragraph: Farmed in France. Rich in lipids, proteins and minerals.\n  - link \"Why caviar\":\n    - /url: http://caviarofswitzerland.local/science/why-caviar/",
+      "axe": []
+    },
+    {
+      "width": 1024,
+      "overflow": false,
+      "h1": "Caviar,\nin every formula.",
+      "titleRect": {
+        "x": 503.03125,
+        "y": 92,
+        "width": 316.9375,
+        "height": 108.625,
+        "top": 92,
+        "right": 819.96875,
+        "bottom": 200.625,
+        "left": 503.03125
+      },
+      "titleChildren": [
+        {
+          "text": "Caviar,",
+          "width": 316.9375,
+          "scrollWidth": 317,
+          "height": 54.3125,
+          "font": "53.248px"
+        },
+        {
+          "text": "in every formula.",
+          "width": 316.9375,
+          "scrollWidth": 317,
+          "height": 54.3125,
+          "font": "53.248px"
+        }
+      ],
+      "heroLinks": [
+        {
+          "text": "Shop the ritual",
+          "href": "http://caviarofswitzerland.local/products/the-complete-ritual/",
+          "width": 130.125,
+          "height": 52
+        },
+        {
+          "text": "View collection",
+          "href": "#collection",
+          "width": 157.625,
+          "height": 44
+        },
+        {
+          "text": "Free worldwide shipping.\n30-day returns.",
+          "href": "http://caviarofswitzerland.local/shipping-returns/",
+          "width": 273.421875,
+          "height": 44
+        },
+        {
+          "text": "Why caviar",
+          "href": "http://caviarofswitzerland.local/science/why-caviar/",
+          "width": 115.28125,
+          "height": 44
+        }
+      ],
+      "images": [
+        {
+          "class": "hxh__campaign",
+          "currentSrc": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/ritual-campaign-june-2026-720.avif?v=1792304746",
+          "complete": true,
+          "naturalWidth": 471,
+          "width": 471,
+          "height": 715,
+          "position": "50% 46%"
+        },
+        {
+          "class": "hxz__photograph",
+          "currentSrc": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-ritual-nocturne-800.avif?v=1792316906",
+          "complete": true,
+          "naturalWidth": 593,
+          "width": 594,
+          "height": 396,
+          "position": "50% 50%"
+        }
+      ],
+      "broken": [],
+      "animations": [],
+      "cls": [],
+      "accessibleHero": "- region \"Caviar, in every formula.\":\n  - heading \"Caviar, in every formula.\" [level=1]:\n    - text: Caviar,\n    - emphasis: in every formula.\n  - paragraph: Swiss-made skincare. For firmer-looking, hydrated skin.\n  - link \"Shop the ritual\":\n    - /url: http://caviarofswitzerland.local/products/the-complete-ritual/\n  - paragraph: 4 full-size formulas €450\n  - link \"View collection\":\n    - /url: \"#collection\"\n  - 'img \"The Complete Ritual: the cleanser, serum, eye cream and 24h cream together\"'\n  - link \"Free worldwide shipping. 30-day returns.\":\n    - /url: http://caviarofswitzerland.local/shipping-returns/\n  - img \"Two women resting with eyes closed in warm light, from the Caviar of Switzerland June 2026 campaign\"\n  - img \"Glossy caviar pearls in close-up\"\n  - paragraph: Aquitaine caviar. Swiss extraction.\n  - paragraph: Farmed in France. Rich in lipids, proteins and minerals.\n  - link \"Why caviar\":\n    - /url: http://caviarofswitzerland.local/science/why-caviar/",
+      "axe": []
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "h1": "Caviar,\nin every formula.",
+      "titleRect": {
+        "x": 652.890625,
+        "y": 128.09375,
+        "width": 428.625,
+        "height": 146.875,
+        "top": 128.09375,
+        "right": 1081.515625,
+        "bottom": 274.96875,
+        "left": 652.890625
+      },
+      "titleChildren": [
+        {
+          "text": "Caviar,",
+          "width": 428.625,
+          "scrollWidth": 429,
+          "height": 73.4375,
+          "font": "72px"
+        },
+        {
+          "text": "in every formula.",
+          "width": 428.625,
+          "scrollWidth": 429,
+          "height": 73.4375,
+          "font": "72px"
+        }
+      ],
+      "heroLinks": [
+        {
+          "text": "Shop the ritual",
+          "href": "http://caviarofswitzerland.local/products/the-complete-ritual/",
+          "width": 138.125,
+          "height": 52
+        },
+        {
+          "text": "View collection",
+          "href": "#collection",
+          "width": 157.625,
+          "height": 44
+        },
+        {
+          "text": "Free worldwide shipping.\n30-day returns.",
+          "href": "http://caviarofswitzerland.local/shipping-returns/",
+          "width": 210,
+          "height": 44
+        },
+        {
+          "text": "Why caviar",
+          "href": "http://caviarofswitzerland.local/science/why-caviar/",
+          "width": 115.28125,
+          "height": 44
+        }
+      ],
+      "images": [
+        {
+          "class": "hxh__campaign",
+          "currentSrc": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/ritual-campaign-june-2026-720.avif?v=1792304746",
+          "complete": true,
+          "naturalWidth": 604,
+          "width": 605,
+          "height": 864,
+          "position": "50% 46%"
+        },
+        {
+          "class": "hxz__photograph",
+          "currentSrc": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-ritual-nocturne-1200.avif?v=1792316908",
+          "complete": true,
+          "naturalWidth": 835,
+          "width": 835,
+          "height": 557,
+          "position": "50% 50%"
+        }
+      ],
+      "broken": [],
+      "animations": [],
+      "cls": [],
+      "accessibleHero": "- region \"Caviar, in every formula.\":\n  - heading \"Caviar, in every formula.\" [level=1]:\n    - text: Caviar,\n    - emphasis: in every formula.\n  - paragraph: Swiss-made skincare. For firmer-looking, hydrated skin.\n  - link \"Shop the ritual\":\n    - /url: http://caviarofswitzerland.local/products/the-complete-ritual/\n  - paragraph: 4 full-size formulas €450\n  - link \"View collection\":\n    - /url: \"#collection\"\n  - link \"Free worldwide shipping. 30-day returns.\":\n    - /url: http://caviarofswitzerland.local/shipping-returns/\n  - img \"Two women resting with eyes closed in warm light, from the Caviar of Switzerland June 2026 campaign\"\n  - img \"The four original Caviar of Switzerland formulas on a reflective stone counter\"\n  - img \"Glossy caviar pearls in close-up\"\n  - paragraph: Aquitaine caviar. Swiss extraction.\n  - paragraph: Farmed in France. Rich in lipids, proteins and minerals.\n  - link \"Why caviar\":\n    - /url: http://caviarofswitzerland.local/science/why-caviar/",
+      "axe": []
+    },
+    {
+      "width": 1920,
+      "overflow": false,
+      "h1": "Caviar,\nin every formula.",
+      "titleRect": {
+        "x": 870.390625,
+        "y": 144,
+        "width": 523.875,
+        "height": 179.5,
+        "top": 144,
+        "right": 1394.265625,
+        "bottom": 323.5,
+        "left": 870.390625
+      },
+      "titleChildren": [
+        {
+          "text": "Caviar,",
+          "width": 523.875,
+          "scrollWidth": 524,
+          "height": 89.75,
+          "font": "88px"
+        },
+        {
+          "text": "in every formula.",
+          "width": 523.875,
+          "scrollWidth": 524,
+          "height": 89.75,
+          "font": "88px"
+        }
+      ],
+      "heroLinks": [
+        {
+          "text": "Shop the ritual",
+          "href": "http://caviarofswitzerland.local/products/the-complete-ritual/",
+          "width": 138.125,
+          "height": 52
+        },
+        {
+          "text": "View collection",
+          "href": "#collection",
+          "width": 157.625,
+          "height": 44
+        },
+        {
+          "text": "Free worldwide shipping.\n30-day returns.",
+          "href": "http://caviarofswitzerland.local/shipping-returns/",
+          "width": 210,
+          "height": 44
+        },
+        {
+          "text": "Why caviar",
+          "href": "http://caviarofswitzerland.local/science/why-caviar/",
+          "width": 115.28125,
+          "height": 44
+        }
+      ],
+      "images": [
+        {
+          "class": "hxh__campaign",
+          "currentSrc": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/ritual-campaign-june-2026-1080.avif?v=1792304749",
+          "complete": true,
+          "naturalWidth": 806,
+          "width": 806,
+          "height": 1080,
+          "position": "50% 46%"
+        },
+        {
+          "class": "hxz__photograph",
+          "currentSrc": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/auth-ritual-nocturne-1200.avif?v=1792316908",
+          "complete": true,
+          "naturalWidth": 1113,
+          "width": 1114,
+          "height": 742,
+          "position": "50% 50%"
+        }
+      ],
+      "broken": [],
+      "animations": [],
+      "cls": [],
+      "accessibleHero": "- region \"Caviar, in every formula.\":\n  - heading \"Caviar, in every formula.\" [level=1]:\n    - text: Caviar,\n    - emphasis: in every formula.\n  - paragraph: Swiss-made skincare. For firmer-looking, hydrated skin.\n  - link \"Shop the ritual\":\n    - /url: http://caviarofswitzerland.local/products/the-complete-ritual/\n  - paragraph: 4 full-size formulas €450\n  - link \"View collection\":\n    - /url: \"#collection\"\n  - link \"Free worldwide shipping. 30-day returns.\":\n    - /url: http://caviarofswitzerland.local/shipping-returns/\n  - img \"Two women resting with eyes closed in warm light, from the Caviar of Switzerland June 2026 campaign\"\n  - img \"The four original Caviar of Switzerland formulas on a reflective stone counter\"\n  - img \"Glossy caviar pearls in close-up\"\n  - paragraph: Aquitaine caviar. Swiss extraction.\n  - paragraph: Farmed in France. Rich in lipids, proteins and minerals.\n  - link \"Why caviar\":\n    - /url: http://caviarofswitzerland.local/science/why-caviar/",
+      "axe": []
+    }
+  ],
+  "errors": [],
+  "webkit": {
+    "overflow": false,
+    "names": "- region \"Caviar, in every formula.\":\n  - heading \"Caviar, in every formula.\" [level=1]:\n    - text: Caviar,\n    - emphasis: in every formula.\n  - paragraph: Swiss-made skincare. For firmer-looking, hydrated skin.\n  - link \"Shop the ritual\":\n    - /url: http://caviarofswitzerland.local/products/the-complete-ritual/\n  - paragraph: 4 full-size formulas €450\n  - link \"View collection\":\n    - /url: \"#collection\"\n  - link \"Free worldwide shipping. 30-day returns.\":\n    - /url: http://caviarofswitzerland.local/shipping-returns/\n  - img \"Two women resting with eyes closed in warm light, from the Caviar of Switzerland June 2026 campaign\"\n  - img \"The four original Caviar of Switzerland formulas on a reflective stone counter\"\n  - img \"Glossy caviar pearls in close-up\"\n  - paragraph: Aquitaine caviar. Swiss extraction.\n  - paragraph: Farmed in France. Rich in lipids, proteins and minerals.\n  - link \"Why caviar\":\n    - /url: http://caviarofswitzerland.local/science/why-caviar/"
+  }
+}

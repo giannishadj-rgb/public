@@ -66,8 +66,8 @@ function cos_hxhe_continue( string $current ): void {
 		'sustainability' => array( '/heritage/sustainability/', 'Sustainability' ),
 		'science'        => array( '/science/', 'The science' ),
 	);
-	echo '<nav class="hxhe-continue" aria-label="Heritage pages"><div class="hx-wrap hxhe-continue__in">';
-	echo '<p class="hx-label hxhe-continue__label">Swiss heritage</p><ul class="hxhe-continue__list">';
+	echo '<nav class="hxhe-continue" aria-label="Swiss heritage pages"><div class="hx-wrap hxhe-continue__in">';
+	echo '<ul class="hxhe-continue__list">';
 	foreach ( $links as $key => [ $href, $text ] ) {
 		$is = ( $key === $current );
 		echo '<li><a class="hxhe-continue__link" href="' . esc_url( home_url( $href ) ) . '"' . ( $is ? ' aria-current="page"' : '' ) . '>'

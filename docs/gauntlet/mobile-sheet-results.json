@@ -1,0 +1,167 @@
+[
+  {
+    "width": 360,
+    "states": [
+      {
+        "index": 0,
+        "before": 0,
+        "after": 0,
+        "count": "1",
+        "visible": {
+          "text": "Micellar Water\nAll‑in‑One Cleanser",
+          "left": 60.765625,
+          "right": 282.421875,
+          "scrollWidth": 222,
+          "width": 221.65625
+        }
+      },
+      {
+        "index": 1,
+        "before": 311,
+        "after": 311,
+        "count": "2",
+        "visible": {
+          "text": "Advanced Repair\nSerum",
+          "left": 78.046875,
+          "right": 265.515625,
+          "scrollWidth": 187,
+          "width": 187.46875
+        }
+      },
+      {
+        "index": 2,
+        "before": 622,
+        "after": 622,
+        "count": "3",
+        "visible": {
+          "text": "Revitalizing\nEye Cream",
+          "left": 106.859375,
+          "right": 237.0625,
+          "scrollWidth": 130,
+          "width": 130.203125
+        }
+      },
+      {
+        "index": 3,
+        "before": 934,
+        "after": 934,
+        "count": "4",
+        "visible": {
+          "text": "24h Regeneration\nCream",
+          "left": 77.015625,
+          "right": 265.296875,
+          "scrollWidth": 188,
+          "width": 188.28125
+        }
+      }
+    ],
+    "focus": {
+      "outline": "rgb(28, 29, 31) solid 2px",
+      "rect": {
+        "x": 24,
+        "y": 212.5625,
+        "width": 78,
+        "height": 52,
+        "top": 212.5625,
+        "right": 102,
+        "bottom": 264.5625,
+        "left": 24
+      }
+    },
+    "swipe": {
+      "count": "2",
+      "pressed": [
+        "false",
+        "true",
+        "false",
+        "false"
+      ]
+    },
+    "overflow": false
+  },
+  {
+    "width": 430,
+    "states": [
+      {
+        "index": 0,
+        "before": 0,
+        "after": 0,
+        "count": "1",
+        "visible": {
+          "text": "Micellar Water\nAll‑in‑One Cleanser",
+          "left": 89.46875,
+          "right": 311.125,
+          "scrollWidth": 222,
+          "width": 221.65625
+        }
+      },
+      {
+        "index": 1,
+        "before": 369,
+        "after": 369,
+        "count": "2",
+        "visible": {
+          "text": "Advanced Repair\nSerum",
+          "left": 106.15625,
+          "right": 293.625,
+          "scrollWidth": 187,
+          "width": 187.46875
+        }
+      },
+      {
+        "index": 2,
+        "before": 737,
+        "after": 737,
+        "count": "3",
+        "visible": {
+          "text": "Revitalizing\nEye Cream",
+          "left": 135.375,
+          "right": 265.578125,
+          "scrollWidth": 130,
+          "width": 130.203125
+        }
+      },
+      {
+        "index": 3,
+        "before": 1106,
+        "after": 1106,
+        "count": "4",
+        "visible": {
+          "text": "24h Regeneration\nCream",
+          "left": 105.9375,
+          "right": 294.21875,
+          "scrollWidth": 188,
+          "width": 188.28125
+        }
+      }
+    ],
+    "focus": {
+      "outline": "rgb(28, 29, 31) solid 2px",
+      "rect": {
+        "x": 24,
+        "y": 189.09375,
+        "width": 95.5,
+        "height": 44,
+        "top": 189.09375,
+        "right": 119.5,
+        "bottom": 233.09375,
+        "left": 24
+      }
+    },
+    "swipe": {
+      "count": "2",
+      "pressed": [
+        "false",
+        "true",
+        "false",
+        "false"
+      ]
+    },
+    "overflow": false
+  },
+  {
+    "width": 768,
+    "states": [],
+    "overflow": false
+  }
+]

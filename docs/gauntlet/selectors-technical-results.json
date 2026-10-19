@@ -1,0 +1,128 @@
+{
+  "selectors": [
+    {
+      "text": "Cleanser",
+      "width": 78,
+      "height": 52,
+      "font": "15px"
+    },
+    {
+      "text": "Serum",
+      "width": 78,
+      "height": 52,
+      "font": "15px"
+    },
+    {
+      "text": "Eye cream",
+      "width": 78,
+      "height": 52,
+      "font": "15px"
+    },
+    {
+      "text": "24h cream",
+      "width": 78,
+      "height": 52,
+      "font": "15px"
+    }
+  ],
+  "actions": [
+    {
+      "action": "direct 4",
+      "pressed": [
+        "false",
+        "false",
+        "false",
+        "true"
+      ],
+      "count": "4",
+      "scroll": 934
+    },
+    {
+      "action": "direct 2",
+      "pressed": [
+        "false",
+        "true",
+        "false",
+        "false"
+      ],
+      "count": "2",
+      "scroll": 311
+    },
+    {
+      "action": "direct 3",
+      "pressed": [
+        "false",
+        "false",
+        "true",
+        "false"
+      ],
+      "count": "3",
+      "scroll": 622
+    },
+    {
+      "action": "direct 1",
+      "pressed": [
+        "true",
+        "false",
+        "false",
+        "false"
+      ],
+      "count": "1",
+      "scroll": 0
+    },
+    {
+      "action": "Enter 4",
+      "pressed": [
+        "false",
+        "false",
+        "false",
+        "true"
+      ],
+      "count": "4",
+      "scroll": 934
+    },
+    {
+      "action": "Space 2",
+      "pressed": [
+        "false",
+        "true",
+        "false",
+        "false"
+      ],
+      "count": "2",
+      "scroll": 311
+    },
+    {
+      "action": "next from2",
+      "pressed": [
+        "false",
+        "false",
+        "true",
+        "false"
+      ],
+      "count": "3",
+      "scroll": 622
+    },
+    {
+      "action": "native rail scroll to1",
+      "pressed": [
+        "true",
+        "false",
+        "false",
+        "false"
+      ],
+      "count": "1",
+      "scroll": 0
+    }
+  ],
+  "noJS": {
+    "selectorsVisible": false,
+    "controlsVisible": false,
+    "productLinks": 4,
+    "rail": {
+      "overflowX": "auto",
+      "scrollWidth": 1294,
+      "clientWidth": 360
+    }
+  }
+}

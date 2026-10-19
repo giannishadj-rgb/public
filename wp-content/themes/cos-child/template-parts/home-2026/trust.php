@@ -67,7 +67,7 @@ $measured = array(
 					<?php foreach ( $measured as $m ) : [ $fig, $finding, $product, $method, $panel, $obj ] = $m; ?>
 					<li class="hxs__result" data-hx-reveal>
 						<?php /* the owner's product, unaltered (transparent AVIF/WebP; JPEG fallback on the same #FBFAF6 ground); decorative — the name follows in text */ ?>
-						<?php echo cos_h26_picture( 'collection-object-' . $obj, array( 480, 720, 960 ), array( 2, 3 ), '', array( 'class' => 'hxs__object', 'sizes' => '(min-width: 1100px) 160px, 112px', 'w' => 480 ) ); // phpcs:ignore ?>
+						<?php echo cos_h26_picture( 'pack-' . $obj, array( 480, 720, 960 ), array( 2, 3 ), '', array( 'class' => 'hxs__object', 'sizes' => '(min-width: 1100px) 160px, 112px', 'w' => 480 ) ); // phpcs:ignore ?>
 						<p class="hxs__product"><?php echo esc_html( $product ); ?></p>
 						<p class="hx-numeral hxs__fig-n"><?php echo esc_html( $fig ); ?><span class="hxs__pct">%</span></p>
 						<p class="hxs__finding"><?php echo esc_html( $finding ); ?></p>
@@ -86,3 +86,4 @@ $measured = array(
 		</div>
 	</div>
 </section>
+

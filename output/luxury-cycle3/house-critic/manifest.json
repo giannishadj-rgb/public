@@ -1,0 +1,1340 @@
+[
+  {
+    "device": "desktop",
+    "name": "home",
+    "route": "/",
+    "title": "Luxury Caviar Skincare Made in Switzerland | Caviar of Switzerland",
+    "height": 7849,
+    "width": 1440,
+    "headings": [
+      {
+        "t": "The Swiss art of\n\t\t\t\tcaviar skincare",
+        "y": 357,
+        "size": "60px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "The Collection",
+        "y": 1056,
+        "size": "60px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Micellar Water All‑in‑One Cleanser",
+        "y": 1674,
+        "size": "29.968px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Advanced Repair Serum",
+        "y": 1674,
+        "size": "29.968px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Revitalizing Eye Cream",
+        "y": 1674,
+        "size": "29.968px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "24h Regeneration Cream",
+        "y": 1674,
+        "size": "29.968px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Caviar in every formula",
+        "y": 2244,
+        "size": "60px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Swiss science",
+        "y": 3305,
+        "size": "16px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "Protect.",
+        "y": 3410,
+        "size": "60px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Repair.",
+        "y": 3410,
+        "size": "60px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Rejuvenate.",
+        "y": 3410,
+        "size": "60px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Measured, formula by formula.",
+        "y": 3689,
+        "size": "29.968px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Swiss precision.Considered care.",
+        "y": 4601,
+        "size": "60px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "The daily ritual.",
+        "y": 5494,
+        "size": "60px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "01Cleanse",
+        "y": 5683,
+        "size": "30px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "02Treat",
+        "y": 5833,
+        "size": "30px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "03Revive",
+        "y": 5983,
+        "size": "30px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "04Restore",
+        "y": 6132,
+        "size": "30px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Swiss skincare,refined to the essential.",
+        "y": 6471,
+        "size": "60.48px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "The Complete Ritual",
+        "y": 6638,
+        "size": "28px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "The Caviar Circle",
+        "y": 7138,
+        "size": "43.92px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Customer Care",
+        "y": 7428,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "Explore",
+        "y": 7428,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "The House in Zug",
+        "y": 7428,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "Added to your bag",
+        "y": 0,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      }
+    ],
+    "sections": [
+      {
+        "cl": "hxh h26-hero--pearl",
+        "y": 0,
+        "h": 950
+      },
+      {
+        "cl": "hxc",
+        "y": 950,
+        "h": 1035
+      },
+      {
+        "cl": "hxv",
+        "y": 1985,
+        "h": 1198
+      },
+      {
+        "cl": "hxs",
+        "y": 3183,
+        "h": 1176
+      },
+      {
+        "cl": "hxp",
+        "y": 4359,
+        "h": 1009
+      },
+      {
+        "cl": "hxr",
+        "y": 5368,
+        "h": 1002
+      },
+      {
+        "cl": "hxz",
+        "y": 6371,
+        "h": 663
+      }
+    ]
+  },
+  {
+    "device": "desktop",
+    "name": "shop",
+    "route": "/shop/",
+    "title": "Luxury Anti-Aging Skincare & Caviar Skin Care Products",
+    "height": 4206,
+    "width": 1440,
+    "headings": [
+      {
+        "t": "Swiss caviar skincare",
+        "y": 365,
+        "size": "88px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "The four formulas",
+        "y": 1072,
+        "size": "60px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Micellar Water All‑in‑One Cleanser",
+        "y": 1690,
+        "size": "29.968px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Advanced Repair Serum",
+        "y": 1690,
+        "size": "29.968px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Revitalizing Eye Cream",
+        "y": 1690,
+        "size": "29.968px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "24h Regeneration Cream",
+        "y": 1690,
+        "size": "29.968px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "The four formulas, as one ritual.",
+        "y": 2190,
+        "size": "60px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Built as one system",
+        "y": 3017,
+        "size": "60px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "The Caviar Circle",
+        "y": 3495,
+        "size": "43.92px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Customer Care",
+        "y": 3785,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "Explore",
+        "y": 3785,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "The House in Zug",
+        "y": 3785,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "Added to your bag",
+        "y": 0,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      }
+    ],
+    "sections": [
+      {
+        "cl": "hxshop-hero cos-shop-hero",
+        "y": 80,
+        "h": 870
+      },
+      {
+        "cl": "hxshop-list",
+        "y": 950,
+        "h": 1101
+      },
+      {
+        "cl": "hxshop-ritual",
+        "y": 2051,
+        "h": 844
+      },
+      {
+        "cl": "hxshop-about",
+        "y": 2895,
+        "h": 496
+      }
+    ]
+  },
+  {
+    "device": "desktop",
+    "name": "cream",
+    "route": "/products/24h-regeneration-cream/",
+    "title": "Regenerating Face Cream with Caviar Extract — Caviar of Switzerland",
+    "height": 7228,
+    "width": 1440,
+    "headings": [
+      {
+        "t": "24h Regeneration Cream",
+        "y": 178,
+        "size": "51.84px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "The completion",
+        "y": 2279,
+        "size": "60px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Key ingredients",
+        "y": 2986,
+        "size": "60px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Caviar Lipid Complex",
+        "y": 3164,
+        "size": "29.968px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Triple-Weight Hyaluronic Acid Complex",
+        "y": 3164,
+        "size": "29.968px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Swiss Glacier Meltwater",
+        "y": 3164,
+        "size": "29.968px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Superoxide Dismutase",
+        "y": 3164,
+        "size": "29.968px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "100% Panellist-reported satisfaction",
+        "y": 3682,
+        "size": "29.968px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "How to use",
+        "y": 4382,
+        "size": "60px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Within the ritual",
+        "y": 5061,
+        "size": "60px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Questions",
+        "y": 5918,
+        "size": "60px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "The Caviar Circle",
+        "y": 6518,
+        "size": "43.92px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Customer Care",
+        "y": 6808,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "Explore",
+        "y": 6808,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "The House in Zug",
+        "y": 6808,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "Added to your bag",
+        "y": 0,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      }
+    ],
+    "sections": [
+      {
+        "cl": "hxpd-buy",
+        "y": 80,
+        "h": 1865
+      },
+      {
+        "cl": "hxpd-story",
+        "y": 1945,
+        "h": 919
+      },
+      {
+        "cl": "hxpd-actives",
+        "y": 2864,
+        "h": 697
+      },
+      {
+        "cl": "hxpd-result",
+        "y": 3561,
+        "h": 595
+      },
+      {
+        "cl": "hxpd-use",
+        "y": 4156,
+        "h": 784
+      },
+      {
+        "cl": "hxpd-ritual",
+        "y": 4940,
+        "h": 857
+      },
+      {
+        "cl": "hxpd-faq",
+        "y": 5797,
+        "h": 617
+      }
+    ]
+  },
+  {
+    "device": "desktop",
+    "name": "science",
+    "route": "/science/",
+    "title": "Swiss Science — Caviar of Switzerland",
+    "height": 6075,
+    "width": 1440,
+    "headings": [
+      {
+        "t": "Protect. Repair. Rejuvenate.",
+        "y": 846,
+        "size": "88px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Protect",
+        "y": 965,
+        "size": "24px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "Repair",
+        "y": 1021,
+        "size": "24px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "Rejuvenate",
+        "y": 1077,
+        "size": "24px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "Measured, formula by formula.",
+        "y": 1176,
+        "size": "50.72px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Five chapters, one standard.",
+        "y": 4093,
+        "size": "50.72px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "The Caviar Circle",
+        "y": 5365,
+        "size": "43.92px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Customer Care",
+        "y": 5655,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "Explore",
+        "y": 5655,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "The House in Zug",
+        "y": 5655,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "Added to your bag",
+        "y": 0,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      }
+    ],
+    "sections": [
+      {
+        "cl": "hxsc-words",
+        "y": 965,
+        "h": 169
+      },
+      {
+        "cl": "hxsc-proof",
+        "y": 1133,
+        "h": 2838
+      },
+      {
+        "cl": "hxsc-sec hxsc-chapters",
+        "y": 3971,
+        "h": 1290
+      }
+    ]
+  },
+  {
+    "device": "desktop",
+    "name": "heritage",
+    "route": "/heritage/",
+    "title": "Swiss Heritage — Caviar of Switzerland",
+    "height": 6336,
+    "width": 1440,
+    "headings": [
+      {
+        "t": "Precision born from the Alps.",
+        "y": 296,
+        "size": "88px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Where one standard rules all others.",
+        "y": 1358,
+        "size": "60px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "A heritage of doing things properly.",
+        "y": 2195,
+        "size": "60px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "The age of the watchmaker",
+        "y": 2415,
+        "size": "29.968px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "The pharmaceutical revolution",
+        "y": 2597,
+        "size": "29.968px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Caviar of Switzerland",
+        "y": 2751,
+        "size": "29.968px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "The Helvetic code.",
+        "y": 3090,
+        "size": "60px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Explore the heritage",
+        "y": 4143,
+        "size": "29.968px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "The Swiss standard, in your hands.",
+        "y": 5177,
+        "size": "60px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "The Caviar Circle",
+        "y": 5625,
+        "size": "43.92px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Customer Care",
+        "y": 5915,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "Explore",
+        "y": 5915,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "The House in Zug",
+        "y": 5915,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "Added to your bag",
+        "y": 0,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      }
+    ],
+    "sections": [
+      {
+        "cl": "hxhe-hero hxhe-hero--plate",
+        "y": 0,
+        "h": 1197
+      },
+      {
+        "cl": "hxhe-sec hxhe-guarantee",
+        "y": 1197,
+        "h": 876
+      },
+      {
+        "cl": "hxhe-sec hxhe-eras",
+        "y": 2073,
+        "h": 895
+      },
+      {
+        "cl": "hxhe-sec hxhe-code",
+        "y": 2968,
+        "h": 1053
+      },
+      {
+        "cl": "hxhe-sec hxhe-explore",
+        "y": 4021,
+        "h": 992
+      },
+      {
+        "cl": "hxhe-close",
+        "y": 5013,
+        "h": 509
+      }
+    ]
+  },
+  {
+    "device": "mobile",
+    "name": "home",
+    "route": "/",
+    "title": "Luxury Caviar Skincare Made in Switzerland | Caviar of Switzerland",
+    "height": 8821,
+    "width": 390,
+    "headings": [
+      {
+        "t": "The Swiss art of\n\t\t\t\tcaviar skincare",
+        "y": 118,
+        "size": "40px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "The Collection",
+        "y": 908,
+        "size": "34px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Micellar Water All‑in‑One Cleanser",
+        "y": 1327,
+        "size": "22px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Advanced Repair Serum",
+        "y": 1327,
+        "size": "22px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Revitalizing Eye Cream",
+        "y": 1872,
+        "size": "22px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "24h Regeneration Cream",
+        "y": 1872,
+        "size": "22px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Caviar in every formula",
+        "y": 2260,
+        "size": "34px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Swiss science",
+        "y": 3449,
+        "size": "16px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "Protect.",
+        "y": 3497,
+        "size": "34px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Repair.",
+        "y": 3655,
+        "size": "34px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Rejuvenate.",
+        "y": 3785,
+        "size": "34px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Measured, formula by formula.",
+        "y": 3968,
+        "size": "24px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Swiss precision.Considered care.",
+        "y": 4820,
+        "size": "34px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "The daily ritual.",
+        "y": 5964,
+        "size": "34px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "01Cleanse",
+        "y": 6585,
+        "size": "30px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "02Treat",
+        "y": 6762,
+        "size": "30px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "03Revive",
+        "y": 6911,
+        "size": "30px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "04Restore",
+        "y": 7061,
+        "size": "30px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Swiss skincare,refined to the essential.",
+        "y": 7320,
+        "size": "40px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "The Complete Ritual",
+        "y": 7591,
+        "size": "28px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "The Caviar Circle",
+        "y": 8068,
+        "size": "32px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Customer Care",
+        "y": 8413,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "Explore",
+        "y": 8478,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "The House in Zug",
+        "y": 8543,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "Added to your bag",
+        "y": 0,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      }
+    ],
+    "sections": [
+      {
+        "cl": "hxh h26-hero--pearl",
+        "y": 0,
+        "h": 844
+      },
+      {
+        "cl": "hxc",
+        "y": 844,
+        "h": 1300
+      },
+      {
+        "cl": "hxv",
+        "y": 2144,
+        "h": 1226
+      },
+      {
+        "cl": "hxs",
+        "y": 3369,
+        "h": 1386
+      },
+      {
+        "cl": "hxp",
+        "y": 4756,
+        "h": 1145
+      },
+      {
+        "cl": "hxr",
+        "y": 5900,
+        "h": 1356
+      },
+      {
+        "cl": "hxz",
+        "y": 7256,
+        "h": 740
+      }
+    ]
+  },
+  {
+    "device": "mobile",
+    "name": "shop",
+    "route": "/shop/",
+    "title": "Luxury Anti-Aging Skincare & Caviar Skin Care Products",
+    "height": 4836,
+    "width": 390,
+    "headings": [
+      {
+        "t": "Swiss caviar skincare",
+        "y": 104,
+        "size": "44.021px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "The four formulas",
+        "y": 706,
+        "size": "34px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Micellar Water All‑in‑One Cleanser",
+        "y": 1124,
+        "size": "19px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Advanced Repair Serum",
+        "y": 1124,
+        "size": "19px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Revitalizing Eye Cream",
+        "y": 1661,
+        "size": "19px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "24h Regeneration Cream",
+        "y": 1661,
+        "size": "19px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "The four formulas, as one ritual.",
+        "y": 2455,
+        "size": "34px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Built as one system",
+        "y": 3267,
+        "size": "34px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "The Caviar Circle",
+        "y": 3964,
+        "size": "32px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Customer Care",
+        "y": 4309,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "Explore",
+        "y": 4374,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "The House in Zug",
+        "y": 4439,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "Added to your bag",
+        "y": 0,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      }
+    ],
+    "sections": [
+      {
+        "cl": "hxshop-hero cos-shop-hero",
+        "y": 80,
+        "h": 546
+      },
+      {
+        "cl": "hxshop-list",
+        "y": 626,
+        "h": 1339
+      },
+      {
+        "cl": "hxshop-ritual",
+        "y": 1965,
+        "h": 1223
+      },
+      {
+        "cl": "hxshop-about",
+        "y": 3188,
+        "h": 704
+      }
+    ]
+  },
+  {
+    "device": "mobile",
+    "name": "cream",
+    "route": "/products/24h-regeneration-cream/",
+    "title": "Regenerating Face Cream with Caviar Extract — Caviar of Switzerland",
+    "height": 7525,
+    "width": 390,
+    "headings": [
+      {
+        "t": "24h Regeneration Cream",
+        "y": 136,
+        "size": "36px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "The completion",
+        "y": 1738,
+        "size": "34px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Key ingredients",
+        "y": 2187,
+        "size": "34px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Caviar Lipid Complex",
+        "y": 2316,
+        "size": "24px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Triple-Weight Hyaluronic Acid Complex",
+        "y": 2549,
+        "size": "24px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Swiss Glacier Meltwater",
+        "y": 2783,
+        "size": "24px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Superoxide Dismutase",
+        "y": 2963,
+        "size": "24px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "100% Panellist-reported satisfaction",
+        "y": 3423,
+        "size": "24px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "How to use",
+        "y": 3949,
+        "size": "34px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Within the ritual",
+        "y": 4945,
+        "size": "34px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Questions",
+        "y": 6060,
+        "size": "34px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "The Caviar Circle",
+        "y": 6652,
+        "size": "32px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Customer Care",
+        "y": 6997,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "Explore",
+        "y": 7062,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "The House in Zug",
+        "y": 7127,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "Added to your bag",
+        "y": 0,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      }
+    ],
+    "sections": [
+      {
+        "cl": "hxpd-buy",
+        "y": 80,
+        "h": 1148
+      },
+      {
+        "cl": "hxpd-story",
+        "y": 1228,
+        "h": 879
+      },
+      {
+        "cl": "hxpd-actives",
+        "y": 2107,
+        "h": 1133
+      },
+      {
+        "cl": "hxpd-result",
+        "y": 3240,
+        "h": 629
+      },
+      {
+        "cl": "hxpd-use",
+        "y": 3869,
+        "h": 996
+      },
+      {
+        "cl": "hxpd-ritual",
+        "y": 4865,
+        "h": 1115
+      },
+      {
+        "cl": "hxpd-faq",
+        "y": 5980,
+        "h": 600
+      }
+    ]
+  },
+  {
+    "device": "mobile",
+    "name": "science",
+    "route": "/science/",
+    "title": "Swiss Science — Caviar of Switzerland",
+    "height": 6428,
+    "width": 390,
+    "headings": [
+      {
+        "t": "Protect. Repair. Rejuvenate.",
+        "y": 840,
+        "size": "44.021px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Protect",
+        "y": 1010,
+        "size": "24px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "Repair",
+        "y": 1120,
+        "size": "24px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "Rejuvenate",
+        "y": 1231,
+        "size": "24px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "Measured, formula by formula.",
+        "y": 1377,
+        "size": "32px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Five chapters, one standard.",
+        "y": 4255,
+        "size": "32px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "The Caviar Circle",
+        "y": 5555,
+        "size": "32px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Customer Care",
+        "y": 5900,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "Explore",
+        "y": 5965,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "The House in Zug",
+        "y": 6030,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "Added to your bag",
+        "y": 0,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      }
+    ],
+    "sections": [
+      {
+        "cl": "hxsc-words",
+        "y": 1010,
+        "h": 332
+      },
+      {
+        "cl": "hxsc-proof",
+        "y": 1341,
+        "h": 2834
+      },
+      {
+        "cl": "hxsc-sec hxsc-chapters",
+        "y": 4175,
+        "h": 1307
+      }
+    ]
+  },
+  {
+    "device": "mobile",
+    "name": "heritage",
+    "route": "/heritage/",
+    "title": "Swiss Heritage — Caviar of Switzerland",
+    "height": 7875,
+    "width": 390,
+    "headings": [
+      {
+        "t": "Precision born from the Alps.",
+        "y": 188,
+        "size": "44.021px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Where one standard rules all others.",
+        "y": 1659,
+        "size": "34px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "A heritage of doing things properly.",
+        "y": 2318,
+        "size": "34px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "The age of the watchmaker",
+        "y": 2488,
+        "size": "24px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "The pharmaceutical revolution",
+        "y": 2788,
+        "size": "24px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Caviar of Switzerland",
+        "y": 3034,
+        "size": "24px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "The Helvetic code.",
+        "y": 3348,
+        "size": "34px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Explore the heritage",
+        "y": 5112,
+        "size": "24px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "The Swiss standard, in your hands.",
+        "y": 6634,
+        "size": "34px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "The Caviar Circle",
+        "y": 7002,
+        "size": "32px",
+        "font": "\"Cormorant Garamond\", \"EB Garamond\", Georgia, \"Times New Roman\", serif"
+      },
+      {
+        "t": "Customer Care",
+        "y": 7347,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "Explore",
+        "y": 7412,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "The House in Zug",
+        "y": 7477,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      },
+      {
+        "t": "Added to your bag",
+        "y": 0,
+        "size": "11.5px",
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+      }
+    ],
+    "sections": [
+      {
+        "cl": "hxhe-hero hxhe-hero--plate",
+        "y": 0,
+        "h": 1072
+      },
+      {
+        "cl": "hxhe-sec hxhe-guarantee",
+        "y": 1072,
+        "h": 1166
+      },
+      {
+        "cl": "hxhe-sec hxhe-eras",
+        "y": 2238,
+        "h": 1030
+      },
+      {
+        "cl": "hxhe-sec hxhe-code",
+        "y": 3268,
+        "h": 1764
+      },
+      {
+        "cl": "hxhe-sec hxhe-explore",
+        "y": 5032,
+        "h": 1486
+      },
+      {
+        "cl": "hxhe-close",
+        "y": 6519,
+        "h": 411
+      }
+    ]
+  }
+]

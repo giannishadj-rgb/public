@@ -1,0 +1,182 @@
+{
+  "url": "https://augustinusbader.com/en-uk",
+  "title": "Augustinus Bader | Luxury Skin Creams & Serums",
+  "sections": [
+    {
+      "tag": "H2",
+      "cls": "tvg_product_widget_UGJYwG_title",
+      "text": "THE OVERNIGHT RESTORATIVE CREAM",
+      "x": 1173,
+      "y": 812.59375,
+      "w": 113,
+      "h": 30,
+      "cols": "none",
+      "padding": "0px"
+    },
+    {
+      "tag": "H1",
+      "cls": "tvg_hero_JgA86G_title",
+      "text": "Wake Up To Visibly Restored Skin. Powered By Advanced TFC8®",
+      "x": 80,
+      "y": 511.390625,
+      "w": 512,
+      "h": 58,
+      "cols": "none",
+      "padding": "0px"
+    },
+    {
+      "tag": "H2",
+      "cls": "tvg_collections_accordion_5TKBOq_card__label",
+      "text": "FACE",
+      "x": 16,
+      "y": 1212.9000244140625,
+      "w": 351,
+      "h": 823,
+      "cols": "none",
+      "padding": "24px"
+    },
+    {
+      "tag": "H2",
+      "cls": "tvg_collections_accordion_5TKBOq_card__label",
+      "text": "HAIR",
+      "x": 368.25,
+      "y": 1212.9000244140625,
+      "w": 351,
+      "h": 823,
+      "cols": "none",
+      "padding": "24px"
+    },
+    {
+      "tag": "H2",
+      "cls": "tvg_collections_accordion_5TKBOq_card__label",
+      "text": "BODY",
+      "x": 720.5,
+      "y": 1212.9000244140625,
+      "w": 351,
+      "h": 823,
+      "cols": "none",
+      "padding": "24px"
+    },
+    {
+      "tag": "H2",
+      "cls": "tvg_collections_accordion_5TKBOq_card__label",
+      "text": "BESTSELLERS",
+      "x": 1072.75,
+      "y": 1212.9000244140625,
+      "w": 351,
+      "h": 823,
+      "cols": "none",
+      "padding": "24px"
+    },
+    {
+      "tag": "H2",
+      "cls": "tvg_media_with_text_BnDkrW_title",
+      "text": "Augustinus Bader",
+      "x": 108,
+      "y": 2145.796875,
+      "w": 520,
+      "h": 34,
+      "cols": "none",
+      "padding": "0px"
+    },
+    {
+      "tag": "H2",
+      "cls": "tvg_media_with_theme_blocks_-5LhBq_heading",
+      "text": "Game-Changing Results",
+      "x": 752,
+      "y": 2759.1875,
+      "w": 540,
+      "h": 34,
+      "cols": "none",
+      "padding": "0px"
+    },
+    {
+      "tag": "H2",
+      "cls": "tvg_full_bleed_scroll_V9jCDa_title",
+      "text": "Our Science is Unique",
+      "x": 80,
+      "y": 3755.1875,
+      "w": 710,
+      "h": 45,
+      "cols": "none",
+      "padding": "0px"
+    },
+    {
+      "tag": "H2",
+      "cls": "tvg_featured_products_UbFoKG_heading js-heading",
+      "text": "Our Bestsellers",
+      "x": 475.046875,
+      "y": 6154,
+      "w": 490,
+      "h": 34,
+      "cols": "none",
+      "padding": "0px 80px"
+    },
+    {
+      "tag": "H2",
+      "cls": "tvg_awards_carousel_oNwBpW_heading",
+      "text": "250\n+ Industry Awards",
+      "x": 24,
+      "y": 7101.125,
+      "w": 1094,
+      "h": 34,
+      "cols": "none",
+      "padding": "0px"
+    },
+    {
+      "tag": "H2",
+      "cls": "tvg_media_with_text_BnDkrW_title",
+      "text": "Stay Consistent. Stay Replenished.",
+      "x": 108,
+      "y": 8047.421875,
+      "w": 520,
+      "h": 86,
+      "cols": "none",
+      "padding": "0px"
+    },
+    {
+      "tag": "H2",
+      "cls": "tvg_editorial_layout_Xrpz3G_title",
+      "text": "The Skin Lab, London",
+      "x": 934,
+      "y": 9115.40625,
+      "w": 450,
+      "h": 86,
+      "cols": "none",
+      "padding": "0px"
+    },
+    {
+      "tag": "H2",
+      "cls": "tvg_newsletter_form_nbVYfG_title",
+      "text": "SIGN UP FOR NEWS & EXCLUSIVE STORIES",
+      "x": 270,
+      "y": 9147.796875,
+      "w": 320,
+      "h": 11,
+      "cols": "none",
+      "padding": "0px"
+    },
+    {
+      "tag": "H2",
+      "cls": "tvg_localization_drawer_6YDUUq_title",
+      "text": "SELECT LANGUAGE / CURRENCY",
+      "x": 1452,
+      "y": 17.796875,
+      "w": 311,
+      "h": 8,
+      "cols": "none",
+      "padding": "0px"
+    },
+    {
+      "tag": "H2",
+      "cls": "tvg_waitlist_drawer_TmCJvG_heading",
+      "text": "Sold Out. But Will Be Back",
+      "x": 1456,
+      "y": 77,
+      "w": 493,
+      "h": 13,
+      "cols": "none",
+      "padding": "0px"
+    }
+  ]
+}

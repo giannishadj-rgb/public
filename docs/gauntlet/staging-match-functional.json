@@ -1,0 +1,44 @@
+{
+  "menuOpens": true,
+  "menuCloses": true,
+  "externalShoppingLinks": [],
+  "routes": [
+    {
+      "path": "/products/the-complete-ritual/",
+      "status": 200
+    },
+    {
+      "path": "/products/micellar-water-cleanser/",
+      "status": 200
+    },
+    {
+      "path": "/products/advanced-repair-serum/",
+      "status": 200
+    },
+    {
+      "path": "/products/revitalizing-eye-cream/",
+      "status": 200
+    },
+    {
+      "path": "/products/24h-regeneration-cream/",
+      "status": 200
+    },
+    {
+      "path": "/science/why-caviar/",
+      "status": 200
+    },
+    {
+      "path": "/science/clinical-studies/",
+      "status": 200
+    },
+    {
+      "path": "/heritage/",
+      "status": 200
+    },
+    {
+      "path": "/science/swiss-formulation/",
+      "status": 200
+    }
+  ],
+  "otherPageUsesOriginalChrome": true
+}

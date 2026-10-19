@@ -156,17 +156,22 @@ function cos_hxpd_context( WC_Product $product ): array {
 		$ids = array( 23725, 23717, 482, 23721 );
 	} else {
 		if ( $me ) {
-			$slides[] = cos_h26_picture( 'card-' . $me['key'] . '-photo', array( 480, 720, 960 ), array( 4, 5 ), $pd['image_alt'] ?? $me['cardalt'], array( 'sizes' => $first_size, 'eager' => true, 'w' => 960 ) );
+			// The clean cut-out packshot shared with the homepage collection and the shop
+			// (transparent AVIF/WebP; JPEG fallback on #FBFAF6), shown whole on the page ground.
+			$slides[] = cos_h26_picture( 'pack-' . $me['key'], array( 480, 720, 960 ), array( 2, 3 ), $pd['image_alt'] ?? $me['cardalt'], array( 'sizes' => '(min-width: 1024px) 40vw, 80vw', 'eager' => true, 'w' => 960, 'class' => 'hxpd-gallery__object' ) );
 		}
 		$skip = array( 'COS-003' => array( 151, 478 ) ); // 151 = the eye cream's story photograph below
 		$ids  = array_values( array_diff( $product->get_gallery_image_ids() ?: array( (int) $product->get_image_id() ), $skip[ $sku ] ?? array() ) );
 	}
+	$odd_last = 1 === count( $ids ) % 2 ? end( $ids ) : 0; // spans the full column on desktop
 	foreach ( $ids as $aid ) {
 		$alt = (string) get_post_meta( $aid, '_wp_attachment_image_alt', true );
 		$alt = $alt ? str_replace( ' ? ', ' — ', $alt ) : $product->get_name() . ', photographed by Caviar of Switzerland';
-		$pic = cos_hxpd_attachment_picture( (int) $aid, $alt, $rest_size );
+		$pic = cos_hxpd_attachment_picture( (int) $aid, $alt, $aid === $odd_last ? $first_size : $rest_size );
 		if ( $pic ) $slides[] = $pic;
 	}
+	// The LCP image keeps its legacy id (tests/12, analytics): #cos-gallery-main.
+	if ( $slides ) $slides[0] = preg_replace( '/<img /', '<img id="cos-gallery-main" ', $slides[0], 1 );
 
 	// Price, comparison and stock.
 	$price      = (float) $product->get_price();
@@ -186,7 +191,7 @@ function cos_hxpd_context( WC_Product $product ): array {
 		'id'         => $product->get_id(),
 		'sku'        => $sku,
 		'is_set'     => $is_set,
-		'name'       => $product->get_name(),
+		'name'       => str_replace( '-', "\u{2011}", $product->get_name() ), // "All-in-One" never splits
 		'promise'    => cos_hxpd_promise( $sku ),
 		'size'       => cos_hxpd_size( $product ),
 		'price'      => $price,

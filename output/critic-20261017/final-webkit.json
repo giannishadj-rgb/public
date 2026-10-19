@@ -1,0 +1,79 @@
+{
+  "overflow": 0,
+  "brokenImages": [],
+  "benefits": [
+    {
+      "visible": true,
+      "font": "16px",
+      "text": "Removes make‑up & replenishes lipids"
+    },
+    {
+      "visible": true,
+      "font": "16px",
+      "text": "Visibly firms & smooths"
+    },
+    {
+      "visible": true,
+      "font": "16px",
+      "text": "Softens the look of dark circles & fine lines"
+    },
+    {
+      "visible": true,
+      "font": "16px",
+      "text": "Lasting hydration & barrier support"
+    }
+  ],
+  "ritual": [
+    {
+      "display": "grid",
+      "cols": "161px 161px",
+      "gap": "40px 20px"
+    }
+  ],
+  "sections": [
+    {
+      "cls": "hxh h26-hero--pearl",
+      "h": 844,
+      "padding": "0px"
+    },
+    {
+      "cls": "hxc",
+      "h": 1300,
+      "padding": "64px 0px 56px"
+    },
+    {
+      "cls": "hxv",
+      "h": 1226,
+      "padding": "0px"
+    },
+    {
+      "cls": "hxs",
+      "h": 1567,
+      "padding": "79.599998px 0px"
+    },
+    {
+      "cls": "hxp",
+      "h": 1145,
+      "padding": "64px 0px"
+    },
+    {
+      "cls": "hxr",
+      "h": 1145,
+      "padding": "64px 0px"
+    },
+    {
+      "cls": "hxz",
+      "h": 552,
+      "padding": "130.777496px 0px 32px"
+    }
+  ],
+  "logos": [
+    {
+      "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/logo-222w.webp",
+      "opacity": "1",
+      "filter": "none"
+    }
+  ],
+  "narrowOverflow": 0,
+  "pageErrors": []
+}

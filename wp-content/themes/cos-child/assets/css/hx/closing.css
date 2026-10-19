@@ -22,7 +22,7 @@ body.cos-h26 .hxz{
    (that line measures ≈7.85em in Cormorant 300 italic). */
 .hxz__title{
 	margin:0;
-	font-size:min(calc(var(--hx-fs-display) * 1.3),calc((100vw - 2 * var(--hx-margin)) * .124));
+	font-size:min(4.75rem,calc((100vw - 2 * var(--hx-margin)) * .124));
 	line-height:1.1; /* loosened: italic f descender must clear the line above's caps */
 }
 .hxz__line{display:block}
@@ -38,10 +38,10 @@ body.cos-h26 .hxz{
 	min-height:56px;
 	padding-right:var(--hx-s-3);
 	font-family:var(--hx-sans);
-	font-size:.75rem; /* = .hx-btn label size */
+	font-size:.9375rem;
 	font-weight:500;
 	line-height:1.3;
-	letter-spacing:.22em;
+	letter-spacing:.015em;
 	text-transform:uppercase;
 	color:var(--hx-ink);
 	text-decoration:none;
@@ -114,10 +114,10 @@ body.cos-h26 .hxz{
 	.hxz__house .hxz__place{display:none}
 }
 @media (max-width:359.98px){
-	.hxz__cta{max-width:100%;font-size:.75rem;letter-spacing:.12em;gap:var(--hx-s-4);padding-right:0}
+	.hxz__cta{max-width:100%;font-size:.9375rem;letter-spacing:.015em;gap:var(--hx-s-4);padding-right:0}
 }
 @media (min-width:1024px){
-	.hxz__cta{font-size:var(--hx-fs-detail)}
+	.hxz__cta{font-size:.9375rem}
 }
 @media (prefers-reduced-motion:reduce){
 	.hxz__cta-rule,.hxz__cta-text{transition:none}

@@ -1,184 +1,101 @@
-/* hx-motion.js — Caviar of Switzerland homepage motion (14 Oct 2026 rebuild).
- * Owner: system agent. Dependency-free, deferred. CSS half lives in assets/css/hx/system.css.
+/* hx-motion.js — homepage / sitewide motion (system agent, 17 Oct 2026).
  *
- * REVEALS — add data-hx-reveal to any element:
- *   data-hx-reveal            fade + rise 28px (default; same as "rise")       1200ms, --hx-ease
- *   data-hx-reveal="fade"     opacity only                                      1400ms
- *   data-hx-reveal="mask"     curtain lifts from bottom (clip-path); <img> inside settles 1.08→1   1800ms
- *   data-hx-reveal="mask-x"   curtain opens left→right; <img> inside settles 1.08→1               1800ms
- *   data-hx-reveal="settle"   fade + <img> inside (or the img itself) scales 1.04→1                1800ms
- *   Delay:   data-hx-delay="240" (ms)  or  style="--hx-i:2" (× --hx-stagger 120ms)
- *   Stagger: put data-hx-stagger on a parent → its [data-hx-reveal] descendants get --hx-i = 0,1,2…
- *            in document order (an explicit --hx-i/data-hx-delay on a child still wins).
- *   Trigger: when the element's top passes ~88% of the viewport height (rootMargin -12% bottom).
- *   Guarantees: content is never hidden unless this script ran AND motion is allowed. Elements
- *   already in (or above) the viewport at start are shown instantly — no flash, no animation;
- *   for above-the-fold motion use the CSS-only .hx-load-* classes. Under prefers-reduced-motion
- *   nothing moves and everything is visible. Only opacity / transform / clip-path animate.
- *
- * DRIFT (parallax) — data-hx-drift or data-hx-drift="0.06" (factor, default 0.06, max 0.2):
- *   translates the element vertically by (element centre − viewport centre) × −factor, clamped to
- *   ±120px, via the CSS `translate` property (composes with reveal transforms). Active only at
- *   ≥900px wide, without reduced motion, and only while the element is near the viewport.
- *   Give a drifting image some bleed inside an .hx-frame (e.g. img{height:112%;margin-top:-6%}).
- *
- * API: window.hxMotion.refresh(root?) — observe [data-hx-reveal]/[data-hx-drift] added later.
- *      window.hxMotion.revealAll()     — show everything immediately.
+ * Policy: reading and shopping never wait for a scroll observer or a stagger timer.
+ * Every [data-hx-reveal] is marked .is-in immediately, so text, prices and CTAs are
+ * visible at first paint. The only scroll-linked effects are decorative:
+ *   • image settle  — [data-hx-reveal="settle|mask|mask-x"] (and img[data-hx-reveal="settle"]):
+ *                     images below the fold start at scale 1.035 and ease to 1 when they
+ *                     enter (CSS in hx/system.css). The image is fully visible throughout.
+ *   • hairline draw — .hx-line / [data-hx-line] gets .is-drawn when it enters.
+ *   • drift         — [data-hx-drift="<factor>"]: --hx-dy = offset from viewport centre ×
+ *                     factor, clamped to ±6px; only ≥900px wide.
+ * With prefers-reduced-motion, or without IntersectionObserver, nothing moves and
+ * html.hx-motion is never set. API: window.hxMotion.refresh(root), .revealAll().
  */
 (function () {
 	'use strict';
 	var doc = document.documentElement;
-	var mqReduce = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
-	var mqWide = window.matchMedia ? window.matchMedia('(min-width: 900px)') : null;
-	var reduced = !!(mqReduce && mqReduce.matches);
-	var hasIO = 'IntersectionObserver' in window;
-	var seen = typeof WeakSet === 'function' ? new WeakSet() : null;
-	var revealIO = null;
+	var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+	var canObserve = 'IntersectionObserver' in window;
+	var motion = !reduce && canObserve;
+	var IMG_SEL = '[data-hx-reveal="settle"],[data-hx-reveal="mask"],[data-hx-reveal="mask-x"]';
+	var io = null;
 
-	function all(root, sel) {
-		return Array.prototype.slice.call((root || document).querySelectorAll(sel));
+	function inView(el) {
+		var r = el.getBoundingClientRect();
+		return r.top < window.innerHeight && r.bottom > 0;
 	}
 
-	function show(el, instant) {
-		if (instant) el.classList.add('hx-instant');
-		el.classList.add('is-in');
+	function settle(root) {
+		root = root || document;
+		var all = root.querySelectorAll('[data-hx-reveal]');
+		var lines = root.querySelectorAll('.hx-line,[data-hx-line]');
+		Array.prototype.forEach.call(all, function (el) {
+			var isImg = el.matches(IMG_SEL);
+			// Text, prices, CTAs, and any image already on screen: visible now, no transition.
+			if (!motion || !isImg || inView(el)) {
+				el.classList.add('is-in', 'hx-instant');
+				return;
+			}
+			io.observe(el);
+		});
+		Array.prototype.forEach.call(lines, function (el) {
+			if (!motion || inView(el)) { el.classList.add('is-drawn'); return; }
+			io.observe(el);
+		});
 	}
 
 	function revealAll() {
-		all(document, '[data-hx-reveal]').forEach(function (el) { show(el, true); });
-		if (revealIO) revealIO.disconnect();
+		Array.prototype.forEach.call(document.querySelectorAll('[data-hx-reveal]'), function (el) { el.classList.add('is-in'); });
+		Array.prototype.forEach.call(document.querySelectorAll('.hx-line,[data-hx-line]'), function (el) { el.classList.add('is-drawn'); });
 	}
 
-	function applyStagger(root) {
-		all(root, '[data-hx-stagger]').forEach(function (group) {
-			all(group, '[data-hx-reveal]').forEach(function (el, i) {
-				if (!el.style.getPropertyValue('--hx-i')) el.style.setProperty('--hx-i', String(i));
-			});
-		});
-		if (root && root.nodeType === 1 && root.closest) {
-			var g = root.closest('[data-hx-stagger]');
-			if (g && g !== root) applyStagger(g);
-		}
-	}
-
-	function initReveals(root) {
-		var els = all(root, '[data-hx-reveal]');
-		if (root && root.nodeType === 1 && root.hasAttribute('data-hx-reveal')) els.unshift(root);
-		if (!els.length) return;
-		applyStagger(root || document);
-		var vh = window.innerHeight || doc.clientHeight;
-		els.forEach(function (el) {
-			if (seen) { if (seen.has(el)) return; seen.add(el); }
-			var d = el.getAttribute('data-hx-delay');
-			if (d && !isNaN(parseFloat(d))) el.style.setProperty('--hx-delay', parseFloat(d) + 'ms');
-			if (reduced || !revealIO) { show(el, true); return; }
-			var r = el.getBoundingClientRect();
-			// Already on screen (or scrolled past, e.g. reload mid-page): show now, no flash.
-			if (r.top < vh * 0.98) {
-				show(el, true);
-				return;
-			}
-			revealIO.observe(el);
-		});
-	}
-
-	/* ── drift ─────────────────────────────────────────────────────── */
+	/* Drift: rAF-throttled, transform-only, clamped. */
 	var drifters = [];
-	var driftActive = typeof Set === 'function' ? new Set() : null;
-	var driftIO = null;
 	var ticking = false;
-	var driftOn = false;
-
-	function driftFrame() {
+	var wide = window.matchMedia ? window.matchMedia('(min-width: 900px)') : { matches: true };
+	function drift() {
 		ticking = false;
-		if (!driftOn) return;
 		var vh = window.innerHeight;
-		var mid = vh / 2;
-		driftActive.forEach(function (el) {
+		drifters.forEach(function (el) {
+			if (!wide.matches) { el.style.removeProperty('--hx-dy'); return; }
 			var r = el.getBoundingClientRect();
-			// measure without our own offset so the motion is stable
-			var cur = parseFloat(el.style.getPropertyValue('--hx-dy')) || 0;
-			var centre = r.top - cur + r.height / 2;
-			var f = Math.min(0.2, Math.max(0, parseFloat(el.getAttribute('data-hx-drift')) || 0.06));
-			var y = Math.max(-120, Math.min(120, (centre - mid) * -f));
-			el.style.setProperty('--hx-dy', y.toFixed(2) + 'px');
+			if (r.bottom < -100 || r.top > vh + 100) return;
+			var f = parseFloat(el.getAttribute('data-hx-drift')) || 0.05;
+			var dy = ((r.top + r.height / 2) - vh / 2) * -f;
+			dy = Math.max(-6, Math.min(6, dy));
+			el.style.setProperty('--hx-dy', dy.toFixed(2) + 'px');
 		});
 	}
-	function requestDrift() {
-		if (!ticking && driftOn) { ticking = true; window.requestAnimationFrame(driftFrame); }
-	}
-	function setDrift() {
-		var want = !!(hasIO && driftActive && !reduced && mqWide && mqWide.matches && drifters.length);
-		if (want === driftOn) return;
-		driftOn = want;
-		if (want) {
-			window.addEventListener('scroll', requestDrift, { passive: true });
-			window.addEventListener('resize', requestDrift, { passive: true });
-			requestDrift();
+	function onScroll() { if (!ticking) { ticking = true; window.requestAnimationFrame(drift); } }
+
+	function init() {
+		if (motion) {
+			io = new IntersectionObserver(function (entries) {
+				entries.forEach(function (e) {
+					if (!e.isIntersecting) return;
+					e.target.classList.add(e.target.hasAttribute('data-hx-reveal') ? 'is-in' : 'is-drawn');
+					io.unobserve(e.target);
+				});
+			}, { rootMargin: '0px 0px -6% 0px', threshold: 0.05 });
+			doc.classList.add('hx-motion');
 		} else {
-			window.removeEventListener('scroll', requestDrift);
-			window.removeEventListener('resize', requestDrift);
-			drifters.forEach(function (el) { el.style.removeProperty('--hx-dy'); });
+			doc.classList.remove('hx-motion');
 		}
-	}
-	function initDrift(root) {
-		if (!hasIO || !driftActive) return;
-		if (!driftIO) {
-			driftIO = new IntersectionObserver(function (entries) {
-				entries.forEach(function (e) {
-					if (e.isIntersecting) driftActive.add(e.target); else driftActive.delete(e.target);
-				});
-				requestDrift();
-			}, { rootMargin: '25% 0px 25% 0px' });
+		settle(document);
+		if (motion) {
+			drifters = Array.prototype.slice.call(document.querySelectorAll('[data-hx-drift]'));
+			if (drifters.length) {
+				window.addEventListener('scroll', onScroll, { passive: true });
+				window.addEventListener('resize', onScroll, { passive: true });
+				drift();
+			}
 		}
-		all(root, '[data-hx-drift]').forEach(function (el) {
-			if (drifters.indexOf(el) !== -1) return;
-			drifters.push(el);
-			driftIO.observe(el);
-		});
-		setDrift();
-	}
-
-	function onMotionPrefChange() {
-		reduced = !!(mqReduce && mqReduce.matches);
-		if (reduced) { doc.classList.remove('hx-motion'); revealAll(); }
-		setDrift();
-	}
-	function listen(mq, fn) {
-		if (!mq) return;
-		if (mq.addEventListener) mq.addEventListener('change', fn); else if (mq.addListener) mq.addListener(fn);
-	}
-
-	function refresh(root) {
-		initReveals(root || document);
-		initDrift(root || document);
-	}
-
-	function boot() {
-		if (hasIO && !reduced) {
-			revealIO = new IntersectionObserver(function (entries) {
-				entries.forEach(function (e) {
-					if (e.isIntersecting || e.boundingClientRect.top < 0) {
-						show(e.target, false);
-						revealIO.unobserve(e.target);
-					}
-				});
-			}, { rootMargin: '0px 0px -12% 0px', threshold: 0 });
-		}
-		// Mark on-screen elements visible BEFORE the gating class goes on (same task → no flash).
-		initReveals(document);
-		if (revealIO) doc.classList.add('hx-motion');
-		initDrift(document);
-		listen(mqReduce, onMotionPrefChange);
-		listen(mqWide, setDrift);
+		// Printing or a find-in-page jump must never meet an un-settled state.
 		window.addEventListener('beforeprint', revealAll);
 	}
 
-	window.hxMotion = { refresh: refresh, revealAll: revealAll };
-	try {
-		if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
-	} catch (err) {
-		// Never leave content hidden.
-		doc.classList.remove('hx-motion');
-	}
+	window.hxMotion = { refresh: settle, revealAll: revealAll };
+	if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+	else init();
 })();

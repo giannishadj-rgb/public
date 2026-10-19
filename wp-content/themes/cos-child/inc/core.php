@@ -140,11 +140,11 @@ remove_action( 'wp_enqueue_scripts', 'wp_enqueue_block_template_skip_link' );
 remove_action( 'wp_footer', 'the_block_template_skip_link' );
 
 function cos_child_skip_link(): void { ?>
-<a class="cos-skip-link screen-reader-text" href="#cos-main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;background:var(--cos-navy,#050505);color:var(--cos-pearl,#F2F2EF);padding:12px 20px;font-family:sans-serif;font-size:13px;font-weight:600;text-decoration:none">
+<a class="cos-skip-link screen-reader-text" tabindex="0" href="#cos-main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;background:var(--cos-navy,#050505);color:var(--cos-pearl,#F2F2EF);padding:12px 20px;font-family:sans-serif;font-size:15px;font-weight:600;text-decoration:none">
 Skip to main content
 </a>
 <style nonce="<?php echo esc_attr( cos_csp_nonce() ); ?>">
-.cos-skip-link:focus{left:8px;top:8px;width:auto;height:auto;overflow:visible}
+.cos-skip-link:focus{left:8px!important;top:8px!important;width:auto!important;height:auto!important;min-height:44px;box-sizing:border-box;overflow:visible!important}
 :focus-visible{outline:2px solid #2F6FED;outline-offset:2px;box-shadow:0 0 0 2px #F2F2EF}
 button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid #2F6FED;outline-offset:2px;box-shadow:0 0 0 2px #F2F2EF}
 </style>

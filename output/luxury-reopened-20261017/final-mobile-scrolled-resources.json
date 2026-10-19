@@ -1,0 +1,391 @@
+{
+  "mode": "mobile",
+  "requests": [
+    {
+      "url": "http://caviarofswitzerland.local/",
+      "type": "Document",
+      "status": 200,
+      "mime": "text/html",
+      "bytes": 22594
+    },
+    {
+      "url": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/fonts/inter-var-latin.woff2",
+      "type": "Font",
+      "status": 200,
+      "mime": "application/font-woff2",
+      "bytes": 48649
+    },
+    {
+      "url": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/fonts/cormorant-garamond-300-italic-latin.woff2",
+      "type": "Font",
+      "status": 200,
+      "mime": "application/font-woff2",
+      "bytes": 22877
+    },
+    {
+      "url": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-720.avif?v=1792134874",
+      "type": "Image",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 18721
+    },
+    {
+      "url": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/css/home-2026.css?ver=1791917431",
+      "type": "Stylesheet",
+      "status": 200,
+      "mime": "text/css",
+      "bytes": 12944
+    },
+    {
+      "url": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/css/home-2026-nocturne.css?ver=1791821435",
+      "type": "Stylesheet",
+      "status": 200,
+      "mime": "text/css",
+      "bytes": 7943
+    },
+    {
+      "url": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/css/hx/system.css?ver=1792213605",
+      "type": "Stylesheet",
+      "status": 200,
+      "mime": "text/css",
+      "bytes": 8526
+    },
+    {
+      "url": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/css/hx/hero.css?ver=1792213605",
+      "type": "Stylesheet",
+      "status": 200,
+      "mime": "text/css",
+      "bytes": 2729
+    },
+    {
+      "url": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/css/hx/collection.css?ver=1792213605",
+      "type": "Stylesheet",
+      "status": 200,
+      "mime": "text/css",
+      "bytes": 2844
+    },
+    {
+      "url": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/css/hx/caviar.css?ver=1792134881",
+      "type": "Stylesheet",
+      "status": 200,
+      "mime": "text/css",
+      "bytes": 1896
+    },
+    {
+      "url": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/css/hx/science.css?ver=1792214404",
+      "type": "Stylesheet",
+      "status": 200,
+      "mime": "text/css",
+      "bytes": 2700
+    },
+    {
+      "url": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/css/hx/provenance.css?ver=1792213789",
+      "type": "Stylesheet",
+      "status": 200,
+      "mime": "text/css",
+      "bytes": 930
+    },
+    {
+      "url": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/css/hx/ritual.css?ver=1792214460",
+      "type": "Stylesheet",
+      "status": 200,
+      "mime": "text/css",
+      "bytes": 1173
+    },
+    {
+      "url": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/css/hx/closing.css?ver=1792214460",
+      "type": "Stylesheet",
+      "status": 200,
+      "mime": "text/css",
+      "bytes": 1196
+    },
+    {
+      "url": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/css/hx/chrome.css?ver=1792213605",
+      "type": "Stylesheet",
+      "status": 200,
+      "mime": "text/css",
+      "bytes": 7941
+    },
+    {
+      "url": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/logo-222w.webp",
+      "type": "Image",
+      "status": 200,
+      "mime": "image/webp",
+      "bytes": 4129
+    },
+    {
+      "url": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/js/home-2026.js?ver=1791694767",
+      "type": "Script",
+      "status": 200,
+      "mime": "application/x-javascript",
+      "bytes": 1609
+    },
+    {
+      "url": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/js/hx-motion.js?ver=1792213789",
+      "type": "Script",
+      "status": 200,
+      "mime": "application/x-javascript",
+      "bytes": 734
+    },
+    {
+      "url": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/fonts/cormorant-garamond-var-latin.woff2",
+      "type": "Font",
+      "status": 200,
+      "mime": "application/font-woff2",
+      "bytes": 38033
+    },
+    {
+      "url": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-720.avif?v=1792134860",
+      "type": "Image",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 52269
+    },
+    {
+      "url": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-720.avif?v=1792134882",
+      "type": "Image",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 47141
+    },
+    {
+      "url": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-720.avif?v=1792134913",
+      "type": "Image",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 43921
+    },
+    {
+      "url": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-720.avif?v=1792134956",
+      "type": "Image",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 45601
+    },
+    {
+      "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "type": "Image",
+      "status": 200,
+      "mime": "image/gif",
+      "bytes": 0
+    },
+    {
+      "url": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-1280.avif?v=1792134986",
+      "type": "Image",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 53100
+    },
+    {
+      "url": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-480.avif?v=1792134877",
+      "type": "Image",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 19890
+    },
+    {
+      "url": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-480.avif?v=1792134907",
+      "type": "Image",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 20822
+    },
+    {
+      "url": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/swiss-material-study-20261017-1122.avif?v=1792214382",
+      "type": "Image",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 106728
+    },
+    {
+      "url": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/ritual-portrait-20261017-1122.avif?v=1792214445",
+      "type": "Image",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 94573
+    },
+    {
+      "url": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-480.avif?v=1792134859",
+      "type": "Image",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 24026
+    },
+    {
+      "url": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-480.avif?v=1792134877",
+      "type": "Image",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 19890
+    },
+    {
+      "url": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-480.avif?v=1792134907",
+      "type": "Image",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 20822
+    },
+    {
+      "url": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-480.avif?v=1792134949",
+      "type": "Image",
+      "status": 200,
+      "mime": "application/octet-stream",
+      "bytes": 20854
+    }
+  ],
+  "images": [
+    {
+      "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/logo-222w.webp",
+      "complete": true,
+      "naturalWidth": 119,
+      "naturalHeight": 45,
+      "alt": "Caviar of Switzerland",
+      "loading": "eager"
+    },
+    {
+      "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-720.avif?v=1792134874",
+      "complete": true,
+      "naturalWidth": 437,
+      "naturalHeight": 844,
+      "alt": "The 24h Regeneration Cream, open and filled with white cream, its polished chrome lid with the Swiss cross resting against the jar, reflected on a pale champagne silk surface",
+      "loading": "eager"
+    },
+    {
+      "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-720.avif?v=1792134860",
+      "complete": true,
+      "naturalWidth": 179,
+      "naturalHeight": 269,
+      "alt": "Micellar Water All-in-One Cleanser bottle with a polished silver cap",
+      "loading": "lazy"
+    },
+    {
+      "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-720.avif?v=1792134882",
+      "complete": true,
+      "naturalWidth": 179,
+      "naturalHeight": 269,
+      "alt": "Advanced Repair Serum bottle with polished silver caps",
+      "loading": "lazy"
+    },
+    {
+      "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-720.avif?v=1792134913",
+      "complete": true,
+      "naturalWidth": 179,
+      "naturalHeight": 269,
+      "alt": "Revitalizing Eye Cream bottle with polished silver caps",
+      "loading": "lazy"
+    },
+    {
+      "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-720.avif?v=1792134956",
+      "complete": true,
+      "naturalWidth": 179,
+      "naturalHeight": 269,
+      "alt": "24h Regeneration Cream jar with a polished silver lid",
+      "loading": "lazy"
+    },
+    {
+      "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-1280.avif?v=1792134986",
+      "complete": true,
+      "naturalWidth": 390,
+      "naturalHeight": 487,
+      "alt": "Glossy black caviar pearls heaped on a pale, reflective surface, a few rolling loose into the light",
+      "loading": "lazy"
+    },
+    {
+      "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-480.avif?v=1792134877",
+      "complete": true,
+      "naturalWidth": 112,
+      "naturalHeight": 168,
+      "alt": "",
+      "loading": "lazy"
+    },
+    {
+      "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-480.avif?v=1792134907",
+      "complete": true,
+      "naturalWidth": 112,
+      "naturalHeight": 168,
+      "alt": "",
+      "loading": "lazy"
+    },
+    {
+      "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/swiss-material-study-20261017-1122.avif?v=1792214382",
+      "complete": true,
+      "naturalWidth": 390,
+      "naturalHeight": 487,
+      "alt": "An architectural study of optical glass, clear water and pale stone in precise natural light",
+      "loading": "lazy"
+    },
+    {
+      "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/ritual-portrait-20261017-1122.avif?v=1792214445",
+      "complete": true,
+      "naturalWidth": 390,
+      "naturalHeight": 487,
+      "alt": "A woman gently pressing a little cream into her cheek, an illustrative portrait of daily care",
+      "loading": "lazy"
+    },
+    {
+      "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-480.avif?v=1792134859",
+      "complete": true,
+      "naturalWidth": 89,
+      "naturalHeight": 134,
+      "alt": "Micellar Water All-in-One Cleanser bottle with a polished silver cap",
+      "loading": "lazy"
+    },
+    {
+      "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-480.avif?v=1792134877",
+      "complete": true,
+      "naturalWidth": 89,
+      "naturalHeight": 134,
+      "alt": "Advanced Repair Serum bottle with polished silver caps",
+      "loading": "lazy"
+    },
+    {
+      "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-480.avif?v=1792134907",
+      "complete": true,
+      "naturalWidth": 89,
+      "naturalHeight": 134,
+      "alt": "Revitalizing Eye Cream bottle with polished silver caps",
+      "loading": "lazy"
+    },
+    {
+      "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-480.avif?v=1792134949",
+      "complete": true,
+      "naturalWidth": 89,
+      "naturalHeight": 134,
+      "alt": "24h Regeneration Cream jar with a polished silver lid",
+      "loading": "lazy"
+    },
+    {
+      "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/logo-222w.webp",
+      "complete": true,
+      "naturalWidth": 119,
+      "naturalHeight": 45,
+      "alt": "Caviar of Switzerland",
+      "loading": "lazy"
+    },
+    {
+      "src": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "complete": true,
+      "naturalWidth": 1,
+      "naturalHeight": 1,
+      "alt": "",
+      "loading": "auto"
+    }
+  ],
+  "shifts": [
+    {
+      "time": 2149.5999999940395,
+      "value": 0.0008625588637514189,
+      "recentInput": true
+    }
+  ],
+  "scrollWidth": 390,
+  "viewport": 390,
+  "summary": {
+    "mode": "mobile",
+    "requests": 33,
+    "bytes": 777805,
+    "failed": [],
+    "layoutShiftSum": 0,
+    "brokenImages": []
+  }
+}

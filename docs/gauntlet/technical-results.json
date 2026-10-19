@@ -1,0 +1,911 @@
+{
+  "date": "2026-10-18T05:49:07.715Z",
+  "viewports": [
+    {
+      "width": 360,
+      "scrollWidth": 360,
+      "viewport": 360,
+      "overflow": [
+        {
+          "tag": "LI",
+          "class": "hxc__item hxc__item--serum",
+          "left": 254.390625,
+          "right": 470.390625
+        },
+        {
+          "tag": "A",
+          "class": "hxc__link",
+          "left": 254.390625,
+          "right": 470.390625
+        },
+        {
+          "tag": "SPAN",
+          "class": "hxc__stage",
+          "left": 254.390625,
+          "right": 470.390625
+        },
+        {
+          "tag": "PICTURE",
+          "class": "hxc__object",
+          "left": 254.390625,
+          "right": 470.390625
+        },
+        {
+          "tag": "IMG",
+          "class": "",
+          "left": 254.390625,
+          "right": 470.390625
+        },
+        {
+          "tag": "SPAN",
+          "class": "hxc__step",
+          "left": 331.25,
+          "right": 393.53125
+        },
+        {
+          "tag": "SPAN",
+          "class": "hxc__verb",
+          "left": 359.328125,
+          "right": 393.53125
+        },
+        {
+          "tag": "H3",
+          "class": "hxc__name",
+          "left": 294.890625,
+          "right": 429.875
+        },
+        {
+          "tag": "SPAN",
+          "class": "",
+          "left": 294.890625,
+          "right": 429.875
+        },
+        {
+          "tag": "SPAN",
+          "class": "",
+          "left": 294.890625,
+          "right": 429.875
+        },
+        {
+          "tag": "SPAN",
+          "class": "hxc__benefit",
+          "left": 273.828125,
+          "right": 450.9375
+        },
+        {
+          "tag": "SPAN",
+          "class": "hxc__meta",
+          "left": 309.453125,
+          "right": 415.3125
+        },
+        {
+          "tag": "SPAN",
+          "class": "hx-sr",
+          "left": 361.875,
+          "right": 362.875
+        },
+        {
+          "tag": "SPAN",
+          "class": "hxc__dot",
+          "left": 361.296875,
+          "right": 362.296875
+        },
+        {
+          "tag": "SPAN",
+          "class": "hxc__size",
+          "left": 374.296875,
+          "right": 415.3125
+        },
+        {
+          "tag": "SPAN",
+          "class": "hxc__cta",
+          "left": 331.296875,
+          "right": 393.484375
+        },
+        {
+          "tag": "SPAN",
+          "class": "hxc__cta-label",
+          "left": 331.296875,
+          "right": 396.171875
+        },
+        {
+          "tag": "LI",
+          "class": "hxc__item hxc__item--eye",
+          "left": 484.78125,
+          "right": 700.78125
+        },
+        {
+          "tag": "A",
+          "class": "hxc__link",
+          "left": 484.78125,
+          "right": 700.78125
+        },
+        {
+          "tag": "SPAN",
+          "class": "hxc__stage",
+          "left": 484.78125,
+          "right": 700.78125
+        }
+      ],
+      "brokenImages": [],
+      "h1": [
+        "The Swiss art of\ncaviar skincare"
+      ],
+      "hero": [
+        {
+          "class": "hxh__title hx-display",
+          "rect": {
+            "x": 50.796875,
+            "y": 506.265625,
+            "width": 258.390625,
+            "height": 87.34375,
+            "top": 506.265625,
+            "right": 309.1875,
+            "bottom": 593.609375,
+            "left": 50.796875
+          },
+          "text": "The Swiss art of\ncaviar skincare"
+        },
+        {
+          "class": "hxh__lead",
+          "rect": {
+            "x": 24,
+            "y": 609.609375,
+            "width": 312,
+            "height": 74.390625,
+            "top": 609.609375,
+            "right": 336,
+            "bottom": 684,
+            "left": 24
+          },
+          "text": "Four caviar formulas, one complete ritual.\nSwiss science, made in Zug."
+        },
+        {
+          "class": "hx-btn hxh__cta",
+          "rect": {
+            "x": 56.71875,
+            "y": 708,
+            "width": 246.546875,
+            "height": 48,
+            "top": 708,
+            "right": 303.265625,
+            "bottom": 756,
+            "left": 56.71875
+          },
+          "text": "Shop the Complete Ritual"
+        }
+      ],
+      "smallTargets": [],
+      "motion": [],
+      "axe": []
+    },
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "viewport": 390,
+      "overflow": [
+        {
+          "tag": "LI",
+          "class": "hxc__item hxc__item--serum",
+          "left": 273.59375,
+          "right": 507.59375
+        },
+        {
+          "tag": "A",
+          "class": "hxc__link",
+          "left": 273.59375,
+          "right": 507.59375
+        },
+        {
+          "tag": "SPAN",
+          "class": "hxc__stage",
+          "left": 273.59375,
+          "right": 507.59375
+        },
+        {
+          "tag": "PICTURE",
+          "class": "hxc__object",
+          "left": 273.59375,
+          "right": 507.59375
+        },
+        {
+          "tag": "IMG",
+          "class": "",
+          "left": 273.59375,
+          "right": 507.59375
+        },
+        {
+          "tag": "SPAN",
+          "class": "hxc__step",
+          "left": 359.453125,
+          "right": 421.734375
+        },
+        {
+          "tag": "SPAN",
+          "class": "hxc__verb",
+          "left": 387.53125,
+          "right": 421.734375
+        },
+        {
+          "tag": "H3",
+          "class": "hxc__name",
+          "left": 321.5,
+          "right": 459.6875
+        },
+        {
+          "tag": "SPAN",
+          "class": "",
+          "left": 321.5,
+          "right": 459.6875
+        },
+        {
+          "tag": "SPAN",
+          "class": "",
+          "left": 321.5,
+          "right": 459.6875
+        },
+        {
+          "tag": "SPAN",
+          "class": "hxc__benefit",
+          "left": 302.03125,
+          "right": 479.140625
+        },
+        {
+          "tag": "SPAN",
+          "class": "hxc__meta",
+          "left": 337.65625,
+          "right": 443.515625
+        },
+        {
+          "tag": "SPAN",
+          "class": "hx-sr",
+          "left": 390.078125,
+          "right": 391.078125
+        },
+        {
+          "tag": "SPAN",
+          "class": "hxc__size",
+          "left": 402.5,
+          "right": 443.515625
+        },
+        {
+          "tag": "SPAN",
+          "class": "hxc__cta",
+          "left": 359.5,
+          "right": 421.6875
+        },
+        {
+          "tag": "SPAN",
+          "class": "hxc__cta-label",
+          "left": 359.5,
+          "right": 424.375
+        },
+        {
+          "tag": "LI",
+          "class": "hxc__item hxc__item--eye",
+          "left": 523.1875,
+          "right": 757.1875
+        },
+        {
+          "tag": "A",
+          "class": "hxc__link",
+          "left": 523.1875,
+          "right": 757.1875
+        },
+        {
+          "tag": "SPAN",
+          "class": "hxc__stage",
+          "left": 523.1875,
+          "right": 757.1875
+        },
+        {
+          "tag": "PICTURE",
+          "class": "hxc__object",
+          "left": 523.1875,
+          "right": 757.1875
+        }
+      ],
+      "brokenImages": [],
+      "h1": [
+        "The Swiss art of\ncaviar skincare"
+      ],
+      "hero": [
+        {
+          "class": "hxh__title hx-display",
+          "rect": {
+            "x": 65.796875,
+            "y": 531.0625,
+            "width": 258.390625,
+            "height": 87.34375,
+            "top": 531.0625,
+            "right": 324.1875,
+            "bottom": 618.40625,
+            "left": 65.796875
+          },
+          "text": "The Swiss art of\ncaviar skincare"
+        },
+        {
+          "class": "hxh__lead",
+          "rect": {
+            "x": 34.75,
+            "y": 634.40625,
+            "width": 320.5,
+            "height": 49.59375,
+            "top": 634.40625,
+            "right": 355.25,
+            "bottom": 684,
+            "left": 34.75
+          },
+          "text": "Four caviar formulas, one complete ritual.\nSwiss science, made in Zug."
+        },
+        {
+          "class": "hx-btn hxh__cta",
+          "rect": {
+            "x": 71.71875,
+            "y": 708,
+            "width": 246.546875,
+            "height": 48,
+            "top": 708,
+            "right": 318.265625,
+            "bottom": 756,
+            "left": 71.71875
+          },
+          "text": "Shop the Complete Ritual"
+        }
+      ],
+      "smallTargets": [],
+      "motion": [],
+      "axe": []
+    },
+    {
+      "width": 430,
+      "scrollWidth": 430,
+      "viewport": 430,
+      "overflow": [
+        {
+          "tag": "LI",
+          "class": "hxc__item hxc__item--serum",
+          "left": 299.1875,
+          "right": 557.1875
+        },
+        {
+          "tag": "A",
+          "class": "hxc__link",
+          "left": 299.1875,
+          "right": 557.1875
+        },
+        {
+          "tag": "SPAN",
+          "class": "hxc__stage",
+          "left": 299.1875,
+          "right": 557.1875
+        },
+        {
+          "tag": "PICTURE",
+          "class": "hxc__object",
+          "left": 299.1875,
+          "right": 557.1875
+        },
+        {
+          "tag": "IMG",
+          "class": "",
+          "left": 299.1875,
+          "right": 557.1875
+        },
+        {
+          "tag": "SPAN",
+          "class": "hxc__step",
+          "left": 397.046875,
+          "right": 459.328125
+        },
+        {
+          "tag": "SPAN",
+          "class": "hxc__verb",
+          "left": 425.125,
+          "right": 459.328125
+        },
+        {
+          "tag": "H3",
+          "class": "hxc__name",
+          "left": 356.9375,
+          "right": 499.421875
+        },
+        {
+          "tag": "SPAN",
+          "class": "",
+          "left": 356.9375,
+          "right": 499.421875
+        },
+        {
+          "tag": "SPAN",
+          "class": "",
+          "left": 356.9375,
+          "right": 499.421875
+        },
+        {
+          "tag": "SPAN",
+          "class": "hxc__benefit",
+          "left": 339.625,
+          "right": 516.734375
+        },
+        {
+          "tag": "SPAN",
+          "class": "hxc__meta",
+          "left": 375.25,
+          "right": 481.109375
+        },
+        {
+          "tag": "SPAN",
+          "class": "hxc__size",
+          "left": 440.09375,
+          "right": 481.109375
+        },
+        {
+          "tag": "SPAN",
+          "class": "hxc__cta",
+          "left": 397.09375,
+          "right": 459.28125
+        },
+        {
+          "tag": "SPAN",
+          "class": "hxc__cta-label",
+          "left": 397.09375,
+          "right": 461.96875
+        },
+        {
+          "tag": "LI",
+          "class": "hxc__item hxc__item--eye",
+          "left": 574.375,
+          "right": 832.375
+        },
+        {
+          "tag": "A",
+          "class": "hxc__link",
+          "left": 574.375,
+          "right": 832.375
+        },
+        {
+          "tag": "SPAN",
+          "class": "hxc__stage",
+          "left": 574.375,
+          "right": 832.375
+        },
+        {
+          "tag": "PICTURE",
+          "class": "hxc__object",
+          "left": 574.375,
+          "right": 832.375
+        },
+        {
+          "tag": "IMG",
+          "class": "",
+          "left": 574.375,
+          "right": 832.375
+        }
+      ],
+      "brokenImages": [],
+      "h1": [
+        "The Swiss art of\ncaviar skincare"
+      ],
+      "hero": [
+        {
+          "class": "hxh__title hx-display",
+          "rect": {
+            "x": 73.5,
+            "y": 522.75,
+            "width": 283,
+            "height": 95.65625,
+            "top": 522.75,
+            "right": 356.5,
+            "bottom": 618.40625,
+            "left": 73.5
+          },
+          "text": "The Swiss art of\ncaviar skincare"
+        },
+        {
+          "class": "hxh__lead",
+          "rect": {
+            "x": 54.75,
+            "y": 634.40625,
+            "width": 320.5,
+            "height": 49.59375,
+            "top": 634.40625,
+            "right": 375.25,
+            "bottom": 684,
+            "left": 54.75
+          },
+          "text": "Four caviar formulas, one complete ritual.\nSwiss science, made in Zug."
+        },
+        {
+          "class": "hx-btn hxh__cta",
+          "rect": {
+            "x": 91.71875,
+            "y": 708,
+            "width": 246.546875,
+            "height": 48,
+            "top": 708,
+            "right": 338.265625,
+            "bottom": 756,
+            "left": 91.71875
+          },
+          "text": "Shop the Complete Ritual"
+        }
+      ],
+      "smallTargets": [],
+      "motion": [],
+      "axe": []
+    },
+    {
+      "width": 768,
+      "scrollWidth": 768,
+      "viewport": 768,
+      "overflow": [],
+      "brokenImages": [],
+      "h1": [
+        "The Swiss art of\ncaviar skincare"
+      ],
+      "hero": [
+        {
+          "class": "hxh__title hx-display",
+          "rect": {
+            "x": 224.046875,
+            "y": 616.25,
+            "width": 319.90625,
+            "height": 108.15625,
+            "top": 616.25,
+            "right": 543.953125,
+            "bottom": 724.40625,
+            "left": 224.046875
+          },
+          "text": "The Swiss art of\ncaviar skincare"
+        },
+        {
+          "class": "hxh__lead",
+          "rect": {
+            "x": 223.75,
+            "y": 740.40625,
+            "width": 320.5,
+            "height": 49.59375,
+            "top": 740.40625,
+            "right": 544.25,
+            "bottom": 790,
+            "left": 223.75
+          },
+          "text": "Four caviar formulas, one complete ritual.\nSwiss science, made in Zug."
+        },
+        {
+          "class": "hx-btn hxh__cta",
+          "rect": {
+            "x": 260.71875,
+            "y": 814,
+            "width": 246.546875,
+            "height": 48,
+            "top": 814,
+            "right": 507.265625,
+            "bottom": 862,
+            "left": 260.71875
+          },
+          "text": "Shop the Complete Ritual"
+        }
+      ],
+      "smallTargets": [],
+      "motion": [],
+      "axe": []
+    },
+    {
+      "width": 1024,
+      "scrollWidth": 1024,
+      "viewport": 1024,
+      "overflow": [],
+      "brokenImages": [],
+      "h1": [
+        "The Swiss art of\ncaviar skincare"
+      ],
+      "hero": [
+        {
+          "class": "hxh__title hx-display",
+          "rect": {
+            "x": 53.234375,
+            "y": 315.828125,
+            "width": 319.90625,
+            "height": 108.15625,
+            "top": 315.828125,
+            "right": 373.140625,
+            "bottom": 423.984375,
+            "left": 53.234375
+          },
+          "text": "The Swiss art of\ncaviar skincare"
+        },
+        {
+          "class": "hxh__lead",
+          "rect": {
+            "x": 53.234375,
+            "y": 445.984375,
+            "width": 315.796875,
+            "height": 51.1875,
+            "top": 445.984375,
+            "right": 369.03125,
+            "bottom": 497.171875,
+            "left": 53.234375
+          },
+          "text": "Four caviar formulas, one complete ritual.\nSwiss science, made in Zug."
+        },
+        {
+          "class": "hx-btn hxh__cta",
+          "rect": {
+            "x": 53.234375,
+            "y": 537.171875,
+            "width": 246.546875,
+            "height": 48,
+            "top": 537.171875,
+            "right": 299.78125,
+            "bottom": 585.171875,
+            "left": 53.234375
+          },
+          "text": "Shop the Complete Ritual"
+        }
+      ],
+      "smallTargets": [],
+      "motion": [],
+      "axe": []
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1440,
+      "viewport": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "h1": [
+        "The Swiss art of\ncaviar skincare"
+      ],
+      "hero": [
+        {
+          "class": "hxh__title hx-display",
+          "rect": {
+            "x": 74.875,
+            "y": 317.515625,
+            "width": 369.125,
+            "height": 124.78125,
+            "top": 317.515625,
+            "right": 444,
+            "bottom": 442.296875,
+            "left": 74.875
+          },
+          "text": "The Swiss art of\ncaviar skincare"
+        },
+        {
+          "class": "hxh__lead",
+          "rect": {
+            "x": 74.875,
+            "y": 464.296875,
+            "width": 315.796875,
+            "height": 51.1875,
+            "top": 464.296875,
+            "right": 390.671875,
+            "bottom": 515.484375,
+            "left": 74.875
+          },
+          "text": "Four caviar formulas, one complete ritual.\nSwiss science, made in Zug."
+        },
+        {
+          "class": "hx-btn hxh__cta",
+          "rect": {
+            "x": 74.875,
+            "y": 555.484375,
+            "width": 246.546875,
+            "height": 48,
+            "top": 555.484375,
+            "right": 321.421875,
+            "bottom": 603.484375,
+            "left": 74.875
+          },
+          "text": "Shop the Complete Ritual"
+        }
+      ],
+      "smallTargets": [],
+      "motion": [],
+      "axe": []
+    },
+    {
+      "width": 1920,
+      "scrollWidth": 1920,
+      "viewport": 1920,
+      "overflow": [],
+      "brokenImages": [],
+      "h1": [
+        "The Swiss art of\ncaviar skincare"
+      ],
+      "hero": [
+        {
+          "class": "hxh__title hx-display",
+          "rect": {
+            "x": 240,
+            "y": 309.1875,
+            "width": 418.34375,
+            "height": 141.4375,
+            "top": 309.1875,
+            "right": 658.34375,
+            "bottom": 450.625,
+            "left": 240
+          },
+          "text": "The Swiss art of\ncaviar skincare"
+        },
+        {
+          "class": "hxh__lead",
+          "rect": {
+            "x": 240,
+            "y": 472.625,
+            "width": 315.796875,
+            "height": 51.1875,
+            "top": 472.625,
+            "right": 555.796875,
+            "bottom": 523.8125,
+            "left": 240
+          },
+          "text": "Four caviar formulas, one complete ritual.\nSwiss science, made in Zug."
+        },
+        {
+          "class": "hx-btn hxh__cta",
+          "rect": {
+            "x": 240,
+            "y": 563.8125,
+            "width": 246.546875,
+            "height": 48,
+            "top": 563.8125,
+            "right": 486.546875,
+            "bottom": 611.8125,
+            "left": 240
+          },
+          "text": "Shop the Complete Ritual"
+        }
+      ],
+      "smallTargets": [],
+      "motion": [],
+      "axe": []
+    }
+  ],
+  "errors": [],
+  "networkFailures": [],
+  "navigation": {
+    "afterOpen": {
+      "buttons": [
+        {
+          "text": "",
+          "aria": "Close navigation menu",
+          "expanded": "true"
+        },
+        {
+          "text": "",
+          "aria": "Previous formula",
+          "expanded": null
+        },
+        {
+          "text": "",
+          "aria": "Next formula",
+          "expanded": null
+        },
+        {
+          "text": "JOIN\nTHE CAVIAR CIRCLE",
+          "aria": null,
+          "expanded": null
+        },
+        {
+          "text": "",
+          "aria": "Close",
+          "expanded": null
+        }
+      ],
+      "bodyOverflow": "hidden",
+      "active": "<button type=\"button\" class=\"cos-mob-btn\" id=\"cos-mob-btn\" aria-label=\"Close navigation menu\" aria-expanded=\"true\" aria-controls=\"cos-mob-menu\">\n      <span id=\"cos-h1\" style=\"transform: translateY(4.5px) rotate(45deg);\"></span><span id=\"cos-h2\" style=\"opacity: 0;\"></span><span id=\"cos-h3\" style=\"transform: translateY(-4.5px) rotate(-45deg);\"></span>\n    </button>"
+    },
+    "afterEscape": "false"
+  },
+  "links": [
+    {
+      "text": "Shop the Complete Ritual",
+      "href": "http://caviarofswitzerland.local/products/the-complete-ritual/"
+    },
+    {
+      "text": "Explore the four formulas",
+      "href": "http://caviarofswitzerland.local/#collection"
+    },
+    {
+      "text": "01\nCleanse\nMicellar Water\nAll‑in‑One Cleanser\nRemoves make‑up & replenishes lipids\n€55\n,\n150 ml\nDiscover",
+      "href": "http://caviarofswitzerland.local/products/micellar-water-cleanser/"
+    },
+    {
+      "text": "02\nTreat\nAdvanced Repair\nSerum\nVisibly firms & smooths\n€150\n,\n30 ml\nDiscover",
+      "href": "http://caviarofswitzerland.local/products/advanced-repair-serum/"
+    },
+    {
+      "text": "03\nRevive\nRevitalizing\nEye Cream\nSoftens the look of dark circles & fine lines\n€145\n,\n15 ml\nDiscover",
+      "href": "http://caviarofswitzerland.local/products/revitalizing-eye-cream/"
+    },
+    {
+      "text": "04\nRestore\n24h Regeneration\nCream\nLasting hydration & barrier support\n€150\n,\n50 ml\nDiscover",
+      "href": "http://caviarofswitzerland.local/products/24h-regeneration-cream/"
+    },
+    {
+      "text": "Why caviar",
+      "href": "http://caviarofswitzerland.local/science/why-caviar/"
+    },
+    {
+      "text": "Read the studies",
+      "href": "http://caviarofswitzerland.local/science/clinical-studies/"
+    },
+    {
+      "text": "Discover our craftsmanship",
+      "href": "http://caviarofswitzerland.local/heritage/craftsmanship/"
+    },
+    {
+      "text": "The ritual, step by step",
+      "href": "http://caviarofswitzerland.local/the-ritual/"
+    },
+    {
+      "text": "Cleanse\n: Micellar Water All-in-One Cleanser, 150 ml",
+      "href": "http://caviarofswitzerland.local/products/micellar-water-cleanser/"
+    },
+    {
+      "text": "Treat\n: Advanced Repair Serum, 30 ml",
+      "href": "http://caviarofswitzerland.local/products/advanced-repair-serum/"
+    },
+    {
+      "text": "Revive\n: Revitalizing Eye Cream, 15 ml",
+      "href": "http://caviarofswitzerland.local/products/revitalizing-eye-cream/"
+    },
+    {
+      "text": "Restore\n: 24h Regeneration Cream, 50 ml",
+      "href": "http://caviarofswitzerland.local/products/24h-regeneration-cream/"
+    },
+    {
+      "text": "Discover the Complete Ritual",
+      "href": "http://caviarofswitzerland.local/products/the-complete-ritual/"
+    }
+  ],
+  "routes": [
+    {
+      "href": "http://caviarofswitzerland.local/products/the-complete-ritual/",
+      "status": 200
+    },
+    {
+      "href": "http://caviarofswitzerland.local/#collection",
+      "status": 200
+    },
+    {
+      "href": "http://caviarofswitzerland.local/products/micellar-water-cleanser/",
+      "status": 200
+    },
+    {
+      "href": "http://caviarofswitzerland.local/products/advanced-repair-serum/",
+      "status": 200
+    },
+    {
+      "href": "http://caviarofswitzerland.local/products/revitalizing-eye-cream/",
+      "status": 200
+    },
+    {
+      "href": "http://caviarofswitzerland.local/products/24h-regeneration-cream/",
+      "status": 200
+    },
+    {
+      "href": "http://caviarofswitzerland.local/science/why-caviar/",
+      "status": 200
+    },
+    {
+      "href": "http://caviarofswitzerland.local/science/clinical-studies/",
+      "status": 200
+    },
+    {
+      "href": "http://caviarofswitzerland.local/heritage/craftsmanship/",
+      "status": 200
+    },
+    {
+      "href": "http://caviarofswitzerland.local/the-ritual/",
+      "status": 200
+    }
+  ],
+  "firstFocus": {
+    "text": "Skip to main content",
+    "html": "<a class=\"cos-skip-link screen-reader-text\" tabindex=\"0\" href=\"#cos-main-content\" style=\"position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;background:var(--cos-navy,#050505);color:var(--cos-pearl,#F2F2EF);padding:12px 20px;font-family:sans-serif;font-size:15px;font-weight:600;text-decoration:none\">\nSkip to main content\n</a>"
+  }
+}

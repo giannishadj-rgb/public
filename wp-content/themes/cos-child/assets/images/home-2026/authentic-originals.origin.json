@@ -1,0 +1,432 @@
+{
+  "date": "2026-10-18",
+  "scope": "Homepage source-direct replacements after failed flat-master fidelity audit",
+  "operations": [
+    "Crop surrounding photographic margin only; all package pixels retained",
+    "Proportional Lanczos downscale from original JPG/PPT media, pad on white for common stage baseline",
+    "AVIF/WebP/JPEG encoding only; no generative editing, relabeling, mirroring, perspective change, backdrop normalization or package recoloring"
+  ],
+  "sources": {
+    "cleanser": {
+      "path": "design-sources\\home-2026\\packshots-2026-10-12\\cleanser.jpg",
+      "sha256": "e77f110cf79531a14ff12616420632b1039829f10ce682d4ae53769b5c0d8c5e",
+      "top_foot": [
+        1136,
+        5750
+      ],
+      "relative_pack_height": 932
+    },
+    "serum": {
+      "path": "design-sources\\home-2026\\packshots-2026-10-12\\serum.jpg",
+      "sha256": "d99744d5cc4289455dd97881230e57b44b371d55199513b5e626d18dc0509e95",
+      "top_foot": [
+        202,
+        4230
+      ],
+      "relative_pack_height": 782
+    },
+    "eye": {
+      "path": "design-sources\\home-2026\\packshots-2026-10-12\\eye.jpg",
+      "sha256": "1cba460fe366520e5e30e9ead3c77f60d9d1b1ebdd8bd482688f1754f352f3f8",
+      "top_foot": [
+        141,
+        3708
+      ],
+      "relative_pack_height": 690
+    },
+    "cream": {
+      "path": "design-sources\\home-2026\\packshots-2026-10-12\\cream.jpg",
+      "sha256": "bc685b4feb329813f87959b97f2d1d0e4fd5a5c6e179965435e54d8ec364cd2f",
+      "top_foot": [
+        328,
+        2150
+      ],
+      "relative_pack_height": 354
+    },
+    "auth-ritual-spoon": {
+      "path": "design-sources\\home-2026\\gauntlet-supplied-20261018\\brand-ppt-image54.png",
+      "sha256": "62fa5375ae1890661db0522c40c47c6296b32fbc5eed532c4cb10d972870d2b6"
+    },
+    "auth-care-on-ice": {
+      "path": "design-sources\\home-2026\\gauntlet-supplied-20261018\\brand-ppt-image5.jpeg",
+      "sha256": "39765868311267b3d93ef74c997a9075bade49d6b8df7217c6d07aaecea8c350"
+    }
+  },
+  "outputs": [
+    {
+      "file": "auth-pack-cleanser-320.avif",
+      "sha256": "0bd1744518a79ccf2b6720f693890ddb4f954ad0faed5b4f5fc090f4af2810c4",
+      "bytes": 3216
+    },
+    {
+      "file": "auth-pack-cleanser-320.webp",
+      "sha256": "e6d20870f663020a74254f0c6e72c834b7126754bbbca6201e7441d758a7741a",
+      "bytes": 5300
+    },
+    {
+      "file": "auth-pack-cleanser-320.jpg",
+      "sha256": "a15f065f6fba2971201553d9a7ec47c30bbb7c765edaf0424c0417663e8d3704",
+      "bytes": 567438
+    },
+    {
+      "file": "auth-pack-cleanser-480.avif",
+      "sha256": "6a204510a1f25ff4583591726594ae60b67e103805714babbb13963be660fe59",
+      "bytes": 4379
+    },
+    {
+      "file": "auth-pack-cleanser-480.webp",
+      "sha256": "85ff2b2c11fa33135ad0f5b0f2eb2799cf19780add2be93763db62d152abf9bc",
+      "bytes": 8812
+    },
+    {
+      "file": "auth-pack-cleanser-480.jpg",
+      "sha256": "7018c337fda0d2fd134165d7b05e229770e4050b9ae1c2e86ebe54fb24c85512",
+      "bytes": 575186
+    },
+    {
+      "file": "auth-pack-cleanser-640.avif",
+      "sha256": "34f10e8badf3c39a370101576208a58234c10e5d1853fcf98ad8b23da0b793f0",
+      "bytes": 6202
+    },
+    {
+      "file": "auth-pack-cleanser-640.webp",
+      "sha256": "20566dfc937303a2c747be5f91ae0f68bdad8b4235a1fa8766a6265b3f23c0ae",
+      "bytes": 13348
+    },
+    {
+      "file": "auth-pack-cleanser-640.jpg",
+      "sha256": "80639c01dfe65dce5586ce87ddbaee6defbdfb39ad9c18c3339725d3e888cb95",
+      "bytes": 585570
+    },
+    {
+      "file": "auth-pack-cleanser-960.avif",
+      "sha256": "6f8e2088206e3898bd09133a37f33ab95e2146d51cb1a3dd497eb688af358432",
+      "bytes": 9265
+    },
+    {
+      "file": "auth-pack-cleanser-960.webp",
+      "sha256": "9b79f3233fc68a31ef242ca14f2b8dd0ab58b2e70b055dad4f8b72855a529f35",
+      "bytes": 21894
+    },
+    {
+      "file": "auth-pack-cleanser-960.jpg",
+      "sha256": "90168d745f50df957a62bdf0401e89d7260d6be9c82801f23ee8a15f44170025",
+      "bytes": 609190
+    },
+    {
+      "file": "auth-pack-serum-320.avif",
+      "sha256": "3b5659b1edbd2a433269a3dc4c1d0c541b132072494d983eb6ec96d41e693d28",
+      "bytes": 3597
+    },
+    {
+      "file": "auth-pack-serum-320.webp",
+      "sha256": "6208e00977a2712bde9760016703f03f4a69a37581bdc95c2a70b7fb68e0d74e",
+      "bytes": 6260
+    },
+    {
+      "file": "auth-pack-serum-320.jpg",
+      "sha256": "937cb4bea3dc3e9533da2dc250db8cdd891eb9859ceae4bb9a9faee2a6489712",
+      "bytes": 569452
+    },
+    {
+      "file": "auth-pack-serum-480.avif",
+      "sha256": "6d542b1aa654c922a3aed5946f6e4421d58651f0644e08ca2f99480e74c3b9e9",
+      "bytes": 5771
+    },
+    {
+      "file": "auth-pack-serum-480.webp",
+      "sha256": "61fd56b6f1c1cd9532710c3648ddc9f9fa0113b52a5f7a7a6436d37976a5f92e",
+      "bytes": 10346
+    },
+    {
+      "file": "auth-pack-serum-480.jpg",
+      "sha256": "288f103c26ecaa6d2d4af3a5d1ee7de3013b30bd6edbbc7ae208b0764bb4005f",
+      "bytes": 579782
+    },
+    {
+      "file": "auth-pack-serum-640.avif",
+      "sha256": "1526d659740e252894ae5791467fd76445efff27780e0c90b4c989fc77166f77",
+      "bytes": 8114
+    },
+    {
+      "file": "auth-pack-serum-640.webp",
+      "sha256": "83ec367fe54b9fdf0388d21cec903945e3fb8b74fdf9fa46a3bf92ce596acbc6",
+      "bytes": 16128
+    },
+    {
+      "file": "auth-pack-serum-640.jpg",
+      "sha256": "82c9290cd7bd632514b8e8b0b2b3593328ee48f006545b3ae128c634cec9ab66",
+      "bytes": 590610
+    },
+    {
+      "file": "auth-pack-serum-960.avif",
+      "sha256": "d8c4cf65e40a9b6c1aa46f1df858c881b8c080fb9543ae3df52c4676f81af0c7",
+      "bytes": 12493
+    },
+    {
+      "file": "auth-pack-serum-960.webp",
+      "sha256": "a35c5e9ea97f5aa89a3862748b833a45efedcfda6563ebede2b8d43910059b14",
+      "bytes": 29214
+    },
+    {
+      "file": "auth-pack-serum-960.jpg",
+      "sha256": "ad95d2b5456c5797067ef7f2f785545930f26b8b224d2d98f636b35ff4e55201",
+      "bytes": 619454
+    },
+    {
+      "file": "auth-pack-eye-320.avif",
+      "sha256": "e05c8e53c631162433b4b9ee6f40975e3893474d7df9f871b5b2415af93cc5ed",
+      "bytes": 3108
+    },
+    {
+      "file": "auth-pack-eye-320.webp",
+      "sha256": "6a5a12e1a1f737e04d0e1a30233f1602b106f7691ebf1e38cfaf6508875b3c89",
+      "bytes": 5002
+    },
+    {
+      "file": "auth-pack-eye-320.jpg",
+      "sha256": "4cf38af8d5924071d7d3568bac9118bc8ab961b3d12a96f21d11ca5d418b3f0d",
+      "bytes": 567600
+    },
+    {
+      "file": "auth-pack-eye-480.avif",
+      "sha256": "1606deb060654c31fb639023547ae3d5f868f217b3d246e5681a814e334e501c",
+      "bytes": 4765
+    },
+    {
+      "file": "auth-pack-eye-480.webp",
+      "sha256": "8ee83414e99f4fa5f31e32c7e1d9d0acde652cb236e37ceef082ad7c0aca375d",
+      "bytes": 8884
+    },
+    {
+      "file": "auth-pack-eye-480.jpg",
+      "sha256": "c618808e5cfb6f31e77fb1a692b906f89a2e725727b8bf94340e991e53bd8281",
+      "bytes": 575953
+    },
+    {
+      "file": "auth-pack-eye-640.avif",
+      "sha256": "ac0237ed0f252c1394f2d557759565c4fe609b636f19164edbc728dafd196ca5",
+      "bytes": 6712
+    },
+    {
+      "file": "auth-pack-eye-640.webp",
+      "sha256": "fca39d6ab0819d4c36e0f1131a5adbaab77421d986f2e4580ba60c0311f2a21a",
+      "bytes": 13490
+    },
+    {
+      "file": "auth-pack-eye-640.jpg",
+      "sha256": "3b79e0017394ebf6d9842552552eb05bf5df89216bb8ff0e0d3cbd90f01e1cfa",
+      "bytes": 586578
+    },
+    {
+      "file": "auth-pack-eye-960.avif",
+      "sha256": "4010706cd21e424e5f11a3dbcbac561e32ad9ec00d6bd621b8fe62af57d67bd5",
+      "bytes": 10534
+    },
+    {
+      "file": "auth-pack-eye-960.webp",
+      "sha256": "7a6e8a5cdfab5ad2d658f46b26c915e56e0cbe0c2ed1f9a7d4b3716e855c4e35",
+      "bytes": 24182
+    },
+    {
+      "file": "auth-pack-eye-960.jpg",
+      "sha256": "93e8e516b7954e5506df70d1f56ffe321674fdc22d6f402f05f08b7891f7c037",
+      "bytes": 611166
+    },
+    {
+      "file": "auth-pack-cream-320.avif",
+      "sha256": "98c586e4baa79da1e0f80acc1b20fccc5280a6d2d2cbc058803809eb913873b1",
+      "bytes": 3237
+    },
+    {
+      "file": "auth-pack-cream-320.webp",
+      "sha256": "75ecf3988d9efb452ea2c0ed202ab1cd6a7c169e74d181ff48e0d46499dfc328",
+      "bytes": 5018
+    },
+    {
+      "file": "auth-pack-cream-320.jpg",
+      "sha256": "98753dc70fada6b1626fd7e1388cad415181f4614fefd5d97dd9eaf017a2de34",
+      "bytes": 9869
+    },
+    {
+      "file": "auth-pack-cream-480.avif",
+      "sha256": "5b1dbeffef003b5e6090f9767a62310b812ef36886b8e74d7f795b801a886f22",
+      "bytes": 5072
+    },
+    {
+      "file": "auth-pack-cream-480.webp",
+      "sha256": "b7572f864e932bdb9df2d7c887b3e34b1df4f9d469f709c5bdb16fe787e3ebe6",
+      "bytes": 8738
+    },
+    {
+      "file": "auth-pack-cream-480.jpg",
+      "sha256": "f7ae018f4facb8bc7fe6cd6a4df9f71bfa40b370b58e477dfdc4ef847bfc8daf",
+      "bytes": 17747
+    },
+    {
+      "file": "auth-pack-cream-640.avif",
+      "sha256": "355b4ee8971e98c2c6d7c960bf543c731442480db12ce4279863fec861eefa56",
+      "bytes": 6820
+    },
+    {
+      "file": "auth-pack-cream-640.webp",
+      "sha256": "ea8ab8d4ffaeac332fed6a23cdd66462dcbc6db73f4321489d8a56a1919144a4",
+      "bytes": 13248
+    },
+    {
+      "file": "auth-pack-cream-640.jpg",
+      "sha256": "c0659100a7eb485ac599879ca03215fd9ea16684d3e9c7d5e5cb4067f785a3e9",
+      "bytes": 28091
+    },
+    {
+      "file": "auth-pack-cream-960.avif",
+      "sha256": "3045de9dba18b30bc64853e1984e81c4d4ad4c4a9048f66985b47fb7061b5bb4",
+      "bytes": 10663
+    },
+    {
+      "file": "auth-pack-cream-960.webp",
+      "sha256": "b06bc929a890d11b3088cf2ddff68467f65b5110dcaf7cbc217d75a8e529e084",
+      "bytes": 24658
+    },
+    {
+      "file": "auth-pack-cream-960.jpg",
+      "sha256": "9718407a44f689dcd204b26b88f1fa0bda9e7e134c64af4e18edd4f0c2d25f01",
+      "bytes": 53085
+    },
+    {
+      "file": "auth-ritual-spoon-320.avif",
+      "sha256": "642817a2af0385e4ba3d17c18e3a6735471775e25404c812fb9e5612100b640b",
+      "bytes": 6968
+    },
+    {
+      "file": "auth-ritual-spoon-320.webp",
+      "sha256": "0e53a2e6b0b36e0fded31be9d7bf80012b6b061f78a35eeef25659b485b2ee93",
+      "bytes": 7402
+    },
+    {
+      "file": "auth-ritual-spoon-320.jpg",
+      "sha256": "d6b0b1d2e3da9581d970893ed38764812b89febd9b4379455a81c78d052215d2",
+      "bytes": 11709
+    },
+    {
+      "file": "auth-ritual-spoon-480.avif",
+      "sha256": "5ee239176e585402be44462ff789ff685196839eec2422fae3c021381d37e83c",
+      "bytes": 11483
+    },
+    {
+      "file": "auth-ritual-spoon-480.webp",
+      "sha256": "cfdf5191b592f0dbb48af0884c7976b035c728e06eaae233c2d29882ce9a96df",
+      "bytes": 12516
+    },
+    {
+      "file": "auth-ritual-spoon-480.jpg",
+      "sha256": "8c5ebb652c6a106d13a016754af240288bc0cf464f60287aa5462bdb77d01dc1",
+      "bytes": 21099
+    },
+    {
+      "file": "auth-ritual-spoon-640.avif",
+      "sha256": "699871f7c8dbf2cec2fab779ebdbdf75e72ba88a30bf1ad5cfa657376fab922a",
+      "bytes": 17626
+    },
+    {
+      "file": "auth-ritual-spoon-640.webp",
+      "sha256": "684f8c1f7ae7fccb29acf8962429d0c155b5ce813751569e0444b0b67f6ce4ae",
+      "bytes": 19014
+    },
+    {
+      "file": "auth-ritual-spoon-640.jpg",
+      "sha256": "8336c85092f74f3eed0ea3e7d06dd36a775dba65735b7c81d872e4f067118bab",
+      "bytes": 33007
+    },
+    {
+      "file": "auth-ritual-spoon-817.avif",
+      "sha256": "878723514969cae7dbb2924afcdfe94b00720c56c1037744baacf8d1d207f02a",
+      "bytes": 23558
+    },
+    {
+      "file": "auth-ritual-spoon-817.webp",
+      "sha256": "7851f131c4bf03d13888df246fbf7ab78d738122723adfe5eccf30ca42e3a833",
+      "bytes": 27538
+    },
+    {
+      "file": "auth-ritual-spoon-817.jpg",
+      "sha256": "c791dc5f1eb958326e0e04bf5b4f7e7a1c41dcaff347aa8c7ce2f78062ec9b52",
+      "bytes": 47530
+    },
+    {
+      "file": "auth-care-on-ice-540.avif",
+      "sha256": "87ba33bb11172b77b037ce3f0bbe00afe5b4399c7c48f54100b3e73092ed62b7",
+      "bytes": 62933
+    },
+    {
+      "file": "auth-care-on-ice-540.webp",
+      "sha256": "791179a62008e15937282fef00554ac93e4aac58861b1e460efe4596d2086791",
+      "bytes": 111918
+    },
+    {
+      "file": "auth-care-on-ice-540.jpg",
+      "sha256": "79ccbf34bdfc962750e1c7ec314ec085d34ecb85a136d9b081b5e525fd871f3e",
+      "bytes": 110140
+    },
+    {
+      "file": "auth-care-on-ice-800.avif",
+      "sha256": "968ddbffd48cc304f3420f040af32743c93cce602a6938309602c6a4edc34876",
+      "bytes": 113658
+    },
+    {
+      "file": "auth-care-on-ice-800.webp",
+      "sha256": "c5418caea6b10640d8170fe8c0196cc426b65c67a6d05f09a56fb25b2ffdeebc",
+      "bytes": 214846
+    },
+    {
+      "file": "auth-care-on-ice-800.jpg",
+      "sha256": "c741296e8f0bfd2ae41752eb0a7f1bad1539a321790376c1a415d9cd0ff141a9",
+      "bytes": 210769
+    },
+    {
+      "file": "auth-care-on-ice-1200.avif",
+      "sha256": "b8d98838ce2842884713ff94aeb93419edde4effe36cc7c9b1227a6d2983ae83",
+      "bytes": 199716
+    },
+    {
+      "file": "auth-care-on-ice-1200.webp",
+      "sha256": "62fcca32eef91e1ce97e7923fef5b91b643d70aff5a2ac69bb665bf5414867b9",
+      "bytes": 409660
+    },
+    {
+      "file": "auth-care-on-ice-1200.jpg",
+      "sha256": "6db2777dd720bea28e192b3e82c38eeddb259d1dec2cb650eff1aa0a95773b73",
+      "bytes": 397798
+    },
+    {
+      "file": "auth-care-on-ice-1600.avif",
+      "sha256": "b23202a864391e96daea2365c56ed736666821c3213c2a553c808372d44b06fe",
+      "bytes": 291873
+    },
+    {
+      "file": "auth-care-on-ice-1600.webp",
+      "sha256": "c4fd2f65485e1cc32b4e36dae4d388bc04055b132e5966dc610438bba699b22b",
+      "bytes": 638806
+    },
+    {
+      "file": "auth-care-on-ice-1600.jpg",
+      "sha256": "1932c5035a10be688734e46348268bd2b64ecceabc0a42cbbebb275e2afe3b3a",
+      "bytes": 616202
+    },
+    {
+      "file": "auth-care-on-ice-1853.avif",
+      "sha256": "d5be00d9c6c8772dfbf48b19bc826e11ab97f648fadd1a14c0f1151b44a8f62d",
+      "bytes": 386300
+    },
+    {
+      "file": "auth-care-on-ice-1853.webp",
+      "sha256": "5170d9b0a469067460210f536c2f4d9312f9344270348cad46c5191d7c51811b",
+      "bytes": 771162
+    },
+    {
+      "file": "auth-care-on-ice-1853.jpg",
+      "sha256": "a34db28436df80abc86b659911cf9ffe63538b0e9531df7b88f211ac96e08003",
+      "bytes": 863954
+    }
+  ]
+}

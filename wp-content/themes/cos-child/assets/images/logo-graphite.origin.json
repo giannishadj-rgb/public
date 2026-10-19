@@ -1,0 +1,12 @@
+{
+  "source": "C:\\Users\\giann\\Dropbox\\COS - Annoushka\\Logo\\Logo_CaviarOfSwitzerland.ai",
+  "method": "Vector paths extracted verbatim with PyMuPDF; viewBox cropped to artwork bounds; lettering fill #BCBEC0 -> #2a2b2d (no official dark version exists); Swiss square #E1393E and white cross unchanged.",
+  "bounds_pt": [
+    133.589,
+    98.134,
+    461.97,
+    200.994
+  ],
+  "script": "design-sources/home-2026/build_logo_graphite.py",
+  "date": "2026-10-17"
+}

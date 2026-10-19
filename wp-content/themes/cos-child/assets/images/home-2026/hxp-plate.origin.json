@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-17",
+  "prefix": "hxp-plate",
+  "source": "../design-sources/home-2026/swiss-material-study-20261017-master.png",
+  "source_origin": "swiss-material-study-20261017.origin.json (illustrative AI art direction; no product, packaging, people or facility)",
+  "kind": "Illustrative campaign art; no packaging or product marks",
+  "build": "design-sources/home-2026/build_hxp_provenance.py",
+  "operation": "Global tone grade (saturation 0.86, contrast 0.94, shadow lift 20, warm-ivory channel bias); Lanczos downscale. No retouching or compositing.",
+  "derivatives": {
+    "widths": [
+      640,
+      960,
+      1122
+    ],
+    "formats": [
+      "avif",
+      "webp",
+      "jpg"
+    ]
+  }
+}

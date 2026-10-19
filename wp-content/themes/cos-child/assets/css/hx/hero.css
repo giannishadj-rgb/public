@@ -1,18 +1,20 @@
 /* ==========================================================================
    hx/hero.css — 01 Hero (14 Oct 2026 rebuild). Prefix hxh-. Owner: hero agent.
-   Markup: template-parts/home-2026/hero.php. Images: build_hxh_hero.py.
+   Markup: template-parts/home-2026/hero.php. Images: wc-hero-* (build_wc_hero.py, 19 Oct:
+   the owner's jar + lid photograph, pixel-identical, in a built ivory studio set; replaces
+   the champagne-silk hxh-* set).
 
    Art direction: one object, one light. The 24h Regeneration Cream sits right of
-   centre in a wide champagne field (landscape) or centred under the headline
-   (portrait), never cropped, never crowded. Type is graphite on the photograph's
-   own light silk; one headline, one line, one action.
+   centre in a wide ivory field (landscape) or centred under the headline
+   (portrait), never cropped, never crowded. Type is graphite on the set's own
+   light; one headline, one line, one action.
 
    Header: transparent over the hero at the top of the page on every size (handled
    in the shared header code); the copy is inset by the nav height.
    ========================================================================== */
 
 /* the legacy hook class carries old section styles — neutralise them */
-body.cos-h26 .hxh.h26-hero--pearl{background:#E7DED6}
+body.cos-h26 .hxh.h26-hero--pearl{background:#E7E4DF}
 
 .hxh{
 	--hxh-nav:var(--cos-nav-h,80px);
@@ -23,7 +25,7 @@ body.cos-h26 .hxh.h26-hero--pearl{background:#E7DED6}
 	display:flex;
 	min-height:max(560px,100svh);
 	overflow:clip;
-	background:#E7DED6; /* mean tone of the photograph: no flash before it paints */
+	background:#E7E4DF; /* mean tone of the ivory set: no flash before it paints */
 	color:var(--hx-text);
 }
 
@@ -53,50 +55,48 @@ body.cos-h26 .hxh.h26-hero--pearl{background:#E7DED6}
 }
 .hxh__line{display:block}
 .hxh__title em{font-style:italic;font-weight:300}
+/* Cadence: headline, then one supporting line (--hx-stack), then the action set well apart. */
 .hxh__lead{
-	margin:var(--hx-s-4) 0 0;
+	margin:var(--hx-stack) 0 0;
 	font-family:var(--hx-sans);
-	font-size:var(--hx-fs-body);
-	font-weight:400;
-	line-height:1.55;
-	letter-spacing:.01em;
-	color:var(--hx-ink); /* ink, not body grey: the portrait frame puts this line over the silk's darker fold (measured 5.4:1 worst-case vs 3.6:1 in --hx-text) */
-	text-wrap:balance;
-}
-.hxh__credit{
-	margin:var(--hx-s-3) 0 0;
-	text-wrap:balance;
-	font-family:var(--hx-sans);
-	font-size:.8125rem;
-	font-weight:500;
+	font-size:var(--hx-fs-lead);  /* DESIGN.md lead role, 17 → 19px */
+	font-weight:400;              /* not the system lead's 300: hairline Inter breaks up over the photograph */
 	line-height:1.5;
-	letter-spacing:.04em;
+	letter-spacing:0;
 	color:var(--hx-ink);
+	text-wrap:balance;
 }
-.hxh__sep{white-space:pre;color:var(--hx-text)}
 
-/* The action: a measured graphite button, sized to its words (no full-width slab) */
+/* The action: a slim graphite outline, sized to its words (19 Oct 2026, owner: a solid black
+   slab was the darkest mass in the frame and competed with the chrome lid). It fills graphite
+   on hover/focus. DESIGN.md action role: 15px sentence case (purchase actions never below 15px
+   for this audience), 52px tall on phones, 54px on landscape desktop; no inset frame. */
 .hxh__action{margin-top:auto;display:flex;justify-content:center}
 .hxh__cta{
-	--hx-btn-bg:#2A2A2A;          /* graphite on phones/tablets: sits softer on the champagne; label #FBFAF7 on it = 13.8:1 */
-	--hx-btn-bg-hover:#1C1D1F;
-	min-height:48px;
-	padding-inline:28px;
-	font-size:.6875rem;
-	letter-spacing:.12em;
+	--hx-btn-bg:transparent;
+	--hx-btn-bg-hover:var(--hx-ink);
+	--hx-btn-fg:var(--hx-ink);
+	min-height:52px;
+	padding-inline:24px;
+	box-shadow:inset 0 0 0 1px var(--hx-ink); /* hairline inside the box: no size change against the filled state */
+	font-size:.9375rem;
+	letter-spacing:.015em;
+	text-transform:none;
 }
-.hxh__cta .hx-arrow{width:16px;margin-left:12px}
+.hxh__cta:is(:hover,:focus-visible){--hx-btn-fg:var(--hx-white);background:var(--hx-btn-bg-hover)} /* fill on keyboard focus too, not only hover */
+.hxh__cta::after{content:none}
+.hxh__cta .hx-arrow{width:16px;margin-left:14px}
 
-/* 320px phones: keep the action on one line (system lets it wrap below 360px) */
+/* 320px phones: keep the action on one line */
 @media (max-width:359.98px){
-	.hxh__cta{padding-inline:22px;letter-spacing:.11em;white-space:nowrap}
-	.hxh__cta .hx-arrow{display:none}
+	.hxh__cta{padding-inline:20px}
+	.hxh__cta .hx-arrow{margin-left:12px}
 }
 @media (min-width:360px){.hxh__title{font-size:2.5rem}}   /* 40px */
 @media (min-width:700px){.hxh__title{font-size:3rem}}     /* 48px */
-
-/* ─── Wide frame on portrait tablets: object centred under the headline ─ */
-@media (min-width:600px){.hxh{--hxh-pos-x:68.5%}}
+/* From 1100px the headline grows with the photographic field instead of stepping:
+   48 → 60px across 1100–1440, then 60 → 72px across 1440–1920 (rule below). */
+@media (min-width:1100px){.hxh__title{font-size:clamp(3rem,.575rem + 3.53vw,3.75rem)}}
 
 /* ─── Landscape layout: headline left, object right of centre ─────── */
 @media (min-width:768px) and (min-aspect-ratio:1/1){
@@ -112,21 +112,60 @@ body.cos-h26 .hxh.h26-hero--pearl{background:#E7DED6}
 		padding-bottom:0;
 		text-align:left;
 	}
-	.hxh__copy{max-width:min(36vw,480px)}
-	.hxh__lead{margin-top:var(--hx-stack);color:var(--hx-ink);font-size:var(--hx-fs-body);font-weight:400;line-height:var(--hx-lh-body);letter-spacing:.005em}
-	.hxh__credit{margin-top:var(--hx-s-2);font-size:var(--hx-fs-detail);font-weight:400;letter-spacing:.01em;color:var(--hx-ink)} /* sentence case, like phones: not an eyebrow */
+	.hxh__copy{max-width:min(42vw,640px)} /* "refined to the essential." stays on one line (~515px at 60px, ~618px at 72px) */
+	.hxh__lead{margin-top:var(--hx-stack);line-height:1.55;letter-spacing:0}
 	.hxh__action{margin-top:clamp(40px,6svh,64px);justify-content:flex-start}
-	.hxh__cta{--hx-btn-bg:var(--hx-ink);--hx-btn-bg-hover:#2B2C2F;padding-inline:30px;letter-spacing:.14em}
+	.hxh__cta{min-height:54px;padding-inline:28px}
 }
-@media (min-width:1100px) and (min-aspect-ratio:1/1){.hxh{--hxh-pos-x:63%}}
+@media (min-width:1100px) and (min-aspect-ratio:1/1){
+	.hxh{--hxh-pos-x:63%}
+	/* Product scale: the jar and lid fill ~46–49% of the width at every desktop size (unscaled they
+	   are 41% at 1280, 45% at 1440, 39% at 1920+). Scaled from the lid's left edge so the object
+	   grows right and down, away from the copy. The independent `scale` property composes with
+	   the entrance transform on the img and the drift translate on the wrapper. */
+	.hxh__picture{scale:1.1;transform-origin:45% 60%}
+}
+@media (min-width:1440px) and (min-aspect-ratio:1/1){.hxh__picture{scale:1.08}}
+@media (min-width:1800px) and (min-aspect-ratio:1/1){.hxh__picture{scale:1.18}}
+/* Narrow landscape (768–1099px): covering the full screen height makes the jar about half
+   the screen wide, so no crop clears both the copy and the right edge. The frame covers 80%
+   of the height instead (jar 20% smaller, lid ~50px clear of the copy), and the set's own
+   edge rows (sampled from wc-hero-wide) continue into the thin bands above and below; they
+   are smooth side-to-side gradients that barely change vertically, so the join does not show. */
+@media (min-width:768px) and (max-width:1099.98px) and (min-aspect-ratio:1/1){
+	/* The bands are laid out exactly like the photograph (same rendered width, the larger of the
+	   box width and 74% height × 1.969, and the same --hxh-pos-x offset), so each sampled edge
+	   colour sits directly above or below the pixel it came from. */
+	.hxh__media{
+		container-type:size;
+		background-image:
+			linear-gradient(90deg,#D8D7D2 0%,#DEDDD9 10%,#E5E4E0 25%,#EBEAE6 50%,#E8E7E3 75%,#E2E1DD 90%,#DCDBD7 100%),
+			linear-gradient(90deg,#DFDCD5 0%,#E3E0DB 10%,#E9E6E1 25%,#EDEAE5 50%,#EAE7E2 75%,#E4E1DC 90%,#DFDCD7 100%);
+		background-repeat:no-repeat;
+		background-size:max(100cqw,74cqh * 1.969) 50%;
+		background-position:var(--hxh-pos-x) top,var(--hxh-pos-x) bottom;
+	}
+	.hxh__picture{display:flex;align-items:center}
+	.hxh__picture img{height:74%}
+	.hxh__copy{max-width:46vw}
+	.hxh__title{font-size:2.75rem} /* 44px: "refined to the essential." holds one line beside the jar */
+}
+/* 320px phones: 31px keeps "refined to the essential." on one line, so the copy ends above the lid */
+@media (max-width:359.98px){.hxh__title{font-size:1.9375rem}}
+/* Squat portrait phones (iPhone SE 375×667, 360×640, 320×568): the tall frame is cropped top
+   and bottom here, and a centred crop lifts the jar into the copy. Anchor the crop near the
+   top of the frame so the jar sits lower, under the copy. */
+@media (max-width:599.98px) and (min-aspect-ratio:1/2) and (max-aspect-ratio:999/1000){
+	.hxh__picture img{object-position:50% 8%}
+}
 /* bleed for the scroll drift (hx-motion.js drives it from 900px) */
 @media (min-width:900px){.hxh__drift{inset:-56px 0}}
-@media (min-width:1440px){.hxh__title{font-size:3.75rem}} /* 60px */
+@media (min-width:1440px){.hxh__title{font-size:clamp(3.75rem,1.5rem + 2.5vw,4.5rem)}} /* 60 → 72px */
 
 /* ─── Entrance: the light comes up, the object settles, then the words ─ */
 @media (prefers-reduced-motion:no-preference){
-	.hxh__veil{animation:hxh-veil 2600ms var(--hx-ease-soft) 80ms both}
-	.hxh__picture img{animation:hxh-settle 3400ms var(--hx-ease) both}
+	.hxh__veil{animation:hxh-veil 1000ms var(--hx-ease-soft) 40ms both}
+	.hxh__picture img{animation:hxh-settle 1200ms var(--hx-ease) both}
 }
-@keyframes hxh-veil{from{opacity:.72}to{opacity:0}}
-@keyframes hxh-settle{from{transform:scale(1.045)}to{transform:none}}
+@keyframes hxh-veil{from{opacity:.36}to{opacity:0}}
+@keyframes hxh-settle{from{transform:scale(1.02)}to{transform:none}}

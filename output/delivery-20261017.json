@@ -1,0 +1,11 @@
+﻿{
+ "date":"2026-10-17",
+ "preview":"http://caviarofswitzerland.local/",
+ "status":"Implemented locally; independently reviewed",
+ "changes":["Restored site by escaping apostrophe in product data","Preserved existing hero and real product raster assets","Concise Swiss science campaign copy","Mobile benefits visible at 16px","Purchase labels minimum 15px","Mountain-free asymmetric provenance study","All ritual instructions visible in responsive grid","Light stone footer with original silver logo","One visible-default hero entrance; no scroll gating/parallax","Keyboard product gallery and Safari skip link repaired"],
+ "verification":{"php_lint":"8 affected PHP files passed","javascript_syntax":"passed","navigation_accessibility":"10 unique Chromium/WebKit scenarios passed after skip-link fix","commerce":"6 Chromium/WebKit scenarios passed","shop_pdp_audit":"6 viewport/browser cases: zero axe violations and no overflow","homepage":"320px Chromium, iPhone WebKit, desktop Chromium: no overflow or broken images","mechanical_detector":"42 advisory findings against earlier design ramp; no material findings","phpcs":"not installed"},
+ "reviews":["output/critic-20261017/independent-review.md","output/experience-20261017/REPORT.md"],
+ "limitations":["Physical iPhone Safari not tested","Production performance and payment completion not certified","Silver original logo remains pale on light surfaces","No product pixel edits; incumbent imagery retained, not independently certified against physical packaging"],
+ "deployment":"none",
+ "commit":"none"
+}

@@ -1,0 +1,791 @@
+{
+  "date": "2026-10-17",
+  "scope": "collection-object-set-hxc-* (homepage Collection, 640x1100) and collection-object-set-* (2:3 compatibility, used by Science)",
+  "paths_relative_to": "WordPress public directory",
+  "source_kind": "Supplied flat-lay product packshots (same sources as collection-object-*)",
+  "sources": {
+    "cleanser": {
+      "path": "../design-sources/home-2026/packshots-2026-10-12/cleanser-flat-2026-10-13.png",
+      "sha256": "1a915b922874b25635b728ced06ce226d77b6f84e234e101b7c248de1796a4e2",
+      "bytes": 1529554,
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "mode": "RGB"
+    },
+    "serum": {
+      "path": "../design-sources/home-2026/packshots-2026-10-12/serum-flat-2026-10-13.png",
+      "sha256": "32264f0c4a21b5261a86c15d82a82fbfb8caf4303da38780228fbafd8a6a96fb",
+      "bytes": 1608472,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGB"
+    },
+    "eye": {
+      "path": "../design-sources/home-2026/packshots-2026-10-12/eye-flat-2026-10-13.png",
+      "sha256": "d302b18966785c5f91cd774dba69c49dbccd762d2863b68ccf6a3de1d1e0aeb3",
+      "bytes": 1069086,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB"
+    },
+    "cream": {
+      "path": "../design-sources/home-2026/packshots-2026-10-12/cream-flat-2026-10-13.png",
+      "sha256": "b87dfe31442067d9290b27b775213c9b3362743e4885a815db0d308f3eb5aba7",
+      "bytes": 1166193,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB"
+    }
+  },
+  "builder": {
+    "path": "../design-sources/home-2026/build_collection_set.py",
+    "sha256": "e7eb4b957ab8c869c3c7df43827b72ad530a331e1562cca9e3d46d8b804bf4b3"
+  },
+  "transformation": {
+    "operations": [
+      "Measure each pack axis (chrome-cap centre) and trace its right edge per row, top edge per column (clean backdrop sides) and bottom edge per column (first sharp tonal step above the smooth shadow)",
+      "Build a symmetric matte by mirroring that traced geometry about the axis (matte geometry only; no pixel is mirrored)",
+      "Normalise RGB by the measured backdrop colour (backdrop -> white), as the previous builder did",
+      "Keep source pixels inside the matte (proportional Lanczos scale only); discard everything outside (backdrop and the original lower-left studio shadow)",
+      "Place every pack on one baseline (y=1020 of 1100) on a 640x1100 canvas, axis centred; heights {'cleanser': 932, 'serum': 858, 'eye': 858, 'cream': 441}",
+      "Add one shared synthetic soft contact shadow (two elliptical Gaussian pools, warm graphite, light from upper right)",
+      "Left matte edge 0.5px further in than the right, matte feather 0.45px (round 2: matching edge softness)",
+      "hxc set: export 320/480/640 px from the 640x1100 master (every pack at <=1.0x its source pixel size)",
+      "2:3 set: master x1.0837 composited on 1000x1500 (foot y=1265), export 480/720/960 px",
+      "Encode transparent AVIF/WebP; flatten JPEG fallback on RGB 251,250,247"
+    ],
+    "packaging_geometry_and_label_content_retained": true,
+    "literal_product_RGB_pixels_unchanged": false,
+    "note": "Product pixels are the supplied packshot pixels after proportional resampling and backdrop normalisation; no repainting, no generative fill, no mirroring of pixels."
+  },
+  "derivatives": [
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-hxc-cleanser-320.avif",
+      "sha256": "b39479d5dd8f9ca145dcd476ded6a24f74167cbadbe82753c6fd788ba9e981f9",
+      "bytes": 6829,
+      "dimensions": [
+        320,
+        550
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-hxc-cleanser-320.webp",
+      "sha256": "8a57a8848ebaa35dc579817475af1055e43ae40a198b66059f3700ecdf84dcc5",
+      "bytes": 9888,
+      "dimensions": [
+        320,
+        550
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-hxc-cleanser-320.jpg",
+      "sha256": "87444c8f18a7d7c2e878edfb055b2e965689cf4d8d2e526330778d2f9b32ac7e",
+      "bytes": 9550,
+      "dimensions": [
+        320,
+        550
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-hxc-cleanser-480.avif",
+      "sha256": "233391ea5badeac38ddf4b240ab33eeb660339ed4344c54654c543c70aedb3fd",
+      "bytes": 10939,
+      "dimensions": [
+        480,
+        825
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-hxc-cleanser-480.webp",
+      "sha256": "32d2325f781972ae2a8437613cf760ca748a4f477000ee4b9b06f47365641d6e",
+      "bytes": 16882,
+      "dimensions": [
+        480,
+        825
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-hxc-cleanser-480.jpg",
+      "sha256": "35676821c41bf983124fa2829848c6c0f5bed5e755eb76d4700261b5b0d62c5c",
+      "bytes": 17433,
+      "dimensions": [
+        480,
+        825
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-hxc-cleanser-640.avif",
+      "sha256": "623c010ff66b7a87bb562eeb817690ad1443d7310695889de1c5d564b0719173",
+      "bytes": 12031,
+      "dimensions": [
+        640,
+        1100
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-hxc-cleanser-640.webp",
+      "sha256": "541b31d04382f2c6ee0937a1bb5c547645020df3c322e39680e12771cae622da",
+      "bytes": 18900,
+      "dimensions": [
+        640,
+        1100
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-hxc-cleanser-640.jpg",
+      "sha256": "bbd8ddc26e5cd7920e55b98b9e51792e4d6018652b620f00cfc05a5ea307dc26",
+      "bytes": 26176,
+      "dimensions": [
+        640,
+        1100
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-cleanser-480.avif",
+      "sha256": "8604ac00cb82eb08df3ff20db2123ff0ff7db011a2cf827f2d52564fe4394d26",
+      "bytes": 7408,
+      "dimensions": [
+        480,
+        720
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-cleanser-480.webp",
+      "sha256": "e0c95d4aee51b84762dd6fdd7461c9960c06d295f9d97a918426f2a415e87c98",
+      "bytes": 10918,
+      "dimensions": [
+        480,
+        720
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-cleanser-480.jpg",
+      "sha256": "2e46c85cadd6578df1903c1024a57dacd829507a908cdb21a0ca3bcee4e43052",
+      "bytes": 11328,
+      "dimensions": [
+        480,
+        720
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-cleanser-720.avif",
+      "sha256": "5813c1b5e8c8da8b195d445ce9b20a71c31663d3fc830de8ab0f4bfc026ce058",
+      "bytes": 11267,
+      "dimensions": [
+        720,
+        1080
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-cleanser-720.webp",
+      "sha256": "d97133e680d5ad950b144cb7286b5c96a555740ccd41a96747b9ebd3a1d1d517",
+      "bytes": 18404,
+      "dimensions": [
+        720,
+        1080
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-cleanser-720.jpg",
+      "sha256": "2ba2fd6623927362853fc91e526bedce1bb1825c5c0acdca89833e0ae72af68b",
+      "bytes": 20408,
+      "dimensions": [
+        720,
+        1080
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-cleanser-960.avif",
+      "sha256": "082e81367097c3c38c5e1bec6ef645cbaadb075dc3cfb9baef5cb0672cbe9ceb",
+      "bytes": 16862,
+      "dimensions": [
+        960,
+        1440
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-cleanser-960.webp",
+      "sha256": "8b2ce4c177b8002478119da56e355d57d4411bb9bf657c3b88a18fceabfc5d3f",
+      "bytes": 27494,
+      "dimensions": [
+        960,
+        1440
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-cleanser-960.jpg",
+      "sha256": "69dfc7875f1ec17d5048efcc21aff3b5bd52b62e2b86ff6e540f3877b1049ed9",
+      "bytes": 31199,
+      "dimensions": [
+        960,
+        1440
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-hxc-serum-320.avif",
+      "sha256": "8d1bad359d71946333315605ce4282bd997dfd41b83dcceaa78f88dee5c8bf47",
+      "bytes": 7629,
+      "dimensions": [
+        320,
+        550
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-hxc-serum-320.webp",
+      "sha256": "cffef05da4b6f57c2aaebf8849c281034cfa7b55525c0bb7ea5e7a9c605b4091",
+      "bytes": 11920,
+      "dimensions": [
+        320,
+        550
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-hxc-serum-320.jpg",
+      "sha256": "03648b0fc3f73a2d51843447df7a0a791b1ba359796f675921630e5d20d09406",
+      "bytes": 11204,
+      "dimensions": [
+        320,
+        550
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-hxc-serum-480.avif",
+      "sha256": "fa53ebab0b8a4baa3acade6462dcf80324f41e6f3e6d53fce82dbc0c6ce915cc",
+      "bytes": 12970,
+      "dimensions": [
+        480,
+        825
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-hxc-serum-480.webp",
+      "sha256": "266e8acfdbe24f0dc4f7c43ea3d7be8d5779e6d87264d11eac97fb8ff0be18a2",
+      "bytes": 20268,
+      "dimensions": [
+        480,
+        825
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-hxc-serum-480.jpg",
+      "sha256": "925acdedccd0caba630583d2dd76a9f2f7a993eac9a65650217e423fe4ba532a",
+      "bytes": 21284,
+      "dimensions": [
+        480,
+        825
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-hxc-serum-640.avif",
+      "sha256": "a7667d0ad3c45d78488534e5b30c671f274c64766374986629266be6e6e5baaf",
+      "bytes": 14703,
+      "dimensions": [
+        640,
+        1100
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-hxc-serum-640.webp",
+      "sha256": "924781161fecf536ab378bd0468776dd9669469d9d3164f0c70233481750ef07",
+      "bytes": 22458,
+      "dimensions": [
+        640,
+        1100
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-hxc-serum-640.jpg",
+      "sha256": "4144a3cd22b55331f3e81f1fc25bc27812e700d32dd625dceceb682b1eed03bf",
+      "bytes": 32297,
+      "dimensions": [
+        640,
+        1100
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-serum-480.avif",
+      "sha256": "08d9664c3cf48a34684fee8ebbdab6a124012da58aa35f4457d43bf0c43c08cf",
+      "bytes": 8159,
+      "dimensions": [
+        480,
+        720
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-serum-480.webp",
+      "sha256": "0e73a21924f3982777e8bec30d369b74b4740a14cdd6b47f07a2b10af4f589bd",
+      "bytes": 12856,
+      "dimensions": [
+        480,
+        720
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-serum-480.jpg",
+      "sha256": "afc5d06adabb56443f5f25f75c5e050ee13100ace26b76046f4c006ec35f9135",
+      "bytes": 13538,
+      "dimensions": [
+        480,
+        720
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-serum-720.avif",
+      "sha256": "18938a89a52fc04765476465037ff5ec96bbde5053ef9544df560b02194d7891",
+      "bytes": 13279,
+      "dimensions": [
+        720,
+        1080
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-serum-720.webp",
+      "sha256": "0e7b6afd18ac90e56fffae381a01ec4e605872606659d61a2b899b57bb9de8c4",
+      "bytes": 21270,
+      "dimensions": [
+        720,
+        1080
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-serum-720.jpg",
+      "sha256": "908cf5177cec6e1fe2ccb565fb4b94bca4afd3d8fd826eabc121bdc212fd77bb",
+      "bytes": 24256,
+      "dimensions": [
+        720,
+        1080
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-serum-960.avif",
+      "sha256": "4620f272a784ebbc8ecb2e40623e03fdc0d73a329702cf586bb7f0b8daf9a117",
+      "bytes": 18853,
+      "dimensions": [
+        960,
+        1440
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-serum-960.webp",
+      "sha256": "e321ec24977e451d19252caa81abf30e2c5aff9e6b07b9558beaa643ec13778f",
+      "bytes": 31056,
+      "dimensions": [
+        960,
+        1440
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-serum-960.jpg",
+      "sha256": "582076c5344a082600fe875f98dbcf18d6d443cad669affaefaced5e665de66c",
+      "bytes": 37565,
+      "dimensions": [
+        960,
+        1440
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-hxc-eye-320.avif",
+      "sha256": "b115f15e585cf16fc3a9ba05ee8177dbbd7fb258d271cbb4f4e208bae5541a0c",
+      "bytes": 6625,
+      "dimensions": [
+        320,
+        550
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-hxc-eye-320.webp",
+      "sha256": "18ef38a9acdf923ad2b71f94f845104f15f94d1c3a75317bdd474c1648d4b714",
+      "bytes": 10190,
+      "dimensions": [
+        320,
+        550
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-hxc-eye-320.jpg",
+      "sha256": "f581a06adff4dc894386820d50995139837abced4db1481b75621a8ac6ca15ff",
+      "bytes": 10455,
+      "dimensions": [
+        320,
+        550
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-hxc-eye-480.avif",
+      "sha256": "78c1c2b3f7bf7df357c806fcd90fd30a955e550ff565674f4d6a964861b31ca8",
+      "bytes": 10181,
+      "dimensions": [
+        480,
+        825
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-hxc-eye-480.webp",
+      "sha256": "ed2243baa570c04de40b7b8f785bb53521174b24eac3770e56dca9ac5fa766c2",
+      "bytes": 15824,
+      "dimensions": [
+        480,
+        825
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-hxc-eye-480.jpg",
+      "sha256": "7c9fb4b57d2924f96ed15dff1b0b3923a328cfd31c2d40c5089bc9db0478075a",
+      "bytes": 18273,
+      "dimensions": [
+        480,
+        825
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-hxc-eye-640.avif",
+      "sha256": "5e7aa825a50c9e12271c892c8b29df1b398977d983db44e45e80f7392dde0950",
+      "bytes": 11235,
+      "dimensions": [
+        640,
+        1100
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-hxc-eye-640.webp",
+      "sha256": "a88df5c48eb295700d518fbcb01650e5c30d41f5b9fc4d5df4a9ecba5b02cd42",
+      "bytes": 17010,
+      "dimensions": [
+        640,
+        1100
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-hxc-eye-640.jpg",
+      "sha256": "634d846af1033b46a47067f33d4c787830f4d74d3fd9b3ff59c767eda88cd8c2",
+      "bytes": 27705,
+      "dimensions": [
+        640,
+        1100
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-eye-480.avif",
+      "sha256": "316b278e3f98b9a5aa21135db8ff587b785dfd7c6568ee7942aa4e060f4d3da2",
+      "bytes": 6929,
+      "dimensions": [
+        480,
+        720
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-eye-480.webp",
+      "sha256": "04c4ac0efba2715ee9e6ef2cfd94731c03e0f438414498179045aa67c02b5a78",
+      "bytes": 10478,
+      "dimensions": [
+        480,
+        720
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-eye-480.jpg",
+      "sha256": "412922313fee1688af9f8775cd9764f194f5f8a8897b9483344da67727c7e6b2",
+      "bytes": 11776,
+      "dimensions": [
+        480,
+        720
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-eye-720.avif",
+      "sha256": "cac9bc0bb3c2ea028e2ec8c0a6bdc076a9fa3e09c287ecd205d976d54427bf07",
+      "bytes": 10948,
+      "dimensions": [
+        720,
+        1080
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-eye-720.webp",
+      "sha256": "6b0cab003cadabdd394db171bef62f06fa313e564f37da06bf5750bb3fc92841",
+      "bytes": 17802,
+      "dimensions": [
+        720,
+        1080
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-eye-720.jpg",
+      "sha256": "ce66f537e0fe00c2cdf2f0232f8268ca7631c36351940624550cfffdc10fbd6f",
+      "bytes": 21337,
+      "dimensions": [
+        720,
+        1080
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-eye-960.avif",
+      "sha256": "96981917297bad1a5a27a4c3749f8d5390b769d39b809c7d7735099cdc95df0a",
+      "bytes": 15607,
+      "dimensions": [
+        960,
+        1440
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-eye-960.webp",
+      "sha256": "7353b8735bc4708e7991be422f56152a73033572e4bf110b9c05e188f8385f5c",
+      "bytes": 25456,
+      "dimensions": [
+        960,
+        1440
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-eye-960.jpg",
+      "sha256": "20928f966fa4365e312f99758909064a84f1a1135def4897d88fddc0dbea6fdb",
+      "bytes": 32730,
+      "dimensions": [
+        960,
+        1440
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-hxc-cream-320.avif",
+      "sha256": "6d9d4b9e5aeec2e2379956a0417d956ed8950dedf3833368342377de3a5fa180",
+      "bytes": 8119,
+      "dimensions": [
+        320,
+        550
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-hxc-cream-320.webp",
+      "sha256": "4d75a6e237a5c94ab4fceeaa795bd04c693da5b1dd684733845100d4ffbb6e52",
+      "bytes": 12180,
+      "dimensions": [
+        320,
+        550
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-hxc-cream-320.jpg",
+      "sha256": "baece24aea0f235eceb0705c0aae9374dea9f8f4da5fee5108721630e41f52f5",
+      "bytes": 10890,
+      "dimensions": [
+        320,
+        550
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-hxc-cream-480.avif",
+      "sha256": "d4e9a529e762e23f83ed3a27db5e17d8abe593ebd996eb7baabcda06b10deb27",
+      "bytes": 12587,
+      "dimensions": [
+        480,
+        825
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-hxc-cream-480.webp",
+      "sha256": "f11daced455c37da62a4fb329afd2a84e61a9f0896fe7d5e501840c7d0735b94",
+      "bytes": 19982,
+      "dimensions": [
+        480,
+        825
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-hxc-cream-480.jpg",
+      "sha256": "e0e1e4d7845baaa2b714d5d7c5298a5318a10df17c2addcf858db95e18c8b3af",
+      "bytes": 19717,
+      "dimensions": [
+        480,
+        825
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-hxc-cream-640.avif",
+      "sha256": "46592910817d99f508830358b419dc129e070abbbde861cfc1204002fcaf1ce3",
+      "bytes": 13290,
+      "dimensions": [
+        640,
+        1100
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-hxc-cream-640.webp",
+      "sha256": "7ccc46e9bc0e8733b95a415471ce178e809359984eb7c04f15d17f55338948b9",
+      "bytes": 22650,
+      "dimensions": [
+        640,
+        1100
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-hxc-cream-640.jpg",
+      "sha256": "d813b29e3064b8a8c96ba877bbc63a9307689e5d825c1e2f3ac22cb22c6caf61",
+      "bytes": 30002,
+      "dimensions": [
+        640,
+        1100
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-cream-480.avif",
+      "sha256": "987f0d5db9758eda1c8139fd1bc23a7a8508430f476bdc2d5e20952e414b547d",
+      "bytes": 8373,
+      "dimensions": [
+        480,
+        720
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-cream-480.webp",
+      "sha256": "d67c7be7d88ffc00b7b129f54ba693e11c38dfc9c0ace7c850f3a6b5d2d6ccea",
+      "bytes": 12796,
+      "dimensions": [
+        480,
+        720
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-cream-480.jpg",
+      "sha256": "94a861fc4581a096f5a148506504190191ec77f5fc7cc4dab33e7e95731b2e95",
+      "bytes": 12385,
+      "dimensions": [
+        480,
+        720
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-cream-720.avif",
+      "sha256": "6ffac7b832604f6feb31b47ced41ccb8c5ff353339f882f88d3c4bc12f6910d2",
+      "bytes": 13550,
+      "dimensions": [
+        720,
+        1080
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-cream-720.webp",
+      "sha256": "064b3f85753ea63df1bdebdeec946485ae0bace88592d1922dd6421409a93fd8",
+      "bytes": 22172,
+      "dimensions": [
+        720,
+        1080
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-cream-720.jpg",
+      "sha256": "afe49c78f12820a28406999161b92cc6060765c64d0f9ea52f8ffa832cdca034",
+      "bytes": 23052,
+      "dimensions": [
+        720,
+        1080
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-cream-960.avif",
+      "sha256": "af23e34e8056daec1dcc69dc6bf6ceb1e7bcb9a83f6f63fe73713d0e88ec770f",
+      "bytes": 18609,
+      "dimensions": [
+        960,
+        1440
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-cream-960.webp",
+      "sha256": "872d7f3a1200fed102f12dd603a9c669b3df202548aed8fbdf857faff8ce9325",
+      "bytes": 32200,
+      "dimensions": [
+        960,
+        1440
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/collection-object-set-cream-960.jpg",
+      "sha256": "3086b3c728cda0e57edfdd433416b2722af8edb02e99c7a546dc169780782c5c",
+      "bytes": 34808,
+      "dimensions": [
+        960,
+        1440
+      ],
+      "mode": "RGB"
+    }
+  ]
+}

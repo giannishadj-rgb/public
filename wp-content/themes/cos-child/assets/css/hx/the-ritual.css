@@ -11,7 +11,7 @@
 	--hxrt-nav:var(--cos-nav-h,80px);
 	--hxrt-mono:grayscale(1) sepia(.07) contrast(1.05) brightness(.98);   /* warm silver print */
 	display:block;
-	background:var(--hx-pearl);
+	background:var(--hx-ivory);
 	color:var(--hx-text);
 	overflow-x:clip;
 	font-family:var(--hx-sans);
@@ -45,7 +45,7 @@ html.hx-motion .hxrt [data-hx-reveal]:not(.is-in):not([data-hx-reveal^="mask"]){
 	display:flex;
 	flex-direction:column;
 	padding-top:var(--hxrt-nav);
-	background:var(--hx-pearl);
+	background:var(--hx-ivory);
 }
 .hxrt-hero__media{position:relative;overflow:hidden;height:min(60svh,125vw);background:#9C9C9B}
 .hxrt-hero__pic,.hxrt-hero__pic img{display:block;width:100%;height:100%}
@@ -113,12 +113,12 @@ html.hx-motion .hxrt [data-hx-reveal]:not(.is-in):not([data-hx-reveal^="mask"]){
 }
 
 /* ── Prelude ────────────────────────────────────────────────────── */
-.hxrt-prelude{background:var(--hx-pearl);padding-block:var(--hx-section-sm) var(--hx-s-9)}
+.hxrt-prelude{background:var(--hx-ivory);padding-block:var(--hx-section-sm) var(--hx-s-9)}
 .hxrt-prelude__inner{display:flex;flex-direction:column;align-items:center;text-align:center}
 .hxrt-prelude__quote{max-width:21em;font-family:var(--hx-serif);font-size:clamp(1.75rem,1.3rem + 1.8vw,2.875rem);font-weight:300;line-height:1.22;letter-spacing:-.008em;color:var(--hx-ink);text-wrap:balance;-webkit-font-smoothing:antialiased}
 
 /* ── The four steps ─────────────────────────────────────────────── */
-.hxrt-steps{background:var(--hx-pearl);padding-bottom:var(--hx-section-sm)}
+.hxrt-steps{background:var(--hx-ivory);padding-bottom:var(--hx-section-sm)}
 .hxrt-step{display:flex;flex-direction:column}
 .hxrt-step + .hxrt-step{margin-top:var(--hx-s-9)}
 .hxrt-step__frame{aspect-ratio:4/5;background:var(--hx-stone)}
@@ -139,7 +139,7 @@ html.hx-motion .hxrt [data-hx-reveal]:not(.is-in):not([data-hx-reveal^="mask"]){
 .hxrt-step__product{margin-top:var(--hx-s-2);font-family:var(--hx-serif);font-size:var(--hx-fs-title);font-style:normal;font-weight:400;line-height:var(--hx-lh-title);color:var(--hx-accent);text-wrap:balance}
 .hxrt-step__what{max-width:32em;margin-top:var(--hx-s-5)}
 
-.hxrt-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--hx-s-4);max-width:34em;margin-top:var(--hx-s-6);padding-top:var(--hx-s-4);border-top:1px solid var(--hx-line)}
+.hxrt-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--hx-s-4);max-width:28em;margin-top:var(--hx-s-6);padding-top:var(--hx-s-4);border-top:1px solid var(--hx-line)}
 .hxrt-facts__row{min-width:0}
 .hxrt-facts dt,.hxrt-sub{font-family:var(--hx-sans);font-size:var(--hx-fs-label);font-weight:500;line-height:var(--hx-lh-label);letter-spacing:.16em;text-transform:uppercase;color:var(--hx-muted)}
 .hxrt-facts dd{margin-top:6px;font-family:var(--hx-serif);font-size:1.1875rem;font-weight:400;line-height:1.3;color:var(--hx-ink);text-wrap:balance}
@@ -240,7 +240,7 @@ html.hx-motion .hxrt [data-hx-reveal]:not(.is-in):not([data-hx-reveal^="mask"]){
 }
 
 /* ── Morning and evening ────────────────────────────────────────── */
-.hxrt-day{background:var(--hx-pearl);padding-block:var(--hx-section-sm)}
+.hxrt-day{background:var(--hx-ivory);padding-block:var(--hx-section-sm)}
 .hxrt-day__head{max-width:40em}
 .hxrt-day__lede{margin-top:var(--hx-stack)}
 .hxrt-day__grid{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--hx-s-3);margin-top:var(--hx-s-7)}
@@ -270,7 +270,7 @@ html.hx-motion .hxrt [data-hx-reveal]:not(.is-in):not([data-hx-reveal^="mask"]){
 .hxrt-day__verb{grid-area:verb;font-size:var(--hx-fs-detail);font-weight:500;letter-spacing:.02em;color:var(--hx-fg)}
 .hxrt-day__text{grid-area:text;font-size:.96875rem;line-height:1.6;color:var(--hx-fg-2);text-wrap:pretty}
 .hxrt-day__col--evening .hxrt-day__text{font-weight:360;font-synthesis:none}
-.hxrt-day__close{margin-top:var(--hx-s-5);font-size:var(--hx-fs-detail);line-height:1.55;color:var(--hx-fg-3)}
+.hxrt-day__close{margin-top:var(--hx-s-4);font-size:1rem;line-height:1.6;color:var(--hx-fg-3)}
 
 @media (min-width:600px){
 	.hxrt-day__col{padding:var(--hx-s-8) clamp(32px,4.5vw,72px)}
@@ -312,4 +312,20 @@ html.hx-motion .hxrt [data-hx-reveal]:not(.is-in):not([data-hx-reveal^="mask"]){
 
 @media (prefers-reduced-motion:reduce){
 	.hxrt .hxrt-index__link::before,.hxrt .hxrt-inline{transition:none}
+}
+
+/* ── Phones: tighter overall length (critic r1: ~13.5k → ~9k) ─────── */
+@media (max-width:599.98px){
+	.hxrt-hero__copy{padding-bottom:var(--hx-s-8)}
+	.hxrt-prelude{padding-block:var(--hx-s-7) var(--hx-s-8)}
+	.hxrt-step__frame{aspect-ratio:1/1}
+	.hxrt-step__body{padding-top:var(--hx-s-5)}
+	.hxrt-step__what{margin-top:var(--hx-s-4)}
+	.hxrt-facts{margin-top:var(--hx-s-5)}
+	.hxrt-steps{padding-bottom:var(--hx-s-8)}
+	.hxrt-order,.hxrt-day,.hxrt-offer{padding-block:var(--hx-s-8)}
+	.hxrt-order__text{margin-top:var(--hx-s-2)}
+	.hxrt-order__title{margin-top:var(--hx-s-2)}
+	.hxrt-day__col{padding:var(--hx-s-6) var(--hx-s-5)}
+	.hxrt-offer__inner{gap:var(--hx-s-6)}
 }

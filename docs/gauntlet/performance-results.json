@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-18",
+  "environment": "Local Chromium, cold cache, 390x844 DPR3, 1.6Mbps / 150ms RTT / 4x CPU, initial viewport",
+  "runs": [
+    {
+      "lcp": 1984,
+      "cls": 0
+    },
+    {
+      "lcp": 1704,
+      "cls": 0
+    },
+    {
+      "lcp": 1656,
+      "cls": 0
+    }
+  ],
+  "medianLcpMs": 1704,
+  "maxCls": 0
+}

@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-18",
+  "prefix": "wc-rit-cream",
+  "source_kind": "Authentic owner photograph, Caviar of Switzerland September 2023 shoot (Nikon D5)",
+  "source": {
+    "path_relative_to_public": "wp-content/uploads/2026/04/CAVIAR3365-copy.jpg",
+    "sha256": "2d59d60acfef69149bd5c796a7035e352ea8d88e798ccf27836a7cf224d7e21c",
+    "dimensions": [
+      1600,
+      2400
+    ],
+    "dropbox_folder": "Graphics/Photoshoots/September 2023/CAVIAR3365 copy.jpg"
+  },
+  "operations": [
+    "Crop tall 3:5 box (291, 689, 878, 1463) (x, y, w, h) and 4:5 box (291, 754, 878, 1098); wordmark width = 20.5% of frame width",
+    "Tone grade shared with build_ritual_panels.py: backdrop white balance, highlight roll-off, 6% edge fall-off",
+    "Lanczos resize to widths [480, 720, 960] (tall) / [480, 720, 960] (4:5), max upscale 1.15x; AVIF q62, WebP q84, JPEG q86",
+    "No generative editing, compositing, retouching or sharpening; packaging pixels untouched beyond the global tone grade",
+    "Monochrome is a CSS filter at display time"
+  ],
+  "product_packaging_present": true,
+  "people": "real model from the owner shoot; no face in frame; not AI-generated",
+  "script": "design-sources/home-2026/build_wc_ritual.py",
+  "usage": "Homepage Ritual section (template-parts/home-2026/final.php), step panel"
+}

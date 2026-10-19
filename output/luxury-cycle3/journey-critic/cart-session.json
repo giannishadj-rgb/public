@@ -1,0 +1,105 @@
+{
+  "cookies": [
+    {
+      "name": "sbjs_migrations",
+      "value": "1418474375998%3D1",
+      "domain": ".caviarofswitzerland.local",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "None"
+    },
+    {
+      "name": "sbjs_current_add",
+      "value": "fd%3D2026-10-17%2005%3A42%3A00%7C%7C%7Cep%3Dhttp%3A%2F%2Fcaviarofswitzerland.local%2Fshop%2F%7C%7C%7Crf%3Dhttp%3A%2F%2Fcaviarofswitzerland.local%2F",
+      "domain": ".caviarofswitzerland.local",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "None"
+    },
+    {
+      "name": "sbjs_first_add",
+      "value": "fd%3D2026-10-17%2005%3A42%3A00%7C%7C%7Cep%3Dhttp%3A%2F%2Fcaviarofswitzerland.local%2Fshop%2F%7C%7C%7Crf%3Dhttp%3A%2F%2Fcaviarofswitzerland.local%2F",
+      "domain": ".caviarofswitzerland.local",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "None"
+    },
+    {
+      "name": "sbjs_first",
+      "value": "typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29",
+      "domain": ".caviarofswitzerland.local",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "None"
+    },
+    {
+      "name": "sbjs_current",
+      "value": "typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29",
+      "domain": ".caviarofswitzerland.local",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "None"
+    },
+    {
+      "name": "sbjs_udata",
+      "value": "vst%3D1%7C%7C%7Cuip%3D%28none%29%7C%7C%7Cuag%3DMozilla%2F5.0%20%28iPhone%3B%20CPU%20iPhone%20OS%2015_0%20like%20Mac%20OS%20X%29%20AppleWebKit%2F605.1.15%20%28KHTML%2C%20like%20Gecko%29%20Version%2F26.5%20Mobile%2F15E148%20Safari%2F604.1",
+      "domain": ".caviarofswitzerland.local",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "None"
+    },
+    {
+      "name": "sbjs_session",
+      "value": "pgs%3D2%7C%7C%7Ccpg%3Dhttp%3A%2F%2Fcaviarofswitzerland.local%2Fproducts%2F24h-regeneration-cream%2F",
+      "domain": ".caviarofswitzerland.local",
+      "path": "/",
+      "expires": 1792217524,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "None"
+    },
+    {
+      "name": "woocommerce_items_in_cart",
+      "value": "1",
+      "domain": "caviarofswitzerland.local",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "None"
+    },
+    {
+      "name": "woocommerce_cart_hash",
+      "value": "fe4db4afabcd65d857eec875e2d2e9b0",
+      "domain": "caviarofswitzerland.local",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "None"
+    },
+    {
+      "name": "wp_woocommerce_session_937966d2c7c964c8a74d9fc1439a6843",
+      "value": "t_fb964c84801d91f62943535da9ac5f%7C1792388528%7C1792302128%7C268967b9b79b994ac1b3c8da82682b43",
+      "domain": "caviarofswitzerland.local",
+      "path": "/",
+      "expires": 1792388528.089,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "None"
+    }
+  ],
+  "origins": []
+}

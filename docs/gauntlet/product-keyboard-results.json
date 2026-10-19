@@ -1,0 +1,302 @@
+[
+  {
+    "engine": "chromium",
+    "width": 360,
+    "motion": "reduce",
+    "method": "native Tab",
+    "states": [
+      {
+        "outline": "solid",
+        "count": "1"
+      },
+      {
+        "outline": "solid",
+        "count": "2"
+      },
+      {
+        "outline": "solid",
+        "count": "3"
+      },
+      {
+        "outline": "solid",
+        "count": "4"
+      }
+    ],
+    "backward": true
+  },
+  {
+    "engine": "chromium",
+    "width": 360,
+    "motion": "no-preference",
+    "method": "native Tab",
+    "states": [
+      {
+        "outline": "solid",
+        "count": "1"
+      },
+      {
+        "outline": "solid",
+        "count": "2"
+      },
+      {
+        "outline": "solid",
+        "count": "3"
+      },
+      {
+        "outline": "solid",
+        "count": "4"
+      }
+    ],
+    "backward": true
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "motion": "reduce",
+    "method": "native Tab",
+    "states": [
+      {
+        "outline": "solid",
+        "count": "1"
+      },
+      {
+        "outline": "solid",
+        "count": "2"
+      },
+      {
+        "outline": "solid",
+        "count": "3"
+      },
+      {
+        "outline": "solid",
+        "count": "4"
+      }
+    ],
+    "backward": true
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "motion": "no-preference",
+    "method": "native Tab",
+    "states": [
+      {
+        "outline": "solid",
+        "count": "1"
+      },
+      {
+        "outline": "solid",
+        "count": "2"
+      },
+      {
+        "outline": "solid",
+        "count": "3"
+      },
+      {
+        "outline": "solid",
+        "count": "4"
+      }
+    ],
+    "backward": true
+  },
+  {
+    "engine": "chromium",
+    "width": 430,
+    "motion": "reduce",
+    "method": "native Tab",
+    "states": [
+      {
+        "outline": "solid",
+        "count": "1"
+      },
+      {
+        "outline": "solid",
+        "count": "2"
+      },
+      {
+        "outline": "solid",
+        "count": "3"
+      },
+      {
+        "outline": "solid",
+        "count": "4"
+      }
+    ],
+    "backward": true
+  },
+  {
+    "engine": "chromium",
+    "width": 430,
+    "motion": "no-preference",
+    "method": "native Tab",
+    "states": [
+      {
+        "outline": "solid",
+        "count": "1"
+      },
+      {
+        "outline": "solid",
+        "count": "2"
+      },
+      {
+        "outline": "solid",
+        "count": "3"
+      },
+      {
+        "outline": "solid",
+        "count": "4"
+      }
+    ],
+    "backward": true
+  },
+  {
+    "engine": "webkit",
+    "width": 360,
+    "motion": "reduce",
+    "method": "keyboard-mode focus (default harness skips native links)",
+    "states": [
+      {
+        "outline": "solid",
+        "count": "1"
+      },
+      {
+        "outline": "solid",
+        "count": "2"
+      },
+      {
+        "outline": "solid",
+        "count": "3"
+      },
+      {
+        "outline": "solid",
+        "count": "4"
+      }
+    ],
+    "backward": true
+  },
+  {
+    "engine": "webkit",
+    "width": 360,
+    "motion": "no-preference",
+    "method": "keyboard-mode focus (default harness skips native links)",
+    "states": [
+      {
+        "outline": "solid",
+        "count": "1"
+      },
+      {
+        "outline": "solid",
+        "count": "2"
+      },
+      {
+        "outline": "solid",
+        "count": "3"
+      },
+      {
+        "outline": "solid",
+        "count": "4"
+      }
+    ],
+    "backward": true
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "motion": "reduce",
+    "method": "keyboard-mode focus (default harness skips native links)",
+    "states": [
+      {
+        "outline": "solid",
+        "count": "1"
+      },
+      {
+        "outline": "solid",
+        "count": "2"
+      },
+      {
+        "outline": "solid",
+        "count": "3"
+      },
+      {
+        "outline": "solid",
+        "count": "4"
+      }
+    ],
+    "backward": true
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "motion": "no-preference",
+    "method": "keyboard-mode focus (default harness skips native links)",
+    "states": [
+      {
+        "outline": "solid",
+        "count": "1"
+      },
+      {
+        "outline": "solid",
+        "count": "2"
+      },
+      {
+        "outline": "solid",
+        "count": "3"
+      },
+      {
+        "outline": "solid",
+        "count": "4"
+      }
+    ],
+    "backward": true
+  },
+  {
+    "engine": "webkit",
+    "width": 430,
+    "motion": "reduce",
+    "method": "keyboard-mode focus (default harness skips native links)",
+    "states": [
+      {
+        "outline": "solid",
+        "count": "1"
+      },
+      {
+        "outline": "solid",
+        "count": "2"
+      },
+      {
+        "outline": "solid",
+        "count": "3"
+      },
+      {
+        "outline": "solid",
+        "count": "4"
+      }
+    ],
+    "backward": true
+  },
+  {
+    "engine": "webkit",
+    "width": 430,
+    "motion": "no-preference",
+    "method": "keyboard-mode focus (default harness skips native links)",
+    "states": [
+      {
+        "outline": "solid",
+        "count": "1"
+      },
+      {
+        "outline": "solid",
+        "count": "2"
+      },
+      {
+        "outline": "solid",
+        "count": "3"
+      },
+      {
+        "outline": "solid",
+        "count": "4"
+      }
+    ],
+    "backward": true
+  }
+]

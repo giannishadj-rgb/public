@@ -1,0 +1,1433 @@
+[
+  {
+    "name": "desktop",
+    "route": "/",
+    "status": 200,
+    "errors": [],
+    "width": 1440,
+    "overflow": 0,
+    "sections": [
+      {
+        "class": "hxh h26-hero--pearl",
+        "id": "",
+        "y": 0,
+        "height": 950,
+        "padding": "0px",
+        "display": "flex",
+        "cols": "none",
+        "heading": "The Swiss art of\n\t\t\t\tcaviar skincare"
+      },
+      {
+        "class": "hxc",
+        "id": "collection",
+        "y": 950,
+        "height": 1063,
+        "padding": "105.6px 0px 97.6px",
+        "display": "block",
+        "cols": "none",
+        "heading": "The Collection"
+      },
+      {
+        "class": "hxv",
+        "id": "caviar",
+        "y": 2013,
+        "height": 1198,
+        "padding": "0px",
+        "display": "block",
+        "cols": "none",
+        "heading": "Caviar in every formula"
+      },
+      {
+        "class": "hxs",
+        "id": "evidence",
+        "y": 3211,
+        "height": 1247,
+        "padding": "121.6px 0px",
+        "display": "block",
+        "cols": "none",
+        "heading": "Protect. Repair. Rejuvenate."
+      },
+      {
+        "class": "hxp",
+        "id": "heritage",
+        "y": 4457,
+        "height": 1149,
+        "padding": "0px",
+        "display": "block",
+        "cols": "none",
+        "heading": "Fewer things, made well."
+      },
+      {
+        "class": "hxr",
+        "id": "ritual",
+        "y": 5606,
+        "height": 1049,
+        "padding": "121.6px 0px 64px",
+        "display": "block",
+        "cols": "none",
+        "heading": "The Ritual"
+      },
+      {
+        "class": "hxz",
+        "id": "closing",
+        "y": 6655,
+        "height": 855,
+        "padding": "201.6px 0px 52.8px",
+        "display": "block",
+        "cols": "none",
+        "heading": "Swiss skincare, refined to the essential."
+      }
+    ],
+    "headings": [
+      {
+        "text": "The Swiss art of\n\t\t\t\tcaviar skincare",
+        "size": "60px",
+        "line": "62.4px"
+      },
+      {
+        "text": "The Collection",
+        "size": "60px",
+        "line": "63.6px"
+      },
+      {
+        "text": "Micellar Water All‑in‑One Cleanser",
+        "size": "29.968px",
+        "line": "35.3622px"
+      },
+      {
+        "text": "Advanced Repair Serum",
+        "size": "29.968px",
+        "line": "35.3622px"
+      },
+      {
+        "text": "Revitalizing Eye Cream",
+        "size": "29.968px",
+        "line": "35.3622px"
+      },
+      {
+        "text": "24h Regeneration Cream",
+        "size": "29.968px",
+        "line": "35.3622px"
+      },
+      {
+        "text": "Caviar in every formula",
+        "size": "60px",
+        "line": "63.6px"
+      },
+      {
+        "text": "Protect. Repair. Rejuvenate.",
+        "size": "24px",
+        "line": "39.6px"
+      },
+      {
+        "text": "Protect.",
+        "size": "60px",
+        "line": "63.6px"
+      },
+      {
+        "text": "Repair.",
+        "size": "60px",
+        "line": "63.6px"
+      },
+      {
+        "text": "Rejuvenate.",
+        "size": "60px",
+        "line": "63.6px"
+      },
+      {
+        "text": "Measured, formula by formula.",
+        "size": "29.968px",
+        "line": "35.3622px"
+      },
+      {
+        "text": "Fewer things, made well.",
+        "size": "60px",
+        "line": "63.6px"
+      },
+      {
+        "text": "The Ritual",
+        "size": "60px",
+        "line": "63.6px"
+      },
+      {
+        "text": "Swiss skincare, refined to the essential.",
+        "size": "114.4px",
+        "line": "125.84px"
+      },
+      {
+        "text": "The Caviar Circle",
+        "size": "43.92px",
+        "line": "46.5552px"
+      },
+      {
+        "text": "Customer Care",
+        "size": "11.5px",
+        "line": "16.1px"
+      },
+      {
+        "text": "Explore",
+        "size": "11.5px",
+        "line": "16.1px"
+      },
+      {
+        "text": "The House in Zug",
+        "size": "11.5px",
+        "line": "16.1px"
+      },
+      {
+        "text": "Added to your bag",
+        "size": "11.5px",
+        "line": "16.1px"
+      }
+    ],
+    "smallText": [
+      {
+        "text": "Made in Zug · Instrument‑measured results",
+        "size": "14px"
+      },
+      {
+        "text": "Shop the Complete Ritual",
+        "size": "11px"
+      },
+      {
+        "text": "The signature ingredient",
+        "size": "11.5px"
+      },
+      {
+        "text": "Why caviar",
+        "size": "14px"
+      },
+      {
+        "text": "Swiss science",
+        "size": "11.5px"
+      },
+      {
+        "text": "Key actives: Caviar extract ·, Superoxide Dismutase ·, Resveratrol",
+        "size": "14px"
+      },
+      {
+        "text": "Key actives: Caviar phospholipids ·, Hyaluronic acid",
+        "size": "14px"
+      },
+      {
+        "text": "Key actives: SYN®‑COLL peptide ·, Caviar extract",
+        "size": "14px"
+      },
+      {
+        "text": "Separate 28‑day studies, each of a single formula, by an independent contract research org",
+        "size": "14px"
+      },
+      {
+        "text": "Advanced Repair Serum",
+        "size": "14px"
+      },
+      {
+        "text": "Instrument‑measured: Cutometry, 32 women aged 45–60, 28 days",
+        "size": "14px"
+      },
+      {
+        "text": "Revitalizing Eye Cream",
+        "size": "14px"
+      },
+      {
+        "text": "Instrument‑measured: Optical profilometry, 30 women aged 42–65, 28 days",
+        "size": "14px"
+      },
+      {
+        "text": "24h Regeneration Cream",
+        "size": "14px"
+      },
+      {
+        "text": "Self‑reported: 34 women aged 40–65, 28 days",
+        "size": "14px"
+      },
+      {
+        "text": "Read the studies",
+        "size": "14px"
+      },
+      {
+        "text": "Swiss provenance",
+        "size": "11.5px"
+      },
+      {
+        "text": "Our Swiss heritage",
+        "size": "14px"
+      },
+      {
+        "text": "How we formulate in Zug",
+        "size": "14px"
+      },
+      {
+        "text": "Shop the Complete Ritual",
+        "size": "14px"
+      }
+    ],
+    "smallTargets": [
+      {
+        "text": "Skip to main content",
+        "w": 41,
+        "h": 25
+      },
+      {
+        "text": "Home",
+        "w": 43,
+        "h": 18
+      },
+      {
+        "text": "Shop",
+        "w": 40,
+        "h": 18
+      },
+      {
+        "text": "The Ritual",
+        "w": 87,
+        "h": 18
+      },
+      {
+        "text": "Swiss Science",
+        "w": 116,
+        "h": 18
+      },
+      {
+        "text": "Swiss Heritage",
+        "w": 124,
+        "h": 18
+      },
+      {
+        "text": "Caviar of Switzerland — Home",
+        "w": 111,
+        "h": 42
+      },
+      {
+        "text": "Privacy Policy",
+        "w": 85,
+        "h": 16
+      },
+      {
+        "text": "Contact",
+        "w": 299,
+        "h": 34
+      },
+      {
+        "text": "Shipping & Returns",
+        "w": 299,
+        "h": 34
+      },
+      {
+        "text": "Track My Order",
+        "w": 299,
+        "h": 34
+      },
+      {
+        "text": "My Account",
+        "w": 299,
+        "h": 34
+      },
+      {
+        "text": "Terms & Conditions",
+        "w": 299,
+        "h": 34
+      },
+      {
+        "text": "Privacy Policy",
+        "w": 299,
+        "h": 34
+      },
+      {
+        "text": "Shop",
+        "w": 299,
+        "h": 34
+      },
+      {
+        "text": "The Ritual",
+        "w": 299,
+        "h": 34
+      },
+      {
+        "text": "Swiss Science",
+        "w": 299,
+        "h": 34
+      },
+      {
+        "text": "Swiss Heritage",
+        "w": 299,
+        "h": 34
+      },
+      {
+        "text": "Journal",
+        "w": 299,
+        "h": 34
+      },
+      {
+        "text": "Sustainability",
+        "w": 299,
+        "h": 34
+      },
+      {
+        "text": "Sitemap",
+        "w": 299,
+        "h": 34
+      },
+      {
+        "text": "info@caviarofswitzerland.com",
+        "w": 200,
+        "h": 34
+      }
+    ],
+    "images": [
+      {
+        "src": "logo-222w.webp",
+        "natural": 119,
+        "w": 111,
+        "loading": "eager"
+      },
+      {
+        "src": "hxh-wide-2560.avif?v=1792134869",
+        "natural": 2251,
+        "w": 1440,
+        "loading": "eager"
+      },
+      {
+        "src": "collection-object-cleanser-480.avif?v=1792134859",
+        "natural": 345,
+        "w": 299,
+        "loading": "lazy"
+      },
+      {
+        "src": "collection-object-serum-480.avif?v=1792134877",
+        "natural": 345,
+        "w": 299,
+        "loading": "lazy"
+      },
+      {
+        "src": "collection-object-eye-480.avif?v=1792134907",
+        "natural": 345,
+        "w": 299,
+        "loading": "lazy"
+      },
+      {
+        "src": "collection-object-cream-480.avif?v=1792134949",
+        "natural": 345,
+        "w": 299,
+        "loading": "lazy"
+      },
+      {
+        "src": "hxv-field-2048.avif?v=1792134895",
+        "natural": 1670,
+        "w": 1440,
+        "loading": "lazy"
+      },
+      {
+        "src": "collection-object-serum-480.avif?v=1792134877",
+        "natural": 160,
+        "w": 150,
+        "loading": "lazy"
+      },
+      {
+        "src": "collection-object-eye-480.avif?v=1792134907",
+        "natural": 160,
+        "w": 150,
+        "loading": "lazy"
+      },
+      {
+        "src": "provenance-summit-wide-1440.avif?v=1792067690",
+        "natural": 1440,
+        "w": 1440,
+        "loading": "lazy"
+      },
+      {
+        "src": "hxr-cleanser-tall-480.avif?v=1792134877",
+        "natural": 331,
+        "w": 320,
+        "loading": "lazy"
+      },
+      {
+        "src": "hxr-serum-tall-480.avif?v=1792134905",
+        "natural": 331,
+        "w": 320,
+        "loading": "lazy"
+      },
+      {
+        "src": "hxr-eye-tall-480.avif?v=1792134945",
+        "natural": 331,
+        "w": 320,
+        "loading": "lazy"
+      },
+      {
+        "src": "hxr-cream-tall-480.avif?v=1792134979",
+        "natural": 331,
+        "w": 320,
+        "loading": "lazy"
+      },
+      {
+        "src": "logo-light-222w.webp",
+        "natural": 119,
+        "w": 106,
+        "loading": "lazy"
+      },
+      {
+        "src": "gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+        "natural": 1,
+        "w": 80,
+        "loading": "auto"
+      }
+    ],
+    "resources": [
+      {
+        "name": "provenance-summit-wide-1440.avif?v=1792067690",
+        "bytes": 70108,
+        "duration": 8
+      },
+      {
+        "name": "hxv-field-2048.avif?v=1792134895",
+        "bytes": 54359,
+        "duration": 9
+      },
+      {
+        "name": "inter-var-latin.woff2",
+        "bytes": 48556,
+        "duration": 12
+      },
+      {
+        "name": "cormorant-garamond-var-latin.woff2",
+        "bytes": 37940,
+        "duration": 88
+      },
+      {
+        "name": "hxh-wide-2560.avif?v=1792134869",
+        "bytes": 26109,
+        "duration": 13
+      },
+      {
+        "name": "collection-object-cleanser-480.avif?v=1792134859",
+        "bytes": 23975,
+        "duration": 8
+      },
+      {
+        "name": "cormorant-garamond-300-italic-latin.woff2",
+        "bytes": 22784,
+        "duration": 14
+      },
+      {
+        "name": "collection-object-cream-480.avif?v=1792134949",
+        "bytes": 20803,
+        "duration": 7
+      },
+      {
+        "name": "collection-object-eye-480.avif?v=1792134907",
+        "bytes": 20771,
+        "duration": 10
+      },
+      {
+        "name": "hxr-serum-tall-480.avif?v=1792134905",
+        "bytes": 20685,
+        "duration": 17
+      },
+      {
+        "name": "hxr-eye-tall-480.avif?v=1792134945",
+        "bytes": 20093,
+        "duration": 16
+      },
+      {
+        "name": "collection-object-serum-480.avif?v=1792134877",
+        "bytes": 19839,
+        "duration": 9
+      }
+    ],
+    "violations": []
+  },
+  {
+    "name": "iphone-webkit",
+    "route": "/",
+    "status": 200,
+    "errors": [],
+    "width": 390,
+    "overflow": 0,
+    "sections": [
+      {
+        "class": "hxh h26-hero--pearl",
+        "id": "",
+        "y": 0,
+        "height": 664,
+        "padding": "0px",
+        "display": "flex",
+        "cols": "none",
+        "heading": "The Swiss art of\n\t\t\t\tcaviar skincare"
+      },
+      {
+        "class": "hxc",
+        "id": "collection",
+        "y": 664,
+        "height": 1139,
+        "padding": "64px 0px 56px",
+        "display": "block",
+        "cols": "none",
+        "heading": "The Collection"
+      },
+      {
+        "class": "hxv",
+        "id": "caviar",
+        "y": 1803,
+        "height": 1226,
+        "padding": "0px",
+        "display": "block",
+        "cols": "none",
+        "heading": "Caviar in every formula"
+      },
+      {
+        "class": "hxs",
+        "id": "evidence",
+        "y": 3029,
+        "height": 1567,
+        "padding": "79.599998px 0px",
+        "display": "block",
+        "cols": "none",
+        "heading": "Protect. Repair. Rejuvenate."
+      },
+      {
+        "class": "hxp",
+        "id": "heritage",
+        "y": 4596,
+        "height": 1112,
+        "padding": "0px",
+        "display": "block",
+        "cols": "none",
+        "heading": "Fewer things, made well."
+      },
+      {
+        "class": "hxr",
+        "id": "ritual",
+        "y": 5708,
+        "height": 862,
+        "padding": "79.599998px 0px 48px",
+        "display": "block",
+        "cols": "none",
+        "heading": "The Ritual"
+      },
+      {
+        "class": "hxz",
+        "id": "closing",
+        "y": 6569,
+        "height": 552,
+        "padding": "130.777496px 0px 32px",
+        "display": "block",
+        "cols": "none",
+        "heading": "Swiss skincare, refined to the essential."
+      }
+    ],
+    "headings": [
+      {
+        "text": "The Swiss art of\n\t\t\t\tcaviar skincare",
+        "size": "40px",
+        "line": "41.599998px"
+      },
+      {
+        "text": "The Collection",
+        "size": "34px",
+        "line": "36.040001px"
+      },
+      {
+        "text": "Micellar Water All‑in‑One Cleanser",
+        "size": "19px",
+        "line": "22.42px"
+      },
+      {
+        "text": "Advanced Repair Serum",
+        "size": "19px",
+        "line": "22.42px"
+      },
+      {
+        "text": "Revitalizing Eye Cream",
+        "size": "19px",
+        "line": "22.42px"
+      },
+      {
+        "text": "24h Regeneration Cream",
+        "size": "19px",
+        "line": "22.42px"
+      },
+      {
+        "text": "Caviar in every formula",
+        "size": "34px",
+        "line": "36.040001px"
+      },
+      {
+        "text": "Protect. Repair. Rejuvenate.",
+        "size": "24px",
+        "line": "39.599998px"
+      },
+      {
+        "text": "Protect.",
+        "size": "34px",
+        "line": "36.040001px"
+      },
+      {
+        "text": "Repair.",
+        "size": "34px",
+        "line": "36.040001px"
+      },
+      {
+        "text": "Rejuvenate.",
+        "size": "34px",
+        "line": "36.040001px"
+      },
+      {
+        "text": "Measured, formula by formula.",
+        "size": "24px",
+        "line": "28.32px"
+      },
+      {
+        "text": "Fewer things, made well.",
+        "size": "34px",
+        "line": "36.040001px"
+      },
+      {
+        "text": "The Ritual",
+        "size": "34px",
+        "line": "36.040001px"
+      },
+      {
+        "text": "Swiss skincare, refined to the essential.",
+        "size": "42.408001px",
+        "line": "46.6488px"
+      },
+      {
+        "text": "The Caviar Circle",
+        "size": "32px",
+        "line": "33.919998px"
+      },
+      {
+        "text": "Customer Care",
+        "size": "11.5px",
+        "line": "16.1px"
+      },
+      {
+        "text": "Explore",
+        "size": "11.5px",
+        "line": "16.1px"
+      },
+      {
+        "text": "The House in Zug",
+        "size": "11.5px",
+        "line": "16.1px"
+      },
+      {
+        "text": "Added to your bag",
+        "size": "11.5px",
+        "line": "16.1px"
+      }
+    ],
+    "smallText": [
+      {
+        "text": "Made in Zug · Instrument‑measured results",
+        "size": "13px"
+      },
+      {
+        "text": "Shop the Complete Ritual",
+        "size": "11px"
+      },
+      {
+        "text": "The signature ingredient",
+        "size": "11.5px"
+      },
+      {
+        "text": "Why caviar",
+        "size": "14px"
+      },
+      {
+        "text": "Swiss science",
+        "size": "11.5px"
+      },
+      {
+        "text": "Key actives: Caviar extract ·, Superoxide Dismutase ·, Resveratrol",
+        "size": "14px"
+      },
+      {
+        "text": "Key actives: Caviar phospholipids ·, Hyaluronic acid",
+        "size": "14px"
+      },
+      {
+        "text": "Key actives: SYN®‑COLL peptide ·, Caviar extract",
+        "size": "14px"
+      },
+      {
+        "text": "Separate 28‑day studies, each of a single formula, by an independent contract research org",
+        "size": "14px"
+      },
+      {
+        "text": "Advanced Repair Serum",
+        "size": "14px"
+      },
+      {
+        "text": "Instrument‑measured: Cutometry, 32 women aged 45–60, 28 days",
+        "size": "14px"
+      },
+      {
+        "text": "Revitalizing Eye Cream",
+        "size": "14px"
+      },
+      {
+        "text": "Instrument‑measured: Optical profilometry, 30 women aged 42–65, 28 days",
+        "size": "14px"
+      },
+      {
+        "text": "24h Regeneration Cream",
+        "size": "14px"
+      },
+      {
+        "text": "Self‑reported: 34 women aged 40–65, 28 days",
+        "size": "14px"
+      },
+      {
+        "text": "Read the studies",
+        "size": "14px"
+      },
+      {
+        "text": "Swiss provenance",
+        "size": "11.5px"
+      },
+      {
+        "text": "Our Swiss heritage",
+        "size": "14px"
+      },
+      {
+        "text": "How we formulate in Zug",
+        "size": "14px"
+      },
+      {
+        "text": "Shop the Complete Ritual",
+        "size": "12px"
+      }
+    ],
+    "smallTargets": [
+      {
+        "text": "Skip to main content",
+        "w": 41,
+        "h": 25
+      },
+      {
+        "text": "Caviar of Switzerland — Home",
+        "w": 111,
+        "h": 42
+      },
+      {
+        "text": "Help",
+        "w": 31,
+        "h": 44
+      },
+      {
+        "text": "Privacy Policy",
+        "w": 86,
+        "h": 16
+      }
+    ],
+    "images": [
+      {
+        "src": "logo-222w.webp",
+        "natural": 119,
+        "w": 111,
+        "loading": "eager"
+      },
+      {
+        "src": "hxh-tall-720.webp?v=1792134875",
+        "natural": 390,
+        "w": 390,
+        "loading": "eager"
+      },
+      {
+        "src": "collection-object-cleanser-720.webp?v=1792134865",
+        "natural": 179,
+        "w": 164,
+        "loading": "lazy"
+      },
+      {
+        "src": "collection-object-serum-720.webp?v=1792134884",
+        "natural": 179,
+        "w": 164,
+        "loading": "lazy"
+      },
+      {
+        "src": "collection-object-eye-720.webp?v=1792134918",
+        "natural": 179,
+        "w": 164,
+        "loading": "lazy"
+      },
+      {
+        "src": "collection-object-cream-720.webp?v=1792134962",
+        "natural": 179,
+        "w": 164,
+        "loading": "lazy"
+      },
+      {
+        "src": "hxv-field-tall-1280.webp?v=1792134988",
+        "natural": 390,
+        "w": 390,
+        "loading": "lazy"
+      },
+      {
+        "src": "collection-object-serum-480.webp?v=1792134878",
+        "natural": 112,
+        "w": 88,
+        "loading": "lazy"
+      },
+      {
+        "src": "collection-object-eye-480.webp?v=1792134909",
+        "natural": 112,
+        "w": 88,
+        "loading": "lazy"
+      },
+      {
+        "src": "provenance-summit-tall-960.webp?v=1792067702",
+        "natural": 389,
+        "w": 390,
+        "loading": "lazy"
+      },
+      {
+        "src": "hxr-cleanser-960.webp?v=1792134888",
+        "natural": 335,
+        "w": 330,
+        "loading": "lazy"
+      },
+      {
+        "src": "hxr-serum-960.webp?v=1792134932",
+        "natural": 335,
+        "w": 330,
+        "loading": "lazy"
+      },
+      {
+        "src": "hxr-eye-960.webp?v=1792134968",
+        "natural": 0,
+        "w": 330,
+        "loading": "lazy"
+      },
+      {
+        "src": "hxr-cream-960.webp?v=1792134998",
+        "natural": 0,
+        "w": 330,
+        "loading": "lazy"
+      },
+      {
+        "src": "logo-light-222w.webp",
+        "natural": 119,
+        "w": 106,
+        "loading": "lazy"
+      },
+      {
+        "src": "gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+        "natural": 1,
+        "w": 80,
+        "loading": "eager"
+      }
+    ],
+    "resources": [
+      {
+        "name": "inter-var-latin.woff2",
+        "bytes": 48556,
+        "duration": 15
+      },
+      {
+        "name": "cormorant-garamond-var-latin.woff2",
+        "bytes": 37940,
+        "duration": 2
+      },
+      {
+        "name": "hxh-tall-720.webp?v=1792134875",
+        "bytes": 28534,
+        "duration": 35
+      },
+      {
+        "name": "cormorant-garamond-300-italic-latin.woff2",
+        "bytes": 22784,
+        "duration": 15
+      },
+      {
+        "name": "home-2026.css?ver=1791917431",
+        "bytes": 12864,
+        "duration": 4
+      },
+      {
+        "name": "system.css?ver=1792137439",
+        "bytes": 8353,
+        "duration": 7
+      },
+      {
+        "name": "home-2026-nocturne.css?ver=1791821435",
+        "bytes": 7863,
+        "duration": 5
+      },
+      {
+        "name": "chrome.css?ver=1792210135",
+        "bytes": 7722,
+        "duration": 33
+      },
+      {
+        "name": "ritual.css?ver=1792135055",
+        "bytes": 4184,
+        "duration": 33
+      },
+      {
+        "name": "logo-222w.webp",
+        "bytes": 4094,
+        "duration": 33
+      },
+      {
+        "name": "hx-motion.js?ver=1792134877",
+        "bytes": 3123,
+        "duration": 36
+      },
+      {
+        "name": "collection.css?ver=1792135025",
+        "bytes": 2666,
+        "duration": 8
+      }
+    ],
+    "violations": []
+  },
+  {
+    "name": "mobile-chromium",
+    "route": "/",
+    "status": 200,
+    "errors": [],
+    "width": 412,
+    "overflow": 0,
+    "sections": [
+      {
+        "class": "hxh h26-hero--pearl",
+        "id": "",
+        "y": 0,
+        "height": 839,
+        "padding": "0px",
+        "display": "flex",
+        "cols": "none",
+        "heading": "The Swiss art of\n\t\t\t\tcaviar skincare"
+      },
+      {
+        "class": "hxc",
+        "id": "collection",
+        "y": 839,
+        "height": 1172,
+        "padding": "64.48px 0px 56.48px",
+        "display": "block",
+        "cols": "none",
+        "heading": "The Collection"
+      },
+      {
+        "class": "hxv",
+        "id": "caviar",
+        "y": 2011,
+        "height": 1255,
+        "padding": "0px",
+        "display": "block",
+        "cols": "none",
+        "heading": "Caviar in every formula"
+      },
+      {
+        "class": "hxs",
+        "id": "evidence",
+        "y": 3267,
+        "height": 1538,
+        "padding": "80.48px 0px",
+        "display": "block",
+        "cols": "none",
+        "heading": "Protect. Repair. Rejuvenate."
+      },
+      {
+        "class": "hxp",
+        "id": "heritage",
+        "y": 4805,
+        "height": 1143,
+        "padding": "0px",
+        "display": "block",
+        "cols": "none",
+        "heading": "Fewer things, made well."
+      },
+      {
+        "class": "hxr",
+        "id": "ritual",
+        "y": 5948,
+        "height": 894,
+        "padding": "80.48px 0px 48px",
+        "display": "block",
+        "cols": "none",
+        "heading": "The Ritual"
+      },
+      {
+        "class": "hxz",
+        "id": "closing",
+        "y": 6842,
+        "height": 533,
+        "padding": "132.279px 0px 32.24px",
+        "display": "block",
+        "cols": "none",
+        "heading": "Swiss skincare, refined to the essential."
+      }
+    ],
+    "headings": [
+      {
+        "text": "The Swiss art of\n\t\t\t\tcaviar skincare",
+        "size": "40px",
+        "line": "41.6px"
+      },
+      {
+        "text": "The Collection",
+        "size": "34.5376px",
+        "line": "36.6099px"
+      },
+      {
+        "text": "Micellar Water All‑in‑One Cleanser",
+        "size": "19px",
+        "line": "22.42px"
+      },
+      {
+        "text": "Advanced Repair Serum",
+        "size": "19px",
+        "line": "22.42px"
+      },
+      {
+        "text": "Revitalizing Eye Cream",
+        "size": "19px",
+        "line": "22.42px"
+      },
+      {
+        "text": "24h Regeneration Cream",
+        "size": "19px",
+        "line": "22.42px"
+      },
+      {
+        "text": "Caviar in every formula",
+        "size": "34.5376px",
+        "line": "36.6099px"
+      },
+      {
+        "text": "Protect. Repair. Rejuvenate.",
+        "size": "24px",
+        "line": "39.6px"
+      },
+      {
+        "text": "Protect.",
+        "size": "34.5376px",
+        "line": "36.6099px"
+      },
+      {
+        "text": "Repair.",
+        "size": "34.5376px",
+        "line": "36.6099px"
+      },
+      {
+        "text": "Rejuvenate.",
+        "size": "34.5376px",
+        "line": "36.6099px"
+      },
+      {
+        "text": "Measured, formula by formula.",
+        "size": "24.1084px",
+        "line": "28.4479px"
+      },
+      {
+        "text": "Fewer things, made well.",
+        "size": "34.5376px",
+        "line": "36.6099px"
+      },
+      {
+        "text": "The Ritual",
+        "size": "34.5376px",
+        "line": "36.6099px"
+      },
+      {
+        "text": "Swiss skincare, refined to the essential.",
+        "size": "45.136px",
+        "line": "49.6496px"
+      },
+      {
+        "text": "The Caviar Circle",
+        "size": "32px",
+        "line": "33.92px"
+      },
+      {
+        "text": "Customer Care",
+        "size": "11.5px",
+        "line": "16.1px"
+      },
+      {
+        "text": "Explore",
+        "size": "11.5px",
+        "line": "16.1px"
+      },
+      {
+        "text": "The House in Zug",
+        "size": "11.5px",
+        "line": "16.1px"
+      },
+      {
+        "text": "Added to your bag",
+        "size": "11.5px",
+        "line": "16.1px"
+      }
+    ],
+    "smallText": [
+      {
+        "text": "Made in Zug · Instrument‑measured results",
+        "size": "13px"
+      },
+      {
+        "text": "Shop the Complete Ritual",
+        "size": "11px"
+      },
+      {
+        "text": "The signature ingredient",
+        "size": "11.5px"
+      },
+      {
+        "text": "Why caviar",
+        "size": "14px"
+      },
+      {
+        "text": "Swiss science",
+        "size": "11.5px"
+      },
+      {
+        "text": "Key actives: Caviar extract ·, Superoxide Dismutase ·, Resveratrol",
+        "size": "14px"
+      },
+      {
+        "text": "Key actives: Caviar phospholipids ·, Hyaluronic acid",
+        "size": "14px"
+      },
+      {
+        "text": "Key actives: SYN®‑COLL peptide ·, Caviar extract",
+        "size": "14px"
+      },
+      {
+        "text": "Separate 28‑day studies, each of a single formula, by an independent contract research org",
+        "size": "14px"
+      },
+      {
+        "text": "Advanced Repair Serum",
+        "size": "14px"
+      },
+      {
+        "text": "Instrument‑measured: Cutometry, 32 women aged 45–60, 28 days",
+        "size": "14px"
+      },
+      {
+        "text": "Revitalizing Eye Cream",
+        "size": "14px"
+      },
+      {
+        "text": "Instrument‑measured: Optical profilometry, 30 women aged 42–65, 28 days",
+        "size": "14px"
+      },
+      {
+        "text": "24h Regeneration Cream",
+        "size": "14px"
+      },
+      {
+        "text": "Self‑reported: 34 women aged 40–65, 28 days",
+        "size": "14px"
+      },
+      {
+        "text": "Read the studies",
+        "size": "14px"
+      },
+      {
+        "text": "Swiss provenance",
+        "size": "11.5px"
+      },
+      {
+        "text": "Our Swiss heritage",
+        "size": "14px"
+      },
+      {
+        "text": "How we formulate in Zug",
+        "size": "14px"
+      },
+      {
+        "text": "Shop the Complete Ritual",
+        "size": "12px"
+      }
+    ],
+    "smallTargets": [
+      {
+        "text": "Skip to main content",
+        "w": 41,
+        "h": 25
+      },
+      {
+        "text": "Caviar of Switzerland — Home",
+        "w": 111,
+        "h": 42
+      },
+      {
+        "text": "Help",
+        "w": 31,
+        "h": 44
+      },
+      {
+        "text": "Privacy Policy",
+        "w": 85,
+        "h": 16
+      }
+    ],
+    "images": [
+      {
+        "src": "logo-222w.webp",
+        "natural": 119,
+        "w": 111,
+        "loading": "eager"
+      },
+      {
+        "src": "hxh-tall-720.avif?v=1792134874",
+        "natural": 434,
+        "w": 412,
+        "loading": "eager"
+      },
+      {
+        "src": "collection-object-cleanser-720.avif?v=1792134860",
+        "natural": 189,
+        "w": 175,
+        "loading": "lazy"
+      },
+      {
+        "src": "collection-object-serum-720.avif?v=1792134882",
+        "natural": 189,
+        "w": 175,
+        "loading": "lazy"
+      },
+      {
+        "src": "collection-object-eye-720.avif?v=1792134913",
+        "natural": 189,
+        "w": 175,
+        "loading": "lazy"
+      },
+      {
+        "src": "collection-object-cream-720.avif?v=1792134956",
+        "natural": 189,
+        "w": 175,
+        "loading": "lazy"
+      },
+      {
+        "src": "hxv-field-tall-1280.avif?v=1792134986",
+        "natural": 412,
+        "w": 412,
+        "loading": "lazy"
+      },
+      {
+        "src": "collection-object-serum-720.avif?v=1792134882",
+        "natural": 112,
+        "w": 88,
+        "loading": "lazy"
+      },
+      {
+        "src": "collection-object-eye-720.avif?v=1792134913",
+        "natural": 112,
+        "w": 88,
+        "loading": "lazy"
+      },
+      {
+        "src": "provenance-summit-tall-960.avif?v=1792067701",
+        "natural": 411,
+        "w": 412,
+        "loading": "lazy"
+      },
+      {
+        "src": "hxr-cleanser-960.avif?v=1792134889",
+        "natural": 354,
+        "w": 354,
+        "loading": "lazy"
+      },
+      {
+        "src": "hxr-serum-960.avif?v=1792134933",
+        "natural": 354,
+        "w": 354,
+        "loading": "lazy"
+      },
+      {
+        "src": "",
+        "natural": 0,
+        "w": 354,
+        "loading": "lazy"
+      },
+      {
+        "src": "",
+        "natural": 0,
+        "w": 354,
+        "loading": "lazy"
+      },
+      {
+        "src": "logo-light-222w.webp",
+        "natural": 119,
+        "w": 106,
+        "loading": "lazy"
+      },
+      {
+        "src": "gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+        "natural": 1,
+        "w": 80,
+        "loading": "auto"
+      }
+    ],
+    "resources": [
+      {
+        "name": "provenance-summit-tall-960.avif?v=1792067701",
+        "bytes": 69863,
+        "duration": 8
+      },
+      {
+        "name": "hxv-field-tall-1280.avif?v=1792134986",
+        "bytes": 53049,
+        "duration": 7
+      },
+      {
+        "name": "collection-object-cleanser-720.avif?v=1792134860",
+        "bytes": 52218,
+        "duration": 7
+      },
+      {
+        "name": "inter-var-latin.woff2",
+        "bytes": 48556,
+        "duration": 7
+      },
+      {
+        "name": "collection-object-serum-720.avif?v=1792134882",
+        "bytes": 47090,
+        "duration": 6
+      },
+      {
+        "name": "collection-object-cream-720.avif?v=1792134956",
+        "bytes": 45550,
+        "duration": 8
+      },
+      {
+        "name": "hxr-cleanser-960.avif?v=1792134889",
+        "bytes": 45202,
+        "duration": 47
+      },
+      {
+        "name": "collection-object-eye-720.avif?v=1792134913",
+        "bytes": 43870,
+        "duration": 4
+      },
+      {
+        "name": "hxr-serum-960.avif?v=1792134933",
+        "bytes": 42429,
+        "duration": 45
+      },
+      {
+        "name": "cormorant-garamond-var-latin.woff2",
+        "bytes": 37940,
+        "duration": 74
+      },
+      {
+        "name": "cormorant-garamond-300-italic-latin.woff2",
+        "bytes": 22784,
+        "duration": 10
+      },
+      {
+        "name": "collection-object-eye-480.avif?v=1792134907",
+        "bytes": 20771,
+        "duration": 4
+      }
+    ],
+    "violations": []
+  }
+]

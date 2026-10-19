@@ -1,0 +1,120 @@
+{
+  "date": "2026-10-17",
+  "scope": "hxz-set-* (homepage closing): the four supplied packshots composed as one set",
+  "paths_relative_to": "WordPress public directory",
+  "sources": {
+    "cleanser": {
+      "path": "../design-sources/home-2026/packshots-2026-10-12/cleanser-flat-2026-10-13.png",
+      "sha256": "1a915b922874b25635b728ced06ce226d77b6f84e234e101b7c248de1796a4e2"
+    },
+    "serum": {
+      "path": "../design-sources/home-2026/packshots-2026-10-12/serum-flat-2026-10-13.png",
+      "sha256": "32264f0c4a21b5261a86c15d82a82fbfb8caf4303da38780228fbafd8a6a96fb"
+    },
+    "eye": {
+      "path": "../design-sources/home-2026/packshots-2026-10-12/eye-flat-2026-10-13.png",
+      "sha256": "d302b18966785c5f91cd774dba69c49dbccd762d2863b68ccf6a3de1d1e0aeb3"
+    },
+    "cream": {
+      "path": "../design-sources/home-2026/packshots-2026-10-12/cream-flat-2026-10-13.png",
+      "sha256": "b87dfe31442067d9290b27b775213c9b3362743e4885a815db0d308f3eb5aba7"
+    }
+  },
+  "builder": {
+    "path": "../design-sources/home-2026/build_hxz_set.py",
+    "sha256": "74c823beececd9f1d6fd8a94c76d82a5c2a0f1bd1aabe5f3c6c5da94dbd1fe9f",
+    "matte_and_shadow_from": "../design-sources/home-2026/build_collection_set.py"
+  },
+  "operations": [
+    "Matte each pack with build_collection_set.matte (traced edges; geometry mirrored about the cap axis; no pixel mirrored)",
+    "Normalise RGB by the measured backdrop colour; keep source pixels inside the matte only; discard the original studio cast shadow",
+    "Downscale only (asserted scale <= 1 for every pack in every master), bicubic with area pre-reduction, no sharpening",
+    "Compose a grouped still life: serum and cleanser behind (0.92 depth scale), eye cream front-left, jar front-right and lowest; real relative sizes; overlaps only on plain body edges / the serum chrome collar, never on a name or wordmark",
+    "Add the Collection synthetic contact shadow (same pools, tint, upper-right key) per pack, on the ground only (every pack is composited over the shadow layer)",
+    "Encode transparent AVIF/WebP; JPEG fallback flattened on RGB 251,250,247"
+  ],
+  "repainting_or_generative_edits": false,
+  "derivatives": [
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/hxz-set-640.avif",
+      "sha256": "c1a57829f9fca3854898ce8fad83a4b4f30e5679c18316bfa0d863e6d41d3765",
+      "bytes": 20905,
+      "dimensions": [
+        640,
+        801
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/hxz-set-640.webp",
+      "sha256": "3000bbcb722e1a4e695ea9551958791a95eadef37c0463fef2bbe9ce60754b3a",
+      "bytes": 34266,
+      "dimensions": [
+        640,
+        801
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/hxz-set-640.jpg",
+      "sha256": "015c5db5d3b2289aabfd3a913a766cdcd90a1077771c769e11073eb879142d99",
+      "bytes": 36839,
+      "dimensions": [
+        640,
+        801
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/hxz-set-900.avif",
+      "sha256": "4ae0fb306d85c0be0f410d7ec8f5e7171eb2a0df5385e2e5d7f086b1dd7ba6cd",
+      "bytes": 32424,
+      "dimensions": [
+        900,
+        1127
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/hxz-set-900.webp",
+      "sha256": "ef16354702d8b9d47ade53632609d9cb7fa8ba9fa88b0d4e6b2442da763e7e76",
+      "bytes": 52198,
+      "dimensions": [
+        900,
+        1127
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/hxz-set-900.jpg",
+      "sha256": "9664d80722aeb121fd94593a4f702e1f852aab8e4c31290cb41650ce5f421a10",
+      "bytes": 59387,
+      "dimensions": [
+        900,
+        1127
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/hxz-set-1150.avif",
+      "sha256": "ec10b541a4994c68a9d683b14842c199ff5739e3396a4985be7d5ab55753ceb1",
+      "bytes": 37044,
+      "dimensions": [
+        1150,
+        1440
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/hxz-set-1150.webp",
+      "sha256": "7a82fc02d8b81886a7e747bc92f0ab3cbf648ffa06e2f8211c78a11039838fd8",
+      "bytes": 61756,
+      "dimensions": [
+        1150,
+        1440
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/hxz-set-1150.jpg",
+      "sha256": "290db8bc919cf0574d95049bb475d6bc5a80e1e051f77502516ac4a98108640f",
+      "bytes": 87268,
+      "dimensions": [
+        1150,
+        1440
+      ]
+    }
+  ]
+}

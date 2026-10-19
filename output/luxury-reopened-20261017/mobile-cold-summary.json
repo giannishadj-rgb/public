@@ -1,0 +1,48 @@
+{
+  "conditions": {
+    "network": "CDP real-time throttling: 1.6 Mbps down, 0.75 Mbps up, 150 ms request latency",
+    "cpu": "4x slowdown",
+    "cache": "disabled in each new browser context",
+    "viewport": "390x844 DPR 3",
+    "sample": "3 local cold browser runs, no scroll or interaction; 12s settle after load",
+    "server": "Local WP; server OS/opcache may be warm; not a production field or lab speed claim"
+  },
+  "runs": [
+    {
+      "run": 1,
+      "CLS": 0,
+      "CLSsum": 0,
+      "LCP": 1672,
+      "FCP": 1672,
+      "TTFB": 371.40000000596046,
+      "totalEncodedBytes": 398514,
+      "requestCount": 24,
+      "errors": [],
+      "navigationError": null
+    },
+    {
+      "run": 2,
+      "CLS": 0,
+      "CLSsum": 0,
+      "LCP": 1744,
+      "FCP": 1744,
+      "TTFB": 304.2000000178814,
+      "totalEncodedBytes": 398516,
+      "requestCount": 24,
+      "errors": [],
+      "navigationError": null
+    },
+    {
+      "run": 3,
+      "CLS": 0,
+      "CLSsum": 0,
+      "LCP": 2064,
+      "FCP": 2064,
+      "TTFB": 335.30000001192093,
+      "totalEncodedBytes": 398515,
+      "requestCount": 24,
+      "errors": [],
+      "navigationError": null
+    }
+  ]
+}

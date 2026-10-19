@@ -1,0 +1,628 @@
+{
+  "shifts": [],
+  "phases": [
+    {
+      "selector": ".hxh",
+      "time": 3202.9000000059605,
+      "scrollY": 0,
+      "before": [
+        {
+          "cls": "hxp",
+          "rect": {
+            "x": 0,
+            "y": 4396.96875,
+            "width": 1440,
+            "height": 1009.3125,
+            "top": 4396.96875,
+            "right": 1440,
+            "bottom": 5406.28125,
+            "left": 0
+          }
+        },
+        {
+          "cls": "hxp__study",
+          "rect": {
+            "x": 745.125,
+            "y": 4497.765625,
+            "width": 620,
+            "height": 807.71875,
+            "top": 4497.765625,
+            "right": 1365.125,
+            "bottom": 5305.484375,
+            "left": 745.125
+          }
+        },
+        {
+          "cls": "",
+          "rect": {
+            "x": 745.125,
+            "y": 4497.765625,
+            "width": 620,
+            "height": 774.71875,
+            "top": 4497.765625,
+            "right": 1365.125,
+            "bottom": 5272.484375,
+            "left": 745.125
+          },
+          "complete": false,
+          "src": ""
+        },
+        {
+          "cls": "hxr",
+          "rect": {
+            "x": 0,
+            "y": 5406.28125,
+            "width": 1440,
+            "height": 1002.46875,
+            "top": 5406.28125,
+            "right": 1440,
+            "bottom": 6408.75,
+            "left": 0
+          }
+        },
+        {
+          "cls": "hxr__portrait",
+          "rect": {
+            "x": 74.875,
+            "y": 5507.078125,
+            "width": 640.9375,
+            "height": 800.875,
+            "top": 5507.078125,
+            "right": 715.8125,
+            "bottom": 6307.953125,
+            "left": 74.875
+          }
+        },
+        {
+          "cls": "",
+          "rect": {
+            "x": 74.875,
+            "y": 5507.078125,
+            "width": 640.9375,
+            "height": 800.875,
+            "top": 5507.078125,
+            "right": 715.8125,
+            "bottom": 6307.953125,
+            "left": 74.875
+          },
+          "complete": false,
+          "src": ""
+        }
+      ]
+    },
+    {
+      "selector": "#collection",
+      "time": 4964.300000011921,
+      "scrollY": 0,
+      "before": [
+        {
+          "cls": "hxp",
+          "rect": {
+            "x": 0,
+            "y": 4396.96875,
+            "width": 1440,
+            "height": 1009.3125,
+            "top": 4396.96875,
+            "right": 1440,
+            "bottom": 5406.28125,
+            "left": 0
+          }
+        },
+        {
+          "cls": "hxp__study",
+          "rect": {
+            "x": 745.125,
+            "y": 4497.765625,
+            "width": 620,
+            "height": 807.71875,
+            "top": 4497.765625,
+            "right": 1365.125,
+            "bottom": 5305.484375,
+            "left": 745.125
+          }
+        },
+        {
+          "cls": "",
+          "rect": {
+            "x": 745.125,
+            "y": 4497.765625,
+            "width": 620,
+            "height": 774.71875,
+            "top": 4497.765625,
+            "right": 1365.125,
+            "bottom": 5272.484375,
+            "left": 745.125
+          },
+          "complete": false,
+          "src": ""
+        },
+        {
+          "cls": "hxr",
+          "rect": {
+            "x": 0,
+            "y": 5406.28125,
+            "width": 1440,
+            "height": 1002.46875,
+            "top": 5406.28125,
+            "right": 1440,
+            "bottom": 6408.75,
+            "left": 0
+          }
+        },
+        {
+          "cls": "hxr__portrait",
+          "rect": {
+            "x": 74.875,
+            "y": 5507.078125,
+            "width": 640.9375,
+            "height": 800.875,
+            "top": 5507.078125,
+            "right": 715.8125,
+            "bottom": 6307.953125,
+            "left": 74.875
+          }
+        },
+        {
+          "cls": "",
+          "rect": {
+            "x": 74.875,
+            "y": 5507.078125,
+            "width": 640.9375,
+            "height": 800.875,
+            "top": 5507.078125,
+            "right": 715.8125,
+            "bottom": 6307.953125,
+            "left": 74.875
+          },
+          "complete": false,
+          "src": ""
+        }
+      ]
+    },
+    {
+      "selector": ".hxv",
+      "time": 6640,
+      "scrollY": 938,
+      "before": [
+        {
+          "cls": "hxp",
+          "rect": {
+            "x": 0,
+            "y": 3458.96875,
+            "width": 1440,
+            "height": 1009.3125,
+            "top": 3458.96875,
+            "right": 1440,
+            "bottom": 4468.28125,
+            "left": 0
+          }
+        },
+        {
+          "cls": "hxp__study",
+          "rect": {
+            "x": 745.125,
+            "y": 3559.765625,
+            "width": 620,
+            "height": 807.71875,
+            "top": 3559.765625,
+            "right": 1365.125,
+            "bottom": 4367.484375,
+            "left": 745.125
+          }
+        },
+        {
+          "cls": "",
+          "rect": {
+            "x": 745.125,
+            "y": 3559.765625,
+            "width": 620,
+            "height": 774.71875,
+            "top": 3559.765625,
+            "right": 1365.125,
+            "bottom": 4334.484375,
+            "left": 745.125
+          },
+          "complete": false,
+          "src": ""
+        },
+        {
+          "cls": "hxr",
+          "rect": {
+            "x": 0,
+            "y": 4468.28125,
+            "width": 1440,
+            "height": 1002.46875,
+            "top": 4468.28125,
+            "right": 1440,
+            "bottom": 5470.75,
+            "left": 0
+          }
+        },
+        {
+          "cls": "hxr__portrait",
+          "rect": {
+            "x": 74.875,
+            "y": 4569.078125,
+            "width": 640.9375,
+            "height": 800.875,
+            "top": 4569.078125,
+            "right": 715.8125,
+            "bottom": 5369.953125,
+            "left": 74.875
+          }
+        },
+        {
+          "cls": "",
+          "rect": {
+            "x": 74.875,
+            "y": 4569.078125,
+            "width": 640.9375,
+            "height": 800.875,
+            "top": 4569.078125,
+            "right": 715.8125,
+            "bottom": 5369.953125,
+            "left": 74.875
+          },
+          "complete": false,
+          "src": ""
+        }
+      ]
+    },
+    {
+      "selector": "#heritage",
+      "time": 8306.90000000596,
+      "scrollY": 2059,
+      "before": [
+        {
+          "cls": "hxp",
+          "rect": {
+            "x": 0,
+            "y": 2337.96875,
+            "width": 1440,
+            "height": 1009.3125,
+            "top": 2337.96875,
+            "right": 1440,
+            "bottom": 3347.28125,
+            "left": 0
+          }
+        },
+        {
+          "cls": "hxp__study",
+          "rect": {
+            "x": 745.125,
+            "y": 2438.765625,
+            "width": 620,
+            "height": 807.71875,
+            "top": 2438.765625,
+            "right": 1365.125,
+            "bottom": 3246.484375,
+            "left": 745.125
+          }
+        },
+        {
+          "cls": "",
+          "rect": {
+            "x": 745.125,
+            "y": 2438.765625,
+            "width": 620,
+            "height": 774.71875,
+            "top": 2438.765625,
+            "right": 1365.125,
+            "bottom": 3213.484375,
+            "left": 745.125
+          },
+          "complete": false,
+          "src": ""
+        },
+        {
+          "cls": "hxr",
+          "rect": {
+            "x": 0,
+            "y": 3347.28125,
+            "width": 1440,
+            "height": 1002.46875,
+            "top": 3347.28125,
+            "right": 1440,
+            "bottom": 4349.75,
+            "left": 0
+          }
+        },
+        {
+          "cls": "hxr__portrait",
+          "rect": {
+            "x": 74.875,
+            "y": 3448.078125,
+            "width": 640.9375,
+            "height": 800.875,
+            "top": 3448.078125,
+            "right": 715.8125,
+            "bottom": 4248.953125,
+            "left": 74.875
+          }
+        },
+        {
+          "cls": "",
+          "rect": {
+            "x": 74.875,
+            "y": 3448.078125,
+            "width": 640.9375,
+            "height": 800.875,
+            "top": 3448.078125,
+            "right": 715.8125,
+            "bottom": 4248.953125,
+            "left": 74.875
+          },
+          "complete": false,
+          "src": ""
+        }
+      ]
+    },
+    {
+      "selector": "#ritual",
+      "time": 9957.800000011921,
+      "scrollY": 4362,
+      "before": [
+        {
+          "cls": "hxp",
+          "rect": {
+            "x": 0,
+            "y": 34.96875,
+            "width": 1440,
+            "height": 1009.3125,
+            "top": 34.96875,
+            "right": 1440,
+            "bottom": 1044.28125,
+            "left": 0
+          }
+        },
+        {
+          "cls": "hxp__study",
+          "rect": {
+            "x": 745.125,
+            "y": 135.765625,
+            "width": 620,
+            "height": 807.71875,
+            "top": 135.765625,
+            "right": 1365.125,
+            "bottom": 943.484375,
+            "left": 745.125
+          }
+        },
+        {
+          "cls": "",
+          "rect": {
+            "x": 745.125,
+            "y": 135.765625,
+            "width": 620,
+            "height": 774.71875,
+            "top": 135.765625,
+            "right": 1365.125,
+            "bottom": 910.484375,
+            "left": 745.125
+          },
+          "complete": true,
+          "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/swiss-material-study-20261017-1122.avif?v=1792214382"
+        },
+        {
+          "cls": "hxr",
+          "rect": {
+            "x": 0,
+            "y": 1044.28125,
+            "width": 1440,
+            "height": 1002.46875,
+            "top": 1044.28125,
+            "right": 1440,
+            "bottom": 2046.75,
+            "left": 0
+          }
+        },
+        {
+          "cls": "hxr__portrait",
+          "rect": {
+            "x": 74.875,
+            "y": 1145.078125,
+            "width": 640.9375,
+            "height": 800.875,
+            "top": 1145.078125,
+            "right": 715.8125,
+            "bottom": 1945.953125,
+            "left": 74.875
+          }
+        },
+        {
+          "cls": "",
+          "rect": {
+            "x": 74.875,
+            "y": 1145.078125,
+            "width": 640.9375,
+            "height": 800.875,
+            "top": 1145.078125,
+            "right": 715.8125,
+            "bottom": 1945.953125,
+            "left": 74.875
+          },
+          "complete": true,
+          "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/ritual-portrait-20261017-1122.avif?v=1792214445"
+        }
+      ]
+    },
+    {
+      "selector": "#closing",
+      "time": 11621.90000000596,
+      "scrollY": 5368,
+      "before": [
+        {
+          "cls": "hxp",
+          "rect": {
+            "x": 0,
+            "y": -971.03125,
+            "width": 1440,
+            "height": 1009.3125,
+            "top": -971.03125,
+            "right": 1440,
+            "bottom": 38.28125,
+            "left": 0
+          }
+        },
+        {
+          "cls": "hxp__study",
+          "rect": {
+            "x": 745.125,
+            "y": -870.234375,
+            "width": 620,
+            "height": 807.71875,
+            "top": -870.234375,
+            "right": 1365.125,
+            "bottom": -62.515625,
+            "left": 745.125
+          }
+        },
+        {
+          "cls": "",
+          "rect": {
+            "x": 745.125,
+            "y": -870.234375,
+            "width": 620,
+            "height": 774.71875,
+            "top": -870.234375,
+            "right": 1365.125,
+            "bottom": -95.515625,
+            "left": 745.125
+          },
+          "complete": true,
+          "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/swiss-material-study-20261017-1122.avif?v=1792214382"
+        },
+        {
+          "cls": "hxr",
+          "rect": {
+            "x": 0,
+            "y": 38.28125,
+            "width": 1440,
+            "height": 1002.46875,
+            "top": 38.28125,
+            "right": 1440,
+            "bottom": 1040.75,
+            "left": 0
+          }
+        },
+        {
+          "cls": "hxr__portrait",
+          "rect": {
+            "x": 74.875,
+            "y": 139.078125,
+            "width": 640.9375,
+            "height": 800.875,
+            "top": 139.078125,
+            "right": 715.8125,
+            "bottom": 939.953125,
+            "left": 74.875
+          }
+        },
+        {
+          "cls": "",
+          "rect": {
+            "x": 74.875,
+            "y": 139.078125,
+            "width": 640.9375,
+            "height": 800.875,
+            "top": 139.078125,
+            "right": 715.8125,
+            "bottom": 939.953125,
+            "left": 74.875
+          },
+          "complete": true,
+          "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/ritual-portrait-20261017-1122.avif?v=1792214445"
+        }
+      ]
+    },
+    {
+      "selector": "footer",
+      "time": 13283.800000011921,
+      "scrollY": 6200,
+      "before": [
+        {
+          "cls": "hxp",
+          "rect": {
+            "x": 0,
+            "y": -1803.03125,
+            "width": 1440,
+            "height": 1009.3125,
+            "top": -1803.03125,
+            "right": 1440,
+            "bottom": -793.71875,
+            "left": 0
+          }
+        },
+        {
+          "cls": "hxp__study",
+          "rect": {
+            "x": 745.125,
+            "y": -1702.234375,
+            "width": 620,
+            "height": 807.71875,
+            "top": -1702.234375,
+            "right": 1365.125,
+            "bottom": -894.515625,
+            "left": 745.125
+          }
+        },
+        {
+          "cls": "",
+          "rect": {
+            "x": 745.125,
+            "y": -1702.234375,
+            "width": 620,
+            "height": 774.71875,
+            "top": -1702.234375,
+            "right": 1365.125,
+            "bottom": -927.515625,
+            "left": 745.125
+          },
+          "complete": true,
+          "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/swiss-material-study-20261017-1122.avif?v=1792214382"
+        },
+        {
+          "cls": "hxr",
+          "rect": {
+            "x": 0,
+            "y": -793.71875,
+            "width": 1440,
+            "height": 1002.46875,
+            "top": -793.71875,
+            "right": 1440,
+            "bottom": 208.75,
+            "left": 0
+          }
+        },
+        {
+          "cls": "hxr__portrait",
+          "rect": {
+            "x": 74.875,
+            "y": -692.921875,
+            "width": 640.9375,
+            "height": 800.875,
+            "top": -692.921875,
+            "right": 715.8125,
+            "bottom": 107.953125,
+            "left": 74.875
+          }
+        },
+        {
+          "cls": "",
+          "rect": {
+            "x": 74.875,
+            "y": -692.921875,
+            "width": 640.9375,
+            "height": 800.875,
+            "top": -692.921875,
+            "right": 715.8125,
+            "bottom": 107.953125,
+            "left": 74.875
+          },
+          "complete": true,
+          "src": "http://caviarofswitzerland.local/wp-content/themes/cos-child/assets/images/home-2026/ritual-portrait-20261017-1122.avif?v=1792214445"
+        }
+      ]
+    }
+  ]
+}

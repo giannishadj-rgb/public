@@ -1,0 +1,431 @@
+{
+  "date": "2026-10-18",
+  "scope": "Homepage Collection objects wc-coll-{cleanser,serum,eye,cream}-{400,600,800,1000}.{avif,webp,jpg}",
+  "paths_relative_to": "app/",
+  "source": {
+    "path": "design-sources/home-2026/gauntlet-supplied-20261018/product-photo-candidates/all_high_res.jpg",
+    "sha256": "47eac0d7a4490a92d1fc32f51b9bdc0e0c9fa5af4a6383996cdef444534b36ba",
+    "dimensions": [
+      7429,
+      6258
+    ],
+    "mode": "CMYK (U.S. Web Coated SWOP v2)",
+    "note": "Supplied studio photograph of the four packs lit together (gauntlet-supplied-20261018). Pale-grey heavier name lettering, 150ml 5.1 FL.OZ.us, 50ml 1.8 OZ.us 50g: consistent with the approved raw packshots; NOT a *-flat-* master."
+  },
+  "builder": {
+    "path": "design-sources/home-2026/build_wc_collection.py"
+  },
+  "operations": [
+    "ICC CMYK->sRGB, relative colorimetric",
+    "Silhouette cut-out from the white sweep (row/column extents of the photographed pack, base ellipse), 1px erode, 1px feather",
+    "Photographed mirror reflection kept as neutral dark layer, faded within ~11% of pack height",
+    "Synthetic soft contact shadow (two gaussian ellipses, narrower than the pack base), offset 4% left to agree with the photographed key light",
+    "One common scale; canvases of one common width with the base line a fixed distance above the bottom edge",
+    "Proportional Lanczos resize; transparent AVIF/WebP; JPG flattened on #F2F2EF"
+  ],
+  "not_done": "No repainting, relabelling, packaging recolour, geometric/perspective change or mirroring.",
+  "canvas_px_source_scale": {
+    "cleanser": [
+      2300,
+      4983
+    ],
+    "serum": [
+      2300,
+      3528
+    ],
+    "eye": [
+      2300,
+      3167
+    ],
+    "cream": [
+      2300,
+      2186
+    ]
+  },
+  "outputs": {
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-cleanser-400.avif": {
+      "sha256": "94af93febbaec73754f90ee818c3835e7be0f49c2ee84bec203b16ce945f3d70",
+      "bytes": 10669,
+      "size": [
+        400,
+        867
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-cleanser-400.webp": {
+      "sha256": "06a6815b182b976d7afc967433fec865f92a5d0f81b6213a033b6c768520bff3",
+      "bytes": 15832,
+      "size": [
+        400,
+        867
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-cleanser-400.jpg": {
+      "sha256": "dc9c5738365c7177058a225c5499615023d82bbaaa6966aaa499cec687278e02",
+      "bytes": 16818,
+      "size": [
+        400,
+        867
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-cleanser-600.avif": {
+      "sha256": "1c157b8633a1943b748f9f1f3357425da67c9263598482566d16749d43938594",
+      "bytes": 17695,
+      "size": [
+        600,
+        1300
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-cleanser-600.webp": {
+      "sha256": "d4dec9a1c53551bba903ea8df2fcde7836548dc3ae16b24a93dea17f03ff416c",
+      "bytes": 25366,
+      "size": [
+        600,
+        1300
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-cleanser-600.jpg": {
+      "sha256": "0a976e5f9f183380744767054b0c8090cbfad2e5aff4b2bf5f6071a6f39b3490",
+      "bytes": 31395,
+      "size": [
+        600,
+        1300
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-cleanser-800.avif": {
+      "sha256": "92dbefbe0c144b24b3ffb7bcc5cdd2f47ae390fedc8fe84eb05230b2b5cbebdc",
+      "bytes": 24104,
+      "size": [
+        800,
+        1733
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-cleanser-800.webp": {
+      "sha256": "2502badd829175219e4da6ec6ff7b1e30c260e646f9c9240e9c926ef82c57aeb",
+      "bytes": 35318,
+      "size": [
+        800,
+        1733
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-cleanser-800.jpg": {
+      "sha256": "c0fde36e4c75205cfa02c7c5087244cfe93e8f519af1ef704b4eafb28b8bce33",
+      "bytes": 50180,
+      "size": [
+        800,
+        1733
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-cleanser-1000.avif": {
+      "sha256": "acdf8d942884529c71aeb5955071fd2f42b3a3c12d136a1be75019ea6873cbde",
+      "bytes": 33031,
+      "size": [
+        1000,
+        2167
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-cleanser-1000.webp": {
+      "sha256": "9d1d6d350952e73b1c03d5468ffb6b39b650745dbf0cba880ceaa1163d5b41d4",
+      "bytes": 49174,
+      "size": [
+        1000,
+        2167
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-cleanser-1000.jpg": {
+      "sha256": "b150d0f7509098e456f266e66c44a4c9b18911556251306acfa57ab8d9ac9a4b",
+      "bytes": 73262,
+      "size": [
+        1000,
+        2167
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-serum-400.avif": {
+      "sha256": "6f9d07df7faccafca2cc197b3edf69024a989d1f751c2a99ba336b58258f8b69",
+      "bytes": 8930,
+      "size": [
+        400,
+        614
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-serum-400.webp": {
+      "sha256": "0bcbc3007ea62a7956259293458f5aa830cfc602266934041e038cf66eba3245",
+      "bytes": 14362,
+      "size": [
+        400,
+        614
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-serum-400.jpg": {
+      "sha256": "8ffd1570d3d7debb5dd71f0698cf684d1c17cf6d54bc216b125710dd31d01b4b",
+      "bytes": 13141,
+      "size": [
+        400,
+        614
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-serum-600.avif": {
+      "sha256": "aa74ace967aeddc3a81d4d9ab4bce5bf0cacfb02a884b5426dc2131662945922",
+      "bytes": 13622,
+      "size": [
+        600,
+        920
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-serum-600.webp": {
+      "sha256": "4497dd9407f88d6d1cb897904a56120f0aa37a75e07ef19f8744a42b7cd5a795",
+      "bytes": 22224,
+      "size": [
+        600,
+        920
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-serum-600.jpg": {
+      "sha256": "3edb3428d4233d67438dab9683904665b82794341b90d3007e87c9f3ee7ce408",
+      "bytes": 24241,
+      "size": [
+        600,
+        920
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-serum-800.avif": {
+      "sha256": "5170d47af7e643e6b7a328d4a2eca0319d327fdeba5058ee062b48731302640d",
+      "bytes": 19313,
+      "size": [
+        800,
+        1227
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-serum-800.webp": {
+      "sha256": "0c16c1d7a2983f3a54edda75a43a607d8685124e976fe8f62cee064384a06a2d",
+      "bytes": 30180,
+      "size": [
+        800,
+        1227
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-serum-800.jpg": {
+      "sha256": "4f94568f81c9e8f930017583aa93e012d787be7ca1a1ee3348fb08b676d7ecba",
+      "bytes": 37734,
+      "size": [
+        800,
+        1227
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-serum-1000.avif": {
+      "sha256": "1ca36ef18f76153b0df7dcf93ca0784c0f6380eb9d917450fd02d6308f1d0c55",
+      "bytes": 26196,
+      "size": [
+        1000,
+        1534
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-serum-1000.webp": {
+      "sha256": "08327843eaa543e009b53f0c63e5d0304af3bffaf75e1045f34ecb7e54f78e3c",
+      "bytes": 40264,
+      "size": [
+        1000,
+        1534
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-serum-1000.jpg": {
+      "sha256": "1207355fcdc8e6f540f79ba0de4e795607de3bbc2e6e3dc7d5d304e710000b69",
+      "bytes": 54452,
+      "size": [
+        1000,
+        1534
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-eye-400.avif": {
+      "sha256": "4267bf6e99b9856ea4dae6315a8d394855d94be0b252cd46273982b3b3bf8c04",
+      "bytes": 7272,
+      "size": [
+        400,
+        551
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-eye-400.webp": {
+      "sha256": "a6bb0d2221ebdedbe53601ca1215b431930c6f07dfaec74390601a2c26cd23a8",
+      "bytes": 11114,
+      "size": [
+        400,
+        551
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-eye-400.jpg": {
+      "sha256": "59e6d4caeef768f80730cb47fdbe82765b245bb678a29eacf46ce215a1178862",
+      "bytes": 11350,
+      "size": [
+        400,
+        551
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-eye-600.avif": {
+      "sha256": "0ed809bf4045edd3c85bb845ef4aeb1f911400e48756ce953ce139822351e5cb",
+      "bytes": 11365,
+      "size": [
+        600,
+        826
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-eye-600.webp": {
+      "sha256": "04765fbe59f4c170396f392ee17a6ea077e49817a295c22a7dd9bc8229410748",
+      "bytes": 17740,
+      "size": [
+        600,
+        826
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-eye-600.jpg": {
+      "sha256": "8d5bcdd6e8205b6277109393b4988be1105ddf488720849f4ff21a02f8307000",
+      "bytes": 20493,
+      "size": [
+        600,
+        826
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-eye-800.avif": {
+      "sha256": "1d0f1a2d453c2a6eaabd7b4672ad4816bd869e0b6790dcadae9ecbb48b6ac87a",
+      "bytes": 16094,
+      "size": [
+        800,
+        1102
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-eye-800.webp": {
+      "sha256": "8c23dff18f264d3f1e0f5394b9b3edb4b20f0a488be3839cd20b7246623f31eb",
+      "bytes": 25042,
+      "size": [
+        800,
+        1102
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-eye-800.jpg": {
+      "sha256": "4108093000c50cd9dd23f49b2990692a6eddbc0a10d071f4a7411ea1493b8689",
+      "bytes": 31572,
+      "size": [
+        800,
+        1102
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-eye-1000.avif": {
+      "sha256": "f055278398526f888fb5ddbc1780de1a21e3e940c2ba68e5a3fa05a987c84bbe",
+      "bytes": 21358,
+      "size": [
+        1000,
+        1377
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-eye-1000.webp": {
+      "sha256": "2bb34b184dea078c22f47ee7c6f4cbaa7f22cee2476da620408b4cf3d38e07a2",
+      "bytes": 31710,
+      "size": [
+        1000,
+        1377
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-eye-1000.jpg": {
+      "sha256": "b10533e9b60147cc23c13eaa46acc98b585908a15a6da92a899527bce4f93414",
+      "bytes": 45201,
+      "size": [
+        1000,
+        1377
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-cream-400.avif": {
+      "sha256": "fcdc4005d94587a9cda62225f29e289ff6780b3618bd94775374b1b7718c4678",
+      "bytes": 9329,
+      "size": [
+        400,
+        380
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-cream-400.webp": {
+      "sha256": "0c268be4783666b5f35aa4f2b5612804ec6fea3755760b550eeb5f5a755b9012",
+      "bytes": 15056,
+      "size": [
+        400,
+        380
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-cream-400.jpg": {
+      "sha256": "ded30a569362388fab12dd38483cc3cf920a025b383f5b3f3b2896b57125ea60",
+      "bytes": 15311,
+      "size": [
+        400,
+        380
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-cream-600.avif": {
+      "sha256": "36afcda64e4b19fcefd768407431ceba4391a1b5c1e4034ed19331a8cb60afe5",
+      "bytes": 14363,
+      "size": [
+        600,
+        570
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-cream-600.webp": {
+      "sha256": "356a9fdbc5150268da51c72874d9deb7b763b40fd9f5cf2db1609e9e69987795",
+      "bytes": 24266,
+      "size": [
+        600,
+        570
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-cream-600.jpg": {
+      "sha256": "76b3e53c330a693fcbb638b37ddb97015fab29b1d568eae0730b26bae6abd712",
+      "bytes": 27587,
+      "size": [
+        600,
+        570
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-cream-800.avif": {
+      "sha256": "a2da4a5ad488284c2d09759225355ff793c45858c827ce9e3cfd48e16018b382",
+      "bytes": 20501,
+      "size": [
+        800,
+        760
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-cream-800.webp": {
+      "sha256": "0754c92c75f07f220857dac40437411bdc5f9e5db4bd53d199bb1776d6cb7b57",
+      "bytes": 35096,
+      "size": [
+        800,
+        760
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-cream-800.jpg": {
+      "sha256": "200511b5a7c2ecaaa1764c4bf270c0524bcef294dca2a8354d11615d9181355b",
+      "bytes": 41913,
+      "size": [
+        800,
+        760
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-cream-1000.avif": {
+      "sha256": "f7b8fc3a55e571f325a8a28de83288a2dc9f88368583859e33fa46414fac96be",
+      "bytes": 28028,
+      "size": [
+        1000,
+        950
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-cream-1000.webp": {
+      "sha256": "8cc42ccc7a86cf18792b1e8359dd8e71aa14454b3ae26d24ccfc9105119efcc5",
+      "bytes": 46000,
+      "size": [
+        1000,
+        950
+      ]
+    },
+    "public/wp-content/themes/cos-child/assets/images/home-2026/wc-coll-cream-1000.jpg": {
+      "sha256": "f774ac845014a46ca06cf3ea77b7df146e298dc3d4f780354d013364f366e530",
+      "bytes": 61070,
+      "size": [
+        1000,
+        950
+      ]
+    }
+  }
+}

@@ -1,0 +1,282 @@
+{
+  "axeFull": [],
+  "carousel": [
+    {
+      "scroll": 0,
+      "prev": "true",
+      "next": null,
+      "visible": [
+        {
+          "text": "Micellar Water\nAll‑in‑One Cleanser",
+          "x": 24,
+          "right": 343.796875
+        },
+        {
+          "text": "Advanced Repair\nSerum",
+          "x": 359.796875,
+          "right": 679.59375
+        },
+        {
+          "text": "Revitalizing\nEye Cream",
+          "x": 695.59375,
+          "right": 1015.390625
+        },
+        {
+          "text": "24h Regeneration\nCream",
+          "x": 1031.390625,
+          "right": 1351.1875
+        }
+      ]
+    },
+    {
+      "scroll": 336,
+      "prev": "false",
+      "next": "false",
+      "visible": [
+        {
+          "text": "Micellar Water\nAll‑in‑One Cleanser",
+          "x": -312,
+          "right": 7.796875
+        },
+        {
+          "text": "Advanced Repair\nSerum",
+          "x": 23.796875,
+          "right": 343.59375
+        },
+        {
+          "text": "Revitalizing\nEye Cream",
+          "x": 359.59375,
+          "right": 679.390625
+        },
+        {
+          "text": "24h Regeneration\nCream",
+          "x": 695.390625,
+          "right": 1015.1875
+        }
+      ]
+    },
+    {
+      "scroll": 672,
+      "prev": "false",
+      "next": "false",
+      "visible": [
+        {
+          "text": "Micellar Water\nAll‑in‑One Cleanser",
+          "x": -648,
+          "right": -328.203125
+        },
+        {
+          "text": "Advanced Repair\nSerum",
+          "x": -312.203125,
+          "right": 7.59375
+        },
+        {
+          "text": "Revitalizing\nEye Cream",
+          "x": 23.59375,
+          "right": 343.390625
+        },
+        {
+          "text": "24h Regeneration\nCream",
+          "x": 359.390625,
+          "right": 679.1875
+        }
+      ]
+    },
+    {
+      "scroll": 1007,
+      "prev": "false",
+      "next": "true",
+      "visible": [
+        {
+          "text": "Micellar Water\nAll‑in‑One Cleanser",
+          "x": -983,
+          "right": -663.203125
+        },
+        {
+          "text": "Advanced Repair\nSerum",
+          "x": -647.203125,
+          "right": -327.40625
+        },
+        {
+          "text": "Revitalizing\nEye Cream",
+          "x": -311.40625,
+          "right": 8.390625
+        },
+        {
+          "text": "24h Regeneration\nCream",
+          "x": 24.390625,
+          "right": 344.1875
+        }
+      ]
+    },
+    {
+      "scroll": 672,
+      "prev": "false",
+      "next": "false",
+      "visible": [
+        {
+          "text": "Micellar Water\nAll‑in‑One Cleanser",
+          "x": -648,
+          "right": -328.203125
+        },
+        {
+          "text": "Advanced Repair\nSerum",
+          "x": -312.203125,
+          "right": 7.59375
+        },
+        {
+          "text": "Revitalizing\nEye Cream",
+          "x": 23.59375,
+          "right": 343.390625
+        },
+        {
+          "text": "24h Regeneration\nCream",
+          "x": 359.390625,
+          "right": 679.1875
+        }
+      ]
+    },
+    {
+      "scroll": 336,
+      "prev": "false",
+      "next": "false",
+      "visible": [
+        {
+          "text": "Micellar Water\nAll‑in‑One Cleanser",
+          "x": -312,
+          "right": 7.796875
+        },
+        {
+          "text": "Advanced Repair\nSerum",
+          "x": 23.796875,
+          "right": 343.59375
+        },
+        {
+          "text": "Revitalizing\nEye Cream",
+          "x": 359.59375,
+          "right": 679.390625
+        },
+        {
+          "text": "24h Regeneration\nCream",
+          "x": 695.390625,
+          "right": 1015.1875
+        }
+      ]
+    },
+    {
+      "scroll": 0,
+      "prev": "true",
+      "next": "false",
+      "visible": [
+        {
+          "text": "Micellar Water\nAll‑in‑One Cleanser",
+          "x": 24,
+          "right": 343.796875
+        },
+        {
+          "text": "Advanced Repair\nSerum",
+          "x": 359.796875,
+          "right": 679.59375
+        },
+        {
+          "text": "Revitalizing\nEye Cream",
+          "x": 695.59375,
+          "right": 1015.390625
+        },
+        {
+          "text": "24h Regeneration\nCream",
+          "x": 1031.390625,
+          "right": 1351.1875
+        }
+      ]
+    }
+  ],
+  "keyboardNext": {
+    "scroll": 336,
+    "prev": "false",
+    "next": "false",
+    "visible": [
+      {
+        "text": "Micellar Water\nAll‑in‑One Cleanser",
+        "x": -312,
+        "right": 7.796875
+      },
+      {
+        "text": "Advanced Repair\nSerum",
+        "x": 23.796875,
+        "right": 343.59375
+      },
+      {
+        "text": "Revitalizing\nEye Cream",
+        "x": 359.59375,
+        "right": 679.390625
+      },
+      {
+        "text": "24h Regeneration\nCream",
+        "x": 695.390625,
+        "right": 1015.1875
+      }
+    ]
+  },
+  "keyboardPrevious": {
+    "scroll": 0,
+    "prev": "true",
+    "next": "false",
+    "visible": [
+      {
+        "text": "Micellar Water\nAll‑in‑One Cleanser",
+        "x": 24,
+        "right": 343.796875
+      },
+      {
+        "text": "Advanced Repair\nSerum",
+        "x": 359.796875,
+        "right": 679.59375
+      },
+      {
+        "text": "Revitalizing\nEye Cream",
+        "x": 695.59375,
+        "right": 1015.390625
+      },
+      {
+        "text": "24h Regeneration\nCream",
+        "x": 1031.390625,
+        "right": 1351.1875
+      }
+    ]
+  },
+  "corruptedText": {
+    "replacement": false,
+    "questionMarks": [],
+    "mojibake": []
+  },
+  "product": {
+    "url": "http://caviarofswitzerland.local/products/micellar-water-cleanser/",
+    "heading": "Micellar Water All‑in‑One Cleanser",
+    "buttons": [
+      "\n      \n    ",
+      "−",
+      "+",
+      "Add to bag",
+      "Add to bag",
+      "Join the Caviar Circle",
+      ""
+    ],
+    "addLinks": []
+  },
+  "afterAdd": {
+    "url": "http://caviarofswitzerland.local/products/micellar-water-cleanser/",
+    "text": "Skip to main content\n1\n1 / 5\n\nSTEP\n01\nCLEANSE\n,\nSTEP 1 OF 4\n\nMicellar Water All‑in‑One Cleanser\n\nA no-rinse micellar water that lifts make-up and the day’s impurities in one gentle gesture.\n\n€55\n,\n150 ml\n\nQuantity\n−\n+\nAdded to your bag\n\nAdded to your bag. View bag\n\nFree shipping on every order, worldwide.\nReturns within 30 days\nGently removes make-up and daily impurities\nCleanses, tones, and refreshes in one step\nHelps protect the skin against moisture loss\nDETAILS\nFULL INGREDIENT LIST\nDELIVERY & RETURNS\nThe first gesture\n\nStep 1 of the ritual: a precise, no-rinse cleanse with Caviar Extract, Aloe Vera, Tamarind Seed Extract and a Skin Barrier Optimizer that prepares the skin for Advanced Repair Serum.\n\nA fresh, lightweight cleansing water that glides across the skin without heaviness, rinsing or residue, leaving it feeling clean, soft and comfortable.\n\nKey ingredients\n01\nCaviar Extract\n\nFrom the caviar of sustainably farmed Siberian sturgeon (Acipenser baerii): helps replenish the lipids and minerals that cleansing can remove.\n\n02\nMicellar Complex\n\nTiny micelles that gather make-up, SPF and the day’s particles without disturbing the skin’s moisture barrier.\n\n03\nPanthenol (Vitamin B5)\n\nDraws moisture into freshly cleansed skin and helps it feel soft and comfortable.\n\n04\nAllantoin\n\nHelps soothe the skin and ease the tightness conventional cleansers can leave behind.\n\nFull ingredient list\n\nHow to use\n01\n\nSoak a cotton pad with Micellar Water — morning and evening.\n\n02\n\nSweep gently across the face and neck in upward motions.\n\n03\n\nFor eye make-up: hold the pad over the closed eye for a few seconds, then wipe downwards and outwards. Do not rub.\n\n04\n\nNo rinsing required. Follow immediately with Advanced Repair Serum.\n\nWithin the ritual\n\nEach formula prepares the skin for the next. Used together, morning and evening, they make one complete ritual.\n\n01 CLEANSE\nMicellar Water All‑in‑One Cleanser\nThis formula\n02 TREAT\nAdvanced Repair Serum\n03 REVIVE\nRevitalizing Eye Cream\n04 RESTORE\n24h Regeneration Cream\n\nThe Complete Ritual, all four formulas, €450\n\nQuestions\nIs rinsing required?\nCan I use it to remove eye make-up?\nIs it suitable for sensitive skin?\nWhen should I use it in my routine?\nWhat is the Caviar of Switzerland High-Tech Complex?\nWhy does this cleanser cost more than a typical micellar water?\nThe Caviar Circle\n\nRitual guidance, product news and brand updates.\n\nEmail address\nJOIN\nTHE CAVIAR CIRCLE\nI agree to receive communications from Caviar of Switzerland. Privacy Policy.\n\nMade in Switzerland\nFree worldwide shipping\n30-day returns\nSecure checkout\nCUSTOMER CARE\nEXPLORE\nTHE HOUSE IN ZUG\n\n© 2026 Caviar of Switzerland\n\nMicellar Water All-in-One Cleanser added to your bag. Bag subtotal €55.\n\nADDED TO YOUR BAG\nMicellar Water All-in-One Cleanser\n\nQuantity 1\n\n€55\n\nBag subtotal (1 item)\n€55\nCheckout\nView bag\n\nFree worldwide shipping · 30-day returns"
+  },
+  "cart": {
+    "url": "http://caviarofswitzerland.local/cart/",
+    "hasProduct": true,
+    "checkout": 1
+  },
+  "checkout": {
+    "url": "http://caviarofswitzerland.local/checkout/",
+    "firstName": true,
+    "email": true,
+    "placeOrder": true
+  }
+}

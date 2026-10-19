@@ -1,0 +1,1669 @@
+﻿{
+ "files": 17,
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "copy",
+   "file": "wp-content/themes/cos-child/assets/css/hx/caviar.css",
+   "line": 2,
+   "match": "world-class",
+   "message": "Stock marketing phrase. Say the specific thing the product does."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "wp-content/themes/cos-child/assets/css/hx/caviar.css",
+   "line": 54,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/checkout.css",
+   "line": 40,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/checkout.css",
+   "line": 89,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/checkout.css",
+   "line": 96,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "WARN",
+   "id": "outlined-box",
+   "file": "wp-content/themes/cos-child/assets/css/hx/checkout.css",
+   "line": 112,
+   "match": "border:1px solid",
+   "message": "A 1px outlined box. Prefer a filled surface or no box."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/checkout.css",
+   "line": 116,
+   "match": "height:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/checkout.css",
+   "line": 152,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/checkout.css",
+   "line": 162,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/checkout.css",
+   "line": 165,
+   "match": "height:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/checkout.css",
+   "line": 169,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/checkout.css",
+   "line": 180,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/checkout.css",
+   "line": 182,
+   "match": "height:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/checkout.css",
+   "line": 193,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/checkout.css",
+   "line": 217,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "file": "wp-content/themes/cos-child/assets/css/hx/checkout.css",
+   "line": 268,
+   "match": "linear-gradient(",
+   "message": "Gradient fill. Use a flat colour or a real image (a neutral scrim over a photo is the one exception)."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "wp-content/themes/cos-child/assets/css/hx/checkout.css",
+   "line": 271,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "WARN",
+   "id": "outlined-box",
+   "file": "wp-content/themes/cos-child/assets/css/hx/checkout.css",
+   "line": 283,
+   "match": "border:1px solid",
+   "message": "A 1px outlined box. Prefer a filled surface or no box."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/checkout.css",
+   "line": 289,
+   "match": "border-right:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "wp-content/themes/cos-child/assets/css/hx/checkout.css",
+   "line": 292,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "wp-content/themes/cos-child/assets/css/hx/checkout.css",
+   "line": 294,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "WARN",
+   "id": "outlined-box",
+   "file": "wp-content/themes/cos-child/assets/css/hx/checkout.css",
+   "line": 294,
+   "match": "border:1px solid",
+   "message": "A 1px outlined box. Prefer a filled surface or no box."
+  },
+  {
+   "level": "WARN",
+   "id": "outlined-box",
+   "file": "wp-content/themes/cos-child/assets/css/hx/checkout.css",
+   "line": 298,
+   "match": "border:1px solid",
+   "message": "A 1px outlined box. Prefer a filled surface or no box."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/checkout.css",
+   "line": 346,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/checkout.css",
+   "line": 347,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/checkout.css",
+   "line": 379,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/checkout.css",
+   "line": 410,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/checkout.css",
+   "line": 411,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "WARN",
+   "id": "outlined-box",
+   "file": "wp-content/themes/cos-child/assets/css/hx/checkout.css",
+   "line": 413,
+   "match": "border:1px solid",
+   "message": "A 1px outlined box. Prefer a filled surface or no box."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "wp-content/themes/cos-child/assets/css/hx/checkout.css",
+   "line": 414,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/checkout.css",
+   "line": 420,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/chrome.css",
+   "line": 44,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "WARN",
+   "id": "glass",
+   "file": "wp-content/themes/cos-child/assets/css/hx/chrome.css",
+   "line": 45,
+   "match": "backdrop-filter:",
+   "message": "Backdrop blur. One sticky bar at most; glass cards are a tell."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/chrome.css",
+   "line": 63,
+   "match": "height:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/chrome.css",
+   "line": 91,
+   "match": "height:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/chrome.css",
+   "line": 135,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/chrome.css",
+   "line": 142,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/chrome.css",
+   "line": 207,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "wp-content/themes/cos-child/assets/css/hx/chrome.css",
+   "line": 211,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "wp-content/themes/cos-child/assets/css/hx/chrome.css",
+   "line": 221,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "wp-content/themes/cos-child/assets/css/hx/chrome.css",
+   "line": 239,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "wp-content/themes/cos-child/assets/css/hx/chrome.css",
+   "line": 242,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "wp-content/themes/cos-child/assets/css/hx/chrome.css",
+   "line": 243,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/chrome.css",
+   "line": 255,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/chrome.css",
+   "line": 264,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/chrome.css",
+   "line": 270,
+   "match": "height:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/chrome.css",
+   "line": 289,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "WARN",
+   "id": "outlined-box",
+   "file": "wp-content/themes/cos-child/assets/css/hx/chrome.css",
+   "line": 351,
+   "match": "border:1px solid",
+   "message": "A 1px outlined box. Prefer a filled surface or no box."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "wp-content/themes/cos-child/assets/css/hx/chrome.css",
+   "line": 352,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/chrome.css",
+   "line": 361,
+   "match": "border-left:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/chrome.css",
+   "line": 367,
+   "match": "height:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/chrome.css",
+   "line": 372,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "wp-content/themes/cos-child/assets/css/hx/chrome.css",
+   "line": 393,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/closing.css",
+   "line": 74,
+   "match": "height:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "WARN",
+   "id": "copy",
+   "file": "wp-content/themes/cos-child/assets/css/hx/collection.css",
+   "line": 2,
+   "match": "world-class",
+   "message": "Stock marketing phrase. Say the specific thing the product does."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "wp-content/themes/cos-child/assets/css/hx/collection.css",
+   "line": 82,
+   "match": "shadow",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "file": "wp-content/themes/cos-child/assets/css/hx/collection.css",
+   "line": 102,
+   "match": "radial-gradient(",
+   "message": "Gradient fill. Use a flat colour or a real image (a neutral scrim over a photo is the one exception)."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/collection.css",
+   "line": 136,
+   "match": "height:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "file": "wp-content/themes/cos-child/assets/css/hx/collection.css",
+   "line": 193,
+   "match": "linear-gradient(",
+   "message": "Gradient fill. Use a flat colour or a real image (a neutral scrim over a photo is the one exception)."
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "file": "wp-content/themes/cos-child/assets/css/hx/collection.css",
+   "line": 194,
+   "match": "linear-gradient(",
+   "message": "Gradient fill. Use a flat colour or a real image (a neutral scrim over a photo is the one exception)."
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "file": "wp-content/themes/cos-child/assets/css/hx/collection.css",
+   "line": 230,
+   "match": "linear-gradient(",
+   "message": "Gradient fill. Use a flat colour or a real image (a neutral scrim over a photo is the one exception)."
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "file": "wp-content/themes/cos-child/assets/css/hx/collection.css",
+   "line": 231,
+   "match": "linear-gradient(",
+   "message": "Gradient fill. Use a flat colour or a real image (a neutral scrim over a photo is the one exception)."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/heritage.css",
+   "line": 76,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/heritage.css",
+   "line": 77,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/heritage.css",
+   "line": 134,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/heritage.css",
+   "line": 143,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/heritage.css",
+   "line": 144,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "file": "wp-content/themes/cos-child/assets/css/hx/heritage.css",
+   "line": 165,
+   "match": "linear-gradient(",
+   "message": "Gradient fill. Use a flat colour or a real image (a neutral scrim over a photo is the one exception)."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/heritage.css",
+   "line": 186,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/heritage.css",
+   "line": 187,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/heritage.css",
+   "line": 195,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/heritage.css",
+   "line": 196,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/heritage.css",
+   "line": 212,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/heritage.css",
+   "line": 215,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/heritage.css",
+   "line": 216,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/heritage.css",
+   "line": 223,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "WARN",
+   "id": "copy",
+   "file": "wp-content/themes/cos-child/assets/css/hx/hero.css",
+   "line": 2,
+   "match": "world-class",
+   "message": "Stock marketing phrase. Say the specific thing the product does."
+  },
+  {
+   "level": "WARN",
+   "id": "outlined-box",
+   "file": "wp-content/themes/cos-child/assets/css/hx/hero.css",
+   "line": 83,
+   "match": "border:1px solid",
+   "message": "A 1px outlined box. Prefer a filled surface or no box."
+  },
+  {
+   "level": "WARN",
+   "id": "glass",
+   "file": "wp-content/themes/cos-child/assets/css/hx/hero.css",
+   "line": 85,
+   "match": "backdrop-filter:",
+   "message": "Backdrop blur. One sticky bar at most; glass cards are a tell."
+  },
+  {
+   "level": "WARN",
+   "id": "glass",
+   "file": "wp-content/themes/cos-child/assets/css/hx/hero.css",
+   "line": 86,
+   "match": "backdrop-filter:",
+   "message": "Backdrop blur. One sticky bar at most; glass cards are a tell."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/product.css",
+   "line": 33,
+   "match": "height:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/product.css",
+   "line": 46,
+   "match": "height:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/product.css",
+   "line": 57,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/product.css",
+   "line": 64,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/product.css",
+   "line": 65,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "WARN",
+   "id": "outlined-box",
+   "file": "wp-content/themes/cos-child/assets/css/hx/product.css",
+   "line": 75,
+   "match": "border:1px solid",
+   "message": "A 1px outlined box. Prefer a filled surface or no box."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/product.css",
+   "line": 96,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/product.css",
+   "line": 99,
+   "match": "height:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/product.css",
+   "line": 102,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/product.css",
+   "line": 103,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/product.css",
+   "line": 107,
+   "match": "height:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/product.css",
+   "line": 176,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/product.css",
+   "line": 190,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/product.css",
+   "line": 191,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/product.css",
+   "line": 200,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/product.css",
+   "line": 210,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/product.css",
+   "line": 211,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/product.css",
+   "line": 257,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/product.css",
+   "line": 262,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "WARN",
+   "id": "copy",
+   "file": "wp-content/themes/cos-child/assets/css/hx/provenance.css",
+   "line": 2,
+   "match": "world-class",
+   "message": "Stock marketing phrase. Say the specific thing the product does."
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "file": "wp-content/themes/cos-child/assets/css/hx/provenance.css",
+   "line": 34,
+   "match": "linear-gradient(",
+   "message": "Gradient fill. Use a flat colour or a real image (a neutral scrim over a photo is the one exception)."
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "file": "wp-content/themes/cos-child/assets/css/hx/provenance.css",
+   "line": 35,
+   "match": "linear-gradient(",
+   "message": "Gradient fill. Use a flat colour or a real image (a neutral scrim over a photo is the one exception)."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/provenance.css",
+   "line": 62,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "WARN",
+   "id": "outlined-box",
+   "file": "wp-content/themes/cos-child/assets/css/hx/provenance.css",
+   "line": 111,
+   "match": "border:1px solid",
+   "message": "A 1px outlined box. Prefer a filled surface or no box."
+  },
+  {
+   "level": "WARN",
+   "id": "copy",
+   "file": "wp-content/themes/cos-child/assets/css/hx/ritual.css",
+   "line": 3,
+   "match": "world-class",
+   "message": "Stock marketing phrase. Say the specific thing the product does."
+  },
+  {
+   "level": "WARN",
+   "id": "copy",
+   "file": "wp-content/themes/cos-child/assets/css/hx/ritual.css",
+   "line": 4,
+   "match": "world-class",
+   "message": "Stock marketing phrase. Say the specific thing the product does."
+  },
+  {
+   "level": "WARN",
+   "id": "scale-zero",
+   "file": "wp-content/themes/cos-child/assets/css/hx/ritual.css",
+   "line": 20,
+   "match": "scale(0)",
+   "message": "Entering from scale(0). Start at 0.95–0.98 with opacity 0."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/ritual.css",
+   "line": 109,
+   "match": "height:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "WARN",
+   "id": "outlined-box",
+   "file": "wp-content/themes/cos-child/assets/css/hx/ritual.css",
+   "line": 119,
+   "match": "border:1px solid",
+   "message": "A 1px outlined box. Prefer a filled surface or no box."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "wp-content/themes/cos-child/assets/css/hx/ritual.css",
+   "line": 181,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "file": "wp-content/themes/cos-child/assets/css/hx/ritual.css",
+   "line": 246,
+   "match": "linear-gradient(",
+   "message": "Gradient fill. Use a flat colour or a real image (a neutral scrim over a photo is the one exception)."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/ritual.css",
+   "line": 333,
+   "match": "height:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 39,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 43,
+   "match": "height:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 44,
+   "match": "border-left:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 53,
+   "match": "height:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 85,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 105,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 111,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "WARN",
+   "id": "outlined-box",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 134,
+   "match": "border:1px solid",
+   "message": "A 1px outlined box. Prefer a filled surface or no box."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 148,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 160,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 161,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 187,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 193,
+   "match": "height:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 194,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 200,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 231,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 232,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 237,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 243,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 254,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 255,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 260,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 268,
+   "match": "border-left:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 276,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 277,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 278,
+   "match": "linear-gradient(",
+   "message": "Gradient fill. Use a flat colour or a real image (a neutral scrim over a photo is the one exception)."
+  },
+  {
+   "level": "WARN",
+   "id": "outlined-box",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 283,
+   "match": "border:1px solid",
+   "message": "A 1px outlined box. Prefer a filled surface or no box."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 293,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 294,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 296,
+   "match": "height:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 297,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 301,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 302,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 308,
+   "match": "border-left:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 317,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 324,
+   "match": "border-left:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 325,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 326,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 339,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 347,
+   "match": "border-left:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 352,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "WARN",
+   "id": "outlined-box",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 362,
+   "match": "border:1px solid",
+   "message": "A 1px outlined box. Prefer a filled surface or no box."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 369,
+   "match": "height:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 387,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 388,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 393,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 397,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science-pages.css",
+   "line": 398,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "WARN",
+   "id": "copy",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science.css",
+   "line": 2,
+   "match": "world-class",
+   "message": "Stock marketing phrase. Say the specific thing the product does."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science.css",
+   "line": 53,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science.css",
+   "line": 58,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science.css",
+   "line": 59,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/science.css",
+   "line": 130,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/shop.css",
+   "line": 82,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/shop.css",
+   "line": 108,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/shop.css",
+   "line": 115,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/shop.css",
+   "line": 124,
+   "match": "height:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/shop.css",
+   "line": 154,
+   "match": "border-left:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/shop.css",
+   "line": 227,
+   "match": "height:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "file": "wp-content/themes/cos-child/assets/css/hx/shop.css",
+   "line": 269,
+   "match": "linear-gradient(",
+   "message": "Gradient fill. Use a flat colour or a real image (a neutral scrim over a photo is the one exception)."
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "file": "wp-content/themes/cos-child/assets/css/hx/shop.css",
+   "line": 277,
+   "match": "linear-gradient(",
+   "message": "Gradient fill. Use a flat colour or a real image (a neutral scrim over a photo is the one exception)."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/shop.css",
+   "line": 287,
+   "match": "border-left:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/shop.css",
+   "line": 341,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/shop.css",
+   "line": 342,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "file": "wp-content/themes/cos-child/assets/css/hx/shop.css",
+   "line": 356,
+   "match": "linear-gradient(",
+   "message": "Gradient fill. Use a flat colour or a real image (a neutral scrim over a photo is the one exception)."
+  },
+  {
+   "level": "FAIL",
+   "id": "numbering",
+   "file": "wp-content/themes/cos-child/assets/css/hx/system.css",
+   "line": 63,
+   "match": "\"01\"",
+   "message": "Decorative index numbering (01 / 02 / 03)."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/system.css",
+   "line": 94,
+   "match": "<hr",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/system.css",
+   "line": 304,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/system.css",
+   "line": 311,
+   "match": "height:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/system.css",
+   "line": 312,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "file": "wp-content/themes/cos-child/assets/css/hx/system.css",
+   "line": 328,
+   "match": "linear-gradient(",
+   "message": "Gradient fill. Use a flat colour or a real image (a neutral scrim over a photo is the one exception)."
+  },
+  {
+   "level": "WARN",
+   "id": "outlined-box",
+   "file": "wp-content/themes/cos-child/assets/css/hx/system.css",
+   "line": 372,
+   "match": "border:1px solid",
+   "message": "A 1px outlined box. Prefer a filled surface or no box."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/system.css",
+   "line": 409,
+   "match": "height:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/the-ritual.css",
+   "line": 71,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/the-ritual.css",
+   "line": 81,
+   "match": "height:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/the-ritual.css",
+   "line": 142,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/the-ritual.css",
+   "line": 147,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/the-ritual.css",
+   "line": 156,
+   "match": "height:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/the-ritual.css",
+   "line": 160,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/the-ritual.css",
+   "line": 171,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/the-ritual.css",
+   "line": 214,
+   "match": "height:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/the-ritual.css",
+   "line": 260,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/hx/the-ritual.css",
+   "line": 267,
+   "match": "border-bottom:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "WARN",
+   "id": "copy",
+   "file": "wp-content/themes/cos-child/assets/css/home-staging/system.css",
+   "line": 3,
+   "match": "world-class",
+   "message": "Stock marketing phrase. Say the specific thing the product does."
+  },
+  {
+   "level": "FAIL",
+   "id": "emoji",
+   "file": "wp-content/themes/cos-child/assets/css/home-staging/system.css",
+   "line": 31,
+   "match": "✗",
+   "message": "Emoji used as UI."
+  },
+  {
+   "level": "FAIL",
+   "id": "emoji",
+   "file": "wp-content/themes/cos-child/assets/css/home-staging/system.css",
+   "line": 32,
+   "match": "✗",
+   "message": "Emoji used as UI."
+  },
+  {
+   "level": "FAIL",
+   "id": "numbering",
+   "file": "wp-content/themes/cos-child/assets/css/home-staging/system.css",
+   "line": 73,
+   "match": "\"01\"",
+   "message": "Decorative index numbering (01 / 02 / 03)."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/home-staging/system.css",
+   "line": 111,
+   "match": "<hr",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/home-staging/system.css",
+   "line": 342,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/home-staging/system.css",
+   "line": 349,
+   "match": "height:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "wp-content/themes/cos-child/assets/css/home-staging/system.css",
+   "line": 350,
+   "match": "border-top:1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "file": "wp-content/themes/cos-child/assets/css/home-staging/system.css",
+   "line": 366,
+   "match": "linear-gradient(",
+   "message": "Gradient fill. Use a flat colour or a real image (a neutral scrim over a photo is the one exception)."
+  },
+  {
+   "level": "WARN",
+   "id": "outlined-box",
+   "file": "wp-content/themes/cos-child/assets/css/home-staging/system.css",
+   "line": 410,
+   "match": "border:1px solid",
+   "message": "A 1px outlined box. Prefer a filled surface or no box."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "wp-content/themes/cos-child/assets/css/home-staging/system.css",
+   "line": 418,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "wp-content/themes/cos-child/assets/css/home-staging/system.css",
+   "line": 419,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "WARN",
+   "id": "em-dash",
+   "file": "(all files)",
+   "line": 0,
+   "match": "59 em dashes",
+   "message": "Em-dash habit. Use a full stop or a comma; keep at most one or two on a page."
+  }
+ ]
+}

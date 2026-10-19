@@ -317,7 +317,7 @@ function cos_child_open_graph(): void {
 
 	if ( is_front_page() ) {
 		$og['title']       = cos_child_seo_home_title();
-		$og['description'] = 'Discover Swiss luxury skincare powered by precious caviar extract and independently tested formulas. Shop the complete four-step anti-aging ritual.';
+		$og['description'] = 'Discover four caviar skincare formulas, developed and made in Switzerland. Explore your daily essentials or shop the Complete Ritual.';
 		$og['type']        = 'website';
 		$og['image']       = $uploads . $image_meta['home'];
 	} elseif ( function_exists( 'is_shop' ) && is_shop() ) {

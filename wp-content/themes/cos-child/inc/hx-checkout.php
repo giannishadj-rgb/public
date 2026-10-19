@@ -52,7 +52,7 @@ function cos_hxco_line_image( WC_Product $product, string $sizes = '120px', ?str
 	);
 	if ( function_exists( 'cos_h26_picture' ) ) {
 		if ( isset( $objects[ $slug ] ) ) {
-			return cos_h26_picture( 'collection-object-' . $objects[ $slug ], array( 480, 720 ), array( 2, 3 ), $alt, array( 'class' => 'hxco-thumb__pic hxco-thumb__pic--object', 'sizes' => $sizes, 'w' => 480 ) );
+			return cos_h26_picture( 'pack-' . $objects[ $slug ], array( 480, 720 ), array( 2, 3 ), $alt, array( 'class' => 'hxco-thumb__pic hxco-thumb__pic--object', 'sizes' => $sizes, 'w' => 480 ) );
 		}
 		if ( 'the-complete-ritual' === $slug ) {
 			return cos_h26_picture( 'final-tray-sq', array( 560 ), array( 1, 1 ), $alt, array( 'class' => 'hxco-thumb__pic hxco-thumb__pic--photo', 'sizes' => $sizes, 'w' => 560 ) );

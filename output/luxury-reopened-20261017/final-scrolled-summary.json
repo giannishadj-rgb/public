@@ -1,0 +1,18 @@
+[
+  {
+    "mode": "mobile",
+    "requests": 33,
+    "bytes": 777805,
+    "failed": [],
+    "layoutShiftSum": 0,
+    "brokenImages": []
+  },
+  {
+    "mode": "desktop",
+    "requests": 33,
+    "bytes": 683214,
+    "failed": [],
+    "layoutShiftSum": 0.2057833948645572,
+    "brokenImages": []
+  }
+]

@@ -1,0 +1,129 @@
+{
+  "date": "2026-10-17",
+  "scope": "Caviar section (hxv): one graded macro of the heap on its light field (round 3)",
+  "paths_relative_to": "WordPress public directory",
+  "source_kind": "Owner-supplied caviar macro photographs (no packaging in frame)",
+  "sources": {
+    "heap": {
+      "path": "../design-sources/home-2026/caviar-backlit-macro-2_master.png",
+      "sha256": "80ddb58fe128fbf64c2a875d5f06338f85685d94be065f0ce12c6c1782caab4d",
+      "bytes": 4009156,
+      "dimensions": [
+        3000,
+        2000
+      ],
+      "kind": "owner photograph"
+    }
+  },
+  "builder": {
+    "path": "../design-sources/home-2026/build_hxv_spread.py",
+    "sha256": "f0362d7662e2bf52d8b27186c4d5b80d3a49bfcb2ec32bcb880f76c8dfce541f"
+  },
+  "transformation": {
+    "operations": [
+      "Crop: x1000-2600 y0-2000 (4:5, 1600x2000)",
+      "Per-channel multiply mapping the photograph light field (244,240,235) to #EEEAE3 (one shade under the #FBFAF7 ground)",
+      "Global grade: shadows +18*(1-v)^2, black point 0->22, amber warm (R +6 mid +3 shadow, G +2 mid, B -5 mid -3 shadow)",
+      "Lanczos downscale only (never upscaled)"
+    ],
+    "generative_content": false,
+    "format_settings": {
+      "avif": {
+        "quality": 64,
+        "speed": 4
+      },
+      "webp": {
+        "quality": 84,
+        "method": 6
+      },
+      "jpg": {
+        "quality": 86,
+        "optimize": true,
+        "progressive": true
+      }
+    }
+  },
+  "derivatives": [
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/hxv-macro-800.avif",
+      "sha256": "cd96ee3ba7d918577b96fc39667ab0f31a1f1a27f43ee53f2ede4f4651f91725",
+      "bytes": 29848,
+      "dimensions": [
+        800,
+        1000
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/hxv-macro-800.webp",
+      "sha256": "b7c4e29f1abf8a56359033469eddd89bed6826f4b827400860e32932b6bd8650",
+      "bytes": 38036,
+      "dimensions": [
+        800,
+        1000
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/hxv-macro-800.jpg",
+      "sha256": "66167eb0f04f1750841ae5768bce399af1dfb4a11edd343eff5fe22ac199e32e",
+      "bytes": 79452,
+      "dimensions": [
+        800,
+        1000
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/hxv-macro-1200.avif",
+      "sha256": "3f1a1922e65b82ee0ccff47dbf8f6afb0e17eb742edb1ec0997867b6c54783e1",
+      "bytes": 46421,
+      "dimensions": [
+        1200,
+        1500
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/hxv-macro-1200.webp",
+      "sha256": "340f7e79a34325546062540226dd503f08e74b7ba824209690fbe54f17c1c7f0",
+      "bytes": 60846,
+      "dimensions": [
+        1200,
+        1500
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/hxv-macro-1200.jpg",
+      "sha256": "e45f84ec74aae1e9ede0a585aa760e30ee00342628f6cd6347e9490b7c510171",
+      "bytes": 143061,
+      "dimensions": [
+        1200,
+        1500
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/hxv-macro-1600.avif",
+      "sha256": "7f9634512a58c6aa43e89ee91bba3fea10c0f141fab2dd5f58ebc7ab631f1586",
+      "bytes": 63991,
+      "dimensions": [
+        1600,
+        2000
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/hxv-macro-1600.webp",
+      "sha256": "8a4bded09fe451dfe76d9c0c270f3f0d723b397f443662485e81d52be744256b",
+      "bytes": 86418,
+      "dimensions": [
+        1600,
+        2000
+      ]
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/hxv-macro-1600.jpg",
+      "sha256": "55bb102d4b11dfd4a1ebd9ab97eae159ae52ca13646d2d0d8f896aecea36200a",
+      "bytes": 219741,
+      "dimensions": [
+        1600,
+        2000
+      ]
+    }
+  ]
+}

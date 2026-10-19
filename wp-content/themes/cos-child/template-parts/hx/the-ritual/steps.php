@@ -42,7 +42,6 @@ $nb    = static fn( string $s ): string => str_replace( '-', "\u{2011}", $s ); /
 			<dl class="hxrt-facts">
 				<div class="hxrt-facts__row"><dt>Amount</dt><dd><?php echo esc_html( $nb( $s['amount'] ) ); ?></dd></div>
 				<div class="hxrt-facts__row"><dt>When</dt><dd><?php echo esc_html( $s['when'] ); ?></dd></div>
-				<div class="hxrt-facts__row"><dt>Size</dt><dd><?php echo esc_html( $s['size'] ); ?></dd></div>
 			</dl>
 
 			<details class="hxrt-more" data-hxrt-open>

@@ -44,11 +44,21 @@ function cos_hxn_bag_data(): ?array {
 		$parent = wc_get_product( $product->get_parent_id() );
 		$img_id = $parent ? $parent->get_image_id() : 0;
 	}
+	$image = $img_id ? (string) wp_get_attachment_image_url( $img_id, 'woocommerce_thumbnail' ) : '';
+	$wide  = false;
+	// The Complete Ritual: its catalogue image is a tray that crops badly at thumbnail size;
+	// show the four packshots in step order instead (design-sources/sitechrome/build_minibag_ritual.py).
+	$slug = get_post_field( 'post_name', $product->get_parent_id() ?: $product->get_id() );
+	if ( 'the-complete-ritual' === $slug && file_exists( get_stylesheet_directory() . '/assets/images/minibag/ritual-four-560.jpg' ) ) {
+		$image = get_stylesheet_directory_uri() . '/assets/images/minibag/ritual-four-560.jpg';
+		$wide  = true;
+	}
 	$count = (int) $cart->get_cart_contents_count();
 	return array(
 		'name'     => wp_strip_all_tags( $product->get_name() ),
 		'url'      => get_permalink( $product->get_parent_id() ?: $product->get_id() ),
-		'image'    => $img_id ? (string) wp_get_attachment_image_url( $img_id, 'woocommerce_thumbnail' ) : '',
+		'image'    => $image,
+		'wide'     => $wide,
 		'qty'      => (int) $item['quantity'],
 		'line'     => cos_hxn_bag_money( $cart->get_product_subtotal( $product, $item['quantity'] ) ),
 		'subtotal' => cos_hxn_bag_money( $cart->get_cart_subtotal() ),
@@ -103,7 +113,7 @@ add_action( 'wp_footer', static function (): void {
   var closeBtn=panel.querySelector('.hxn-bag__close');
   var lastInput='pointer', trigger=null, timer=null, hideT=null, hovering=false;
   var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  document.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' ') lastInput='key'; },true);
+  document.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '||e.key==='Escape'||e.key==='Tab') lastInput='key'; },true);
   document.addEventListener('pointerdown',function(){ lastInput='pointer'; },true);
   function q(s){return panel.querySelector(s);}
   function parse(str){
@@ -113,6 +123,7 @@ add_action( 'wp_footer', static function (): void {
   function fill(d){
     var img=q('.hxn-bag__img'), media=q('.hxn-bag__media');
     if(d.image){ img.src=d.image; img.alt=''; media.hidden=false; } else { media.hidden=true; }
+    media.classList.toggle('is-wide',!!d.wide);
     var name=q('.hxn-bag__name'); name.textContent=''; name.href=d.url||'#';
     // keep hyphenated words ("All-in-One") on one line
     String(d.name).split(/(\s+)/).forEach(function(part){ if(part.indexOf('-')>0){ var s=document.createElement('span'); s.style.whiteSpace='nowrap'; s.textContent=part; name.appendChild(s); } else name.appendChild(document.createTextNode(part)); });
@@ -145,9 +156,13 @@ add_action( 'wp_footer', static function (): void {
     var hadFocus=panel.contains(document.activeElement);
     panel.classList.remove('is-open');
     hideT=setTimeout(function(){ panel.hidden=true; }, reduce?0:420);
-    if(restore!==false||hadFocus){
-      var back=(trigger&&document.contains(trigger))?trigger:document.querySelector('.cos-bag-link');
-      if(back && hadFocus) back.focus({preventScroll:true});
+    // Return focus to the control that added the item only for keyboard users; after a
+    // mouse/touch close just release focus (programmatic focus can paint a ring).
+    if(hadFocus){
+      if(lastInput==='key'){
+        var back=(trigger&&document.contains(trigger))?trigger:document.querySelector('.cos-bag-link');
+        if(back) back.focus({preventScroll:true});
+      } else if(document.activeElement && document.activeElement.blur){ document.activeElement.blur(); }
     }
   }
   closeBtn.addEventListener('click',function(){ close(true); });

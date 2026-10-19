@@ -1,0 +1,290 @@
+/* ==========================================================================
+   hx/collection.css — 02 The Collection (luxury pass, 17 Oct 2026, round 2)
+   Markup: template-parts/home-2026/collection.php · prefix hxc- · tokens from hx/system.css
+
+   Four objects, one set. The packs (collection-object-set-hxc-*: transparent,
+   640x1100, one shared soft contact shadow, every foot on y = 92.73%) stand on
+   the pearl-white ground with no tile, frame or border, drawn at or below their
+   source resolution.
+   ≥1100px four across, 640–1099px two by two (rows aligned by subgrid:
+   stage / step / name / benefit / price / cue). Phones: one per row, the
+   object left and its text right, so every pack is large enough to feel precious.
+   Nothing is hidden at any width; nothing waits for a reveal.
+   ========================================================================== */
+
+body.cos-h26 .hxc{
+	--hxc-col-gap:clamp(16px,2.6vw,44px);
+	--hxc-row-gap:24px;
+	--hxc-base:92.16%;              /* foot line (1020 of 1100 = 940 of the 1020 stage, bottom-anchored) */
+	position:relative;
+	background:var(--hx-white);
+	color:var(--hx-fg-2);
+	padding-block:clamp(64px,3rem + 4vw,128px) clamp(64px,3rem + 3vw,120px);
+}
+body.cos-h26 .hxc :where(h2,h3,p,ol,li){margin:0;padding:0}
+
+/* ─── Head: title left, lede right, sharing the title's baseline ────── */
+body.cos-h26 .hxc__head{
+	display:grid;
+	gap:var(--hx-s-4);
+	margin-bottom:clamp(28px,1rem + 2vw,40px);
+}
+body.cos-h26 .hxc__lede{max-width:30em;font-size:1rem;font-weight:400;line-height:1.6;color:var(--hx-fg-2);text-wrap:pretty}
+@media (min-width:900px){
+	body.cos-h26 .hxc__head{grid-template-columns:minmax(0,7fr) minmax(0,5fr);column-gap:var(--hx-gap);align-items:first baseline;margin-bottom:8px} /* the lede's first line sits on the headline's baseline */
+	body.cos-h26 .hxc__lede{justify-self:end;max-width:24em;text-wrap:balance}
+}
+
+/* ─── List ──────────────────────────────────────────────────────────── */
+body.cos-h26 .hxc__list{
+	list-style:none;
+	display:grid;
+	grid-template-columns:minmax(0,1fr);
+	row-gap:var(--hxc-row-gap);
+}
+body.cos-h26 .hxc__item{list-style:none;min-width:0}
+body.cos-h26 .hxc__item::marker{content:none}
+
+/* the whole object is the link */
+body.cos-h26 .hxc__link,
+body.cos-h26 .hxc__link:visited,
+body.cos-h26 .hxc__link:hover{
+	color:inherit;
+	text-decoration:none;
+	-webkit-tap-highlight-color:transparent;
+}
+body.cos-h26 .hxc__link{display:grid;min-width:0}
+body.cos-h26 .hxc__link *{text-decoration:none}
+
+/* stage: air around the object, nothing else */
+body.cos-h26 .hxc__stage{
+	display:block;
+	width:100%;
+	aspect-ratio:640 / 1020;          /* empty sky above the cleanser cropped (whole row fits 1440x900 under the header) */
+	overflow:clip;
+	background:transparent;
+}
+body.cos-h26 .hxc__object,
+body.cos-h26 .hxc__object img{display:block;width:100%;height:100%}
+body.cos-h26 .hxc__object img{
+	object-fit:cover;
+	object-position:50% 100%;           /* stages crop sky only, never the floor */
+	background:transparent;
+	transform-origin:50% var(--hxc-base);   /* grows from the foot: the baseline never moves */
+	transition:transform 1400ms var(--hx-ease);
+}
+
+/* step: "01  Cleanse", numeral upright, verb italic, no rail */
+body.cos-h26 .hxc__step{
+	display:inline-flex;
+	align-items:baseline;
+	gap:.55em;
+	font-family:var(--hx-serif);
+	font-size:1.0625rem;
+	line-height:1;
+	color:var(--hx-fg-accent);
+	white-space:nowrap;
+}
+body.cos-h26 .hxc__num{
+	font-weight:400;
+	letter-spacing:var(--hx-tr-step);
+	font-variant-numeric:lining-nums tabular-nums;
+	font-feature-settings:"lnum" 1,"tnum" 1;
+}
+body.cos-h26 .hxc__verb{font-style:italic;font-weight:300;font-size:1.06em;letter-spacing:.01em;color:var(--hx-fg-2)}
+
+/* name: qualifier / product noun, two deliberate lines */
+body.cos-h26 .hxc__name{
+	margin-top:14px;
+	max-width:100%;
+	font-family:var(--hx-serif);
+	font-size:1.375rem;
+	font-weight:400;
+	line-height:1.15;
+	letter-spacing:var(--hx-tr-title);
+	color:var(--hx-fg);
+	text-transform:none;
+}
+body.cos-h26 .hxc__name span{display:block;white-space:nowrap}
+
+body.cos-h26 .hxc__benefit{
+	display:block;
+	max-width:15em;
+	margin-top:10px;
+	font-family:var(--hx-sans);
+	font-size:1rem;
+	font-weight:400;
+	line-height:1.5;
+	color:var(--hx-fg-3);
+	text-wrap:balance;
+}
+
+/* price line: price in ink, size lighter behind a hairline */
+body.cos-h26 .hxc__meta{
+	display:inline-flex;
+	flex-wrap:wrap;
+	align-items:center;
+	max-width:100%;
+	margin-top:14px;
+	font-family:var(--hx-sans);
+	font-size:.9375rem;
+	line-height:1.4;
+	letter-spacing:.01em;
+	font-variant-numeric:lining-nums tabular-nums;
+}
+body.cos-h26 .hxc__price{color:var(--hx-fg);font-weight:500}
+body.cos-h26 .hxc__size{color:var(--hx-fg-3)}
+body.cos-h26 .hxc__dot{display:inline-block;width:1px;height:12px;margin-inline:12px;background:var(--hx-line-strong)}
+
+/* cue: small tracked capitals on a resting hairline that darkens on hover / focus */
+body.cos-h26 .hxc__cta{
+	display:inline-flex;
+	align-items:center;
+	min-height:44px;
+	font-family:var(--hx-sans);
+	font-size:.9375rem;
+	font-weight:500;
+	letter-spacing:.015em;
+	text-transform:none;
+	color:var(--hx-fg);
+}
+body.cos-h26 .hxc__cta-label{
+	padding:4px 0 5px;
+	background-image:linear-gradient(var(--hx-line-strong),var(--hx-line-strong)),linear-gradient(currentColor,currentColor);
+	background-repeat:no-repeat;
+	background-position:0 100%,0 100%;
+	background-size:calc(100% - .18em) 1px,0 1px;
+	transition:background-size 700ms var(--hx-ease);
+	margin-right:-.18em; /* optical centring: drop the trailing tracking */
+}
+
+@media (hover:hover){
+	body.cos-h26 .hxc__link:hover .hxc__object img{transform:scale(1.03)}
+	body.cos-h26 .hxc__link:hover .hxc__cta-label{background-size:calc(100% - .18em) 1px,calc(100% - .18em) 1px}
+}
+body.cos-h26 .hxc__link:focus-visible .hxc__cta-label{background-size:calc(100% - .18em) 1px,calc(100% - .18em) 1px}
+body.cos-h26 .hxc__link:focus{outline:none}
+body.cos-h26 .hxc__link:focus-visible{outline:var(--hx-focus-width) solid var(--hx-focus-color);outline-offset:var(--hx-focus-offset)}
+
+/* ─── Phones ──────────────────────────────────────────────────────────
+   Default: one per row, the object centred at 62vw with its text beneath.
+	.hxc--rail: a snap rail of 60vw slides with the next one peeking,
+	a live count and optional previous/next controls. */
+body.cos-h26 .hxc__rail-ui{display:none}
+body.cos-h26 .hxc__choices{display:none}
+@media (max-width:639.98px){
+	body.cos-h26 .hxc__choices:not([hidden]){display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:-8px 0 20px}
+	body.cos-h26 .hxc__choices button{min-width:0;min-height:44px;border:0;border-bottom:1px solid var(--hx-line);padding:6px 2px;background:transparent;color:var(--hx-text);font-family:var(--hx-sans);font-size:.9375rem;line-height:1.3;cursor:pointer}
+	body.cos-h26 .hxc__choices button[aria-pressed="true"]{border-bottom-color:var(--hx-ink);color:var(--hx-ink);font-weight:500}
+	body.cos-h26 .hxc__choices button:focus-visible{outline:2px solid var(--hx-focus-color);outline-offset:3px}
+	body.cos-h26 .hxc__list{row-gap:clamp(40px,12vw,56px)}
+	body.cos-h26 .hxc__link{justify-items:center;text-align:center}
+	body.cos-h26 .hxc__stage{width:62vw;aspect-ratio:640 / 1020}
+	body.cos-h26 .hxc__item--cream .hxc__stage{aspect-ratio:640 / 620} /* the jar needs no bottle's sky (transparent canvas crop only) */
+	body.cos-h26 .hxc__step{margin-top:6px}
+	body.cos-h26 .hxc__name{font-size:clamp(1.25rem,.9rem + 1.6vw,1.4375rem)}
+	body.cos-h26 .hxc__benefit{max-width:17em}
+	body.cos-h26 .hxc__meta{justify-content:center}
+
+	body.cos-h26 .hxc--rail .hxc__list{
+		grid-auto-flow:column;
+		grid-template-columns:none;
+		grid-auto-columns:60vw;            /* the next pack half-shows: a clear "more to the right" cue */
+		column-gap:clamp(12px,4vw,20px);
+		row-gap:0;
+		margin-inline:calc(-1 * var(--hx-margin));
+		padding-inline:var(--hx-margin);
+		scroll-padding-inline:var(--hx-margin);
+		overflow-x:auto;
+		overscroll-behavior-x:contain;
+		scroll-snap-type:x mandatory;
+		scrollbar-width:none;
+		-webkit-overflow-scrolling:touch;
+	}
+	body.cos-h26 .hxc--rail .hxc__list::-webkit-scrollbar{display:none}
+	body.cos-h26 .hxc--rail .hxc__item{scroll-snap-align:start}
+	body.cos-h26 .hxc--rail .hxc__stage,
+	body.cos-h26 .hxc--rail .hxc__item--cream .hxc__stage{width:100%;aspect-ratio:640 / 1020}
+	body.cos-h26 .hxc--rail .hxc__benefit{min-height:3em}
+	body.cos-h26 .hxc--rail.hxc--enhanced .hxc__rail-ui{display:flex;align-items:center;gap:16px;margin-top:20px;font-family:var(--hx-sans);font-size:.75rem;letter-spacing:.12em;color:var(--hx-fg-2);font-variant-numeric:lining-nums tabular-nums}
+	body.cos-h26 .hxc--rail{padding-bottom:clamp(48px,14vw,72px)}
+	body.cos-h26 .hxc__track{position:relative;flex:1;height:1px;background:var(--hx-line);overflow:hidden}
+	body.cos-h26 .hxc__thumb{position:absolute;inset:0 auto 0 0;width:25%;background:var(--hx-fg);transition:transform 500ms var(--hx-ease)}
+	body.cos-h26 .hxc__controls:not([hidden]){display:flex;gap:8px}
+	body.cos-h26 .hxc__controls button{display:grid;place-items:center;width:44px;height:44px;padding:0;border:1px solid var(--hx-line-strong);border-radius:0;background:transparent;color:var(--hx-ink);cursor:pointer;touch-action:manipulation}
+	body.cos-h26 .hxc__controls button:hover{background:var(--hx-ground-stone)}
+	body.cos-h26 .hxc__controls button[aria-disabled="true"]{color:var(--hx-muted);border-color:var(--hx-line);cursor:default}
+	body.cos-h26 .hxc__controls button:focus-visible{outline:2px solid var(--hx-focus-color);outline-offset:3px}
+	body.cos-h26 .hxc__controls svg{fill:none;stroke:currentColor;stroke-width:1.25}
+}
+@media (max-width:359.98px){
+	body.cos-h26 .hxc__name{font-size:1.0625rem}
+	body.cos-h26 .hxc__name span{white-space:normal}
+}
+
+/* ─── ≥640px: rows of products, text aligned across by subgrid ────── */
+@media (min-width:640px){
+	body.cos-h26 .hxc__list{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--hxc-col-gap);row-gap:0}
+	body.cos-h26 .hxc__item{display:grid;grid-row:span 6;grid-template-rows:subgrid}
+	body.cos-h26 .hxc__item:nth-child(n+3){margin-top:var(--hxc-row-gap)}
+	body.cos-h26 .hxc__link{
+		grid-row:span 6;
+		grid-template-rows:subgrid;
+		grid-template-columns:minmax(0,1fr);
+		justify-items:center;
+		align-items:start;
+		text-align:center;
+	}
+	body.cos-h26 .hxc__stage{width:min(100%,300px)}
+	body.cos-h26 .hxc__step{margin-top:clamp(4px,.6vw,8px)}
+	body.cos-h26 .hxc__benefit{min-height:3em} /* two lines: prices share one line across the row */
+	body.cos-h26 .hxc__meta{justify-content:center}
+}
+
+/* ─── ≥1100px: four across ────────────────────────────────────────── */
+@media (min-width:1100px){
+	body.cos-h26 .hxc__list{grid-template-columns:repeat(4,minmax(0,1fr))}
+	body.cos-h26 .hxc__item:nth-child(n+3){margin-top:0}
+	/* round 4 rhythm: 96 top, 56 from headline to the caps, 72 bottom; the stage is 85%
+	   of the column so pack-to-Discover still fits 1440x900 under the 80px header */
+	body.cos-h26 .hxc{padding-block:96px 72px}
+	body.cos-h26 .hxc__head{margin-bottom:34px} /* 56px from the headline box to the caps (stage top + cap inset) */
+	body.cos-h26 .hxc__stage{width:min(85%,326px);margin-bottom:-10px} /* 326px = 520px tall cap at wide screens; the -10px trims unused floor under the shadow */
+	body.cos-h26 .hxc__name{font-size:clamp(1.375rem,.9rem + .65vw,1.625rem);margin-top:10px}
+	body.cos-h26 .hxc__meta{margin-top:10px}
+}
+
+@media (prefers-reduced-motion:reduce){
+	body.cos-h26 .hxc__object img,
+	body.cos-h26 .hxc__cta-label{transition:none}
+	body.cos-h26 .hxc__link:hover .hxc__object img{transform:none}
+	body.cos-h26 .hxc__thumb{transition:none}
+}
+
+/* Mobile comparison: shorter proportional objects, unchanged packaging geometry. */
+@media(max-width:639.98px){
+ body.cos-h26 .hxc--rail .hxc__stage,
+ body.cos-h26 .hxc--rail .hxc__item--cream .hxc__stage{width:76%;justify-self:center}
+ body.cos-h26 .hxc--rail .hxc__step{margin-top:2px}
+ body.cos-h26 .hxc--rail .hxc__name{margin-top:10px}
+}
+
+/* A dated, linked editorial observation, not an outcome or award claim. */
+body.cos-h26 .hxc__press{margin:48px 0 0;padding-top:28px;border-top:1px solid var(--hx-line);display:grid;gap:18px}
+.hxc__press blockquote{margin:0;padding:0;border:0}
+body.cos-h26 .hxc__press blockquote p{font:400 25px/1.18 var(--hx-serif);max-width:30em;color:var(--hx-ink)}
+.hxc__press figcaption{font:400 14px/1.6 var(--hx-sans);color:var(--hx-muted)}
+.hxc__press figcaption>span{display:block}
+.hxc__press figcaption a{display:inline-flex;align-items:center;gap:12px;min-height:44px;color:var(--hx-text);text-decoration:underline;text-decoration-color:var(--hx-line-strong);text-underline-offset:4px}
+@media(min-width:900px){
+ body.cos-h26 .hxc__press{grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:48px;align-items:center;margin-top:56px;padding-top:32px}
+ body.cos-h26 .hxc__press blockquote p{font-size:32px}
+}
+
+@media(max-width:639.98px){
+ body.cos-h26 .hxc__choices button[aria-pressed="true"]{border-bottom-color:var(--hx-purchase)}
+ body.cos-h26 .hxc__thumb{background:var(--hx-purchase)}
+}
+
+/* Source-direct original photographs share their native white ground. */
+body.cos-h26 .hxc{background:#fff}

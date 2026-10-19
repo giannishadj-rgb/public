@@ -1,0 +1,148 @@
+/* ==========================================================================
+   hx/hero.css — 01 Hero. Prefix hxh-. Owner: hero agent.
+   Markup: template-parts/home-2026/hero.php. Images: design-sources/home-2026/build_hxh_pearl.py
+   (17 Oct 2026 luxury pass: pearl regrade of the environment only, larger product).
+
+   Art direction: one object, one light, a jewellery campaign. The 24h Regeneration
+   Cream sits right of centre in a calm pearl field (landscape), or high in the frame
+   above a long reflective floor that carries the words and the action (phones).
+   Type is graphite on the photograph's own light; the action is a hairline frame,
+   not a slab.
+
+   Header: transparent over the hero (shared header code, hook class h26-hero--pearl).
+   ========================================================================== */
+
+/* the legacy hook class carries old section styles — neutralise them */
+body.cos-h26 .hxh.h26-hero--pearl{background:#D9D1CB}
+
+.hxh{
+	--hxh-nav:var(--cos-nav-h,80px);
+	--hxh-pos-x:50%;
+	position:relative;
+	isolation:isolate;
+	box-sizing:border-box;
+	display:flex;
+	min-height:max(560px,100svh);
+	overflow:clip;
+	background:#D9D1CB; /* mean tone of the graded photograph: no flash before it paints */
+	color:var(--hx-ink);
+}
+@media (max-width:599.98px){
+	body.cos-h26 .hxh.h26-hero--pearl,.hxh{background:linear-gradient(#DCD3CC 55%,#F2EEE8 80%,#FBFAF7)} /* = the tall frame's floor, ending on the page ivory */
+}
+
+/* ─── Photograph ─────────────────────────────────────────────────── */
+.hxh__media{position:absolute;inset:0;z-index:-1;overflow:clip}
+.hxh__drift{position:absolute;inset:0}
+.hxh__picture,.hxh__picture img{display:block;width:100%;height:100%}
+.hxh__picture img{object-fit:cover;object-position:var(--hxh-pos-x) 50%}
+
+/* ─── Copy (phones first: words + action on the floor below the object) ─ */
+.hxh__inner{
+	position:relative;
+	box-sizing:border-box;
+	display:flex;
+	flex-direction:column;
+	justify-content:flex-end;
+	align-items:center;
+	width:100%;
+	padding:calc(var(--hxh-nav) + 16px) var(--hx-margin) max(36px, calc(env(safe-area-inset-bottom) + 24px));
+	text-align:center;
+}
+.hxh__copy{display:flex;flex-direction:column;align-items:center}
+.hxh__title{
+	margin:0;
+	font-size:2.375rem;            /* 38px  <360px  */
+	line-height:1.04;
+	letter-spacing:-.005em;
+	color:var(--hx-ink);
+}
+.hxh__line{display:block}
+.hxh__title em{font-style:italic;font-weight:300}
+/* one restrained line: four products, the ritual, Swiss science, Zug */
+.hxh__lead{
+	margin:16px 0 0;
+	font-family:var(--hx-sans);
+	font-size:1rem;
+	font-weight:400;
+	line-height:1.55;
+	letter-spacing:.01em;
+	color:var(--hx-text);          /* #3A3B3D on the warm ivory floor: >= 9:1 (measured in shoot) */
+}
+.hxh__ln{display:block}
+
+/* The action: a hairline frame in graphite, sized to its words */
+.hxh__action{margin-top:24px;display:flex;justify-content:center}
+.hx-btn.hxh__cta{
+	--hx-btn-bg:transparent;
+	--hx-btn-bg-hover:var(--hx-ink);
+	--hx-btn-fg:var(--hx-ink);
+	--hx-btn-frame:transparent;
+	min-height:48px;
+	padding:0 30px;
+	border:1px solid rgba(28,29,31,.55);
+	background:rgba(250,249,246,.16);
+	font-size:.9375rem;
+	font-weight:500;
+	letter-spacing:.01em;
+	text-transform:none;
+	transition:background-color 450ms var(--hx-ease-soft),color 450ms var(--hx-ease-soft),border-color 450ms var(--hx-ease-soft);
+}
+.hx-btn.hxh__cta:hover{background:var(--hx-ink);color:#FBFAF7;border-color:var(--hx-ink)}
+.hx-btn.hxh__cta:visited{color:var(--hx-ink)}
+.hx-btn.hxh__cta:visited:hover{color:#FBFAF7}
+.hx-btn.hxh__cta:focus-visible{outline:2px solid var(--hx-ink);outline-offset:4px}
+
+/* A second route for visitors choosing an individual formula. */
+.hxh__explore{margin-top:8px;min-height:44px;color:var(--hx-ink)}
+
+/* 320px phones */
+@media (max-width:359.98px){
+	.hx-btn.hxh__cta{padding-inline:20px;letter-spacing:.14em;white-space:nowrap}
+	
+}
+@media (min-width:360px){.hxh__title{font-size:2.625rem}}   /* 42px */
+@media (min-width:420px){.hxh__title{font-size:2.875rem}}   /* 46px */
+@media (min-width:700px){.hxh__title{font-size:3.25rem}}    /* 52px */
+/* short phone viewports (Safari with both toolbars): keep the words on the floor, off the reflection */
+@media (max-width:599.98px) and (max-height:720px){
+	.hxh__title{font-size:2.375rem}
+	.hxh__lead{margin-top:12px}
+	.hxh__action{margin-top:20px}
+	
+	.hxh__inner{padding-bottom:max(28px, calc(env(safe-area-inset-bottom) + 20px))}
+}
+
+/* ─── Wide frame on portrait tablets: object centred above the words ─ */
+@media (min-width:600px){.hxh{--hxh-pos-x:66.5%}}
+
+/* ─── Landscape: headline left in the calm field, object right of centre ─ */
+@media (min-width:768px) and (min-aspect-ratio:1/1){
+	.hxh{--hxh-pos-x:58%;min-height:max(600px,100svh)}
+	.hxh__inner{
+		display:grid;
+		grid-template-columns:minmax(0,1fr);
+		align-content:center;
+		justify-items:start;
+		max-width:calc(var(--hx-max) + 2 * var(--hx-margin));
+		margin-inline:auto;
+		padding-top:var(--hxh-nav);
+		padding-bottom:0;
+		text-align:left;
+	}
+	.hxh__copy{align-items:flex-start;max-width:min(38vw,520px)}
+	.hxh__copy,.hxh__action,.hxh__explore{transform:translateY(-3svh)} /* optical: H1 cap line on the jar rim, block centred on the jar body, not the canvas */
+	.hxh__lead{margin-top:22px;font-size:1rem;line-height:1.6;letter-spacing:.003em;color:var(--hx-ink)}
+	.hxh__action{margin-top:40px;justify-content:flex-start}
+	.hx-btn.hxh__cta{border-color:rgba(28,29,31,.78)}
+	
+}
+@media (min-width:1100px) and (min-aspect-ratio:1/1){.hxh{--hxh-pos-x:60%}}
+@media (min-width:1280px){.hxh__title{font-size:3.75rem}}   /* 60px */
+@media (min-width:1700px){.hxh__title{font-size:4.25rem}}   /* 68px */
+
+/* ─── Entrance: one quiet arrival from an already legible state ──── */
+@media (prefers-reduced-motion:no-preference){
+	.hxh__inner{animation:hxh-arrive 1100ms cubic-bezier(.19,1,.22,1) both}
+}
+@keyframes hxh-arrive{from{opacity:.86;transform:translateY(10px)}to{opacity:1;transform:none}}

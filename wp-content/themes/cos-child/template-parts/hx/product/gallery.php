@@ -12,8 +12,8 @@ $slides = $args['slides'];
 $n      = count( $slides );
 if ( ! $n ) return;
 ?>
-<div class="hxpd-gallery" data-hxpd-gallery>
-	<ul class="hxpd-gallery__track<?php echo 0 === ( $n - 1 ) % 2 ? '' : ' is-odd'; ?>" aria-label="<?php echo esc_attr( $args['name'] ); ?>, images">
+<div class="hxpd-gallery<?php echo 'COS-004' === $args['sku'] ? ' hxpd-gallery--cream' : ''; ?>" data-hxpd-gallery>
+	<ul class="hxpd-gallery__track<?php echo 0 === ( $n - 1 ) % 2 ? '' : ' is-odd'; ?>" tabindex="0" aria-label="<?php echo esc_attr( $args['name'] ); ?>, product images">
 		<?php foreach ( $slides as $i => $html ) : ?>
 		<li class="hxpd-gallery__item<?php echo 0 === $i ? ' hxpd-gallery__item--lead' : ''; ?>">
 			<figure class="hxpd-gallery__frame"><?php echo $html; // phpcs:ignore -- escaped in the picture helpers ?></figure>

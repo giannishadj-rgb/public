@@ -1,0 +1,897 @@
+[
+  {
+    "path": "/wp-content/themes/cos-child/assets/fonts/cormorant-garamond-300-italic-latin.woff2",
+    "changed": false,
+    "bytes": 22484
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/fonts/inter-var-latin.woff2",
+    "changed": false,
+    "bytes": 48256
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-480.avif",
+    "changed": false,
+    "bytes": 23675
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-480.jpg",
+    "changed": false,
+    "bytes": 14984
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-480.webp",
+    "changed": false,
+    "bytes": 53816
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-720.avif",
+    "changed": false,
+    "bytes": 51918
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-720.jpg",
+    "changed": false,
+    "bytes": 27595
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-720.webp",
+    "changed": false,
+    "bytes": 118254
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-960.avif",
+    "changed": false,
+    "bytes": 82895
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-960.jpg",
+    "changed": false,
+    "bytes": 42050
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cleanser-960.webp",
+    "changed": false,
+    "bytes": 193834
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-480.avif",
+    "changed": false,
+    "bytes": 20503
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-480.jpg",
+    "changed": false,
+    "bytes": 15991
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-480.webp",
+    "changed": false,
+    "bytes": 47862
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-720.avif",
+    "changed": false,
+    "bytes": 45250
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-720.jpg",
+    "changed": false,
+    "bytes": 29427
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-720.webp",
+    "changed": false,
+    "bytes": 105910
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-960.avif",
+    "changed": false,
+    "bytes": 71959
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-960.jpg",
+    "changed": false,
+    "bytes": 44543
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/collection-object-cream-960.webp",
+    "changed": false,
+    "bytes": 173670
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-480.avif",
+    "changed": false,
+    "bytes": 20471
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-480.jpg",
+    "changed": false,
+    "bytes": 16415
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-480.webp",
+    "changed": false,
+    "bytes": 49082
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-720.avif",
+    "changed": false,
+    "bytes": 43570
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-720.jpg",
+    "changed": false,
+    "bytes": 29726
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-720.webp",
+    "changed": false,
+    "bytes": 102732
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-960.avif",
+    "changed": false,
+    "bytes": 67483
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-960.jpg",
+    "changed": false,
+    "bytes": 43243
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/collection-object-eye-960.webp",
+    "changed": false,
+    "bytes": 163614
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-480.avif",
+    "changed": false,
+    "bytes": 19539
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-480.jpg",
+    "changed": false,
+    "bytes": 18834
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-480.webp",
+    "changed": false,
+    "bytes": 50658
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-720.avif",
+    "changed": false,
+    "bytes": 46790
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-720.jpg",
+    "changed": false,
+    "bytes": 34579
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-720.webp",
+    "changed": false,
+    "bytes": 117194
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-960.avif",
+    "changed": false,
+    "bytes": 74343
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-960.jpg",
+    "changed": false,
+    "bytes": 53524
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/collection-object-serum-960.webp",
+    "changed": false,
+    "bytes": 196206
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-540.avif",
+    "changed": false,
+    "bytes": 13091
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-540.jpg",
+    "changed": false,
+    "bytes": 42481
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-540.webp",
+    "changed": false,
+    "bytes": 19634
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-720.avif",
+    "changed": false,
+    "bytes": 18370
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-720.jpg",
+    "changed": false,
+    "bytes": 63964
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxh-tall-720.webp",
+    "changed": false,
+    "bytes": 28234
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxh-wide-1440.avif",
+    "changed": false,
+    "bytes": 12807
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxh-wide-1440.jpg",
+    "changed": false,
+    "bytes": 49157
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxh-wide-1440.webp",
+    "changed": false,
+    "bytes": 20624
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxh-wide-1920.avif",
+    "changed": false,
+    "bytes": 17948
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxh-wide-1920.jpg",
+    "changed": false,
+    "bytes": 75200
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxh-wide-1920.webp",
+    "changed": false,
+    "bytes": 30294
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxh-wide-2560.avif",
+    "changed": false,
+    "bytes": 25809
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxh-wide-2560.jpg",
+    "changed": false,
+    "bytes": 115148
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxh-wide-2560.webp",
+    "changed": false,
+    "bytes": 43874
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-480.avif",
+    "changed": false,
+    "bytes": 13486
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-480.jpg",
+    "changed": false,
+    "bytes": 37041
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-480.webp",
+    "changed": false,
+    "bytes": 14816
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-720.avif",
+    "changed": false,
+    "bytes": 27094
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-720.jpg",
+    "changed": false,
+    "bytes": 74767
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-720.webp",
+    "changed": false,
+    "bytes": 27860
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-960.avif",
+    "changed": false,
+    "bytes": 44902
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-960.jpg",
+    "changed": false,
+    "bytes": 122663
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-960.webp",
+    "changed": false,
+    "bytes": 47186
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-tall-1200.avif",
+    "changed": false,
+    "bytes": 85564
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-tall-1200.jpg",
+    "changed": false,
+    "bytes": 244938
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-tall-1200.webp",
+    "changed": false,
+    "bytes": 87052
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-tall-480.avif",
+    "changed": false,
+    "bytes": 18501
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-tall-480.jpg",
+    "changed": false,
+    "bytes": 51854
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-tall-480.webp",
+    "changed": false,
+    "bytes": 20232
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-tall-720.avif",
+    "changed": false,
+    "bytes": 37180
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-tall-720.jpg",
+    "changed": false,
+    "bytes": 104698
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-tall-720.webp",
+    "changed": false,
+    "bytes": 38424
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-tall-960.avif",
+    "changed": false,
+    "bytes": 61064
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-tall-960.jpg",
+    "changed": false,
+    "bytes": 171599
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cleanser-tall-960.webp",
+    "changed": false,
+    "bytes": 61662
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-480.avif",
+    "changed": false,
+    "bytes": 10557
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-480.jpg",
+    "changed": false,
+    "bytes": 29621
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-480.webp",
+    "changed": false,
+    "bytes": 12890
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-720.avif",
+    "changed": false,
+    "bytes": 18131
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-720.jpg",
+    "changed": false,
+    "bytes": 54162
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-720.webp",
+    "changed": false,
+    "bytes": 21840
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-960.avif",
+    "changed": false,
+    "bytes": 26175
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-960.jpg",
+    "changed": false,
+    "bytes": 82018
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-960.webp",
+    "changed": false,
+    "bytes": 31424
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-tall-1200.avif",
+    "changed": false,
+    "bytes": 50658
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-tall-1200.jpg",
+    "changed": false,
+    "bytes": 169099
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-tall-1200.webp",
+    "changed": false,
+    "bytes": 62074
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-tall-480.avif",
+    "changed": false,
+    "bytes": 15264
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-tall-480.jpg",
+    "changed": false,
+    "bytes": 43502
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-tall-480.webp",
+    "changed": false,
+    "bytes": 18218
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-tall-720.avif",
+    "changed": false,
+    "bytes": 26661
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-tall-720.jpg",
+    "changed": false,
+    "bytes": 80327
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-tall-720.webp",
+    "changed": false,
+    "bytes": 31984
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-tall-960.avif",
+    "changed": false,
+    "bytes": 38629
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-tall-960.jpg",
+    "changed": false,
+    "bytes": 122144
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-cream-tall-960.webp",
+    "changed": false,
+    "bytes": 45910
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-480.avif",
+    "changed": false,
+    "bytes": 14029
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-480.jpg",
+    "changed": false,
+    "bytes": 33830
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-480.webp",
+    "changed": false,
+    "bytes": 16194
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-720.avif",
+    "changed": false,
+    "bytes": 27086
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-720.jpg",
+    "changed": false,
+    "bytes": 66378
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-720.webp",
+    "changed": false,
+    "bytes": 31286
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-960.avif",
+    "changed": false,
+    "bytes": 43058
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-960.jpg",
+    "changed": false,
+    "bytes": 106546
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-960.webp",
+    "changed": false,
+    "bytes": 49740
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-tall-1200.avif",
+    "changed": false,
+    "bytes": 84572
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-tall-1200.jpg",
+    "changed": false,
+    "bytes": 224608
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-tall-1200.webp",
+    "changed": false,
+    "bytes": 95686
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-tall-480.avif",
+    "changed": false,
+    "bytes": 19793
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-tall-480.jpg",
+    "changed": false,
+    "bytes": 50537
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-tall-480.webp",
+    "changed": false,
+    "bytes": 23134
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-tall-720.avif",
+    "changed": false,
+    "bytes": 38772
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-tall-720.jpg",
+    "changed": false,
+    "bytes": 98903
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-tall-720.webp",
+    "changed": false,
+    "bytes": 43814
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-tall-960.avif",
+    "changed": false,
+    "bytes": 61488
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-tall-960.jpg",
+    "changed": false,
+    "bytes": 157667
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-eye-tall-960.webp",
+    "changed": false,
+    "bytes": 69458
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-480.avif",
+    "changed": false,
+    "bytes": 15426
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-480.jpg",
+    "changed": false,
+    "bytes": 39706
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-480.webp",
+    "changed": false,
+    "bytes": 18376
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-720.avif",
+    "changed": false,
+    "bytes": 27399
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-720.jpg",
+    "changed": false,
+    "bytes": 75686
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-720.webp",
+    "changed": false,
+    "bytes": 32186
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-960.avif",
+    "changed": false,
+    "bytes": 42129
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-960.jpg",
+    "changed": false,
+    "bytes": 121565
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-960.webp",
+    "changed": false,
+    "bytes": 48320
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-tall-1200.avif",
+    "changed": false,
+    "bytes": 87878
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-tall-1200.jpg",
+    "changed": false,
+    "bytes": 263123
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-tall-1200.webp",
+    "changed": false,
+    "bytes": 97686
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-tall-480.avif",
+    "changed": false,
+    "bytes": 20385
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-tall-480.jpg",
+    "changed": false,
+    "bytes": 56265
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-tall-480.webp",
+    "changed": false,
+    "bytes": 23866
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-tall-720.avif",
+    "changed": false,
+    "bytes": 38882
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-tall-720.jpg",
+    "changed": false,
+    "bytes": 111652
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-tall-720.webp",
+    "changed": false,
+    "bytes": 44520
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-tall-960.avif",
+    "changed": false,
+    "bytes": 62551
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-tall-960.jpg",
+    "changed": false,
+    "bytes": 183982
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxr-serum-tall-960.webp",
+    "changed": false,
+    "bytes": 70440
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-1440.avif",
+    "changed": false,
+    "bytes": 36256
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-1440.jpg",
+    "changed": false,
+    "bytes": 97738
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-1440.webp",
+    "changed": false,
+    "bytes": 50254
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-2048.avif",
+    "changed": false,
+    "bytes": 54059
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-2048.jpg",
+    "changed": false,
+    "bytes": 167074
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-2048.webp",
+    "changed": false,
+    "bytes": 77010
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-2880.avif",
+    "changed": false,
+    "bytes": 79701
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-2880.jpg",
+    "changed": false,
+    "bytes": 288578
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-2880.webp",
+    "changed": false,
+    "bytes": 117148
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-4000.avif",
+    "changed": false,
+    "bytes": 116440
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-4000.jpg",
+    "changed": false,
+    "bytes": 497629
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-4000.webp",
+    "changed": false,
+    "bytes": 174876
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-1280.avif",
+    "changed": false,
+    "bytes": 52749
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-1280.jpg",
+    "changed": false,
+    "bytes": 182705
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-1280.webp",
+    "changed": false,
+    "bytes": 76720
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-1600.avif",
+    "changed": false,
+    "bytes": 68312
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-1600.jpg",
+    "changed": false,
+    "bytes": 255887
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-1600.webp",
+    "changed": false,
+    "bytes": 98434
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-640.avif",
+    "changed": false,
+    "bytes": 23977
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-640.jpg",
+    "changed": false,
+    "bytes": 63810
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-640.webp",
+    "changed": false,
+    "bytes": 33616
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-960.avif",
+    "changed": false,
+    "bytes": 38172
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-960.jpg",
+    "changed": false,
+    "bytes": 116641
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/hxv-field-tall-960.webp",
+    "changed": false,
+    "bytes": 54430
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/provenance-summit-tall-640.avif",
+    "changed": false,
+    "bytes": 38851
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/provenance-summit-tall-640.jpg",
+    "changed": false,
+    "bytes": 88305
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/provenance-summit-tall-640.webp",
+    "changed": false,
+    "bytes": 58202
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/provenance-summit-tall-960.avif",
+    "changed": false,
+    "bytes": 69563
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/provenance-summit-tall-960.jpg",
+    "changed": false,
+    "bytes": 179670
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/provenance-summit-tall-960.webp",
+    "changed": false,
+    "bytes": 111796
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/provenance-summit-wide-1440.avif",
+    "changed": false,
+    "bytes": 69808
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/provenance-summit-wide-1440.jpg",
+    "changed": false,
+    "bytes": 182877
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/provenance-summit-wide-1440.webp",
+    "changed": false,
+    "bytes": 111908
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/provenance-summit-wide-1920.avif",
+    "changed": false,
+    "bytes": 103730
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/provenance-summit-wide-1920.jpg",
+    "changed": false,
+    "bytes": 295839
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/home-2026/provenance-summit-wide-1920.webp",
+    "changed": false,
+    "bytes": 168376
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/logo-111w.webp",
+    "changed": false,
+    "bytes": 1818
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/logo-222w.webp",
+    "changed": false,
+    "bytes": 3794
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/logo-light-111w.webp",
+    "changed": false,
+    "bytes": 4576
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/logo-light-222w.webp",
+    "changed": false,
+    "bytes": 10534
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/logo-light.png",
+    "changed": false,
+    "bytes": 9319
+  },
+  {
+    "path": "/wp-content/themes/cos-child/assets/images/logo.png",
+    "changed": false,
+    "bytes": 28101
+  }
+]

@@ -24,3 +24,4 @@ defined( 'ABSPATH' ) || exit;
 		<p class="h26-texture__caption"><a class="h26-link" href="<?php echo esc_url( home_url( '/products/24h-regeneration-cream/' ) ); ?>">24h Regeneration Cream <?php echo cos_h26_arrow(); ?></a></p>
 	</div>
 </section>
+

@@ -1,0 +1,438 @@
+[
+  {
+    "width": 320,
+    "overflow": false,
+    "copy": [
+      {
+        "text": "Caviar,\nin every formula.",
+        "rect": {
+          "x": 24,
+          "y": 92,
+          "width": 238.125,
+          "height": 81.59375,
+          "top": 92,
+          "right": 262.125,
+          "bottom": 173.59375,
+          "left": 24
+        }
+      },
+      {
+        "text": "Swiss-made skincare.\nFor firmer-looking, hydrated skin.",
+        "rect": {
+          "x": 24,
+          "y": 191.59375,
+          "width": 271.984375,
+          "height": 49.59375,
+          "top": 191.59375,
+          "right": 295.984375,
+          "bottom": 241.1875,
+          "left": 24
+        }
+      },
+      {
+        "text": "Shop the ritual",
+        "rect": {
+          "x": 24,
+          "y": 261.1875,
+          "width": 123.1875,
+          "height": 52,
+          "top": 261.1875,
+          "right": 147.1875,
+          "bottom": 313.1875,
+          "left": 24
+        }
+      },
+      {
+        "text": "4 full-size formulas\n€450",
+        "rect": {
+          "x": 24,
+          "y": 323.1875,
+          "width": 204,
+          "height": 50.59375,
+          "top": 323.1875,
+          "right": 228,
+          "bottom": 373.78125,
+          "left": 24
+        }
+      },
+      {
+        "text": "View collection",
+        "rect": {
+          "x": 24,
+          "y": 377.78125,
+          "width": 106.0625,
+          "height": 44,
+          "top": 377.78125,
+          "right": 130.0625,
+          "bottom": 421.78125,
+          "left": 24
+        }
+      }
+    ],
+    "campaign": {
+      "x": 0,
+      "y": 60,
+      "width": 319.984375,
+      "height": 512,
+      "top": 60,
+      "right": 319.984375,
+      "bottom": 572,
+      "left": 0
+    },
+    "photoPosition": "0px 80%",
+    "focus": {
+      "outline": "rgb(242, 239, 232) solid 2px",
+      "rect": {
+        "x": 24,
+        "y": 261.1875,
+        "width": 123.1875,
+        "height": 52,
+        "top": 261.1875,
+        "right": 147.1875,
+        "bottom": 313.1875,
+        "left": 24
+      }
+    }
+  },
+  {
+    "width": 360,
+    "overflow": false,
+    "copy": [
+      {
+        "text": "Caviar,\nin every formula.",
+        "rect": {
+          "x": 24,
+          "y": 92,
+          "width": 238.125,
+          "height": 81.59375,
+          "top": 92,
+          "right": 262.125,
+          "bottom": 173.59375,
+          "left": 24
+        }
+      },
+      {
+        "text": "Swiss-made skincare.\nFor firmer-looking, hydrated skin.",
+        "rect": {
+          "x": 24,
+          "y": 191.59375,
+          "width": 311.984375,
+          "height": 49.59375,
+          "top": 191.59375,
+          "right": 335.984375,
+          "bottom": 241.1875,
+          "left": 24
+        }
+      },
+      {
+        "text": "Shop the ritual",
+        "rect": {
+          "x": 24,
+          "y": 261.1875,
+          "width": 138.125,
+          "height": 52,
+          "top": 261.1875,
+          "right": 162.125,
+          "bottom": 313.1875,
+          "left": 24
+        }
+      },
+      {
+        "text": "4 full-size formulas\n€450",
+        "rect": {
+          "x": 24,
+          "y": 323.1875,
+          "width": 238,
+          "height": 53.59375,
+          "top": 323.1875,
+          "right": 262,
+          "bottom": 376.78125,
+          "left": 24
+        }
+      },
+      {
+        "text": "View collection",
+        "rect": {
+          "x": 24,
+          "y": 380.78125,
+          "width": 106.0625,
+          "height": 44,
+          "top": 380.78125,
+          "right": 130.0625,
+          "bottom": 424.78125,
+          "left": 24
+        }
+      }
+    ],
+    "campaign": {
+      "x": 0,
+      "y": 60,
+      "width": 359.984375,
+      "height": 576,
+      "top": 60,
+      "right": 359.984375,
+      "bottom": 636,
+      "left": 0
+    },
+    "photoPosition": "50% 80%",
+    "focus": {
+      "outline": "rgb(242, 239, 232) solid 2px",
+      "rect": {
+        "x": 24,
+        "y": 261.1875,
+        "width": 138.125,
+        "height": 52,
+        "top": 261.1875,
+        "right": 162.125,
+        "bottom": 313.1875,
+        "left": 24
+      }
+    }
+  },
+  {
+    "width": 390,
+    "overflow": false,
+    "copy": [
+      {
+        "text": "Caviar,\nin every formula.",
+        "rect": {
+          "x": 24,
+          "y": 92,
+          "width": 250.75,
+          "height": 85.90625,
+          "top": 92,
+          "right": 274.75,
+          "bottom": 177.90625,
+          "left": 24
+        }
+      },
+      {
+        "text": "Swiss-made skincare.\nFor firmer-looking, hydrated skin.",
+        "rect": {
+          "x": 24,
+          "y": 195.90625,
+          "width": 341.984375,
+          "height": 49.59375,
+          "top": 195.90625,
+          "right": 365.984375,
+          "bottom": 245.5,
+          "left": 24
+        }
+      },
+      {
+        "text": "Shop the ritual",
+        "rect": {
+          "x": 24,
+          "y": 265.5,
+          "width": 138.125,
+          "height": 52,
+          "top": 265.5,
+          "right": 162.125,
+          "bottom": 317.5,
+          "left": 24
+        }
+      },
+      {
+        "text": "4 full-size formulas\n€450",
+        "rect": {
+          "x": 24,
+          "y": 327.5,
+          "width": 238,
+          "height": 53.59375,
+          "top": 327.5,
+          "right": 262,
+          "bottom": 381.09375,
+          "left": 24
+        }
+      },
+      {
+        "text": "View collection",
+        "rect": {
+          "x": 24,
+          "y": 385.09375,
+          "width": 146.0625,
+          "height": 44,
+          "top": 385.09375,
+          "right": 170.0625,
+          "bottom": 429.09375,
+          "left": 24
+        }
+      }
+    ],
+    "campaign": {
+      "x": 0,
+      "y": 60,
+      "width": 389.984375,
+      "height": 624,
+      "top": 60,
+      "right": 389.984375,
+      "bottom": 684,
+      "left": 0
+    },
+    "photoPosition": "50% 80%"
+  },
+  {
+    "width": 430,
+    "overflow": false,
+    "copy": [
+      {
+        "text": "Caviar,\nin every formula.",
+        "rect": {
+          "x": 24,
+          "y": 92,
+          "width": 276.46875,
+          "height": 94.71875,
+          "top": 92,
+          "right": 300.46875,
+          "bottom": 186.71875,
+          "left": 24
+        }
+      },
+      {
+        "text": "Swiss-made skincare.\nFor firmer-looking, hydrated skin.",
+        "rect": {
+          "x": 24,
+          "y": 204.71875,
+          "width": 381.984375,
+          "height": 49.59375,
+          "top": 204.71875,
+          "right": 405.984375,
+          "bottom": 254.3125,
+          "left": 24
+        }
+      },
+      {
+        "text": "Shop the ritual",
+        "rect": {
+          "x": 24,
+          "y": 274.3125,
+          "width": 138.125,
+          "height": 52,
+          "top": 274.3125,
+          "right": 162.125,
+          "bottom": 326.3125,
+          "left": 24
+        }
+      },
+      {
+        "text": "4 full-size formulas\n€450",
+        "rect": {
+          "x": 24,
+          "y": 336.3125,
+          "width": 238,
+          "height": 53.59375,
+          "top": 336.3125,
+          "right": 262,
+          "bottom": 389.90625,
+          "left": 24
+        }
+      },
+      {
+        "text": "View collection",
+        "rect": {
+          "x": 24,
+          "y": 393.90625,
+          "width": 146.0625,
+          "height": 44,
+          "top": 393.90625,
+          "right": 170.0625,
+          "bottom": 437.90625,
+          "left": 24
+        }
+      }
+    ],
+    "campaign": {
+      "x": 0,
+      "y": 60,
+      "width": 429.984375,
+      "height": 688,
+      "top": 60,
+      "right": 429.984375,
+      "bottom": 748,
+      "left": 0
+    },
+    "photoPosition": "50% 80%"
+  },
+  {
+    "width": 599,
+    "overflow": false,
+    "copy": [
+      {
+        "text": "Caviar,\nin every formula.",
+        "rect": {
+          "x": 24,
+          "y": 92,
+          "width": 333.375,
+          "height": 114.21875,
+          "top": 92,
+          "right": 357.375,
+          "bottom": 206.21875,
+          "left": 24
+        }
+      },
+      {
+        "text": "Swiss-made skincare.\nFor firmer-looking, hydrated skin.",
+        "rect": {
+          "x": 24,
+          "y": 224.21875,
+          "width": 528,
+          "height": 49.59375,
+          "top": 224.21875,
+          "right": 552,
+          "bottom": 273.8125,
+          "left": 24
+        }
+      },
+      {
+        "text": "Shop the ritual",
+        "rect": {
+          "x": 24,
+          "y": 293.8125,
+          "width": 138.125,
+          "height": 52,
+          "top": 293.8125,
+          "right": 162.125,
+          "bottom": 345.8125,
+          "left": 24
+        }
+      },
+      {
+        "text": "4 full-size formulas\n€450",
+        "rect": {
+          "x": 24,
+          "y": 355.8125,
+          "width": 238,
+          "height": 53.59375,
+          "top": 355.8125,
+          "right": 262,
+          "bottom": 409.40625,
+          "left": 24
+        }
+      },
+      {
+        "text": "View collection",
+        "rect": {
+          "x": 24,
+          "y": 413.40625,
+          "width": 146.0625,
+          "height": 44,
+          "top": 413.40625,
+          "right": 170.0625,
+          "bottom": 457.40625,
+          "left": 24
+        }
+      }
+    ],
+    "campaign": {
+      "x": 0,
+      "y": 60,
+      "width": 598.984375,
+      "height": 760,
+      "top": 60,
+      "right": 598.984375,
+      "bottom": 820,
+      "left": 0
+    },
+    "photoPosition": "50% 80%"
+  }
+]
