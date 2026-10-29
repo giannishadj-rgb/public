@@ -3,8 +3,8 @@
    Markup: woocommerce/archive-product.php · tokens + utilities: hx/system.css
    Loaded only on the shop archive (enqueued from the template).
 
-   1 Hero        owner's CAV59851 glass-blocks photograph (build_hxshop_hero.py). Phones introduce
-                 the collection before the photo; desktop copy sits on its plain grey left side.
+   1 Hero        supplied Face Cream editorial film. Phones keep the copy below the film;
+                 desktop overlays it on a restrained contrast wash.
    3 Ritual      The Complete Ritual on the owner's silver-tray photograph (final-tray-wide,
                  cropped per breakpoint), live price + bought-separately saving.
    2 Formulas    the homepage Collection language: objects on pearl white, one baseline,
@@ -26,54 +26,65 @@
 .hxshop :where(a){-webkit-tap-highlight-color:transparent}
 .hxshop .woocommerce-Price-currencySymbol{font:inherit}
 
-/* ─── 1 Hero ─────────────────────────────────────────────────────────── */
-.hxshop-hero{
-	position:relative;
-	margin-top:var(--cos-nav-h,80px);
-	background:var(--hx-ivory);
-	color:var(--hx-fg);
+/* ─── 1 Opening ──────────────────────────────────────────────────────── */
+/* Opening plate (24 Oct 2026): the Face Cream editorial film begins beneath the transparent
+   header. Landscape >=700px fills the first screen and uses a light contrast wash beneath the
+   copy. Phones and portrait tablets keep the copy below the film on warm white. WooCommerce
+   notices, when present, print first and take the header's room themselves. */
+.hxshop > .hxshop-notices:first-child{margin-top:var(--cos-nav-h,80px)}
+.hxshop-hero{position:relative;display:grid;grid-template-columns:minmax(0,1fr);background:var(--hx-white)}
+.hxshop-hero__plate{position:relative;margin:0;overflow:hidden;background:#D8D3D4}
+.hxshop-hero__video{display:block;width:100%;height:calc(min(92vw,52svh) + var(--cos-nav-h,80px));object-fit:cover;object-position:50% 48%}
+.hxshop-hero__control{
+	position:absolute;z-index:3;top:calc(var(--cos-nav-h,80px) + 16px);right:var(--hx-margin);
+	min-width:68px;min-height:44px;padding:9px 14px;border:1px solid rgba(28,29,31,.42);border-radius:999px;
+	background:rgba(248,248,248,.82);color:var(--hx-ink);font:500 .75rem/1 var(--hx-sans);letter-spacing:.04em;
+	-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);cursor:pointer;
 }
-.hxshop-hero__media{position:relative;overflow:clip;background:#DEDDDB}
-.hxshop-hero__media picture,
-.hxshop-hero__media img{display:block;width:100%;height:auto}
-.hxshop-hero__media img{aspect-ratio:1080 / 961;object-fit:cover}
-.hxshop-hero__wrap{position:relative;z-index:1}
-.hxshop-hero__copy{padding-block:var(--hx-s-6) var(--hx-s-7)}
-.hxshop-hero__label{margin-bottom:var(--hx-s-4)}
-.hxshop-hero__title{color:var(--hx-fg);max-width:9.5em}
-.hxshop-hero__lede{max-width:26em;margin-top:var(--hx-stack)}
-.hxshop-hero__cta{margin-top:var(--hx-s-5)}
-.hxshop-hero__down{transform:rotate(90deg);width:14px;margin-left:12px}
-.hxshop-hero__link:hover .hxshop-hero__down{transform:rotate(90deg) translateX(3px)}
-@media (max-width:479.98px){
-	.hxshop-hero{display:flex;flex-direction:column}
-	.hxshop-hero__wrap{order:-1;width:100%}
-	.hxshop-hero__copy{padding-block:var(--hx-s-5) var(--hx-s-6)}
-	.hxshop-hero__lede{margin-top:var(--hx-s-4)}
-	.hxshop-hero__cta{margin-top:var(--hx-s-3)}
-	.hxshop-list{padding-top:var(--hx-s-7)}
-}
-@media (min-width:600px) and (max-width:1023.98px){
-	.hxshop-hero__copy{padding-block:var(--hx-s-7) var(--hx-s-8)}
-}
-@media (min-width:1024px){
-	.hxshop-hero{
-		display:flex;
-		align-items:center;
-		/* exactly one view under the header, so the whole arrangement and its floor show */
-		height:clamp(600px,calc(100svh - var(--cos-nav-h,80px)),1000px);
-		background:#D9D8D6;
+.hxshop-hero__control:hover{background:rgba(248,248,248,.96)}
+.hxshop-hero__control:focus-visible{outline:var(--hx-focus-width) solid var(--hx-focus-color);outline-offset:3px}
+/* owner, 25 Oct 2026: no Pause pill on the opening film. It stays for keyboard users (WCAG 2.2.2:
+   a way to pause motion longer than 5s), off screen until it takes focus, and shows as "Play"
+   whenever the film is not playing (reduced motion, or paused from the keyboard). As /science/. */
+.hxshop-hero__control:not(.is-paused):not(:focus-visible){clip-path:inset(50%);width:1px;min-width:0;height:1px;min-height:0;padding:0;border:0;overflow:hidden;white-space:nowrap}
+.hxshop-hero__text{display:grid;row-gap:var(--hx-s-4);padding-block:var(--hx-s-7) var(--hx-s-8)}
+.hxshop-hero__lede{max-width:30em}
+@media (min-width:700px) and (orientation:landscape){
+	.hxshop-hero{grid-template:minmax(0,1fr) / minmax(0,1fr);height:100svh;min-height:600px;max-height:1240px}
+	.hxshop-hero__plate,.hxshop-hero__text{grid-area:1 / 1}
+	.hxshop-hero__plate::after{
+		content:"";position:absolute;inset:0;pointer-events:none;
+		background:linear-gradient(90deg,rgba(248,248,248,.9) 0%,rgba(248,248,248,.62) 30%,rgba(248,248,248,.12) 58%,transparent 72%);
 	}
-	.hxshop-hero__media{position:absolute;inset:0}
-	.hxshop-hero__media picture,
-	.hxshop-hero__media img{width:100%;height:100%}
-	.hxshop-hero__media img{aspect-ratio:auto;object-fit:cover;object-position:100% 100%}
-	.hxshop-hero__wrap{width:100%}
-	.hxshop-hero__copy{max-width:min(520px,40vw);padding-block:var(--hx-s-8)}
-	/* on the grey backdrop: ink + text only (accent and muted fail AA there) */
-	.hxshop-hero__label{color:var(--hx-ink)}
-	.hxshop-hero__lede{color:var(--hx-text)}
+	.hxshop-hero__video{height:100%;object-position:50% 48%}
+	.hxshop-hero__text{
+		position:relative;z-index:2;   /* above the film and its contrast wash */
+		align-self:end;width:auto;max-width:none;margin:0;
+		padding:0 var(--hx-margin) clamp(40px,7svh,88px);
+	}
+	.hxshop-hero__text > *{max-width:min(34rem,44vw)}
+	html body:not(.cos-h26) #cos-main-content .hxshop-hero .hxshop-hero__title{font-size:min(var(--ts-h1),3.6vw)}
+	.hxshop-hero__lede{color:var(--hx-ink)}
 }
+
+/* the page's parts, under the plate (the science hub's question index) */
+.hxshop-index{border-bottom:1px solid var(--hx-line)}
+.hxshop-index__list{display:grid;grid-template-columns:minmax(0,1fr)}
+.hxshop .hxshop-index__link{
+	display:flex;align-items:baseline;gap:12px;min-height:48px;padding-block:12px;
+	border-top:1px solid var(--hx-line);
+	font-family:var(--hx-serif);font-size:1.1875rem;line-height:1.3;color:var(--hx-ink);text-decoration:none;
+}
+.hxshop-index__list li:first-child .hxshop-index__link{border-top:0}
+.hxshop-index__n{font-family:var(--hx-sans);font-size:.75rem;letter-spacing:.08em;color:var(--hx-muted);font-variant-numeric:lining-nums tabular-nums}
+.hxshop .hxshop-index__link:hover{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.25em}
+.hxshop .hxshop-index__link:focus-visible{outline:var(--hx-focus-width) solid var(--hx-focus-color);outline-offset:2px}
+@media (min-width:900px){
+	.hxshop-index__list{grid-template-columns:repeat(3,minmax(0,1fr));column-gap:var(--hx-s-5)}
+	.hxshop .hxshop-index__link{flex-direction:column;gap:6px;min-height:96px;padding-block:var(--hx-s-5);border-top:0}
+}
+.hxshop :is(#cos-products,#about){scroll-margin-top:var(--cos-nav-h,80px)}
+.hxshop .hxshop-list{padding-top:var(--hx-section-sm)}
 
 /* ─── Notices (only rendered when WooCommerce has one) ──────────────── */
 .hxshop-notices{padding-block:var(--hx-s-5) 0}
@@ -87,9 +98,12 @@
 .hxshop-notices a{color:inherit}
 
 /* ─── 2 The Complete Ritual ──────────────────────────────────────────── */
+/* Its own stone room (clarify pass, 23 Oct 2026): on one shared ground the formulas, the
+   offer and "Built as one system" ran together as one long page; same room tone as the
+   ritual page's offer. */
 .hxshop-ritual{
-	background:var(--hx-ivory);
-	padding-block:var(--hx-s-8) var(--hx-section-sm);
+	background:var(--hx-ground-stone,#EDE9E1);
+	padding-block:var(--hx-section-sm);
 	scroll-margin-top:var(--cos-nav-h,80px);
 }
 .hxshop-ritual__grid{display:grid;gap:var(--hx-s-7)}
@@ -140,6 +154,11 @@
 	font-variant-numeric:lining-nums tabular-nums;
 }
 .hxshop-ritual__save{color:var(--hx-fg)}
+/* The set's own price leads; the comparison amounts read at their line's 14px (clarify pass,
+   23 Oct 2026: the sitewide title-size rule for every price in this block made €500 and €50
+   look larger than the €450 being paid). Specificity matches typeset-site.css plus one class. */
+html body:not(.cos-h26) #cos-main-content .hxshop-ritual .hxshop-ritual__compare .woocommerce-Price-amount{font:inherit;letter-spacing:inherit}
+html body:not(.cos-h26) #cos-main-content .hxshop-ritual .hxshop-ritual__amount .woocommerce-Price-amount{font-family:var(--hx-serif);font-size:clamp(1.75rem,1.5rem + .8vw,2.25rem);font-weight:400;line-height:1;color:var(--hx-ink)}
 .hxshop-ritual__sep,.hxshop-dot{display:inline-block;width:1px;height:12px;margin-inline:12px;background:var(--hx-line-strong);vertical-align:middle}
 
 .hxshop-ritual__actions{
@@ -183,150 +202,141 @@
 	.hxshop-list__lede{justify-self:end;max-width:24em;text-wrap:balance}
 }
 
+/* Tiles after Dior's collection grid (owner reference, 22 Oct 2026): tiles set edge to edge on
+   a 2px seam, a square bag button in the tile's corner, then name, one line of benefit and the
+   price, centred. Since 23 Oct (owner: "use the images from the homepage") each tile is the
+   homepage collection's studio packshot (wc-stage-*, the pack on a graphite stage), shown
+   whole at its own 4:5. Since 25 Oct (owner: "use the photos from the homepage and align them
+   so they are straight") it is the homepage's graphite set (wc-stage-graphite-*), with every
+   pack's horizon brought to one level as on the homepage (see below). */
 .hxshop-list__items{
+	--hxshop-tile:#191B1A;      /* the graphite stage photographs' own ground, under them while they load */
 	display:grid;
 	grid-template-columns:repeat(2,minmax(0,1fr));
-	column-gap:var(--hxshop-col-gap);
-	row-gap:0;
+	gap:0 2px;
+	margin:0;
+	padding:0;
 }
 .hxshop-item{
 	display:grid;
 	min-width:0;
-	max-width:100%;
-	grid-row:span 6;
+	grid-row:span 5;            /* tile, step, name, benefit, price (step added 23 Oct 2026) */
 	grid-template-rows:subgrid;
 	justify-items:center;
-	align-items:start;
+	align-content:start;
 	text-align:center;
 	list-style:none;
 }
 .hxshop-item::marker{content:none}
 .hxshop-item:nth-child(n+3){margin-top:var(--hxshop-row-gap)}
 
-.hxshop-item__stage{display:block;width:100%;aspect-ratio:2 / 3;overflow:clip;text-decoration:none}
+.hxshop-item__tile{position:relative;width:100%;aspect-ratio:4 / 5;background:var(--hxshop-tile);overflow:clip}
+.hxshop-item__stage{display:block;position:absolute;inset:0;text-decoration:none}
 .hxshop-item__object,
 .hxshop-item__object img,
 .hxshop-item__wcimg{display:block;width:100%;height:100%}
 .hxshop-item__object img,
 .hxshop-item__wcimg{
-	object-fit:contain;
-	transform-origin:53% 86%;
-	transition:transform 1200ms var(--hx-ease);
+	object-fit:cover;
+	transform-origin:50% 60%;
+	transition:scale 1200ms var(--hx-ease);
+}
+/* One horizon across the row, as on the homepage collection (hx/collection.css): each
+   photograph's measured horizon (brightest floor row, share of its height) is scaled about
+   by the least scale that still covers the tile, then moved to the cleanser's (.7775). */
+.hxshop-item{--hxshop-hz:.7775;--hxshop-s:1}
+.hxshop-item--eye{--hxshop-hz:.7575;--hxshop-s:1.026}
+.hxshop-item--serum{--hxshop-hz:.7126;--hxshop-s:1.091}
+.hxshop-item--cream{--hxshop-hz:.6583;--hxshop-s:1.181}
+.hxshop-item__object img{
+	transform-origin:50% calc(var(--hxshop-hz) * 100%);
+	transform:translateY(calc((.7775 - var(--hxshop-hz)) * 100%)) scale(var(--hxshop-s));
 }
 
+/* the bag button: a white square in the corner; on hover or focus it opens to its label */
+.hxshop-item__actions{position:absolute;right:12px;bottom:12px;z-index:1;display:flex}
+.hxshop .hxshop-item__add,
+.hxshop .hxshop-item__add:visited{
+	display:inline-flex;align-items:center;justify-content:flex-end;
+	box-sizing:border-box;min-width:44px;height:44px;padding:0 13px;
+	background:var(--hx-white,#F8F8F8);color:var(--hx-ink);
+	text-decoration:none;cursor:pointer;
+	transition:background-color var(--hx-dur-ui) var(--hx-ease-soft),opacity var(--hx-dur-ui);
+}
+.hxshop-item__add::after{
+	content:"";flex:none;order:2;width:18px;height:18px;
+	background:currentColor;
+	-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.4'%3E%3Cpath d='M5 8h14l-1 12H6z'/%3E%3Cpath d='M9 8V6a3 3 0 0 1 6 0v2'/%3E%3C/svg%3E") center/contain no-repeat;
+	mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.4'%3E%3Cpath d='M5 8h14l-1 12H6z'/%3E%3Cpath d='M9 8V6a3 3 0 0 1 6 0v2'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+.hxshop .hxshop-item__add .hxshop-add__label{
+	order:1;display:inline-block;max-width:0;overflow:hidden;white-space:nowrap;opacity:0;
+	font-size:var(--ts-action,.78125rem);
+	transition:max-width 520ms var(--hx-ease),margin 520ms var(--hx-ease),opacity 320ms var(--hx-ease-soft);
+}
+.hxshop .hxshop-item__add:is(:hover,:focus-visible,.is-busy,.is-added) .hxshop-add__label{max-width:12em;margin-right:10px;opacity:1}
+.hxshop-item__add.is-added::after{
+	-webkit-mask:none;mask:none;background:none;
+	width:10px;height:6px;margin:0 4px 4px;border-left:1.4px solid currentColor;border-bottom:1.4px solid currentColor;transform:rotate(-45deg);
+}
+
+/* states (shared by both add buttons) */
+.hxshop-add.is-busy,.hxshop-add.loading{opacity:.6;pointer-events:none;cursor:progress}
+.hxshop .added_to_cart{display:none}
+.hxshop .added_to_cart.hxshop-viewbag{display:inline-flex}
+/* in a tile the mini-bag opens on add, so WooCommerce's "View bag" link stays hidden */
+.hxshop .hxshop-item__actions .added_to_cart.hxshop-viewbag{display:none}
+.hxshop-ritual__actions .hxshop-viewbag{order:3}
+.hxshop-unavailable{min-height:48px;display:flex;align-items:center}
+
+/* Ritual step above each name (clarify pass, 23 Oct 2026): the four read as one sequence. */
 .hxshop-item__step{
-	display:inline-flex;align-items:center;gap:10px;
-	margin-top:var(--hx-s-3);
-	font-family:var(--hx-serif);font-size:1rem;line-height:1;color:var(--hx-fg-accent);
+	margin-top:clamp(16px,.75rem + .6vw,24px);
+	font-size:.75rem;font-weight:500;line-height:1.5;letter-spacing:.2em;text-transform:uppercase;color:var(--hx-muted);
+	font-variant-numeric:lining-nums tabular-nums;
 }
-.hxshop-item__num{
-	display:inline-flex;align-items:center;gap:10px;
-	font-weight:400;letter-spacing:var(--hx-tr-step);
-	font-variant-numeric:lining-nums tabular-nums;font-feature-settings:"lnum" 1,"tnum" 1;
-}
-.hxshop-item__num::after{content:"";width:16px;height:1px;background:var(--hx-chrome)}
-.hxshop-item__verb{font-style:italic;font-weight:300;font-size:1.1em;letter-spacing:.01em}
-
+.hxshop-item__num{letter-spacing:.08em}
+.hxshop-item__step + .hxshop-item__name{margin-top:4px}
 .hxshop-item__name{
-	margin-top:var(--hx-s-3);
-	font-family:var(--hx-serif);font-size:1.1875rem;font-weight:400;line-height:1.18;
-	letter-spacing:var(--hx-tr-title);color:var(--hx-fg);text-wrap:balance;
+	max-width:20em;margin-top:clamp(16px,.75rem + .6vw,24px);
+	font-family:var(--hx-sans);font-size:1rem;font-weight:500;line-height:1.35;
+	letter-spacing:.005em;color:var(--hx-ink);text-wrap:balance;
 }
 .hxshop-item__name a,
-.hxshop-item__name a:visited,
-.hxshop-item__name a:hover{color:inherit;text-decoration:none}
-.hxshop-item__name a{display:inline-block;max-width:100%;padding-block:3px}
-.hxshop-item__name span{display:block}
+.hxshop-item__name a:visited{color:inherit;text-decoration:none;text-underline-offset:4px;text-decoration-thickness:1px}
+.hxshop-item__name a{display:inline-block;max-width:100%;padding-block:4px}
+.hxshop-item__name span{display:inline}
 
 .hxshop-item__benefit{
-	max-width:19em;margin-top:var(--hx-s-2);
-	font-size:1rem;line-height:1.5;color:var(--hx-fg-3);text-wrap:balance;
+	max-width:19em;margin-top:2px;
+	font-size:.9375rem;line-height:1.5;color:var(--hx-fg-3);text-wrap:balance;
 }
 .hxshop-item__meta{
 	display:inline-flex;flex-wrap:wrap;justify-content:center;align-items:center;
 	margin-top:var(--hx-s-3);
-	font-size:var(--hx-fs-detail);line-height:var(--hx-lh-detail);letter-spacing:.02em;
+	font-size:.9375rem;line-height:1.5;letter-spacing:.01em;
 	font-variant-numeric:lining-nums tabular-nums;
 }
-.hxshop-item__price{color:var(--hx-fg);font-weight:500}
+.hxshop-item__price,
+.hxshop .hxshop-item__price .woocommerce-Price-amount{font-family:var(--hx-sans);font-size:inherit;font-weight:400;letter-spacing:inherit;color:var(--hx-ink)}
 .hxshop-item__size{color:var(--hx-fg-3)}
-.hxshop-item__dot{display:inline-block;width:1px;height:11px;margin-inline:10px;background:var(--hx-line-strong)}
-
-.hxshop-item__actions{
-	display:flex;flex-direction:column;align-items:center;
-	width:100%;max-width:240px;margin-top:var(--hx-s-3);
-}
-
-/* Add to bag: a quiet label over a hairline that draws to ink on hover (no box) */
-.hxshop-item__add,
-.hxshop-item__add:visited{
-	position:relative;
-	display:flex;align-items:center;justify-content:center;
-	width:100%;min-height:48px;padding:0 4px;
-	font-family:var(--hx-sans);font-size:.9375rem;font-weight:500;line-height:1.3;
-	letter-spacing:var(--hx-tr-btn,.16em);text-transform:uppercase;
-	color:var(--hx-fg);text-decoration:none;cursor:pointer;
-	background-image:linear-gradient(currentColor,currentColor),linear-gradient(var(--hx-line),var(--hx-line));
-	background-repeat:no-repeat;
-	background-position:50% 100%,0 100%;
-	background-size:0 1px,100% 1px;
-	transition:background-size 700ms var(--hx-ease),color var(--hx-dur-ui) var(--hx-ease-soft),opacity var(--hx-dur-ui);
-}
-.hxshop-item__add::before{
-	content:"";flex:none;width:9px;height:9px;margin-right:12px;
-	background:linear-gradient(currentColor,currentColor) 50% 50%/9px 1px no-repeat,linear-gradient(currentColor,currentColor) 50% 50%/1px 9px no-repeat;
-	transition:transform var(--hx-dur-ui) var(--hx-ease-soft);
-}
-.hxshop-item__add:focus-visible{background-size:100% 1px,100% 1px}
-
-/* states (shared by both add buttons) */
-.hxshop-add.is-busy,.hxshop-add.loading{opacity:.6;pointer-events:none;cursor:progress}
-.hxshop-item__add.is-added{background-size:100% 1px,100% 1px}
-.hxshop-item__add.is-added::before{
-	width:10px;height:6px;margin-top:-4px;
-	background:none;border-left:1px solid currentColor;border-bottom:1px solid currentColor;transform:rotate(-45deg);
-}
-.hxshop .added_to_cart{display:none}
-.hxshop .added_to_cart.hxshop-viewbag{display:inline-flex}
-.hxshop-item__actions .hxshop-viewbag{margin-top:2px}
-.hxshop-ritual__actions .hxshop-viewbag{order:3}
-.hxshop-unavailable{min-height:48px;display:flex;align-items:center}
+.hxshop-item__dot{display:inline-block;width:3px;height:3px;margin-inline:10px;border-radius:50%;background:var(--hx-line-strong)}
 
 @media (hover:hover){
 	.hxshop-item:has(.hxshop-item__stage:hover,.hxshop-item__name a:hover) .hxshop-item__object img,
-	.hxshop-item:has(.hxshop-item__stage:hover,.hxshop-item__name a:hover) .hxshop-item__wcimg{transform:translate3d(0,-10px,0) scale(1.05)}
-	.hxshop-item__add:hover{background-size:100% 1px,100% 1px}
-	.hxshop-item__add:not(.is-added):hover::before{transform:rotate(90deg)}
+	.hxshop-item:has(.hxshop-item__stage:hover,.hxshop-item__name a:hover) .hxshop-item__wcimg{scale:1.035}  /* composes with the alignment transform */
+	.hxshop-item__name a:hover{text-decoration:underline}
+	.hxshop .hxshop-item__add:hover{background:#fff}
 }
 
-@media (max-width:359.98px){
-	.hxshop-item__name{font-size:1.0625rem}
-	.hxshop-item__num::after{display:none}
-	.hxshop-item__add{letter-spacing:.1em}
-	.hxshop-item__add::before{margin-right:8px}
-}
 @media (max-width:639.98px){
-	/* Two objects at the normal reading size; one when enlarged text needs the width. */
-	.hxshop-list__items{grid-template-columns:repeat(auto-fit,minmax(min(100%,7.5em),1fr))}
-	.hxshop-item__stage{max-width:240px}
-}
-@media (min-width:640px){
-	.hxshop-list{--hxshop-col-gap:var(--hx-gap)}
-	.hxshop-item__stage{width:min(100%,300px)}
-	.hxshop-item__name{font-size:var(--hx-fs-title)}
-	.hxshop-item__step{font-size:var(--hx-fs-step);gap:14px;margin-top:var(--hx-s-4)}
-	.hxshop-item__num{gap:14px}
-	.hxshop-item__num::after{width:24px}
-	.hxshop-item__benefit{font-size:var(--hx-fs-body);line-height:1.55;margin-top:var(--hx-s-3)}
-	.hxshop-item__meta{margin-top:var(--hx-s-4)}
-	.hxshop-item__dot{margin-inline:14px;height:12px}
-	.hxshop-item__actions{margin-top:var(--hx-s-4)}
+	.hxshop-item__actions{right:8px;bottom:8px}
+	.hxshop-item__name{font-size:.9375rem;padding-inline:6px}
+	.hxshop-item__benefit{font-size:.875rem;padding-inline:6px}
 }
 @media (min-width:1100px){
-	.hxshop-list{--hxshop-col-gap:clamp(24px,2.2vw,40px)}
 	.hxshop-list__items{grid-template-columns:repeat(4,minmax(0,1fr))}
 	.hxshop-item:nth-child(n+3){margin-top:0}
-	.hxshop-item__stage{width:100%}
 }
 
 /* ─── 4 Services + about ─────────────────────────────────────────────── */
@@ -369,9 +379,58 @@
 
 /* ─── Motion preferences ─────────────────────────────────────────────── */
 @media (prefers-reduced-motion:reduce){
-	.hxshop-item__object img,.hxshop-item__wcimg,.hxshop-item__add,.hxshop-item__add::before,.hxshop-faq__icon::after{transition:none}
-	.hxshop-item:has(.hxshop-item__stage:hover,.hxshop-item__name a:hover) .hxshop-item__object img{transform:none}
+	.hxshop-hero__control,.hxshop-item__object img,.hxshop-item__wcimg,.hxshop-item__add,.hxshop-add__label,.hxshop-faq__icon::after{transition:none}
+	.hxshop-item:has(.hxshop-item__stage:hover,.hxshop-item__name a:hover) .hxshop-item__object img{scale:none}
 }
 
 /* Keep the purchase decision readable at every viewport. */
 .hxshop-ritual__add{font-size:.9375rem;letter-spacing:.08em}
+
+/* ─── The Complete Ritual, one dark room (owner, 28 Oct 2026: "improve this aesthetically") ───
+   The studio photograph bleeds off the left edge and melts into the room's black (#0C0C0C, the
+   photograph's own shadows), the type in pearl on the right. Phones: the photograph full width,
+   the type beneath on the same black. Selectors carry .hxshop-ritual twice to sit above the
+   stone-room rules and typeset-site.css. */
+.hxshop-ritual.hxshop-ritual{--rit-ink:#0C0C0C;background:var(--rit-ink);color:var(--hx-on-dark);padding:0}
+.hxshop-ritual.hxshop-ritual .hxshop-ritual__grid{display:grid;gap:0;grid-template-columns:minmax(0,1fr)}
+@media (min-width:640px) and (max-width:1199.98px){.hxshop-ritual.hxshop-ritual .hxshop-ritual__body{max-width:44rem}}
+.hxshop-ritual.hxshop-ritual .hxshop-ritual__media{position:relative;display:block;aspect-ratio:3/2;height:auto;min-height:0;background:var(--rit-ink);overflow:hidden}
+.hxshop-ritual.hxshop-ritual .hxshop-ritual__media img{object-fit:cover;object-position:40% 55%}
+/* the photograph dissolves into the room: downwards on phones, rightwards on wide screens */
+.hxshop-ritual.hxshop-ritual .hxshop-ritual__media::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(to bottom,rgba(12,12,12,0) 62%,var(--rit-ink) 100%)}
+.hxshop-ritual.hxshop-ritual .hxshop-ritual__body{max-width:none;padding:var(--hx-s-6) var(--hx-margin) var(--hx-section-sm)}
+html body:not(.cos-h26) #cos-main-content .hxshop-ritual .hxshop-ritual__title{margin-top:0;max-width:none;color:var(--hx-on-dark)}
+html body:not(.cos-h26) #cos-main-content .hxshop-ritual .hxshop-ritual__copy{margin-top:var(--hx-s-4);max-width:28em;color:var(--hx-on-dark-2)}
+
+/* the four steps: number and verb in small capitals, the formula's name in the serif */
+.hxshop-ritual.hxshop-ritual .hxshop-ritual__steps{margin-top:var(--hx-s-6);border-top:1px solid rgba(242,239,232,.18)}
+.hxshop-ritual.hxshop-ritual .hxshop-ritual__steps li{grid-template-columns:7.5rem minmax(0,1fr);align-items:baseline;padding-block:14px;border-bottom:1px solid rgba(242,239,232,.12)}
+.hxshop-ritual.hxshop-ritual .hxshop-ritual__step{gap:8px}
+html body:not(.cos-h26) #cos-main-content .hxshop-ritual .hxshop-ritual__num{font-family:var(--hx-sans);font-size:.75rem;letter-spacing:.08em;color:var(--hx-on-dark-2)}
+.hxshop-ritual.hxshop-ritual .hxshop-ritual__num::after{content:none}
+html body:not(.cos-h26) #cos-main-content .hxshop-ritual .hxshop-ritual__verb{font-family:var(--hx-sans);font-style:normal;font-weight:500;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--hx-on-dark-2)}
+html body:not(.cos-h26) #cos-main-content .hxshop-ritual .hxshop-ritual__name{font-family:var(--hx-serif);font-size:clamp(1.125rem,1rem + .4vw,1.3125rem);line-height:1.3;color:var(--hx-on-dark)}
+
+/* price: the set's price leads; the saving and the comparison on one quiet line beneath */
+.hxshop-ritual.hxshop-ritual .hxshop-ritual__price{display:grid;gap:8px;margin-top:var(--hx-s-6)}
+html body:not(.cos-h26) #cos-main-content .hxshop-ritual .hxshop-ritual__amount .woocommerce-Price-amount{font-weight:300;font-size:clamp(2.5rem,2rem + 1.4vw,3.25rem);color:var(--hx-on-dark)}
+.hxshop-ritual.hxshop-ritual .hxshop-ritual__compare{color:var(--hx-on-dark-2)}
+.hxshop-ritual.hxshop-ritual .hxshop-ritual__save{color:var(--hx-on-dark)}
+.hxshop-ritual.hxshop-ritual .hxshop-ritual__mid{margin-inline:10px;color:var(--hx-on-dark-2)}
+
+/* actions: a pearl button on the black, the link in pearl */
+.hxshop-ritual.hxshop-ritual .hxshop-ritual__actions{margin-top:var(--hx-s-6)}
+.hxshop .hxshop-ritual .hx-btn.hxshop-ritual__add{--hx-btn-bg:var(--hx-on-dark);--hx-btn-bg-hover:#FFFFFF;--hx-btn-fg:#0C0C0C;--hx-btn-frame:rgba(242,239,232,.4)}
+.hxshop .hxshop-ritual .hx-btn.hxshop-ritual__add:visited{color:#0C0C0C}
+.hxshop .hxshop-ritual :is(.hxshop-ritual__more,.hxshop-ritual__more:visited){color:var(--hx-on-dark)}
+.hxshop-ritual.hxshop-ritual .hxshop-ritual__service{margin-top:var(--hx-s-5);color:var(--hx-on-dark-2)}
+.hxshop-ritual.hxshop-ritual :focus-visible{outline-color:var(--hx-on-dark)}
+
+@media (min-width:1200px){   /* side by side only where the photograph keeps all four packs in frame */
+	.hxshop-ritual.hxshop-ritual .hxshop-ritual__grid{grid-template-columns:minmax(0,7fr) minmax(0,5fr);align-items:center;min-height:min(820px,calc(100svh - var(--cos-nav-h,80px)))}
+	.hxshop-ritual.hxshop-ritual .hxshop-ritual__media{aspect-ratio:auto;height:100%;min-height:560px}
+	.hxshop-ritual.hxshop-ritual .hxshop-ritual__media img{object-position:50% 58%}   /* all four packs in frame: they span ~18–80% of the photograph */
+	.hxshop-ritual.hxshop-ritual .hxshop-ritual__media::after{background:linear-gradient(to right,rgba(12,12,12,0) 84%,var(--rit-ink) 100%)}
+	.hxshop-ritual.hxshop-ritual .hxshop-ritual__body{padding:var(--hx-s-8) max(var(--hx-margin),calc((100vw - var(--hx-max)) / 2 + var(--hx-margin))) var(--hx-s-8) clamp(32px,4vw,72px);max-width:calc(30rem + 2 * var(--hx-margin))}
+}
+

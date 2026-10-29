@@ -1,0 +1,177 @@
+/* ==========================================================================
+   hx/measured.css — 04 Measured on skin (prefix hxm-). Markup: template-parts/home-2026/measured.php
+
+   20 Oct 2026. A pearl room between the two ivory ones (Our story, provenance). Centred head,
+   then three results, one per studied formula: a 5:4 owner photograph of the product, and
+   beneath it the figure in the serif with finding, product link, method and panel beside it.
+   Three across from 900px; between 900 and 1099px the figure sits above the text so the
+   narrow columns keep a full line. The middle (eye) result sits lower: an
+   editorial stagger, so the row does not echo Our story's even triptych. The self-reported
+   cream result has no figure: its text starts directly under the photograph, the quiet member
+   of the row. Below a hairline: the link to the studies. Phones stack the results; the
+   photographs stay 5:4 at every width.
+   Type roles: hx/typeset.css. Vertical rhythm: --ts-room.
+   ========================================================================== */
+
+body.cos-h26 .hxm{
+	position:relative;
+	background:var(--hx-pearl);
+	color:var(--hx-text);
+	padding-block:var(--ts-room,clamp(88px,3.5rem + 5.5vw,152px));
+}
+body.cos-h26 .hxm :where(h2,h3,p,ul,li,figure,figcaption){margin:0;padding:0}
+
+/* ─── Head ───────────────────────────────────────────────────────────── */
+body.cos-h26 .hxm__head{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	text-align:center;
+	margin-bottom:clamp(48px,1.5rem + 4vw,96px);
+}
+body.cos-h26 .hxm__frame-line{
+	margin-top:var(--hx-s-4);
+	max-width:34em;
+	font-family:var(--hx-sans);
+	font-size:1rem;
+	line-height:1.7;
+	color:var(--hx-fg-2);
+	text-wrap:balance;
+}
+
+/* ─── Results ────────────────────────────────────────────────────────── */
+body.cos-h26 .hxm__results{
+	list-style:none;
+	display:grid;
+	grid-template-columns:minmax(0,1fr);
+	row-gap:clamp(56px,10vw,72px);
+	max-width:1120px;
+	margin-inline:auto;
+}
+body.cos-h26 .hxm__result{list-style:none;display:flex;flex-direction:column}
+body.cos-h26 .hxm__result::marker{content:none}
+@media (min-width:900px){
+	body.cos-h26 .hxm__results{
+		grid-template-columns:repeat(3,minmax(0,1fr));
+		column-gap:clamp(32px,4vw,64px);
+		align-items:start;
+		max-width:1240px;
+	}
+	body.cos-h26 .hxm__result--eye{margin-top:clamp(56px,5vw,88px)}
+}
+
+body.cos-h26 .hxm__photo,
+body.cos-h26 .hxm__photo:visited{
+	display:block;
+	aspect-ratio:5 / 4;
+	overflow:clip;
+	background:var(--hx-white);
+	-webkit-tap-highlight-color:transparent;
+}
+body.cos-h26 .hxm__img,
+body.cos-h26 .hxm__img img{display:block;width:100%;height:100%}
+body.cos-h26 .hxm__img img{object-fit:cover;object-position:50% 45%;transition:transform 900ms var(--hx-ease)} /* 900ms: also the reveal settle (home-staging/system.css) */
+body.cos-h26 .hxm__result--serum .hxm__img img{object-position:62% 50%} /* keep the falling drop and both hands */
+body.cos-h26 .hxm__result--eye .hxm__img img{object-position:50% 38%}  /* eyes and the whole pack */
+body.cos-h26 .hxm__result--cream .hxm__img img{object-position:50% 50%} /* the open jar and both fingertips */
+
+body.cos-h26 .hxm__credit{
+	margin-top:var(--hx-s-2);
+	font-family:var(--hx-sans);
+	font-size:.8125rem;
+	line-height:1.5;
+	letter-spacing:.01em;
+	color:var(--hx-fg-3);
+	text-align:right;
+}
+
+/* figure | text, on one baseline grid under the photograph */
+body.cos-h26 .hxm__copy{
+	display:grid;
+	grid-template-columns:auto minmax(0,1fr);
+	column-gap:clamp(20px,1rem + 1.5vw,40px);
+	align-items:start;
+	margin-top:clamp(24px,1rem + 1.2vw,36px);
+}
+body.cos-h26 .hxm__fig{
+	font-family:var(--hx-serif);
+	font-size:var(--ts-figure,clamp(3rem,2.4rem + 2.4vw,4.5rem));
+	font-weight:300;
+	line-height:.9;
+	letter-spacing:-.01em;
+	color:var(--hx-ink);
+	font-variant-numeric:lining-nums proportional-nums;
+	white-space:nowrap;
+}
+body.cos-h26 .hxm__pct{font-size:.5em;margin-left:.04em;vertical-align:.62em;letter-spacing:0}
+body.cos-h26 .hxm__text{padding-top:.35em;min-width:0}
+/* 900–1099px: three narrow columns, so the figure sits above its text */
+@media (min-width:900px) and (max-width:1099px){
+	body.cos-h26 .hxm__copy{grid-template-columns:minmax(0,1fr);row-gap:var(--hx-s-3)}
+	body.cos-h26 .hxm__text{padding-top:0}
+}
+body.cos-h26 .hxm__finding{
+	font-family:var(--hx-serif);
+	font-size:var(--ts-title);
+	font-weight:400;
+	line-height:1.22;
+	letter-spacing:0;
+	text-transform:none;
+	color:var(--hx-ink);
+}
+body.cos-h26 .hxm__product{margin-top:var(--hx-s-2)}
+body.cos-h26 .hxm__product a,
+body.cos-h26 .hxm__product a:visited{
+	display:inline-flex;
+	align-items:center;
+	min-height:44px;
+	font-family:var(--hx-sans);
+	font-size:var(--ts-label,.75rem);
+	font-weight:500;
+	letter-spacing:.2em;
+	text-transform:uppercase;
+	color:var(--hx-ink);
+	text-decoration-line:underline;
+	text-decoration-thickness:1px;
+	text-underline-offset:.45em;
+	text-decoration-color:var(--hx-line);
+	transition:text-decoration-color var(--hx-dur-ui) var(--hx-ease-soft);
+	-webkit-tap-highlight-color:transparent;
+}
+body.cos-h26 .hxm__product a:is(:hover,:focus-visible){text-decoration-color:currentColor}
+body.cos-h26 .hxm__product a:focus{outline:none}
+body.cos-h26 .hxm__product a:focus-visible{outline:var(--hx-focus-width) solid var(--hx-focus-color);outline-offset:var(--hx-focus-offset)}
+body.cos-h26 :is(.hxm__method,.hxm__note){
+	font-family:var(--hx-sans);
+	font-size:.875rem;
+	line-height:1.55;
+	letter-spacing:.01em;
+	color:var(--hx-fg-3);
+}
+body.cos-h26 .hxm__method{margin-top:var(--hx-s-1)}
+body.cos-h26 .hxm__nb{white-space:nowrap}
+body.cos-h26 .hxm__note{margin-top:var(--hx-s-1);color:var(--hx-fg-2)}
+
+@media (hover:hover){
+	body.cos-h26 .hxm__result:has(.hxm__product a:hover) .hxm__img img,
+	body.cos-h26 .hxm__photo:hover .hxm__img img{transform:scale(1.03)}
+	body.cos-h26 .hxm__result:has(.hxm__photo:hover) .hxm__product a{text-decoration-color:currentColor}
+}
+
+/* ─── Foot: the link to the studies ─────────────────────────────────── */
+body.cos-h26 .hxm__foot{
+	display:flex;
+	justify-content:flex-end;
+	max-width:1240px;
+	margin:clamp(56px,1.5rem + 4vw,96px) auto 0;
+	padding-top:var(--hx-s-6);
+	border-top:1px solid var(--hx-line);
+}
+body.cos-h26 .hxm__more{flex:none}
+
+@media (prefers-reduced-motion:reduce){
+	body.cos-h26 .hxm__img img,
+	body.cos-h26 .hxm__product a{transition:none}
+	body.cos-h26 .hxm__photo:hover .hxm__img img,
+	body.cos-h26 .hxm__result:has(.hxm__product a:hover) .hxm__img img{transform:none}
+}

@@ -13,7 +13,7 @@ foreach ( $chapters as $i => $c ) {
 }
 $link = $next
 	? array( hxsc_url( $next['path'] ), 'Next chapter', $next['title'], $next['line'] )
-	: array( hxsc_url( '/science/' ), 'Swiss science', 'Protect. Repair. Rejuvenate.', 'Return to the overview.' );
+	: array( hxsc_url( '/science/' ), 'Swiss science', 'Inside every formula.', 'Return to the overview.' );
 ?>
 <nav class="hxsc-next" aria-label="Continue reading">
 	<div class="hx-wrap">

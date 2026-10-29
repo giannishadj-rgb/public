@@ -23,10 +23,19 @@ $hxsc_args  = array(
 <?php wp_body_open(); ?>
 <main id="cos-main-content" class="hxsc">
 <?php
-if ( '' !== $hxsc_args['chapter'] ) {
-	get_template_part( 'template-parts/hx/science/subnav', null, $hxsc_args );
-}
+// 25 Oct 2026 (owner: "hero image first", like the hub): a chapter opens on its bleed plate under
+// the transparent header; its sub-navigation follows the plate (after the masthead's </header>).
+ob_start();
 get_template_part( 'template-parts/hx/science/' . $hxsc_args['part'], null, $hxsc_args );
+$hxsc_body = (string) ob_get_clean();
+if ( '' !== $hxsc_args['chapter'] ) {
+	ob_start();
+	get_template_part( 'template-parts/hx/science/subnav', null, $hxsc_args );
+	$hxsc_sub  = (string) ob_get_clean();
+	$hxsc_at   = strpos( $hxsc_body, '</header>' );
+	$hxsc_body = false === $hxsc_at ? $hxsc_sub . $hxsc_body : substr_replace( $hxsc_body, $hxsc_sub, $hxsc_at + 9, 0 );
+}
+echo $hxsc_body; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- theme template output
 if ( '' !== $hxsc_args['chapter'] ) {
 	get_template_part( 'template-parts/hx/science/next', null, $hxsc_args );
 }

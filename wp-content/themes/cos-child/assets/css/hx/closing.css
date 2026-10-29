@@ -1,124 +1,70 @@
-/* hx/closing.css — 09 Closing statement (14 Oct 2026 rebuild; revised after critique
-   round 1). Prefix .hxz-. Markup: template-parts/home-2026/closing.php.
-   The statement as the largest type on the page, flush left, two balanced lines at
-   every width; beneath it a quiet text-and-rule action (not a second filled button)
-   with the two service assurances; the section signs off with a hairline + the
-   brand-mark cross, house name and place, then meets the graphite footer on a
-   clean edge (no fade, no rule). Warm ivory ground: one quiet step off the pearl
-   ritual above, never a "stone block". */
+/* hx/closing.css — 09 Closing: The Complete Ritual as the page's last object (29 Oct 2026,
+   homepage critique; owner: "set object in closing"). Prefix .hxz-. Markup:
+   template-parts/home-2026/closing.php.
+   Layout C (owner's pick, 29 Oct): the tray photograph full-bleed on the left, the set's
+   name, a line of its own, the four formulas as 01–04, the live price, one action and the
+   two service assurances on mineral ivory on the right; the section signs off with a hairline + the brand-mark cross, house name
+   and place, then meets the graphite footer on a clean edge. Warm ivory ground: one quiet
+   step off the pearl ritual above. Type roles come from hx/typeset.css. */
 
 body.cos-h26 .hxz{
 	position:relative;
-	background:var(--hx-ivory);
+	background:var(--cos-pearl,#F2F2EF);   /* mineral ivory: one quiet step off the pearl ritual above */
 	color:var(--hx-text);
-	/* generous before a statement, tight at the end (round-1 pacing rule) */
-	padding-block:calc(var(--hx-section) * 1.05) clamp(32px,1.5rem + 2vw,56px);
+	padding:0 0 clamp(32px,1.5rem + 2vw,56px);
 	overflow:clip;
 }
 
-/* ─── Statement ───────────────────────────────────────────────────────
-   Size = the smaller of 1.3 × display (≈114px from 1440px) and what keeps
-   "refined to the essential." on one line inside the page margins
-   (that line measures ≈7.85em in Cormorant 300 italic). */
-.hxz__title{
-	margin:0;
-	font-size:min(4.75rem,calc((100vw - 2 * var(--hx-margin)) * .124));
-	line-height:1.1; /* loosened: italic f descender must clear the line above's caps */
+/* ─── The set (layout C, owner's pick 29 Oct): the tray photograph full-bleed on the left,
+   the set on mineral ivory on the right; phones and tablets: photograph first, text below ── */
+.hxz__set{display:grid}
+@media (min-width:900px){
+	.hxz__set{grid-template-columns:minmax(0,7fr) minmax(0,6fr);min-height:clamp(640px,62vw,900px)}
 }
-.hxz__line{display:block}
-.hxz__title em{padding-left:.04em} /* optical: the italic r sits under the S */
+.hxz__media{position:relative;margin:0;background:#DADAD6;overflow:clip}
+.hxz__photo{display:block;height:100%;aspect-ratio:4 / 5}
+@media (min-width:900px){.hxz__photo{position:absolute;inset:0;aspect-ratio:auto}}
+.hxz__img,.hxz__img img{display:block;width:100%;height:100%}
+.hxz__img img{object-fit:cover;object-position:50% 55%;transition:transform 1400ms var(--hx-ease)}
+@media (hover:hover){.hxz__set:has(.hxz__btn:hover) .hxz__img img{transform:scale(1.02)}}
 
-/* ─── Action: tracked caps + a long hairline that extends on hover ───── */
-.hxz__act{margin-top:clamp(40px,2rem + 2.4vw,72px)}
-.hxz__cta{
-	--hxz-rule:clamp(56px,4vw + 32px,96px);
-	display:inline-flex;
-	align-items:center;
-	gap:var(--hx-s-5);
-	min-height:56px;
-	padding-right:var(--hx-s-3);
-	font-family:var(--hx-sans);
-	font-size:.9375rem;
-	font-weight:500;
-	line-height:1.3;
-	letter-spacing:.015em;
-	text-transform:uppercase;
-	color:var(--hx-ink);
-	text-decoration:none;
-	-webkit-tap-highlight-color:transparent;
-}
-.hxz__cta:visited{color:var(--hx-ink)}
-.hxz__cta-rule{
-	position:relative;
-	flex:0 1 var(--hxz-rule);
-	min-width:24px;
-	width:var(--hxz-rule);
-	height:9px;
-	transform-origin:left center;
-	transition:transform 700ms var(--hx-ease);
-}
-.hxz__cta-rule::before{content:"";position:absolute;left:0;right:0;top:50%;height:1px;margin-top:-.5px;background:currentColor}
-.hxz__cta-rule::after{content:"";position:absolute;right:1px;top:50%;width:7px;height:7px;border-top:1px solid currentColor;border-right:1px solid currentColor;transform:translateY(-50%) rotate(45deg)}
-.hxz__cta-text{
-	background-image:linear-gradient(currentColor,currentColor);
-	background-repeat:no-repeat;
-	background-position:0 100%;
-	background-size:0 1px;
-	padding-bottom:4px;
-	white-space:nowrap;
-	transition:background-size 700ms var(--hx-ease);
-}
-@media (hover:hover){
-	.hxz__cta:hover .hxz__cta-rule{transform:translateX(10px)}
-	.hxz__cta:hover .hxz__cta-text{background-size:100% 1px}
-}
-.hxz__cta:focus{outline:none}
-.hxz__cta:focus-visible{outline:var(--hx-focus-width) solid var(--hx-focus-color);outline-offset:var(--hx-focus-offset)}
+.hxz__body{display:flex;flex-direction:column;justify-content:space-between;gap:clamp(40px,2rem + 2vw,64px);padding:clamp(40px,1.5rem + 4vw,96px) var(--hx-margin) clamp(32px,1.5rem + 2vw,56px)}
+@media (min-width:900px){.hxz__body{padding:clamp(64px,6vw,96px) clamp(48px,6.6vw,96px) clamp(40px,3.8vw,56px) clamp(48px,6vw,88px)}}
+.hxz__title{margin:0}
+.hxz__lede{margin-top:var(--hx-s-3);max-width:26em}
 
-.hxz__assure{
-	display:flex;
-	flex-wrap:wrap;
-	align-items:center;
-	gap:var(--hx-s-2) 0;
-	margin:var(--hx-s-3) 0 0;
-	padding:0;
-	list-style:none;
-}
-/* 15px: the site's floor for purchase details (owner, 11 Oct). */
-.hxz__assure li{margin:0;font-family:var(--hx-sans);font-size:.9375rem;font-weight:400;line-height:1.5;color:var(--hx-muted);white-space:nowrap}
-.hxz__assure li + li::before{
-	content:"";
-	display:inline-block;
-	width:18px;
-	height:1px;
-	margin:0 var(--hx-s-4);
-	vertical-align:middle;
-	background:var(--hx-chrome);
-}
+/* the four formulas it holds: 01–04 · name · size */
+.hxz__contents{display:flex;flex-direction:column;gap:18px;margin:clamp(28px,1rem + 2vw,40px) 0 0;padding:0;list-style:none}
+.hxz__item{display:grid;grid-template-columns:40px minmax(0,1fr) auto;align-items:baseline;gap:12px}
+.hxz__num{font-family:var(--hx-serif);font-size:1.25rem;line-height:1;color:var(--hx-fg-3,#5C5C5A);font-variant-numeric:lining-nums}
+.hxz__name{font-family:var(--hx-serif);font-size:clamp(1.1875rem,1.05rem + .4vw,1.375rem);line-height:1.2;letter-spacing:-.005em;color:var(--hx-ink)}
+.hxz__size{font-family:var(--hx-sans);font-size:.8125rem;color:var(--hx-fg-3,#5C5C5A);font-variant-numeric:lining-nums tabular-nums;white-space:nowrap}
+
+/* ─── Price, action, assurances ─────────────────────────────────────── */
+.hxz__act{display:flex;flex-direction:column;gap:20px;padding-top:32px;border-top:1px solid var(--hx-line)}
+.hxz__price{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;margin:0}
+.hxz__amt{font-family:var(--hx-serif);font-size:clamp(2rem,1.6rem + 1.2vw,2.75rem);font-weight:400;line-height:1;letter-spacing:-.01em;color:var(--hx-ink);font-variant-numeric:lining-nums}
+.hxz__apart{font-family:var(--hx-sans);font-size:.875rem;color:var(--hx-fg-3,#5C5C5A);font-variant-numeric:lining-nums}
+.hxz__buy{display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px}
+
+.hxz__assure{display:flex;flex-direction:column;gap:2px;margin:0;padding:0;list-style:none}
+.hxz__assure li{margin:0;font-family:var(--hx-sans);font-size:.875rem;font-weight:400;line-height:1.5;color:var(--hx-muted);white-space:nowrap}
 
 /* ─── Signature ──────────────────────────────────────────────────────── */
-.hxz__sign{margin-top:clamp(96px,4rem + 6vw,176px)}
+.hxz__sign{margin-top:clamp(40px,1.5rem + 3vw,72px)}
 .hxz__rule{display:block;height:0;border-top:1px solid var(--hx-line)}
 .hxz__house{display:flex;align-items:center;gap:var(--hx-s-3);margin:0;padding-top:var(--hx-s-5)}
 .hxz__house .hx-label{color:var(--hx-ink);white-space:nowrap}
 .hxz__cross{display:block;flex:none;width:11px;height:11px}
 .hxz__house .hxz__place{margin-left:auto;color:var(--hx-muted)}
 
-/* Phones: a short rule that stays with the label. */
 @media (max-width:599.98px){
-	.hxz__cta{--hxz-rule:36px;gap:var(--hx-s-3)}
+	.hxz__item{grid-template-columns:32px minmax(0,1fr) auto}
+	.hxz__btn{width:100%;justify-content:center}
 }
 @media (max-width:399.98px){
-	.hxz__assure{flex-direction:column;align-items:flex-start;gap:var(--hx-s-1)}
-	.hxz__assure li + li::before{display:none}
 	.hxz__house .hxz__place{display:none}
 }
-@media (max-width:359.98px){
-	.hxz__cta{max-width:100%;font-size:.9375rem;letter-spacing:.015em;gap:var(--hx-s-4);padding-right:0}
-}
-@media (min-width:1024px){
-	.hxz__cta{font-size:.9375rem}
-}
 @media (prefers-reduced-motion:reduce){
-	.hxz__cta-rule,.hxz__cta-text{transition:none}
+	.hxz__img img{transition:none}
 }

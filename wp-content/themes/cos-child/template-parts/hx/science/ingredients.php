@@ -7,14 +7,15 @@
 defined( 'ABSPATH' ) || exit;
 
 get_template_part( 'template-parts/hx/science/masthead', null, array(
+	'mode'  => 'bleed',
 	'label' => 'Chapter 03 <span aria-hidden="true">·</span> The five actives',
 	'title' => 'Every active. Explained in full.',
 	'lead'  => 'Five actives, selected for evidence and the way they work together: their source, their role and how research describes them.',
 	'plate' => array(
 		'base' => 'caviar-spoon-light', 'widths' => array( 720, 960, 1130 ), 'ratio' => array( 1130, 640 ),
 		'alt'  => 'A silver spoon holding a measure of caviar pearls on a pale ground',
-		'tall' => array( 'caviar-spoon-mobile', array( 640, 972 ), array( 640, 458 ) ),
 		'pos'  => '62% 40%',
+		'pos_wide' => '50% 40%',
 	),
 ) );
 

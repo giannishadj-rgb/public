@@ -54,7 +54,7 @@ function cos_get_product_copy( string $sku ): ?array {
 				array( 'Is rinsing required?', 'No. Simply sweep across the skin with a cotton pad and leave — no rinsing needed. The formula can be emulsified with water and rinsed if preferred.' ),
 				array( 'Can I use it to remove eye make-up?', 'Yes. Hold a soaked cotton pad gently over the closed eye for a few seconds, then wipe downwards and outwards without rubbing.' ),
 				array( 'Is it suitable for sensitive skin?', 'The formula is designed to be gentle for most skin types, including sensitive and reactive skin. We recommend a patch test before first use if you have specific concerns.' ),
-				array( 'When should I use it in my routine?', 'Use morning and evening as Step 1 of the Caviar of Switzerland ritual, before applying Advanced Repair Serum and 24h Regeneration Cream.' ),
+				array( 'When should I use it in my routine?', 'Morning and evening, as Step 1 of the ritual: before the Advanced Repair Serum, the Revitalizing Eye Cream and the 24h Regeneration Cream.' ),
 				array( 'What is the Caviar of Switzerland High-Tech Complex?', 'The High-Tech Complex is the signature active blend of Caviar Extract, SYN®-COLL, Hyaluronic Acid, Superoxide Dismutase, and Resveratrol — chosen to help support hydration, visible firmness, antioxidant care, and a more youthful-looking complexion.' ),
 				array( 'Why does this cleanser cost more than a typical micellar water?', 'The price reflects Swiss development and manufacture, and a formula built around Caviar Extract and a dedicated micellar complex rather than a generic surfactant base — chosen to remove impurities without compromising the skin barrier the following steps depend on.' ),
 			),

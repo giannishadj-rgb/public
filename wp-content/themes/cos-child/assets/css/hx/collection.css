@@ -1,181 +1,416 @@
 /* ==========================================================================
-   hx/collection.css — 02 The Collection (homepage rebuild, 14 Oct 2026; round 1 fixes)
-   Markup: template-parts/home-2026/collection.php · prefix hxc- · tokens from hx/system.css
+   hx/collection.css — 02 The essential four (homepage)
+   Markup: template-parts/home-2026/collection.php · prefix hxc-
 
-   Four objects, not four cards: the products stand free on the pearl-white
-   ground (wc-coll-* transparent cut-outs at true relative scale, only their own
-   photographed contact shadow, no tile/box/border), ONE baseline, 2:3 stages.
-   <1100px (phones included): two by two. ≥1100px: four across. Text rows are
-   left-aligned and lined up across each row by subgrid (verb / name / benefit /
-   price line). Four type sizes in the section: heading, name, lead, 16px body.
+   20 Oct 2026: rebuilt against Guerlain's Orchidée Impériale grid in a blind builder/critic
+   loop (two rounds; the final version won 4 of 4 blind judgments, two critics × desktop and
+   mobile). In Caviar of Switzerland's palette: graphite stages (brand ink #202221, lifted from black, 24 Oct 2026) with silver light, never navy.
+
+   Owner decisions:
+   - Each tile is the owner's own studio packshot (20 Oct): the pack on a graphite stage with a
+     lit horizon and floor reflection, photographed 4:5 (wc-stage-*). This replaced the
+     CSS-built stage (gradient field, horizon, contact light, box-reflect over cut-outs).
+   - Four across from 1100px, near edge to edge on a 12px seam; two across below. 4:5 tiles at
+     every width, so a photograph is never cropped. Every product is a peer; the Cleanse →
+     Treat → Revive → Restore order reads in one row.
+   - Type sizes retain the reference grid's hierarchy with a slightly more readable card scale:
+     title 28/20px, lede 16px, name 16px, benefit 14px, price 16/14px.
+
+   Selectors carry #collection: the section's rules must outrank the homepage type roles
+   (hx/typeset.css) and room spacing (hx/composition.css), which load after this file.
    ========================================================================== */
 
-body.cos-h26 .hxc{
-	--hxc-col-gap:clamp(12px,3.4vw,24px);
-	--hxc-row-gap:clamp(40px,8vw,72px);
+html body.cos-h26 #collection{
+	--hxc-gap:clamp(8px,2.6vw,16px);
+	--hxc-edge:clamp(12px,3.1vw,24px);
+	--hxc-text-x:clamp(8px,.85vw,12px);
+	--hxc-row-gap:clamp(44px,11vw,64px);
 	position:relative;
+	padding-top:clamp(56px,2.5rem + 3vw,88px);
 	background:var(--hx-white);
 	color:var(--hx-fg-2);
-	padding-block:clamp(64px,3rem + 4vw,128px) clamp(56px,2.5rem + 4vw,120px);
 }
-body.cos-h26 .hxc :where(h2,h3,p,ol,li){margin:0;padding:0}
+html body.cos-h26 #collection :where(h2,h3,p,ol,li){margin:0;padding:0}
 
-/* ─── Head: title left, lede right (Swiss split from 900px) ─────────── */
-body.cos-h26 .hxc__head{
-	display:grid;
-	gap:var(--hx-s-4);
-	margin-bottom:clamp(24px,.5rem + 3.5vw,64px);
+/* ─── Head: the homepage display voice, centred, close to the grid ──── */
+html body.cos-h26 #collection .hxc__head{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	gap:clamp(14px,.5rem + .7vw,20px);
+	max-width:60rem;
+	margin:0 auto clamp(28px,1rem + 1.6vw,44px);
+	padding-inline:4px;
+	text-align:center;
 }
-body.cos-h26 .hxc__lede{max-width:26em;color:var(--hx-fg-2)}
-@media (min-width:900px){
-	body.cos-h26 .hxc__head{grid-template-columns:minmax(0,7fr) minmax(0,5fr);column-gap:var(--hx-gap);align-items:start} /* lede first line hangs from the heading cap line (measured: same ink top at 1440) */
-	body.cos-h26 .hxc__lede{justify-self:end;max-width:24em;text-wrap:balance}
+html body.cos-h26 #collection .hxc__title{
+	font-family:var(--hx-serif);
+	font-weight:400;
+	font-size:1.25rem;                 /* 20px phones, 28px from 768px: Guerlain's measured title sizes */
+	line-height:1.14;
+	letter-spacing:.07em;
+	margin-right:-.07em;               /* optically re-centre the trailing tracking */
+	text-transform:uppercase;
+	color:var(--hx-ink,#202221);
+}
+html body.cos-h26 #collection .hxc__lede{
+	max-width:34em;                    /* two balanced lines on desktop */
+	margin-inline:auto;
+	font-family:var(--hx-sans);
+	font-size:1rem;
+	line-height:1.6;
+	letter-spacing:.005em;
+	color:var(--hx-fg-2,#3A3B3D);
+	text-wrap:balance;
+}
+@media (min-width:768px){html body.cos-h26 #collection .hxc__title{font-size:1.75rem}}
+@media (max-width:599px){
+	html body.cos-h26 #collection .hxc__lede{max-width:30em}
 }
 
-/* ─── List: two by two (rows aligned by subgrid) ────────────────────── */
-body.cos-h26 .hxc__list{
+/* ─── Grid ───────────────────────────────────────────────────────────── */
+html body.cos-h26 #collection .hxc__list{
 	list-style:none;
 	display:grid;
 	grid-template-columns:repeat(2,minmax(0,1fr));
-	column-gap:var(--hxc-col-gap);
+	column-gap:var(--hxc-gap);
 	row-gap:0;
+	margin-inline:calc(var(--hxc-edge) - var(--hx-margin)); /* the grid runs nearer the edge than the page text */
 }
-body.cos-h26 .hxc__item{
+html body.cos-h26 #collection .hxc__item{
 	list-style:none;
+	position:relative;
 	display:grid;
-	grid-row:span 5; /* stage / verb / name / benefit / price line */
+	grid-row:span 3;                   /* stage / name + benefit / price line */
 	grid-template-rows:subgrid;
+	grid-template-columns:minmax(0,1fr);
 }
-body.cos-h26 .hxc__item::marker{content:none}
-body.cos-h26 .hxc__item:nth-child(n+3){margin-top:var(--hxc-row-gap)}
+html body.cos-h26 #collection .hxc__item::marker{content:none}
+html body.cos-h26 #collection .hxc__item:nth-child(n+3){margin-top:var(--hxc-row-gap)}
 
-/* the whole object is the link */
-body.cos-h26 .hxc__link,
-body.cos-h26 .hxc__link:visited,
-body.cos-h26 .hxc__link:hover{
+@media (min-width:600px) and (max-width:1099.98px){
+	html body.cos-h26 #collection .hxc__list{max-width:960px;margin-inline:auto}
+}
+@media (min-width:1100px){
+	html body.cos-h26 #collection{
+		--hxc-gap:12px;
+		--hxc-edge:clamp(20px,1.67vw,32px);
+	}
+	html body.cos-h26 #collection > .hx-wrap{max-width:2400px;padding-inline:var(--hxc-edge)}
+	html body.cos-h26 #collection .hxc__list{grid-template-columns:repeat(4,minmax(0,1fr));margin-inline:0}
+	html body.cos-h26 #collection .hxc__item:nth-child(n+3){margin-top:0}
+}
+
+/* the stage and its text are one link */
+html body.cos-h26 #collection .hxc__link,
+html body.cos-h26 #collection .hxc__link:visited,
+html body.cos-h26 #collection .hxc__link:hover{
 	display:grid;
-	grid-row:span 5;
+	grid-row:1 / span 3;
+	grid-column:1;
 	grid-template-rows:subgrid;
-	justify-items:start; /* left-aligned under each object (19 Oct 2026) */
+	justify-items:start;
 	align-items:start;
 	text-align:left;
 	color:inherit;
 	text-decoration:none;
 	-webkit-tap-highlight-color:transparent;
 }
-body.cos-h26 .hxc__link *{text-decoration:none}
+html body.cos-h26 #collection .hxc__link *{text-decoration:none}
 
-/* stage: no box, just air around the object. 19 Oct 2026: the wc-coll-* cut-outs share one
-   scale (a 1000px canvas = the same physical width for every pack), so all four render at the
-   same width (67% of the stage), bottom-aligned on one baseline: their true relative sizes,
-   with the tallest pack (the 150 ml cleanser, canvas 1000×2167) filling the 2:3 stage. Each
-   carries only its own photographed contact shadow and reflection; no painted drop shadow. */
-body.cos-h26 .hxc__stage{
-	display:flex;
-	align-items:flex-end;
-	justify-content:center;
+/* ─── Stage: the owner's studio photograph, filling a 4:5 tile ───────── */
+html body.cos-h26 #collection .hxc__tile{
+	position:relative;
+	display:block;
 	width:100%;
-	aspect-ratio:2 / 3;
+	aspect-ratio:4 / 5;
 	overflow:clip;
-	background:transparent;
+	background:#191B1A;                /* the graphite stage photographs' own ground (24 Oct 2026): no flash before they paint */
 }
-body.cos-h26 .hxc__object{display:block;width:67%}
-body.cos-h26 .hxc__object img{
-	display:block;
-	width:100%;
-	height:auto;
-	transform:none;
-	transform-origin:50% 100%; /* the shared baseline */
-	transition:transform 1200ms var(--hx-ease);
-	background:transparent;
+html body.cos-h26 #collection .hxc__photo,
+html body.cos-h26 #collection .hxc__photo img{display:block;width:100%;height:100%}
+/* One horizon across the row (owner, 20 Oct: "same level"). Each photograph's horizon was
+   measured (brightest floor row, as a share of its height): cleanser .7775, eye .7575, serum
+   .7126, jar .6583. Every photograph is scaled about its own horizon (--hxc-s, the least scale
+   that still covers the tile) and moved so the horizon lands on the cleanser's (.7775); the
+   cleanser is untouched because its cap already sits nearest the top. */
+html body.cos-h26 #collection .hxc__item{--hxc-hz:.7775;--hxc-s:1}
+html body.cos-h26 #collection .hxc__item--eye{--hxc-hz:.7575;--hxc-s:1.026}
+html body.cos-h26 #collection .hxc__item--serum{--hxc-hz:.7126;--hxc-s:1.091}
+html body.cos-h26 #collection .hxc__item--cream{--hxc-hz:.6583;--hxc-s:1.181}
+html body.cos-h26 #collection .hxc__photo img{
+	object-fit:cover;
+	transform-origin:50% calc(var(--hxc-hz) * 100%);
+	transform:translateY(calc((.7775 - var(--hxc-hz)) * 100%)) scale(var(--hxc-s));
+	transition:scale 1200ms var(--hx-ease);
 }
 
-/* step: the ritual verb alone, in the serif italic (no numeral or dash: the <ol> and the
-   left-to-right order carry the sequence) */
-body.cos-h26 .hxc__step{
-	display:block;
-	margin-top:var(--hx-s-4);
-	font-family:var(--hx-serif);
-	font-size:var(--hx-fs-lead); /* the lead size: Cormorant italic at 16px reads like 13px beside Inter */
-	line-height:1.2;
-	color:var(--hx-fg-accent);
+/* ─── Text beneath: step, name + benefit, price · size ─────────────────── */
+html body.cos-h26 #collection .hxc__verb{
+	margin-top:clamp(12px,1vw,16px);
+	padding-inline:var(--hxc-text-x);
+	font-family:var(--hx-sans);
+	font-size:.75rem;
+	font-weight:500;
+	line-height:1.3;
+	letter-spacing:.15em;
+	text-transform:uppercase;
+	color:var(--hx-fg-3,#5D5F60);
 }
-body.cos-h26 .hxc__verb{font-style:italic;font-weight:300;letter-spacing:.01em}
-
-/* name: two lines (house name / product) */
-body.cos-h26 .hxc__name{
-	margin-top:var(--hx-s-3);
+/* name and benefit share one row, so a benefit always sits directly under its own name */
+html body.cos-h26 #collection .hxc__copy{
+	display:block;
+	margin-top:clamp(12px,1vw,16px);
+	padding-inline:var(--hxc-text-x);
+}
+html body.cos-h26 #collection .hxc__name{
+	margin:0;
+	padding:0;
 	font-family:var(--hx-serif);
-	font-size:var(--hx-fs-title);
-	font-weight:400;
+	font-size:1rem;
+	font-weight:600;                   /* a real weight: Cormorant upright is a 300–700 variable file */
 	line-height:1.18;
-	letter-spacing:var(--hx-tr-title);
-	color:var(--hx-fg);
+	letter-spacing:0;
+	word-spacing:-.06em;               /* holds the long names to as few lines as possible on a phone */
+	text-transform:uppercase;
+	color:#111;                        /* deeper than graphite: firms up the thin serif hairlines */
+	-webkit-font-smoothing:antialiased;
+	font-feature-settings:"kern" 1,"lnum" 1;
 	text-wrap:balance;
-	text-transform:none;
 }
-body.cos-h26 .hxc__name span{
-	display:block;
+@media (min-width:600px){html body.cos-h26 #collection .hxc__name{letter-spacing:.04em;word-spacing:normal}}
+
+html body.cos-h26 #collection .hxc__name span{
 	text-decoration-line:underline;
 	text-decoration-thickness:1px;
-	text-underline-offset:.18em;
-	text-decoration-color:transparent; /* drawn only on hover / keyboard focus */
+	text-underline-offset:.24em;
+	text-decoration-color:transparent; /* drawn on hover / keyboard focus */
 	transition:text-decoration-color 400ms var(--hx-ease);
 }
-
-body.cos-h26 .hxc__benefit{
+html body.cos-h26 #collection .hxc__benefit{
 	display:block;
-	max-width:19em;
-	margin-top:var(--hx-s-3);
+	margin-top:4px;
 	font-family:var(--hx-sans);
-	font-size:var(--hx-fs-body);
+	font-size:.875rem;
 	font-weight:400;
-	line-height:1.55;
-	color:var(--hx-fg-3);
-	text-wrap:balance;
-}
-
-/* price line: one quiet line, "€150 · 50 ml", at the body size (no separate cue row) */
-body.cos-h26 .hxc__meta{
-	display:block;
-	margin-top:var(--hx-s-3);
-	padding-bottom:var(--hx-s-2);
-	font-family:var(--hx-sans);
-	font-size:var(--hx-fs-body);
-	line-height:1.5;
+	line-height:1.35;
 	letter-spacing:0;
+	color:var(--hx-fg-2,#3A3B3D);
+	text-wrap:pretty;
+}
+html body.cos-h26 #collection .hxc__meta{
+	display:flex;
+	flex-wrap:wrap;
+	align-items:baseline;
+	margin-top:10px;
+	padding-inline:var(--hxc-text-x);
+	font-family:var(--hx-sans);
+	font-size:.875rem;
+	line-height:1.4;
+	letter-spacing:.01em;
 	font-variant-numeric:lining-nums tabular-nums;
 }
-body.cos-h26 .hxc__price{color:var(--hx-fg);font-weight:500}
-body.cos-h26 .hxc__sep,
-body.cos-h26 .hxc__size{color:var(--hx-fg-3)}
+@media (min-width:768px){html body.cos-h26 #collection .hxc__meta{font-size:1rem}}
+@media (min-width:1100px){html body.cos-h26 #collection .hxc__meta{margin-top:clamp(10px,.8vw,12px)}}
+html body.cos-h26 #collection .hxc__price{font-weight:500;color:var(--hx-ink,#202221)}
+html body.cos-h26 #collection .hxc__sep{padding-inline:.15em;color:#A7ACB2}
+html body.cos-h26 #collection .hxc__size{font-weight:400;color:var(--hx-fg-3,#5D5F60)}
 
+/* ─── Bag button: a fine pearl glyph in the photograph's bottom-right corner ──
+   Owner, 20 Oct: back on the image, as on Guerlain's grid. It shares the photograph's grid
+   cell (row 1) with the product link, aligned to the cell's bottom-right: a sibling of the
+   link, never nested.
+   Polish, 20 Oct: no opaque block. The glyph alone, drawn in a hairline pearl stroke, rests on
+   the graphite stage like the silver on the packs; hover and focus draw a 1px pearl frame
+   around the 44px target, and only the brief "added" confirmation fills it pearl. */
+html body.cos-h26 #collection .hxc__bag,
+html body.cos-h26 #collection .hxc__bag:visited{
+	position:relative;
+	z-index:2;
+	grid-row:1;
+	grid-column:1;
+	align-self:end;
+	justify-self:end;
+	margin:0 8px 8px 0;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	width:44px;
+	height:44px;
+	background:transparent;
+	color:rgba(252,251,248,.86);
+	box-shadow:inset 0 0 0 1px rgba(252,251,248,0);
+	text-decoration:none;
+	transition:background-color var(--hx-dur-ui) var(--hx-ease-soft),color var(--hx-dur-ui) var(--hx-ease-soft),box-shadow var(--hx-dur-ui) var(--hx-ease-soft);
+	-webkit-tap-highlight-color:transparent;
+}
+html body.cos-h26 #collection .hxc__bag svg{width:19px;height:19px;stroke-width:1.1}
+html body.cos-h26 #collection .hxc__bag:is(:hover,:focus-visible){color:#FCFBF8;box-shadow:inset 0 0 0 1px rgba(252,251,248,.7)}
+html body.cos-h26 #collection .hxc__bag.is-added{background:#FCFBF8;color:#202221;box-shadow:inset 0 0 0 1px #FCFBF8}
+html body.cos-h26 #collection .hxc__bag[aria-busy="true"]{cursor:progress;opacity:.6}
+html body.cos-h26 #collection .hxc__bag:focus{outline:none}
+html body.cos-h26 #collection .hxc__bag:focus-visible{outline:2px solid #FCFBF8;outline-offset:3px}
+/* phones: a 36px target frame tucked into the corner; the hit area stays 44×44 */
+@media (max-width:599px){
+	html body.cos-h26 #collection .hxc__bag{width:36px;height:36px;margin:0 6px 6px 0}
+	html body.cos-h26 #collection .hxc__bag::after{content:"";position:absolute;inset:-4px}
+	html body.cos-h26 #collection .hxc__bag svg{width:17px;height:17px;stroke-width:1.2}
+}
+
+/* ─── Entrance: light passes over each photograph ─────────────────────
+   The homepage's one motion idea is light over polished silver (DESIGN.md Motion). As each
+   tile reveals (hx-motion.js adds .is-in in ritual order, 50ms apart), a soft band of studio
+   light crosses its photograph once, left to right, 900ms.
+
+   20 Oct 2026 (animate pass): the photograph itself is never hidden, darkened or faded, so it
+   is visible the moment the browser paints it, whether or not the reveal has fired (the
+   earlier version waited in near darkness for 1.7s and could hold an already-loaded photo
+   dark). The highlight is a separate overlay; if it never runs, nothing is missing. Text
+   below fades in from intersection with no wait beyond the 50ms list stagger. Only when
+   motion is allowed and the tile entered by scrolling (never .hx-instant). */
+html body.cos-h26 #collection .hxc__tile::after{
+	content:"";
+	position:absolute;
+	inset:0;
+	pointer-events:none;
+	background:linear-gradient(105deg,transparent 30%,rgba(255,255,255,.16) 46%,rgba(255,255,255,.28) 50%,rgba(255,255,255,.16) 54%,transparent 70%);
+	mix-blend-mode:screen;
+	transform:translateX(-110%);
+	opacity:0;
+}
+@media (prefers-reduced-motion:no-preference){
+	html.hx-motion body.cos-h26 #collection .hxc__item[data-hx-reveal]{opacity:1;transform:none;transition:none}
+	html.hx-motion body.cos-h26 #collection .hxc__item.is-in:not(.hx-instant) .hxc__tile::after{
+		animation:hxc-sheen 900ms var(--hx-ease-soft) both;
+		animation-delay:min(calc(var(--hx-i,0) * var(--hx-stagger,50ms)),var(--hx-delay-max,150ms));
+	}
+	html.hx-motion body.cos-h26 #collection .hxc__item:not(.is-in) :is(.hxc__verb,.hxc__copy,.hxc__meta,.hxc__bag){opacity:0}
+	html.hx-motion body.cos-h26 #collection .hxc__item.is-in:not(.hx-instant) :is(.hxc__verb,.hxc__copy,.hxc__meta,.hxc__bag){
+		transition:opacity 600ms var(--hx-ease);
+		transition-delay:min(calc(var(--hx-i,0) * var(--hx-stagger,50ms)),var(--hx-delay-max,150ms));
+	}
+}
+@keyframes hxc-sheen{
+	0%{transform:translateX(-110%);opacity:0}
+	15%{opacity:1}
+	85%{opacity:1}
+	100%{transform:translateX(110%);opacity:0}
+}
+
+/* ─── Hover + focus: the photograph eases in, the name underlines ─────── */
 @media (hover:hover){
-	/* the object lifts and comes forward; the name underlines */
-	body.cos-h26 .hxc__link:hover .hxc__object img{transform:translate3d(0,-10px,0) scale(1.06)}
-	body.cos-h26 .hxc__link:hover .hxc__name span{text-decoration-color:currentColor}
+	html body.cos-h26 #collection .hxc__link:hover .hxc__photo img{scale:1.03}  /* composes with the alignment transform */
+	html body.cos-h26 #collection .hxc__link:hover .hxc__name span{text-decoration-color:currentColor}
 }
-body.cos-h26 .hxc__link:focus-visible .hxc__name span{text-decoration-color:currentColor}
-body.cos-h26 .hxc__link:focus{outline:none}
-body.cos-h26 .hxc__link:focus-visible{outline:var(--hx-focus-width) solid var(--hx-focus-color);outline-offset:var(--hx-focus-offset)}
-
-/* ─── ≥640px: two by two with room to breathe ─────────────────────── */
-@media (min-width:640px){
-	body.cos-h26 .hxc{--hxc-col-gap:var(--hx-gap)}
-	body.cos-h26 .hxc__stage{width:min(100%,300px)}
-	body.cos-h26 .hxc__meta{margin-top:var(--hx-s-4)}
-}
-
-/* ─── ≥1100px: four across ────────────────────────────────────────── */
-@media (min-width:1100px){
-	body.cos-h26 .hxc{--hxc-col-gap:clamp(24px,2.2vw,40px)}
-	body.cos-h26 .hxc__list{grid-template-columns:repeat(4,minmax(0,1fr))}
-	body.cos-h26 .hxc__item:nth-child(n+3){margin-top:0}
-	body.cos-h26 .hxc__stage{width:100%}
-}
+html body.cos-h26 #collection .hxc__link:focus-visible .hxc__name span{text-decoration-color:currentColor}
+html body.cos-h26 #collection .hxc__link:focus{outline:none}
+html body.cos-h26 #collection .hxc__link:focus-visible{outline:var(--hx-focus-width) solid var(--hx-focus-color);outline-offset:var(--hx-focus-offset)}
 
 @media (prefers-reduced-motion:reduce){
-	body.cos-h26 .hxc__object img,
-	body.cos-h26 .hxc__name span{transition:none}
-	body.cos-h26 .hxc__link:hover .hxc__object img{transform:none}
+	html body.cos-h26 #collection .hxc__photo img,
+	html body.cos-h26 #collection .hxc__name span,
+	html body.cos-h26 #collection .hxc__bag{transition:none}
+	html body.cos-h26 #collection .hxc__link:hover .hxc__photo img{scale:none}
 }
+
+/* ═══ Guerlain grid (owner, 24 Oct 2026: "keep the product card colours but make the look and
+   feel as close as the screenshot" — Guerlain's Orchidée Impériale grid) ═══════════════════════
+   Square stages with the horizon low (87% of the tile), a solid white bag square in the corner,
+   bold tracked sans capitals for the name, a quieter grey line and the price beneath.
+   The graphite stage photographs are unchanged. Selectors carry #collection.hxc so they hold
+   against hx/typeset.css, which loads after this sheet on the homepage.
+
+   Square crop: each 4:5 photograph fills the tile's width (rendered 1.25 tiles tall, centred, so
+   its horizon sits at h0 = 1.25 × hz − .125 of the tile). It is scaled about that horizon by the
+   existing per-pack scale and moved so every horizon lands at .87. Coverage was checked per pack
+   (top ≤ −.10, bottom ≥ 1.14 of the tile); the tall cleanser keeps ~8% headroom above its cap. */
+html body.cos-h26 #collection.hxc .hxc__item{--hxc-h0:.846875}
+html body.cos-h26 #collection.hxc .hxc__item--eye{--hxc-h0:.821875}
+html body.cos-h26 #collection.hxc .hxc__item--serum{--hxc-h0:.76575}
+html body.cos-h26 #collection.hxc .hxc__item--cream{--hxc-h0:.697875}
+html body.cos-h26 #collection.hxc .hxc__tile{aspect-ratio:1 / 1}
+/* the img box is the whole 4:5 photograph (1.25 tiles tall, centred), so moving it never
+   uncovers the tile: origin at the photograph's own horizon (hz), shift in its own height */
+html body.cos-h26 #collection.hxc .hxc__photo{position:relative;height:100%}
+html body.cos-h26 #collection.hxc .hxc__photo img{
+	position:absolute;
+	left:0;
+	top:-12.5%;
+	width:100%;
+	height:125%;
+	object-fit:cover;
+	transform-origin:50% calc(var(--hxc-hz) * 100%);
+	transform:translateY(calc((.87 - var(--hxc-h0)) / 1.25 * 100%)) scale(var(--hxc-s));
+}
+
+/* text: name in bold tracked sans capitals, a grey line, the price */
+html body.cos-h26 #collection.hxc .hxc__copy{margin-top:14px}
+html body.cos-h26 #collection.hxc :is(.hxc__name,.hxc__name span){
+	font-family:var(--hx-sans);
+	font-size:.9375rem;
+	font-weight:600;
+	line-height:1.35;
+	letter-spacing:.08em;
+	word-spacing:normal;
+	text-transform:uppercase;
+	color:#111;
+	-webkit-font-smoothing:antialiased;
+}
+html body.cos-h26 #collection.hxc .hxc__benefit{
+	margin-top:4px;
+	font-size:.875rem;
+	line-height:1.45;
+	letter-spacing:.01em;
+	color:var(--hx-fg-3,#5D5F60);
+}
+html body.cos-h26 #collection.hxc :is(.hxc__meta,.hxc__price,.hxc__size){font-size:.9375rem;line-height:1.4;letter-spacing:.01em}
+html body.cos-h26 #collection.hxc .hxc__meta{margin-top:12px}
+html body.cos-h26 #collection.hxc .hxc__price{font-weight:400;color:var(--hx-ink,#202221)}
+@media (max-width:599px){
+	html body.cos-h26 #collection.hxc :is(.hxc__name,.hxc__name span){font-size:.8125rem;letter-spacing:.06em}
+	html body.cos-h26 #collection.hxc .hxc__benefit{font-size:.8125rem}
+	html body.cos-h26 #collection.hxc :is(.hxc__meta,.hxc__price,.hxc__size){font-size:.875rem}
+}
+
+/* bag: a solid white square in the stage's bottom-right corner, ink glyph */
+html body.cos-h26 #collection.hxc .hxc__bag,
+html body.cos-h26 #collection.hxc .hxc__bag:visited{
+	width:48px;
+	height:48px;
+	margin:0 8px 8px 0;
+	background:#FFF;
+	color:#111;
+	box-shadow:none;
+}
+html body.cos-h26 #collection.hxc .hxc__bag svg{width:22px;height:22px;stroke-width:1.3}
+html body.cos-h26 #collection.hxc .hxc__bag:is(:hover,:focus-visible){background:#ECECEA;color:#111;box-shadow:none}
+html body.cos-h26 #collection.hxc .hxc__bag.is-added{background:#111;color:#FFF;box-shadow:none}
+html body.cos-h26 #collection.hxc .hxc__bag:focus-visible{outline:2px solid #FFF;outline-offset:3px}
+@media (max-width:599px){
+	html body.cos-h26 #collection.hxc .hxc__bag{width:36px;height:36px;margin:0 6px 6px 0}
+	html body.cos-h26 #collection.hxc .hxc__bag::after{inset:-4px}   /* 44px tap area */
+	html body.cos-h26 #collection.hxc .hxc__bag svg{width:18px;height:18px}
+}
+
+/* ─── No stage (owner, 29 Oct 2026; La Prairie's face-serum grid as reference) ─────────────
+   Since later the same day the tiles show the owner's overhead photographs as supplied
+   (coll-photo-{key}, 4:5, own grey ground and cast shadow), each filling its tile; the notes
+   below on the cut-out packshots describe the step before. ─────────────────────────────
+   pack-{key} is a 2:3 transparent cut-out whose pack stands on a common baseline (bottles fill
+   ~87% of the canvas, the jar ~41%). Here it is placed at one fixed size in a square tile with
+   the ground showing through, so the four keep their real proportions and line up along one
+   floor, with air above and a quiet gap before the name. The stage ground, its sheen and the
+   per-pack horizon transforms above no longer apply. */
+html body.cos-h26 #collection.hxc .hxc__tile{aspect-ratio:4 / 5;background:#F2F2F4}   /* the photographs' own light grey, so nothing flashes before they paint */
+html body.cos-h26 #collection.hxc .hxc__tile::after{content:none}
+html body.cos-h26 #collection.hxc .hxc__photo{position:absolute;inset:0;height:auto}
+html body.cos-h26 #collection.hxc .hxc__copy{margin-top:clamp(20px,1rem + 1vw,32px)}
+html body.cos-h26 #collection.hxc .hxc__photo img{position:static;width:100%;height:100%;object-fit:cover;transform:none;transition:scale 900ms var(--hx-ease)}
+@media (hover:hover){html body.cos-h26 #collection.hxc .hxc__link:hover .hxc__photo img{scale:1.03}}
+
+/* bag: an outlined square on the light ground, ink glyph; ink when the product is in the bag */
+html body.cos-h26 #collection.hxc .hxc__bag,
+html body.cos-h26 #collection.hxc .hxc__bag:visited{background:transparent;color:var(--hx-ink,#1C1D1F);box-shadow:inset 0 0 0 1px var(--hx-line-strong,rgba(28,29,31,.28))}
+html body.cos-h26 #collection.hxc .hxc__bag:is(:hover,:focus-visible){background:var(--hx-ink,#1C1D1F);color:#F8F8F8;box-shadow:none}
+html body.cos-h26 #collection.hxc .hxc__bag.is-added{background:var(--hx-ink,#1C1D1F);color:#F8F8F8;box-shadow:none}
+html body.cos-h26 #collection.hxc .hxc__bag:focus-visible{outline:1px solid var(--hx-ink,#1C1D1F);outline-offset:4px}

@@ -29,7 +29,7 @@ if ( $logged_in ) {
 <?php wp_body_open(); ?>
 <style nonce="<?php echo esc_attr( cos_csp_nonce() ); ?>">
 /* ─── Reset only what's needed, without the specificity trap ─── */
-#cos-account { font-family: var(--cos-body); color: var(--cos-ink, #111111); background: var(--cos-pearl, #F2F2EF); min-height: 100vh; }
+#cos-account { font-family: var(--cos-body); color: var(--cos-ink, #111111); background: var(--cos-pearl, #F8F8F8); min-height: 100vh; }
 #cos-account * { box-sizing: border-box; }
 #cos-account h1, #cos-account h2, #cos-account h3, #cos-account p, #cos-account ul, #cos-account li, #cos-account figure { margin: 0; padding: 0; list-style: none; }
 
@@ -150,7 +150,7 @@ if ( $logged_in ) {
   cursor: pointer;
   border: none;
   font-family: var(--cos-body);
-  background: var(--cos-pearl, #F2F2EF);
+  background: var(--cos-pearl, #F8F8F8);
   border-bottom: 2px solid transparent;
   margin-bottom: -1px;
   transition: color .2s, background .2s, border-color .2s;
@@ -278,13 +278,13 @@ if ( $logged_in ) {
   display: block !important;
   width: 100% !important;
   padding: 16px !important;
-  min-height: 44px !important;
+  min-height: 52px !important;
   box-sizing: border-box !important;
-  background: var(--cos-navy, #050505) !important;
+  background: var(--hx-ink, #1C1D1F) !important;
   color: #fff !important;
-  font-size: 9px !important;
-  font-weight: 700 !important;
-  letter-spacing: .24em !important;
+  font-size: 12.5px !important;
+  font-weight: 500 !important;
+  letter-spacing: .16em !important;
   text-transform: uppercase !important;
   border: none !important;
   cursor: pointer !important;
@@ -293,7 +293,7 @@ if ( $logged_in ) {
   margin-top: 26px !important;
   border-radius: 0 !important;
 }
-.cos-acc-submit:hover { background: var(--cos-ink, #111111) !important; }
+.cos-acc-submit:hover { background: #2B2C2F !important; }
 
 /* Card bottom strip */
 .cos-acc-card-foot {

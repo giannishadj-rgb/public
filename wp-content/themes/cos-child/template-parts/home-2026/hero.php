@@ -54,15 +54,15 @@ $hxh_alt        = 'The 24h Regeneration Cream, open and filled with white cream,
 	<div class="hxh__inner">
 		<div class="hxh__copy">
 			<h1 id="hxh-title" class="hxh__title hx-display">
-				<span class="hxh__line hx-load-rise" style="--hx-i:3">Swiss skincare,</span>
-				<span class="hxh__line hx-load-rise" style="--hx-i:4"><em>refined to the essential.</em></span>
+				<span class="hxh__line" style="--hxh-i:0">Swiss skincare,</span>
+				<span class="hxh__line" style="--hxh-i:1"><em>refined to the essential.</em></span>
 			</h1>
 			<?php /* 19 Oct 2026 (owner): headline is the brand positioning line; the provenance/evidence
 			   facts line was removed from the hero — the science and heritage sections carry those. */ ?>
-			<p class="hxh__lead hx-load-rise" style="--hx-i:6">Four caviar formulas. One complete&nbsp;ritual.</p>
+			<p class="hxh__lead hx-load-rise" style="--hx-i:12">Four caviar formulas. One complete&nbsp;ritual.</p>
 		</div>
-		<div class="hxh__action hx-load-rise" style="--hx-i:8">
-			<a class="hx-btn hxh__cta" href="<?php echo esc_url( home_url( '/products/the-complete-ritual/' ) ); ?>" data-cro-cta="home-hero-primary">Shop the Complete Ritual<span class="hx-arrow" aria-hidden="true"></span></a>
+		<div class="hxh__action hx-load-rise" style="--hx-i:16">
+			<a class="hx-btn hxh__cta" href="<?php echo esc_url( home_url( '/the-ritual/' ) ); ?>" data-cro-cta="home-hero-primary">Discover the Ritual<span class="hx-arrow" aria-hidden="true"></span></a>
 		</div>
 	</div>
 </section>

@@ -44,19 +44,6 @@ if ( $has_bundle ) {
 	$bundle_saving = $parts_total - $bundle_price;
 }
 
-$cos_cart_gateway_ids = function_exists( 'cos_child_enabled_payment_gateways' )
-	? array_keys( cos_child_enabled_payment_gateways() )
-	: array();
-if ( array( 'cod' ) === $cos_cart_gateway_ids ) {
-	$cos_cart_payment_label = 'Pay on Delivery';
-} elseif ( in_array( 'cod', $cos_cart_gateway_ids, true ) && count( $cos_cart_gateway_ids ) > 1 ) {
-	$cos_cart_payment_label = 'Secure Payment or Pay on Delivery';
-} elseif ( $cos_cart_gateway_ids ) {
-	$cos_cart_payment_label = 'Secure Online Payment';
-} else {
-	$cos_cart_payment_label = 'Contact Us to Order';
-}
-
 // Step number + verb and size per formula, from the homepage's single product source.
 $cos_steps = array();
 if ( function_exists( 'cos_h26_products' ) ) {
@@ -258,12 +245,10 @@ $cos_coupon_error = (bool) $cos_coupon_msgs;
 				</details>
 
 				<a href="<?php echo esc_url( $checkout_url ); ?>" class="hx-btn hx-btn--block hxco-summary__cta cos-cp-checkout-btn" data-cro-cta="cart-checkout">Proceed to checkout<span class="hx-arrow" aria-hidden="true"></span></a>
-				<p class="hxco-note cos-cp-delivery-note">Delivery estimate shown at checkout, based on your address.</p>
 
 				<ul class="hxco-assure cos-cp-trust">
 					<li class="cos-cp-trust-item"><?php echo esc_html( cos_child_shipping_message( 'short' ) ); ?></li>
 					<li><a href="/shipping-returns/" class="cos-cp-trust-item" data-cro-cta="cart-returns-link">30-day returns</a></li>
-					<li class="cos-cp-trust-item"><?php echo esc_html( $cos_cart_payment_label ); ?></li>
 					<li class="cos-cp-trust-item">Made in Switzerland</li>
 				</ul>
 			</aside>

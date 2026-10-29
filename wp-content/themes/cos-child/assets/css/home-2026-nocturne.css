@@ -15,7 +15,7 @@
      at the base scale (16 body / 14 details / 13 labels), letter-spacing 0,
      sentence case — i.e. this file no longer overrides home-2026.css type.
    - Photography unfiltered; dark overlays only where text sits on a photo.
-   - One light breathing section: clinical evidence on pearl #F2F2EF.
+   - One light breathing section: clinical evidence on pearl #F8F8F8.
    ========================================================================== */
 
 /* Light-led since 4 Oct 2026 (owner, luxury-benchmark brief: the leading
@@ -23,10 +23,10 @@
    names are kept from the dark version; they now hold the LIGHT palette, and
    the dark palette is re-applied only to the photographic dark moments:
    the desktop hero, the caviar macro and the footer (see "Dark moments").
-   Canvas = the site's pearl #F2F2EF (owner preference, 2 Oct). The brief's
+   Canvas = the site's pearl #F8F8F8 (owner preference, 2 Oct). The brief's
    warmer ivory is #F5F2EC: swap --n-950 to try it. */
 body.cos-h26-nocturne{
-	--n-950:#F2F2EF;            /* canvas (pearl) */
+	--n-950:#F8F8F8;            /* canvas (pearl) */
 	--n-900:#E8E8E5;            /* raised band / image placeholder */
 	--n-platinum:#5E5E5E;       /* labels, small accents (6:1 on canvas) */
 	--n-silver:#1C1C1C;         /* hover / focus */
@@ -74,8 +74,8 @@ body.cos-h26-nocturne .h26-link{color:var(--n-white)}
 body.cos-h26-nocturne .h26-link:hover{color:var(--n-silver)}
 
 /* Primary: graphite fill, pearl text. */
-body.cos-h26-nocturne .h26-btn--dark{background:#1C1C1C;border-color:#1C1C1C;color:#F2F2EF}
-body.cos-h26-nocturne .h26-btn--dark:hover{background:#3A3A3A;border-color:#3A3A3A;color:#F2F2EF}
+body.cos-h26-nocturne .h26-btn--dark{background:#1C1C1C;border-color:#1C1C1C;color:#F8F8F8}
+body.cos-h26-nocturne .h26-btn--dark:hover{background:#3A3A3A;border-color:#3A3A3A;color:#F8F8F8}
 /* Hero CTA: outline only — no fill, platinum hairline, off-white text (owner,
    4 Oct 2026). The Complete Ritual keeps the one filled button; editorial
    sections use text links (caviar, clinical, provenance). */
@@ -155,7 +155,7 @@ body.cos-h26-nocturne .h26-provenance__title{color:var(--n-white)}
 body.cos-h26-nocturne #cos-nav-wrap,body.cos-h26-nocturne #cos-nav-wrap.scrolled{background:rgba(242,242,239,.94);border-bottom-color:var(--n-line);box-shadow:none}
 body.cos-h26-nocturne #cos-nav-wrap :is(.cos-nav-links a,.cos-nav-utils a,.cos-mob-btn){color:#3A3A3A}
 body.cos-h26-nocturne #cos-nav-wrap :is(.cos-nav-links a,.cos-nav-utils a):hover{color:#1C1C1C}
-body.cos-h26-nocturne #cos-nav-wrap .cos-bag-count{background:#1C1C1C;color:#F2F2EF}
+body.cos-h26-nocturne #cos-nav-wrap .cos-bag-count{background:#1C1C1C;color:#F8F8F8}
 body.cos-h26-nocturne #cos-nav-wrap :focus-visible{outline-color:#1C1C1C}
 /* Phones/tablets: the hero is light, so the header never takes the transparent
    white-text over-hero state there (overrides home-2026.css). */
@@ -311,8 +311,8 @@ body.cos-h26-nocturne .h26-texture__caption a{display:inline-flex;align-items:ce
    Hero primary CTA filled (the page's first action was its weakest button);
    card price as legible as the benefit line; the Complete Ritual names each
    product + size; texture link reads as a link, not a caption. */
-body.cos-h26-nocturne .h26-hero .h26-btn{background:#1C1C1C;border-color:#1C1C1C;color:#F2F2EF}
-body.cos-h26-nocturne .h26-hero .h26-btn:hover{background:#3A3A3A;border-color:#3A3A3A;color:#F2F2EF}
+body.cos-h26-nocturne .h26-hero .h26-btn{background:#1C1C1C;border-color:#1C1C1C;color:#F8F8F8}
+body.cos-h26-nocturne .h26-hero .h26-btn:hover{background:#3A3A3A;border-color:#3A3A3A;color:#F8F8F8}
 @media (min-width:1100px){
 	body.cos-h26-nocturne .h26-hero .h26-btn{background:#FAFAF8;border-color:#FAFAF8;color:#151515}
 	body.cos-h26-nocturne .h26-hero .h26-btn:hover{background:#E4E6E9;border-color:#E4E6E9;color:#151515}
@@ -350,16 +350,16 @@ body.cos-h26-nocturne #cos-footer .cos-nl-consent{min-height:44px}
    light tokens, drops the dark left shade, and sets copy, CTA and the
    transparent header in graphite (the copy field averages #E0D1C5: 8:1+). */
 @media (min-width:1100px){
-	body.cos-h26-nocturne .h26-hero--pearl{--n-950:#F2F2EF;--n-900:#E8E8E5;--n-platinum:#5E5E5E;--n-silver:#1C1C1C;--n-white:#1C1C1C;--n-text:#2A2A2A;--n-muted:#3A3A3A;--n-line:rgba(28,28,28,.10);--n-line-strong:rgba(28,28,28,.20);background:#E6D9CD}
+	body.cos-h26-nocturne .h26-hero--pearl{--n-950:#F8F8F8;--n-900:#E8E8E5;--n-platinum:#5E5E5E;--n-silver:#1C1C1C;--n-white:#1C1C1C;--n-text:#2A2A2A;--n-muted:#3A3A3A;--n-line:rgba(28,28,28,.10);--n-line-strong:rgba(28,28,28,.20);background:#E6D9CD}
 	body.cos-h26-nocturne .h26-hero--pearl .h26-hero__media::after{background:linear-gradient(180deg,rgba(242,236,229,.55) 0,rgba(242,236,229,0) 140px)}
 	body.cos-h26-nocturne .h26-hero--pearl .h26-hero__media img{object-position:70% 50%} /* the desktop frame has silk extended left; this keeps jar + lid clear of the copy */
 	body.cos-h26-nocturne .h26-hero--pearl :is(.h26-hero__title,.h26-hero__accent){color:#1C1C1C}
 	body.cos-h26-nocturne .h26-hero--pearl :is(.h26-hero__lines,.h26-hero__secondary){color:#2A2A2A}
 	body.cos-h26-nocturne .h26-hero--pearl .h26-btn--light{color:#1C1C1C;border-color:#1C1C1C;background:transparent}
-	body.cos-h26-nocturne .h26-hero--pearl .h26-btn--light:hover{background:#1C1C1C;border-color:#1C1C1C;color:#F2F2EF}
+	body.cos-h26-nocturne .h26-hero--pearl .h26-btn--light:hover{background:#1C1C1C;border-color:#1C1C1C;color:#F8F8F8}
 	body.cos-h26-nocturne .h26-hero--pearl :focus-visible{outline-color:#1C1C1C}
 	body.cos-h26.cos-h26-nocturne:has(.h26-hero--pearl) #cos-nav-wrap:not(.scrolled):not(:has([aria-expanded="true"])) :is(.cos-nav-links a,.cos-nav-utils a,.cos-mob-btn){color:#1C1C1C}
 	body.cos-h26.cos-h26-nocturne:has(.h26-hero--pearl) #cos-nav-wrap:not(.scrolled):not(:has([aria-expanded="true"])) .cos-nav-logo img{filter:none}
-	body.cos-h26.cos-h26-nocturne:has(.h26-hero--pearl) #cos-nav-wrap:not(.scrolled):not(:has([aria-expanded="true"])) .cos-bag-count{background:#1C1C1C;color:#F2F2EF}
+	body.cos-h26.cos-h26-nocturne:has(.h26-hero--pearl) #cos-nav-wrap:not(.scrolled):not(:has([aria-expanded="true"])) .cos-bag-count{background:#1C1C1C;color:#F8F8F8}
 	body.cos-h26.cos-h26-nocturne:has(.h26-hero--pearl) #cos-nav-wrap:not(.scrolled):not(:has([aria-expanded="true"])) :focus-visible{outline-color:#1C1C1C}
 }

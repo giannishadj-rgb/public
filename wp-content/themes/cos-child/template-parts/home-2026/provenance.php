@@ -41,14 +41,13 @@ $hxp_arrow = '<span class="hx-arrow" aria-hidden="true"></span>';
 		</figure>
 
 		<div class="hxp__over hx-wrap" data-hx-stagger>
-			<p class="hx-label hxp__label" data-hx-reveal="fade">Swiss provenance</p>
-			<h2 id="hxp-title" class="hx-heading hxp__title" data-hx-reveal>Fewer things, made&nbsp;well.</h2>
+			<h2 id="hxp-title" class="hx-heading hxp__title" data-hx-reveal="light">Fewer things, made&nbsp;well.</h2>
 		</div>
 	</div>
 
 	<div class="hxp__band hx-wrap">
 		<div class="hxp__intro" data-hx-stagger>
-			<p class="hx-lead hxp__lede" data-hx-reveal>Precision is not a style here; it is how the work is done. Each formula is made in one place, patiently, and with care.</p>
+			<p class="hx-lead hxp__lede" data-hx-reveal>Each formula is made in one place, patiently, and with care.</p>
 			<p class="hxp__links" data-hx-reveal>
 				<a class="hx-link" href="<?php echo esc_url( home_url( '/heritage/' ) ); ?>">Our Swiss heritage<?php echo $hxp_arrow; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 				<a class="hx-link" href="<?php echo esc_url( home_url( '/science/swiss-formulation/' ) ); ?>">How we formulate in Zug<?php echo $hxp_arrow; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>

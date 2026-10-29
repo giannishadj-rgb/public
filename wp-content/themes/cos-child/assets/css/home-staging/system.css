@@ -17,10 +17,10 @@
 
    ── COLOUR ─────────────────────────────────────────────────────────────────────
    Grounds (light → deeper)                  Ink contrast (measured, WCAG 2.x)
-   --hx-white       #FBFAF7  pearl white      ink 16.2 · text 10.7 · muted 6.4 · accent 6.9
-   --hx-pearl       #F2F2EF  site canvas      ink 15.0 · text 10.0 · muted 6.0 · accent 6.4
+   --hx-white       #F8F8F8  unified light surface
+   --hx-pearl       #F8F8F8  site canvas      ink 15.0 · text 10.0 · muted 6.0 · accent 6.4
                              (= header/--cos-pearl; cool, owner-approved)
-   --hx-ivory       #F3EFE7  warm ivory       ink 14.7 · text  9.8 · muted 5.8 · accent 6.2
+   --hx-ivory       #F8F8F8  unified light surface
    --hx-champagne   #E8E0D2  soft champagne   ink 12.9 · text  8.6 · muted 5.1 · accent 5.5
    --hx-stone       #DDD8CF  stone            ink 11.9 · text  7.9 · muted 4.7 · accent 5.0
    --hx-silver      #D4D7DA  silver ground    ink 11.7 · text  7.8 · muted 4.6 · accent 4.9
@@ -75,8 +75,8 @@
    --hx-ease          cubic-bezier(.19,1,.22,1)   long, silky deceleration (reveals)
    --hx-ease-soft     cubic-bezier(.33,.0,.2,1)   UI hover / colour
    --hx-ease-inout    cubic-bezier(.65,0,.35,1)   symmetric (curtains, crossfades)
-   --hx-dur-ui 320ms · --hx-dur-reveal 1200ms · --hx-dur-image 1800ms · --hx-stagger 120ms
-   --hx-rise 28px (fade-rise distance)
+   --hx-dur-ui 320ms · --hx-dur-reveal 700ms · --hx-dur-image 900ms · --hx-stagger 50ms (delay capped at 150ms)
+   --hx-rise 14px (fade-rise distance)
 
    ── UTILITIES ──────────────────────────────────────────────────────────────────
    .hx-display .hx-heading .hx-title .hx-lead .hx-body .hx-detail .hx-label
@@ -113,9 +113,9 @@
    body.cos-h26 kept so the homepage resolves exactly as before. */
 :root,body.cos-h26{
 	/* colour — grounds */
-	--hx-white:#FBFAF7;
-	--hx-pearl:#F2F2EF;
-	--hx-ivory:#F3EFE7;
+	--hx-white:#F8F8F8;
+	--hx-pearl:#F8F8F8;
+	--hx-ivory:#F8F8F8;
 	--hx-champagne:#E8E0D2;
 	--hx-stone:#DDD8CF;
 	--hx-silver:#D4D7DA;
@@ -211,10 +211,11 @@
 	--hx-ease-soft:cubic-bezier(.33,0,.2,1);
 	--hx-ease-inout:cubic-bezier(.65,0,.35,1);
 	--hx-dur-ui:320ms;
-	--hx-dur-reveal:1200ms;
-	--hx-dur-image:1800ms;
-	--hx-stagger:120ms;
-	--hx-rise:28px;
+	--hx-dur-reveal:700ms;   /* 20 Oct 2026 (animate): below-fold reveals 600–900ms */
+	--hx-dur-image:900ms;
+	--hx-stagger:50ms;
+	--hx-rise:14px;
+	--hx-delay-max:150ms;    /* no reveal waits longer than this after it intersects */
 }
 
 /* Homepage typeset, 19 Oct 2026: a more legible editorial scale for the
@@ -375,34 +376,56 @@ body.cos-h26 .hx-btn{font-size:.9375rem;letter-spacing:.015em;text-transform:non
 
 /* ─── Scroll reveals (state classes are set by hx-motion.js) ─────────
    Content is hidden ONLY when html.hx-motion is present, i.e. JS ran, motion is
-   allowed, and the element was below the fold at start. Anything that fails stays visible. */
+   allowed, and the element was below the fold at start. Anything that fails stays visible.
+
+   20 Oct 2026 (animate pass): below the fold, every reveal finishes in 600–900ms and starts
+   at most --hx-delay-max (150ms) after it intersects, so text is readable almost at once.
+   Photographs are never hidden by this layer: no opacity, clip or brightness gate on an
+   image, so what you see depends only on the browser having painted it, never on the reveal
+   having fired or on load timing. Image reveals (mask, mask-x, blind, settle) are a scale
+   settle of the <img> inside its own clipped frame. Text reveals (rise, fade, light) still
+   start hidden, for 600–800ms. Jumps (deep links, End, scrollbar drags, find-in-page),
+   content entering from above and keyboard focus show instantly (hx-motion.js). */
 html.hx-motion [data-hx-reveal]{
-	transition-property:opacity,transform,clip-path;
+	transition-property:opacity,transform;
 	transition-duration:var(--hx-dur-reveal);
 	transition-timing-function:var(--hx-ease);
-	transition-delay:calc(var(--hx-i,0) * var(--hx-stagger) + var(--hx-delay,0ms));
+	transition-delay:min(calc(var(--hx-i,0) * var(--hx-stagger) + var(--hx-delay,0ms)),var(--hx-delay-max));
 }
-html.hx-motion [data-hx-reveal]:not(.is-in){opacity:0}
-html.hx-motion [data-hx-reveal=""]:not(.is-in),
-html.hx-motion [data-hx-reveal="rise"]:not(.is-in){transform:translate3d(0,var(--hx-rise),0)}
-html.hx-motion [data-hx-reveal="fade"]{transition-duration:1400ms;transition-timing-function:var(--hx-ease-soft)}
-/* mask: curtain lifts from the bottom edge; image inside settles 1.06 → 1 */
-html.hx-motion [data-hx-reveal="mask"]{transition-duration:var(--hx-dur-image);transition-timing-function:var(--hx-ease-inout),var(--hx-ease-inout),var(--hx-ease-inout)}
-html.hx-motion [data-hx-reveal="mask"]:not(.is-in){opacity:1;clip-path:inset(100% 0 0 0)}
-html.hx-motion [data-hx-reveal="mask"].is-in{clip-path:inset(0 0 0 0)}
-html.hx-motion [data-hx-reveal="mask-x"]{transition-duration:var(--hx-dur-image);transition-timing-function:var(--hx-ease-inout)}
-html.hx-motion [data-hx-reveal="mask-x"]:not(.is-in){opacity:1;clip-path:inset(0 100% 0 0)}
-html.hx-motion [data-hx-reveal="mask-x"].is-in{clip-path:inset(0 0 0 0)}
-/* settle: fade in while the image eases from 1.04 → 1 (transform the <img>, not a
-   mix-blend wrapper — see brief §7) */
-html.hx-motion [data-hx-reveal="settle"]{transition-duration:var(--hx-dur-image)}
-html.hx-motion :is([data-hx-reveal="mask"],[data-hx-reveal="mask-x"],[data-hx-reveal="settle"]) img{transition:transform calc(var(--hx-dur-image) + 400ms) var(--hx-ease);transition-delay:inherit}
-html.hx-motion :is([data-hx-reveal="mask"],[data-hx-reveal="mask-x"]):not(.is-in) img{transform:scale(1.08)}
-html.hx-motion [data-hx-reveal="settle"]:not(.is-in) img{transform:scale(1.04)}
-/* data-hx-reveal on an <img> directly with "settle" */
+html.hx-motion :is([data-hx-reveal=""],[data-hx-reveal="rise"],[data-hx-reveal="fade"]):not(.is-in){opacity:0}
+html.hx-motion :is([data-hx-reveal=""],[data-hx-reveal="rise"]):not(.is-in){transform:translate3d(0,var(--hx-rise),0)}
+html.hx-motion [data-hx-reveal="fade"]{transition-duration:600ms;transition-timing-function:var(--hx-ease-soft)}
+/* image reveals: the frame and the photograph stay visible; the photograph settles 1.04 → 1
+   inside its frame (every host frame clips: .hxv__frame, .hxm__photo, .hxp__photo, .hxr__shot) */
+html.hx-motion :is([data-hx-reveal="mask"],[data-hx-reveal="mask-x"],[data-hx-reveal="blind"],[data-hx-reveal="settle"]){transition-property:none}
+html.hx-motion :is([data-hx-reveal="mask"],[data-hx-reveal="mask-x"],[data-hx-reveal="settle"]) img{transition:transform var(--hx-dur-image) var(--hx-ease);transition-delay:min(calc(var(--hx-i,0) * var(--hx-stagger) + var(--hx-delay,0ms)),var(--hx-delay-max))}
+html.hx-motion :is([data-hx-reveal="mask"],[data-hx-reveal="mask-x"],[data-hx-reveal="settle"]):not(.is-in) img{transform:scale(1.04)}
+html.hx-motion img[data-hx-reveal="settle"]{transition:transform var(--hx-dur-image) var(--hx-ease)}
 html.hx-motion img[data-hx-reveal="settle"]:not(.is-in){transform:scale(1.04)}
-/* no transition for elements revealed at start (already in view) */
-html.hx-motion [data-hx-reveal].hx-instant,html.hx-motion [data-hx-reveal].hx-instant img{transition:none!important}
+/* blind (The Ritual's four panels): their photographs carry their own filters and hover
+   transforms, so the group only rises 14px into place; nothing is clipped or faded */
+html.hx-motion [data-hx-reveal="blind"]{transition-property:transform;transition-duration:800ms}
+html.hx-motion [data-hx-reveal="blind"]:not(.is-in){transform:translate3d(0,var(--hx-rise),0)}
+/* light (20 Oct 2026): the homepage's one motion idea. A soft band of light travels across
+   a heading, left to right, the way light runs over the polished silver of the packs. The
+   mask is twice-plus the element's width; sliding it from its clear half to its opaque half
+   writes the words in. Headings only; never body copy or prices. Starts 70% lit, so the
+   heading reads the moment it arrives, and finishes in 800ms. */
+html.hx-motion [data-hx-reveal="light"]{
+	-webkit-mask-image:linear-gradient(100deg,#000 44%,transparent 56%);
+	mask-image:linear-gradient(100deg,#000 44%,transparent 56%);
+	-webkit-mask-size:260% 100%;mask-size:260% 100%;
+	-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
+	-webkit-mask-position:0 0;mask-position:0 0;
+	transition-property:-webkit-mask-position,mask-position;
+	transition-duration:800ms;
+	transition-timing-function:var(--hx-ease);
+}
+html.hx-motion [data-hx-reveal="light"]:not(.is-in){opacity:1;-webkit-mask-position:45% 0;mask-position:45% 0} /* 45% of the travel left: most of the heading already lit */
+/* no transition for elements revealed at start (already in view), by a jump, or by focus.
+   .hx-snap lasts two frames (hx-motion.js); .hx-instant stays, so entrance animations keyed
+   on :not(.hx-instant) never replay, while hover transitions inside work again. */
+html.hx-motion [data-hx-reveal].hx-snap,html.hx-motion [data-hx-reveal].hx-snap img{transition:none!important}
 
 /* Drift (parallax) uses the independent `translate` property, so it composes with any
    reveal transform. JS writes --hx-dy only ≥900px and without reduced motion. */
@@ -420,12 +443,12 @@ html.hx-motion [data-hx-reveal].hx-instant,html.hx-motion [data-hx-reveal].hx-in
 @keyframes hx-settle{from{opacity:.92;transform:scale(1.02)}to{opacity:1;transform:none}}
 
 @media (prefers-reduced-motion:reduce){
-	html.hx-motion [data-hx-reveal]{opacity:1!important;transform:none!important;clip-path:none!important;transition:none!important}
+	html.hx-motion [data-hx-reveal]{opacity:1!important;transform:none!important;clip-path:none!important;-webkit-mask:none!important;mask:none!important;transition:none!important}
 	[data-hx-drift]{translate:none!important}
 	.hx-btn,.hx-btn::after,.hx-link,.hx-arrow{transition:none}
 }
 @media print{
-	html.hx-motion [data-hx-reveal]{opacity:1!important;transform:none!important;clip-path:none!important}
+	html.hx-motion [data-hx-reveal]{opacity:1!important;transform:none!important;clip-path:none!important;-webkit-mask:none!important;mask:none!important}
 }
 
 /* ═══ Orchestrator additions (round 3) ═════════════════════════════ */
@@ -438,7 +461,7 @@ body.cos-h26 #cos-footer :is(.cos-nl-wrap,.cos-footer-cols,.cos-footer-bottom){b
 html body.cos-h26.cos-h26-nocturne #cos-nav-wrap{backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:none;transition:background-color var(--hx-dur-ui) var(--hx-ease-soft),border-color var(--hx-dur-ui) var(--hx-ease-soft)}
 html body.cos-h26.cos-h26-nocturne #cos-nav-wrap:not(.scrolled):not(:has([aria-expanded="true"])){background:transparent;border-bottom-color:transparent}
 html body.cos-h26.cos-h26-nocturne #cos-nav-wrap.scrolled,
-html body.cos-h26.cos-h26-nocturne #cos-nav-wrap:has([aria-expanded="true"]){background:#FBFAF7;border-bottom:1px solid rgba(28,29,31,.08)}
+html body.cos-h26.cos-h26-nocturne #cos-nav-wrap:has([aria-expanded="true"]){background:#F8F8F8;border-bottom:1px solid rgba(28,29,31,.08)}
 html body.cos-h26.cos-h26-nocturne #cos-nav-wrap :is(.cos-nav-links a,.cos-nav-utils a,.cos-mob-btn),
 html body.cos-h26.cos-h26-nocturne #cos-nav-wrap:not(.scrolled):not(:has([aria-expanded="true"])) :is(.cos-nav-links a,.cos-nav-utils a,.cos-mob-btn){color:var(--hx-ink)}
 html body.cos-h26.cos-h26-nocturne #cos-nav-wrap .cos-nav-logo img,

@@ -198,11 +198,15 @@ add_action( 'wp_enqueue_scripts', static function (): void {
 	if ( ! hxsc_route() ) return;
 	$dir = get_stylesheet_directory();
 	wp_enqueue_style( 'cos-hx-science-pages', get_stylesheet_directory_uri() . '/assets/css/hx/science-pages.css', array( 'cos-hx-system' ), (string) filemtime( $dir . '/assets/css/hx/science-pages.css' ) );
+	$route = hxsc_route();
+	if ( $route && 'hub' === $route[0] ) {
+		wp_enqueue_script( 'cos-hx-science', get_stylesheet_directory_uri() . '/assets/js/hx-science.js', array(), (string) filemtime( $dir . '/assets/js/hx-science.js' ), true );
+	}
 }, 30 );
 
 add_action( 'wp_head', static function (): void {
 	if ( ! hxsc_route() ) return;
-	echo '<meta name="color-scheme" content="light">' . "\n" . '<meta name="theme-color" content="#FBFAF7">' . "\n";
+	echo '<meta name="color-scheme" content="light">' . "\n" . '<meta name="theme-color" content="#F8F8F8">' . "\n";
 }, 1 );
 
 /* ─── Small helpers used by the parts ─────────────────────────────── */

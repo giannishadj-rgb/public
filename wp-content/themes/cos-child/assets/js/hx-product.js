@@ -30,6 +30,56 @@
 			};
 			track.addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(update); } }, { passive: true });
 		}
+
+		/* 1b — Guerlain-style page (.hxpd--g, all four formulas): thumbnail rail and arrows drive the
+		   same scroll-snap track; the rail and arrows follow the track wherever it is scrolled to */
+		var thumbs = Array.prototype.slice.call(gal.querySelectorAll('[data-hxpd-thumb]'));
+		var navs = Array.prototype.slice.call(gal.querySelectorAll('[data-hxpd-step-img]'));
+		if (track && thumbs.length) {
+			var cur = 0;
+			var go = function (i) {
+				i = Math.max(0, Math.min(thumbs.length - 1, i));
+				track.scrollTo({ left: i * track.clientWidth, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+			};
+			var mark = function () {
+				var i = Math.min(thumbs.length - 1, Math.max(0, Math.round(track.scrollLeft / (track.clientWidth || 1))));
+				if (i === cur && thumbs[i].classList.contains('is-on')) return;
+				cur = i;
+				thumbs.forEach(function (t, k) {
+					t.classList.toggle('is-on', k === i);
+					if (k === i) t.setAttribute('aria-current', 'true'); else t.removeAttribute('aria-current');
+				});
+				navs.forEach(function (b) {
+					var s = +b.getAttribute('data-hxpd-step-img');
+					b.disabled = (s < 0 && i === 0) || (s > 0 && i === thumbs.length - 1);
+				});
+			};
+			thumbs.forEach(function (t) { t.addEventListener('click', function () { go(+t.getAttribute('data-hxpd-thumb')); }); });
+			navs.forEach(function (b) { b.addEventListener('click', function () { go(cur + (+b.getAttribute('data-hxpd-step-img'))); }); });
+			var mtick = false;
+			track.addEventListener('scroll', function () { if (!mtick) { mtick = true; requestAnimationFrame(function () { mtick = false; mark(); }); } }, { passive: true });
+			track.addEventListener('keydown', function (e) {
+				if (e.key === 'ArrowRight') { e.preventDefault(); go(cur + 1); }
+				if (e.key === 'ArrowLeft') { e.preventDefault(); go(cur - 1); }
+			});
+			mark();
+		}
+	}
+
+	/* 1c — the section bar marks the part in view */
+	var secLinks = Array.prototype.slice.call(d.querySelectorAll('.hxpd-secnav__link'));
+	if (secLinks.length && 'IntersectionObserver' in window) {
+		var byId = {};
+		secLinks.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
+		var secIO = new IntersectionObserver(function (entries) {
+			entries.forEach(function (e) {
+				if (!e.isIntersecting) return;
+				secLinks.forEach(function (a) { a.classList.remove('is-on'); });
+				var a = byId[e.target.id];
+				if (a) a.classList.add('is-on');
+			});
+		}, { rootMargin: '-40% 0px -55% 0px' });
+		Object.keys(byId).forEach(function (id) { var el = d.getElementById(id); if (el) secIO.observe(el); });
 	}
 
 	/* 2 — quantity */

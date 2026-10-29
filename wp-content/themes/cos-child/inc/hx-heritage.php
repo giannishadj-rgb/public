@@ -43,11 +43,14 @@ add_action( 'wp_enqueue_scripts', static function (): void {
 	if ( ! cos_hxhe_part() ) return;
 	$dir = get_stylesheet_directory();
 	wp_enqueue_style( 'cos-hx-heritage', get_stylesheet_directory_uri() . '/assets/css/hx/heritage.css', array( 'cos-hx-system' ), (string) filemtime( $dir . '/assets/css/hx/heritage.css' ) );
+	if ( 'hub' === cos_hxhe_part() ) {
+		wp_enqueue_script( 'cos-hx-heritage', get_stylesheet_directory_uri() . '/assets/js/hx-heritage.js', array(), (string) filemtime( $dir . '/assets/js/hx-heritage.js' ), true );
+	}
 }, 30 );
 
 add_action( 'wp_head', static function (): void {
 	if ( ! cos_hxhe_part() ) return;
-	echo '<meta name="theme-color" content="#FBFAF7">' . "\n";
+	echo '<meta name="theme-color" content="#F8F8F8">' . "\n";
 }, 1 );
 
 /** The arrow used by .hx-link / .hx-btn. */

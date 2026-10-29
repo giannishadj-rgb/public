@@ -35,7 +35,7 @@ Execution clarification: code-led implementation under the user's explicit ultra
 - No mountain-led provenance: architecture, lab craft, chrome, water and stone supply the material story; invented images must not be represented as the actual facility.
 - Shared step names: Cleanse, Treat, Revive, Restore. Benefits remain visible on every device.
 - Science uses Protect / Repair / Rejuvenate as explanatory headings, never as a licence for new medical or mechanistic claims. Existing single-product results retain product/method/panel/duration attribution; satisfaction stays separate.
-- Motion: one quiet hero entrance, restrained transitions, content visible without JS; no compulsory scroll hijacking, hover-only explanations or perpetual animation.
+- Motion (revised 20 Oct 2026 at the owner's request): one authored hero moment (focus pull + light writing the headline) and one recurring idea (the same light reveals section headings); supporting scroll reveals per section; content visible without JS; no scroll hijacking, hover-only explanations or perpetual animation. See DESIGN.md Motion.
 
 ## Review contract
 

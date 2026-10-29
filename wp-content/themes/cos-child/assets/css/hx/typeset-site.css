@@ -1,0 +1,407 @@
+/* ==========================================================================
+   hx/typeset-site.css — the homepage's look on every other page (21 Oct 2026)
+   Owner brief: "use the homepage as your guide for fonts, styling, look and feel and apply
+   it on all pages so the website is uniform and consistent".
+
+   Enqueued LAST by inc/hx-system.php on every page but the homepage (after the page-family
+   sheets and legacy-floor.css). The homepage itself is set by hx/typeset.css; this sheet
+   carries the same seven roles to the shop, product pages, The Ritual, heritage, account,
+   cart, 404 and the hand-authored content pages (journal, ingredients, skin concerns,
+   contact, FAQ, help, shipping, sitemap):
+
+     statement Cormorant 300 · CAPS · +.04em · 32→48px  page titles (h1)
+     display   Cormorant 300 · CAPS · +.04em · 26→40px  section titles (h2)
+     subhead   Cormorant 300 · CAPS · +.04em · 20→26px  headings inside reading copy
+     title     Cormorant 400 · sentence · 20→24px      names, cards, questions
+     figure    Cormorant 300 · lining · 48→72px         measured results
+     body      Inter 400 · 16px · 1.7                   lead and reading copy
+     detail    Inter 400 · 14px                         captions, meta
+     label     Inter 500 · 12px · CAPS · .2em           captions above content
+     action    Inter 500 · 12.5px · CAPS · .16em        links, buttons, CTAs (≥44px)
+
+   Look: monochrome ink and graphite (no bronze/gold type), white and pearl grounds only
+   (no warm ivory bands), type on a light ground before the photograph, never on a dark veil.
+
+   Selectors start with html body:not(.cos-h26) #cos-main-content (every template has that
+   main), which outranks the family sheets and the class/ID rules inside the old pages'
+   own <style> blocks without !important. Delete this file to roll back.
+   ========================================================================== */
+
+html body:not(.cos-h26){
+	--ts-h1:clamp(2rem,1.5rem + 1.6vw,3rem);
+	--ts-display:clamp(1.625rem,1.3rem + 1.3vw,2.5rem);
+	--ts-subhead:clamp(1.25rem,1.1rem + .6vw,1.625rem);
+	--ts-title:clamp(1.25rem,1.15rem + .4vw,1.5rem);
+	--ts-figure:clamp(3rem,2.4rem + 2.4vw,4.5rem);
+	--ts-tr-caps:.04em;
+	--ts-label:.75rem;
+	--ts-action:.78125rem;
+	/* the tokens the family sheets read */
+	--hx-fs-display:var(--ts-h1);
+	--hx-fs-heading:var(--ts-display);
+	--hx-fs-title:var(--ts-title);
+	--hx-fs-lead:1rem;
+	--hx-fs-body:1rem;
+	--hx-fs-detail:.875rem;
+	--hx-fs-label:var(--ts-label);
+	--hx-fs-numeral:var(--ts-figure);
+	--hx-lh-body:1.7;
+	--hx-lh-lead:1.7;
+	--hx-tr-label:.2em;
+	/* monochrome: the warm accent becomes the muted graphite, warm grounds become pearl */
+	--hx-accent:var(--hx-muted,#5C5C5A);
+	--hx-fg-accent:var(--hx-muted,#5C5C5A);
+	--hx-ivory:var(--hx-pearl,#F8F8F8);
+	--hx-stone:#E8E8E5;
+	--hx-champagne-2:rgba(28,29,31,.28);
+}
+
+/* ─── Statement: page titles ─────────────────────────────────────── */
+html body:not(.cos-h26) #cos-main-content :is(h1,.hx-display){
+	font-family:var(--hx-serif);
+	font-size:var(--ts-h1);
+	font-style:normal;
+	font-weight:300;
+	line-height:1.12;
+	letter-spacing:var(--ts-tr-caps);
+	text-transform:uppercase;
+	color:var(--hx-ink);
+	font-kerning:normal;
+	text-wrap:balance;
+}
+/* product names sit in a narrow buy column: one step down, the section display size */
+html body:not(.cos-h26) #cos-main-content h1.hxpd-name{font-size:var(--ts-display);line-height:1.16}
+/* the account brand panel and 404 are small rooms */
+html body:not(.cos-h26) #cos-main-content :is(h1.cos-acc-brand-heading,.cos-404-num + h1,h1.cos-jnl-hub-h1){font-size:var(--ts-display)}
+
+/* ─── Display: section titles ────────────────────────────────────── */
+html body:not(.cos-h26) #cos-main-content :is(.hx-heading,h2.hx-title,h2.hxpd-result__title,.hxsc-next__title){
+	font-family:var(--hx-serif);
+	font-size:var(--ts-display);
+	font-style:normal;
+	font-weight:300;
+	line-height:1.14;
+	letter-spacing:var(--ts-tr-caps);
+	text-transform:uppercase;
+	color:var(--hx-ink);
+	text-wrap:balance;
+}
+/* the old pages' h2s are headings inside reading copy: the subhead step */
+html body:not(.cos-h26) #cos-main-content :is(.cos-art-h2,.cos-cc-section-h2,.cos-help-section-h2,.ship-h2,.cos-ct-info h2,.cos-ing-main h2,.cos-sm-section h2,.cos-ct-form h2,.cos-jnl-hub h2,.cos-faq-body h2){
+	font-family:var(--hx-serif);
+	font-size:var(--ts-subhead);
+	font-style:normal;
+	font-weight:300;
+	line-height:1.2;
+	letter-spacing:var(--ts-tr-caps);
+	text-transform:uppercase;
+	color:var(--hx-ink);
+	text-wrap:balance;
+}
+html body:not(.cos-h26) #cos-main-content .cos-sm-section h2{font-size:var(--ts-title)}
+/* italic inside a capital heading: the homepage's second line, same weight and colour */
+html body:not(.cos-h26) #cos-main-content :is(h1,h2,.hx-display,.hx-heading) em{font-style:italic;font-weight:300;letter-spacing:var(--ts-tr-caps);color:inherit}
+
+/* ─── Title: names, cards, questions, facts ──────────────────────── */
+html body:not(.cos-h26) #cos-main-content :is(h3.hx-title,.hx-title:not(h1,h2),h3.hxpd-actives__name,.hxpd-ritual__name,.hxpd-set__name,.hxpd-results__finding,.hxhe-cert__mark,.hxrt-step__product,.hxco-empty__name,.cos-jnl-card-title,.cos-jnl-hub-card-title,.cos-jnl-featured-title,.cos-art-cta-text,.cos-help-section h3){
+	font-family:var(--hx-serif);
+	font-size:var(--ts-title);
+	font-style:normal;
+	font-weight:400;
+	line-height:1.22;
+	letter-spacing:0;
+	text-transform:none;
+	color:var(--hx-ink);
+}
+/* pull quotes and lines: the title role, set light (homepage "Our story" line) */
+html body:not(.cos-h26) #cos-main-content :is(blockquote,.hxhe-quote,.hxrt-prelude p,.hxhe-principle__fr){
+	font-size:var(--ts-title);
+	font-weight:300;
+	line-height:1.35;
+	letter-spacing:0;
+	color:var(--hx-ink);
+}
+html body:not(.cos-h26) #cos-main-content blockquote{font-style:normal}
+
+/* ─── Figure: measured results ───────────────────────────────────── */
+html body:not(.cos-h26) #cos-main-content :is(.hx-numeral,.hxrt-step__num,.cos-cc-stat-num){
+	font-size:var(--ts-figure);
+	font-style:normal;
+	font-weight:300;
+	line-height:.95;
+	letter-spacing:-.01em;
+}
+html body:not(.cos-h26) #cos-main-content .hxrt-step__num{color:var(--hx-chrome,#A7ACB2)}
+html body:not(.cos-h26) #cos-main-content :is(.hxpd-price__amt,.hxrt-offer__amount,.hxshop-ritual .woocommerce-Price-amount){font-size:var(--ts-title);font-weight:400;letter-spacing:0}
+
+/* ─── Body + detail ──────────────────────────────────────────────── */
+html body:not(.cos-h26) #cos-main-content :is(.hx-lead,.hx-body,.hxpd-lead,.hxshop-hero__sub){
+	font-family:var(--hx-sans);
+	font-size:1rem;
+	font-weight:400;
+	line-height:1.7;
+	letter-spacing:0;
+}
+html body:not(.cos-h26) #cos-main-content .hx-detail{font-size:.875rem;font-weight:400;letter-spacing:.01em}
+
+/* ─── Label: captions above content, steps, kinds ────────────────── */
+html body:not(.cos-h26) #cos-main-content :is(.hx-label,.hxpd-step,.hxpd-result__kind,.hxpd-results__product,.hxpd-ritual__step,.hxpd-set__step,.hxhe-nw,.hxrt-sub,.hxrt-scale__end,.cos-acc-brand-eyebrow,.cos-acc-security,
+	.cos-art-eyebrow,.cos-art-meta,.cos-ing-eyebrow,.cos-cc-eyebrow,.cos-ct-eyebrow,.cos-ct-form-h,.cos-ct-info-label,.cos-ct-label,.cos-faq-eyebrow,.cos-faq-category-label,.cos-help-eyebrow,.cos-jnl-eyebrow,.cos-jnl-hub-eyebrow,.cos-jnl-card-stream,.ship-eyebrow,.priv-eyebrow,.terms-eyebrow,.ship-step-title,.ship-table th,.cos-sm-eyebrow,.cos-ing-mech-box strong){
+	font-family:var(--hx-sans);
+	font-size:var(--ts-label);
+	font-style:normal;
+	font-weight:500;
+	line-height:1.5;
+	letter-spacing:.2em;
+	text-transform:uppercase;
+}
+/* captions above content are ink, as on the homepage; steps, kinds and meta are muted */
+html body:not(.cos-h26) #cos-main-content :is(.hx-label,.cos-art-eyebrow,.cos-ing-eyebrow,.cos-cc-eyebrow,.cos-ct-eyebrow,.cos-faq-eyebrow,.cos-help-eyebrow,.cos-jnl-eyebrow,.cos-jnl-hub-eyebrow,.ship-eyebrow,.priv-eyebrow,.terms-eyebrow,.cos-sm-eyebrow,.cos-acc-brand-eyebrow,.cos-faq-category-label,.ship-step-title){color:var(--hx-ink)}
+html body:not(.cos-h26) #cos-main-content .hx-on-dark .hx-label{color:var(--hx-on-dark-2)}
+html body:not(.cos-h26) #cos-main-content :is(.cos-art-meta,.cos-jnl-card-stream,.cos-ct-form-h,.cos-ct-info-label,.cos-ct-label,.ship-table th,.hxpd-step,.hxpd-result__kind,.hxpd-results__product,.hxpd-ritual__step,.hxpd-set__step,.hxhe-nw){color:var(--hx-muted,#5C5C5A)}
+/* the eyebrow's gold lead-in rule (journal) */
+html body:not(.cos-h26) #cos-main-content :is(.cos-jnl-eyebrow,.cos-art-eyebrow,.cos-ing-eyebrow,.cos-faq-eyebrow,.cos-ct-eyebrow,.cos-help-eyebrow,.ship-eyebrow,.priv-eyebrow,.terms-eyebrow,.cos-jnl-hub-eyebrow,.cos-sm-eyebrow)::before{background:currentColor;opacity:.4}
+/* serif step numbers and roman numerals: muted graphite, not bronze */
+html body:not(.cos-h26) #cos-main-content :is(.hx-step,.ship-step-num,.hxshop-item__verb,.hxshop-ritual__verb){color:var(--hx-muted,#5C5C5A);font-style:normal}
+
+/* ─── Action: links, buttons, CTAs ───────────────────────────────── */
+html body:not(.cos-h26) #cos-main-content :is(.hx-btn,.hx-link,.hxpd-add,.hxpd-bar__btn,.hxshop-add__label,.hxpd-acc__sum:not(.hxpd-faq__q),.cos-acc-submit,.cos-acc-tab,.cos-faq-body a[style*="font-size:9px"]){
+	font-family:var(--hx-sans);
+	font-size:var(--ts-action);
+	font-weight:500;
+	line-height:1.3;
+	letter-spacing:.16em;
+	text-transform:uppercase;
+}
+html body:not(.cos-h26) #cos-main-content .hx-link{background-position:0 calc(50% + 1.15em),0 calc(50% + 1.15em)}
+html body:not(.cos-h26) #cos-main-content .hx-btn::after{display:block}
+@media (max-width:359.98px){html body:not(.cos-h26) #cos-main-content .hx-btn{letter-spacing:.12em}}
+/* the old pages' filled buttons were pure black (#000 / #050505): graphite ink like .hx-btn */
+html body:not(.cos-h26) #cos-main-content :is(.cos-ct-submit,.cos-cc-cta-btn,.cos-404-link-primary,.ship-contact-btn:not([class*="outline"])){background-color:var(--hx-ink,#1C1D1F);border-color:var(--hx-ink,#1C1D1F)}
+html body:not(.cos-h26) #cos-main-content :is(.cos-ct-submit,.cos-cc-cta-btn,.cos-404-link-primary):hover{background-color:#2B2C2F}
+html body:not(.cos-h26) #cos-main-content .cos-ct-submit{min-height:52px;font-size:var(--ts-action);letter-spacing:.16em}
+/* account brand panel: the label → title → copy stack of the homepage */
+html body:not(.cos-h26) #cos-main-content .cos-acc-brand-eyebrow{margin:0 0 var(--hx-stack,24px)}
+html body:not(.cos-h26) #cos-main-content .cos-acc-brand-heading{margin:0 0 var(--hx-stack,24px)}
+html body:not(.cos-h26) #cos-main-content .cos-acc-brand-sub{margin-bottom:var(--hx-s-6,32px);font-size:1rem;font-weight:400;line-height:1.7;color:var(--hx-text,#3A3B3D)}
+html body:not(.cos-h26) #cos-main-content :is(.cos-acc-brand-line,.cos-acc-perk-sep){background:var(--hx-line-strong,rgba(28,29,31,.28));opacity:1}
+/* sitemap links: the detail role in body graphite */
+html body:not(.cos-h26) #cos-main-content .cos-sm-section ul li a{font-size:.875rem;font-weight:400;color:var(--hx-text,#3A3B3D)}
+html body:not(.cos-h26) #cos-main-content .cos-sm-section ul li a:hover{color:var(--hx-ink,#1C1D1F)}
+
+/* the PDP sticky bar sits outside main */
+html body:not(.cos-h26) .hxpd-bar__btn{font-size:var(--ts-action);font-weight:500;letter-spacing:.16em;text-transform:uppercase}
+
+/* ─── Old pages: type before the photograph, on a light ground ────────
+   Their heroes were 100svh photographs under a near-black veil with white type. The
+   homepage (and the science and heritage pages) set the title on the ground first; the
+   photograph follows as a full-bleed plate. Markup is unchanged:
+   section.X-hero > .X-hero-bg (img + overlay) + .X-hero-inner + .X-scroll           */
+html body:not(.cos-h26) #cos-main-content :is(.cos-art-hero,.cos-faq-hero,.cos-ing-hero,.cos-jnl-hero,.cos-ct-hero,.cos-help-hero,.ship-hero,.priv-hero,.terms-hero){
+	position:relative;
+	display:flex;
+	flex-direction:column;
+	align-items:stretch;
+	justify-content:flex-start;
+	height:auto;
+	min-height:0;
+	padding:var(--cos-nav-h,80px) 0 0;
+	overflow:visible;
+	background:var(--hx-white,#F8F8F8);
+}
+html body:not(.cos-h26) #cos-main-content :is(.cos-art-hero-inner,.cos-faq-hero-inner,.cos-ing-hero-inner,.cos-jnl-hero-inner,.cos-ct-hero-inner,.cos-help-hero-inner,.ship-hero-inner,.priv-hero-inner,.terms-hero-inner){
+	order:1;
+	position:relative;
+	z-index:auto;
+	box-sizing:border-box;
+	width:100%;
+	max-width:calc(var(--hx-max,1440px) + 2 * var(--hx-margin,24px));
+	margin:0 auto;
+	padding:clamp(56px,2.5rem + 4vw,128px) var(--hx-margin,24px) clamp(48px,2rem + 3vw,96px);
+	text-align:left;
+	color:var(--hx-text,#3A3B3D);
+}
+html body:not(.cos-h26) #cos-main-content :is(.cos-art-hero-inner,.cos-faq-hero-inner,.cos-ing-hero-inner,.cos-jnl-hero-inner,.cos-ct-hero-inner,.cos-help-hero-inner,.ship-hero-inner,.priv-hero-inner,.terms-hero-inner) h1{max-width:18em;margin:var(--hx-stack,24px) 0 0}
+html body:not(.cos-h26) #cos-main-content :is(.cos-art-dek,.cos-ing-tagline,.cos-jnl-sub,.cos-jnl-hub-dek,.cos-ct-sub,.cos-help-sub,.ship-hero-sub,.priv-hero-sub,.terms-hero-sub){max-width:34em;margin-top:var(--hx-stack,24px);font-size:1rem;font-weight:400;line-height:1.7;color:var(--hx-text,#3A3B3D)}
+html body:not(.cos-h26) #cos-main-content .cos-art-meta{margin-top:var(--hx-s-5,24px)}
+html body:not(.cos-h26) #cos-main-content :is(.cos-art-hero-bg,.cos-faq-hero-bg,.cos-ing-hero-bg,.cos-jnl-hero-bg,.cos-ct-hero-bg,.cos-help-hero-bg,.ship-hero-bg,.priv-hero-bg,.terms-hero-bg){
+	order:2;
+	position:relative;
+	inset:auto;
+	width:100%;
+	height:clamp(260px,42vw,640px);
+	overflow:clip;
+	background:var(--hx-pearl,#F8F8F8);
+}
+html body:not(.cos-h26) #cos-main-content :is(.cos-art-hero-img,.cos-faq-hero-img,.cos-ing-hero-img,.cos-jnl-hero-img,.cos-ct-hero-img,.cos-help-hero-img,.ship-hero-img,.priv-hero-img,.terms-hero-img){position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:none;filter:none}
+html body:not(.cos-h26) #cos-main-content :is(.cos-art-hero-overlay,.cos-faq-hero-overlay,.cos-ing-hero-overlay,.cos-jnl-hero-overlay,.cos-ct-hero-overlay,.cos-help-hero-overlay,.ship-hero-overlay,.priv-hero-overlay,.terms-hero-overlay,.cos-art-scroll,.cos-faq-scroll,.cos-ing-scroll,.cos-jnl-scroll,.cos-ct-scroll,.cos-help-scroll,.ship-scroll,.priv-scroll,.terms-scroll){display:none}
+
+/* FAQ search: a light field on the light ground */
+html body:not(.cos-h26) #cos-main-content .cos-faq-search-wrap{max-width:34em;margin-top:var(--hx-s-6,32px)}
+html body:not(.cos-h26) #cos-main-content .cos-faq-search{min-height:52px;background:var(--hx-pearl,#F8F8F8);border:1px solid var(--hx-line-strong,rgba(28,29,31,.28));border-radius:0;color:var(--hx-ink,#1C1D1F);font-size:1rem}
+html body:not(.cos-h26) #cos-main-content .cos-faq-search::placeholder{color:var(--hx-muted,#5C5C5A);opacity:1}
+html body:not(.cos-h26) #cos-main-content .cos-faq-search:focus{border-color:var(--hx-ink,#1C1D1F);outline:2px solid var(--hx-ink,#1C1D1F);outline-offset:2px}
+html body:not(.cos-h26) #cos-main-content .cos-faq-search-icon{color:var(--hx-muted,#5C5C5A)}
+
+/* Dark title bands (journal category hubs, sitemap) and the help contact tile: light ground */
+html body:not(.cos-h26) #cos-main-content :is(.cos-jnl-hub-intro,.cos-sm-header){background:var(--hx-white,#F8F8F8);color:var(--hx-text,#3A3B3D)}
+html body:not(.cos-h26) #cos-main-content .cos-sm-header{text-align:left;max-width:none;padding:calc(var(--cos-nav-h,80px) + clamp(56px,2.5rem + 4vw,128px)) var(--hx-margin,24px) clamp(48px,2rem + 3vw,96px)}
+html body:not(.cos-h26) #cos-main-content .cos-sm-header > *{max-width:var(--hx-max,1440px);margin-inline:auto}
+html body:not(.cos-h26) #cos-main-content .cos-sm-header h1{margin-top:var(--hx-stack,24px)}
+html body:not(.cos-h26) #cos-main-content :is(.cos-jnl-hub-back,.cos-jnl-hub-cta-link){color:var(--hx-ink,#1C1D1F)}
+html body:not(.cos-h26) #cos-main-content .cos-help-contact-tile{background:var(--hx-pearl,#F8F8F8);color:var(--hx-text,#3A3B3D)}
+html body:not(.cos-h26) #cos-main-content .cos-help-contact-tile :is(h3,p,a){color:var(--hx-ink,#1C1D1F)}
+html body:not(.cos-h26) #cos-main-content .cos-help-contact-tile p{color:var(--hx-text,#3A3B3D)}
+
+/* journal and concern cards: no italic, no gold */
+html body:not(.cos-h26) #cos-main-content .cos-cc-section p.cos-cc-product-step{font-size:var(--ts-label);font-weight:500;letter-spacing:.2em;color:var(--hx-muted,#5C5C5A)}
+html body:not(.cos-h26) #cos-main-content .cos-cc-section p.cos-cc-product-name{font-family:var(--hx-serif);font-size:var(--ts-title);font-style:normal;font-weight:400;line-height:1.22;color:var(--hx-ink,#1C1D1F)}
+html body:not(.cos-h26) #cos-main-content :is(.cos-jnl-card-excerpt,.cos-jnl-hub-card-excerpt){font-size:.875rem;font-weight:400;line-height:1.65;color:var(--hx-fg-3,#5C5C5A)}
+
+/* concern evidence: the homepage's measured figures, ink on a light ground (not a black band) */
+html body:not(.cos-h26) #cos-main-content .cos-cc-stats{background:var(--hx-line,rgba(28,29,31,.14));gap:1px;border:1px solid var(--hx-line,rgba(28,29,31,.14))}
+html body:not(.cos-h26) #cos-main-content .cos-cc-stat{background:var(--hx-white,#F8F8F8);padding:clamp(28px,1.5rem + 1vw,40px) 24px;text-align:left}
+html body:not(.cos-h26) #cos-main-content .cos-cc-stat-num{color:var(--hx-ink,#1C1D1F);margin-bottom:16px}
+html body:not(.cos-h26) #cos-main-content .cos-cc-stat-label{font-size:.875rem;font-weight:400;line-height:1.6;color:var(--hx-fg-3,#5C5C5A)}
+
+/* ─── Browser surfaces ───────────────────────────────────────────── */
+html body:not(.cos-h26) ::selection{background:var(--hx-ink,#1C1D1F);color:#F8F8F8}
+
+/* ─── Font uniformity (25 Oct 2026, owner: "the whole website uniform in terms of fonts") ───
+   Measured on every page: only Cormorant Garamond and Inter render, but a few hand-authored
+   blocks still set Inter Light (300), a faux italic Inter, or an italic display numeral. The
+   system has no Inter 300 and no Inter italic: reading text is Inter 400 upright, and the
+   figure role is upright Cormorant 300. (Italic stays for <em> inside headings and for Latin
+   species names, as DESIGN.md allows.) */
+html body:not(.cos-h26) #cos-main-content :is(.cos-ct-info-value,.cos-ct-info-value a,.cos-help-section p,.ship-table td,.ship-note,.hxpd-qty__btn){font-weight:400;font-style:normal}
+html body:not(.cos-h26) #cos-main-content .cos-404-num{font-style:normal}
+/* paragraphs whose stored inline style asks for Inter Light or 13px (help page): inline styles
+   outrank sheets, hence !important; body weight and the 14px detail size */
+html body:not(.cos-h26) #cos-main-content p[style*="font-weight:300"]{font-weight:400!important}
+html body:not(.cos-h26) #cos-main-content p[style*="font-size:13px"]{font-size:.875rem!important}
+
+/* ─── Old pages: the bleed opening (25 Oct 2026, owner: "hero image first", like the rest) ───
+   Supersedes "type before the photograph" above for the opening only. Same markup: the photograph
+   fills the first screen from the top, under the transparent header; landscape ≥700px sets the
+   h1 and lead in ink at its lower left on a pearl wash, with a pearl haze behind the bar; phones
+   and portrait screens show the photograph first and the type beneath on the light ground.
+   The hero eyebrows go, as on the hubs. */
+html body:not(.cos-h26) #cos-main-content :is(.cos-art-hero,.cos-faq-hero,.cos-ing-hero,.cos-jnl-hero,.cos-ct-hero,.cos-help-hero,.ship-hero,.priv-hero,.terms-hero){padding-top:0}
+html body:not(.cos-h26) #cos-main-content :is(.cos-art-hero-bg,.cos-faq-hero-bg,.cos-ing-hero-bg,.cos-jnl-hero-bg,.cos-ct-hero-bg,.cos-help-hero-bg,.ship-hero-bg,.priv-hero-bg,.terms-hero-bg){order:1;height:calc(min(125vw,64svh) + var(--cos-nav-h,80px))}
+html body:not(.cos-h26) #cos-main-content :is(.cos-art-hero-inner,.cos-faq-hero-inner,.cos-ing-hero-inner,.cos-jnl-hero-inner,.cos-ct-hero-inner,.cos-help-hero-inner,.ship-hero-inner,.priv-hero-inner,.terms-hero-inner){order:2;padding-top:var(--hx-s-7,40px)}
+html body:not(.cos-h26) #cos-main-content :is(.cos-art-hero-inner,.cos-faq-hero-inner,.cos-ing-hero-inner,.cos-jnl-hero-inner,.cos-ct-hero-inner,.cos-help-hero-inner,.ship-hero-inner,.priv-hero-inner,.terms-hero-inner) > :is(.cos-art-eyebrow,.cos-faq-eyebrow,.cos-ing-eyebrow,.cos-jnl-eyebrow,.cos-ct-eyebrow,.cos-help-eyebrow,.ship-eyebrow,.priv-eyebrow,.terms-eyebrow){display:none}
+html body:not(.cos-h26) #cos-main-content :is(.cos-art-hero-inner,.cos-faq-hero-inner,.cos-ing-hero-inner,.cos-jnl-hero-inner,.cos-ct-hero-inner,.cos-help-hero-inner,.ship-hero-inner,.priv-hero-inner,.terms-hero-inner) h1{margin-top:0}
+/* (25 Oct 2026, owner: "header menu transparent on all pages") the haze behind the bar is gone: the bar floats on the photograph and takes ink or pearl from it (hx-hero-tone.js) */
+@media (min-width:700px) and (orientation:landscape){
+	html body:not(.cos-h26) #cos-main-content :is(.cos-art-hero,.cos-faq-hero,.cos-ing-hero,.cos-jnl-hero,.cos-ct-hero,.cos-help-hero,.ship-hero,.priv-hero,.terms-hero){display:grid;grid-template:minmax(0,1fr) / minmax(0,1fr);height:100svh;min-height:600px;max-height:1240px}
+	html body:not(.cos-h26) #cos-main-content :is(.cos-art-hero-bg,.cos-faq-hero-bg,.cos-ing-hero-bg,.cos-jnl-hero-bg,.cos-ct-hero-bg,.cos-help-hero-bg,.ship-hero-bg,.priv-hero-bg,.terms-hero-bg){grid-area:1 / 1;height:100%}
+	html body:not(.cos-h26) #cos-main-content :is(.cos-art-hero-bg,.cos-faq-hero-bg,.cos-ing-hero-bg,.cos-jnl-hero-bg,.cos-ct-hero-bg,.cos-help-hero-bg,.ship-hero-bg,.priv-hero-bg,.terms-hero-bg)::after{content:"";position:absolute;z-index:1;inset:0;pointer-events:none;background:radial-gradient(ellipse 60% 60% at 12% 90%,rgba(246,246,244,.92) 0%,rgba(246,246,244,.8) 42%,rgba(246,246,244,0) 82%)}
+	html body:not(.cos-h26) #cos-main-content :is(.cos-art-hero-inner,.cos-faq-hero-inner,.cos-ing-hero-inner,.cos-jnl-hero-inner,.cos-ct-hero-inner,.cos-help-hero-inner,.ship-hero-inner,.priv-hero-inner,.terms-hero-inner){grid-area:1 / 1;z-index:3;align-self:end;max-width:none;margin:0;padding:0 var(--hx-margin,24px) clamp(40px,7svh,88px)}
+	html body:not(.cos-h26) #cos-main-content :is(.cos-art-hero-inner,.cos-faq-hero-inner,.cos-ing-hero-inner,.cos-jnl-hero-inner,.cos-ct-hero-inner,.cos-help-hero-inner,.ship-hero-inner,.priv-hero-inner,.terms-hero-inner) > *{max-width:min(34rem,40vw)}
+	html body:not(.cos-h26) #cos-main-content :is(.cos-art-hero-inner,.cos-faq-hero-inner,.cos-ing-hero-inner,.cos-jnl-hero-inner,.cos-ct-hero-inner,.cos-help-hero-inner,.ship-hero-inner,.priv-hero-inner,.terms-hero-inner) h1{font-size:min(var(--ts-h1),3.6vw);max-width:11em}   /* as the designed openings: long titles wrap inside the wash */
+}
+/* dark photographs (marked by hx-hero-tone.js): a dark shade under the header and, on landscape,
+   pearl type on a dark shade at the lower left */
+@media (min-width:700px) and (orientation:landscape){
+	html body:not(.cos-h26) #cos-main-content .is-dark-low > [class$="-hero-bg"]::after{background:radial-gradient(ellipse 60% 60% at 12% 90%,rgba(8,8,8,.75) 0%,rgba(8,8,8,.55) 42%,rgba(8,8,8,0) 82%)}
+	html body:not(.cos-h26) #cos-main-content .is-dark-low > [class$="-hero-inner"] :is(h1,h1 *,p,a,span,div){color:#F8F8F8}
+}
+/* Privacy and Terms (25 Oct 2026): they kept the old dark veil, so the sitewide ink h1 sat on it
+   unread (1:1); they now open like the other old pages (veil hidden, pearl wash, ink type) */
+
+
+
+/* ==========================================================================
+   Swiss scientific luxury, every page (owner, 29 Oct 2026: "apply this font concept to the
+   entire website"). The homepage's last block of hx/typeset.css, carried here: the display
+   face Regular, sentence case, a hair of negative tracking (no tracked capitals); a quieter
+   scale in the range of Guerlain and Dior; Inter text at 15px. Each rule reuses the exact
+   selector list of the role above it, so it outranks it by order alone.
+     page title (h1)   32→48px · 1.08     section (h2)    22→30px · 1.15
+     subhead           19→22px · 1.2      title / names   18→20px · 1.2
+     figure            36→48px            body 15px · 1.6 · detail 14px
+     label 11px Medium caps .16em         action 12px Medium caps .14em
+   Faces: --hx-serif / --hx-sans (Suisse when licensed: inc/hx-system.php).
+   ========================================================================== */
+html body:not(.cos-h26){
+	--ts-h1:clamp(2rem,1.6rem + 1.6vw,3rem);
+	--ts-display:clamp(1.375rem,1.15rem + .85vw,2rem);
+	--ts-subhead:clamp(1.1875rem,1.1rem + .35vw,1.375rem);
+	--ts-title:clamp(1.125rem,1.05rem + .25vw,1.25rem);
+	--ts-figure:clamp(2.25rem,1.9rem + 1.3vw,3rem);
+	--ts-tr-caps:-.01em;
+	--ts-label:.6875rem;
+	--ts-action:.75rem;
+	--hx-fs-lead:.9375rem;
+	--hx-fs-body:.9375rem;
+	--hx-lh-body:1.6;
+	--hx-lh-lead:1.6;
+	--hx-tr-label:.16em;
+}
+html body:not(.cos-h26) #cos-main-content :is(h1,.hx-display){font-weight:400;line-height:1.08;letter-spacing:-.01em;text-transform:none}
+html body:not(.cos-h26) #cos-main-content :is(.hx-heading,h2.hx-title,h2.hxpd-result__title,.hxsc-next__title){font-weight:400;line-height:1.15;letter-spacing:-.01em;text-transform:none}
+html body:not(.cos-h26) #cos-main-content :is(.cos-art-h2,.cos-cc-section-h2,.cos-help-section-h2,.ship-h2,.cos-ct-info h2,.cos-ing-main h2,.cos-sm-section h2,.cos-ct-form h2,.cos-jnl-hub h2,.cos-faq-body h2){font-weight:400;line-height:1.2;letter-spacing:-.005em;text-transform:none}
+html body:not(.cos-h26) #cos-main-content :is(h1,h2,.hx-display,.hx-heading) em{font-weight:400;letter-spacing:inherit;text-transform:none}
+html body:not(.cos-h26) #cos-main-content :is(h3.hx-title,.hx-title:not(h1,h2),h3.hxpd-actives__name,.hxpd-ritual__name,.hxpd-set__name,.hxpd-results__finding,.hxhe-cert__mark,.hxrt-step__product,.hxco-empty__name,.cos-jnl-card-title,.cos-jnl-hub-card-title,.cos-jnl-featured-title,.cos-art-cta-text,.cos-help-section h3){font-weight:400;line-height:1.2;letter-spacing:-.005em}
+html body:not(.cos-h26) #cos-main-content :is(blockquote,.hxhe-quote,.hxrt-prelude p,.hxhe-principle__fr){font-weight:400;line-height:1.4}
+html body:not(.cos-h26) #cos-main-content :is(.hx-numeral,.hxrt-step__num,.cos-cc-stat-num){font-weight:400;letter-spacing:-.015em}
+html body:not(.cos-h26) #cos-main-content :is(.hx-lead,.hx-body,.hxpd-lead,.hxshop-hero__sub){font-size:.9375rem;line-height:1.6}
+html body:not(.cos-h26) #cos-main-content .hx-detail{font-size:.875rem;letter-spacing:0}
+html body:not(.cos-h26) #cos-main-content :is(.hx-label,.hxpd-step,.hxpd-result__kind,.hxpd-results__product,.hxpd-ritual__step,.hxpd-set__step,.hxhe-nw,.hxrt-sub,.hxrt-scale__end,.cos-acc-brand-eyebrow,.cos-acc-security,
+	.cos-art-eyebrow,.cos-art-meta,.cos-ing-eyebrow,.cos-cc-eyebrow,.cos-ct-eyebrow,.cos-ct-form-h,.cos-ct-info-label,.cos-ct-label,.cos-faq-eyebrow,.cos-faq-category-label,.cos-help-eyebrow,.cos-jnl-eyebrow,.cos-jnl-hub-eyebrow,.cos-jnl-card-stream,.ship-eyebrow,.priv-eyebrow,.terms-eyebrow,.ship-step-title,.ship-table th,.cos-sm-eyebrow,.cos-ing-mech-box strong){font-size:.6875rem;line-height:1.3;letter-spacing:.16em}
+html body:not(.cos-h26) #cos-main-content :is(.hx-btn,.hx-link,.hxpd-add,.hxpd-bar__btn,.hxshop-add__label,.hxpd-acc__sum:not(.hxpd-faq__q),.cos-acc-submit,.cos-acc-tab,.cos-faq-body a[style*="font-size:9px"]){font-size:.75rem;letter-spacing:.14em}
+html body:not(.cos-h26) .hxpd-bar__btn{font-size:.75rem;letter-spacing:.14em}
+/* shop tiles: product names in the display face, as on the homepage collection */
+html body:not(.cos-h26) #cos-main-content .hxshop-item__name{font-family:var(--hx-serif);font-size:clamp(1.125rem,1.05rem + .25vw,1.25rem);font-weight:400;line-height:1.2;letter-spacing:-.005em}
+html body:not(.cos-h26) #cos-main-content :is(.hxshop-item__benefit,.hxshop-item__meta){font-size:.875rem}
+html body:not(.cos-h26) #cos-main-content .hxshop-item__step{font-size:.6875rem;letter-spacing:.16em}
+/* page-specific stragglers found by a crawl of all 56 pages (29 Oct 2026) */
+html body:not(.cos-h26) :is(#cos-main-content.hxsc,#cos-main-content .hxsc){
+	--ts-display:clamp(1.375rem,1.15rem + .85vw,2rem);--ts-h1:clamp(2rem,1.6rem + 1.6vw,3rem);
+	--ts-title:clamp(1.125rem,1.05rem + .25vw,1.25rem);--ts-figure:clamp(2.25rem,1.9rem + 1.3vw,3rem);
+	--ts-tr-caps:-.01em;--ts-label:.6875rem;--ts-action:.75rem;--hxsc-read:.9375rem;
+}
+html body:not(.cos-h26) #cos-main-content :is(.hxhe-quote p,.hxsc-quote p,.hxrt-steps__note){font-weight:400}
+html body:not(.cos-h26) #cos-main-content .hxsc-quote{font-size:var(--ts-title);line-height:1.4}
+html body:not(.cos-h26) #cos-main-content :is(.hxsc-words__w,.hxsc-index__title){font-weight:400;letter-spacing:-.005em;text-transform:none}
+html body:not(.cos-h26) #cos-main-content .hxsc-next__title{font-size:var(--ts-h1);font-weight:400;letter-spacing:-.01em;text-transform:none}
+html body:not(.cos-h26) #cos-main-content :is(.hxsc-proof__n,.hxsc-claim__n,.hxsc-vitro__n,.hxsc-facts dt){font-size:var(--ts-figure);font-weight:400;letter-spacing:-.015em}
+html body:not(.cos-h26) #cos-main-content.hxshop .hxshop-ritual :is(.hxshop-ritual__amount,.hxshop-ritual__amount .woocommerce-Price-amount){font-size:var(--ts-display);font-weight:400}
+html body:not(.cos-h26) #cos-main-content .cos-404-num{font-size:clamp(3.5rem,3rem + 2vw,5rem);font-weight:400}
+/* journal article lede: one step above body, Regular (the stored content asks for Inter Light 18px) */
+html body:not(.cos-h26) #cos-main-content :is(.cos-art-lede,.cos-art-lede a){font-size:1rem;font-weight:400;line-height:1.65}
+/* hero intro lines of the old pages: the lead at 15px, as the homepage hero's */
+html body:not(.cos-h26) #cos-main-content :is(.cos-art-dek,.cos-ing-tagline,.cos-jnl-sub,.cos-jnl-hub-dek,.cos-ct-sub,.cos-help-sub,.ship-hero-sub,.priv-hero-sub,.terms-hero-sub){font-size:.9375rem;line-height:1.6}
+/* journal tabs and card links: the action role */
+html body:not(.cos-h26) #cos-main-content :is(.cos-jnl-nav-link,.cos-jnl-card-cta,.cos-jnl-hub-cta-link,.cos-jnl-hub-back){font-size:.75rem;letter-spacing:.14em}
+/* second crawl (29 Oct 2026): page-specific classes that kept the old 16px reading size or the
+   12.5px / .2em action and label tracking */
+html body:not(.cos-h26) #cos-main-content :is(.cos-art-p,.cos-art-p a,.cos-ing-main > p,.cos-cc-section > p:not([class*="cos-cc-product"]),.cos-cc-lede,.cos-cc-inline,.cos-cc-faq-a,.cos-cc-related,.cos-faq-answer,.cos-faq-answer :is(p,a),.hxpd-inci,.hxpd-acc__text,.hxpd-set__copy,.hxrt-glance__text,.hxsc-actlist__line,.hxsc-index__line,.hxsc-steps__d,.hxsc-syn__t,.hxsc-depth__d,.ship-p){font-size:.9375rem}
+html body:not(.cos-h26) #cos-main-content :is(.cos-art-cta-link,.cos-art-back a,.cos-ing-back-inner a,.cos-cc-product-link,.cos-cc-cta-btn,.cos-cc-cta-ghost,.cos-jnl-hub-card-cta,.hxpd-secnav__link,.hxpd-orbs__link,.hxpd-steps__add,.ship-contact-btn,.cos-help-nav-link,.cos-404-link-primary,.cos-404-link-outline,.cos-faq-inner > div > div > a){font-size:.75rem;letter-spacing:.14em}
+html body:not(.cos-h26) #cos-main-content :is(.hxsc-sub__home,.cos-cc-section p.cos-cc-product-step,.hxsc-act__role,.hxsc-tag,.hxsc-vitro__k,.hxsc-steps__verb,.hxsc-depth__layer,.hxsc-tl__day,.hxsc-proof__product a,.cos-faq-inner > div > div:not([class])){font-size:.6875rem;letter-spacing:.16em}
+/* FAQ footer's inline-styled label and buttons: legacy-floor.css lifts them with !important, so restate */
+html body:not(.cos-h26) #cos-main-content #cos-faq [style*="font-size:10px"]{font-size:.6875rem!important;letter-spacing:.16em!important}
+html body:not(.cos-h26) #cos-main-content #cos-faq a[style*="font-size:9px"]{font-size:.75rem!important;letter-spacing:.14em!important}
+html body:not(.cos-h26) #cos-main-content :is(.cos-help-contact-tile > a,.cos-help-card > a){font-size:.75rem;letter-spacing:.14em}
+html body:not(.cos-h26) #cos-main-content .hxsc-claim__product a{font-size:.6875rem;letter-spacing:.16em}
+html body:not(.cos-h26) #cos-main-content .cos-404-inner > p{font-size:.9375rem}
+
+/* ─── Focus (owner, 29 Oct 2026: "remove the selection effect where an outline in red and blue
+   appears"). WordPress core outlines every focused element on a mouse click too
+   (:where(.wp-site-blocks :focus)), in the link colour: red while pressed, blue/purple once
+   visited. A click now shows nothing; the keyboard keeps a quiet ring (WCAG 2.4.7): 1px ink,
+   4px off the element, pearl on dark grounds. */
+html body{--cos-focus:var(--hx-ink,#1C1D1F);--hx-focus-color:var(--hx-ink,#1C1D1F);--hx-focus-width:1px;--hx-focus-offset:4px}
+html body :focus:not(:focus-visible){outline:none}
+html body :focus-visible{outline:1px solid var(--hx-ink,#1C1D1F);outline-offset:4px;border-radius:0}
+html body :is(.hx-on-dark,.hxh--dark,#cos-footer) :focus-visible{outline-color:#F8F8F8}
+/* journal cards: no lift or shadow; the photograph settles closer and the title takes a hairline */
+html body:not(.cos-h26) #cos-main-content :is(.cos-jnl-card,.cos-jnl-hub-card,.cos-jnl-featured){overflow:hidden;box-shadow:none;transform:none}
+html body:not(.cos-h26) #cos-main-content :is(.cos-jnl-card,.cos-jnl-hub-card,.cos-jnl-featured) > img{transition:transform 1.2s cubic-bezier(.22,.61,.36,1)}
+html body:not(.cos-h26) #cos-main-content :is(.cos-jnl-card-title,.cos-jnl-hub-card-title,.cos-jnl-featured-title){text-decoration:underline 1px transparent;text-underline-offset:.22em;transition:text-decoration-color .4s ease}
+@media (hover:hover){
+	html body:not(.cos-h26) #cos-main-content :is(.cos-jnl-card,.cos-jnl-hub-card,.cos-jnl-featured):hover{box-shadow:none;transform:none}
+	html body:not(.cos-h26) #cos-main-content :is(.cos-jnl-card,.cos-jnl-hub-card,.cos-jnl-featured):hover > img{transform:scale(1.03)}
+}
+html body:not(.cos-h26) #cos-main-content :is(.cos-jnl-card,.cos-jnl-hub-card,.cos-jnl-featured):is(:hover,:focus-visible) :is(.cos-jnl-card-title,.cos-jnl-hub-card-title,.cos-jnl-featured-title){text-decoration-color:currentColor}
+@media (prefers-reduced-motion:reduce){html body:not(.cos-h26) #cos-main-content :is(.cos-jnl-card,.cos-jnl-hub-card,.cos-jnl-featured) > img{transition:none;transform:none!important}}

@@ -43,13 +43,13 @@ $nbh = static function ( string $s ): string {
 ?>
 <section id="ritual" class="hxr" aria-labelledby="hxr-title">
 	<header class="hxr__head">
-		<h2 id="hxr-title" class="hxr__title"><span>The</span> <em>Ritual</em></h2>
+		<h2 id="hxr-title" class="hxr__title" data-hx-reveal="light"><span>The</span> <em>Ritual</em></h2>
 		<?php /* Round 2 (15 Oct): one line, the ritual's own (the order of application) — who-it-suits copy lives on the product page. */ ?>
-		<p class="hxr__lede">Always in this order, from the lightest texture to the richest.</p>
+		<p class="hxr__lede" data-hx-reveal data-hx-delay="200">Always in this order, from the lightest texture to the richest.</p>
 	</header>
 
 	<div class="hxr__stage">
-		<ol class="hxr__steps" aria-label="The four steps">
+		<ol class="hxr__steps" aria-label="The four steps" data-hx-reveal="blind">
 			<?php
 			foreach ( cos_h26_products() as $p ) :
 				$st  = $steps[ $p['slug'] ];
@@ -75,14 +75,29 @@ $nbh = static function ( string $s ): string {
 						<span class="hxr__word" aria-hidden="true"><?php echo esc_html( $p['verb'] ); ?></span>
 					</span>
 					<span class="hxr__text">
-						<span class="hxr__stepno">Step <?php echo $num; ?></span><span class="hx-sr">: <?php echo esc_html( $p['verb'] ); ?>. </span>
+						<span class="hxr__stepno">Step <?php echo $num; ?></span><span class="hx-sr">: <?php echo esc_html( $p['verb'] ); ?>, </span>
+						<?php /* 29 Oct 2026 (homepage critique; owner chose it): the formula is named at rest, on every
+						   screen, so each step maps to its product; the hover still explains the step (11 Oct ruling). */ ?>
+						<span class="hxr__name"><?php echo esc_html( $nbh( $p['name'][0] . ' ' . $p['name'][1] ) ); ?><span class="hx-sr">. </span></span>
 						<span class="hxr__more"><span class="hxr__inner"><span class="hxr__rule" aria-hidden="true"></span><span class="hxr__how"><?php echo esc_html( $nbh( $st[1] ) ); ?></span></span></span>
-						<span class="hx-sr"> (<?php echo esc_html( $p['name'][0] . ' ' . $p['name'][1] ); ?>)</span>
 					</span>
 				</a>
 			</li>
 			<?php endforeach; ?>
 		</ol>
 		<span class="hxr__track" aria-hidden="true"><span class="hxr__thumb"></span></span>
+		<p class="hxr__count" aria-hidden="true"><span data-hxr-i>1</span> / 4</p>
 	</div>
 </section>
+<script nonce="<?php echo esc_attr( function_exists( 'cos_csp_nonce' ) ? cos_csp_nonce() : '' ); ?>">
+(function(){
+  // Below 900px the steps are a snap-swipe row: say which of the four is in front (decorative; the list is the real structure).
+  var row=document.querySelector('.hxr__steps'),out=document.querySelector('[data-hxr-i]');
+  if(!row||!out) return;
+  var items=row.querySelectorAll('.hxr__step'),raf=0;
+  function update(){raf=0;var mid=row.getBoundingClientRect().left+row.clientWidth/2,best=0,d=1e9;
+    items.forEach(function(it,i){var r=it.getBoundingClientRect(),c=Math.abs(r.left+r.width/2-mid);if(c<d){d=c;best=i;}});
+    out.textContent=String(best+1);}
+  row.addEventListener('scroll',function(){if(!raf)raf=requestAnimationFrame(update);},{passive:true});
+})();
+</script>

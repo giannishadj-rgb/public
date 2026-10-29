@@ -6,7 +6,7 @@
       "palette": [
         { "slug": "cos-ink",     "color": "#111111", "name": "Alpine Ink" },
         { "slug": "cos-navy",    "color": "#050505", "name": "Black" },
-        { "slug": "cos-pearl",   "color": "#F2F2EF", "name": "Pearl" },
+        { "slug": "cos-pearl",   "color": "#F8F8F8", "name": "Pearl" },
         { "slug": "cos-stone",   "color": "#E5DED4", "name": "Glacier Stone" },
         { "slug": "cos-silver",  "color": "#C4CAD1", "name": "Silver Mist" },
         { "slug": "cos-slate",   "color": "#5C6675", "name": "Slate" },

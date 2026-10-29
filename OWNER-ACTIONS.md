@@ -58,8 +58,9 @@ Terms and Privacy now render the accepted-methods sentence dynamically via
   jurisdiction-appropriate dispute-resolution wording (e.g. national ADR
   bodies) to replace it.
 - **Company registration number / VAT ID** — not stated anywhere on the site
-  (Terms, Privacy, or footer). Only "Caviar of Switzerland GmbH, Zug,
-  Switzerland" appears. Add the CHE-xxx.xxx.xxx UID and VAT number if
+  (Terms, Privacy, or footer). Only "Caviar of Switzerland, Zug,
+  Switzerland" appears (owner, 29 Oct 2026: the company is "Caviar of Switzerland",
+  not a GmbH; "GmbH" removed from Privacy and Terms). Add the CHE-xxx.xxx.xxx UID and VAT number if
   applicable.
 - **EU/UK representative obligations** — if you ship into the EU/UK as a
   non-EU/UK entity, confirm whether an Art. 27 GDPR representative or UK

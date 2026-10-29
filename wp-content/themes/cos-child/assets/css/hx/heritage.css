@@ -1,5 +1,6 @@
 /* ==========================================================================
    hx/heritage.css — Heritage pages (whole-site rebuild, 16–17 Oct 2026). Prefix hxhe-.
+   Hub opening since 24 Oct 2026: the science hub's bleed plate + part index, stone rooms.
    /heritage/ (hub), /heritage/craftsmanship/, /heritage/sustainability/ — markup in
    template-parts/hx/heritage/*.php, routed by inc/hx-heritage.php. Depends on hx/system.css.
    Light, gallery-like: warm white / ivory / pearl grounds, graphite ink, hairlines, one
@@ -107,6 +108,91 @@
 	.hxhe-hero--plate .hxhe-hero__aside{grid-column:9 / span 4;padding-bottom:.4em}
 }
 
+/* ─── Hero: bleed plate (hub, 24 Oct 2026) — the science hub's opening ───
+   Landscape ≥700px: the wide Matterhorn fills the first screen from the top of the page, under
+   the transparent header (its sky is #E4–#F2 there); the h1 and lead sit in ink on the cloud at
+   the lower left (#9A–#A2: ink 5.9:1), in a column clear of the rock, which starts near 45%.
+   Phones and portrait tablets: the tall crop (summit at its foot) on a clean edge, the type
+   beneath on warm white. The place caption stays on the photograph. */
+.hxhe-hero--bleed{display:grid;grid-template-columns:minmax(0,1fr);background:var(--hx-white)}
+.hxhe-hero--bleed .hxhe-hero__plate{position:relative;overflow:hidden;background:#C9CACB}
+.hxhe-hero--bleed .hxhe-hero__plate img{display:block;width:100%;aspect-ratio:auto;height:calc(min(140vw,62svh) + var(--cos-nav-h,80px));object-fit:cover;object-position:50% 100%}
+.hxhe-hero--bleed .hxhe-hero__video{position:absolute;z-index:1;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.hxhe-hero--bleed .hxhe-caption{z-index:2}
+.hxhe-hero__control{
+	position:absolute;z-index:3;top:calc(var(--cos-nav-h,80px) + 16px);right:var(--hx-margin);
+	min-width:68px;min-height:44px;padding:9px 14px;border:1px solid rgba(28,29,31,.42);border-radius:999px;
+	background:rgba(248,248,248,.82);color:var(--hx-ink);font:500 .75rem/1 var(--hx-sans);letter-spacing:.04em;
+	-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);cursor:pointer;
+}
+.hxhe-hero__control:hover{background:rgba(248,248,248,.96)}
+.hxhe-hero__control:focus-visible{outline:var(--hx-focus-width) solid var(--hx-focus-color);outline-offset:3px}
+/* owner, 25 Oct 2026: no Pause pill on the opening film. It stays for keyboard users (WCAG 2.2.2:
+   a way to pause motion longer than 5s), off screen until it takes focus, and shows as "Play"
+   whenever the film is not playing (reduced motion, or paused from the keyboard). As /science/ and /shop/. */
+.hxhe-hero__control:not(.is-paused):not(:focus-visible){clip-path:inset(50%);width:1px;min-width:0;height:1px;min-height:0;padding:0;border:0;overflow:hidden;white-space:nowrap}
+.hxhe-hero--bleed .hxhe-hero__text{display:grid;row-gap:var(--hx-s-5);padding-block:var(--hx-s-7) var(--hx-s-8)}
+.hxhe-hero--bleed .hxhe-hero__title{max-width:9.5em}
+.hxhe-hero--bleed .hxhe-hero__lede{max-width:30em}
+@media (min-width:700px) and (orientation:landscape){
+	.hxhe-hero--bleed{grid-template:minmax(0,1fr) / minmax(0,1fr);height:100svh;min-height:600px;max-height:1240px}
+	.hxhe-hero--bleed .hxhe-hero__plate,.hxhe-hero--bleed .hxhe-hero__text{grid-area:1 / 1}
+	.hxhe-hero--bleed .hxhe-hero__plate::after{
+		content:"";position:absolute;z-index:2;inset:0;pointer-events:none;
+		background:radial-gradient(ellipse 48% 48% at 11% 88%,rgba(248,248,248,.76) 0%,rgba(248,248,248,.52) 38%,rgba(248,248,248,0) 76%);
+	}
+	.hxhe-hero--bleed .hxhe-hero__plate img{height:100%;object-position:0 50%}
+	.hxhe-hero--bleed .hxhe-hero__video{object-position:50% 0}
+	.hxhe-hero--bleed .hxhe-hero__text{
+		position:relative;z-index:3;   /* above the film and its local contrast wash */
+		align-self:end;width:auto;max-width:none;margin:0;
+		padding:0 var(--hx-margin) clamp(40px,7svh,88px);
+	}
+	.hxhe-hero--bleed .hxhe-hero__text > *{max-width:min(34rem,40vw)}
+	html body:not(.cos-h26) #cos-main-content .hxhe-hero--bleed .hxhe-hero__title{font-size:min(var(--ts-h1),3.6vw)}
+	.hxhe-hero--bleed .hxhe-hero__lede{color:var(--hx-ink)}
+	.hxhe-hero--bleed .hxhe-hero__plate .hxhe-caption{z-index:3;left:auto;right:var(--hx-margin);bottom:var(--hx-s-5)}
+}
+
+/* the valley as a bleed opening (sustainability, 25 Oct 2026): framed on the stream and forest,
+   not the Matterhorn's summit-at-the-foot crop */
+.hxhe-hero--valley .hxhe-hero__plate{background:#A9A6A0}
+.hxhe-hero--bleed.hxhe-hero--valley .hxhe-hero__plate img{object-position:50% 55%}
+/* the forest is dark where the header and the type sit (the Matterhorn has sky and cloud there):
+   a pearl haze behind the transparent bar, and a fuller wash under the type */
+/* (25 Oct 2026, owner: "header menu transparent on all pages") the haze behind the bar is gone: the bar floats on the photograph and takes ink or pearl from it (hx-hero-tone.js) */
+@media (min-width:700px) and (orientation:landscape){
+	.hxhe-hero--bleed.hxhe-hero--valley .hxhe-hero__plate img{object-position:50% 40%}
+	.hxhe-hero--bleed.hxhe-hero--valley .hxhe-hero__plate::after{background:radial-gradient(ellipse 58% 56% at 12% 90%,rgba(246,246,244,.92) 0%,rgba(246,246,244,.8) 42%,rgba(246,246,244,0) 80%)}
+}
+
+/* the serum photograph as a bleed opening (craftsmanship, 25 Oct 2026): a portrait frame, so the
+   landscape crop holds the hands; its warm grey ground carries the type, a pearl haze the bar */
+.hxhe-hero--drop .hxhe-hero__plate{background:#8F8A83}
+.hxhe-hero--bleed.hxhe-hero--drop .hxhe-hero__plate img{object-position:50% 45%}
+@media (min-width:700px) and (orientation:landscape){
+	.hxhe-hero--bleed.hxhe-hero--drop .hxhe-hero__plate img{object-position:60% 52%}
+	.hxhe-hero--bleed.hxhe-hero--drop .hxhe-hero__plate::after{background:radial-gradient(ellipse 58% 56% at 12% 90%,rgba(246,246,244,.9) 0%,rgba(246,246,244,.76) 42%,rgba(246,246,244,0) 80%)}
+}
+
+/* the page's four parts, under the plate (the science hub's question index) */
+.hxhe-index{border-bottom:1px solid var(--hx-line)}
+.hxhe-index__list{display:grid;grid-template-columns:minmax(0,1fr)}
+.hxhe .hxhe-index__link{
+	display:flex;align-items:baseline;gap:12px;min-height:48px;padding-block:12px;
+	border-top:1px solid var(--hx-line);
+	font-family:var(--hx-serif);font-size:1.1875rem;line-height:1.3;color:var(--hx-ink);text-decoration:none;
+}
+.hxhe-index__list li:first-child .hxhe-index__link{border-top:0}
+.hxhe-index__n{font-family:var(--hx-sans);font-size:.75rem;letter-spacing:.08em;color:var(--hx-muted);font-variant-numeric:lining-nums tabular-nums}
+.hxhe .hxhe-index__link:hover{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.25em}
+.hxhe .hxhe-index__link:focus-visible{outline:var(--hx-focus-width) solid var(--hx-focus-color);outline-offset:2px}
+@media (min-width:900px){
+	.hxhe-index__list{grid-template-columns:repeat(4,minmax(0,1fr));column-gap:var(--hx-s-5)}
+	.hxhe .hxhe-index__link{flex-direction:column;gap:6px;min-height:96px;padding-block:var(--hx-s-5);border-top:0}
+}
+.hxhe :is(#standard,#history,#code,#explore){scroll-margin-top:calc(var(--cos-nav-h,80px) + 16px)}
+
 /* ─── Hero: split (craftsmanship) ───────────────────────────────── */
 .hxhe-hero--split .hxhe-split--hero{padding-top:var(--hxhe-top);padding-bottom:var(--hx-section-sm)}
 .hxhe-hero--split .hxhe-hero__text{display:grid}
@@ -134,7 +220,7 @@
 .hxhe-quote{margin-top:clamp(32px,1.5rem + 2vw,48px);padding-top:var(--hx-s-5);border-top:1px solid var(--hx-line-strong);max-width:var(--hx-measure)}
 .hxhe-quote blockquote p{font-family:var(--hx-serif);font-size:var(--hx-fs-title);font-weight:300;line-height:1.3;letter-spacing:var(--hx-tr-title);color:var(--hx-ink);text-wrap:balance}
 
-.hxhe-eras{background:var(--hx-ivory)}
+.hxhe-eras{background:var(--hx-ground-stone,#EDE9E1)}   /* science hub's stone room (24 Oct 2026) */
 .hxhe-eras__title{margin-bottom:clamp(32px,1.5rem + 2.5vw,64px)}
 
 .hxhe-code__grid{display:grid;grid-template-columns:minmax(0,1fr);row-gap:var(--hx-s-7)}
@@ -152,7 +238,7 @@
 	.hxhe-code__media{max-width:min(100%,360px)}
 }
 
-.hxhe-explore{background:var(--hx-ivory)}
+.hxhe-explore{background:var(--hx-ground-stone,#EDE9E1)}
 .hxhe-explore__title{margin-bottom:var(--hx-s-6);color:var(--hx-ink)}
 .hxhe-explore__list{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--hx-s-8) var(--hx-gap)}
 .hxhe-card{display:flex;flex-direction:column;color:var(--hx-ink);text-decoration:none;-webkit-tap-highlight-color:transparent}
@@ -225,9 +311,19 @@
 }
 
 @media (prefers-reduced-motion:reduce){
-	.hxhe-card__media img,.hxhe-card__cta{transition:none}
+	.hxhe-card__media img,.hxhe-card__cta,.hxhe-hero__control{transition:none}
 	.hxhe-card:hover .hxhe-card__media img{transform:none}
 }
 @media (forced-colors:active){
 	.hxhe-hero__plate .hxhe-caption{background:Canvas;color:CanvasText}
 }
+
+/* a dark opening photograph (sustainability, 25 Oct 2026): pearl type on a dark shade at the
+   lower left on landscape; phones keep the type beneath on the light ground */
+.hxhe-hero--dark .hxhe-hero__plate{background:#141513}
+.hxhe-hero--bleed.hxhe-hero--dark .hxhe-hero__plate img{object-position:50% 45%}
+@media (min-width:700px) and (orientation:landscape){
+	.hxhe-hero--bleed.hxhe-hero--dark .hxhe-hero__plate::after{background:radial-gradient(ellipse 58% 58% at 12% 90%,rgba(8,8,8,.72) 0%,rgba(8,8,8,.5) 42%,rgba(8,8,8,0) 80%)}
+	html body:not(.cos-h26) #cos-main-content .hxhe-hero--bleed.hxhe-hero--dark :is(.hxhe-hero__title,.hxhe-hero__title *,.hxhe-hero__lede){color:#F8F8F8}
+}
+

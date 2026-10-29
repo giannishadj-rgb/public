@@ -14,7 +14,7 @@
 
 function cos_staging_global_styles(): void { ?>
 <style id="cos-global" nonce="<?php echo esc_attr( cos_csp_nonce() ); ?>">
-:root{--cos-ink:#111111!important;--cos-navy:#050505!important;--cos-pearl:#F2F2EF!important;--cos-gallery-bg:#E8E8E5!important;--cos-stone:#E5DED4!important;--cos-silver:#C4CAD1!important;--cos-slate:#5C6675!important;--cos-gold:#8B692F!important;--cos-gold-l:#B79A5B!important;--cos-teal:#46656B!important;--cos-focus:#2F6FED!important;--cos-success:#2D6A57!important;--cos-warning:#A56712!important;--cos-error:#A13B3B!important;--cos-display:'Cormorant Garamond','EB Garamond','Source Serif 4',Georgia,serif!important;--cos-body:'Inter',system-ui,-apple-system,'Segoe UI',Arial,sans-serif!important;--cos-nav-h:80px;--cos-black:#111111!important;--cos-mid:#5C6675!important;--cos-light:#E5DED4!important;--cos-red:#050505!important;--cos-promo-h:0px}
+:root{--cos-ink:#111111!important;--cos-navy:#050505!important;--cos-pearl:#F8F8F8!important;--cos-gallery-bg:#E8E8E5!important;--cos-stone:#E5DED4!important;--cos-silver:#C4CAD1!important;--cos-slate:#5C6675!important;--cos-gold:#8B692F!important;--cos-gold-l:#B79A5B!important;--cos-teal:#46656B!important;--cos-focus:#2F6FED!important;--cos-success:#2D6A57!important;--cos-warning:#A56712!important;--cos-error:#A13B3B!important;--cos-display:'Cormorant Garamond','EB Garamond',Georgia,serif!important;--cos-body:'Inter',system-ui,-apple-system,'Segoe UI',Arial,sans-serif!important;--cos-nav-h:80px;--cos-black:#111111!important;--cos-mid:#5C6675!important;--cos-light:#E5DED4!important;--cos-red:#050505!important;--cos-promo-h:0px}
 /* The off-canvas mobile menu (#cos-mob-menu) is a fixed, inset:0 panel moved
    off-screen with translateX — mobile browsers still count its full-width
    layout box toward the page's scrollable area, producing a phantom
@@ -112,7 +112,7 @@ function cos_staging_global_nav(): void {
       </a>
     </div>
     <div class="cos-nav-utils">
-      <a href="/help/" aria-label="Help" class="cos-nav-help"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 17v.5"/><path d="M12 13.5a2.5 2.5 0 1 0-2.5-2.5"/></svg></a>
+      <?php /* 19 Oct 2026: no Help icon in the bar (owner); Help lives in the menu and the footer. */ ?>
       <a href="/account/" aria-label="Account" class="cos-nav-account"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.25"/><path d="M5.5 18.5a6.5 6.5 0 0 1 13 0"/></svg></a>
       <a href="/cart/" aria-label="Bag" class="cos-bag-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12l-1 11H7L6 8Z"/><path d="M9 8a3 3 0 1 1 6 0"/></svg><span class="cos-bag-count" aria-live="polite"></span></a>
     </div>

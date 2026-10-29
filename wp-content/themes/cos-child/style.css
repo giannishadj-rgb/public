@@ -13,19 +13,21 @@ Text Domain: cos-child
    assets/fonts/OFL-inter.txt), latin subset only, matching the coverage of
    the static files it replaces. */
 @font-face{font-family:'Inter';font-style:normal;font-weight:300 600;font-display:swap;src:url('assets/fonts/inter-var-latin.woff2') format('woff2-variations'),url('assets/fonts/inter-var-latin.woff2') format('woff2')}
-@font-face{font-family:'Source Serif 4';font-style:normal;font-weight:300;font-display:swap;src:url('assets/fonts/source-serif4-300-latin.woff2') format('woff2')}
-@font-face{font-family:'Source Serif 4';font-style:normal;font-weight:400;font-display:swap;src:url('assets/fonts/source-serif4-400-latin.woff2') format('woff2')}
-@font-face{font-family:'Source Serif 4';font-style:italic;font-weight:300;font-display:swap;src:url('assets/fonts/source-serif4-300-italic-latin.woff2') format('woff2')}
-@font-face{font-family:'Source Serif 4';font-style:italic;font-weight:400;font-display:swap;src:url('assets/fonts/source-serif4-400-italic-latin.woff2') format('woff2')}
 @font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300;font-display:swap;src:url('assets/fonts/cormorant-garamond-300-italic-latin.woff2') format('woff2')}
 
 /* Browser reset — global-styles is dequeued for performance; apply body margin reset here. */
+html,
+body,
+.wp-site-blocks,
+#cos-main-content {
+	background-color: var(--cos-pearl, #F8F8F8);
+}
+
 body {
 	margin: 0;
 	padding: 0;
 	font-family: var(--cos-body, 'Inter', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif);
 	color: var(--cos-ink, #111111);
-	background: var(--cos-pearl, #F2F2EF);
 }
 
 button,
@@ -73,7 +75,7 @@ textarea { font-family: inherit; }
 	max-width: 560px; margin: 0;
 	font-size: 14px; font-weight: 300; color: rgba(247,243,237,.78); line-height: 1.8;
 }
-.cos-jnl-hub-grid-wrap { background: var(--cos-pearl, #F2F2EF); padding: 56px 0 72px; }
+.cos-jnl-hub-grid-wrap { background: var(--cos-pearl, #F8F8F8); padding: 56px 0 72px; }
 .cos-jnl-hub-grid {
 	display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2px;
 	width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px;
@@ -145,7 +147,7 @@ body.page .entry-content {
 .woocommerce-page {
 	font-family: var(--cos-body, 'Inter', sans-serif);
 	color: var(--cos-ink, #111111);
-	background: var(--cos-pearl, #F2F2EF);
+	background: var(--cos-pearl, #F8F8F8);
 }
 
 /* page wrapper */

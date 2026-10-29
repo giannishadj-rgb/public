@@ -6,14 +6,16 @@
 defined( 'ABSPATH' ) || exit;
 
 get_template_part( 'template-parts/hx/science/masthead', null, array(
-	'mode'  => 'split',
+	'mode'  => 'bleed',
 	'label' => 'Chapter 01 <span aria-hidden="true">·</span> Why caviar',
 	'title' => 'A lipid profile close to skin’s own.',
 	'lead'  => 'Caviar Extract is not a luxury ingredient in the cosmetic sense; it is a biologically precise one. The phospholipids of Acipenser Baerii roe mirror those of the skin’s own barrier with a fidelity no synthetic blend replicates.',
 	'plate' => array(
-		'base' => 'caviar-backlit', 'widths' => array( 960, 1440, 1920 ), 'ratio' => array( 3, 2 ),
-		'alt'  => 'Glossy black caviar pearls, backlit on a pale surface',
-		'pos'  => '62% 50%',
+		// bleed (25 Oct 2026): the pearl field the hub opened on, made for type at the lower left
+		'base' => 'hxv-field', 'widths' => array( 1440, 2048, 2880 ), 'ratio' => array( 2, 1 ),
+		'alt'  => 'Glossy black caviar pearls on a pale, reflective surface',
+		'tall' => array( 'hxv-field-tall', array( 640, 960, 1280 ), array( 4, 5 ) ),
+		'pos'  => '70% 50%',
 	),
 ) );
 

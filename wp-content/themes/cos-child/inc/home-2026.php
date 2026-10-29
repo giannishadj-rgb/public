@@ -52,12 +52,15 @@ add_action( 'wp_enqueue_scripts', static function (): void {
 	// 14 Oct 2026 world-class rebuild: one design-system layer, then one stylesheet per
 	// section (each owns its own template part and class prefix), loaded last.
 	$prev = 'cos-home-2026-nocturne';
-	foreach ( array( 'system', 'hero', 'collection', 'caviar', 'science', 'provenance', 'ritual', 'closing' ) as $hx ) {
+	// typeset.css + composition.css (19 Oct 2026): the homepage type roles and room/plate
+	// layout, loaded last so they govern every section.
+	foreach ( array( 'system', 'hero', 'collection', 'caviar', 'measured', 'provenance', 'ritual', 'closing', 'typeset', 'composition' ) as $hx ) {
 		$asset = 'system' === $hx ? '/assets/css/home-staging/system.css' : '/assets/css/hx/' . $hx . '.css';
 		wp_enqueue_style( 'cos-hx-' . $hx, $uri . $asset, array( $prev ), (string) filemtime( $dir . $asset ) );
 		$prev = 'cos-hx-' . $hx;
 	}
-	wp_enqueue_script( 'cos-hx-motion', $uri . '/assets/home-staging/hx-motion.js', array(), (string) filemtime( $dir . '/assets/home-staging/hx-motion.js' ), array( 'strategy' => 'defer', 'in_footer' => true ) );
+	// Suisse Works / Suisse Int'l, when licensed: see cos_hx_suisse_fonts() in inc/hx-system.php.
+	wp_enqueue_script( 'cos-hx-motion', $uri . '/assets/js/hx-motion.js', array(), (string) filemtime( $dir . '/assets/js/hx-motion.js' ), array( 'strategy' => 'defer', 'in_footer' => true ) );
 } );
 
 // The homepage is light-led (pearl + graphite, 4 Oct 2026): tell the browser, so native
@@ -65,7 +68,7 @@ add_action( 'wp_enqueue_scripts', static function (): void {
 add_action( 'wp_head', static function (): void {
 	if ( ! cos_h26_is_active() ) return;
 	echo '<meta name="color-scheme" content="light">' . "
-" . '<meta name="theme-color" content="#F2F2EF">' . "
+" . '<meta name="theme-color" content="#F8F8F8">' . "
 ";
 }, 1 );
 
@@ -199,10 +202,14 @@ function cos_h26_products(): array {
 
 	foreach ( $products as &$p ) {
 		$post       = get_page_by_path( $p['slug'], OBJECT, 'product' );
-		$p['url']   = $post ? get_permalink( $post ) : home_url( '/products/' . $p['slug'] . '/' );
-		$p['price'] = '';
+		$p['url']     = $post ? get_permalink( $post ) : home_url( '/products/' . $p['slug'] . '/' );
+		$p['price']   = '';
+		$p['id']      = 0;
+		$p['can_add'] = false; // the collection's bag button: simple, purchasable, in stock
 		if ( $post && function_exists( 'wc_get_product' ) && ( $wc = wc_get_product( $post ) ) ) {
-			$p['price'] = html_entity_decode( wp_strip_all_tags( wc_price( (float) $wc->get_price(), array( 'decimals' => 0 ) ) ), ENT_QUOTES, 'UTF-8' );
+			$p['price']   = html_entity_decode( wp_strip_all_tags( wc_price( (float) $wc->get_price(), array( 'decimals' => 0 ) ) ), ENT_QUOTES, 'UTF-8' );
+			$p['id']      = (int) $wc->get_id();
+			$p['can_add'] = $wc->is_type( 'simple' ) && $wc->is_purchasable() && $wc->is_in_stock();
 		}
 	}
 	return $products;

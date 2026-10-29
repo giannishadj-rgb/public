@@ -14,7 +14,7 @@
    ========================================================================== */
 
 /* the legacy hook class carries old section styles — neutralise them */
-body.cos-h26 .hxh.h26-hero--pearl{background:#E7E4DF}
+body.cos-h26 .hxh.h26-hero--pearl{background:#F8F8F8}
 
 .hxh{
 	--hxh-nav:var(--cos-nav-h,80px);
@@ -25,7 +25,7 @@ body.cos-h26 .hxh.h26-hero--pearl{background:#E7E4DF}
 	display:flex;
 	min-height:max(560px,100svh);
 	overflow:clip;
-	background:#E7E4DF; /* mean tone of the ivory set: no flash before it paints */
+	background:#F8F8F8; /* site pearl: no flash before the photograph paints */
 	color:var(--hx-text);
 }
 
@@ -49,21 +49,23 @@ body.cos-h26 .hxh.h26-hero--pearl{background:#E7E4DF}
 }
 .hxh__title{
 	margin:0;
-	font-size:2.375rem;            /* 38px  <360px  */
+	font-size:2rem;                /* 32px phones (19 Oct 2026, owner: Clé de Peau-scale hero type) */
 	line-height:1.04;
 	color:var(--hx-ink);
 }
 .hxh__line{display:block}
+/* 19 Oct 2026 (owner): headline set in capitals, lightly tracked so the serif caps breathe */
+.hxh__title,.hxh__title em{text-transform:uppercase;letter-spacing:.04em}
 .hxh__title em{font-style:italic;font-weight:300}
 /* Cadence: headline, then one supporting line (--hx-stack), then the action set well apart. */
 .hxh__lead{
 	margin:var(--hx-stack) 0 0;
 	font-family:var(--hx-sans);
-	font-size:var(--hx-fs-lead);  /* DESIGN.md lead role, 17 → 19px */
+	font-size:.9375rem;           /* 15px (19 Oct 2026, owner: quieter than the 17–19px lead role) */
 	font-weight:400;              /* not the system lead's 300: hairline Inter breaks up over the photograph */
 	line-height:1.5;
-	letter-spacing:0;
-	color:var(--hx-ink);
+	letter-spacing:.01em;
+	color:var(--hx-text,#3A3B3D); /* softer than ink, still 10:1+ on the pearl hero */
 	text-wrap:balance;
 }
 
@@ -79,9 +81,7 @@ body.cos-h26 .hxh.h26-hero--pearl{background:#E7E4DF}
 	min-height:52px;
 	padding-inline:24px;
 	box-shadow:inset 0 0 0 1px var(--hx-ink); /* hairline inside the box: no size change against the filled state */
-	font-size:.9375rem;
-	letter-spacing:.015em;
-	text-transform:none;
+	/* label: the action role (12.5px tracked capitals) from hx/typeset.css */
 }
 .hxh__cta:is(:hover,:focus-visible){--hx-btn-fg:var(--hx-white);background:var(--hx-btn-bg-hover)} /* fill on keyboard focus too, not only hover */
 .hxh__cta::after{content:none}
@@ -92,11 +92,8 @@ body.cos-h26 .hxh.h26-hero--pearl{background:#E7E4DF}
 	.hxh__cta{padding-inline:20px}
 	.hxh__cta .hx-arrow{margin-left:12px}
 }
-@media (min-width:360px){.hxh__title{font-size:2.5rem}}   /* 40px */
-@media (min-width:700px){.hxh__title{font-size:3rem}}     /* 48px */
-/* From 1100px the headline grows with the photographic field instead of stepping:
-   48 → 60px across 1100–1440, then 60 → 72px across 1440–1920 (rule below). */
-@media (min-width:1100px){.hxh__title{font-size:clamp(3rem,.575rem + 3.53vw,3.75rem)}}
+/* ≥700px: about Clé de Peau's hero size (cap height ~22px): 34px at 1440, 38px at 1920, max 40px */
+@media (min-width:700px){.hxh__title{font-size:clamp(2rem,1.2rem + 1vw,2.5rem)}}
 
 /* ─── Landscape layout: headline left, object right of centre ─────── */
 @media (min-width:768px) and (min-aspect-ratio:1/1){
@@ -112,8 +109,8 @@ body.cos-h26 .hxh.h26-hero--pearl{background:#E7E4DF}
 		padding-bottom:0;
 		text-align:left;
 	}
-	.hxh__copy{max-width:min(42vw,640px)} /* "refined to the essential." stays on one line (~515px at 60px, ~618px at 72px) */
-	.hxh__lead{margin-top:var(--hx-stack);line-height:1.55;letter-spacing:0}
+	.hxh__copy{max-width:min(42vw,640px)} /* "Refined to the Essential." stays on one line (~515px at 60px, ~618px at 72px) */
+	.hxh__lead{margin-top:var(--hx-stack);line-height:1.55}
 	.hxh__action{margin-top:clamp(40px,6svh,64px);justify-content:flex-start}
 	.hxh__cta{min-height:54px;padding-inline:28px}
 }
@@ -148,10 +145,10 @@ body.cos-h26 .hxh.h26-hero--pearl{background:#E7E4DF}
 	.hxh__picture{display:flex;align-items:center}
 	.hxh__picture img{height:74%}
 	.hxh__copy{max-width:46vw}
-	.hxh__title{font-size:2.75rem} /* 44px: "refined to the essential." holds one line beside the jar */
 }
-/* 320px phones: 31px keeps "refined to the essential." on one line, so the copy ends above the lid */
-@media (max-width:359.98px){.hxh__title{font-size:1.9375rem}}
+/* Tracked italic capitals run ~13.3x the font size for "REFINED TO THE ESSENTIAL.": scale with
+   the phone so each line stays one line (25px at 390, 20.5px at 320). */
+@media (max-width:699.98px){.hxh__title{font-size:min(2rem,6.4vw)}}
 /* Squat portrait phones (iPhone SE 375×667, 360×640, 320×568): the tall frame is cropped top
    and bottom here, and a centred crop lifts the jar into the copy. Anchor the crop near the
    top of the frame so the jar sits lower, under the copy. */
@@ -160,12 +157,28 @@ body.cos-h26 .hxh.h26-hero--pearl{background:#E7E4DF}
 }
 /* bleed for the scroll drift (hx-motion.js drives it from 900px) */
 @media (min-width:900px){.hxh__drift{inset:-56px 0}}
-@media (min-width:1440px){.hxh__title{font-size:clamp(3.75rem,1.5rem + 2.5vw,4.5rem)}} /* 60 → 72px */
 
-/* ─── Entrance: the light comes up, the object settles, then the words ─ */
+/* ─── Entrance (20 Oct 2026): focus pull, then light writes the line ──
+   The one authored moment on the page. The light comes up and the lens racks onto the
+   chrome lid (bounded blur on the photograph only, 1.7s); then a soft band of light runs
+   across each headline line in turn, the way it runs over polished silver; the supporting
+   line and the action follow (hx-load-rise, --hx-i in hero.php). The same light reveals the
+   section headings further down (data-hx-reveal="light", home-staging/system.css), and the
+   closing line repeats it. CSS only: no script holds the hero back. The photograph is the
+   LCP element and paints at once; only its focus changes. */
 @media (prefers-reduced-motion:no-preference){
-	.hxh__veil{animation:hxh-veil 1000ms var(--hx-ease-soft) 40ms both}
-	.hxh__picture img{animation:hxh-settle 1200ms var(--hx-ease) both}
+	.hxh__veil{animation:hxh-veil 1200ms var(--hx-ease-soft) 40ms both}
+	.hxh__picture img{animation:hxh-focus 1700ms var(--hx-ease) both}
+	.hxh__line{
+		-webkit-mask-image:linear-gradient(100deg,#000 44%,transparent 56%);
+		mask-image:linear-gradient(100deg,#000 44%,transparent 56%);
+		-webkit-mask-size:260% 100%;mask-size:260% 100%;
+		-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
+		animation:hxh-light 1400ms var(--hx-ease) both;
+		animation-delay:calc(120ms + var(--hxh-i,0) * 160ms);
+	}
 }
-@keyframes hxh-veil{from{opacity:.36}to{opacity:0}}
-@keyframes hxh-settle{from{transform:scale(1.02)}to{transform:none}}
+@keyframes hxh-veil{from{opacity:.45}to{opacity:0}}
+@keyframes hxh-focus{from{transform:scale(1.035);filter:blur(10px)}to{transform:none;filter:blur(0)}}
+@keyframes hxh-light{from{-webkit-mask-position:60% 0;mask-position:60% 0}to{-webkit-mask-position:0 0;mask-position:0 0}}
+@media print{.hxh__line{-webkit-mask:none;mask:none}}

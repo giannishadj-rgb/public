@@ -1,24 +1,29 @@
 <?php
 /**
  * /science/clinical-studies/ (page 347) — chapter 04, the source of truth for every study claim
- * (round 2, 17 Oct). Leads with the three figures as large single statements, each with its
+ * (round 2, 17 Oct). Leads with the three results as single statements, each with its
  * product (cut-out, unaltered, never clipped) and a method footnote directly beneath; the study
  * text from page 347 sits, unchanged, in a "Study detail" disclosure. Then ONE compact section:
  * method + the 28-day protocol (drawn to scale) + the note on clinical language.
+ * Self-reported results never get the large figure (owner, 20 Oct): the cream's line stays text.
  * Owner-pending lines (dermatologist evaluation, +22%/+38%, density/tewametry, "statistically
  * significant", blinded, n=28–34, visual grading) are kept verbatim where they remain.
  */
 defined( 'ABSPATH' ) || exit;
 
 get_template_part( 'template-parts/hx/science/masthead', null, array(
-	'mode'  => 'split',
+	'mode'  => 'bleed',
 	'label' => 'Chapter 04 <span aria-hidden="true">·</span> Clinical studies',
 	'title' => 'Evidence you can read.',
 	'lead'  => 'Every statistic we publish is backed by an independent dermatologist evaluation. Methodology, panel size, age range and duration are disclosed in full.',
 	'plate' => array(
-		'base' => 'evidence-portrait', 'widths' => array( 640, 960, 1280 ), 'ratio' => array( 4, 5 ),
+		// bleed (25 Oct 2026): the wide portrait (grey ground at the lower left for the type);
+		// phones keep the 4:5 portrait
+		'base' => 'evidence-wide', 'widths' => array( 1440, 1920, 2400 ), 'ratio' => array( 2400, 1450 ),
 		'alt'  => 'Portrait of a woman with clear skin, her chin resting on her hand',
+		'tall' => array( 'evidence-portrait', array( 640, 960, 1280 ), array( 4, 5 ) ),
 		'pos'  => '50% 30%',
+		'pos_wide' => '50% 30%',
 		'caption' => 'Illustrative model, not a study participant.',
 	),
 ) );
@@ -38,8 +43,12 @@ $studies = array_slice( $all, 0, 3 );
 			<li class="hxsc-claim hxsc-claim--<?php echo esc_attr( $s['kind'] ); ?>" data-hx-reveal>
 				<div class="hxsc-claim__obj"><?php echo cos_h26_picture( 'pack-' . $s['obj'], array( 480, 720 ), array( 2, 3 ), '', array( 'sizes' => '(min-width: 900px) 240px, 150px', 'w' => 480 ) ); // phpcs:ignore ?></div>
 				<div class="hxsc-claim__text">
+					<?php if ( $m ) : ?>
 					<p class="hx-numeral hxsc-claim__n"><?php echo esc_html( $s['fig'] ); ?><span class="hxsc-pct">%</span></p>
 					<h3 class="hxsc-claim__finding"><?php echo esc_html( $s['finding'] ); ?></h3>
+					<?php else : ?>
+					<h3 class="hxsc-claim__finding hxsc-claim__finding--reported"><?php echo esc_html( $s['fig'] ); ?>% panellist-reported satisfaction <span class="hxsc-nw">at 28 days</span></h3>
+					<?php endif; ?>
 					<p class="hxsc-claim__product"><a href="<?php echo hxsc_url( $s['url'] ); ?>"><?php echo esc_html( $s['product'] ); ?></a></p>
 					<p class="hxsc-claim__foot"><span class="hxsc-kind"><?php echo $m ? 'Instrument‑measured' : 'Self‑reported'; ?></span> <span aria-hidden="true">·</span> <?php echo esc_html( $s['method'] ); ?> <span aria-hidden="true">·</span> <span class="hxsc-nw"><?php echo esc_html( $s['panel'] ); ?> aged <?php echo esc_html( $s['ages'] ); ?></span> <span aria-hidden="true">·</span> <span class="hxsc-nw"><?php echo esc_html( strtolower( $s['regimen'] ) ); ?></span></p>
 					<?php if ( 'serum' === $s['obj'] ) : ?>

@@ -5,7 +5,7 @@
    Markup: inc/navigation.php (header, menu, footer) + inc/forms.php (newsletter).
 
    HEADER (#cos-nav-wrap) — the homepage header, made sitewide. Inner pages show it
-   solid warm white #FBFAF7 with one hairline; the homepage keeps its own behaviour
+   solid warm white #F8F8F8 with one hairline; the homepage keeps its own behaviour
    (transparent over the hero, solid once scrolled), set at the end of system.css
    and in the legacy homepage sheets, which out-specify these base rules. Base values
    here equal the homepage's scrolled state, so both read as one header.
@@ -31,7 +31,7 @@
 #cos-nav-wrap{
 	position:fixed;top:0;left:0;right:0;z-index:90;
 	height:var(--cos-nav-h);
-	background:#FBFAF7;
+	background:#F8F8F8;
 	border-bottom:1px solid rgba(28,29,31,.08);
 	backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:none;
 	transition:background-color var(--hx-dur-ui,320ms) var(--hx-ease-soft,ease),border-color var(--hx-dur-ui,320ms) var(--hx-ease-soft,ease);
@@ -44,7 +44,7 @@
 .cos-nav-links a{
 	position:relative;
 	font-family:var(--hx-sans,'Inter',system-ui,sans-serif);
-	font-size:.9375rem;font-weight:400;line-height:1.5;letter-spacing:.005em;text-transform:none; /* 19 Oct 2026: sentence case at 15px (DESIGN.md), not 12px tracked capitals */
+	font-size:.75rem;font-weight:400;line-height:1.5;letter-spacing:.14em;text-transform:uppercase; /* 19 Oct 2026 (owner): small tracked capitals, quieter and more elegant than 15px sentence case */
 	color:var(--hx-ink,#1C1D1F);
 	white-space:nowrap;text-decoration:none;
 	-webkit-font-smoothing:antialiased;
@@ -54,9 +54,9 @@
 .cos-nav-links a::before{content:"";position:absolute;left:-6px;right:-6px;top:50%;height:44px;transform:translateY(-50%)}
 /* The legacy home-2026-nocturne.css still forces 12px tracked capitals with
    body.cos-h26.cos-h26-nocturne #cos-nav-wrap .cos-nav-links a; one step more specific here. */
-html body.cos-h26 #cos-nav-wrap .cos-nav-links a{font-size:.9375rem;font-weight:400;letter-spacing:.005em;text-transform:none}
-html body.cos-h26.cos-h26-nocturne #cos-nav-wrap .cos-nav-links a{font-size:.9375rem;font-weight:400;letter-spacing:.005em;text-transform:none}
-.cos-nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left center;transition:transform 520ms var(--hx-ease,cubic-bezier(.19,1,.22,1))}
+html body.cos-h26 #cos-nav-wrap .cos-nav-links a{font-size:.75rem;font-weight:400;letter-spacing:.14em;text-transform:uppercase}
+html body.cos-h26.cos-h26-nocturne #cos-nav-wrap .cos-nav-links a{font-size:.75rem;font-weight:400;letter-spacing:.14em;text-transform:uppercase}
+.cos-nav-links a::after{content:"";position:absolute;left:0;right:.14em;bottom:-6px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left center;transition:transform 520ms var(--hx-ease,cubic-bezier(.19,1,.22,1))}
 .cos-nav-links a:hover::after,.cos-nav-links a[aria-current="page"]:not([href="/"])::after{transform:scaleX(1)}
 .cos-nav-links a:hover,.cos-nav-links a:visited{color:var(--hx-ink,#1C1D1F)}
 @media (min-width:1024px) and (max-width:1439.98px){.cos-nav-links{gap:20px}}
@@ -66,7 +66,7 @@ html body.cos-h26.cos-h26-nocturne #cos-nav-wrap .cos-nav-links a{font-size:.937
 .cos-nav-logo{flex:0 0 auto}
 /* From 1200px (sentence-case labels, 19 Oct): true centre of the bar, not the midpoint between the unequal link and icon groups.
    Below that the five labels would run into a centred mark (-98px at 1024), so it stays in flow. */
-@media (min-width:1200px){.cos-nav-logo{position:absolute;left:50%;transform:translateX(-50%)}}
+@media (min-width:1320px){.cos-nav-logo{position:absolute;left:50%;transform:translateX(-50%)}}
 .cos-nav-logo a{display:flex;align-items:center;min-height:44px}
 /* The supplied mark (light silver + Swiss red) is darkened for contrast on the light
    header — unchanged since 19 Sep (see git history); no crop, no recolour of the cross. */
@@ -81,7 +81,7 @@ html body.cos-h26.cos-h26-nocturne #cos-nav-wrap .cos-nav-links a{font-size:.937
 .cos-bag-link{position:relative}
 /* Bag count: a small graphite disc, legible figures (was 8px bold). Filled by
    inc/commerce.php (cart fragments) + inc/analytics.php; empty = hidden. */
-.cos-bag-count{position:absolute;top:7px;right:3px;min-width:17px;height:17px;padding:0 5px;border-radius:9px;box-sizing:border-box;background:var(--hx-ink,#1C1D1F);color:#FBFAF7;font-family:var(--hx-sans,'Inter',sans-serif);font-size:10px;font-weight:500;line-height:17px;letter-spacing:0;text-align:center;font-variant-numeric:tabular-nums;display:none;pointer-events:none}
+.cos-bag-count{position:absolute;top:7px;right:3px;min-width:17px;height:17px;padding:0 5px;border-radius:9px;box-sizing:border-box;background:var(--hx-ink,#1C1D1F);color:#F8F8F8;font-family:var(--hx-sans,'Inter',sans-serif);font-size:10px;font-weight:500;line-height:17px;letter-spacing:0;text-align:center;font-variant-numeric:tabular-nums;display:none;pointer-events:none}
 .cos-bag-count:not(:empty){display:block}
 
 /* Menu button (phones/tablets) — three hairlines that cross into an ×. */
@@ -115,7 +115,7 @@ html body.cos-h26.cos-h26-nocturne #cos-nav-wrap .cos-nav-links a{font-size:.937
 	transition:opacity 380ms var(--hx-ease-soft,ease),visibility 0s linear 380ms;
 }
 /* html body … .hxn-sheet: beats the legacy homepage menu background (body.cos-h26-nocturne #cos-mob-menu) */
-html body #cos-mob-menu.hxn-sheet{background:#FBFAF7}
+html body #cos-mob-menu.hxn-sheet{background:#F8F8F8}
 #cos-mob-menu.open{opacity:1;visibility:visible;transition:opacity 380ms var(--hx-ease-soft,ease),visibility 0s}
 #cos-mob-menu .hxn-menu{
 	box-sizing:border-box;flex:1;display:flex;flex-direction:column;
@@ -194,7 +194,7 @@ html body #cos-mob-menu.hxn-sheet{background:#FBFAF7}
 	font-size:clamp(2rem,1.62rem + 1.25vw,2.875rem);line-height:1.06;letter-spacing:-.012em;
 	color:var(--hxf-fg);text-wrap:balance;
 }
-#cos-footer#cos-footer .hxf-nl__sub{margin-top:14px;font-size:1rem;font-weight:300;line-height:1.6;color:var(--hxf-fg-2);max-width:30em}
+#cos-footer#cos-footer .hxf-nl__sub{margin-top:14px;font-size:1rem;font-weight:400;line-height:1.6;color:var(--hxf-fg-2);max-width:30em}
 #cos-footer#cos-footer .hxf-form{display:flex;flex-direction:column;gap:0;min-width:0;max-width:none}
 #cos-footer#cos-footer .hxf-form__row{
 	display:flex;align-items:stretch;gap:16px;
@@ -342,7 +342,7 @@ body.cos-h26 #cos-footer#cos-footer .hxf-house address{font-size:.9375rem}
 
 /* Skip link (markup: inc/core.php). Its inline style (left:-9999px) beat the old :focus rule,
    so the focused link stayed off-screen; bring it in, at a 44px target, on focus. */
-.cos-skip-link:focus{left:8px!important;top:8px!important;width:auto!important;height:auto!important;min-height:44px;display:inline-flex;align-items:center;box-sizing:border-box;background:var(--hx-ink,#1C1D1F)!important;color:#FBFAF7!important}
+.cos-skip-link:focus{left:8px!important;top:8px!important;width:auto!important;height:auto!important;min-height:44px;display:inline-flex;align-items:center;box-sizing:border-box;background:var(--hx-ink,#1C1D1F)!important;color:#F8F8F8!important}
 
 /* ═══ ADD-TO-BAG CONFIRMATION (inc/hx-minibag.php) ══════════════════
    Desktop: a 392px card anchored under the bag icon, warm white, one hairline,
@@ -353,7 +353,7 @@ body.cos-h26 #cos-footer#cos-footer .hxf-house address{font-size:.9375rem}
 	right:calc(max(0px,(100vw - 1600px) / 2) + 32px);
 	box-sizing:border-box;width:392px;max-width:calc(100vw - 32px);
 	padding:22px 24px 22px;
-	background:#FBFAF7;color:var(--hx-text,#3A3B3D);
+	background:#F8F8F8;color:var(--hx-text,#3A3B3D);
 	border:1px solid rgba(28,29,31,.1);
 	box-shadow:0 30px 60px -32px rgba(28,29,31,.38),0 2px 6px -2px rgba(28,29,31,.06);
 	font-family:var(--hx-sans,'Inter',sans-serif);
@@ -364,7 +364,7 @@ body.cos-h26 #cos-footer#cos-footer .hxf-house address{font-size:.9375rem}
 .hxn-bag[hidden]{display:none}
 .hxn-bag.is-open{opacity:1;transform:none}
 /* a fine pointer to the bag icon */
-.hxn-bag::before{content:"";position:absolute;top:-6px;right:24px;width:10px;height:10px;background:#FBFAF7;border-left:1px solid rgba(28,29,31,.1);border-top:1px solid rgba(28,29,31,.1);transform:rotate(45deg)}
+.hxn-bag::before{content:"";position:absolute;top:-6px;right:24px;width:10px;height:10px;background:#F8F8F8;border-left:1px solid rgba(28,29,31,.1);border-top:1px solid rgba(28,29,31,.1);transform:rotate(45deg)}
 .hxn-bag__head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:-10px -12px 14px 0}
 .hxn-bag__title{margin:0;font-family:var(--hx-sans,'Inter',sans-serif);font-size:.71875rem;font-weight:500;line-height:1.4;letter-spacing:.2em;text-transform:uppercase;color:var(--hx-accent,#625646)}
 .hxn-bag__title:focus{outline:none}
@@ -376,7 +376,7 @@ body.cos-h26 #cos-footer#cos-footer .hxf-house address{font-size:.9375rem}
 .hxn-bag__close:focus{outline:none}
 .hxn-bag__close:focus-visible{outline:2px solid var(--hx-ink,#1C1D1F);outline-offset:-4px}
 .hxn-bag__item{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:start;padding:0 0 18px;border-bottom:1px solid rgba(28,29,31,.1)}
-.hxn-bag__media{width:72px;height:90px;background:#F2F2EF;overflow:hidden}
+.hxn-bag__media{width:72px;height:90px;background:#F8F8F8;overflow:hidden}
 .hxn-bag__media[hidden]{display:none}
 .hxn-bag__img{display:block;width:100%;height:100%;object-fit:cover}
 .hxn-bag__info{min-width:0;padding-top:2px}
@@ -397,3 +397,7 @@ body.cos-h26 #cos-footer#cos-footer .hxf-house address{font-size:.9375rem}
 	.hxn-bag__head{margin:0 -12px 10px 0}
 }
 @media (prefers-reduced-motion:reduce){.hxn-bag,.hxn-bag.is-open{transition:none;transform:none}}
+/* mobile menu promise (29 Oct 2026, homepage critique): no default bullets; the footer's quiet hairline separator */
+#cos-mob-menu .hxn-menu__assure{display:flex;flex-wrap:wrap;align-items:center;gap:8px 0;margin:32px 0 0;padding:0;list-style:none}
+#cos-mob-menu .hxn-menu__assure li{margin:0;font-family:var(--hx-sans,'Inter',sans-serif);font-size:.875rem;line-height:1.5;color:var(--hx-fg-3,#5C5C5A);white-space:nowrap}
+#cos-mob-menu .hxn-menu__assure li + li::before{content:"";display:inline-block;width:16px;height:1px;margin:0 12px;vertical-align:middle;background:var(--hx-line-strong,rgba(28,29,31,.28))}

@@ -45,14 +45,14 @@ if ( function_exists( 'WC' ) ) wp_enqueue_script( 'wc-add-to-cart' );
 <body <?php body_class( 'woocommerce woocommerce-page hxpd-page' . ( $hxpd['is_set'] ? ' hxpd-page--set' : '' ) ); ?>>
 <?php wp_body_open(); ?>
 
-<main id="cos-main-content" class="hxpd<?php echo $hxpd['is_set'] ? ' hxpd--set' : ''; ?>">
+<main id="cos-main-content" class="hxpd<?php echo $hxpd['is_set'] ? ' hxpd--set' : ''; ?><?php echo $hxpd['look'] ? ' hxpd--' . esc_attr( $hxpd['look'] ) : ''; ?>">
 	<section class="hxpd-buy" aria-labelledby="hxpd-name">
 		<div class="hxpd-buy__grid">
 			<?php get_template_part( 'template-parts/hx/product/gallery', null, $hxpd ); ?>
 			<?php get_template_part( 'template-parts/hx/product/purchase', null, $hxpd ); ?>
 		</div>
 	</section>
-	<?php get_template_part( 'template-parts/hx/product/' . ( $hxpd['is_set'] ? 'set' : 'formula' ), null, $hxpd ); ?>
+	<?php get_template_part( 'template-parts/hx/product/' . ( $hxpd['is_set'] ? 'set' : ( 'ab' === $hxpd['look'] ? 'formula-ab' : 'formula' ) ), null, $hxpd ); ?>
 </main>
 
 <?php get_template_part( 'template-parts/hx/product/sticky', null, $hxpd ); ?>

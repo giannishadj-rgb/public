@@ -8,6 +8,7 @@
 defined( 'ABSPATH' ) || exit;
 
 get_template_part( 'template-parts/hx/science/masthead', null, array(
+	'mode'  => 'bleed',
 	'label' => 'Chapter 02 <span aria-hidden="true">·</span> The High-Tech Complex',
 	'title' => 'Engineered for synergy.',
 	'lead'  => 'Five actives, selected for evidence, bioavailability and the way they work together. Each does something the others cannot.',
@@ -15,6 +16,7 @@ get_template_part( 'template-parts/hx/science/masthead', null, array(
 		'base' => 'caviar-macro-light', 'widths' => array( 1440, 2400 ), 'ratio' => array( 3, 2 ),
 		'alt'  => 'A clear droplet of gel holding a cluster of fine bubbles on a pale surface',
 		'pos'  => '50% 50%',
+		'pos_wide' => '60% 50%',
 	),
 ) );
 

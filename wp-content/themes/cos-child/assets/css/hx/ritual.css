@@ -347,3 +347,16 @@ body.cos-h26 .hxr__link:focus-visible .hxr__frame::after{
 	.hxr__link:is(:hover,:focus-visible) .hxr__shot img{transform:none!important}
 	.hxr__how{transform:none!important}
 }
+
+/* ─── The formula named at rest (29 Oct 2026, homepage critique; owner chose it) ──────────
+   Each step's product, visible on every screen: under "Step N" in the caption (phones and
+   touch), and over the low shade on pointer screens, where the hover still adds the step's
+   explanation beneath. Then, below 900px, a quiet "1 / 4" beside the hairline track. */
+.hxr__name{display:block;margin-top:6px;font-family:var(--hx-serif);font-size:1.125rem;font-weight:400;line-height:1.2;letter-spacing:-.005em;color:var(--hx-ink);text-wrap:balance}
+@media (min-width:900px) and (hover:hover) and (pointer:fine){
+	.hxr__name{max-width:14em;margin-top:8px;font-size:clamp(1.0625rem,.95rem + .3vw,1.25rem);color:var(--hx-white,#F8F8F8);text-shadow:0 0 18px rgba(var(--hxr-veil),.45)}
+}
+.hxr__count{display:none}
+@media (max-width:899.98px){
+	.hxr__count{display:block;margin:var(--hx-s-3) var(--hx-margin) 0;font-family:var(--hx-sans);font-size:.75rem;letter-spacing:.08em;color:var(--hx-fg-3,#5C5C5A);font-variant-numeric:lining-nums tabular-nums;text-align:right}
+}

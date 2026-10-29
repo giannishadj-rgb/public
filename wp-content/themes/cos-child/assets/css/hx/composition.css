@@ -1,0 +1,52 @@
+/* ==========================================================================
+   hx/composition.css — homepage layout, couture register (19 Oct 2026)
+   Loaded LAST on the homepage only (after hx/typeset.css; inc/home-2026.php).
+   Owner brief: "prestigious and luxurious like Dior".
+
+   Two kinds of space alternate down the page:
+     PLATES  hero, heritage: full-bleed photographs, type composed on the image,
+             left. Unchanged.
+     ROOMS   collection, caviar story, science, ritual, closing: quiet pearl/ivory rooms on ONE centred
+             axis (head centred, intro ≤34em), ONE vertical rhythm (--ts-room top and
+             bottom). Reading prose (science pillars, ritual instructions) stays
+             left-aligned inside its column: centred paragraphs are hard to read.
+
+   Selectors start with html body.cos-h26 so they win over the section sheets without
+   !important. Delete this file to roll back.
+   ========================================================================== */
+
+html body.cos-h26{--ts-room:clamp(88px,3.5rem + 5.5vw,152px)}
+
+/* ─── One rhythm for every room ─────────────────────────────────── */
+html body.cos-h26 :is(.hxc,.hxs,.hxr){padding-block:var(--ts-room)}
+/* the closing: a longer breath before the last statement, then a tight signature */
+html body.cos-h26 .hxz{padding-block:0 clamp(32px,1.5rem + 2vw,56px)}   /* layout C (29 Oct): the tray photograph meets the section's top edge */
+
+/* Collection: its centred head and tile grid live in hx/collection.css (19 Oct 2026). */
+
+/* ─── Science: caption, results head and closing link on the room's axis;
+       the pillars and result columns keep their left-aligned reading ───── */
+html body.cos-h26 .hxs__label{text-align:center}
+html body.cos-h26 .hxs__proof-head{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	gap:var(--hx-s-3);
+	text-align:center;
+}
+html body.cos-h26 .hxs__proof-head > *{max-width:34em;margin:0}
+html body.cos-h26 .hxs__more{display:flex;justify-content:center;grid-column:1/-1;justify-self:stretch}
+
+/* ─── Closing: a centred finale ─────────────────────────────────── */
+/* closing (29 Oct 2026): the set beside its photograph reads as one left-aligned block, not on the room axis */
+html body.cos-h26 .hxz__body{text-align:left}
+html body.cos-h26 .hxz__act{display:flex;flex-direction:column;align-items:flex-start}
+
+/* ─── Heritage plate: label + caption share one row on phones ───── */
+@media (max-width:599.98px){html body.cos-h26 .hxp__alt{display:none}}
+@media (max-width:359.98px){html body.cos-h26 :is(.hxp__label,.hxp__place){letter-spacing:.12em}}
+
+/* ─── Ritual: step captions drawn on the photograph stay white (desktop pointer) ── */
+@media (min-width:900px) and (hover:hover) and (pointer:fine){
+	html body.cos-h26 .hxr__stepno{color:var(--hx-white,#F8F8F8)}
+}

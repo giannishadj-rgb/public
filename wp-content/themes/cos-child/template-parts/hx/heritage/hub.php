@@ -5,7 +5,7 @@
  * Copy carried over from the page's post_content (16 Oct 2026 snapshot), facts unchanged; wording
  * tightened only where the facts stay identical. Critic round 1 (17 Oct): halved. The "life sciences
  * capital" (Zug corridor) and "Alpine standard" (glacier water) sections, the 480+/GMP+/6300 figures
- * and one guarantee paragraph were cut; several of those claims await the owner. Two eyebrows only.
+ * and one guarantee paragraph were cut; several of those claims await the owner. Two eyebrows only (one since 24 Oct: the hero eyebrow went with the bleed plate).
  * Photography: the homepage's approved Matterhorn summit plate (its one reuse, the signature moment;
  * captioned with the place so it is never read as Zug) and owner product photography.
  * Never the philosophy-lab image (unverified provenance).
@@ -14,40 +14,63 @@ defined( 'ABSPATH' ) || exit;
 
 $a = cos_hxhe_arrow();
 ?>
-<section class="hxhe-hero hxhe-hero--plate" aria-labelledby="hxhe-title">
-	<div class="hx-wrap hxhe-hero__text">
-		<p class="hx-label hxhe-hero__label"><span class="hxhe-nw">Swiss heritage <span aria-hidden="true">·</span></span> <span class="hxhe-nw">Canton of Zug</span></p>
-		<h1 id="hxhe-title" class="hx-display hxhe-hero__title hx-load-rise" style="--hx-i:1">Precision born <em>from the Alps.</em></h1>
-		<div class="hxhe-hero__aside hx-load-rise" style="--hx-i:2">
-			<p class="hx-lead hxhe-hero__lede">Switzerland is not a backdrop. It is a methodology: four centuries of watchmaking mastery, pharmaceutical leadership and Alpine purity, distilled into every formula we create.</p>
-			<p class="hxhe-links">
-				<a class="hx-link" href="<?php echo esc_url( home_url( '/shop/' ) ); ?>">Experience the collection<?php echo $a; // phpcs:ignore ?></a>
-				<a class="hx-link" href="<?php echo esc_url( home_url( '/science/' ) ); ?>">Explore the science<?php echo $a; // phpcs:ignore ?></a>
-			</p>
-		</div>
-	</div>
-	<figure class="hxhe-hero__plate hx-frame hx-load-fade" style="--hx-i:3">
+<?php
+/*
+ * Opening (24 Oct 2026, owner: "layout the heritage page so that it is like the science page"):
+ * the science hub's bleed plate. The Matterhorn fills the first screen under the transparent
+ * header, the h1 and lead in ink on the cloud at the lower left (#9A–#A2 there: ink 5.9:1);
+ * phones: the tall crop on a clean edge, type beneath. Then the page's four parts as an index,
+ * as the science hub lists its five questions. The eyebrow and the two hero links left: the
+ * links are the closing section's two actions.
+ */
+$parts = array(
+	array( 'standard', 'Where one standard rules all others' ),
+	array( 'history', 'A heritage of doing things properly' ),
+	array( 'code', 'The Helvetic code' ),
+	array( 'explore', 'Explore the heritage' ),
+);
+?>
+<header class="hxhe-hero hxhe-hero--bleed" aria-labelledby="hxhe-title">
+	<figure class="hxhe-hero__plate hx-load-fade">
 		<?php
+		// 25 Oct 2026 (no repeated pictures): the film's own graded poster frame, so the still
+		// before the film plays (and under reduced motion) matches it; the summit plate is the homepage's
 		echo cos_h26_picture(
-			'provenance-summit-tall',
+			'swiss-mountain',
 			array( 640, 960 ),
-			array( 1100, 1540 ),
-			'The north and east faces of the Matterhorn, cloud streaming from the summit, printed in silver tones',
+			array( 1, 1 ),
+			'The Matterhorn under drifting cloud, printed in silver tones',
 			array(
 				'sizes' => '100vw',
 				'w'     => 960,
 				'eager' => true,
-				'art'   => array(
-					array( 'media' => '(min-width: 760px)', 'base' => 'provenance-summit-wide', 'widths' => array( 1440, 1920 ), 'sizes' => '100vw' ),
-				),
 			)
 		);
 		?>
+		<video id="hxhe-hero-video" class="hxhe-hero__video" width="960" height="960" muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1">
+			<source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/home-2026/swiss-mountain-640.mp4' ); ?>" type="video/mp4" media="(max-width: 699px)">
+			<source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/home-2026/swiss-mountain-960.mp4' ); ?>" type="video/mp4">
+		</video>
 		<figcaption class="hxhe-caption">Matterhorn, Valais <span aria-hidden="true">·</span> 4&#8239;478&nbsp;m</figcaption>
 	</figure>
-</section>
+	<button class="hxhe-hero__control" type="button" aria-controls="hxhe-hero-video" aria-label="Play hero video"><span class="hxhe-hero__control-label">Play</span></button>
+	<div class="hx-wrap hxhe-hero__text">
+		<h1 id="hxhe-title" class="hx-display hxhe-hero__title hx-load-rise" style="--hx-i:1">Precision born <em>from the Alps.</em></h1>
+		<p class="hx-lead hxhe-hero__lede hx-load-rise" style="--hx-i:2">Switzerland is not a backdrop. It is a methodology: four centuries of watchmaking mastery, pharmaceutical leadership and Alpine purity, distilled into every formula we create.</p>
+	</div>
+</header>
 
-<section class="hxhe-sec hxhe-guarantee" aria-labelledby="hxhe-guarantee-title">
+<nav class="hxhe-index" aria-label="On this page">
+	<div class="hx-wrap">
+		<ol class="hxhe-index__list">
+			<?php foreach ( $parts as $i => [ $id, $title ] ) : ?>
+			<li><a class="hxhe-index__link" href="#<?php echo esc_attr( $id ); ?>"><span class="hxhe-index__n" aria-hidden="true"><?php echo esc_html( sprintf( '%02d', $i + 1 ) ); ?></span><?php echo esc_html( $title ); ?></a></li>
+			<?php endforeach; ?>
+		</ol>
+	</div>
+</nav>
+
+<section id="standard" class="hxhe-sec hxhe-guarantee" aria-labelledby="hxhe-guarantee-title">
 	<div class="hx-wrap hxhe-split hxhe-split--image-left">
 		<figure class="hxhe-split__media hx-frame" data-hx-reveal="settle">
 			<?php echo cos_h26_picture( 'hxhe-hands', array( 640, 960, 1280 ), array( 4, 5 ), 'Two hands presenting the Micellar Water All-in-One Cleanser against a white ground', array( 'sizes' => '(min-width: 900px) 42vw, 100vw', 'w' => 960 ) ); // phpcs:ignore ?>
@@ -65,7 +88,7 @@ $a = cos_hxhe_arrow();
 	</div>
 </section>
 
-<section class="hxhe-sec hxhe-eras" aria-labelledby="hxhe-eras-title">
+<section id="history" class="hxhe-sec hxhe-eras" aria-labelledby="hxhe-eras-title">
 	<div class="hx-wrap">
 		<h2 id="hxhe-eras-title" class="hx-heading hxhe-h2 hxhe-eras__title" data-hx-reveal>A heritage of doing things properly.</h2>
 		<ol class="hxhe-eras__list" data-hx-stagger>
@@ -88,13 +111,13 @@ $a = cos_hxhe_arrow();
 	</div>
 </section>
 
-<section class="hxhe-sec hxhe-code" aria-labelledby="hxhe-code-title">
+<section id="code" class="hxhe-sec hxhe-code" aria-labelledby="hxhe-code-title">
 	<div class="hx-wrap hxhe-code__grid">
 		<div class="hxhe-code__aside">
 			<h2 id="hxhe-code-title" class="hx-heading hxhe-h2" data-hx-reveal>The Helvetic code.</h2>
 			<p class="hx-lead hxhe-head__lede" data-hx-reveal>Four concepts drawn from Swiss cultural tradition, applied to every decision we make.</p>
 			<figure class="hxhe-code__media hx-frame" data-hx-reveal="fade">
-				<?php echo cos_h26_picture( 'hxhe-jar', array( 640, 960, 1280 ), array( 4, 5 ), 'Hands holding the 24h Regeneration Cream jar, a touch of cream on the fingertip and the back of the hand', array( 'sizes' => '(min-width: 1100px) 30vw, 100vw', 'w' => 960 ) ); // phpcs:ignore ?>
+				<?php echo cos_h26_picture( 'hxhe-code', array( 640, 960, 1280 ), array( 4, 5 ), 'The four formulas and the cream jar arranged on dark stone among broad green leaves', array( 'sizes' => '(min-width: 1100px) 30vw, 100vw', 'w' => 960 ) ); // phpcs:ignore ?>
 			</figure>
 		</div>
 		<ol class="hxhe-code__list" data-hx-stagger>
@@ -118,13 +141,13 @@ $a = cos_hxhe_arrow();
 	</div>
 </section>
 
-<section class="hxhe-sec hxhe-explore" aria-labelledby="hxhe-explore-title">
+<section id="explore" class="hxhe-sec hxhe-explore" aria-labelledby="hxhe-explore-title">
 	<div class="hx-wrap">
 		<h2 id="hxhe-explore-title" class="hx-title hxhe-explore__title" data-hx-reveal="fade">Explore the heritage</h2>
 		<ul class="hxhe-explore__list" data-hx-stagger>
 			<li data-hx-reveal>
 				<a class="hxhe-card" href="<?php echo esc_url( home_url( '/heritage/craftsmanship/' ) ); ?>">
-					<span class="hxhe-card__media hx-frame"><?php echo cos_h26_picture( 'hxhe-drop', array( 640, 960, 1280 ), array( 4, 5 ), '', array( 'sizes' => '(min-width: 760px) 46vw, 100vw', 'w' => 960 ) ); // phpcs:ignore ?></span>
+					<span class="hxhe-card__media hx-frame"><?php echo cos_h26_picture( 'hxhe-craft', array( 640, 960, 1280 ), array( 4, 5 ), '', array( 'sizes' => '(min-width: 760px) 46vw, 100vw', 'w' => 960 ) ); // phpcs:ignore ?></span>
 					<span class="hx-title hxhe-card__title">The art of Swiss manufacture.</span>
 					<span class="hxhe-card__body">From raw ingredient to sealed vessel: manual verification at each stage, and a formula released only when it meets our quality standard.</span>
 					<span class="hxhe-card__cta">Craftsmanship &amp; sourcing<?php echo $a; // phpcs:ignore ?></span>
@@ -132,7 +155,7 @@ $a = cos_hxhe_arrow();
 			</li>
 			<li data-hx-reveal>
 				<a class="hxhe-card" href="<?php echo esc_url( home_url( '/heritage/sustainability/' ) ); ?>">
-					<span class="hxhe-card__media hx-frame"><?php echo cos_h26_picture( 'hxhe-valley-warm-tall', array( 640, 960, 1280 ), array( 4, 5 ), '', array( 'sizes' => '(min-width: 760px) 46vw, 100vw', 'w' => 960 ) ); // phpcs:ignore ?></span>
+					<span class="hxhe-card__media hx-frame"><?php echo cos_h26_picture( 'hxhe-sustain-tall', array( 640, 960, 1280 ), array( 4, 5 ), '', array( 'sizes' => '(min-width: 760px) 46vw, 100vw', 'w' => 960 ) ); // phpcs:ignore ?></span>
 					<span class="hx-title hxhe-card__title">Responsibility as a Swiss value.</span>
 					<span class="hxhe-card__body">Recyclable packaging, sustainable ingredient sourcing, and products built for longevity, not disposability.</span>
 					<span class="hxhe-card__cta">Sustainability<?php echo $a; // phpcs:ignore ?></span>

@@ -1,0 +1,103 @@
+/* ==========================================================================
+   hx/legacy-floor.css — the type floor for the hand-authored content pages
+   (sitewide polish, 20 Oct 2026). Enqueued by inc/hx-system.php on every page but the homepage.
+
+   The journal (cos-art, cos-jnl*), ingredient (cos-ing), skin-concern (cos-cc), contact
+   (cos-ct), FAQ (cos-faq), help (cos-help), shipping (ship-*) and sitemap (cos-sm) pages carry
+   their own <style> in post_content, written before the hx system: 14px Inter Light body in a
+   cool slate (#5C6675), 8–10px labels and actions, gold (#8B692F) accents and 3px gold
+   left-border callouts. This sheet brings them onto DESIGN.md's roles without touching the
+   page content:
+     body    1rem / 400 / 1.7, body graphite (--hx-text)
+     detail  .9375rem / 400, muted graphite (--hx-fg-3) for card and note copy
+     label   12px / 500 / .2em tracked capitals
+     action  12.5px / 500 / .16em tracked capitals
+     accent  warm accent #625646 in place of gold; callouts keep their ground and get a 1px rule
+   Every selector is scoped under main#cos-main-content (page.html and 404.html), so it outranks
+   the class-level rules inside the page's own <style> without !important.
+   Sizes only grow; layout, copy and imagery are unchanged.
+   ========================================================================== */
+
+/* ─── Body: reading copy ─────────────────────────────────────────────── */
+/* #cos-faq p sits in :where() so its ID does not lift the whole list to two-ID specificity
+   (that silently outranked every class rule for the skin-concern card paragraphs) */
+#cos-main-content :is(.cos-art-p, .cos-ing-main p, .cos-cc-section p, .cos-cc-lede, .ship-p, .cos-help-section > p, .cos-faq-answer, .cos-cc-faq-a),
+#cos-main-content :where(#cos-faq) p{
+	font-size:1rem;
+	font-weight:400;
+	line-height:1.7;
+	color:var(--hx-text,#3A3B3D);
+}
+
+/* ─── Detail: card, note and callout copy ────────────────────────────── */
+#cos-main-content :is(.cos-cc-product-desc, .cos-jnl-featured-dek, .cos-help-card p, .ship-step-body, .ship-note, .cos-ing-mech-box p, .ship-callout p, .cos-ct-note){
+	font-size:.9375rem;
+	font-weight:400;
+	line-height:1.65;
+	color:var(--hx-fg-3,#5D5F60);
+}
+/* the skin-concern cards and note are <p>s inside .cos-cc-section, so they restate the
+   section's paragraph rule at higher specificity */
+#cos-main-content .cos-cc-section :is(p.cos-cc-note, p.cos-cc-product-desc){font-size:.9375rem;color:var(--hx-fg-3,#5D5F60)}
+#cos-main-content .cos-cc-section p.cos-cc-product-name{font-size:1.375rem;font-weight:400;line-height:1.3;color:var(--hx-ink,#1C1D1F)}
+#cos-main-content .cos-cc-section p.cos-cc-product-step{font-size:var(--hx-fs-label,.75rem);font-weight:500;letter-spacing:var(--hx-tr-label,.2em);color:var(--hx-fg-3,#5D5F60)}
+
+/* callouts: no gold bar; the ground stays, a 1px rule marks the edge */
+#cos-main-content :is(.cos-cc-note, .cos-ct-note, .cos-ing-mech-box, .ship-callout){
+	border-left:1px solid var(--hx-line-strong,rgba(28,29,31,.28));
+}
+
+/* ─── Hero sub-lines on photographs ──────────────────────────────────── */
+#cos-main-content :is(.cos-art-dek, .cos-ing-tagline, .cos-jnl-sub, .cos-jnl-hub-dek, .cos-ct-sub, .cos-help-sub, .ship-hero-sub){
+	font-size:1rem;
+	font-weight:400;
+	line-height:1.65;
+	color:rgba(248,247,244,.86);
+}
+#cos-main-content .cos-help-contact-tile p{font-size:.9375rem;font-weight:400;color:rgba(248,247,244,.82)}
+#cos-main-content .cos-cc-stat-label{font-size:.8125rem;font-weight:400;color:rgba(255,255,255,.8)}
+
+/* ─── Labels: eyebrows, meta, categories, form labels ────────────────── */
+#cos-main-content :is(.cos-art-eyebrow, .cos-art-meta, .cos-ing-eyebrow, .cos-cc-eyebrow, .cos-ct-eyebrow, .cos-ct-form-h, .cos-ct-info-label, .cos-ct-label, .cos-faq-eyebrow, .cos-faq-category-label, .cos-help-eyebrow, .cos-jnl-eyebrow, .cos-jnl-hub-eyebrow, .cos-jnl-card-stream, .cos-jnl-card-meta, .cos-jnl-hub-card-meta, .cos-ing-mech-box strong, .ship-eyebrow, .ship-step-title, .ship-table th, .cos-sm-eyebrow){
+	font-size:var(--hx-fs-label,.75rem);
+	font-weight:500;
+	letter-spacing:var(--hx-tr-label,.2em);
+}
+/* reading-time and date meta stay in sentence case */
+#cos-main-content :is(.cos-jnl-card-meta, .cos-jnl-hub-card-meta){letter-spacing:.04em;color:var(--hx-fg-3,#5D5F60)}
+#cos-main-content .cos-art-meta{color:rgba(255,255,255,.78)}
+/* gold → warm accent on light grounds; pearl on photographs */
+#cos-main-content :is(.cos-cc-eyebrow, .cos-jnl-card-stream, .cos-faq-category-label){color:var(--hx-accent,#625646)}
+#cos-main-content .cos-jnl-hub-eyebrow{color:rgba(255,255,255,.8)}
+#cos-main-content .ship-step-num{color:var(--hx-accent,#625646)}
+#cos-main-content .cos-ing-hero-inner .cos-ing-eyebrow{color:rgba(255,255,255,.8)}
+
+/* ─── Actions: links, buttons, tabs ──────────────────────────────────── */
+#cos-main-content :is(.cos-art-cta-link, .cos-art-back a, .cos-ing-back a, .cos-cc-product-link, .cos-cc-cta-btn, .cos-cc-cta-ghost, .cos-ct-submit, .cos-help-card a, .cos-help-contact-tile a, .cos-help-nav-link, .cos-jnl-nav-link, .cos-jnl-card-cta, .cos-jnl-hub-card-cta, .cos-jnl-hub-cta-link, .cos-jnl-hub-back, .ship-contact-btn, .cos-404-link-primary, .cos-404-link-outline){
+	font-size:.78125rem;
+	font-weight:500;
+	letter-spacing:.16em;
+}
+#cos-main-content .cos-cc-cta-ghost{color:var(--hx-ink,#1C1D1F);border-color:var(--hx-line-strong,rgba(28,29,31,.28))}
+#cos-main-content :is(.cos-jnl-nav-link:hover, .cos-jnl-nav-link.active, .cos-help-nav-link:hover){border-bottom-color:var(--hx-ink,#1C1D1F)}
+#cos-main-content .cos-cc-product-card:hover .cos-cc-product-link{color:var(--hx-ink,#1C1D1F);border-color:currentColor}
+/* text links that were 15–20px tall: a 44px hit area without moving the type */
+#cos-main-content :is(.cos-art-cta-link, .cos-art-back a, .cos-jnl-hub-back){display:inline-flex;align-items:center;min-height:44px}
+
+/* ─── Breadcrumbs (skin concerns) ────────────────────────────────────── */
+#cos-main-content .cos-cc-crumbs ol{align-items:center;font-size:var(--hx-fs-label,.75rem);color:var(--hx-fg-3,#5D5F60)}
+#cos-main-content .cos-cc-crumbs a{display:inline-flex;align-items:center;min-height:32px}
+
+/* FAQ closing block: its sizes are inline style attributes, so only !important reaches them */
+#cos-main-content #cos-faq [style*="font-size:10px"]{font-size:var(--hx-fs-label,.75rem)!important;font-weight:500!important}
+#cos-main-content #cos-faq a[style*="font-size:9px"]{font-size:.78125rem!important;font-weight:500!important;letter-spacing:.16em!important}
+#cos-main-content #cos-faq p[style*="font-size:13px"]{font-size:.9375rem!important;font-weight:400!important;color:var(--hx-fg-3,#5D5F60)!important}
+/* FAQ questions: the reader's entry point, 13px → 15px */
+#cos-main-content .cos-faq-q-btn{font-size:.9375rem;line-height:1.45}
+
+/* ─── The "Scroll" cue under each hero ───────────────────────────────── */
+#cos-main-content :is(.cos-art-scroll-text, .cos-ing-scroll-text, .cos-ct-scroll-text, .cos-faq-scroll-text, .cos-help-scroll-text, .cos-jnl-scroll-text, .ship-scroll-text){
+	font-size:var(--hx-fs-label,.75rem);
+	letter-spacing:var(--hx-tr-label,.2em);
+	color:rgba(255,255,255,.72);
+}

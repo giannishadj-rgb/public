@@ -1,20 +1,36 @@
 /* hx-motion.js — Caviar of Switzerland homepage motion (14 Oct 2026 rebuild).
- * Owner: system agent. Dependency-free, deferred. CSS half lives in assets/css/hx/system.css.
+ * Owner: system agent. Dependency-free, deferred. CSS half lives in assets/css/home-staging/system.css.
+ *
+ * 20 Oct 2026 (animate pass): below-fold reveals finish in 600–900ms and start at most 150ms
+ * after intersecting; photographs are never hidden by a reveal (see system.css).
  *
  * REVEALS — add data-hx-reveal to any element:
- *   data-hx-reveal            fade + rise 28px (default; same as "rise")       1200ms, --hx-ease
- *   data-hx-reveal="fade"     opacity only                                      1400ms
- *   data-hx-reveal="mask"     curtain lifts from bottom (clip-path); <img> inside settles 1.08→1   1800ms
- *   data-hx-reveal="mask-x"   curtain opens left→right; <img> inside settles 1.08→1               1800ms
- *   data-hx-reveal="settle"   fade + <img> inside (or the img itself) scales 1.04→1                1800ms
- *   Delay:   data-hx-delay="240" (ms)  or  style="--hx-i:2" (× --hx-stagger 120ms)
+ *   data-hx-reveal            text: fade + rise 14px (default; same as "rise")       700ms, --hx-ease
+ *   data-hx-reveal="fade"     text: opacity only                                       600ms
+ *   data-hx-reveal="light"    headings: a band of light writes the words in (starts mostly lit) 800ms
+ *   data-hx-reveal="mask" / "mask-x" / "settle"
+ *                             images: the <img> inside settles 1.04→1 within its frame;  900ms
+ *                             the frame and photograph are never clipped, faded or darkened
+ *   data-hx-reveal="blind"    a group of photographs rises 14px into place, nothing hidden   800ms
+ *   Delay:   data-hx-delay="240" (ms)  or  style="--hx-i:2" (× --hx-stagger 50ms); the CSS caps
+ *            the total at --hx-delay-max (150ms), so nothing waits long after it intersects.
  *   Stagger: put data-hx-stagger on a parent → its [data-hx-reveal] descendants get --hx-i = 0,1,2…
  *            in document order (an explicit --hx-i/data-hx-delay on a child still wins).
- *   Trigger: when the element's top passes ~88% of the viewport height (rootMargin -12% bottom).
+ *   Trigger: as soon as the element's top passes 94% of the viewport height (rootMargin -6% bottom).
+ *   Instant (no transition) when: the element is on screen or above it at start; it enters from
+ *   above (scrolling back up); it arrives by a jump (deep link, End/Home, scrollbar drag,
+ *   find-in-page, a long anchor jump: any scroll of more than one viewport between two events);
+ *   or keyboard focus moves into it.
  *   Guarantees: content is never hidden unless this script ran AND motion is allowed. Elements
  *   already in (or above) the viewport at start are shown instantly — no flash, no animation;
  *   for above-the-fold motion use the CSS-only .hx-load-* classes. Under prefers-reduced-motion
- *   nothing moves and everything is visible. Only opacity / transform / clip-path animate.
+ *   nothing moves and everything is visible. Only opacity / transform / mask animate.
+ *
+ * ANCHORS — same-page links (a[href="#id"]): a short distance (≤ 2 viewports) glides with native
+ *   smooth scrolling; a longer one jumps, so no one waits through a page-long glide. Either way
+ *   the target honours its scroll-margin, the URL hash updates, and focus moves to the target
+ *   (tabindex="-1" added when needed) for keyboard and screen-reader users. Reduced motion: jumps.
+ *   There is no CSS scroll-behavior:smooth, which would also animate deep links (/#ritual) on load.
  *
  * DRIFT (parallax) — data-hx-drift or data-hx-drift="0.06" (factor, default 0.06, max 0.2):
  *   translates the element vertically by (element centre − viewport centre) × −factor, clamped to
@@ -34,13 +50,23 @@
 	var hasIO = 'IntersectionObserver' in window;
 	var seen = typeof WeakSet === 'function' ? new WeakSet() : null;
 	var revealIO = null;
+	var jumpUntil = 0; // reveals intersecting before this time (ms) show instantly
+	function now() { return window.performance && performance.now ? performance.now() : Date.now(); }
+	function markJump(ms) { jumpUntil = Math.max(jumpUntil, now() + (ms || 200)); }
 
 	function all(root, sel) {
 		return Array.prototype.slice.call((root || document).querySelectorAll(sel));
 	}
 
+	// instant: .hx-instant marks "arrived without an entrance" for good (CSS skips entrance
+	// animations on it); .hx-snap only suppresses transitions for two frames, so hover easing
+	// on the photographs inside keeps working afterwards.
 	function show(el, instant) {
-		if (instant) el.classList.add('hx-instant');
+		if (instant) {
+			el.classList.add('hx-instant', 'hx-snap');
+			var raf = window.requestAnimationFrame || function (f) { return setTimeout(f, 16); };
+			raf(function () { raf(function () { el.classList.remove('hx-snap'); }); });
+		}
 		el.classList.add('is-in');
 	}
 
@@ -80,6 +106,48 @@
 			}
 			revealIO.observe(el);
 		});
+	}
+
+	/* ── jumps, focus and anchors ─────────────────────────────────── */
+	var lastY = window.pageYOffset || 0;
+	function onScroll() {
+		var y = window.pageYOffset || 0;
+		if (Math.abs(y - lastY) > (window.innerHeight || doc.clientHeight)) markJump(200);
+		lastY = y;
+	}
+
+	function revealWithin(el) {
+		// keyboard focus landed inside a hidden reveal: show it (and any hidden ancestors) at once
+		for (var n = el; n && n.closest; n = n.parentElement) {
+			n = n.closest('[data-hx-reveal]:not(.is-in)');
+			if (!n) break;
+			show(n, true);
+			if (revealIO) revealIO.unobserve(n);
+		}
+	}
+
+	function targetOf(a) {
+		if (!a || !a.hash || a.hash.length < 2) return null;
+		if (a.origin !== location.origin || a.pathname.replace(/\/$/, '') !== location.pathname.replace(/\/$/, '')) return null;
+		try { return document.getElementById(decodeURIComponent(a.hash.slice(1))); } catch (err) { return null; }
+	}
+
+	function onAnchorClick(e) {
+		if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+		var a = e.target.closest ? e.target.closest('a[href*="#"]') : null;
+		var t = targetOf(a);
+		if (!t) return;
+		e.preventDefault();
+		var vh = window.innerHeight || doc.clientHeight;
+		var margin = parseFloat(getComputedStyle(t).scrollMarginTop) || 0;
+		var dist = Math.abs(t.getBoundingClientRect().top - margin);
+		var glide = !reduced && dist <= vh * 2;
+		if (!glide) markJump(400);
+		t.scrollIntoView({ behavior: glide ? 'smooth' : 'auto', block: 'start' });
+		if (history.pushState) history.pushState(null, '', a.hash); else location.hash = a.hash;
+		if (!t.hasAttribute('tabindex') && !/^(A|BUTTON|INPUT|SELECT|TEXTAREA)$/.test(t.tagName)) t.setAttribute('tabindex', '-1');
+		t.focus({ preventScroll: true });
+		revealWithin(t);
 	}
 
 	/* ── drift ─────────────────────────────────────────────────────── */
@@ -155,8 +223,27 @@
 	}
 
 	function boot() {
-		// Shopping and reading content is visible immediately. The hero keeps the
-		// authored load-time entrance; section hooks remain for compatibility.
+		// 20 Oct 2026 (owner: "animate the home page"): scroll reveals are back on. Content is
+		// hidden only once this line has run (html.hx-motion), only below the fold, and never
+		// under reduced motion; anything already on screen is shown at once.
+		if (!reduced && hasIO) {
+			revealIO = new IntersectionObserver(function (entries) {
+				var jumped = now() < jumpUntil;
+				entries.forEach(function (e) {
+					if (!e.isIntersecting) return;
+					// entering from above (scrolling back up past skipped content) or after a jump: no transition
+					var fromAbove = e.boundingClientRect.top < (e.rootBounds ? e.rootBounds.top : 0) + 1;
+					show(e.target, jumped || fromAbove);
+					revealIO.unobserve(e.target);
+				});
+			}, { rootMargin: '0px 0px -6% 0px', threshold: 0 });
+			doc.classList.add('hx-motion');
+		}
+		// a deep link (/#ritual) may land after this runs: treat the first moments as a jump
+		if (location.hash && location.hash.length > 1) markJump(1200);
+		window.addEventListener('scroll', onScroll, { passive: true });
+		document.addEventListener('focusin', function (e) { revealWithin(e.target); });
+		document.addEventListener('click', onAnchorClick);
 		initReveals(document);
 		initDrift(document);
 		listen(mqReduce, onMotionPrefChange);

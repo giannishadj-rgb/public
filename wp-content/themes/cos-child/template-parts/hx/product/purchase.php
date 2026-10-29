@@ -20,6 +20,8 @@ $plus    = '<span class="hxpd-acc__icon" aria-hidden="true"></span>';
 		<div class="hxpd-summary">
 		<?php if ( $is_set ) : ?>
 		<p class="hxpd-step"><span class="hxpd-step__verb">The four steps</span><span class="hxpd-step__rule" aria-hidden="true"></span><span class="hxpd-step__of">Cleanse · Treat · Revive · Restore</span></p>
+		<?php elseif ( $me && 'g' === ( $args['look'] ?? '' ) ) : // clarify, 28 Oct 2026: one statement of the step, not "01 Cleanse" and "Step 1 of 4" ?>
+		<p class="hxpd-step"><span class="hxpd-step__verb">Step <?php echo esc_html( (string) (int) $me['num'] ); ?> of 4 <span aria-hidden="true">·</span> <?php echo esc_html( $me['verb'] ); ?></span></p>
 		<?php elseif ( $me ) : ?>
 		<p class="hxpd-step"><span class="hx-sr">Step </span><span class="hx-step"><?php echo esc_html( $me['num'] ); ?></span><span class="hxpd-step__rule" aria-hidden="true"></span><span class="hxpd-step__verb"><?php echo esc_html( $me['verb'] ); ?></span><span class="hxpd-step__of"><span class="hx-sr">, </span>Step <?php echo esc_html( (string) (int) $me['num'] ); ?> of 4</span></p>
 		<?php endif; ?>
@@ -72,17 +74,28 @@ $plus    = '<span class="hxpd-acc__icon" aria-hidden="true"></span>';
 		<p class="hxpd-evidence"><a href="#hxpd-result" class="hxpd-evidence__link"><span class="hxpd-evidence__fig"><?php echo esc_html( $study['sign'] . $study['n'] . $study['unit'] ); ?></span> <?php echo esc_html( strtolower( $study['finding'] ) ); ?> <span class="hxpd-evidence__kind">(<?php echo esc_html( strtolower( $study['kind'] ) ); ?>, 28 days)</span></a></p>
 		<?php endif; ?>
 
+		<?php if ( 'g' === ( $args['look'] ?? '' ) ) : ?>
+		<ul class="hxpd-services" aria-label="Our services">
+			<li><span class="hxpd-services__icon hxpd-services__icon--ship" aria-hidden="true"></span><?php echo esc_html( $args['shipping'] ); ?></li>
+			<li><span class="hxpd-services__icon hxpd-services__icon--return" aria-hidden="true"></span><a href="<?php echo esc_url( home_url( '/shipping-returns/' ) ); ?>">Returns within 30 days</a></li>
+			<li><span class="hxpd-services__icon hxpd-services__icon--lock" aria-hidden="true"></span>Secure checkout</li>
+		</ul>
+		<?php else : ?>
 		<ul class="hxpd-assure">
 			<li><?php echo esc_html( $args['shipping'] ); ?></li>
 			<li><a href="<?php echo esc_url( home_url( '/shipping-returns/' ) ); ?>">Returns within 30 days</a></li>
 		</ul>
+		<?php endif; ?>
 
-		<?php if ( ! empty( $pd['benefits'] ) && ! $is_set ) : ?>
+		<?php if ( 'ab' === ( $args['look'] ?? '' ) ) :
+			get_template_part( 'template-parts/hx/product/purchase-ab', null, $args );
+		elseif ( ! empty( $pd['benefits'] ) && ! $is_set && 'g' !== ( $args['look'] ?? '' ) ) : // owner, 25 Oct 2026: none on the Micellar Water page ?>
 		<ul class="hxpd-benefits" aria-label="Benefits">
 			<?php foreach ( array_slice( $pd['benefits'], 0, 3 ) as $b ) : ?><li><?php echo esc_html( $b ); ?></li><?php endforeach; ?>
 		</ul>
 		<?php endif; ?>
 
+		<?php if ( ! in_array( $args['look'] ?? '', array( 'ab', 'g' ), true ) ) : // the Micellar Water page has no accordions (owner, 25 Oct 2026); its ingredient list sits under Key ingredients ?>
 		<div class="hxpd-acc">
 			<?php if ( ! $is_set ) : ?>
 			<details class="hxpd-acc__item">
@@ -117,6 +130,7 @@ $plus    = '<span class="hxpd-acc__icon" aria-hidden="true"></span>';
 				<p class="hxpd-acc__text"><?php echo esc_html( $args['shipping'] ); ?> Returns are accepted within 30 days. <a href="<?php echo esc_url( home_url( '/shipping-returns/' ) ); ?>">Delivery and returns in full</a></p>
 			</details>
 		</div>
+		<?php endif; ?>
 		</div>
 	</div>
 </div>

@@ -1,0 +1,353 @@
+/* ==========================================================================
+   hx/typeset.css — homepage typeset, couture register (19 Oct 2026)
+   Loaded LAST on the homepage only (inc/home-2026.php). Owner brief: "prestigious
+   and luxurious like Dior", not enlarged for the older audience.
+
+   Seven roles replace ~20 ad-hoc sizes. Authority comes from capitals, tracking and
+   space, not from size; colour is monochrome ink / graphite (no brown accents).
+
+     display  Cormorant 300 · CAPS · +.04em · 26→40px (sections), 30→52px (closing)
+              same voice as the hero headline (hx/hero.css)
+     title    Cormorant 400 · sentence · 20→24px   names, findings, facts
+     figure   Cormorant 300 · lining · 48→72px      measured results (reported 32→44px)
+     body     Inter 400 · 16px · 1.7                lead and reading copy
+     detail   Inter 400 · 14px                      methods, sizes, captions
+     label    Inter 500 · 12px · CAPS · .2em        captions above content, step names
+     action   Inter 500 · 12.5px · CAPS · .16em     every link, button and CTA (≥44px targets)
+
+   Selectors start with html body.cos-h26 so they win over the section sheets and the
+   legacy homepage layers without !important. Delete this file to roll back.
+   ========================================================================== */
+
+html body.cos-h26{
+	--ts-display:clamp(1.625rem,1.3rem + 1.3vw,2.5rem);
+	--ts-statement:min(3.25rem,calc((100vw - 2 * var(--hx-margin,24px)) * .076)); /* "REFINED TO THE ESSENTIAL." on one line */
+	--ts-title:clamp(1.25rem,1.15rem + .4vw,1.5rem);
+	--ts-figure:clamp(3rem,2.4rem + 2.4vw,4.5rem);
+	--ts-figure-sm:clamp(2rem,1.7rem + 1.2vw,2.75rem);
+	--ts-tr-caps:.04em;
+	--ts-label:.75rem;
+	--ts-action:.78125rem;
+	/* shared tokens the section sheets already read */
+	--hx-fs-heading:var(--ts-display);
+	--hx-fs-title:var(--ts-title);
+	--hx-fs-lead:1rem;
+	--hx-fs-body:1rem;
+	--hx-fs-detail:.875rem;
+	--hx-fs-label:var(--ts-label);
+	--hx-fs-numeral:var(--ts-figure);
+	--hx-lh-body:1.7;
+	--hx-lh-lead:1.7;
+	--hx-tr-label:.2em;
+}
+
+/* ─── Display: section titles, the ritual and the closing statement ── */
+html body.cos-h26 :is(.hx-heading,.hxr__title,.hxz__title){
+	font-family:var(--hx-serif);
+	font-weight:300;
+	line-height:1.14;
+	letter-spacing:var(--ts-tr-caps);
+	text-transform:uppercase;
+	color:var(--hx-ink);
+	font-kerning:normal;
+	text-wrap:balance;
+}
+html body.cos-h26 :is(.hx-heading,.hxr__title){font-size:var(--ts-display)}
+html body.cos-h26 :is(.hx-heading,.hxr__title,.hxz__title) em{font-style:italic;font-weight:300;letter-spacing:var(--ts-tr-caps);color:inherit}
+html body.cos-h26 .hxz__title{font-size:var(--ts-statement);line-height:1.18}
+html body.cos-h26 .hxz__title em{padding-left:0}
+/* Science pillars (Protect. Repair. Rejuvenate.) sit under the section caption: one step down. */
+html body.cos-h26 .hxs .hx-heading{font-size:var(--ts-title)}
+
+/* ─── Title: names, statements, findings, facts ──────────────────── */
+html body.cos-h26 :is(.hxc__name,.hxv__name,.hxs__proof-title,.hxs__finding,.hxp__fact dt){
+	font-family:var(--hx-serif);
+	font-size:var(--ts-title);
+	font-weight:400;
+	line-height:1.22;
+	letter-spacing:0;
+	text-transform:none;
+	color:var(--hx-ink);
+}
+/* chapter names of Our story: capitals like the display voice, except the italic chapter */
+html body.cos-h26 .hxv__name:not(.hxv__name--italic){text-transform:uppercase;letter-spacing:var(--ts-tr-caps)}
+html body.cos-h26 .hxv__name em{font-weight:400}
+/* The Our story line is the section's one pull line: the title role, set light. */
+html body.cos-h26 .hxv .hxv__story{
+	font-family:var(--hx-serif);
+	color:var(--hx-ink);
+	font-size:var(--ts-title);
+	font-weight:300;
+	line-height:1.3;
+	letter-spacing:0;
+	max-width:none; /* measure set by hx/caviar.css */
+}
+/* Self-reported stays visibly secondary to the measured results: the body role, not a serif title. */
+html body.cos-h26 .hxs__result--reported .hxs__finding{font-family:var(--hx-sans);font-size:1rem;line-height:1.5;color:var(--hx-fg-2,#3A3B3D)}
+
+/* ─── Figure ─────────────────────────────────────────────────────── */
+html body.cos-h26 .hxs__fig-n{font-size:var(--ts-figure);line-height:.95;letter-spacing:-.01em}
+html body.cos-h26 .hxs__fig-n--sm{font-size:var(--ts-figure-sm)}
+
+/* ─── Body + detail ──────────────────────────────────────────────── */
+html body.cos-h26 :is(.hx-lead,.hx-body,.hxr__lede,.hxr__how,.hxv__line,.hxc__benefit){
+	font-family:var(--hx-sans);
+	font-size:1rem;
+	font-weight:400;
+	line-height:1.7;
+	letter-spacing:0;
+}
+html body.cos-h26 :is(.hx-detail,.hxs__kind,.hxz__assure li){font-size:.875rem;font-weight:400;letter-spacing:.01em}
+html body.cos-h26 .hxs__kind{color:var(--hx-fg-3,#5C5C5A)}
+html body.cos-h26 .hxc__meta{font-size:1rem;letter-spacing:.01em;font-variant-numeric:lining-nums tabular-nums}
+html body.cos-h26 :is(.hxc__price,.hxc__size){font-size:inherit}
+html body.cos-h26 .hxc__price{font-weight:400}
+
+/* ─── Label: captions above content, step names, places ──────────── */
+html body.cos-h26 :is(.hx-label,.hxc__verb,.hxs__product,.hxr__stepno,.hxp__caption,.hxp__place,.hxp__alt){
+	font-family:var(--hx-sans);
+	font-size:var(--ts-label);
+	font-style:normal;
+	font-weight:500;
+	line-height:1.5;
+	letter-spacing:.2em;
+	text-transform:uppercase;
+	color:var(--hx-ink);
+}
+html body.cos-h26 :is(.hxc__verb,.hxr__stepno){color:var(--hx-fg-3,#5C5C5A)}
+html body.cos-h26 .hxp__region{text-transform:uppercase}
+/* Vertical step names on the ritual photographs: lighter, still white on the veil. */
+html body.cos-h26 .hxr__word{font-size:1.25rem;font-weight:400;letter-spacing:.32em}
+
+/* ─── Action: every link, button and CTA ─────────────────────────── */
+html body.cos-h26 :is(.hx-link,.hx-btn,.hxz__cta){
+	font-family:var(--hx-sans);
+	font-size:var(--ts-action);
+	font-weight:500;
+	line-height:1.3;
+	letter-spacing:.16em;
+	text-transform:uppercase;
+}
+html body.cos-h26 .hx-link{background-position:0 calc(50% + 1.15em),0 calc(50% + 1.15em)}
+@media (max-width:359.98px){html body.cos-h26 :is(.hx-btn,.hxz__cta){letter-spacing:.12em}}
+
+/* ─── Browser surfaces ───────────────────────────────────────────── */
+html body.cos-h26 ::selection{background:var(--hx-ink,#1C1D1F);color:#F8F8F8}
+
+/* ==========================================================================
+   Homepage hierarchy (29 Oct 2026). The two-family atelier voice stays intact,
+   while display, evidence, editorial, reading and metadata roles keep distinct jobs.
+     display   Cormorant 300, capitals, +.04em
+     title     Cormorant 400, sentence case
+     text      Inter 400, 16px reading floor
+     metadata  Inter 400, 14px
+     action    Inter 500, 12.5px capitals, .16em
+   ========================================================================== */
+html body.cos-h26{
+	--ts-hero:clamp(1.75rem,1.35rem + 1.25vw,2.625rem);
+	--ts-display:clamp(1.75rem,1.35rem + 1.15vw,2.5rem);
+	--ts-statement:clamp(2rem,1.3rem + 2.2vw,3.25rem);
+	--ts-figure:clamp(3rem,2.4rem + 2vw,4.5rem);
+	--ts-figure-sm:clamp(2rem,1.65rem + 1vw,2.5rem);
+	--ts-title:clamp(1.3125rem,1.2rem + .35vw,1.5rem);
+	--ts-label:.78125rem;
+	--hx-fs-lead:1rem;
+	--hx-fs-body:1rem;
+	--hx-fs-detail:.875rem;
+}
+
+/* headline */
+html body.cos-h26 :is(.hxh__title,.hx-heading,.hxr__title,.hxz__title,.hxs .hx-heading,.hxm__fig,.hxs__fig-n,.hxs__fig-n--sm){
+	font-family:var(--hx-serif);
+	font-weight:300;
+	line-height:1.1;
+	letter-spacing:.04em;
+	text-transform:uppercase;
+	color:var(--hx-ink);
+}
+html body.cos-h26 :is(.hx-heading,.hxr__title,.hxz__title) em{font-weight:300;letter-spacing:.04em}
+html body.cos-h26 .hxh__title{font-size:var(--ts-hero);line-height:1.04}
+html body.cos-h26 :is(.hx-heading,.hxr__title){font-size:var(--ts-display)}
+html body.cos-h26 .hxz__title{font-size:var(--ts-statement);line-height:1.04}
+html body.cos-h26 :is(.hxm__fig,.hxs__fig-n){font-size:var(--ts-figure);letter-spacing:.02em;font-variant-numeric:lining-nums tabular-nums}
+html body.cos-h26 .hxs__fig-n--sm{font-size:var(--ts-figure-sm);font-variant-numeric:lining-nums tabular-nums}
+
+/* names, findings, facts: the headline's face and capitals at 20px */
+html body.cos-h26 :is(.hxc__name,.hxc__name span,.hxv__name,.hxv__name em,.hxv__story,.hxm__finding,.hxs__proof-title,.hxs__finding,.hxp__fact dt){
+	font-family:var(--hx-serif);
+	font-size:var(--ts-title);
+	font-weight:400;
+	line-height:1.25;
+	letter-spacing:0;
+	text-transform:none;
+	color:inherit;
+}
+html body.cos-h26 :is(.hxc__name,.hxv__name,.hxv__story,.hxm__finding,.hxs__proof-title,.hxs__finding,.hxp__fact dt){color:var(--hx-ink)}
+
+/* text */
+html body.cos-h26 :is(.hx-lead,.hx-body,.hx-detail,.hxr__lede,.hxr__how,.hxr__how li,.hxv__line,.hxc__benefit,.hxc__meta,.hxc__price,.hxc__size,.hxm__frame-line,.hxm__method,.hxm__credit,.hxp__fact dd,.hxz__assure li,.hxs__kind,.hxs__result--reported .hxs__finding){
+	font-family:var(--hx-sans);
+	font-size:1rem;
+	font-weight:400;
+	line-height:1.65;
+	letter-spacing:.01em;
+	text-transform:none;
+}
+html body.cos-h26 .hxc__price{font-weight:500}
+
+/* action: labels take the button's size and tracking */
+html body.cos-h26 :is(.hx-label,.hxc__verb,.hxs__product,.hxr__stepno,.hxp__caption,.hxp__place,.hxp__alt,.hxp__region,.hxm a:not(.hx-link),.hx-link,.hx-btn,.hxv__cta,.hxz__cta,.hxz__cta-text){
+	font-family:var(--hx-sans);
+	font-size:.78125rem;
+	font-weight:500;
+	letter-spacing:.16em;
+	text-transform:uppercase;
+}
+/* the collection and measured sheets scope by #collection / own classes: restate at their weight */
+html body.cos-h26 #collection .hxc__title{font-size:var(--ts-display);font-weight:300;letter-spacing:.04em;margin-right:-.04em;line-height:1.1}
+html body.cos-h26 #collection .hxc__lede{font-size:1rem;font-weight:400;line-height:1.65;letter-spacing:.01em}
+html body.cos-h26 #collection .hxc__benefit{font-size:.9375rem;font-weight:400;line-height:1.55;letter-spacing:0}
+html body.cos-h26 #collection :is(.hxc__meta,.hxc__price,.hxc__size){font-size:.875rem;font-weight:400;line-height:1.55;letter-spacing:.01em}
+html body.cos-h26 #collection .hxc__price{font-weight:500}
+html body.cos-h26 :is(.hxm__note,.hxm__nb){font-size:1rem;font-weight:400;line-height:1.65;letter-spacing:.01em}
+
+/* ─── Product titles, Dior-style (owner, 29 Oct 2026, ref: dior.com serums grid) ───────────
+   The collection tiles read as the shop's do: centred; the name in Inter 500, sentence case,
+   no tracking; the benefit a grey line beneath; then price · size. */
+html body.cos-h26 #collection.hxc :is(.hxc__copy,.hxc__meta){justify-self:stretch}
+html body.cos-h26 #collection.hxc .hxc__copy{text-align:center}
+html body.cos-h26 #collection.hxc :is(.hxc__name,.hxc__name span){
+	font-family:var(--hx-sans);font-size:1rem;font-weight:500;line-height:1.35;
+	letter-spacing:.005em;text-transform:none;color:var(--hx-ink);text-wrap:balance;
+}
+html body.cos-h26 #collection.hxc .hxc__benefit{margin-top:2px;font-size:.9375rem;line-height:1.5;letter-spacing:0;color:var(--hx-fg-3,#5D5F60);text-wrap:balance}
+html body.cos-h26 #collection.hxc .hxc__meta{justify-content:center}
+html body.cos-h26 #collection.hxc :is(.hxc__meta,.hxc__price,.hxc__size){font-size:.875rem;line-height:1.55}
+html body.cos-h26 #collection.hxc .hxc__price{font-weight:400;color:var(--hx-ink)}
+@media (max-width:599px){
+	html body.cos-h26 #collection.hxc :is(.hxc__name,.hxc__name span){font-size:.9375rem}
+	html body.cos-h26 #collection.hxc .hxc__benefit{font-size:.9375rem}
+	html body.cos-h26 #collection.hxc :is(.hxc__meta,.hxc__price,.hxc__size){font-size:.875rem}
+	html body.cos-h26 .hxm__nb{white-space:normal}
+}
+
+/* Keep long product and study terms readable under browser text enlargement. */
+html body.cos-h26 :is(.hxc__name,.hxc__benefit,.hxm__finding,.hxm__product a,.hxm__method,.hxm__note){
+	min-width:0;
+	overflow-wrap:anywhere;
+}
+html body.cos-h26 .hxm__product a{max-width:100%;white-space:normal}
+
+/* Story supporting roles follow the same Inter language as the collection. */
+html body.cos-h26 .hxv__story{
+	font-family:var(--hx-sans);
+	font-size:1rem;
+	font-weight:400;
+	font-style:normal;
+	line-height:1.65;
+	letter-spacing:.01em;
+	text-transform:none;
+}
+html body.cos-h26 .hxv :is(.hxv__name,.hxv__name em){
+	font-family:var(--hx-sans);
+	font-size:1rem;
+	font-weight:500;
+	font-style:normal;
+	line-height:1.35;
+	letter-spacing:.005em;
+	text-transform:none;
+}
+
+/* ==========================================================================
+   Swiss scientific luxury (owner brief, 29 Oct 2026; homepage only). Supersedes the
+   tracked-capitals display voice above and the Inter tile names of the Dior block.
+     display   Suisse Works 400 (provisional Cormorant), sentence case, -.01em
+               hero 40→84px · sections 32→60px · statement 30→56px · product titles
+     text      Suisse Int'l 400 (provisional Inter), 16→17px, 1.6
+     labels    Suisse Int'l 500, 12px capitals · actions 12.5→13px capitals
+   The faces come from --hx-serif / --hx-sans; inc/home-2026.php points them at Suisse
+   once the licensed files are in assets/fonts/suisse/. Nav is the sitewide header: unchanged.
+   Scoped under #cos-main-content so it outranks the :is() lists above without !important.
+   Quieter scale (owner, 29 Oct 2026: "high end skincare brands use smaller fonts so they
+   aren't as loud"; sizes in the range of Guerlain's measured 28/20px titles and Dior's 14px
+   names): hero 32→48px · sections 22→30px · statement 26→40px · names 18→20px ·
+   body 15px · descriptions/prices 14px · labels 11px · actions 12px.
+   ========================================================================== */
+html body.cos-h26{
+	--ts-hero:clamp(2rem,1.6rem + 1.6vw,3rem);
+	--ts-display:clamp(1.375rem,1.15rem + .85vw,2rem);
+	--ts-statement:clamp(1.625rem,1.3rem + 1.3vw,2.5rem);
+	--ts-product:clamp(1.125rem,1.05rem + .25vw,1.25rem);
+	--ts-title:clamp(1.125rem,1.05rem + .25vw,1.25rem);
+	--ts-figure:clamp(2.25rem,1.9rem + 1.3vw,3rem);
+	--ts-figure-sm:clamp(1.75rem,1.5rem + .9vw,2.25rem);
+	--ts-body:.9375rem;
+	--hx-fs-lead:var(--ts-body);
+	--hx-fs-body:var(--ts-body);
+}
+
+/* display: hero, section headings, editorial statement, figures; Regular, never bold */
+html body.cos-h26 #cos-main-content :is(.hxh__title,.hx-heading,.hxr__title,.hxz__title,.hxm__fig,.hxs__fig-n,.hxs__fig-n--sm),
+html body.cos-h26 #cos-main-content #collection .hxc__title{
+	font-family:var(--hx-serif);font-weight:400;letter-spacing:-.01em;margin-right:0;
+	text-transform:none;color:var(--hx-ink);font-kerning:normal;
+}
+html body.cos-h26 #cos-main-content :is(.hxh__title,.hx-heading,.hxr__title,.hxz__title) :is(em,span){font-weight:400;letter-spacing:inherit;text-transform:none}
+html body.cos-h26 #cos-main-content .hxh__title{font-size:var(--ts-hero);line-height:1.05}
+html body.cos-h26 #cos-main-content .hxh__lead{font-size:var(--ts-body);line-height:1.5;letter-spacing:0}
+html body.cos-h26 #cos-main-content :is(.hx-heading,.hxr__title),html body.cos-h26 #cos-main-content #collection .hxc__title{font-size:var(--ts-display);line-height:1.15}
+html body.cos-h26 #cos-main-content .hxz__title{font-size:var(--ts-statement);line-height:1.12}
+html body.cos-h26 #cos-main-content .hxs .hx-heading{font-size:var(--ts-title);line-height:1.15}   /* Protect. Repair. Rejuvenate.: a step below */
+html body.cos-h26 #cos-main-content :is(.hxm__fig,.hxs__fig-n){line-height:.95;letter-spacing:-.015em}
+
+/* product titles: the display face, Regular */
+html body.cos-h26 #cos-main-content #collection.hxc :is(.hxc__name,.hxc__name span){
+	font-family:var(--hx-serif);font-size:var(--ts-product);font-weight:400;line-height:1.2;
+	letter-spacing:-.005em;text-transform:none;overflow-wrap:normal;
+}
+html body.cos-h26 #cos-main-content #collection.hxc .hxc__benefit{margin-top:4px}
+/* names, findings, facts */
+html body.cos-h26 #cos-main-content :is(.hxm__finding,.hxs__proof-title,.hxs__finding,.hxp__fact dt){font-size:var(--ts-title);font-weight:400;line-height:1.2;letter-spacing:-.005em}
+
+/* text: body 16→17px, product descriptions 15→16px, prices and sizes in the sans */
+html body.cos-h26 #cos-main-content :is(.hx-lead,.hx-body,.hxr__lede,.hxr__how,.hxr__how li,.hxv__line,.hxv__story,.hxm__frame-line,.hxm__note,.hxm__nb,.hxp__fact dd),
+html body.cos-h26 #cos-main-content #collection .hxc__lede{font-size:var(--ts-body);line-height:1.6;letter-spacing:0}
+html body.cos-h26 #cos-main-content #collection.hxc .hxc__benefit{font-size:.875rem;line-height:1.5;letter-spacing:0}
+html body.cos-h26 #cos-main-content #collection.hxc :is(.hxc__meta,.hxc__price,.hxc__size){font-size:.875rem;letter-spacing:0}
+html body.cos-h26 #cos-main-content #collection.hxc .hxc__price{font-weight:500}
+
+/* labels (eyebrows, step names) 12px; actions 12.5→13px; Medium, capitals, line-height 1.3 */
+html body.cos-h26 #cos-main-content :is(.hx-label,.hxc__verb,.hxs__product,.hxr__stepno,.hxp__caption,.hxp__place,.hxp__alt,.hxp__region){font-size:.6875rem;font-weight:500;line-height:1.3;letter-spacing:.16em}
+html body.cos-h26 #cos-main-content :is(.hx-link,.hx-btn,.hxv__cta,.hxz__cta,.hxz__cta-text,.hxm a:not(.hx-link)){font-size:.75rem;font-weight:500;line-height:1.3;letter-spacing:.14em}
+
+/* One section head (owner, 29 Oct 2026: "The essential four" and "Our story" read differently):
+   both titles are the display role; both subtitles are the lead (Inter 15px, graphite); the same
+   title→subtitle gap and the same space down to the photographs. */
+html body.cos-h26 #cos-main-content :is(.hxc__head,.hxv__head){row-gap:clamp(12px,.5rem + .55vw,18px);margin-bottom:clamp(36px,1.5rem + 2vw,56px)}
+html body.cos-h26 #cos-main-content .hxv .hxv__story{
+	margin-top:0;font-family:var(--hx-sans);font-size:var(--ts-body);font-weight:400;font-style:normal;
+	line-height:1.6;letter-spacing:0;color:var(--hx-fg-2,#3A3B3D);
+}
+html body.cos-h26 #cos-main-content .hxv__act{margin-top:clamp(10px,.25rem + .6vw,16px)}
+/* study methods and the closing assurances: the detail role, 14px */
+html body.cos-h26 #cos-main-content :is(.hxm__method,.hxz__assure li){font-size:.875rem;line-height:1.55;letter-spacing:0}
+
+/* ─── Focus (owner, 29 Oct 2026: "remove the selection effect where an outline in red and blue
+   appears"). WordPress core outlines every focused element on a mouse click too
+   (:where(.wp-site-blocks :focus)), in the link colour: red while pressed, blue/purple once
+   visited. A click now shows nothing; the keyboard keeps a quiet ring (WCAG 2.4.7): 1px ink,
+   4px off the element, pearl on dark grounds. */
+html body{--cos-focus:var(--hx-ink,#1C1D1F);--hx-focus-color:var(--hx-ink,#1C1D1F);--hx-focus-width:1px;--hx-focus-offset:4px}
+html body :focus:not(:focus-visible){outline:none}
+html body :focus-visible{outline:1px solid var(--hx-ink,#1C1D1F);outline-offset:4px;border-radius:0}
+html body :is(.hx-on-dark,.hxh--dark,#cos-footer) :focus-visible{outline-color:#F8F8F8}
+
+/* ─── Homepage critique fixes (29 Oct 2026) ───────────────────────────────────────────
+   Provenance: the kicker label is gone; the photograph's place reads as a quiet caption in
+   sentence case, not tracked capitals. Measured: the one photo credit (the eye cream's campaign
+   photograph) hangs under its image out of flow, so the three findings keep the composed
+   stagger only. Our story: chapter titles in the display face, like every other card title. */
+html body.cos-h26 #cos-main-content :is(.hxp__caption,.hxp__place,.hxp__region,.hxp__alt){font-size:.8125rem;font-weight:400;letter-spacing:.01em;text-transform:none}
+html body.cos-h26 #cos-main-content .hxm__figure{position:relative}
+html body.cos-h26 #cos-main-content .hxm__credit{position:absolute;top:100%;left:0;right:0;margin-top:8px;font-size:.8125rem}
+html body.cos-h26 #cos-main-content .hxv :is(.hxv__name,.hxv__name em){font-family:var(--hx-serif);font-size:var(--ts-title);font-weight:400;line-height:1.2;letter-spacing:-.005em}

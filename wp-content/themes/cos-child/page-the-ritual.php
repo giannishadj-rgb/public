@@ -9,7 +9,11 @@
  * design-sources/home-2026/rebuild-2026-10-14/work/the-ritual/page-the-ritual.html.bak so
  * this PHP template wins the hierarchy. Delete this file and restore that one to roll back.
  *
- * Sections (template-parts/hx/the-ritual/): hero, prelude, steps, order, day, offer.
+ * Sections (template-parts/hx/the-ritual/): hero, bar, glance, steps, offer. ("Morning and
+ * evening" removed by the owner, 23 Oct 2026; its SPF and overnight notes live in the steps.)
+ * Clarify pass, 23 Oct 2026: the page reads as three named parts (at a glance · step by step ·
+ * the Complete Ritual), mapped in the hero and tracked by a sticky section bar; the prelude
+ * quote (a repeat of the hero) was cut and "Why the order matters" became "At a glance".
  * Styles: assets/css/hx/the-ritual.css (on top of the sitewide hx/system.css).
  * Copy: carried over from the DB content and inc/product-data.php (how-to-apply, amounts,
  * who it suits), cosmetic wording only; prices are live WooCommerce prices.
@@ -26,9 +30,12 @@ add_filter( 'body_class', static function ( array $classes ): array {
 	return $classes;
 } );
 
-// Hero image preload (the 4:5 tray crop is the LCP on every viewport).
+// Hero image preload (the full-bleed plate is the LCP): the wide tray on landscape screens
+// from 700px, the 4:5 crop everywhere else; the media queries match the hero's <picture>.
 add_action( 'wp_head', static function (): void {
-	echo '<link rel="preload" as="image" type="image/avif" fetchpriority="high" imagesrcset="' . esc_attr( cos_h26_srcset( 'hxrt-tray', array( 720, 880 ), 'avif' ) ) . '" imagesizes="(min-width: 900px) 46vw, 100vw">' . "\n";
+	$wide = '(min-width: 700px) and (orientation: landscape)';
+	echo '<link rel="preload" as="image" type="image/avif" fetchpriority="high" media="' . esc_attr( $wide ) . '" imagesrcset="' . esc_attr( cos_h26_srcset( 'final-tray-wide', array( 1280, 1920, 2560 ), 'avif' ) ) . '" imagesizes="100vw">' . "\n";
+	echo '<link rel="preload" as="image" type="image/avif" fetchpriority="high" media="not all and ' . esc_attr( $wide ) . '" imagesrcset="' . esc_attr( cos_h26_srcset( 'hxrt-tray', array( 720, 880 ), 'avif' ) ) . '" imagesizes="100vw">' . "\n";
 }, 2 );
 
 /** Internal page URL by path, with a literal fallback. */
@@ -143,6 +150,12 @@ $hxrt_args = array(
 	'steps' => $hxrt_steps,
 	'offer' => $hxrt_offer,
 	'url'   => $hxrt_url,
+	// The page's three parts: hero map (title + desc) and section bar (short).
+	'parts' => array(
+		array( 'id' => 'at-a-glance', 'title' => 'The ritual at a glance', 'short' => 'At a glance', 'desc' => 'The four steps, and why the order matters' ),
+		array( 'id' => 'step-by-step', 'title' => 'Step by step', 'short' => 'Step by step', 'desc' => 'How to apply each formula, and who it suits' ),
+		array( 'id' => 'complete-ritual', 'title' => 'The Complete Ritual', 'short' => 'Complete Ritual', 'desc' => 'All four formulas, as one set' ),
+	),
 );
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -155,7 +168,7 @@ $hxrt_args = array(
 <?php wp_body_open(); ?>
 <main id="cos-main-content" class="hxrt">
 <?php
-foreach ( array( 'hero', 'prelude', 'steps', 'order', 'day', 'offer' ) as $hxrt_part ) {
+foreach ( array( 'hero', 'bar', 'glance', 'steps', 'offer' ) as $hxrt_part ) {
 	get_template_part( 'template-parts/hx/the-ritual/' . $hxrt_part, null, $hxrt_args );
 }
 ?>

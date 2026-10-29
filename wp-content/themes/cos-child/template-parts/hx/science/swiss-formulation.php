@@ -8,14 +8,17 @@
 defined( 'ABSPATH' ) || exit;
 
 get_template_part( 'template-parts/hx/science/masthead', null, array(
+	'mode'  => 'bleed',
 	'label' => 'Chapter 05 <span aria-hidden="true">·</span> Swiss formulation',
 	'title' => 'Made in Zug, to a Swiss standard.',
 	'lead'  => 'Every formula is subject to rigorous stability, safety and independent efficacy testing before it reaches your skin. This is what “Made in Switzerland” means in practice.',
 	'plate' => array(
-		'base' => 'provenance-summit-wide', 'widths' => array( 1440, 1920 ), 'ratio' => array( 1440, 900 ),
+		// 25 Oct 2026 (no repeated pictures): the Matterhorn from the meadow, used nowhere else
+		'base' => 'heritage-alps-wide', 'widths' => array( 1440, 1920, 2400 ), 'ratio' => array( 2400, 1356 ),
 		'alt'  => 'The north and east faces of the Matterhorn, cloud streaming from the summit, printed in silver tones',
-		'tall' => array( 'provenance-summit-tall', array( 640, 960 ), array( 640, 896 ) ),
-		'pos'  => '50% 40%',
+		'tall' => array( 'heritage-alps-tall', array( 640, 960 ), array( 4, 5 ) ),
+		'pos'  => '50% 100%',
+		'pos_wide' => '50% 34%',
 		'caption' => 'Matterhorn, Valais. The formulas are made in Zug.',
 	),
 ) );

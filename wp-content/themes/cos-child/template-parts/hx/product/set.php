@@ -1,12 +1,15 @@
 <?php
 /**
- * Below the purchase area, for The Complete Ritual (hxpd): the four formulas as one set
- * (each with its step, role, size and own page), the results — each attached to its own
- * formula, with the honest note that the set itself was never studied and the cleanser
- * has no study — the order of use, and questions.
+ * Below the purchase area, for The Complete Ritual (hxpd). Since 29 Oct 2026 it follows the four
+ * formula pages (owner: "like the product pages"): the sticky section bar, the four steps as the
+ * formulas' image cards, the full ingredient lists, the results (each attached to its own formula,
+ * with the honest note that the set itself was never studied and the cleanser has no study), how
+ * to use, and questions. The set has no copy of its own beyond this file: everything else is read
+ * from the four formulas.
  */
 defined( 'ABSPATH' ) || exit;
 $studies = $args['studies'];
+$sz      = '(min-width: 900px) 23vw, 80vw';
 
 $faqs = array(
 	array( 'Do I have to use all four formulas together?', 'Each formula works on its own, but they are made to be used in sequence: the cleanser prepares the skin for the serum, the eye cream cares for the eye contour the other steps are not formulated for, and the 24h cream seals the routine.' ),
@@ -15,27 +18,56 @@ $faqs = array(
 	array( 'Is this a good gift?', 'Yes. The set is presented in the Caviar of Switzerland ritual box with a written ritual guide, ready to give.' ),
 	array( 'What if I only need one or two steps?', 'Each formula is also sold on its own. The Complete Ritual is for anyone starting the full routine, and costs less than buying the four separately.' ),
 );
+
+$parts = array(
+	array( 'hxpd-sci', 'The four steps' ),
+	array( 'hxpd-actives', 'Ingredients' ),
+	array( 'hxpd-result', 'Results' ),
+	array( 'hxpd-use', 'How to use' ),
+	array( 'hxpd-faq', 'Questions' ),
+);
 ?>
-<section class="hxpd-set" aria-labelledby="hxpd-set-title">
+<nav class="hxpd-secnav" aria-label="On this page">
+	<div class="hx-wrap"><ol class="hxpd-secnav__list">
+		<?php foreach ( $parts as $p ) : ?><li><a class="hxpd-secnav__link" href="#<?php echo esc_attr( $p[0] ); ?>"><?php echo esc_html( $p[1] ); ?></a></li><?php endforeach; ?>
+	</ol></div>
+</nav>
+
+<section class="hxpd-sci hxpd-sci--set" id="hxpd-sci" aria-labelledby="hxpd-sci-title">
 	<div class="hx-wrap">
-		<div class="hxpd-ritual__head">
-			<h2 id="hxpd-set-title" class="hx-heading" data-hx-reveal>The four steps</h2>
-			<p class="hx-lead hxpd-ritual__lede" data-hx-reveal>Each formula prepares the skin for the next, morning and evening. Every one is also sold on its own.</p>
+		<div class="hxpd-sci__head">
+			<h2 id="hxpd-sci-title" class="hx-heading hxpd-sci__title" data-hx-reveal>The four steps</h2>
+			<p class="hx-lead hxpd-sci__lede" data-hx-reveal>Each formula prepares the skin for the next, morning and evening. All four come full-size in the Caviar of Switzerland ritual box, with a written ritual guide, and each is also sold on its own.</p>
 		</div>
-		<ol class="hxpd-set__list" data-hx-stagger>
+		<ol class="hxpd-sci__list" data-hx-stagger>
 			<?php foreach ( $args['formulas'] as $f ) : ?>
-			<li class="hxpd-set__item" data-hx-reveal>
-				<a class="hxpd-set__link" href="<?php echo esc_url( $f['url'] ); ?>">
-					<span class="hxpd-set__stage"><?php echo cos_h26_picture( 'pack-' . $f['key'], array( 480, 720, 960 ), array( 2, 3 ), $f['cardalt'], array( 'class' => 'hxpd-set__object', 'sizes' => '(min-width: 1024px) 240px, 40vw', 'w' => 480 ) ); // phpcs:ignore ?></span>
-					<span class="hxpd-set__step"><span class="hx-step"><?php echo esc_html( $f['num'] ); ?></span><span class="hxpd-step__rule" aria-hidden="true"></span><?php echo esc_html( $f['verb'] ); ?></span>
-					<span class="hxpd-set__name"><?php echo esc_html( $f['full'] ); ?></span>
-					<span class="hxpd-set__copy"><?php echo esc_html( $f['copy'] ); ?></span>
-					<span class="hxpd-set__meta"><?php echo esc_html( $f['size'] ); ?><?php if ( $f['price'] ) : ?> <span aria-hidden="true">·</span> <?php echo esc_html( $f['price'] ); ?> on its own<?php endif; ?></span>
-					<span class="hxpd-set__cta" aria-hidden="true">Discover<span class="hx-arrow"></span></span>
-				</a>
+			<li class="hxpd-sci__card" data-hx-reveal>
+				<a class="hxpd-sci__media" href="<?php echo esc_url( $f['url'] ); ?>" tabindex="-1" aria-hidden="true"><?php echo cos_h26_picture( 'ritual-cut-' . $f['key'], array( 360, 540, 720 ), array( 3, 4 ), '', array( 'sizes' => $sz, 'w' => 720, 'class' => 'hxpd-sci__pack' ) ); // phpcs:ignore -- escaped in the helper ?></a>
+				<p class="hxpd-sci__step">Step <?php echo esc_html( (string) (int) $f['num'] ); ?> <span aria-hidden="true">·</span> <?php echo esc_html( $f['verb'] ); ?></p>
+				<h3 class="hxpd-sci__name"><a href="<?php echo esc_url( $f['url'] ); ?>"><?php echo esc_html( $f['full'] ); ?></a></h3>
+				<p class="hxpd-sci__text"><?php echo esc_html( $f['copy'] ); ?></p>
+				<p class="hxpd-sci__meta"><?php echo esc_html( $f['size'] ); ?><?php if ( $f['price'] ) : ?> <span aria-hidden="true">·</span> <?php echo esc_html( $f['price'] ); ?> on its own<?php endif; ?></p>
 			</li>
 			<?php endforeach; ?>
 		</ol>
+	</div>
+</section>
+
+<section class="hxpd-orbs hxpd-orbs--set" id="hxpd-actives" aria-labelledby="hxpd-actives-title">
+	<div class="hx-wrap hxpd-orbs__grid">
+		<div class="hxpd-orbs__head">
+			<h2 id="hxpd-actives-title" class="hx-heading hxpd-orbs__title" data-hx-reveal>What you put on your skin matters</h2>
+			<p class="hx-body hxpd-orbs__lede" data-hx-reveal>Caviar extract is in all four formulas. The key ingredients of each are on its own page.</p>
+		</div>
+		<div class="hxpd-orbs__lists" id="hxpd-ingredients">
+			<?php foreach ( $args['formulas'] as $f ) : ?>
+			<details class="hxpd-acc__item">
+				<summary class="hxpd-acc__sum"><?php echo esc_html( $f['full'] ); ?><span class="hxpd-acc__icon" aria-hidden="true"></span></summary>
+				<p class="hxpd-inci"><?php echo esc_html( $f['inci'] ); ?></p>
+			</details>
+			<?php endforeach; ?>
+			<p class="hxpd-inci__note">Refer to the packaging for the most up-to-date lists.</p>
+		</div>
 	</div>
 </section>
 
@@ -59,10 +91,10 @@ $faqs = array(
 	</div>
 </section>
 
-<section class="hxpd-use hxpd-use--set" aria-labelledby="hxpd-use-title">
+<section class="hxpd-use hxpd-use--set" id="hxpd-use" aria-labelledby="hxpd-use-title">
 	<div class="hx-wrap hxpd-use__grid">
 		<div class="hxpd-use__body">
-			<h2 id="hxpd-use-title" class="hx-heading hxpd-use__title" data-hx-reveal>Morning and evening</h2>
+			<h2 id="hxpd-use-title" class="hx-heading hxpd-use__title" data-hx-reveal>How to use</h2>
 			<ol class="hxpd-use__steps">
 				<?php foreach ( $args['formulas'] as $f ) : ?>
 				<li class="hxpd-use__step" data-hx-reveal><span class="hx-step" aria-hidden="true"><?php echo esc_html( $f['num'] ); ?></span><p class="hx-body"><strong><?php echo esc_html( $f['verb'] ); ?>.</strong> <?php echo esc_html( $f['full'] ); ?>: <?php echo esc_html( lcfirst( $f['cue'] ) ); ?></p></li>
@@ -73,7 +105,7 @@ $faqs = array(
 	</div>
 </section>
 
-<section class="hxpd-faq" aria-labelledby="hxpd-faq-title">
+<section class="hxpd-faq" id="hxpd-faq" aria-labelledby="hxpd-faq-title">
 	<div class="hx-wrap hxpd-faq__grid">
 		<h2 id="hxpd-faq-title" class="hx-heading hxpd-faq__title" data-hx-reveal>Questions</h2>
 		<div class="hxpd-faq__list">

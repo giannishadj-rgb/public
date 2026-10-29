@@ -1,0 +1,140 @@
+{
+  "date": "2026-10-25",
+  "operation": "Proportional crop and LANCZOS resize only. No retouching or grading.",
+  "outputs": {
+    "hxsc-protect": {
+      "source": "wp-content/uploads/2026/04/CAVIAR3333-copy-scaled.jpg",
+      "sha256": "68873e884134e4b035df5df5511bdc649c774e006bf6ea115baa02319bf9792e",
+      "crop": [
+        1707,
+        2134
+      ],
+      "aspect": [
+        4,
+        5
+      ],
+      "widths": [
+        640,
+        960,
+        1280
+      ]
+    },
+    "hxsc-repair": {
+      "source": "wp-content/uploads/2026/04/CAVIAR3408-copy-scaled.jpg",
+      "sha256": "cbe0ed60acfbb7b8dcac8839ab0eb6a8a76aa690e1397ca1d00fc880cd3d06b1",
+      "crop": [
+        1707,
+        2134
+      ],
+      "aspect": [
+        4,
+        5
+      ],
+      "widths": [
+        640,
+        960,
+        1280
+      ]
+    },
+    "hxsc-rejuvenate": {
+      "source": "wp-content/uploads/2026/04/DSC_4449-scaled.jpg",
+      "sha256": "1bef353a80d813267475b6e28aede4f83868d0d200fa653240e6f65d38d4f8e7",
+      "crop": [
+        1707,
+        2134
+      ],
+      "aspect": [
+        4,
+        5
+      ],
+      "widths": [
+        640,
+        960,
+        1280
+      ]
+    },
+    "hxhe-craft": {
+      "source": "wp-content/uploads/2026/08/the-complete-ritual-scale-reference-scaled.jpg",
+      "sha256": "9912a1f102d372ca622bd39a354b1590eb7f276f6aa8ba2bca084c8549462fce",
+      "crop": [
+        1707,
+        2134
+      ],
+      "aspect": [
+        4,
+        5
+      ],
+      "widths": [
+        640,
+        960,
+        1280
+      ]
+    },
+    "hxhe-code": {
+      "source": "wp-content/uploads/2026/04/DSC_6085-scaled.jpg",
+      "sha256": "511a55f2d0c54291707b9af550b6503f176ac5319a9220808093e65db98e6742",
+      "crop": [
+        1707,
+        2134
+      ],
+      "aspect": [
+        4,
+        5
+      ],
+      "widths": [
+        640,
+        960,
+        1280
+      ]
+    },
+    "hxhe-sustain-tall": {
+      "source": "wp-content/uploads/2026/04/DSC_6720-scaled.jpg",
+      "sha256": "ce3116819470bb36f572d71d739656fc89293b16b2054931fbd2f09bd082dd7f",
+      "crop": [
+        1707,
+        2134
+      ],
+      "aspect": [
+        4,
+        5
+      ],
+      "widths": [
+        640,
+        960,
+        1280
+      ]
+    },
+    "hxhe-sustain-wide": {
+      "source": "wp-content/uploads/2026/04/DSC_6720-scaled.jpg",
+      "sha256": "ce3116819470bb36f572d71d739656fc89293b16b2054931fbd2f09bd082dd7f",
+      "crop": [
+        1707,
+        1067
+      ],
+      "aspect": [
+        16,
+        10
+      ],
+      "widths": [
+        1440,
+        1707
+      ]
+    },
+    "hxshop-ritual-set": {
+      "source": "wp-content/uploads/2026/09/the-complete-ritual-hero-motion-poster.jpg",
+      "sha256": "5821b76c3524043f417f3c70cb802d75c1311b65e6ddff547909ec37ec4e142a",
+      "crop": [
+        1920,
+        1080
+      ],
+      "aspect": [
+        16,
+        9
+      ],
+      "widths": [
+        1280,
+        1920
+      ]
+    }
+  }
+}

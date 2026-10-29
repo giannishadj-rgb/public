@@ -180,6 +180,13 @@ add_action( 'wp_footer', static function (): void {
     });
     return true;
   }
+  // jQuery-free adds (homepage collection bag buttons): the same fragments, as a DOM event.
+  document.addEventListener('hx:added_to_cart',function(e){
+    var f=e.detail&&e.detail.fragments;
+    var d=parse(f&&f['#hxn-bag-data']);
+    if(!d){ var el=document.getElementById('hxn-bag-data'); d=parse(el&&el.textContent); }
+    if(d) open(d, e.detail&&e.detail.button?e.detail.button:null);
+  });
   // Form-post add (product page reload): data printed with the page.
   function boot(){
     bindJQ();

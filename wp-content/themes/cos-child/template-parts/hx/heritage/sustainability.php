@@ -10,33 +10,38 @@
  */
 defined( 'ABSPATH' ) || exit;
 ?>
-<section class="hxhe-hero hxhe-hero--plate" aria-labelledby="hxhe-title">
-	<div class="hx-wrap hxhe-hero__text">
-		<p class="hx-label hxhe-hero__label"><span class="hxhe-nw">Sustainability <span aria-hidden="true">·</span></span> <span class="hxhe-nw">Responsible practice</span></p>
-		<h1 id="hxhe-title" class="hx-display hxhe-hero__title hx-load-rise" style="--hx-i:1">Luxury without <em>compromise.</em></h1>
-		<div class="hxhe-hero__aside hx-load-rise" style="--hx-i:2">
-			<p class="hx-lead hxhe-hero__lede">Sustainability is not a communications strategy. It is a set of operational decisions with measurable outcomes. We report what we do, not what we aspire to.</p>
-		</div>
-	</div>
-	<figure class="hxhe-hero__plate hxhe-hero__plate--valley hx-frame hx-load-fade" style="--hx-i:3">
+<?php
+/*
+ * Opening (25 Oct 2026, owner: "layout this page like the rest with the hero image first"): the
+ * heritage hub's bleed plate. The valley fills the first screen under the transparent header,
+ * the h1 and lead in ink at the lower left on a soft pearl wash; phones: the tall crop on a clean
+ * edge, type beneath. The eyebrow left with the old layout, as on the hub.
+ */
+?>
+<header class="hxhe-hero hxhe-hero--bleed hxhe-hero--dark" aria-labelledby="hxhe-title">
+	<figure class="hxhe-hero__plate hx-load-fade">
 		<?php
 		echo cos_h26_picture(
-			'hxhe-valley-warm-tall',
+			'hxhe-sustain-tall',
 			array( 640, 960, 1280 ),
 			array( 4, 5 ),
-			'An Alpine valley in soft monochrome: forest, a mountain stream and snow-dusted peaks',
+			'The four formulas and the cream jar on dark marble among broad green leaves, with a jade roller and a gua sha stone',
 			array(
 				'sizes' => '100vw',
 				'w'     => 960,
 				'eager' => true,
 				'art'   => array(
-					array( 'media' => '(min-width: 760px)', 'base' => 'hxhe-valley-warm-wide', 'widths' => array( 1440, 1920, 2291 ), 'sizes' => '100vw' ),
+					array( 'media' => '(min-width: 700px) and (orientation: landscape)', 'base' => 'hxhe-sustain-wide', 'widths' => array( 1440, 1707 ), 'sizes' => '100vw' ),
 				),
 			)
 		);
 		?>
 	</figure>
-</section>
+	<div class="hx-wrap hxhe-hero__text">
+		<h1 id="hxhe-title" class="hx-display hxhe-hero__title hx-load-rise" style="--hx-i:1">Luxury without <em>compromise.</em></h1>
+		<p class="hx-lead hxhe-hero__lede hx-load-rise" style="--hx-i:2">Sustainability is not a communications strategy. It is a set of operational decisions with measurable outcomes. We report what we do, not what we aspire to.</p>
+	</div>
+</header>
 
 <section class="hxhe-sec hxhe-commit" aria-labelledby="hxhe-commit-title">
 	<div class="hx-wrap">

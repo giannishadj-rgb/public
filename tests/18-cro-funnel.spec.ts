@@ -29,7 +29,7 @@ test.describe('Homepage value proposition and CTA hierarchy', () => {
     await gotoAndCheck(page, '/');
     const primary = page.locator('[data-cro-cta="home-hero-primary"]');
     await expect(primary).toHaveText(/shop the complete ritual/i);
-    await expect(primary).toHaveAttribute('href', /\/products\/the-complete-ritual\/$/);
+    await expect(primary).toHaveAttribute('href', /\/the-ritual\/$/);   // owner, 24 Oct 2026: "Discover the Ritual" opens the ritual page
     await expect(page.locator('[data-cro-cta="home-hero-secondary"]')).toHaveCount(0);
     expect((await primary.boundingBox())!.height).toBeGreaterThanOrEqual(48);
   });
@@ -427,7 +427,7 @@ test.describe('Sitewide cta_click tracking', () => {
     await gotoAndCheck(page, '/');
     const events = await captureNextCtaClick(page, '[data-cro-cta="home-hero-primary"]');
     expect(events).toEqual([
-      { event: 'cta_click', cta_name: 'home-hero-primary', page: '/', destination: '/products/the-complete-ritual/' },
+      { event: 'cta_click', cta_name: 'home-hero-primary', page: '/', destination: '/the-ritual/' },
     ]);
   });
 

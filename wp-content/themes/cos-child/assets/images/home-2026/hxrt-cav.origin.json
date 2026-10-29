@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-25",
+  "source": "C:\\Users\\giann\\Dropbox\\VitalTrends\\Graphics\\Photoshoots\\June 2026\\CAV59741 copy.jpg",
+  "sha256": "c687b0f892f35cffe241c28975afb179912c008f91c915fd353f5c8ed258f180",
+  "source_size": [
+    5504,
+    8256
+  ],
+  "colour": "Display P3 -> sRGB (relative colorimetric, ImageCms)",
+  "outputs": {
+    "hxrt-cav-wide": {
+      "crop": [
+        0,
+        1432,
+        5504,
+        5835
+      ],
+      "mirrored": true,
+      "wall_extended_left_px": 1541,
+      "widths": [
+        1440,
+        1920,
+        2560
+      ]
+    },
+    "hxrt-cav-tall": {
+      "crop": [
+        0,
+        358,
+        5504,
+        7238
+      ],
+      "mirrored": false,
+      "widths": [
+        640,
+        960,
+        1280
+      ]
+    }
+  }
+}

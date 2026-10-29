@@ -5,12 +5,11 @@
    Markup: inc/navigation.php (header, menu, footer) + inc/forms.php (newsletter).
 
    HEADER (#cos-nav-wrap) — the homepage header, made sitewide. Inner pages show it
-   solid warm white #FBFAF7 with one hairline; the homepage keeps its own behaviour
+   solid warm white #F8F8F8 with one hairline; the homepage keeps its own behaviour
    (transparent over the hero, solid once scrolled), set at the end of system.css
    and in the legacy homepage sheets, which out-specify these base rules. Base values
    here equal the homepage's scrolled state, so both read as one header.
-   Below 1280px (17 Oct 2026; was 1024): menu button → logo → bag, in visual AND tab order.
-   The five tracked labels need ~530px; under 1280 they would run into the centred logo.
+   Below 1024px: menu button → logo → bag, in visual AND tab order (same as the homepage).
 
    MOBILE MENU (#cos-mob-menu) — warm white sheet under the header: five serif
    destinations, then Help / Account / Contact, then the house line. Fades in;
@@ -29,88 +28,89 @@
    ========================================================================== */
 
 /* ═══ HEADER ════════════════════════════════════════════════════════
-   17 Oct 2026 luxury pass (system agent). Calibrated against La Prairie / Clé de Peau
-   headers: graphite vector logo from the official master (40px desktop, 32px phones),
-   nav in Inter 450 · 11.5px · 0.13em caps, 1.25px icon strokes, warm-white ground with
-   one ink hairline once scrolled. Selectors double the id (#cos-nav-wrap#cos-nav-wrap)
-   so they beat the legacy homepage sheets (home-2026.css, home-2026-nocturne.css) and
-   stale copies embedded in old post_content, without !important. */
+   19 Oct 2026: the homepage bar (assets/css/home-staging/chrome.css), made sitewide: sentence-case
+   Inter 15px labels incl. Home, 42px graphite logo, 19px icons at 1.5 strokes, three-line menu
+   button below 1024px. Keep the two in step. Selectors double the id (#cos-nav-wrap#cos-nav-wrap)
+   so they beat stale copies embedded in old post_content, without !important. */
 #cos-nav-wrap{
 	position:fixed;top:0;left:0;right:0;z-index:90;
 	height:var(--cos-nav-h);
 }
 #cos-nav-wrap#cos-nav-wrap{
-	background:var(--hx-white,#FBFAF7);
-	border-bottom:1px solid var(--hx-line-hair,rgba(28,29,31,.09));
+	background:#F8F8F8;
+	border-bottom:1px solid rgba(28,29,31,.08);
 	backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:none;
-	transition:background-color 480ms var(--hx-ease-soft,ease),border-color 480ms var(--hx-ease-soft,ease);
+	transition:background-color var(--hx-dur-ui,320ms) var(--hx-ease-soft,ease),border-color var(--hx-dur-ui,320ms) var(--hx-ease-soft,ease);
 }
-/* Shares the section grid: same max width and side margin as .hx-wrap, so the first nav
-   label sits on the hero's text edge and the bag icon on the right margin. */
-#cos-nav{position:relative;max-width:calc(var(--hx-max,1440px) + 2 * var(--hx-margin,48px));margin:0 auto;height:100%;display:flex;align-items:center;justify-content:space-between;padding:0 var(--hx-margin,48px);gap:24px;box-sizing:border-box}
-.cos-nav-links{display:flex;align-items:center;gap:30px;flex:1}
+/* 24 Oct 2026 (owner: "keep the menu area transparent when fully up, like on the home page,
+   on all the pages"): at the top of every page, menu closed, the bar has no fill and no hairline,
+   so it floats on the page's own ground or opening photograph; it turns solid #F8F8F8 once
+   scrolled (.scrolled, >24px, inc/navigation.php) or while the mobile menu is open. Only once
+   the script has run (.is-live), so without JavaScript the bar stays solid. Ink labels and the
+   graphite logo are unchanged: every opening ground is light. */
+#cos-nav-wrap#cos-nav-wrap.is-live:not(.scrolled):not(:has([aria-expanded="true"])){background:transparent;border-bottom-color:transparent}
+/* Shares the section grid: same max width and side margin as .hx-wrap. */
+#cos-nav-wrap#cos-nav-wrap #cos-nav{position:relative;max-width:calc(var(--hx-max,1440px) + 2 * var(--hx-margin,48px));margin:0 auto;height:100%;display:flex;align-items:center;justify-content:space-between;padding:0 var(--hx-margin,48px);gap:24px;box-sizing:border-box}
+#cos-nav-wrap#cos-nav-wrap .cos-nav-links{display:flex;align-items:center;gap:28px;flex:1}
 #cos-nav-wrap#cos-nav-wrap .cos-nav-links a{
 	position:relative;
 	font-family:var(--hx-sans,'Inter',system-ui,sans-serif);
-	font-size:var(--hx-fs-nav,.71875rem);font-weight:450;line-height:1.5;letter-spacing:var(--hx-tr-nav,.13em);text-transform:uppercase;
-	color:var(--hx-graphite,#2A2B2D);
+	font-size:.75rem;font-weight:400;line-height:1.5;letter-spacing:.14em;text-transform:uppercase; /* 19 Oct 2026 (owner): small tracked capitals, quieter and more elegant than 15px sentence case */
+	color:var(--hx-ink,#1C1D1F);
 	white-space:nowrap;text-decoration:none;
-	-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+	-webkit-font-smoothing:antialiased;
 }
 /* Hover + current page: a hairline drawn under the label (no colour jump, no layout shift).
    The tap/click box is extended to 44px by the ::before without moving the label. */
-.cos-nav-links a::before{content:"";position:absolute;left:-8px;right:-8px;top:50%;height:44px;transform:translateY(-50%)}
-.cos-nav-links a::after{content:"";position:absolute;left:0;right:.13em;bottom:-6px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left center;transition:transform 620ms var(--hx-ease,cubic-bezier(.19,1,.22,1))}
-.cos-nav-links a:hover::after,.cos-nav-links a[aria-current="page"]:not([href="/"])::after{transform:scaleX(1)}
-#cos-nav-wrap#cos-nav-wrap .cos-nav-links a:is(:hover,:visited){color:var(--hx-graphite,#2A2B2D)}
-@media (min-width:1280px) and (max-width:1439.98px){.cos-nav-links{gap:22px}}
+#cos-nav-wrap#cos-nav-wrap .cos-nav-links a::before{content:"";position:absolute;left:-6px;right:-6px;top:50%;height:44px;transform:translateY(-50%)}
+#cos-nav-wrap#cos-nav-wrap .cos-nav-links a::after{content:"";position:absolute;left:0;right:.14em;bottom:-6px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left center;transition:transform 520ms var(--hx-ease,cubic-bezier(.19,1,.22,1))}
+#cos-nav-wrap#cos-nav-wrap .cos-nav-links a:hover::after,#cos-nav-wrap#cos-nav-wrap .cos-nav-links a[aria-current="page"]:not([href="/"])::after{transform:scaleX(1)}
+#cos-nav-wrap#cos-nav-wrap .cos-nav-links a:is(:hover,:visited){color:var(--hx-ink,#1C1D1F)}
+@media (min-width:1024px) and (max-width:1439.98px){#cos-nav-wrap#cos-nav-wrap .cos-nav-links{gap:20px}}
+/* 44px targets are wider than their icons: offset so the last icon's drawn edge meets the right margin */
+@media (min-width:1024px){#cos-nav-wrap#cos-nav-wrap .cos-nav-utils{margin-right:-12px}}
 
-/* Optically centred on the viewport axis at every width (not between unequal flex groups). */
-.cos-nav-logo{flex:0 0 auto;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
-.cos-nav-logo a{display:block;padding:6px 0}
+#cos-nav-wrap#cos-nav-wrap .cos-nav-logo{flex:0 0 auto;position:static;transform:none}
+/* From 1320px (tracked capitals are wider than the old sentence case): true centre of the bar. Below that the labels would run into a centred mark, so it stays in flow. */
+@media (min-width:1320px){#cos-nav-wrap#cos-nav-wrap .cos-nav-logo{position:absolute;left:50%;transform:translateX(-50%)}}
+#cos-nav-wrap#cos-nav-wrap .cos-nav-logo a{display:flex;align-items:center;min-height:44px;padding:0}
 /* Vector logo (assets/images/logo-graphite.svg): already graphite, so no filter. The
-   !important clears legacy brightness/contrast filters written for the old silver PNG
-   (they would also darken the Swiss red). */
-#cos-nav-wrap .cos-nav-logo img{height:34px;width:auto;max-width:none;display:block;filter:none!important;opacity:1!important}
+   !important clears legacy brightness/contrast filters written for the old silver PNG. */
+#cos-nav-wrap#cos-nav-wrap .cos-nav-logo img{height:42px;width:auto;max-width:none;object-fit:contain;display:block;filter:none!important;opacity:1!important}
 
-.cos-nav-utils{display:flex;align-items:center;gap:2px;flex:1;justify-content:flex-end;margin-right:-12px}
+#cos-nav-wrap#cos-nav-wrap .cos-nav-utils{display:flex;align-items:center;gap:0;flex:1;justify-content:flex-end}
 /* !important on size: some legacy post_content pages still embed stale, smaller copies
    of these selectors that render later in the document. */
-#cos-nav-wrap#cos-nav-wrap .cos-nav-utils a{display:flex;align-items:center;justify-content:center;width:44px!important;height:44px!important;flex:0 0 44px!important;color:var(--hx-graphite,#2A2B2D);text-decoration:none;transition:opacity var(--hx-dur-ui,320ms) var(--hx-ease-soft,ease)}
-#cos-nav-wrap#cos-nav-wrap .cos-nav-utils a:hover{color:var(--hx-graphite,#2A2B2D);opacity:.6}
-.cos-nav-utils svg{width:20px;height:20px}
+#cos-nav-wrap#cos-nav-wrap .cos-nav-utils a{display:flex;align-items:center;justify-content:center;width:44px!important;height:44px!important;flex:0 0 44px!important;color:var(--hx-ink,#1C1D1F);text-decoration:none;transition:opacity var(--hx-dur-ui,320ms) var(--hx-ease-soft,ease)}
+#cos-nav-wrap#cos-nav-wrap .cos-nav-utils a:hover{color:var(--hx-ink,#1C1D1F);opacity:.62}
+#cos-nav-wrap#cos-nav-wrap .cos-nav-utils svg{width:19px;height:19px}
 .cos-bag-link{position:relative}
 /* Bag count: a small graphite disc, legible figures. Filled by inc/commerce.php
    (cart fragments) + inc/analytics.php; empty = hidden. */
-#cos-nav-wrap#cos-nav-wrap .cos-bag-count{position:absolute;top:6px;right:2px;min-width:16px;height:16px;padding:0 4px;border-radius:8px;box-sizing:border-box;background:var(--hx-graphite,#2A2B2D);color:var(--hx-white,#FBFAF7);font-family:var(--hx-sans,'Inter',sans-serif);font-size:10px;font-weight:500;line-height:16px;letter-spacing:0;text-align:center;font-variant-numeric:tabular-nums;display:none;pointer-events:none}
+#cos-nav-wrap#cos-nav-wrap .cos-bag-count{position:absolute;top:7px;right:3px;min-width:17px;height:17px;padding:0 5px;border-radius:9px;box-sizing:border-box;background:var(--hx-ink,#1C1D1F);color:#F8F8F8;font-family:var(--hx-sans,'Inter',sans-serif);font-size:10px;font-weight:500;line-height:17px;letter-spacing:0;text-align:center;font-variant-numeric:tabular-nums;display:none;pointer-events:none}
 #cos-nav-wrap#cos-nav-wrap .cos-bag-count:not(:empty){display:block}
 
-/* Menu button (phones/tablets) — two hairlines that cross into an × (the middle span is
-   kept in the markup for older scripts but hidden). */
-#cos-nav-wrap#cos-nav-wrap .cos-mob-btn{display:none;width:44px!important;height:44px!important;align-items:center;justify-content:center;flex-direction:column;gap:8px;padding:0;margin:0;cursor:pointer;border:none;background:none;color:var(--hx-graphite,#2A2B2D);-webkit-tap-highlight-color:transparent}
-.cos-mob-btn span{display:block;width:22px;height:1px;background:currentColor;transition:transform 520ms var(--hx-ease,ease),opacity 240ms var(--hx-ease-soft,ease)}
-.cos-mob-btn #cos-h2{display:none}
+/* Menu button (phones/tablets) — three hairlines that cross into an ×. */
+#cos-nav-wrap#cos-nav-wrap .cos-mob-btn{display:none;width:44px!important;height:44px!important;align-items:center;justify-content:center;flex-direction:column;gap:5px;padding:0;margin:0;cursor:pointer;border:none;background:none;color:var(--hx-ink,#1C1D1F);-webkit-tap-highlight-color:transparent}
+#cos-nav-wrap#cos-nav-wrap .cos-mob-btn span{display:block;width:20px;height:1px;background:currentColor;transition:transform 420ms var(--hx-ease,ease),opacity 240ms var(--hx-ease-soft,ease)}
 
 /* Focus: one visible ring everywhere in the header. */
 #cos-nav-wrap :is(a,button):focus{outline:none}
-#cos-nav-wrap#cos-nav-wrap :is(a,button):focus-visible{outline:var(--hx-focus-width,2px) solid var(--hx-focus-color,#1C1D1F);outline-offset:4px;border-radius:0;box-shadow:none;background-color:transparent}
-#cos-nav-wrap#cos-nav-wrap .cos-nav-logo a:focus-visible{outline-offset:2px}
+#cos-nav-wrap#cos-nav-wrap :is(a,button):focus-visible{outline:2px solid var(--hx-ink,#1C1D1F);outline-offset:4px;border-radius:0;box-shadow:none;background-color:transparent}
+#cos-nav-wrap#cos-nav-wrap .cos-nav-logo a:focus-visible{outline-offset:6px}
 
-/* Homepage: transparent over the light hero until scrolled (or the menu opens). */
-html body.cos-h26 #cos-nav-wrap#cos-nav-wrap:not(.scrolled):not(:has([aria-expanded="true"])){background:transparent;border-bottom-color:transparent}
-/* Over the photograph the solid graphite mark would read as a sticker: let it sit into the
-   light a touch, back to full strength once the bar turns solid. */
-html body.cos-h26 #cos-nav-wrap:not(.scrolled):not(:has([aria-expanded="true"])) .cos-nav-logo img{opacity:.88!important}
-#cos-nav-wrap .cos-nav-logo img{transition:opacity 480ms var(--hx-ease-soft,ease)}
-
-@media (max-width:1279.98px){
-	.cos-nav-links{display:none}
-	#cos-nav-wrap#cos-nav-wrap .cos-mob-btn{display:flex;position:absolute;left:calc(var(--hx-margin,24px) - 11px);top:50%;transform:translateY(-50%)}
-	/* Help + Account live in the menu below 1280px; only the bag stays in the bar. */
+@media (max-width:1023.98px){
+	#cos-nav-wrap#cos-nav-wrap #cos-nav{padding:0 var(--hx-margin,24px)}
+	#cos-nav-wrap#cos-nav-wrap .cos-nav-links{display:none}
+	/* the 44px target is wider than its lines: offset so the drawn lines sit on the page margin */
+	#cos-nav-wrap#cos-nav-wrap .cos-mob-btn{display:flex;position:absolute;left:calc(var(--hx-margin,24px) - 12px);top:50%;transform:translateY(-50%)}
+	#cos-nav-wrap#cos-nav-wrap .cos-nav-utils{margin-right:-10px}
+	/* Account lives in the menu below 1024px; only the bag stays in the bar. */
 	#cos-nav-wrap#cos-nav-wrap .cos-nav-utils a:is(.cos-nav-help,.cos-nav-account){display:none}
-	#cos-nav-wrap .cos-nav-logo img{height:22px}
+	#cos-nav-wrap#cos-nav-wrap .cos-nav-logo{position:absolute;left:50%;transform:translateX(-50%)}
+	/* Scales with the clear space between menu button and bag (21px floor). */
+	#cos-nav-wrap#cos-nav-wrap .cos-nav-logo img{height:clamp(21px,38.2vw - 93px,42px)}
 }
-@media (max-width:339.98px){#cos-nav-wrap .cos-nav-logo img{height:20px}}
 
 /* ═══ MOBILE MENU ═══════════════════════════════════════════════════ */
 #cos-mob-menu{
@@ -121,7 +121,7 @@ html body.cos-h26 #cos-nav-wrap:not(.scrolled):not(:has([aria-expanded="true"]))
 	transition:opacity 380ms var(--hx-ease-soft,ease),visibility 0s linear 380ms;
 }
 /* html body … .hxn-sheet: beats the legacy homepage menu background (body.cos-h26-nocturne #cos-mob-menu) */
-html body #cos-mob-menu.hxn-sheet{background:#FBFAF7}
+html body #cos-mob-menu.hxn-sheet{background:#F8F8F8}
 #cos-mob-menu.open{opacity:1;visibility:visible;transition:opacity 380ms var(--hx-ease-soft,ease),visibility 0s}
 #cos-mob-menu .hxn-menu{
 	box-sizing:border-box;flex:1;display:flex;flex-direction:column;
@@ -144,11 +144,11 @@ html body #cos-mob-menu.hxn-sheet{background:#FBFAF7}
 #cos-mob-menu .hxn-menu__link:is(:hover,:active){color:var(--hx-accent,#625646)}
 #cos-mob-menu .hxn-menu__link[aria-current="page"]{color:var(--hx-accent,#625646)}
 #cos-mob-menu .hxn-menu__link[aria-current="page"] .hx-arrow{opacity:1}
-#cos-mob-menu .hxn-menu__secondary{display:flex;flex-wrap:wrap;gap:0 32px;margin-top:32px}
+#cos-mob-menu .hxn-menu__secondary{display:flex;flex-wrap:wrap;gap:0 28px;margin-top:28px}
 #cos-mob-menu .hxn-menu__small{
 	display:inline-flex;align-items:center;min-height:44px;
-	font-family:var(--hx-sans,'Inter',sans-serif);font-size:var(--hx-fs-nav,.71875rem);font-weight:450;line-height:1.4;letter-spacing:var(--hx-tr-nav,.13em);text-transform:uppercase;
-	color:var(--hx-graphite,#2A2B2D);text-decoration:none;
+	font-family:var(--hx-sans,'Inter',sans-serif);font-size:.875rem;font-weight:400;line-height:1.4;letter-spacing:.01em;
+	color:var(--hx-text,#3A3B3D);text-decoration:none;
 }
 #cos-mob-menu .hxn-menu__small:is(:hover,:active){color:var(--hx-ink,#1C1D1F)}
 #cos-mob-menu .hxn-menu__foot{margin-top:auto;padding-top:48px;display:flex;align-items:center;gap:10px}
@@ -164,7 +164,7 @@ html body #cos-mob-menu.hxn-sheet{background:#FBFAF7}
 	#cos-mob-menu :is(.hxn-menu__link,.hxn-menu__secondary,.hxn-menu__foot){opacity:0;transform:translate3d(0,14px,0);transition:opacity 200ms var(--hx-ease-soft,ease),transform 0s linear 200ms}
 	#cos-mob-menu.open :is(.hxn-menu__link,.hxn-menu__secondary,.hxn-menu__foot){opacity:1;transform:none;transition:opacity 700ms var(--hx-ease,ease),transform 900ms var(--hx-ease,ease);transition-delay:calc(80ms + var(--hxn-i,0) * 55ms)}
 }
-@media (min-width:1280px){#cos-mob-menu{display:none!important}}
+@media (min-width:1024px){#cos-mob-menu{display:none!important}}
 @media (prefers-reduced-motion:reduce){#cos-mob-menu,#cos-mob-menu.open,.cos-mob-btn span,#cos-nav-wrap{transition:none}}
 
 /* ═══ FOOTER ════════════════════════════════════════════════════════ */
@@ -200,7 +200,7 @@ html body #cos-mob-menu.hxn-sheet{background:#FBFAF7}
 	font-size:clamp(2rem,1.62rem + 1.25vw,2.875rem);line-height:1.06;letter-spacing:-.012em;
 	color:var(--hxf-fg);text-wrap:balance;
 }
-#cos-footer#cos-footer .hxf-nl__sub{margin-top:14px;font-size:1rem;font-weight:300;line-height:1.6;color:var(--hxf-fg-2);max-width:30em}
+#cos-footer#cos-footer .hxf-nl__sub{margin-top:14px;font-size:1rem;font-weight:400;line-height:1.6;color:var(--hxf-fg-2);max-width:30em}
 #cos-footer#cos-footer .hxf-form{display:flex;flex-direction:column;gap:0;min-width:0;max-width:none}
 #cos-footer#cos-footer .hxf-form__row{
 	display:flex;align-items:stretch;gap:16px;
@@ -336,7 +336,7 @@ body.cos-h26 #cos-footer#cos-footer .hxf-assure{display:none}
 
 /* Skip link (markup: inc/core.php). Its inline style (left:-9999px) beat the old :focus rule,
    so the focused link stayed off-screen; bring it in, at a 44px target, on focus. */
-.cos-skip-link:focus{left:8px!important;top:8px!important;width:auto!important;height:auto!important;min-height:44px;display:inline-flex;align-items:center;box-sizing:border-box;background:var(--hx-ink,#1C1D1F)!important;color:#FBFAF7!important}
+.cos-skip-link:focus{left:8px!important;top:8px!important;width:auto!important;height:auto!important;min-height:44px;display:inline-flex;align-items:center;box-sizing:border-box;background:var(--hx-ink,#1C1D1F)!important;color:#F8F8F8!important}
 
 /* ═══ ADD-TO-BAG CONFIRMATION (inc/hx-minibag.php) ══════════════════
    Desktop: a 392px card anchored under the bag icon, warm white, one hairline,
@@ -347,7 +347,7 @@ body.cos-h26 #cos-footer#cos-footer .hxf-assure{display:none}
 	right:calc(max(0px,(100vw - 1600px) / 2) + 32px);
 	box-sizing:border-box;width:392px;max-width:calc(100vw - 32px);
 	padding:22px 24px 22px;
-	background:#FBFAF7;color:var(--hx-text,#3A3B3D);
+	background:#F8F8F8;color:var(--hx-text,#3A3B3D);
 	border:1px solid rgba(28,29,31,.1);
 	box-shadow:0 30px 60px -32px rgba(28,29,31,.38),0 2px 6px -2px rgba(28,29,31,.06);
 	font-family:var(--hx-sans,'Inter',sans-serif);
@@ -358,7 +358,7 @@ body.cos-h26 #cos-footer#cos-footer .hxf-assure{display:none}
 .hxn-bag[hidden]{display:none}
 .hxn-bag.is-open{opacity:1;transform:none}
 /* a fine pointer to the bag icon */
-.hxn-bag::before{content:"";position:absolute;top:-6px;right:24px;width:10px;height:10px;background:#FBFAF7;border-left:1px solid rgba(28,29,31,.1);border-top:1px solid rgba(28,29,31,.1);transform:rotate(45deg)}
+.hxn-bag::before{content:"";position:absolute;top:-6px;right:24px;width:10px;height:10px;background:#F8F8F8;border-left:1px solid rgba(28,29,31,.1);border-top:1px solid rgba(28,29,31,.1);transform:rotate(45deg)}
 .hxn-bag__head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:-10px -12px 14px 0}
 .hxn-bag__title{margin:0;font-family:var(--hx-sans,'Inter',sans-serif);font-size:.71875rem;font-weight:500;line-height:1.4;letter-spacing:.2em;text-transform:uppercase;color:var(--hx-accent,#625646)}
 .hxn-bag__title:focus{outline:none}
@@ -370,7 +370,7 @@ body.cos-h26 #cos-footer#cos-footer .hxf-assure{display:none}
 .hxn-bag__close:focus{outline:none}
 .hxn-bag__close:focus-visible{outline:2px solid var(--hx-ink,#1C1D1F);outline-offset:-4px}
 .hxn-bag__item{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:start;padding:0 0 18px;border-bottom:1px solid rgba(28,29,31,.1)}
-.hxn-bag__media{width:72px;height:90px;background:#F2F2EF;overflow:hidden}
+.hxn-bag__media{width:72px;height:90px;background:#F8F8F8;overflow:hidden}
 .hxn-bag__media[hidden]{display:none}
 .hxn-bag__media.is-wide{width:140px;height:90px;background:#FBFAF6}
 .hxn-bag__media.is-wide .hxn-bag__img{object-fit:contain}
@@ -399,11 +399,11 @@ body.cos-h26 #cos-footer#cos-footer .hxf-assure{display:none}
 
 /* ═══ FOOTER, round 2 (17 Oct 2026): the page's single dark band ════════
    Graphite #1C1D1F (= --hx-ink) with pearl type; the newsletter joins it as its top band.
-   Contrast on #1C1D1F: fg #F2F2EF 15.0 · fg-2 #C9C7C1 10.0 · fg-3 #A9A7A1 7.0. The logo is
+   Contrast on #1C1D1F: fg #F8F8F8 15.0 · fg-2 #C9C7C1 10.0 · fg-3 #A9A7A1 7.0. The logo is
    the official artwork in its original colours (logo-master.svg: silver #BCBEC0 lettering
    9.0:1, red Swiss square), centred above the copyright as the closing seal. */
 #cos-footer#cos-footer{
-	--hxf-bg:var(--hx-ink,#1C1D1F);--hxf-fg:#F2F2EF;--hxf-fg-2:#C9C7C1;--hxf-fg-3:#A9A7A1;
+	--hxf-bg:var(--hx-ink,#1C1D1F);--hxf-fg:#F8F8F8;--hxf-fg-2:#C9C7C1;--hxf-fg-3:#A9A7A1;
 	--hxf-line:rgba(242,242,239,.14);--hxf-line-strong:rgba(242,242,239,.4);color-scheme:dark;
 }
 #cos-footer#cos-footer .hxf-links a,#cos-footer#cos-footer .hxf-house address{font-size:15px}
@@ -456,3 +456,27 @@ body.cos-h26 #cos-footer#cos-footer .hxf-brand{display:none}
 	#cos-footer#cos-footer .hxf-status{font-size:.9375rem}
 }
 #cos-footer#cos-footer .hxf-consent input{accent-color:#B4B9BF}
+
+/* ─── Over a dark opening (25 Oct 2026: /science/ opens on a dark video) ────
+   While the bar is transparent at the top of a page whose opening is dark (.hxsc-plate--dark, or
+   body.hx-head-light, set by hx-hero-tone.js when the photograph behind the bar is dark),
+   its labels, icons and menu lines turn pearl and the logo swaps to its pearl-lettered twin.
+   Scrolled (solid) or with the menu open, it is the usual ink bar. */
+#cos-nav-wrap .hxn-logo--pearl{display:none!important}
+:is(body.hx-head-light,body:has(.hxsc-plate--dark)) #cos-nav-wrap#cos-nav-wrap.is-live:not(.scrolled):not(:has([aria-expanded="true"])) :is(.cos-nav-links a,.cos-nav-links a:is(:hover,:visited),.cos-nav-utils a,.cos-nav-utils a:hover,.cos-mob-btn){color:#F8F8F8}
+:is(body.hx-head-light,body:has(.hxsc-plate--dark)) #cos-nav-wrap#cos-nav-wrap.is-live:not(.scrolled):not(:has([aria-expanded="true"])) :is(a,button):focus-visible{outline-color:#F8F8F8}
+:is(body.hx-head-light,body:has(.hxsc-plate--dark)) #cos-nav-wrap#cos-nav-wrap.is-live:not(.scrolled):not(:has([aria-expanded="true"])) .cos-bag-count{background:#F8F8F8;color:#1C1D1F}
+:is(body.hx-head-light,body:has(.hxsc-plate--dark)) #cos-nav-wrap#cos-nav-wrap.is-live:not(.scrolled):not(:has([aria-expanded="true"])) .hxn-logo:not(.hxn-logo--pearl){display:none!important}
+:is(body.hx-head-light,body:has(.hxsc-plate--dark)) #cos-nav-wrap#cos-nav-wrap.is-live:not(.scrolled):not(:has([aria-expanded="true"])) .hxn-logo--pearl{display:block!important}
+
+/* ─── Floating on a photograph (25 Oct 2026, owner: "header menu transparent on all pages") ───
+   No band behind the bar: over an opening photograph (body.hx-head-photo, hx-hero-tone.js) each
+   label, icon and the logo carry a soft halo of the opposite tone, so they read on mixed ground
+   (forest under the links, snow under the logo) without anything painted across the photograph.
+   Ink labels glow pearl; pearl labels (body.hx-head-light) glow dark. Only while transparent.
+   The account and bag icons (top right) and the menu labels carry no halo (owner, 25 Oct 2026). */
+body.hx-head-photo #cos-nav-wrap#cos-nav-wrap.is-live:not(.scrolled):not(:has([aria-expanded="true"])) .cos-mob-btn{filter:drop-shadow(0 0 2px rgba(248,248,248,1)) drop-shadow(0 0 6px rgba(248,248,248,.9)) drop-shadow(0 0 14px rgba(248,248,248,.7))}
+body.hx-head-photo #cos-nav-wrap#cos-nav-wrap.is-live:not(.scrolled):not(:has([aria-expanded="true"])) .cos-nav-logo img{filter:drop-shadow(0 0 3px rgba(248,248,248,.9)) drop-shadow(0 0 14px rgba(248,248,248,.75))!important}
+body.hx-head-photo.hx-head-light #cos-nav-wrap#cos-nav-wrap.is-live:not(.scrolled):not(:has([aria-expanded="true"])) .cos-mob-btn{filter:drop-shadow(0 0 2px rgba(8,8,8,.9)) drop-shadow(0 0 6px rgba(8,8,8,.75)) drop-shadow(0 0 14px rgba(8,8,8,.55))}
+body.hx-head-photo.hx-head-light #cos-nav-wrap#cos-nav-wrap.is-live:not(.scrolled):not(:has([aria-expanded="true"])) .cos-nav-logo img{filter:drop-shadow(0 0 3px rgba(8,8,8,.75)) drop-shadow(0 0 14px rgba(8,8,8,.5))!important}
+

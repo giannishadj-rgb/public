@@ -1,0 +1,88 @@
+{
+  "title": "The Ritual: choose the structure",
+  "question": "Same visual world (ivory, graphite, Cormorant capitals, owner photography). Three different ways to structure the page for a visitor deciding whether to buy. Lock one, steer, or re-roll.",
+  "options": [
+    {
+      "id": "day",
+      "label": "The Day",
+      "kicker": "THE ROLL",
+      "lineage": "A day's skincare, morning to night",
+      "thesis": "The page follows a day, and the four steps are shown both morning and evening.",
+      "palette": ["#F4F1EA", "#FCFBF8", "#E8E0D2", "#202221"],
+      "materials": ["silver tray photograph", "four model step photographs", "1px rules"],
+      "viewport": "The tray photograph, the h1, the Complete Ritual price and a working Add to bag, all in the first screen.",
+      "risk": "Showing each step twice (morning and evening) can feel repetitive unless the evening rows show only what differs.",
+      "wireframe": {"cols": 12, "rows": 16, "regions": [
+        {"label": "h1 + price + Add to bag", "x": 0, "y": 0, "w": 5, "h": 3, "accent": true},
+        {"label": "tray photo", "x": 5, "y": 0, "w": 7, "h": 3},
+        {"label": "MORNING band label", "x": 0, "y": 3, "w": 12, "h": 1},
+        {"label": "step 01 photo", "x": 0, "y": 4, "w": 3, "h": 2},
+        {"label": "01 Cleanse: gesture, amount", "x": 3, "y": 4, "w": 3, "h": 2},
+        {"label": "step 02 photo", "x": 6, "y": 4, "w": 3, "h": 2},
+        {"label": "02 Treat: gesture, amount", "x": 9, "y": 4, "w": 3, "h": 2},
+        {"label": "step 03 photo", "x": 0, "y": 6, "w": 3, "h": 2},
+        {"label": "03 Revive", "x": 3, "y": 6, "w": 3, "h": 2},
+        {"label": "step 04 photo", "x": 6, "y": 6, "w": 3, "h": 2},
+        {"label": "04 Restore + SPF 50+", "x": 9, "y": 6, "w": 3, "h": 2},
+        {"label": "lightest → richest scale (why the order)", "x": 0, "y": 8, "w": 12, "h": 1},
+        {"label": "EVENING band (champagne): what changes", "x": 0, "y": 9, "w": 12, "h": 3},
+        {"label": "pack 01-04 cut-outs", "x": 0, "y": 12, "w": 7, "h": 3},
+        {"label": "Complete Ritual offer + Add to bag", "x": 7, "y": 12, "w": 5, "h": 3, "accent": true},
+        {"label": "science links", "x": 0, "y": 15, "w": 12, "h": 1}
+      ]},
+      "comp": ".impeccable/mocks/decision/day.webp"
+    },
+    {
+      "id": "guide",
+      "label": "The Ritual Guide",
+      "lineage": "The printed ritual guide that comes in the box",
+      "thesis": "The page is the written guide from the box: one numbered protocol sheet that reads in two minutes.",
+      "palette": ["#FCFBF8", "#F4F1EA", "#202221", "#5D5F60"],
+      "materials": ["pack cut-outs in the margin", "one full-bleed model photograph", "ruled protocol entries"],
+      "viewport": "The tray photograph with the h1, price and Add to bag; below it, the guide's numbered sheet starts.",
+      "risk": "The quietest of the three: model photography shrinks to one plate, so desire comes mostly from the pack cut-outs.",
+      "wireframe": {"cols": 12, "rows": 16, "regions": [
+        {"label": "tray photo", "x": 0, "y": 0, "w": 7, "h": 3},
+        {"label": "h1 + price + Add to bag", "x": 7, "y": 0, "w": 5, "h": 3, "accent": true},
+        {"label": "guide title + order principle", "x": 2, "y": 3, "w": 8, "h": 1},
+        {"label": "pack", "x": 2, "y": 4, "w": 1, "h": 2},
+        {"label": "01 Cleanse: product · amount · when · gesture · who it suits", "x": 3, "y": 4, "w": 7, "h": 2},
+        {"label": "pack", "x": 2, "y": 6, "w": 1, "h": 2},
+        {"label": "02 Treat", "x": 3, "y": 6, "w": 7, "h": 2},
+        {"label": "pack", "x": 2, "y": 8, "w": 1, "h": 2},
+        {"label": "03 Revive", "x": 3, "y": 8, "w": 7, "h": 2},
+        {"label": "pack", "x": 2, "y": 10, "w": 1, "h": 2},
+        {"label": "04 Restore", "x": 3, "y": 10, "w": 7, "h": 2},
+        {"label": "full-bleed model plate", "x": 0, "y": 12, "w": 12, "h": 2},
+        {"label": "back page: what's in the box + offer", "x": 2, "y": 14, "w": 8, "h": 2, "accent": true}
+      ]},
+      "comp": ".impeccable/mocks/decision/guide.webp"
+    },
+    {
+      "id": "sequence",
+      "label": "The Sequence",
+      "lineage": "One continuous application, step by step",
+      "thesis": "One fixed photograph frame that changes as you scroll, from step to step, ending on all four packs together.",
+      "palette": ["#F4F1EA", "#FCFBF8", "#202221", "#A7ACB2"],
+      "materials": ["four model step photographs", "lightest → richest rail", "pack cut-outs"],
+      "viewport": "The tray photograph, the h1, price and Add to bag, with a 01–04 rail that is also the lightest-to-richest scale.",
+      "risk": "The most build and QA effort: the sticky frame must never hide content, must work on Safari and must fall back to stacked photos on phones.",
+      "wireframe": {"cols": 12, "rows": 16, "regions": [
+        {"label": "h1 + price + Add to bag", "x": 0, "y": 0, "w": 5, "h": 3, "accent": true},
+        {"label": "tray photo", "x": 5, "y": 0, "w": 7, "h": 3},
+        {"label": "01→04 rail = lightest → richest", "x": 0, "y": 3, "w": 12, "h": 1},
+        {"label": "STICKY photo stage (changes per step)", "x": 0, "y": 4, "w": 6, "h": 8},
+        {"label": "01 Cleanse", "x": 7, "y": 4, "w": 5, "h": 2},
+        {"label": "02 Treat", "x": 7, "y": 6, "w": 5, "h": 2},
+        {"label": "03 Revive", "x": 7, "y": 8, "w": 5, "h": 2},
+        {"label": "04 Restore + morning/evening note", "x": 7, "y": 10, "w": 5, "h": 2},
+        {"label": "stage resolves: four packs", "x": 0, "y": 12, "w": 7, "h": 4},
+        {"label": "Complete Ritual offer + Add to bag", "x": 7, "y": 12, "w": 5, "h": 4, "accent": true}
+      ]},
+      "comp": ".impeccable/mocks/decision/sequence.webp"
+    }
+  ],
+  "reroll": true,
+  "steer": true,
+  "buildPath": {"value": "code"}
+}

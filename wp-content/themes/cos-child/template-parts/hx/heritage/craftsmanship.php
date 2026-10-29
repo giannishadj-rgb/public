@@ -13,18 +13,20 @@ defined( 'ABSPATH' ) || exit;
 
 $a = cos_hxhe_arrow();
 ?>
-<section class="hxhe-hero hxhe-hero--split" aria-labelledby="hxhe-title">
-	<div class="hx-wrap hxhe-split hxhe-split--hero">
-		<div class="hxhe-split__text hxhe-hero__text">
-			<p class="hx-label hxhe-hero__label"><span class="hxhe-nw">Craftsmanship &amp; sourcing <span aria-hidden="true">·</span></span> <span class="hxhe-nw">Switzerland</span></p>
-			<h1 id="hxhe-title" class="hx-display hxhe-hero__title hx-load-rise" style="--hx-i:1">Not a label. <em>A standard.</em></h1>
-			<p class="hx-lead hxhe-hero__lede hx-load-rise" style="--hx-i:2">Every formula is developed and manufactured at a certified Swiss laboratory in Zug. Every active ingredient is sourced with traceability requirements that meet or exceed the standards of pharmaceutical-grade cosmetic production.</p>
-		</div>
-		<figure class="hxhe-split__media hxhe-hero__media hx-frame hx-load-fade" style="--hx-i:2">
-			<?php echo cos_h26_picture( 'hxhe-drop', array( 640, 960, 1280 ), array( 4, 5 ), 'One hand dispensing a drop of the Advanced Repair Serum onto the fingertip of another, against a warm grey ground', array( 'sizes' => '(min-width: 900px) 42vw, 100vw', 'w' => 960, 'eager' => true ) ); // phpcs:ignore ?>
-		</figure>
+<?php
+/* Opening (25 Oct 2026, owner: "hero image first", like the hub and sustainability): the bleed
+   plate. The owner's serum photograph fills the first screen; the h1 and lead in ink on its warm
+   grey ground at the lower left (phones: the photograph, then the type beneath). */
+?>
+<header class="hxhe-hero hxhe-hero--bleed hxhe-hero--drop" aria-labelledby="hxhe-title">
+	<figure class="hxhe-hero__plate hx-load-fade">
+		<?php echo cos_h26_picture( 'hxhe-craft', array( 640, 960, 1280 ), array( 4, 5 ), 'Two hands holding the Micellar Water All-in-One Cleanser, a lather of foam on the fingers, against a grey ground', array( 'sizes' => '100vw', 'w' => 960, 'eager' => true ) ); // phpcs:ignore ?>
+	</figure>
+	<div class="hx-wrap hxhe-hero__text">
+		<h1 id="hxhe-title" class="hx-display hxhe-hero__title hx-load-rise" style="--hx-i:1">Not a label. <em>A standard.</em></h1>
+		<p class="hx-lead hxhe-hero__lede hx-load-rise" style="--hx-i:2">Every formula is developed and manufactured at a certified Swiss laboratory in Zug. Every active ingredient is sourced with traceability requirements that meet or exceed the standards of pharmaceutical-grade cosmetic production.</p>
 	</div>
-</section>
+</header>
 
 <section class="hxhe-sec hxhe-lab" aria-labelledby="hxhe-lab-title">
 	<div class="hx-wrap hxhe-statement">

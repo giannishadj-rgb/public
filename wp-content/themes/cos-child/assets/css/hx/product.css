@@ -47,7 +47,7 @@ body.hxpd-page{background:var(--hx-white)}
 .hxpd-step__of{color:var(--hx-muted);letter-spacing:.14em}
 .hxpd-step__verb + .hxpd-step__of{margin-left:auto}
 .hxpd-name{font-family:var(--hx-serif);font-weight:300;font-size:clamp(2.25rem,1.8rem + 1.6vw,3.25rem);line-height:1.04;letter-spacing:var(--hx-tr-heading);color:var(--hx-ink);text-wrap:balance}
-.hxpd-promise{margin-top:16px;font-size:var(--hx-fs-lead);font-weight:300;line-height:1.55;color:var(--hx-text);max-width:30em;text-wrap:pretty}
+.hxpd-promise{margin-top:16px;font-size:var(--hx-fs-lead);font-weight:400;line-height:1.55;color:var(--hx-text);max-width:30em;text-wrap:pretty}
 .hxpd-price{display:flex;align-items:center;gap:12px;margin-top:22px;color:var(--hx-ink);font-variant-numeric:lining-nums tabular-nums}
 .hxpd-price__amt{font-family:var(--hx-serif);font-size:1.75rem;font-weight:400;letter-spacing:0;line-height:1}
 .hxpd-price__dot{width:3px;height:3px;border-radius:50%;background:var(--hx-chrome)}
@@ -155,7 +155,7 @@ details[open] > .hxpd-acc__sum .hxpd-acc__icon::after{transform:rotate(0)}
 }
 
 /* ─── Sections below ────────────────────────────────────────────── */
-.hxpd-story,.hxpd-actives,.hxpd-result,.hxpd-use,.hxpd-ritual,.hxpd-set,.hxpd-faq{padding-block:var(--hx-section-sm)}
+.hxpd-story,.hxpd-actives,.hxpd-result,.hxpd-use,.hxpd-ritual,.hxpd-faq{padding-block:var(--hx-section-sm)}
 .hxpd-story{background:var(--hx-pearl)}
 .hxpd-story__grid,.hxpd-use__grid{display:grid;gap:40px;align-items:center}
 .hxpd-story__media,.hxpd-use__media{margin-inline:calc(-1 * var(--hx-margin))}
@@ -215,7 +215,6 @@ details[open] > .hxpd-acc__sum .hxpd-acc__icon::after{transform:rotate(0)}
 
 /* Within the ritual / the four steps */
 .hxpd-ritual{background:var(--hx-pearl)}
-.hxpd-set{background:var(--hx-white)}
 .hxpd-ritual__head{display:grid;gap:16px;margin-bottom:clamp(36px,4vw,64px)}
 .hxpd-ritual__lede{max-width:30em}
 @media (min-width:900px){.hxpd-ritual__head{grid-template-columns:1fr 1fr;align-items:end;gap:48px}}
@@ -233,22 +232,6 @@ a.hxpd-ritual__link:hover .hxpd-ritual__object img{transform:translateY(-6px)}
 .hxpd-ritual__item.is-current .hxpd-ritual__stage{opacity:.55}
 .hxpd-ritual__set{margin-top:clamp(36px,4vw,56px);text-align:center}
 
-.hxpd-set__list{display:grid;grid-template-columns:1fr;gap:48px}
-@media (min-width:640px){.hxpd-set__list{grid-template-columns:1fr 1fr;gap:56px 24px}}
-@media (min-width:1100px){.hxpd-set__list{grid-template-columns:repeat(4,1fr);gap:32px}}
-.hxpd-set__link{display:flex;flex-direction:column;align-items:center;text-align:center;text-decoration:none;color:var(--hx-text)}
-.hxpd-set__stage{display:block;width:100%;max-width:240px;aspect-ratio:2/3;margin-bottom:18px}
-.hxpd-set__stage :where(picture,img){display:block;width:100%;height:100%;object-fit:contain}
-.hxpd-set__object img{transition:transform 900ms var(--hx-ease)}
-.hxpd-set__link:hover .hxpd-set__object img{transform:translateY(-6px)}
-.hxpd-set__step{display:inline-flex;align-items:center;gap:10px;font-size:var(--hx-fs-label);font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--hx-accent)}
-.hxpd-set__step .hx-step{font-size:15px}
-.hxpd-set__step .hxpd-step__rule{width:20px}
-.hxpd-set__name{margin-top:10px;font-family:var(--hx-serif);font-size:var(--hx-fs-title);line-height:var(--hx-lh-title);color:var(--hx-ink);text-wrap:balance}
-.hxpd-set__copy{margin-top:10px;max-width:22em;font-size:1rem;line-height:1.6;color:var(--hx-text)}
-.hxpd-set__meta{margin-top:12px;font-size:13px;color:var(--hx-muted);font-variant-numeric:tabular-nums}
-.hxpd-set__cta{display:inline-flex;align-items:center;margin-top:10px;min-height:44px;font-size:var(--hx-fs-detail);font-weight:500;color:var(--hx-ink)}
-.hxpd-set__link:hover .hx-arrow{transform:translateX(4px)}
 
 /* FAQ */
 .hxpd-faq{background:var(--hx-white)}
@@ -270,7 +253,7 @@ body.hxpd-bar-on{padding-bottom:calc(7em + env(safe-area-inset-bottom,0px))}
 
 @media (prefers-reduced-motion:reduce){
 	.hxpd-bar,.hxpd-bar.is-on,.hxpd-gallery__fill,.hxpd-acc__icon::before,.hxpd-acc__icon::after{transition:none}
-	.hxpd-ritual__object img,.hxpd-set__object img{transition:none}
+	.hxpd-ritual__object img{transition:none}
 	.hxpd-gallery__track{scroll-behavior:auto}
 }
 
@@ -279,3 +262,298 @@ body.hxpd-bar-on{padding-bottom:calc(7em + env(safe-area-inset-bottom,0px))}
 .hxpd-acc__text a{vertical-align:middle}
 /* Set label on phones: two clean lines, no dangling rule. */
 @media (max-width:599.98px){.hxpd--set .hxpd-step__rule{display:none}.hxpd--set .hxpd-step__of{flex-basis:100%;margin-left:0}}
+
+/* ═══ Guerlain-style product page (owner, 25 Oct 2026: the Micellar Water page only) ═══════════
+   Along the lines of Guerlain's product pages: one large image with a thumbnail rail and arrows
+   beside the sticky purchase column; a size chip and an icon service list; a sticky section bar;
+   image-led key ingredients and how-to-use; a shoppable "Complete your ritual" row. Scoped to
+   .hxpd--g (single-product.php; since 28 Oct 2026 all four formulas). No results figure on the
+   cleanser (it has no study) and no ratings (brand rule). */
+.hxpd--g{--hxpd-secnav:52px}
+.hxpd--g [id^="hxpd-"]{scroll-margin-top:calc(var(--cos-nav-h,80px) + var(--hxpd-secnav) + 8px)}
+
+/* gallery: phones keep the swipe row and meter; from 1024px a rail of thumbnails and one image */
+.hxpd--g .hxpd-thumbs,.hxpd--g .hxpd-gallery__nav{display:none}
+@media (min-width:1024px){
+	.hxpd--g .hxpd-gallery{display:grid;grid-template-columns:88px minmax(0,1fr);gap:16px;align-items:start;align-self:start}
+	.hxpd--g .hxpd-thumbs{display:grid;gap:10px;grid-column:1;grid-row:1;position:sticky;top:calc(var(--cos-nav-h,80px) + 24px)}
+	.hxpd--g .hxpd-gallery__track{grid-column:2;grid-row:1;display:flex;gap:0;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth}
+	.hxpd--g .hxpd-gallery__item,.hxpd--g .hxpd-gallery__item--lead,.hxpd--g .hxpd-gallery__track.is-odd .hxpd-gallery__item:last-child{flex:0 0 100%;grid-column:auto}
+	.hxpd--g .hxpd-gallery__frame,.hxpd--g .hxpd-gallery__item--lead .hxpd-gallery__frame,.hxpd--g .hxpd-gallery__track.is-odd .hxpd-gallery__item:last-child:not(.hxpd-gallery__item--lead) .hxpd-gallery__frame{aspect-ratio:4/5;max-height:calc(100svh - var(--cos-nav-h,80px) - 48px);width:100%;background:var(--hx-pearl)}
+	.hxpd--g .hxpd-gallery__item--lead img{object-fit:contain;padding:6% 0}
+	.hxpd--g .hxpd-thumbs__btn{display:block;width:88px;aspect-ratio:4/5;padding:0;border:1px solid transparent;background:var(--hx-pearl);cursor:pointer;overflow:clip;opacity:.62;transition:opacity var(--hx-dur-ui) var(--hx-ease-soft),border-color var(--hx-dur-ui) var(--hx-ease-soft)}
+	.hxpd--g .hxpd-thumbs__btn :where(picture,img){display:block;width:100%;height:100%;object-fit:cover}
+	.hxpd--g .hxpd-thumbs li:first-child .hxpd-thumbs__btn img{object-fit:contain;padding:8% 0}
+	.hxpd--g .hxpd-thumbs__btn:hover{opacity:.9}
+	.hxpd--g .hxpd-thumbs__btn.is-on{opacity:1;border-color:var(--hx-ink)}
+	.hxpd--g .hxpd-gallery__nav{display:flex;align-items:center;justify-content:center;position:absolute;z-index:2;top:50%;width:44px;height:44px;margin-top:-22px;padding:0;border:0;border-radius:50%;background:rgba(248,248,248,.88);color:var(--hx-ink);cursor:pointer;transition:background-color var(--hx-dur-ui) var(--hx-ease-soft),opacity var(--hx-dur-ui)}
+	.hxpd--g .hxpd-gallery__nav:hover{background:#fff}
+	.hxpd--g .hxpd-gallery__nav[disabled]{opacity:0;pointer-events:none}
+	.hxpd--g .hxpd-gallery__nav--prev{left:calc(88px + 16px + 16px)}
+	.hxpd--g .hxpd-gallery__nav--next{right:16px}
+	.hxpd--g .hxpd-gallery__nav span{width:9px;height:9px;border-top:1.4px solid currentColor;border-right:1.4px solid currentColor}
+	.hxpd--g .hxpd-gallery__nav--prev span{transform:translateX(2px) rotate(-135deg)}
+	.hxpd--g .hxpd-gallery__nav--next span{transform:translateX(-2px) rotate(45deg)}
+}
+
+/* purchase: icon services (the size chip was removed by the owner, 25 Oct 2026; the size shows beside the price) */
+.hxpd--g .hxpd-services{display:grid;gap:12px;margin-top:22px;padding-top:20px;border-top:1px solid var(--hx-line)}
+.hxpd--g .hxpd-services li{display:flex;align-items:center;gap:14px;font-size:.875rem;line-height:1.45;color:var(--hx-text)}
+.hxpd--g .hxpd-services a{color:inherit;text-underline-offset:3px}
+.hxpd--g .hxpd-services__icon{flex:none;width:20px;height:20px;background:currentColor;color:var(--hx-ink);-webkit-mask:var(--i) center/contain no-repeat;mask:var(--i) center/contain no-repeat}
+.hxpd--g .hxpd-services__icon--ship{--i:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.3'%3E%3Cpath d='M2 6h12v10H2zM14 10h4l3 3v3h-7z'/%3E%3Ccircle cx='6.5' cy='17.5' r='1.6'/%3E%3Ccircle cx='17.5' cy='17.5' r='1.6'/%3E%3C/svg%3E")}
+.hxpd--g .hxpd-services__icon--return{--i:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.3'%3E%3Cpath d='M4 10h11a5 5 0 0 1 0 10H9'/%3E%3Cpath d='M8 6 4 10l4 4'/%3E%3C/svg%3E")}
+.hxpd--g .hxpd-services__icon--lock{--i:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.3'%3E%3Crect x='5' y='10.5' width='14' height='10'/%3E%3Cpath d='M8 10.5V7a4 4 0 0 1 8 0v3.5'/%3E%3C/svg%3E")}
+.hxpd--g .hxpd-benefits{margin-top:20px}
+
+/* the section bar: sticky under the header */
+.hxpd--g .hxpd-secnav{position:sticky;z-index:5;top:var(--cos-nav-h,80px);background:var(--hx-white);border-block:1px solid var(--hx-line)}
+.hxpd--g .hxpd-secnav__list{display:flex;justify-content:center;gap:clamp(20px,3vw,48px);min-height:var(--hxpd-secnav);overflow-x:auto;scrollbar-width:none}
+.hxpd--g .hxpd-secnav__list::-webkit-scrollbar{display:none}
+.hxpd--g .hxpd-secnav__link{display:inline-flex;align-items:center;min-height:var(--hxpd-secnav);font-size:.78125rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap;color:var(--hx-muted);text-decoration:none;border-bottom:1px solid transparent;transition:color var(--hx-dur-ui) var(--hx-ease-soft)}
+.hxpd--g .hxpd-secnav__link:hover,.hxpd--g .hxpd-secnav__link.is-on{color:var(--hx-ink);border-bottom-color:var(--hx-ink)}
+@media (max-width:899.98px){.hxpd--g .hxpd-secnav__list{justify-content:flex-start}}
+
+/* key ingredients: the photograph beside the four actives (two by two) */
+@media (min-width:1024px){
+	.hxpd--g .hxpd-actives__grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(48px,6vw,112px);align-items:center}
+	.hxpd--g .hxpd-actives__list{grid-template-columns:1fr 1fr}
+}
+.hxpd--g .hxpd-actives__media{margin:0 0 40px;aspect-ratio:4/5;background:var(--hx-pearl)}
+.hxpd--g .hxpd-actives__media :where(picture,img){display:block;width:100%;height:100%;object-fit:cover}
+@media (min-width:1024px){.hxpd--g .hxpd-actives__media{margin:0}}
+
+/* how to use: steps beside the photograph */
+.hxpd--g .hxpd-use__media{aspect-ratio:4/5;background:#1C1D1F}
+.hxpd--g .hxpd-use__media :where(picture,img){display:block;width:100%;height:100%;object-fit:cover}
+
+/* complete your ritual: price and an add-to-bag under each formula */
+.hxpd--g .hxpd-ritual__item{display:flex;flex-direction:column;align-items:center}
+.hxpd--g .hxpd-ritual__price{margin-top:8px;font-size:.875rem;color:var(--hx-text);font-variant-numeric:lining-nums tabular-nums}
+.hxpd--g .hxpd-ritual__add{display:inline-flex;align-items:center;justify-content:center;min-height:44px;margin-top:14px;padding:0 20px;border:1px solid var(--hx-ink);font-size:.78125rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--hx-ink);text-decoration:none;transition:background-color var(--hx-dur-ui) var(--hx-ease-soft),color var(--hx-dur-ui) var(--hx-ease-soft)}
+.hxpd--g .hxpd-ritual__add:hover,.hxpd--g .hxpd-ritual__add:focus-visible{background:var(--hx-ink);color:var(--hx-white)}
+.hxpd--g .hxpd-ritual__add.loading{opacity:.6;pointer-events:none}
+.hxpd--g .hxpd-ritual .added_to_cart{display:none}
+
+/* ═══ Augustinus Bader-style product page (owner, 25 Oct 2026: the Revitalizing Eye Cream only) ═══
+   Along the lines of augustinusbader.com (The Rich Cream), in this house's palette and type:
+   a two-column image grid with a results card beside the sticky panel; the panel's accordion set
+   and "Complete your routine"; then the science cards, a dark proven-results band, the actives on
+   an arc, how to apply, the streamlined routine and questions beside a photograph. Scoped to
+   .hxpd--ab (single-product.php). Templates: purchase-ab.php, formula-ab.php. */
+
+/* gallery: 2 × n grid of equal 4:5 tiles from 1024px (AB), the results card second */
+.hxpd--ab .hxpd-gallery__item--proof .hxpd-proofcard{display:flex;flex-direction:column;justify-content:flex-end;gap:10px;width:100%;height:100%;aspect-ratio:4/5;padding:clamp(24px,3vw,40px);background:var(--hx-ink,#1C1D1F);color:#F8F8F8;text-decoration:none}
+.hxpd--ab .hxpd-proofcard__n{font-family:var(--hx-serif);font-weight:300;font-size:clamp(3.5rem,2.6rem + 3vw,5.5rem);line-height:.95;font-variant-numeric:lining-nums}
+.hxpd--ab .hxpd-proofcard__u{font-size:.55em;margin-left:2px}
+.hxpd--ab .hxpd-proofcard__what{font-size:1rem;letter-spacing:.02em}
+.hxpd--ab .hxpd-proofcard__how{font-size:.8125rem;line-height:1.5;color:rgba(248,248,248,.74)}
+@media (min-width:1024px){
+	.hxpd--ab .hxpd-gallery__track{grid-template-columns:1fr 1fr;gap:8px}
+	.hxpd--ab .hxpd-gallery__item--lead,.hxpd--ab .hxpd-gallery__track.is-odd .hxpd-gallery__item:last-child{grid-column:auto}
+	.hxpd--ab .hxpd-gallery__frame,.hxpd--ab .hxpd-gallery__item--lead .hxpd-gallery__frame,.hxpd--ab .hxpd-gallery__track.is-odd .hxpd-gallery__item:last-child:not(.hxpd-gallery__item--lead) .hxpd-gallery__frame{aspect-ratio:4/5;max-height:none}
+	.hxpd--ab .hxpd-gallery__item--lead img{object-fit:contain;padding:8% 0}
+}
+
+/* panel: accordions and complete your routine */
+.hxpd--ab .hxpd-acc--ab{margin-top:28px}
+.hxpd--ab .hxpd-benefits--acc{margin:0 0 18px;padding:0;border:0}
+.hxpd--ab .hxpd-acc__proof{padding-bottom:18px}
+.hxpd--ab .hxpd-acc__fig{font-family:var(--hx-serif);font-size:1.75rem;line-height:1.1;color:var(--hx-ink);font-variant-numeric:lining-nums}
+.hxpd--ab .hxpd-acc__fig span{font-family:var(--hx-sans);font-size:1rem}
+.hxpd--ab .hxpd-acc__proof .hxpd-acc__text{margin:8px 0 10px}
+.hxpd--ab .hxpd-concerns{display:flex;flex-wrap:wrap;gap:8px;padding-bottom:18px}
+.hxpd--ab .hxpd-concerns li{padding:6px 12px;border:1px solid var(--hx-line-strong);font-size:.8125rem;color:var(--hx-text)}
+.hxpd--ab .hxpd-routine{margin-top:32px}
+.hxpd--ab .hxpd-routine__title{margin-bottom:14px;font-size:.78125rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--hx-ink)}
+.hxpd--ab .hxpd-routine__list{display:grid;gap:10px}
+.hxpd--ab .hxpd-routine__item{display:grid;grid-template-columns:64px minmax(0,1fr) auto;align-items:center;gap:14px;padding:12px;border:1px solid var(--hx-line)}
+.hxpd--ab .hxpd-routine__pic{display:block;width:64px;aspect-ratio:2/3;background:var(--hx-pearl)}
+.hxpd--ab .hxpd-routine__pic :where(picture,img){display:block;width:100%;height:100%;object-fit:contain}
+.hxpd--ab .hxpd-routine__step{font-size:.6875rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--hx-muted)}
+.hxpd--ab .hxpd-routine__step .hx-step{font-size:.75rem}
+.hxpd--ab .hxpd-routine__name{display:block;margin-top:2px;font-family:var(--hx-serif);font-size:1.125rem;line-height:1.25;color:var(--hx-ink);text-decoration:none}
+.hxpd--ab .hxpd-routine__name:hover{text-decoration:underline;text-underline-offset:3px}
+.hxpd--ab .hxpd-routine__meta{margin-top:2px;font-size:.8125rem;color:var(--hx-text)}
+.hxpd--ab .hxpd-routine__price{margin-top:2px;font-size:.8125rem;color:var(--hx-muted);font-variant-numeric:lining-nums}
+:is(.hxpd--ab :is(.hxpd-routine__add,.hxpd-steps__add),.hxpd--g .hxpd-steps__add){display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 18px;border:1px solid var(--hx-ink);font-size:.78125rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--hx-ink);text-decoration:none;transition:background-color var(--hx-dur-ui) var(--hx-ease-soft),color var(--hx-dur-ui) var(--hx-ease-soft)}
+:is(.hxpd--ab :is(.hxpd-routine__add,.hxpd-steps__add),.hxpd--g .hxpd-steps__add):is(:hover,:focus-visible){background:var(--hx-ink);color:var(--hx-white)}
+:is(.hxpd--ab :is(.hxpd-routine__add,.hxpd-steps__add),.hxpd--g .hxpd-steps__add).loading{opacity:.6;pointer-events:none}
+.hxpd--ab .added_to_cart{display:none}
+
+/* the science: four image cards */
+:is(.hxpd--ab,.hxpd--g) .hxpd-sci{padding-block:var(--hx-section-sm);background:var(--hx-white)}
+:is(.hxpd--ab,.hxpd--g) .hxpd-sci__head{display:grid;gap:16px;margin-bottom:clamp(32px,4vw,56px)}
+@media (min-width:900px){:is(.hxpd--ab,.hxpd--g) .hxpd-sci__head{grid-template-columns:1fr 1fr;align-items:end;gap:48px}}
+:is(.hxpd--ab,.hxpd--g) .hxpd-sci__lede{max-width:34em}
+:is(.hxpd--ab,.hxpd--g) .hxpd-sci__list{display:grid;gap:32px 16px;grid-template-columns:1fr}
+@media (min-width:640px){:is(.hxpd--ab,.hxpd--g) .hxpd-sci__list{grid-template-columns:1fr 1fr}}
+@media (min-width:1100px){:is(.hxpd--ab,.hxpd--g) .hxpd-sci__list{grid-template-columns:repeat(4,1fr)}}
+:is(.hxpd--ab,.hxpd--g) .hxpd-sci__media{aspect-ratio:4/5;margin:0 0 18px;overflow:clip;background:var(--hx-pearl)}
+:is(.hxpd--ab,.hxpd--g) .hxpd-sci__media :where(picture,img){display:block;width:100%;height:100%;object-fit:cover}
+:is(.hxpd--ab,.hxpd--g) .hxpd-sci__name{font-family:var(--hx-serif);font-weight:400;font-size:var(--ts-title,1.375rem);line-height:1.22;color:var(--hx-ink)}
+:is(.hxpd--ab,.hxpd--g) .hxpd-sci__text{margin-top:8px;font-size:.9375rem;line-height:1.6;color:var(--hx-text);max-width:30em}
+
+/* proven results: the dark band */
+.hxpd--ab .hxpd-proof{padding-block:clamp(56px,4rem + 3vw,120px);background:#1C1D1F;color:#F8F8F8}
+.hxpd--ab .hxpd-proof__head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:16px;padding-bottom:24px;border-bottom:1px solid rgba(248,248,248,.2)}
+html body:not(.cos-h26) #cos-main-content.hxpd--ab .hxpd-proof__title{color:#F8F8F8}
+.hxpd--ab .hxpd-proof__kind{padding:8px 14px;border:1px solid rgba(248,248,248,.5);font-size:.75rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase}
+.hxpd--ab .hxpd-proof__row{display:flex;flex-wrap:wrap;align-items:center;gap:12px 32px;padding-block:clamp(32px,4vw,56px)}
+.hxpd--ab .hxpd-proof__n{font-family:var(--hx-serif);font-weight:300;font-size:clamp(4.5rem,3rem + 6vw,9rem);line-height:.9;font-variant-numeric:lining-nums}
+.hxpd--ab .hxpd-proof__n span{font-size:.5em;margin-left:4px}
+.hxpd--ab .hxpd-proof__what{max-width:18em;font-size:clamp(1.125rem,1rem + .5vw,1.5rem);line-height:1.35}
+.hxpd--ab .hxpd-proof__foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px}
+.hxpd--ab .hxpd-proof__note{max-width:46em;font-size:.875rem;line-height:1.6;color:rgba(248,248,248,.78)}
+.hxpd--ab .hxpd-proof__more{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;background:#F8F8F8;color:#1C1D1F;font-size:.78125rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;text-decoration:none}
+.hxpd--ab .hxpd-proof__more:hover{background:#fff}
+.hxpd--ab .hxpd-proof :focus-visible{outline-color:#F8F8F8}
+
+/* key ingredients on an arc */
+.hxpd--ab .hxpd-arc{padding-block:var(--hx-section-sm);background:var(--hx-pearl);overflow:clip}
+.hxpd--ab .hxpd-arc__grid{display:grid;gap:40px}
+.hxpd--ab .hxpd-arc__lede{margin-top:16px;max-width:26em}
+.hxpd--ab .hxpd-arc__more{margin-top:28px}
+.hxpd--ab .hxpd-arc__btn{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;background:var(--hx-ink);color:var(--hx-white);font-size:.78125rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;text-decoration:none}
+.hxpd--ab .hxpd-arc__list{display:grid;gap:28px}
+.hxpd--ab .hxpd-arc__item{position:relative;padding-left:28px}
+.hxpd--ab .hxpd-arc__line{display:none}
+.hxpd--ab .hxpd-arc__dot{position:absolute;left:0;top:.5em;width:11px;height:11px;border:1px solid var(--hx-ink);border-radius:50%;background:var(--hx-pearl)}
+.hxpd--ab .hxpd-arc__name{font-family:var(--hx-serif);font-weight:400;font-size:var(--ts-title,1.375rem);line-height:1.22;color:var(--hx-ink)}
+.hxpd--ab .hxpd-arc__text{margin-top:6px;max-width:24em;font-size:.9375rem;line-height:1.6;color:var(--hx-text)}
+@media (min-width:1024px) and (max-width:1279.98px){
+	.hxpd--ab .hxpd-arc__grid{grid-template-columns:4fr 8fr;align-items:center}
+	.hxpd--ab .hxpd-arc__list{grid-template-columns:1fr 1fr;gap:32px 40px}
+}
+@media (min-width:1280px){   /* the arc needs the width: below this the actives are a plain grid */
+	.hxpd--ab .hxpd-arc__grid{grid-template-columns:4fr 8fr;align-items:center;min-height:620px}
+	/* the four actives sit on a quarter circle drawn from the lower right */
+	.hxpd--ab .hxpd-arc__list{position:relative;height:640px;display:block}
+	.hxpd--ab .hxpd-arc__line{display:block;position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+	.hxpd--ab .hxpd-arc__line path{stroke:var(--hx-line-strong);stroke-width:1}
+	/* each dot's centre sits on the curve: B(t) of M0,100 Q15,10 100,0 at t = .2, .4, .6, .8 */
+	.hxpd--ab .hxpd-arc__item{position:absolute;width:min(260px,24%);padding-left:24px;transform:translate(-6px,-6px)}
+	.hxpd--ab .hxpd-arc__dot{top:0}
+	.hxpd--ab .hxpd-arc__item--0{left:8.8%;top:67.2%}
+	.hxpd--ab .hxpd-arc__item--1{left:23.2%;top:40.8%}
+	.hxpd--ab .hxpd-arc__item--2{left:43.2%;top:20.8%}
+	.hxpd--ab .hxpd-arc__item--3{left:68.8%;top:7.2%}
+}
+
+/* how to apply: photograph left, steps right */
+.hxpd--ab .hxpd-apply{padding-block:var(--hx-section-sm);background:var(--hx-white)}
+.hxpd--ab .hxpd-apply__grid{display:grid;gap:40px;align-items:center}
+.hxpd--ab .hxpd-apply__media{margin:0}
+.hxpd--ab .hxpd-apply__media img{display:block;width:100%;height:auto}
+.hxpd--ab .hxpd-apply__lede{margin:12px 0 24px}
+@media (min-width:1024px){.hxpd--ab .hxpd-apply__grid{grid-template-columns:6fr 5fr;gap:clamp(48px,7vw,128px)}}
+
+/* your streamlined routine: four step cards */
+:is(.hxpd--ab,.hxpd--g) .hxpd-steps{padding-block:var(--hx-section-sm);background:var(--hx-white)}
+:is(.hxpd--ab,.hxpd--g) .hxpd-steps__head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:clamp(28px,3vw,48px)}
+:is(.hxpd--ab,.hxpd--g) .hxpd-steps__list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (min-width:1024px){:is(.hxpd--ab,.hxpd--g) .hxpd-steps__list{grid-template-columns:repeat(4,1fr);gap:16px}}
+:is(.hxpd--ab,.hxpd--g) .hxpd-steps__card{display:flex;flex-direction:column;align-items:flex-start;padding:16px 16px 20px;background:var(--hx-pearl)}
+:is(.hxpd--ab,.hxpd--g) .hxpd-steps__badge{padding:5px 10px;background:var(--hx-ink);color:var(--hx-white);font-size:.6875rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase}
+:is(.hxpd--ab,.hxpd--g) .hxpd-steps__stage{display:block;align-self:center;width:62%;aspect-ratio:2/3;margin:20px 0}
+:is(.hxpd--ab,.hxpd--g) .hxpd-steps__stage :where(picture,img){display:block;width:100%;height:100%;object-fit:contain}
+:is(.hxpd--ab,.hxpd--g) .hxpd-steps__name{font-family:var(--hx-serif);font-size:1.125rem;line-height:1.25;color:var(--hx-ink);text-decoration:none}
+:is(.hxpd--ab,.hxpd--g) a.hxpd-steps__name:hover{text-decoration:underline;text-underline-offset:3px}
+:is(.hxpd--ab,.hxpd--g) .hxpd-steps__price{margin:4px 0 14px;font-size:.875rem;color:var(--hx-muted);font-variant-numeric:lining-nums}
+:is(.hxpd--ab,.hxpd--g) .hxpd-steps__card.is-current .hxpd-steps__stage{opacity:.6}
+:is(.hxpd--ab,.hxpd--g) .hxpd-steps__add{margin-top:auto}
+
+/* questions beside a photograph */
+.hxpd--ab .hxpd-qa{background:var(--hx-pearl)}
+.hxpd--ab .hxpd-qa__grid{display:grid}
+.hxpd--ab .hxpd-qa__body{padding:var(--hx-section-sm) var(--hx-margin)}
+.hxpd--ab .hxpd-qa__title{margin-bottom:24px}
+.hxpd--ab .hxpd-qa__media{margin:0}
+.hxpd--ab .hxpd-qa__media img{display:block;width:100%;height:100%;object-fit:cover}
+@media (min-width:1024px){
+	.hxpd--ab .hxpd-qa__grid{grid-template-columns:1fr 1fr;align-items:stretch}
+	.hxpd--ab .hxpd-qa__body{align-self:center;padding-left:max(var(--hx-margin),calc((100vw - var(--hx-max)) / 2 + var(--hx-margin)));padding-right:clamp(32px,5vw,80px)}
+	.hxpd--ab .hxpd-qa__media{min-height:640px}
+}
+@media (max-width:639.98px){
+	:is(.hxpd--ab,.hxpd--g) .hxpd-steps__badge{letter-spacing:.08em;font-size:.625rem;white-space:nowrap}
+	:is(.hxpd--ab,.hxpd--g) .hxpd-steps__add{padding:0 12px;letter-spacing:.1em;white-space:nowrap}
+	:is(.hxpd--ab,.hxpd--g) .hxpd-steps__card{padding:12px 12px 16px}
+}
+.hxpd--g .hxpd-actives__inci{margin-top:36px;border-top:1px solid var(--hx-line)}
+.hxpd--g .hxpd-actives__inci .hxpd-inci{padding-bottom:18px}
+
+/* Micellar Water gallery: higher on the page, fits the screen, never scrolls up and down
+   inside itself; the hands photograph leads and is shown full-frame (owner, 28 Oct 2026). */
+@media (min-width:1024px){
+	.hxpd--g .hxpd-buy__grid{padding-top:8px;align-items:start}
+	.hxpd--g .hxpd-gallery{--g-h:min(calc(100svh - var(--cos-nav-h,80px) - 32px),860px)}
+	.hxpd--g .hxpd-thumbs{position:static;align-content:start;max-height:var(--g-h);overflow:hidden}
+	.hxpd--g .hxpd-gallery__track{height:var(--g-h);overflow-y:hidden;overscroll-behavior-y:auto}   /* a vertical wheel over the photograph scrolls the page */
+	.hxpd--g .hxpd-gallery__item,.hxpd--g .hxpd-gallery__item--lead{height:100%}
+	.hxpd--g .hxpd-gallery__frame,.hxpd--g .hxpd-gallery__item--lead .hxpd-gallery__frame,.hxpd--g .hxpd-gallery__track.is-odd .hxpd-gallery__item:last-child:not(.hxpd-gallery__item--lead) .hxpd-gallery__frame{height:100%;max-height:none;aspect-ratio:auto}
+	.hxpd--g .hxpd-gallery__item--lead img{object-fit:cover;padding:0}
+	.hxpd--g .hxpd-thumbs li:first-child .hxpd-thumbs__btn img{object-fit:cover;padding:0}
+	.hxpd--g .hxpd-panel__inner{padding-top:clamp(8px,2vh,24px)}
+}
+.hxpd--g .hxpd-gallery__item--lead img{object-fit:cover}
+.hxpd--g .hxpd-sci__media .hxpd-sci__pack img{object-fit:contain;padding:8% 0;background:#FFFFFF}
+.hxpd--g .hxpd-sci__media:has(.hxpd-sci__pack){background:#FFFFFF}
+
+/* ─── Key ingredients, Valmont-style (owner, 28 Oct 2026: Micellar Water) ───────────────
+   Heading and "See all ingredients" on the left; the four actives as glass orbs holding an
+   authored line drawing, the row staggered (2nd and 4th raised); the INCI list beneath. */
+.hxpd--g .hxpd-orbs{padding-block:var(--hx-section-sm);background:var(--hx-white)}
+.hxpd--g .hxpd-orbs__grid{display:grid;gap:40px}
+html body:not(.cos-h26) #cos-main-content .hxpd--g .hxpd-orbs__title,html body:not(.cos-h26) #cos-main-content.hxpd--g .hxpd-orbs__title{max-width:11em}
+.hxpd--g .hxpd-orbs__more{margin-top:32px}
+.hxpd--g .hxpd-orbs__link{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding-bottom:2px;border-bottom:1px solid var(--hx-ink);font-size:.78125rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--hx-ink);text-decoration:none}
+.hxpd--g .hxpd-orbs__arrow{width:7px;height:7px;margin-top:-4px;border-right:1.3px solid currentColor;border-bottom:1.3px solid currentColor;transform:rotate(45deg)}
+.hxpd--g .hxpd-orbs__list{display:grid;grid-template-columns:1fr 1fr;gap:40px 20px}
+.hxpd--g .hxpd-orbs__orb{position:relative;display:block;width:min(100%,220px);aspect-ratio:1;margin-bottom:22px;border-radius:50%;
+	background:radial-gradient(circle at 32% 26%,#FFFFFF 0,rgba(255,255,255,.9) 14%,rgba(255,255,255,0) 34%),radial-gradient(circle at 50% 50%,#FBFBFA 55%,#E6E7E8 80%,#C9CBCE 100%);
+	box-shadow:inset -10px -14px 24px rgba(28,29,31,.10),inset 8px 10px 20px rgba(255,255,255,.9),0 18px 30px -18px rgba(28,29,31,.35)}
+.hxpd--g .hxpd-orbs__orb::after{content:"";position:absolute;inset:6%;border-radius:50%;border:1px solid rgba(255,255,255,.75);pointer-events:none}
+.hxpd--g .hxpd-orbs__orb svg{position:absolute;inset:12%;width:76%;height:76%;overflow:visible}
+.hxpd--g .hxpd-orbs__name{font-family:var(--hx-serif);font-weight:400;font-size:var(--ts-title,1.375rem);line-height:1.22;color:var(--hx-ink)}
+.hxpd--g .hxpd-orbs__text{margin-top:10px;max-width:22em;font-size:.9375rem;line-height:1.6;color:var(--hx-text)}
+.hxpd--g .hxpd-orbs__inci{border-top:1px solid var(--hx-line)}
+.hxpd--g .hxpd-orbs__inci .hxpd-inci{padding-bottom:18px}
+@media (min-width:1024px){
+	.hxpd--g .hxpd-orbs__grid{grid-template-columns:minmax(0,4fr) minmax(0,8fr);column-gap:clamp(40px,5vw,96px);align-items:center}
+	.hxpd--g .hxpd-orbs__list{grid-template-columns:repeat(4,1fr);gap:0 clamp(20px,2vw,32px);align-items:start;padding-top:72px}
+	.hxpd--g .hxpd-orbs__item:nth-child(even){margin-top:-72px}
+	.hxpd--g .hxpd-orbs__inci{grid-column:1 / -1;margin-top:24px}
+}
+
+/* Polish, 28 Oct 2026 (Micellar Water): uppercase labels never below 12px; 44px tap targets */
+.hxpd--g .hxpd-steps__badge{font-size:.75rem;letter-spacing:.12em;white-space:normal;line-height:1.35}
+@media (max-width:639.98px){.hxpd--g .hxpd-steps__badge{font-size:.75rem;letter-spacing:.06em}}
+.hxpd--g a.hxpd-steps__name{display:inline-flex;align-items:center;min-height:44px}
+.hxpd--g .hxpd-services a{display:inline-flex;align-items:center;min-height:44px;margin-block:-12px}
+
+/* ─── Product titles (owner, 29 Oct 2026): Dior-style Inter that morning, then the Swiss
+   scientific luxury concept sitewide: the display face, Regular, sentence case, as the homepage
+   collection tiles. Outranks typeset-site.css (which loads later) by the .hxpd on main. */
+html body:not(.cos-h26) #cos-main-content.hxpd h1.hxpd-name{
+	font-family:var(--hx-serif);font-size:clamp(1.75rem,1.55rem + .6vw,2.25rem);font-weight:400;
+	line-height:1.12;letter-spacing:-.01em;text-transform:none;
+}
+html body:not(.cos-h26) #cos-main-content.hxpd :is(.hxpd-steps__name,.hxpd-ritual__name){
+	font-family:var(--hx-serif);font-size:clamp(1.125rem,1.05rem + .25vw,1.25rem);font-weight:400;line-height:1.2;letter-spacing:-.005em;text-transform:none;
+}
+
+/* ─── The Complete Ritual on the formula pages' layout (owner, 29 Oct 2026: "like the product
+   pages"). set.php reuses the science cards (.hxpd-sci) for the four steps and the orbs head for
+   the ingredient lists; only these few pieces are its own. */
+.hxpd--set .hxpd-sci__media{display:block}
+.hxpd--set .hxpd-sci__step{margin-bottom:6px;font-size:.6875rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--hx-fg-3,#5C5C5A)}
+.hxpd--set .hxpd-sci__name a{color:inherit;text-decoration:underline 1px transparent;text-underline-offset:.22em;transition:text-decoration-color var(--hx-dur-ui) var(--hx-ease-soft)}
+.hxpd--set .hxpd-sci__card:hover .hxpd-sci__name a,.hxpd--set .hxpd-sci__name a:focus-visible{text-decoration-color:currentColor}
+.hxpd--set .hxpd-sci__meta{margin-top:12px;font-size:.875rem;color:var(--hx-fg-3,#5C5C5A);font-variant-numeric:lining-nums tabular-nums}
+.hxpd--set .hxpd-orbs__lede{margin-top:16px;max-width:26em}
+.hxpd--set .hxpd-orbs__lists{border-top:1px solid var(--hx-line)}
+.hxpd--set .hxpd-orbs__lists .hxpd-inci{padding-bottom:18px}
+.hxpd--set .hxpd-orbs__lists .hxpd-inci__note{margin-top:16px}
+/* phones: the four cut-out packshots two by two (the formula pages' cards are photographs, one per row) */
+@media (max-width:639.98px){.hxpd--set .hxpd-sci__list{grid-template-columns:1fr 1fr;gap:32px 12px}.hxpd--set .hxpd-sci__text{font-size:.875rem}}

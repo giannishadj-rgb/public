@@ -13,9 +13,8 @@
 
 function cos_child_global_styles(): void { ?>
 <style id="cos-global" nonce="<?php echo esc_attr( cos_csp_nonce() ); ?>">
-:root{--cos-ink:#111111!important;--cos-navy:#050505!important;--cos-pearl:#F2F2EF!important;--cos-gallery-bg:#E8E8E5!important;--cos-stone:#E5DED4!important;--cos-silver:#C4CAD1!important;--cos-slate:#5C6675!important;--cos-gold:#8B692F!important;--cos-gold-l:#B79A5B!important;--cos-teal:#46656B!important;--cos-focus:#2F6FED!important;--cos-success:#2D6A57!important;--cos-warning:#A56712!important;--cos-error:#A13B3B!important;--cos-display:'Cormorant Garamond','EB Garamond','Source Serif 4',Georgia,serif!important;--cos-body:'Inter',system-ui,-apple-system,'Segoe UI',Arial,sans-serif!important;--cos-nav-h:80px;--cos-black:#111111!important;--cos-mid:#5C6675!important;--cos-light:#E5DED4!important;--cos-red:#050505!important;--cos-promo-h:0px}
-/* 17 Oct 2026 round 2: a slimmer 60px bar wherever the menu button shows (below 1280px). */
-@media (max-width:1279.98px){:root{--cos-nav-h:60px}}
+:root{--cos-ink:#111111!important;--cos-navy:#050505!important;--cos-pearl:#F8F8F8!important;--cos-gallery-bg:#E8E8E5!important;--cos-stone:#E5DED4!important;--cos-silver:#C4CAD1!important;--cos-slate:#5C6675!important;--cos-gold:#8B692F!important;--cos-gold-l:#B79A5B!important;--cos-teal:#46656B!important;--cos-focus:#2F6FED!important;--cos-success:#2D6A57!important;--cos-warning:#A56712!important;--cos-error:#A13B3B!important;--cos-display:'Cormorant Garamond','EB Garamond',Georgia,serif!important;--cos-body:'Inter',system-ui,-apple-system,'Segoe UI',Arial,sans-serif!important;--cos-nav-h:80px;--cos-black:#111111!important;--cos-mid:#5C6675!important;--cos-light:#E5DED4!important;--cos-red:#050505!important;--cos-promo-h:0px}
+/* 19 Oct 2026: 80px at every width, as on the homepage (was 60px below 1280px). */
 /* The off-canvas mobile menu (#cos-mob-menu) is a fixed, inset:0 panel moved
    off-screen with translateX — mobile browsers still count its full-width
    layout box toward the page's scrollable area, producing a phantom
@@ -72,6 +71,9 @@ function cos_child_nav_aria( string $href ): string {
 
 function cos_child_global_nav(): void {
 	$logo_svg  = esc_url( get_stylesheet_directory_uri() . '/assets/images/logo-graphite.svg?v=' . (int) @filemtime( get_stylesheet_directory() . '/assets/images/logo-graphite.svg' ) );
+	// 25 Oct 2026: the same vector with pearl lettering (Swiss square and cross unchanged), for the
+	// transparent bar over a dark opening (the /science/ film); hx/chrome.css swaps the two.
+	$logo_pearl = esc_url( get_stylesheet_directory_uri() . '/assets/images/logo-pearl.svg?v=' . (int) @filemtime( get_stylesheet_directory() . '/assets/images/logo-pearl.svg' ) );
 	$primary = array(
 		'/'            => 'Home',
 		'/shop/'       => 'Shop',
@@ -83,13 +85,13 @@ function cos_child_global_nav(): void {
 <header id="cos-nav-wrap" class="hxn" role="banner">
   <nav id="cos-nav" aria-label="Primary navigation">
     <?php /* First in the DOM so the phone tab order matches the bar: menu → logo → bag.
-       Hidden ≥1280px; absolutely positioned at the left edge below that. */ ?>
+       Hidden ≥1024px; absolutely positioned at the left edge below that. */ ?>
     <button type="button" class="cos-mob-btn" id="cos-mob-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="cos-mob-menu">
       <span id="cos-h1"></span><span id="cos-h2"></span><span id="cos-h3"></span>
     </button>
     <div class="cos-nav-links">
-      <?php /* No "Home" in the desktop bar: the centred logo is the home link (17 Oct 2026). */
-      foreach ( $primary as $href => $label ) : if ( '/' === $href ) continue; ?>
+      <?php /* 19 Oct 2026: same bar as the homepage (inc/home-staging-navigation.php), "Home" included. */
+      foreach ( $primary as $href => $label ) : ?>
       <a href="<?php echo esc_attr( $href ); ?>"<?php echo cos_child_nav_aria( $href ); ?>><?php echo esc_html( $label ); ?></a>
       <?php endforeach; ?>
     </div>
@@ -99,12 +101,13 @@ function cos_child_global_nav(): void {
            lettering in graphite, Swiss square + cross in their official colours. Crisp at every DPR.
            Build: design-sources/home-2026/build_logo_graphite.py */ ?>
         <img class="hxn-logo" src="<?php echo $logo_svg; ?>" alt="Caviar of Switzerland" width="128" height="40" fetchpriority="high" loading="eager" decoding="sync"/>
+        <img class="hxn-logo hxn-logo--pearl" src="<?php echo $logo_pearl; ?>" alt="" aria-hidden="true" width="128" height="40" loading="lazy" decoding="async"/>
       </a>
     </div>
     <div class="cos-nav-utils">
       <?php /* Help lives in the menu (phones) and the footer's Customer Care column, not in the bar. */ ?>
-      <a href="/account/" aria-label="Account" class="cos-nav-account"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.25"/><path d="M5.5 18.5a6.5 6.5 0 0 1 13 0"/></svg></a>
-      <a href="/cart/" aria-label="Bag" class="cos-bag-link" id="cos-bag-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12l-1 11H7L6 8Z"/><path d="M9 8a3 3 0 1 1 6 0"/></svg><span class="cos-bag-count" aria-live="polite"></span></a>
+      <a href="/account/" aria-label="Account" class="cos-nav-account"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.25"/><path d="M5.5 18.5a6.5 6.5 0 0 1 13 0"/></svg></a>
+      <a href="/cart/" aria-label="Bag" class="cos-bag-link" id="cos-bag-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12l-1 11H7L6 8Z"/><path d="M9 8a3 3 0 1 1 6 0"/></svg><span class="cos-bag-count" aria-live="polite"></span></a>
     </div>
   </nav>
 </header>
@@ -233,6 +236,9 @@ function cos_child_global_footer(): void {
   // Set the state on load too (a reload mid-page must never show a transparent bar).
   function navState(){navWrap.classList.toggle('scrolled',window.scrollY>24);}
   navState();
+  // 'is-live' lets the bar go transparent at the top (hx/chrome.css): without this script the
+  // .scrolled state never arrives, so the bar stays solid rather than see-through over content.
+  navWrap.classList.add('is-live');
   window.addEventListener('scroll',navState,{passive:true});
   var mobBtn=document.getElementById('cos-mob-btn');
   var mobMenu=document.getElementById('cos-mob-menu');
@@ -282,10 +288,10 @@ function cos_child_global_footer(): void {
     if(open) lockPage();
     else unlockPage();
     setInert(open);
-    // Two hairlines (the middle span is hidden by hx/chrome.css), 8px apart: they meet at the centre.
-    h1.style.transform=open?'translateY(4.5px) rotate(45deg)':'';
+    // Three hairlines, 6px apart (as on the homepage): the outer two meet at the centre.
+    h1.style.transform=open?'translateY(6px) rotate(45deg)':'';
     h2.style.opacity=open?'0':'';
-    h3.style.transform=open?'translateY(-4.5px) rotate(-45deg)':'';
+    h3.style.transform=open?'translateY(-6px) rotate(-45deg)':'';
     mobBtn.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu');
     if(open){
       var first=focusable()[0];
@@ -316,8 +322,8 @@ function cos_child_global_footer(): void {
   window.addEventListener('wheel',preventBackgroundScroll,{passive:false});
   window.addEventListener('touchmove',preventBackgroundScroll,{passive:false});
   mobMenu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){if(open)setMenu(false,false);});});
-  // Rotating a tablet past 1280px hides the sheet (hx/chrome.css): close it so the page is never left locked.
-  var wide=window.matchMedia('(min-width: 1280px)');
+  // Rotating a tablet past 1024px hides the sheet (hx/chrome.css): close it so the page is never left locked.
+  var wide=window.matchMedia('(min-width: 1024px)');
   function onWide(e){if(e.matches&&open)setMenu(false,false);}
   if(wide.addEventListener) wide.addEventListener('change',onWide); else if(wide.addListener) wide.addListener(onWide);
   document.addEventListener('keydown',function(e){

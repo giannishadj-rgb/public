@@ -28,7 +28,7 @@ body.cos-h26{
 }
 
 .h26{
-	--h26-pearl:var(--cos-pearl,#F2F2EF); /* site-wide pearl, same as the header (was warm ivory #F5F2EC) */
+	--h26-pearl:var(--cos-pearl,#F8F8F8); /* site-wide pearl, same as the header (was warm ivory #F5F2EC) */
 	--h26-white:#FAFAF8;
 	--h26-charcoal:#151515;
 	--h26-black:#050505;
@@ -209,7 +209,7 @@ body.cos-h26 #cos-footer .cos-footer-copy,body.cos-h26 #cos-footer .cos-footer-c
    product. Beneath: name, benefit, size and price in 14px Inter; the whole
    tile is the link (no buttons). Label rows line up across each row
    (subgrid). Phones: two by two; four across from 900px. */
-.h26c{background:#FFFFFF;color:#1C1C1C;padding:64px 0 72px} /* white (owner, 13 Oct); the tiles keep their soft grey */
+.h26c{background:var(--h26-pearl);color:#1C1C1C;padding:64px 0 72px} /* shared site pearl; the tiles keep their soft grey */
 .h26c__head{display:flex;flex-direction:column;align-items:center;text-align:center;max-width:40rem;margin:0 auto;padding:0 20px}
 .h26c__title{color:#1C1C1C}
 .h26 .h26c .h26c__title{font-size:2rem} /* typeset 13 Oct: Dior-matched heading (≈40px Dior serif = 42px Cormorant cap height); smaller than the other section headings by owner request */
@@ -267,7 +267,7 @@ body.cos-h26 #cos-footer .cos-footer-copy,body.cos-h26 #cos-footer .cos-footer-c
    figures; graphite hairline leaders run from each marker to its figure
    and draw in once on reveal. The self-reported result is a separate
    secondary caption, never pinned to the face (critique 11 Oct 2026). */
-.h26e{background:#F2F2EF;color:#1C1C1C;padding:0 0 56px}
+.h26e{background:#F8F8F8;color:#1C1C1C;padding:0 0 56px}
 .h26e__plate{position:relative}
 .h26e__photo{position:relative;margin:0}
 .h26e__photo img{display:block;width:100%;height:auto;aspect-ratio:5/7;background:#DCDBD8}
@@ -395,7 +395,7 @@ body.cos-h26 #cos-footer .cos-footer-copy,body.cos-h26 #cos-footer .cos-footer-c
    porcelain over a soft shade, plus a small place caption. Phones: photo and
    copy share one grid cell, so the plate grows with the copy (never below 4:5)
    instead of letting text spill off the photograph. */
-.h26h{background:#F2F2EF;color:#1C1C1C}
+.h26h{background:#F8F8F8;color:#1C1C1C}
 .h26h__plate{position:relative;display:grid;margin:0;overflow:hidden;background:#5A6068}
 .h26h__photo{grid-area:1/1;min-height:100%}
 .h26h__photo picture,.h26h__photo img{display:block;width:100%;height:100%;object-fit:cover}
@@ -449,7 +449,7 @@ body.cos-h26 #cos-footer .cos-footer-copy,body.cos-h26 #cos-footer .cos-footer-c
    the photograph to colour and enlarges it; no scroll animation (owner,
    13 Oct). Below 1200px: a
    swipe row with the next panel peeking in. Then the offer band. */
-.h26r{background:#F2F2EF;color:#1C1C1C;padding:64px 0 72px}
+.h26r{background:#F8F8F8;color:#1C1C1C;padding:64px 0 72px}
 .h26r__intro{display:flex;flex-direction:column;align-items:center;max-width:40rem;margin:0 auto;padding:0 20px;text-align:center}
 .h26r__title{font-family:var(--h26-serif);font-size:3.5rem;font-weight:400;line-height:.98;letter-spacing:-.01em;color:#1C1C1C}
 .h26r__title span{display:inline}
@@ -553,7 +553,7 @@ body.cos-h26{
 @media (min-width:700px){ .h26{--edge:calc(max(0px, (100% - var(--h26-max)) / 2) + var(--h26-gutter))} }
 /* 3 seams: every section now meets the next on a clean edge; the gradient
    dissolves were removed one by one at the owner's request (13 Oct). */
-.h26-hero--pearl{--n-950:#FFFFFF;background:#FFFFFF}
+.h26-hero--pearl{--n-950:var(--h26-pearl);background:var(--h26-pearl)}
 .h26v{position:relative}
 .h26h{position:relative}
 .h26h__copy{z-index:2}
@@ -575,7 +575,8 @@ body.cos-h26{
    Everything is visible by default; reduced motion gets a short fade only. */
 .h26-hero__line{display:inline-block}
 @media (prefers-reduced-motion:no-preference){
-	html:has(.h26){scroll-behavior:smooth}
+	/* in-page anchors: hx-motion.js glides short jumps and jumps long ones (20 Oct 2026); no CSS
+	   scroll-behavior, which also animated deep links (/#ritual) on load through the whole page */
 	.h26-hero__media img{animation:h26-focus 1.6s cubic-bezier(.16,1,.3,1) both}
 	.h26-hero__line{animation:h26-line .8s cubic-bezier(.16,1,.3,1) .35s both}
 	.h26-hero__line.h26-hero__accent{animation-delay:.47s}

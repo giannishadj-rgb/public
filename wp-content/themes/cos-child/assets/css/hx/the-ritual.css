@@ -2,13 +2,16 @@
    hx/the-ritual.css — The Ritual page (/the-ritual/, page-the-ritual.php +
    template-parts/hx/the-ritual/*), whole-site rebuild 16 Oct 2026. Prefix hxrt-.
    Loads after hx/system.css (dependency cos-hx-system); tokens and utilities from there.
-   Sections: hero · prelude · steps (4 chapters) · order · day (morning/evening) · offer.
-   Grounds: pearl (hero, prelude, steps, day) / pearl white (order, offer); one restrained
-   dark panel (the evening protocol). No section hairlines; clean edges between grounds.
+   Sections (clarify pass, 23 Oct 2026; hero a full-bleed plate since 24 Oct): hero · sticky section bar ·
+   part 1 at a glance · part 2 step by step (4 chapters) · part 3 the Complete Ritual.
+   Grounds alternate so each part reads as its own room: pearl (hero, step by step) /
+   stone (at a glance, the Complete Ritual). Clean edges between grounds, no hairlines.
    ========================================================================== */
 
 .hxrt{
 	--hxrt-nav:var(--cos-nav-h,80px);
+	--hxrt-bar:52px;
+	--hxrt-room:var(--hx-ground-stone,#EDE9E1);
 	--hxrt-mono:grayscale(1) sepia(.07) contrast(1.05) brightness(.98);   /* warm silver print */
 	display:block;
 	background:var(--hx-ivory);
@@ -21,7 +24,8 @@
 .hxrt :where(img){max-width:100%}
 .hxrt ::selection{background:var(--hx-selection-bg);color:var(--hx-selection-fg)}
 .hxrt :where(h1,h2,h3){font-style:normal}
-.hxrt [id^="step-"],.hxrt #complete-ritual{scroll-margin-top:calc(var(--hxrt-nav) + 24px)}
+.hxrt [id^="step-"],.hxrt #at-a-glance,.hxrt #complete-ritual{scroll-margin-top:calc(var(--hxrt-nav) + var(--hxrt-bar))}
+.hxrt [id^="step-"]:not(#step-by-step){scroll-margin-top:calc(var(--hxrt-nav) + var(--hxrt-bar) + 32px)}
 
 /* Reveals on this page (critic r1): opacity only, 600ms, no stagger delays; images carry no
    reveal at all, so nothing is ever held back behind its text. hx-motion.js is unchanged. */
@@ -39,86 +43,119 @@ html.hx-motion .hxrt [data-hx-reveal]:not(.is-in):not([data-hx-reveal^="mask"]){
 }
 .hxrt .hxrt-inline:hover{text-decoration-color:currentColor}
 
-/* ── Hero ───────────────────────────────────────────────────────── */
+/* ── Hero: one full-bleed plate (24 Oct 2026) ────────────────────
+   The photograph fills the first screen from under the header to the fold, where the sticky
+   section bar takes over; the h1 and one line sit on the photograph, lower left, in ink
+   (the grey under the copy is #A8–#B6 on the wide tray, #9A9896 on phones: ink 5.6–7:1).
+   Phones and portrait tablets: the 4:5 crop dissolves into that grey and the copy follows
+   on it. Landscape from 700px: the wide tray, products right, copy over the open left. */
 .hxrt-hero{
+	--hxrt-plate:#9A9896;   /* the photograph's own grey, sampled at its lower left */
 	position:relative;
 	display:flex;
 	flex-direction:column;
-	padding-top:var(--hxrt-nav);
-	background:var(--hx-ivory);
-}
-.hxrt-hero__media{position:relative;overflow:hidden;height:min(60svh,125vw);background:#9C9C9B}
-.hxrt-hero__pic,.hxrt-hero__pic img{display:block;width:100%;height:100%}
-.hxrt-hero__pic img{object-fit:cover;object-position:50% 72%}
-.hxrt-hero__copy{
-	box-sizing:border-box;
-	padding:var(--hx-s-6) var(--hx-margin) var(--hx-s-9);
-}
-.hxrt-hero__title{margin-top:var(--hx-s-4)}
-.hxrt-hero__title em{display:block;color:var(--hx-accent)}
-.hxrt-hero__line{display:block}
-.hxrt-hero__lede{max-width:30em;margin-top:var(--hx-stack)}
-
-.hxrt-index{margin-top:var(--hx-s-7)}
-.hxrt-index__list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0 var(--hx-s-3)}
-.hxrt .hxrt-index__link{
-	position:relative;
-	display:flex;
-	flex-direction:column;
-	gap:6px;
-	min-height:64px;
-	padding-top:var(--hx-s-3);
-	border-top:1px solid var(--hx-line-strong);
+	background:var(--hxrt-plate);
 	color:var(--hx-ink);
-	text-decoration:none;
 }
-.hxrt .hxrt-index__link::before{
-	content:"";
-	position:absolute;
-	left:0;
-	right:0;
-	top:-1px;
-	height:1px;
-	background:var(--hx-ink);
-	transform:scaleX(0);
-	transform-origin:0 50%;
-	transition:transform 700ms var(--hx-ease);
+/* the photograph starts at the top of the page, under the transparent header (24 Oct 2026) */
+.hxrt-hero__media{position:relative;overflow:hidden;height:calc(min(125vw,66svh) + var(--hxrt-nav));background:var(--hxrt-plate)}
+.hxrt-hero__pic,.hxrt-hero__pic img{display:block;width:100%;height:100%}
+.hxrt-hero__pic img{
+	object-fit:cover;
+	object-position:50% 64%;
+	-webkit-mask-image:linear-gradient(to bottom,#000 74%,transparent);
+	mask-image:linear-gradient(to bottom,#000 74%,transparent);
 }
-.hxrt .hxrt-index__link:hover::before,.hxrt .hxrt-index__link:focus-visible::before{transform:scaleX(1)}
-.hxrt-index__num{font-family:var(--hx-serif);font-size:var(--hx-fs-step);font-weight:400;line-height:1;letter-spacing:var(--hx-tr-step);font-variant-numeric:lining-nums tabular-nums;color:var(--hx-accent)}
-.hxrt-index__verb{font-size:var(--hx-fs-detail);font-weight:500;letter-spacing:.02em;line-height:1.3}
-.hxrt .hxrt-index__link:visited{color:var(--hx-ink)}
+.hxrt-hero__copy{
+	position:relative;
+	box-sizing:border-box;
+	margin-top:calc(-1 * var(--hx-s-6));
+	padding:0 var(--hx-margin) var(--hx-s-8);
+}
+.hxrt-hero__line{display:block}
+html body:not(.cos-h26) #cos-main-content .hxrt-hero__title em{color:var(--hx-ink)}
+/* each title line stays on one line: phones scale with the width (28px at 390) */
+html body:not(.cos-h26) #cos-main-content .hxrt-hero .hxrt-hero__title{font-size:min(var(--ts-h1),7.2vw)}
+.hxrt-hero__lede{max-width:30em;margin-top:var(--hx-s-4);color:var(--hx-ink)}
+.hxrt-hero ::selection{background:var(--hx-ink);color:var(--hxrt-plate)}
 
-@media (min-width:900px){
+@media (min-width:700px) and (orientation:landscape){
 	.hxrt-hero{
+		--hxrt-plate:#B0AFAD;
 		display:grid;
-		grid-template-columns:minmax(0,1fr) min(48vw,780px);
-		min-height:min(100svh,1000px);
+		grid-template:minmax(0,1fr) / minmax(0,1fr);
+		box-sizing:border-box;
+		height:calc(100svh - var(--hxrt-bar));
+		min-height:520px;
+		max-height:1240px;
 	}
-	.hxrt-hero__media{grid-column:2;grid-row:1;height:auto;min-height:560px}
+	.hxrt-hero__media,.hxrt-hero__copy{grid-area:1 / 1}
+	.hxrt-hero__media{height:auto}
+	/* where the plate is narrower than 16:9 the crop comes off the open left, keeping the tray
+	   clear of the title; the title steps down with the width (48px at 1440, 34px at 1024) */
+	.hxrt-hero__pic img{object-position:0 50%;-webkit-mask-image:none;mask-image:none}
+	html body:not(.cos-h26) #cos-main-content .hxrt-hero .hxrt-hero__title{font-size:min(var(--ts-h1),3.3vw)}
 	.hxrt-hero__copy{
-		grid-column:1;
-		grid-row:1;
-		align-self:center;
-		max-width:calc(36rem + 2 * var(--hx-margin));
-		padding:var(--hx-s-8) var(--hx-s-8) var(--hx-s-8) var(--hx-margin);
+		align-self:end;
+		margin:0;
+		padding:0 var(--hx-margin) clamp(40px,7svh,88px);
 	}
-	.hxrt-index{margin-top:var(--hx-s-8)}
-	.hxrt-hero__title{font-size:min(var(--hx-fs-display),4.7vw)}   /* two lines: the italic line never breaks */
+	.hxrt-hero__copy > *{max-width:min(36rem,46vw)}
 }
-@media (min-width:1540px){
-	/* align the copy with the page container's left edge on very wide screens */
-	.hxrt-hero__copy{padding-left:max(var(--hx-margin),calc(50vw - var(--hx-max) / 2));max-width:none}
-	.hxrt-hero__copy > :not(.hxrt-hero__title){max-width:36rem}
+/* the hero photograph (owner, 25 Oct 2026: June 2026 shoot, CAV59741): the ground is its wall
+   tone, so the phone crop's soft lower edge dissolves into it; landscape holds the face at the
+   right and the open wall under the lower-left type */
+.hxrt-hero{--hxrt-plate:#CAC4C4!important}   /* measured on the wall */
+.hxrt-hero__pic img{object-position:0 38%}   /* phones: the portrait as shot, face at the left edge */
+@media (min-width:700px) and (orientation:landscape){
+	.hxrt-hero__pic img{object-position:72% 45%}
 }
 
-/* ── Prelude ────────────────────────────────────────────────────── */
-.hxrt-prelude{background:var(--hx-ivory);padding-block:var(--hx-section-sm) var(--hx-s-9)}
-.hxrt-prelude__inner{display:flex;flex-direction:column;align-items:center;text-align:center}
-.hxrt-prelude__quote{max-width:21em;font-family:var(--hx-serif);font-size:clamp(1.75rem,1.3rem + 1.8vw,2.875rem);font-weight:300;line-height:1.22;letter-spacing:-.008em;color:var(--hx-ink);text-wrap:balance;-webkit-font-smoothing:antialiased}
+@media (min-width:1540px) and (orientation:landscape){
+	/* align the copy with the page container's left edge on very wide screens */
+	.hxrt-hero__copy{padding-left:max(var(--hx-margin),calc(50vw - var(--hx-max) / 2))}
+}
+
+/* ── Section bar (sticky under the header) ──────────────────────── */
+.hxrt-bar{
+	position:sticky;
+	top:var(--hxrt-nav);
+	z-index:20;
+	background:var(--hx-white);
+	border-bottom:1px solid var(--hx-line);
+}
+.hxrt-bar__in{display:flex;align-items:center;justify-content:space-between;gap:var(--hx-s-5);min-height:var(--hxrt-bar)}
+.hxrt-bar__list{display:flex;gap:clamp(18px,2.4vw,40px)}
+.hxrt .hxrt-bar__link{
+	position:relative;display:inline-flex;align-items:center;min-height:44px;
+	font-size:.8125rem;letter-spacing:.01em;color:var(--hx-muted);text-decoration:none;white-space:nowrap;
+	transition:color var(--hx-dur-ui) var(--hx-ease-soft);
+}
+.hxrt .hxrt-bar__link::after{content:"";position:absolute;left:0;right:0;bottom:8px;height:1px;background:var(--hx-ink);transform:scaleX(0);transform-origin:left;transition:transform 520ms var(--hx-ease)}
+.hxrt .hxrt-bar__link:hover,.hxrt .hxrt-bar__link[aria-current]{color:var(--hx-ink)}
+.hxrt .hxrt-bar__link:hover::after,.hxrt .hxrt-bar__link[aria-current]::after{transform:scaleX(1)}
+.hxrt-bar__step{font-size:.8125rem;color:var(--hx-ink);white-space:nowrap;font-variant-numeric:lining-nums tabular-nums}
+.hxrt-bar__step[hidden]{display:none}
+@media (max-width:719.98px){
+	.hxrt-bar__in{justify-content:flex-start}
+	.hxrt-bar__list{width:100%;justify-content:space-between;gap:var(--hx-s-3)}
+	.hxrt-bar__step{display:none}
+}
+
+/* ── Part heads (at a glance, step by step) ─────────────────────── */
+.hxrt-part__head{max-width:40em}
+.hxrt-part__lede{margin-top:var(--hx-stack)}
 
 /* ── The four steps ─────────────────────────────────────────────── */
-.hxrt-steps{background:var(--hx-ivory);padding-bottom:var(--hx-section-sm)}
+.hxrt-steps{background:var(--hx-ivory);padding-block:var(--hx-section-sm)}
+.hxrt-steps__head{margin-bottom:var(--hx-s-8)}
+.hxrt-steps__more{display:flex;flex-direction:column;gap:var(--hx-s-4);margin-top:var(--hx-section-sm);padding-top:var(--hx-s-6);border-top:1px solid var(--hx-line)}
+.hxrt-steps__note{max-width:34em;font-family:var(--hx-serif);font-size:1.375rem;font-weight:300;line-height:1.4;color:var(--hx-ink)}
+.hxrt-steps__note i{font-style:italic}
+.hxrt-steps__links{display:flex;flex-wrap:wrap;gap:0 var(--hx-s-6)}
+@media (min-width:1100px){
+	.hxrt-steps__more{flex-direction:row;align-items:flex-end;justify-content:space-between;gap:var(--hx-s-8)}
+}
 .hxrt-step{display:flex;flex-direction:column}
 .hxrt-step + .hxrt-step{margin-top:var(--hx-s-9)}
 .hxrt-step__frame{aspect-ratio:4/5;background:var(--hx-stone)}
@@ -177,14 +214,12 @@ html.hx-motion .hxrt [data-hx-reveal]:not(.is-in):not([data-hx-reveal^="mask"]){
 @media (max-width:599.98px){
 	.hxrt-step + .hxrt-step{margin-top:var(--hx-s-8)}
 	.hxrt-step__num{font-size:3rem}
-	.hxrt-order__list{gap:var(--hx-s-6)}
-	.hxrt-order__more{margin-top:var(--hx-s-7)}
+	.hxrt-glance__list{gap:var(--hx-s-6)}
 }
 @media (min-width:600px) and (max-width:899.98px){
 	.hxrt-step__media{padding-inline:var(--hx-margin)}
 }
 @media (min-width:900px){
-	.hxrt-steps{padding-top:var(--hx-s-6)}
 	.hxrt-step{
 		box-sizing:border-box;
 		display:grid;
@@ -202,10 +237,8 @@ html.hx-motion .hxrt [data-hx-reveal]:not(.is-in):not([data-hx-reveal^="mask"]){
 	.hxrt-step__body{max-width:34em}
 }
 
-/* ── Why the order matters ──────────────────────────────────────── */
-.hxrt-order{background:var(--hx-white);padding-block:var(--hx-section-sm)}
-.hxrt-order__head{max-width:40em}
-.hxrt-order__lede{margin-top:var(--hx-stack)}
+/* ── Part 1 · the ritual at a glance ───────────────────────────── */
+.hxrt-glance{background:var(--hxrt-room);padding-block:var(--hx-section-sm)}
 
 .hxrt-scale{display:flex;align-items:center;gap:var(--hx-s-4);margin-top:var(--hx-s-8)}
 .hxrt-scale__end{flex:none;font-size:var(--hx-fs-label);font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--hx-muted)}
@@ -216,75 +249,36 @@ html.hx-motion .hxrt [data-hx-reveal]:not(.is-in):not([data-hx-reveal^="mask"]){
 .hxrt-scale__line span:nth-child(3){height:3px;opacity:.75}
 .hxrt-scale__line span:nth-child(4){height:4px;opacity:1}
 
-.hxrt-order__list{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--hx-s-7) var(--hx-gap);margin-top:var(--hx-s-7)}
-.hxrt-order__meta{display:flex;align-items:baseline;gap:var(--hx-s-3)}
-.hxrt-order__verb{font-size:var(--hx-fs-detail);font-weight:500;letter-spacing:.02em;color:var(--hx-ink)}
-.hxrt-order__texture{margin-left:auto;font-size:var(--hx-fs-detail);color:var(--hx-muted)}
-.hxrt-order__title{margin-top:var(--hx-s-4)}
-.hxrt-order__text{max-width:24em;margin-top:var(--hx-s-3);font-size:.96875rem;line-height:1.6;color:var(--hx-text);text-wrap:pretty}
-.hxrt-order__more{display:flex;flex-direction:column;gap:var(--hx-s-4);margin-top:var(--hx-s-9)}
-.hxrt-order__note{max-width:34em;font-family:var(--hx-serif);font-size:1.375rem;font-weight:300;line-height:1.4;color:var(--hx-ink)}
-.hxrt-order__note i{font-style:italic}
-.hxrt-order__links{display:flex;flex-wrap:wrap;gap:0 var(--hx-s-6)}
+.hxrt-glance__list{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--hx-s-7) var(--hx-gap);margin-top:var(--hx-s-6)}
+.hxrt-glance__item{display:flex;flex-direction:column}
+.hxrt-glance__meta{display:flex;align-items:baseline;gap:var(--hx-s-3)}
+.hxrt-glance__verb{font-size:var(--hx-fs-detail);font-weight:500;letter-spacing:.02em;color:var(--hx-ink)}
+.hxrt-glance__texture{margin-left:auto;font-size:var(--hx-fs-detail);color:var(--hx-muted)}
+.hxrt-glance__name{margin-top:var(--hx-s-3);text-wrap:balance}
+.hxrt-glance__text{max-width:24em;margin-top:var(--hx-s-3);font-size:1rem;line-height:1.6;color:var(--hx-text);text-wrap:pretty}
+.hxrt .hxrt-glance__go{
+	display:inline-flex;align-items:center;align-self:flex-start;gap:10px;min-height:44px;margin-top:var(--hx-s-3);
+	font-size:var(--ts-action,.78125rem);font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--hx-ink);
+	text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.5em;text-decoration-color:var(--hx-line-strong);
+	transition:text-decoration-color var(--hx-dur-ui) var(--hx-ease-soft);
+}
+.hxrt .hxrt-glance__go:hover{text-decoration-color:currentColor}
+.hxrt-glance__down{position:relative;width:9px;height:12px;flex:none}
+.hxrt-glance__down::before{content:"";position:absolute;left:4px;top:0;bottom:1px;width:1px;background:currentColor}
+.hxrt-glance__down::after{content:"";position:absolute;left:1px;bottom:1px;width:6px;height:6px;border-right:1px solid currentColor;border-bottom:1px solid currentColor;transform:rotate(45deg)}
 
 @media (max-width:599.98px){
-	/* phones: the scale rides beside the list as one vertical line is too fussy; keep it short */
 	.hxrt-scale{margin-top:var(--hx-s-7)}
 }
 @media (min-width:600px){
-	.hxrt-order__list{grid-template-columns:repeat(2,minmax(0,1fr))}
+	.hxrt-glance__list{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (min-width:1100px){
-	.hxrt-order__list{grid-template-columns:repeat(4,minmax(0,1fr));margin-top:var(--hx-s-6)}
-	.hxrt-order__more{flex-direction:row;align-items:flex-end;justify-content:space-between;gap:var(--hx-s-8)}
-}
-
-/* ── Morning and evening ────────────────────────────────────────── */
-.hxrt-day{background:var(--hx-ivory);padding-block:var(--hx-section-sm)}
-.hxrt-day__head{max-width:40em}
-.hxrt-day__lede{margin-top:var(--hx-stack)}
-.hxrt-day__grid{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--hx-s-3);margin-top:var(--hx-s-7)}
-.hxrt-day__col{box-sizing:border-box;padding:var(--hx-s-7) var(--hx-s-5)}
-.hxrt-day__col--morning{background:var(--hx-white)}
-.hxrt-day__col--evening{
-	--hx-bg:var(--hx-night);
-	--hx-fg:var(--hx-on-dark);
-	--hx-fg-2:var(--hx-on-dark);
-	--hx-fg-3:var(--hx-on-dark-2);
-	--hx-fg-accent:var(--hx-on-dark-2);
-	--hx-rule:var(--hx-line-dark);
-	background:#2A2A2C;                  /* graphite, not near-black (critic r1) */
-	color:var(--hx-on-dark);
-}
-.hxrt-day__title{color:var(--hx-fg)}
-.hxrt-day__list{margin-top:var(--hx-s-5);border-top:1px solid var(--hx-rule)}
-.hxrt-day__step{
-	display:grid;
-	grid-template-columns:2.5rem minmax(0,1fr);
-	grid-template-areas:"num verb" "num text";
-	gap:2px 0;
-	padding:var(--hx-s-3) 0;
-	border-bottom:1px solid var(--hx-rule);
-}
-.hxrt-day__step .hx-step{grid-area:num;line-height:1.4}
-.hxrt-day__verb{grid-area:verb;font-size:var(--hx-fs-detail);font-weight:500;letter-spacing:.02em;color:var(--hx-fg)}
-.hxrt-day__text{grid-area:text;font-size:.96875rem;line-height:1.6;color:var(--hx-fg-2);text-wrap:pretty}
-.hxrt-day__col--evening .hxrt-day__text{font-weight:360;font-synthesis:none}
-.hxrt-day__close{margin-top:var(--hx-s-4);font-size:1rem;line-height:1.6;color:var(--hx-fg-3)}
-
-@media (min-width:600px){
-	.hxrt-day__col{padding:var(--hx-s-8) clamp(32px,4.5vw,72px)}
-	.hxrt-day__step{grid-template-columns:3rem 7rem minmax(0,1fr);grid-template-areas:"num verb text";align-items:baseline}
-}
-@media (min-width:1100px){
-	.hxrt-day__grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-}
-@media (min-width:900px) and (max-width:1099.98px){
-	.hxrt-day__grid{max-width:46rem}
+	.hxrt-glance__list{grid-template-columns:repeat(4,minmax(0,1fr))}
 }
 
 /* ── The Complete Ritual offer ──────────────────────────────────── */
-.hxrt-offer{background:var(--hx-white);padding-block:var(--hx-section)}
+.hxrt-offer{background:var(--hxrt-room);padding-block:var(--hx-section)}
 .hxrt-offer__inner{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--hx-s-8)}
 .hxrt-offer__objects{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:end;gap:var(--hx-s-2)}
 .hxrt-offer__object{display:flex;flex-direction:column;align-items:center;min-width:0}
@@ -311,21 +305,17 @@ html.hx-motion .hxrt [data-hx-reveal]:not(.is-in):not([data-hx-reveal^="mask"]){
 }
 
 @media (prefers-reduced-motion:reduce){
-	.hxrt .hxrt-index__link::before,.hxrt .hxrt-inline{transition:none}
+	.hxrt .hxrt-bar__link::after,.hxrt .hxrt-inline{transition:none}
 }
 
 /* ── Phones: tighter overall length (critic r1: ~13.5k → ~9k) ─────── */
 @media (max-width:599.98px){
-	.hxrt-hero__copy{padding-bottom:var(--hx-s-8)}
-	.hxrt-prelude{padding-block:var(--hx-s-7) var(--hx-s-8)}
 	.hxrt-step__frame{aspect-ratio:1/1}
 	.hxrt-step__body{padding-top:var(--hx-s-5)}
 	.hxrt-step__what{margin-top:var(--hx-s-4)}
 	.hxrt-facts{margin-top:var(--hx-s-5)}
-	.hxrt-steps{padding-bottom:var(--hx-s-8)}
-	.hxrt-order,.hxrt-day,.hxrt-offer{padding-block:var(--hx-s-8)}
-	.hxrt-order__text{margin-top:var(--hx-s-2)}
-	.hxrt-order__title{margin-top:var(--hx-s-2)}
-	.hxrt-day__col{padding:var(--hx-s-6) var(--hx-s-5)}
+	.hxrt-steps,.hxrt-glance,.hxrt-offer{padding-block:var(--hx-s-8)}
+	.hxrt-steps__head{margin-bottom:var(--hx-s-6)}
+	.hxrt-steps__more{margin-top:var(--hx-s-8)}
 	.hxrt-offer__inner{gap:var(--hx-s-6)}
 }

@@ -8,6 +8,15 @@
         "value": "cormorant garamond",
         "createdAt": "2026-10-17T04:04:11.808Z",
         "reason": "Cormorant Garamond is the brand's established display face (homepage approved by owner through three critique rounds); DESIGN.md predates the rebuild and is stale"
+      },
+      {
+        "rule": "layout-transition",
+        "value": "*",
+        "files": [
+          "wp-content/themes/cos-child/assets/css/hx/shop.css"
+        ],
+        "createdAt": "2026-10-23T20:06:11.580Z",
+        "reason": "user confirmed 2026-10-23: keep the shop tile bag button's widening 'Add to bag' label reveal (max-width transition on one small control)"
       }
     ]
   }
