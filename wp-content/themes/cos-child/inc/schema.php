@@ -199,9 +199,12 @@ function cos_child_structured_data(): void {
 		$breadcrumb_items[] = [ '@type' => 'ListItem', 'position' => 2, 'name' => 'Journal', 'item' => $site_url . '/journal/' ];
 		$breadcrumb_items[] = [ '@type' => 'ListItem', 'position' => 3, 'name' => $post->post_title ];
 	} else {
+		// only published ancestors (1 Nov 2026: /skin-concerns/ was unpublished; its guides stay beneath it)
 		$parent = $post->post_parent ? get_post( $post->post_parent ) : null;
+		if ( $parent && 'publish' !== $parent->post_status ) $parent = null;
 		if ( $parent ) {
 			$grandparent = $parent->post_parent ? get_post( $parent->post_parent ) : null;
+			if ( $grandparent && 'publish' !== $grandparent->post_status ) $grandparent = null;
 			if ( $grandparent ) {
 				$breadcrumb_items[] = [ '@type' => 'ListItem', 'position' => 2, 'name' => $grandparent->post_title, 'item' => get_permalink( $grandparent->ID ) ];
 				$breadcrumb_items[] = [ '@type' => 'ListItem', 'position' => 3, 'name' => $parent->post_title, 'item' => get_permalink( $parent->ID ) ];

@@ -1,9 +1,9 @@
 /* hx/closing.css — 09 Closing: The Complete Ritual as the page's last object (29 Oct 2026,
    homepage critique; owner: "set object in closing"). Prefix .hxz-. Markup:
    template-parts/home-2026/closing.php.
-   Layout C (owner's pick, 29 Oct): the tray photograph full-bleed on the left, the set's
-   name, a line of its own, the four formulas as 01–04, the live price, one action and the
-   two service assurances on mineral ivory on the right; the section signs off with a hairline + the brand-mark cross, house name
+   Since 31 Oct: the mirror-glass photograph full-bleed with a named hairline to each formula,
+   then the set's name, a line of its own, the live price, one action and the two service
+   assurances beneath (layout C, the tray photograph beside the text, 29 Oct to 31 Oct); the section signs off with a hairline + the brand-mark cross, house name
    and place, then meets the graphite footer on a clean edge. Warm ivory ground: one quiet
    step off the pearl ritual above. Type roles come from hx/typeset.css. */
 
@@ -15,33 +15,206 @@ body.cos-h26 .hxz{
 	overflow:clip;
 }
 
-/* ─── The set (layout C, owner's pick 29 Oct): the tray photograph full-bleed on the left,
-   the set on mineral ivory on the right; phones and tablets: photograph first, text below ── */
-.hxz__set{display:grid}
-@media (min-width:900px){
-	.hxz__set{grid-template-columns:minmax(0,7fr) minmax(0,6fr);min-height:clamp(640px,62vw,900px)}
-}
-.hxz__media{position:relative;margin:0;background:#DADAD6;overflow:clip}
-.hxz__photo{display:block;height:100%;aspect-ratio:4 / 5}
-@media (min-width:900px){.hxz__photo{position:absolute;inset:0;aspect-ratio:auto}}
+/* ─── The photograph (31 Oct 2026, owner: "make the pic consume the whole space left and
+   right, use lines to point to each product and show the product name"): the mirror-glass
+   set full-bleed, a hairline from each formula to its name and size. The canvas holds the
+   crop's exact ratio so the callouts (in % of the crop, closing.php) stay on their products.
+   ≥900px: the wide crop; the tags sit on the photograph's open grey ground. Below: the
+   narrow crop; the tags hang beneath it in one row, short names. ── */
+.hxz__media{position:relative;margin:0;background:#DADAD6}
+.hxz__canvas{position:relative;aspect-ratio:740 / 630}
 .hxz__img,.hxz__img img{display:block;width:100%;height:100%}
-.hxz__img img{object-fit:cover;object-position:50% 55%;transition:transform 1400ms var(--hx-ease)}
-@media (hover:hover){.hxz__set:has(.hxz__btn:hover) .hxz__img img{transform:scale(1.02)}}
+.hxz__img img{object-fit:cover}
 
-.hxz__body{display:flex;flex-direction:column;justify-content:space-between;gap:clamp(40px,2rem + 2vw,64px);padding:clamp(40px,1.5rem + 4vw,96px) var(--hx-margin) clamp(32px,1.5rem + 2vw,56px)}
-@media (min-width:900px){.hxz__body{padding:clamp(64px,6vw,96px) clamp(48px,6.6vw,96px) clamp(40px,3.8vw,56px) clamp(48px,6vw,88px)}}
+.hxz__call{position:absolute;inset:0;pointer-events:none}
+.hxz__line{position:absolute;background:var(--hx-ink)}
+.hxz__tag{position:absolute;display:flex;flex-direction:column;gap:2px;color:var(--hx-ink)}
+/* each name links to its product page (owner, 31 Oct 2026): ink, a hairline underline drawn on
+   hover and keyboard focus (the collection's name treatment), and a 44px-plus invisible hit area */
+body.cos-h26 a.hxz__tag,body.cos-h26 a.hxz__tag:visited{color:var(--hx-ink);text-decoration:none;pointer-events:auto}
+body.cos-h26 a.hxz__tag::before{content:"";position:absolute;inset:-12px -10px}
+.hxz__tag-name{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.24em;text-decoration-color:transparent;transition:text-decoration-color 400ms var(--hx-ease)}
+body.cos-h26 a.hxz__tag:is(:hover,:focus-visible) .hxz__tag-name{text-decoration-color:currentColor}
+.hxz__tag-name{font-family:var(--hx-serif);font-weight:400;line-height:1.2;letter-spacing:-.005em}
+.hxz__tag-size{font-family:var(--hx-sans);font-weight:400;line-height:1.4;color:var(--hx-fg-2,#3A3B3D);font-variant-numeric:lining-nums tabular-nums}
+.hxz__tag-full{display:none}
+
+/* below 900px: a short line from the photograph's lower edge, the tag centred beneath */
+@media (max-width:899.98px){
+	.hxz__media{padding-bottom:calc(28px + 3.6em);font-size:1rem}
+	.hxz__line{left:var(--mx);top:100%;width:1px;height:22px;transform-origin:50% 0}
+	.hxz__tag{left:var(--mx);top:calc(100% + 28px);align-items:center;text-align:center;transform:translateX(-50%);max-width:24vw}
+	.hxz__tag-name{font-size:1rem;text-wrap:balance}
+	.hxz__tag-size{font-size:.9375rem}   /* the phone floor for sizes (composition.css) */
+	.hxz__media{background:none}
+	.hxz__canvas{background:#DADAD6}
+}
+
+/* ≥900px: callouts on the photograph. The rules read --cx/--cy/--clen, pointed at the wide
+   crop's anchors here and at the stage crop's from 1200px (inline styles cannot be overridden) */
+.hxz__call{--cx:var(--x);--cy:var(--y);--clen:var(--len)}
+@media (min-width:1200px){
+	.hxz__call{--cx:var(--sx);--cy:var(--sy);--clen:var(--slen)}
+}
+@media (min-width:900px){
+	.hxz__canvas{aspect-ratio:1738 / 914}
+	.hxz__tag-full{display:inline}
+	.hxz__tag-short{display:none}
+	.hxz__tag-name{font-size:clamp(.9375rem,.55rem + .7vw,1.1875rem)}
+	.hxz__tag-size{font-size:.8125rem}
+	/* left: the line ends at the product's edge, the tag right-aligned before it */
+	.hxz__call--left .hxz__line{right:calc(100% - var(--cx));top:var(--cy);width:var(--clen);height:1px;transform-origin:100% 50%}
+	.hxz__call--left .hxz__tag{right:calc(100% - var(--cx) + var(--clen) + 12px);top:var(--cy);transform:translateY(-50%);align-items:flex-end;text-align:right}
+	/* right: mirrored */
+	.hxz__call--right .hxz__line{left:var(--cx);top:var(--cy);width:var(--clen);height:1px;transform-origin:0 50%}
+	.hxz__call--right .hxz__tag{left:calc(var(--cx) + var(--clen) + 12px);top:var(--cy);transform:translateY(-50%);max-width:calc(100% - var(--cx) - var(--clen) - 12px - 3%)}
+	.hxz__call--right .hxz__tag-name{text-wrap:balance}
+	/* up: from the cap, the tag centred above */
+	.hxz__call--up .hxz__line{left:var(--cx);bottom:calc(100% - var(--cy));width:1px;height:var(--clen);transform-origin:50% 100%}
+	.hxz__call--up .hxz__tag{left:var(--cx);bottom:calc(100% - var(--cy) + var(--clen) + 10px);transform:translateX(-50%);align-items:center;text-align:center;white-space:nowrap}
+}
+
+/* ─── ≥1200px: the stage (owner, 31 Oct 2026: "zoom out a bit more … add the highlighted in the
+   pic"). The photograph zooms out to a wide set under a calm grey field (widened 361px a side,
+   400px on top, closing.php), and the set's name, line, price, action and assurances sit on
+   that field in ink, aligned to the page grid: name left, purchase right. Every word is ink
+   (#1C1D1F) because the field is mid-grey: at least 4.7:1 on its darkest part, 5.8:1 on
+   average; the muted greys would fall under 4.5:1 there. Below 1200px the text stays beneath. ── */
+.hxz__stage{position:relative}
+@media (min-width:1200px){
+	.hxz__canvas{aspect-ratio:2170 / 1220}
+	.hxz__stage .hxz__body{position:absolute;top:0;left:0;right:0;z-index:2;align-items:flex-start;padding-top:clamp(48px,4.2vw,96px);pointer-events:none}
+	.hxz__stage .hxz__body > *{pointer-events:auto}
+	.hxz__stage :is(.hxz__lede,.hxz__apart,.hxz__assure li){color:var(--hx-ink)}
+	.hxz__stage .hxz__act{gap:16px}
+	/* the cleanser's name in two balanced lines beside its bottle, clear of the right slab's dark edge */
+	.hxz__call--right .hxz__tag{max-width:min(calc(100% - var(--cx) - var(--clen) - 12px - 3%),10.5em)}
+	/* names scale more gently here: the set is smaller, so at 1200px "24h Regeneration Cream" would touch the cleanser */
+	.hxz__tag-name{font-size:clamp(.9375rem,.25rem + .85vw,1.1875rem)}
+}
+
+/* ─── Declutter (owner, 31 Oct 2026: "text in the picture looks a bit cluttered … more clear to the
+   customer"). On the photograph the set reads as two quiet blocks: name and line at the top left,
+   the purchase stacked at the top right (price, action, assurances; owner moved it right, same
+   day), never three blocks across. The callouts carry the names only: the sizes were four more lines
+   over the set and are on every product page (below 900px, where the tags sit beneath the
+   photograph on ivory, they keep their sizes). ── */
+@media (min-width:900px){
+	.hxz__tag-size{display:none}
+}
+@media (min-width:1200px){
+	/* owner, 31 Oct 2026: the purchase (price, action, assurances) moves to the right, as one stacked block */
+	.hxz__stage .hxz__body{flex-direction:row;justify-content:space-between;align-items:flex-start;gap:clamp(32px,4vw,80px)}
+	.hxz__stage .hxz__lede{max-width:22em}
+	.hxz__stage .hxz__act{gap:14px}
+	.hxz__stage .hxz__buy{flex-direction:column;align-items:flex-start;gap:14px}
+	.hxz__stage .hxz__assure{flex-direction:row;gap:0 20px}
+}
+
+/* ─── Motion (31 Oct 2026): the light finds each formula, with the scroll ───────────────
+   The site's one idea, light travelling over polished silver. Since the owner's "animate while
+   scrolling" the entrance is tied to the scroll, not the clock (scroll-driven animations on the
+   photograph's own view timeline, so scrolling back runs it backwards):
+     entry 0% to cover 50%   the set zooms out, 1.12 to 1 (canvas: photograph and callouts together)
+     cover 15% to 55%        one band of studio light crosses it, left to right
+     cover 26% to 46%        as the band reaches each formula (the light's order: serum, eye cream,
+                             24h cream, cleanser) its hairline draws out of it and its name and
+                             size are written along the line by the headings' light mask, drifting
+                             6px away from the product. All drawn before the photograph is centred.
+   The photograph is never hidden or dimmed (the band only brightens it, screen blend); the
+   image settle reveal is off here so the zoom is the only movement. Browsers without scroll-
+   driven animation keep the timed entrance below (data-hx-at, --t/--mt). Reduced motion: all
+   at rest, nothing moves. */
+.hxz__media{overflow:clip}
+.hxz__img{position:relative;overflow:hidden}
+.hxz__img::after{
+	content:"";position:absolute;inset:0;pointer-events:none;
+	background:linear-gradient(105deg,transparent 34%,rgba(255,255,255,.14) 46%,rgba(255,255,255,.26) 50%,rgba(255,255,255,.14) 54%,transparent 66%);
+	mix-blend-mode:screen;opacity:0;transform:translateX(-60%);
+}
+.hxz__call{--hxz-drift:0 -6px}
+@media (min-width:900px){
+	.hxz__call--left{--hxz-drift:6px 0}
+	.hxz__call--right{--hxz-drift:-6px 0}
+	.hxz__call--up{--hxz-drift:0 6px}
+}
+
+@supports (animation-timeline:view()){
+	@media (prefers-reduced-motion:no-preference){
+		html.hx-motion .hxz__media{view-timeline:--hxz block}
+		html.hx-motion .hxz__media img{transform:none!important;transition:none!important}
+		html.hx-motion .hxz__canvas{transform-origin:50% 62%;animation:hxz-zoom linear both;animation-timeline:--hxz;animation-range:entry 0% cover 50%}
+		html.hx-motion .hxz__img::after{animation:hxz-sweep linear both;animation-timeline:--hxz;animation-range:cover 15% cover 55%}
+		html.hx-motion .hxz__line{animation:hxz-draw-y linear both;animation-timeline:--hxz}
+		html.hx-motion .hxz__tag{
+			-webkit-mask-image:linear-gradient(100deg,#000 44%,transparent 56%);mask-image:linear-gradient(100deg,#000 44%,transparent 56%);
+			-webkit-mask-size:260% 100%;mask-size:260% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
+			animation:hxz-write linear both;animation-timeline:--hxz;
+		}
+		html.hx-motion .hxz__call:nth-child(2) .hxz__line{animation-range:cover 26% cover 34%}
+		html.hx-motion .hxz__call:nth-child(3) .hxz__line{animation-range:cover 28% cover 36%}
+		html.hx-motion .hxz__call:nth-child(4) .hxz__line{animation-range:cover 30% cover 38%}
+		html.hx-motion .hxz__call:nth-child(5) .hxz__line{animation-range:cover 33% cover 41%}
+		html.hx-motion .hxz__call:nth-child(2) .hxz__tag{animation-range:cover 30% cover 40%}
+		html.hx-motion .hxz__call:nth-child(3) .hxz__tag{animation-range:cover 32% cover 42%}
+		html.hx-motion .hxz__call:nth-child(4) .hxz__tag{animation-range:cover 34% cover 44%}
+		html.hx-motion .hxz__call:nth-child(5) .hxz__tag{animation-range:cover 36% cover 46%}
+		@media (min-width:900px){
+			html.hx-motion :is(.hxz__call--left,.hxz__call--right) .hxz__line{animation-name:hxz-draw-x}
+		}
+	}
+}
+@keyframes hxz-zoom{from{transform:scale(1.12)}to{transform:none}}
+@keyframes hxz-sweep{
+	0%{transform:translateX(-60%);opacity:0}
+	10%{opacity:1}
+	90%{opacity:1}
+	100%{transform:translateX(110%);opacity:0}
+}
+@keyframes hxz-draw-x{from{transform:scaleX(0)}to{transform:none}}
+@keyframes hxz-draw-y{from{transform:scaleY(0)}to{transform:none}}
+@keyframes hxz-write{
+	from{-webkit-mask-position:100% 0;mask-position:100% 0;translate:var(--hxz-drift)}
+	to{-webkit-mask-position:0 0;mask-position:0 0;translate:0 0}
+}
+
+/* the timed entrance, for browsers without scroll-driven animation (31 Oct 2026, first pass) */
+@supports not (animation-timeline:view()){
+	@media (prefers-reduced-motion:no-preference){
+		html.hx-motion .hxz__media.is-in:not(.hx-instant) .hxz__img::after{animation:hxz-light 1400ms linear both}
+		html.hx-motion .hxz__media:not(.hx-instant) .hxz__line{transition:transform 700ms var(--hx-ease) var(--mt,0ms)}
+		html.hx-motion .hxz__media:not(.hx-instant) .hxz__tag{
+			-webkit-mask-image:linear-gradient(100deg,#000 44%,transparent 56%);mask-image:linear-gradient(100deg,#000 44%,transparent 56%);
+			-webkit-mask-size:260% 100%;mask-size:260% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
+			-webkit-mask-position:0 0;mask-position:0 0;
+			transition:-webkit-mask-position 800ms var(--hx-ease),mask-position 800ms var(--hx-ease),translate 800ms var(--hx-ease);
+			transition-delay:calc(var(--mt,0ms) + 250ms);
+		}
+		html.hx-motion .hxz__media:not(.is-in) .hxz__tag{-webkit-mask-position:100% 0;mask-position:100% 0;translate:var(--hxz-drift)}
+		html.hx-motion .hxz__media:not(.is-in) .hxz__line{transform:scaleY(0)}
+		@media (min-width:900px){
+			html.hx-motion .hxz__media:not(.hx-instant) .hxz__line{transition-delay:var(--t,0ms)}
+			html.hx-motion .hxz__media:not(.hx-instant) .hxz__tag{transition-delay:calc(var(--t,0ms) + 250ms)}
+			html.hx-motion .hxz__media:not(.is-in) :is(.hxz__call--left,.hxz__call--right) .hxz__line{transform:scaleX(0)}
+		}
+	}
+}
+@keyframes hxz-light{
+	0%{transform:translateX(-60%);opacity:0}
+	12%{opacity:1}
+	88%{opacity:1}
+	100%{transform:translateX(110%);opacity:0}
+}
+
+/* ─── Beneath: the set's name and line, then price, action, assurances ── */
+.hxz__body{display:flex;flex-direction:column;gap:clamp(32px,1.5rem + 1.5vw,48px);padding-top:clamp(40px,1.5rem + 3vw,80px)}
+@media (min-width:900px){
+	.hxz__body{flex-direction:row;justify-content:space-between;align-items:flex-end;gap:clamp(40px,5vw,96px)}
+}
 .hxz__title{margin:0}
 .hxz__lede{margin-top:var(--hx-s-3);max-width:26em}
 
-/* the four formulas it holds: 01–04 · name · size */
-.hxz__contents{display:flex;flex-direction:column;gap:18px;margin:clamp(28px,1rem + 2vw,40px) 0 0;padding:0;list-style:none}
-.hxz__item{display:grid;grid-template-columns:40px minmax(0,1fr) auto;align-items:baseline;gap:12px}
-.hxz__num{font-family:var(--hx-serif);font-size:1.25rem;line-height:1;color:var(--hx-fg-3,#5C5C5A);font-variant-numeric:lining-nums}
-.hxz__name{font-family:var(--hx-serif);font-size:clamp(1.1875rem,1.05rem + .4vw,1.375rem);line-height:1.2;letter-spacing:-.005em;color:var(--hx-ink)}
-.hxz__size{font-family:var(--hx-sans);font-size:.8125rem;color:var(--hx-fg-3,#5C5C5A);font-variant-numeric:lining-nums tabular-nums;white-space:nowrap}
-
-/* ─── Price, action, assurances ─────────────────────────────────────── */
-.hxz__act{display:flex;flex-direction:column;gap:20px;padding-top:32px;border-top:1px solid var(--hx-line)}
+.hxz__act{display:flex;flex-direction:column;gap:20px}
 .hxz__price{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;margin:0}
 .hxz__amt{font-family:var(--hx-serif);font-size:clamp(2rem,1.6rem + 1.2vw,2.75rem);font-weight:400;line-height:1;letter-spacing:-.01em;color:var(--hx-ink);font-variant-numeric:lining-nums}
 .hxz__apart{font-family:var(--hx-sans);font-size:.875rem;color:var(--hx-fg-3,#5C5C5A);font-variant-numeric:lining-nums}
@@ -49,6 +222,18 @@ body.cos-h26 .hxz{
 
 .hxz__assure{display:flex;flex-direction:column;gap:2px;margin:0;padding:0;list-style:none}
 .hxz__assure li{margin:0;font-family:var(--hx-sans);font-size:.875rem;font-weight:400;line-height:1.5;color:var(--hx-muted);white-space:nowrap}
+
+/* the action: transparent with a black hairline and black label (owner, 31 Oct 2026), the hero's
+   outline button: fills black with a pearl label on hover and keyboard focus */
+body.cos-h26 .hxz__btn{
+	--hx-btn-bg:transparent;
+	--hx-btn-bg-hover:var(--hx-ink);
+	--hx-btn-fg:var(--hx-ink);
+	background:transparent;
+	box-shadow:inset 0 0 0 1px var(--hx-ink);   /* inside the box: no size change against the filled state */
+}
+body.cos-h26 .hxz__btn:is(:hover,:focus-visible){--hx-btn-fg:var(--hx-white);background:var(--hx-btn-bg-hover);color:var(--hx-white)}
+body.cos-h26 .hxz__btn::after{content:none}
 
 /* ─── Signature ──────────────────────────────────────────────────────── */
 .hxz__sign{margin-top:clamp(40px,1.5rem + 3vw,72px)}
@@ -59,12 +244,9 @@ body.cos-h26 .hxz{
 .hxz__house .hxz__place{margin-left:auto;color:var(--hx-muted)}
 
 @media (max-width:599.98px){
-	.hxz__item{grid-template-columns:32px minmax(0,1fr) auto}
 	.hxz__btn{width:100%;justify-content:center}
 }
 @media (max-width:399.98px){
 	.hxz__house .hxz__place{display:none}
 }
-@media (prefers-reduced-motion:reduce){
-	.hxz__img img{transition:none}
-}
+

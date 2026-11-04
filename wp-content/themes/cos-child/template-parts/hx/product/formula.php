@@ -38,20 +38,18 @@ if ( ! empty( $pd['description'] ) ) {
 <?php
 $g = 'g' === ( $args['look'] ?? '' );
 if ( $g ) :
-	// Guerlain-style section bar (sticky under the header): the page's parts, in order
-	$parts = array( array( 'hxpd-sci', 'The science' ) );
-	if ( $story_h || $story_p ) $parts[] = array( 'hxpd-story', $story_h ?: 'The formula' );
-	if ( ! empty( $pd['actives'] ) ) $parts[] = array( 'hxpd-actives', 'Ingredients' );
-	if ( $study ) $parts[] = array( 'hxpd-result', 'Results' );
+	// Section bar (sticky under the header; the sitewide hx-bar since 31 Oct 2026). Three chapters
+	// (owner, 1 Nov 2026: seven clipped on phones; later the same day the result joined the
+	// ingredients, so "Results" left the index): "Why it works" also covers the story and the
+	// ingredients with their result; Questions stays on the page but out of the index.
+	$parts = array( array( 'hxpd-sci', 'Why it works', array( 'hxpd-story', 'hxpd-actives' ) ) );
 	if ( ! empty( $pd['how'] ) ) $parts[] = array( 'hxpd-use', 'How to use' );
-	$parts[] = array( 'hxpd-ritual', 'Complete your ritual' );
-	if ( ! empty( $pd['faqs'] ) ) $parts[] = array( 'hxpd-faq', 'Questions' );
-	?>
-<nav class="hxpd-secnav" aria-label="On this page">
-	<div class="hx-wrap"><ol class="hxpd-secnav__list">
-		<?php foreach ( $parts as $p ) : ?><li><a class="hxpd-secnav__link" href="#<?php echo esc_attr( $p[0] ); ?>"><?php echo esc_html( $p[1] ); ?></a></li><?php endforeach; ?>
-	</ol></div>
-</nav>
+	$parts[] = array( 'hxpd-ritual', 'Your ritual' );
+	get_template_part( 'template-parts/hx/section-bar', null, array(
+		'fit'   => true,
+		'items' => array_map( static fn( $p ) => array( 'href' => '#' . $p[0], 'text' => $p[1], 'also' => $p[2] ?? array() ), $parts ),
+	) );
+?>
 
 <?php
 /* The science of the formula (owner, 28 Oct 2026: "a section like" the eye cream page's): four
@@ -62,39 +60,47 @@ $sz  = '(min-width: 900px) 23vw, 80vw';
 $k   = $args['me']['key'] ?? 'cleanser';
 $pack = cos_h26_picture( 'ritual-cut-' . $k, array( 360, 540, 720 ), array( 3, 4 ), $args['me']['full'] ?? '', array( 'sizes' => $sz, 'w' => 720, 'class' => 'hxpd-sci__pack' ) );
 $does = implode( '. ', $pd['benefits'] ?? array() ) . '.';
+// owner, 1–3 Nov 2026: one photograph per card's subject, from the brand's own shoots (Dropbox;
+// sources and crops in sci-{product}.origin.json), none used elsewhere on the site: what it is =
+// the product; how it works = its gesture; what it does = the skin after; who it is for = a woman
+$card = static fn( string $name, int $max, string $alt ): string => cos_h26_picture( 'sci-' . $name, array( 480, 720, $max ), array( 4, 5 ), $alt, array( 'sizes' => $sz, 'w' => 720 ) );
 $sci_by = array(
 	'COS-001' => array( 'first',
 		'A no-rinse micellar water made in Zug, with caviar extract, panthenol, allantoin, chamomile and hyaluronic acid.',
 		'Micelles lift make-up and impurities onto the cotton pad, so there is nothing to rinse away; caviar extract then helps replace what cleansing removes.',
-		cos_h26_picture( 'wc-cav-heap', array( 1200, 1800, 2400 ), array( 6, 5 ), 'Glossy black caviar pearls on a pale surface', array( 'sizes' => $sz, 'w' => 1200 ) ),
-		cos_h26_picture( 'story-cleanser', array( 640, 960, 1280 ), array( 4, 5 ), 'A hand holding the Micellar Water All-in-One Cleanser as droplets of water splash from the bottle', array( 'sizes' => $sz, 'w' => 960 ) ),
+		$card( 'cleanser-how', 960, 'A woman soaking a cotton pad with the Micellar Water' ),
+		$card( 'cleanser-does', 960, 'A woman with fresh, clean skin, eyes closed' ),
 		'Anyone who wants one step to remove make-up, cleanse and refresh. Gentle enough for most skin types, including sensitive skin; if you have specific concerns, try it on a small area first.',
-		cos_hxpd_attachment_picture( 195, 'A woman in a black top holding the Micellar Water All-in-One Cleanser against her arm', $sz ) ),
+		$card( 'cleanser-who', 960, 'A woman holding the Micellar Water All-in-One Cleanser' ),
+		$card( 'cleanser-what', 863, 'The Micellar Water All-in-One Cleanser on white' ) ),
 	'COS-002' => array( 'second',
 		'A lightweight, concentrated serum made in Zug, with micro-encapsulated caviar extract, SYN®-COLL peptide, low molecular weight hyaluronic acid and resveratrol.',
 		'Micro-encapsulation protects the caviar extract until it meets the skin. The silky, non-oily texture absorbs within a minute, so the cream that follows seals it in.',
-		cos_h26_picture( 'hxv-macro', array( 800, 1200, 1600 ), array( 4, 5 ), 'Glossy black caviar pearls in close-up', array( 'sizes' => $sz, 'w' => 800 ) ),
-		cos_h26_picture( 'card-serum-texture', array( 480, 720, 960 ), array( 4, 5 ), 'The Advanced Repair Serum among clear, pearl-like drops', array( 'sizes' => $sz, 'w' => 720, 'class' => 'hxpd-sci__pack' ) ),
+		$card( 'serum-how', 960, 'A woman pressing the serum into her skin with both hands, eyes closed' ),
+		$card( 'serum-does', 960, 'A woman’s face lifted to the light, her skin luminous and smooth' ),
 		'Skin showing fine lines, dullness or a loss of firmness, or feeling the strain of everyday environmental stress. Used morning and evening, after the Micellar Water.',
-		cos_hxpd_attachment_picture( 202, 'A woman in a white halter top resting the Advanced Repair Serum against her arm', $sz ) ),
+		$card( 'serum-who', 960, 'A woman touching her cheek, eyes closed, in warm daylight' ),
+		$card( 'serum-what', 864, 'The Advanced Repair Serum in close-up' ) ),
 	'COS-003' => array( 'third',
 		'A rich, melting eye cream made in Zug, with micro-encapsulated caviar extract, caffeine, vitamin K2 and hyaluronic acid in three molecular weights.',
 		'Encapsulation calibrated for the thinnest skin of the face. Tapped along the orbital bone with the ring finger, it melts on contact, with no dragging and no heaviness.',
-		cos_h26_picture( 'caviar-macro', array( 480, 600 ), array( 4, 5 ), 'Black caviar heaped on a silver spoon', array( 'sizes' => $sz, 'w' => 600 ) ),
-		cos_h26_picture( 'card-eye-texture', array( 480, 720, 960 ), array( 4, 5 ), 'The Revitalizing Eye Cream among clear, pearl-like drops', array( 'sizes' => $sz, 'w' => 720, 'class' => 'hxpd-sci__pack' ) ),
+		$card( 'eye-how', 960, 'A woman tapping eye cream beneath her eye with her ring finger' ),
+		$card( 'eye-does', 960, 'A woman with bright, rested eyes, her hands framing her face' ),
 		'An eye contour showing fine lines, dark circles, dryness or visible fatigue. Allow it a moment to absorb before make-up or SPF.',
-		cos_hxpd_attachment_picture( 182, 'A woman holding the Revitalizing Eye Cream beside her face', $sz ) ),
+		$card( 'eye-who', 960, 'A woman holding the Revitalizing Eye Cream to her temple, eyes closed' ),
+		$card( 'eye-what', 863, 'The Revitalizing Eye Cream in close-up' ) ),
 	'COS-004' => array( 'final',
 		'A silky day-and-night cream made in Zug, with a caviar lipid complex, hyaluronic acid in three molecular weights and superoxide dismutase, on Swiss glacier meltwater.',
 		'The caviar lipid complex mirrors the skin’s own lipids to replenish its barrier, while three weights of hyaluronic acid hold moisture: the last step seals in the ones before it.',
-		cos_h26_picture( 'card-cream-texture', array( 480, 720, 960 ), array( 4, 5 ), 'The 24h Regeneration Cream beside a sweep of its texture', array( 'sizes' => $sz, 'w' => 720, 'class' => 'hxpd-sci__pack' ) ),
-		cos_hxpd_attachment_picture( 176, 'A woman holding a jar of 24h Regeneration Cream close to her face', $sz ),
+		$card( 'cream-how', 960, 'A sweep of the cream on a woman’s cheek as she presses it in' ),
+		$card( 'cream-does', 960, 'A woman with radiant, supple skin' ),
 		'Skin that feels dry or dehydrated, or shows fine lines and a loss of elasticity. Rich enough for the night, light enough to wear under SPF by day.',
-		cos_hxpd_attachment_picture( 179, 'A woman in a pale halter top resting a jar of 24h Regeneration Cream on her arm', $sz ) ),
+		$card( 'cream-who', 960, 'A woman holding a jar of 24h Regeneration Cream to her face' ),
+		$card( 'cream-what', 960, 'The 24h Regeneration Cream jar' ) ),
 );
 $sc  = $sci_by[ $args['sku'] ] ?? $sci_by['COS-001'];
 $sci = array(
-	array( 'What it is', $sc[1], $pack ),
+	array( 'What it is', $sc[1], $sc[7] ?? $pack ), // [7]: the product's own photograph (all four formulas since 3 Nov 2026)
 	array( 'How it works', $sc[2], $sc[3] ),
 	array( 'What it does', $does, $sc[4] ),
 	array( 'Who it is for', $sc[5], $sc[6] ),
@@ -138,7 +144,8 @@ $sci = array(
 <?php if ( ! empty( $pd['actives'] ) ) : ?>
 <?php if ( $g ) : ?>
 <?php
-// one authored drawing per active (owner, 28 Oct 2026: on all four formulas' pages)
+// one authored drawing per active (owner, 28 Oct 2026: on all four formulas' pages). Not printed
+// since 1 Nov 2026, when the ring of texture photographs replaced the orbs; kept for reuse.
 $hex = static function ( float $cx, float $cy, float $r ): array { // pointy-top hexagon vertices
 	return array_map( static fn( $k ) => array( $cx + $r * cos( M_PI / 6 + $k * M_PI / 3 ), $cy + $r * sin( M_PI / 6 + $k * M_PI / 3 ) ), range( 0, 5 ) );
 };
@@ -178,25 +185,70 @@ $orb = array_map( static fn( $n ) => $icons[ $n ], array(
 )[ $args['sku'] ] ?? array() );
 ?>
 <section class="hxpd-orbs" id="hxpd-actives" aria-labelledby="hxpd-actives-title">
-	<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute"><defs>
-		<radialGradient id="hxo-pearl" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#8A8C8F"/><stop offset=".35" stop-color="#2A2B2D"/><stop offset="1" stop-color="#050505"/></radialGradient>
-		<radialGradient id="hxo-pearl-l" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".5" stop-color="#C9CBCE"/><stop offset="1" stop-color="#7C7E81"/></radialGradient>
-		<linearGradient id="hxo-drop" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".55" stop-color="#DADCDF"/><stop offset="1" stop-color="#A9ACB0"/></linearGradient>
-	</defs></svg>
 	<div class="hx-wrap hxpd-orbs__grid">
 		<div class="hxpd-orbs__head">
 			<h2 id="hxpd-actives-title" class="hx-heading hxpd-orbs__title" data-hx-reveal>What you put on your skin matters</h2>
 			<p class="hxpd-orbs__more" data-hx-reveal><a class="hxpd-orbs__link" href="#hxpd-ingredients" data-hxpd-open="hxpd-ingredients">See all ingredients<span class="hxpd-orbs__arrow" aria-hidden="true"></span></a></p>
 		</div>
-		<ol class="hxpd-orbs__list" data-hx-stagger>
-			<?php foreach ( $pd['actives'] as $i => $a ) : ?>
-			<li class="hxpd-orbs__item" data-hx-reveal>
-				<span class="hxpd-orbs__orb" aria-hidden="true"><svg viewBox="0 0 100 100" focusable="false"><?php echo $orb[ $i ] ?? ''; // phpcs:ignore -- authored markup ?></svg></span>
-				<h3 class="hxpd-orbs__name"><?php echo esc_html( $a[0] ); ?></h3>
-				<p class="hxpd-orbs__text"><?php echo esc_html( $a[1] ); ?></p>
-			</li>
-			<?php endforeach; ?>
-		</ol>
+		<?php
+		// The ring (owner, 1 Nov 2026, after an ingredient-infographic reference): the bottle in the
+		// centre of a ring of four texture photographs, one per active, each named in its corner with
+		// a dotted leader to a point on its quarter. Textures from assets/images/ingredients (the
+		// science pages' tex-*; caviar-macro-light for water and micelles). The packshot sits on its
+		// own #FBFAF6 ground, which is the hole's colour, so it needs no cut-out.
+		$tex_of = array(
+			'COS-001' => array( 'tex-caviar-extract', 'caviar-macro-light', 'tex-hyaluronic-acid', 'tex-syn-coll-peptide' ),
+			'COS-002' => array( 'tex-caviar-extract', 'tex-syn-coll-peptide', 'tex-hyaluronic-acid', 'tex-resveratrol' ),
+			'COS-003' => array( 'tex-caviar-extract', 'tex-superoxide-dismutase', 'tex-resveratrol', 'tex-hyaluronic-acid' ),
+			'COS-004' => array( 'tex-caviar-extract', 'tex-hyaluronic-acid', 'caviar-macro-light', 'tex-superoxide-dismutase' ),
+		)[ $args['sku'] ] ?? array();
+		$tex = static function ( string $name ): string {
+			if ( 'caviar-macro-light' === $name ) {
+				return cos_h26_picture( 'caviar-macro-light', array( 960, 1440 ), array( 3, 2 ), '', array( 'sizes' => '(min-width: 1024px) 300px, 50vw', 'w' => 960 ) );
+			}
+			$base = get_stylesheet_directory_uri() . '/assets/images/ingredients/' . $name;
+			$set  = static fn( string $ext ): string => "{$base}-600.{$ext} 600w, {$base}-900.{$ext} 900w";
+			return '<picture><source type="image/avif" srcset="' . esc_attr( $set( 'avif' ) ) . '" sizes="(min-width: 1024px) 300px, 50vw"><source type="image/webp" srcset="' . esc_attr( $set( 'webp' ) ) . '" sizes="(min-width: 1024px) 300px, 50vw"><img src="' . esc_url( $base . '-600.jpg' ) . '" srcset="' . esc_attr( $set( 'jpg' ) ) . '" sizes="(min-width: 1024px) 300px, 50vw" width="600" height="600" alt="" loading="lazy" decoding="async"></picture>';
+		};
+		$k = $args['me']['key'] ?? 'cleanser';
+		?>
+		<div class="hxpd-ring hxpd-ring--<?php echo esc_attr( $k ); ?>">
+			<div class="hxpd-ring__plate" aria-hidden="true" data-hx-reveal>
+				<?php foreach ( $tex_of as $q => $t ) : ?><span class="hxpd-ring__q hxpd-ring__q--<?php echo (int) $q + 1; ?>"><?php echo $tex( $t ); // phpcs:ignore -- escaped above ?></span><?php endforeach; ?>
+				<span class="hxpd-ring__hole"></span>
+				<span class="hxpd-ring__pack"><?php echo cos_h26_picture( 'collection-object-' . $k, array( 480, 720, 960 ), array( 2, 3 ), '', array( 'sizes' => '(min-width: 1024px) 260px, 40vw', 'w' => 720 ) ); // phpcs:ignore ?></span>
+				<?php for ( $q = 1; $q <= 4; $q++ ) : ?><span class="hxpd-ring__dot hxpd-ring__dot--<?php echo (int) $q; ?>"></span><?php endfor; ?>
+			</div>
+			<ol class="hxpd-orbs__list hxpd-ring__list" id="hxpd-orbs-list">
+				<?php foreach ( $pd['actives'] as $i => $a ) : ?>
+				<li class="hxpd-orbs__item hxpd-ring__item hxpd-ring__item--<?php echo (int) $i + 1; ?>" data-hx-reveal>
+					<h3 class="hxpd-orbs__name"><?php echo esc_html( $a[0] ); ?></h3>
+					<p class="hxpd-orbs__text"><?php echo esc_html( $a[1] ); ?></p>
+				</li>
+				<?php endforeach; ?>
+			</ol>
+		</div>
+		<?php // phones (1 Nov 2026): names first, what each one does on request; hx-product.js §7 shows the button ?>
+		<button type="button" class="hxpd-orbs__toggle" aria-expanded="true" aria-controls="hxpd-orbs-list" hidden><span data-hxpd-toggle-label>What each one does</span><span class="hxpd-acc__icon" aria-hidden="true"></span></button>
+		<?php if ( $study ) : // owner, 1 Nov 2026: the result sits with the ingredients that produced it
+			$self = 'Self-reported' === $study['kind']; ?>
+		<div class="hxpd-measure" id="hxpd-result" data-hx-reveal>
+			<div class="hxpd-measure__fig">
+				<p class="hx-numeral hxpd-result__n" aria-hidden="true"><?php echo esc_html( $study['sign'] . $study['n'] ); ?><span class="hxpd-result__unit"><?php echo esc_html( $study['unit'] ); ?></span></p>
+				<h3 class="hxpd-result__title"><span class="hx-sr"><?php echo esc_html( $study['sign'] . $study['n'] . $study['unit'] . ' ' ); ?></span><?php echo esc_html( $study['finding'] ); ?></h3>
+				<p class="hxpd-result__kind"><?php echo esc_html( $study['kind'] ); ?></p>
+			</div>
+			<div class="hxpd-measure__body">
+				<dl class="hxpd-result__facts">
+					<div><dt>Method</dt><dd><?php echo esc_html( $study['method'] ); ?></dd></div>
+					<div><dt>Panel</dt><dd><?php echo esc_html( $study['panel'] ); ?></dd></div>
+					<div><dt>Use</dt><dd><?php echo esc_html( ucfirst( $study['regimen'] ) ); ?></dd></div>
+				</dl>
+				<p class="hx-detail hxpd-result__note">An independent study of <?php echo esc_html( $study['product'] ); ?> alone, by a contract research organisation.<?php echo $self ? ' The figure is what panellists reported, not an instrument measurement.' : ''; ?></p>
+				<p class="hxpd-result__more"><a class="hx-link" href="<?php echo esc_url( $args['clinical'] ); ?>">Read the study<span class="hx-arrow" aria-hidden="true"></span></a></p>
+			</div>
+		</div>
+		<?php endif; ?>
 		<details class="hxpd-acc__item hxpd-orbs__inci" id="hxpd-ingredients">
 			<summary class="hxpd-acc__sum">Full ingredient list<span class="hxpd-acc__icon" aria-hidden="true"></span></summary>
 			<p class="hxpd-inci"><?php echo esc_html( $pd['inci'] ?? '' ); ?></p>
@@ -236,7 +288,7 @@ $orb = array_map( static fn( $n ) => $icons[ $n ], array(
 <?php endif; ?>
 <?php endif; ?>
 
-<?php if ( $study ) :
+<?php if ( $study && ! $g ) : // the 'g' pages show it inside the ingredients section above
 	$self = 'Self-reported' === $study['kind']; ?>
 <section class="hxpd-result" id="hxpd-result" aria-labelledby="hxpd-result-title">
 	<div class="hx-wrap hxpd-result__grid">
@@ -282,27 +334,14 @@ $orb = array_map( static fn( $n ) => $icons[ $n ], array(
 <section class="hxpd-steps" id="hxpd-ritual" aria-labelledby="hxpd-ritual-title">
 	<div class="hx-wrap">
 		<div class="hxpd-steps__head">
-			<h2 id="hxpd-ritual-title" class="hx-heading hxpd-steps__title" data-hx-reveal>Complete your ritual</h2>
+			<h2 id="hxpd-ritual-title" class="hx-heading hxpd-steps__title" data-hx-reveal>Your ritual</h2>
+			<?php // 30 Oct 2026: progress rather than cross-sell; the count and the "In your bag" states follow the bag (hx-product.js) ?>
+			<p class="hxpd-steps__count" data-hxpd-owned<?php echo $args['owned'] ? '' : ' hidden'; ?>><?php echo esc_html( $args['owned'] . ' of 4 in your bag' ); ?></p>
 			<?php if ( $args['ritual'] ) : ?><a class="hx-link hxpd-steps__set" href="<?php echo esc_url( $args['ritual']['url'] ); ?>" data-cro-cta="pdp-secondary-learn-ritual">All four as The Complete Ritual, <?php echo esc_html( $args['ritual']['price'] ); ?><span class="hx-arrow" aria-hidden="true"></span></a><?php endif; ?>
 		</div>
-		<ol class="hxpd-steps__list">
-			<?php foreach ( $args['formulas'] as $f ) : ?>
-			<li class="hxpd-steps__card<?php echo $f['current'] ? ' is-current' : ''; ?>" data-hx-reveal>
-				<p class="hxpd-steps__badge">Step <?php echo esc_html( (string) (int) $f['num'] ); ?> <span aria-hidden="true">·</span> <?php echo esc_html( $f['verb'] ); ?></p>
-				<<?php echo $f['current'] ? 'div' : 'a'; ?> class="hxpd-steps__stage"<?php echo $f['current'] ? '' : ' href="' . esc_url( $f['url'] ) . '" tabindex="-1" aria-hidden="true"'; ?>><?php echo cos_h26_picture( 'pack-' . $f['key'], array( 480, 720 ), array( 2, 3 ), '', array( 'sizes' => '(min-width: 1024px) 200px, 40vw', 'w' => 480 ) ); // phpcs:ignore ?></<?php echo $f['current'] ? 'div' : 'a'; ?>>
-				<?php if ( $f['current'] ) : ?>
-				<p class="hxpd-steps__name"><?php echo esc_html( $f['full'] ); ?></p>
-				<p class="hxpd-steps__price">This formula</p>
-				<?php else : ?>
-				<a class="hxpd-steps__name" href="<?php echo esc_url( $f['url'] ); ?>"><?php echo esc_html( $f['full'] ); ?></a>
-				<p class="hxpd-steps__price"><?php echo esc_html( $f['price'] ); ?> <span aria-hidden="true">·</span> <?php echo esc_html( $f['size'] ); ?></p>
-				<?php if ( ! empty( $f['buy'] ) ) : ?>
-				<a class="hxpd-steps__add add_to_cart_button ajax_add_to_cart" href="<?php echo esc_url( add_query_arg( 'add-to-cart', $f['pid'], get_permalink() ) ); ?>" data-product_id="<?php echo (int) $f['pid']; ?>" data-quantity="1" rel="nofollow" aria-label="<?php echo esc_attr( sprintf( 'Add %s to bag', $f['full'] ) ); ?>">Add to bag</a>
-				<?php endif; ?>
-				<?php endif; ?>
-			</li>
-			<?php endforeach; ?>
-		</ol>
+		<?php // 3 Nov 2026 (owner): the four step cards replaced by the homepage collection tiles
+		// (template-parts/home-2026/collection.php, embedded; styles hx/collection.css) ?>
+		<?php get_template_part( 'template-parts/home-2026/collection', null, array( 'embed' => true ) ); ?>
 	</div>
 </section>
 <?php else : ?>

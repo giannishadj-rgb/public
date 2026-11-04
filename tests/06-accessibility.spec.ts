@@ -65,7 +65,9 @@ test.describe('Accessibility scenarios', () => {
     // past it first — incrementally, since a single scrollTo() jump can
     // skip the exact frame the IntersectionObserver needs to see.
     await scrollWindowIncrementally(page, 1600);
-    await expect(page.locator('#cos-pdp-sticky-atc')).toHaveClass(/is-visible/);
+    // The hx rebuild renamed the shown state: hx-product.js toggles `is-on` (and aria-hidden) on the bar.
+    await expect(page.locator('#cos-pdp-sticky-atc')).toHaveClass(/\bis-on\b/);
+    await expect(page.locator('#cos-pdp-sticky-atc')).toHaveAttribute('aria-hidden', 'false');
     await expectNoSeriousAccessibilityViolations(page);
   });
 

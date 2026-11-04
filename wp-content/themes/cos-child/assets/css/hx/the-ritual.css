@@ -10,7 +10,7 @@
 
 .hxrt{
 	--hxrt-nav:var(--cos-nav-h,80px);
-	--hxrt-bar:52px;
+	--hxrt-bar:var(--hx-bar-h,52px);
 	--hxrt-room:var(--hx-ground-stone,#EDE9E1);
 	--hxrt-mono:grayscale(1) sepia(.07) contrast(1.05) brightness(.98);   /* warm silver print */
 	display:block;
@@ -24,8 +24,8 @@
 .hxrt :where(img){max-width:100%}
 .hxrt ::selection{background:var(--hx-selection-bg);color:var(--hx-selection-fg)}
 .hxrt :where(h1,h2,h3){font-style:normal}
-.hxrt [id^="step-"],.hxrt #at-a-glance,.hxrt #complete-ritual{scroll-margin-top:calc(var(--hxrt-nav) + var(--hxrt-bar))}
-.hxrt [id^="step-"]:not(#step-by-step){scroll-margin-top:calc(var(--hxrt-nav) + var(--hxrt-bar) + 32px)}
+/* anchors clear the header + section bar via html scroll-padding (system.css); chapters get 32px more */
+.hxrt [id^="step-"]:not(#step-by-step){scroll-margin-top:32px}
 
 /* Reveals on this page (critic r1): opacity only, 600ms, no stagger delays; images carry no
    reveal at all, so nothing is ever held back behind its text. hx-motion.js is unchanged. */
@@ -116,31 +116,7 @@ html body:not(.cos-h26) #cos-main-content .hxrt-hero .hxrt-hero__title{font-size
 	.hxrt-hero__copy{padding-left:max(var(--hx-margin),calc(50vw - var(--hx-max) / 2))}
 }
 
-/* ── Section bar (sticky under the header) ──────────────────────── */
-.hxrt-bar{
-	position:sticky;
-	top:var(--hxrt-nav);
-	z-index:20;
-	background:var(--hx-white);
-	border-bottom:1px solid var(--hx-line);
-}
-.hxrt-bar__in{display:flex;align-items:center;justify-content:space-between;gap:var(--hx-s-5);min-height:var(--hxrt-bar)}
-.hxrt-bar__list{display:flex;gap:clamp(18px,2.4vw,40px)}
-.hxrt .hxrt-bar__link{
-	position:relative;display:inline-flex;align-items:center;min-height:44px;
-	font-size:.8125rem;letter-spacing:.01em;color:var(--hx-muted);text-decoration:none;white-space:nowrap;
-	transition:color var(--hx-dur-ui) var(--hx-ease-soft);
-}
-.hxrt .hxrt-bar__link::after{content:"";position:absolute;left:0;right:0;bottom:8px;height:1px;background:var(--hx-ink);transform:scaleX(0);transform-origin:left;transition:transform 520ms var(--hx-ease)}
-.hxrt .hxrt-bar__link:hover,.hxrt .hxrt-bar__link[aria-current]{color:var(--hx-ink)}
-.hxrt .hxrt-bar__link:hover::after,.hxrt .hxrt-bar__link[aria-current]::after{transform:scaleX(1)}
-.hxrt-bar__step{font-size:.8125rem;color:var(--hx-ink);white-space:nowrap;font-variant-numeric:lining-nums tabular-nums}
-.hxrt-bar__step[hidden]{display:none}
-@media (max-width:719.98px){
-	.hxrt-bar__in{justify-content:flex-start}
-	.hxrt-bar__list{width:100%;justify-content:space-between;gap:var(--hx-s-3)}
-	.hxrt-bar__step{display:none}
-}
+/* Section bar: the sitewide .hx-bar (system.css, 31 Oct 2026). */
 
 /* ── Part heads (at a glance, step by step) ─────────────────────── */
 .hxrt-part__head{max-width:40em}
@@ -305,7 +281,7 @@ html body:not(.cos-h26) #cos-main-content .hxrt-hero .hxrt-hero__title{font-size
 }
 
 @media (prefers-reduced-motion:reduce){
-	.hxrt .hxrt-bar__link::after,.hxrt .hxrt-inline{transition:none}
+	.hxrt .hxrt-inline{transition:none}
 }
 
 /* ── Phones: tighter overall length (critic r1: ~13.5k → ~9k) ─────── */

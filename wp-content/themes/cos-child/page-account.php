@@ -1,6 +1,15 @@
 <?php
 /**
  * COS — Account Page
+ *
+ * Typeset 1 Nov 2026: this file owns the account typography (checkout.css and
+ * typeset-site.css no longer restyle it). Roles, all on the hx tokens:
+ *   title    Cormorant 300 capitals (sitewide h1 rule, display size)
+ *   body     Inter 400 16px / 1.7   — reading copy, field values, addresses
+ *   detail   Inter 400 14px / 1.55  — secondary metadata, field labels, notices
+ *   label    Inter 500 12px capitals .2em — card titles, keys, status
+ *   action   Inter 500 12.5px capitals .16em — tabs, buttons, links; 44px+ targets
+ * Monochrome: graphite ink, muted graphite and hairlines; no gold, no shadow.
  */
 defined( 'ABSPATH' ) || exit;
 
@@ -28,161 +37,159 @@ if ( $logged_in ) {
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <style nonce="<?php echo esc_attr( cos_csp_nonce() ); ?>">
-/* ─── Reset only what's needed, without the specificity trap ─── */
-#cos-account { font-family: var(--cos-body); color: var(--cos-ink, #111111); background: var(--cos-pearl, #F8F8F8); min-height: 100vh; }
+/* ─── Roles ─── */
+#cos-account {
+  --acc-ink: var(--hx-ink, #1C1D1F);
+  --acc-text: var(--hx-text, #3A3B3D);
+  --acc-muted: var(--hx-muted, #5C5C5A);
+  --acc-line: var(--hx-line, rgba(28,29,31,.14));
+  --acc-line-strong: var(--hx-line-strong, rgba(28,29,31,.28));
+  --acc-ground: var(--hx-pearl, #F8F8F8);
+  --acc-field: #FFFFFF;
+  --acc-error: #A13B3B;
+  --acc-ease: var(--hx-ease-soft, cubic-bezier(.33,0,.2,1));
+  --acc-dur: var(--hx-dur-ui, 320ms);
+  font-family: var(--hx-sans, 'Inter', system-ui, sans-serif);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--acc-text);
+  background: var(--acc-ground);
+  min-height: 100vh;
+}
 #cos-account * { box-sizing: border-box; }
-#cos-account h1, #cos-account h2, #cos-account h3, #cos-account p, #cos-account ul, #cos-account li, #cos-account figure { margin: 0; padding: 0; list-style: none; }
+#cos-account :is(h1, h2, h3, p, ul, li, figure) { margin: 0; padding: 0; list-style: none; }
+#cos-account ::selection { background: var(--hx-selection-bg, #E3D8C5); color: var(--acc-ink); }
+#cos-account :is(a, button, input, [role="tab"]):focus-visible {
+  outline: var(--hx-focus-width, 2px) solid var(--hx-focus-color, #1C1D1F);
+  outline-offset: 3px;
+}
+
+/* label: 12px tracked capitals */
+#cos-account :is(.cos-acc-dc-title, .cos-acc-info-key, .cos-acc-order-status, .cos-acc-security) {
+  font-family: var(--hx-sans, 'Inter', system-ui, sans-serif);
+  font-size: .75rem;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+/* action: 12.5px tracked capitals, 44px or taller */
+#cos-account :is(.cos-acc-tab, .cos-acc-submit, .cos-acc-logout, .cos-acc-dc-link) {
+  font-family: var(--hx-sans, 'Inter', system-ui, sans-serif);
+  font-size: .78125rem;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  min-height: 44px;
+}
+/* detail: 14px */
+#cos-account :is(.cos-acc-label, .cos-acc-check-label, .cos-acc-consent, .cos-acc-forgot, .cos-acc-order-meta, .cos-acc-brand-perk, .cos-acc-notices) {
+  font-size: .875rem;
+  line-height: 1.55;
+}
 
 /* ═══════════════════════════════════════════════
-   LOGGED-OUT — two-column layout
+   SIGNED OUT — brand panel + form
 ═══════════════════════════════════════════════ */
 .cos-acc-page {
   min-height: calc(100vh - var(--cos-nav-h, 80px));
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 64px 24px 80px;
+  padding: 64px 24px 88px;
 }
 .cos-acc-layout {
   display: flex;
   align-items: center;
-  gap: 72px;
+  gap: 80px;
   width: 100%;
-  max-width: 940px;
+  max-width: 960px;
 }
 
-/* ── Left brand panel ── */
-.cos-acc-brand {
-  flex: 1;
-  min-width: 0;
-  position: relative;
-  overflow: hidden;
-}
-.cos-acc-brand > * { position: relative; z-index: 1; }
+.cos-acc-brand { flex: 1; min-width: 0; }
 .cos-acc-brand-line {
   display: block;
   width: 32px;
   height: 1px;
-  background: var(--cos-gold, #8B692F);
+  background: var(--acc-line-strong);
   margin-bottom: 28px;
 }
-.cos-acc-brand-eyebrow {
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: .3em;
-  text-transform: uppercase;
-  color: var(--cos-gold, #8B692F);
-  margin-bottom: 28px;
-}
-.cos-acc-brand-heading {
-  font-family: var(--cos-display);
-  font-style: italic;
-  font-weight: 300;
-  font-size: clamp(32px, 3.6vw, 52px);
-  color: var(--cos-ink);
-  line-height: 1.08;
+#cos-account .cos-acc-brand-heading { margin-bottom: 24px; }
+#cos-account .cos-acc-brand-sub {
+  color: var(--acc-text);
   margin-bottom: 32px;
+  max-width: 30em;
 }
-.cos-acc-brand-sub {
-  font-size: 13px;
-  font-weight: 300;
-  color: var(--cos-slate, #5C6675);
-  line-height: 1.85;
-  margin-bottom: 40px;
-  max-width: 340px;
-}
-/* Gold rule separating description from perks */
 .cos-acc-perk-sep {
-  width: 28px;
+  width: 32px;
   height: 1px;
-  background: var(--cos-gold, #8B692F);
-  margin-bottom: 28px;
-  opacity: .55;
+  background: var(--acc-line-strong);
+  margin-bottom: 24px;
 }
 .cos-acc-brand-perks {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
 }
-.cos-acc-brand-perk {
+#cos-account .cos-acc-brand-perk {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: var(--cos-slate);
+  gap: 12px;
+  color: var(--acc-text);
 }
 .cos-acc-brand-perk svg {
-  width: 13px;
-  height: 13px;
+  width: 16px;
+  height: 16px;
   flex-shrink: 0;
-  color: var(--cos-gold-l, #B79A5B);
+  color: var(--acc-muted);
 }
 
-/* ── Right card ── */
-.cos-acc-card-col {
-  flex: 0 0 440px;
-  width: 440px;
-}
-
-/* Card shell */
+.cos-acc-card-col { flex: 0 0 440px; width: 440px; }
 .cos-acc-card {
-  background: #fff;
-  border-top: 2px solid var(--cos-gold, #8B692F);
-  box-shadow: 0 8px 56px rgba(5, 5, 5, .11), 0 2px 12px rgba(139, 105, 47, .07);
+  background: var(--acc-ground);
+  border: 1px solid var(--acc-line);
 }
 
 /* Tabs */
-.cos-acc-tabs {
-  display: flex;
-  border-bottom: 1px solid var(--cos-stone, #E5DED4);
-}
-.cos-acc-tab {
+.cos-acc-tabs { display: flex; }
+#cos-account .cos-acc-tab {
   flex: 1;
-  padding: 16px 12px;
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: .22em;
-  text-transform: uppercase;
-  color: var(--cos-slate, #5C6675);
+  min-height: 56px;
+  padding: 0 12px;
+  color: var(--acc-muted);
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--acc-line);
+  border-radius: 0;
   cursor: pointer;
-  border: none;
-  font-family: var(--cos-body);
-  background: var(--cos-pearl, #F8F8F8);
-  border-bottom: 2px solid transparent;
-  margin-bottom: -1px;
-  transition: color .2s, background .2s, border-color .2s;
+  transition: color var(--acc-dur) var(--acc-ease), border-color var(--acc-dur) var(--acc-ease);
 }
-.cos-acc-tab + .cos-acc-tab { border-left: 1px solid var(--cos-stone, #E5DED4); }
-.cos-acc-tab.is-active {
-  color: var(--cos-navy, #050505);
-  background: #fff;
-  border-bottom-color: var(--cos-gold, #8B692F);
+#cos-account .cos-acc-tab.is-active {
+  color: var(--acc-ink);
+  border-bottom-color: var(--acc-ink);
 }
-.cos-acc-tab:hover:not(.is-active) { color: var(--cos-ink); }
+#cos-account .cos-acc-tab:hover:not(.is-active) { color: var(--acc-ink); }
+#cos-account .cos-acc-tab:focus-visible { outline-offset: -2px; }
 
 /* WooCommerce notices inside the card */
-.cos-acc-notices ul.woocommerce-error {
+#cos-account .cos-acc-notices { padding: 24px 36px 0; }
+#cos-account .cos-acc-notices :is(ul.woocommerce-error, .woocommerce-message, .woocommerce-info) {
   list-style: none;
-  background: #fdf3f3;
-  border-left: 3px solid var(--cos-error, #A13B3B);
-  padding: 12px 16px;
   margin: 0;
+  padding: 12px 0 0;
+  border: 0;
+  border-top: 1px solid currentColor;
+  background: none;
+  font-size: inherit;
+  line-height: inherit;
 }
-.cos-acc-notices ul.woocommerce-error li {
-  font-size: 12px;
-  color: var(--cos-error, #A13B3B);
-  padding: 2px 0;
-}
-.cos-acc-notices .woocommerce-message {
-  background: #f3faf6;
-  border-left: 3px solid var(--cos-success, #2D6A57);
-  padding: 12px 16px;
-  font-size: 12px;
-  color: var(--cos-success, #2D6A57);
-}
+#cos-account .cos-acc-notices :is(ul.woocommerce-error, ul.woocommerce-error li) { color: var(--acc-error); }
+#cos-account .cos-acc-notices :is(.woocommerce-message, .woocommerce-info) { color: var(--acc-ink); }
+#cos-account .cos-acc-notices :is(ul.woocommerce-error, .woocommerce-message, .woocommerce-info)::before { content: none; }
+#cos-account .cos-acc-notices li { padding: 2px 0; }
+#cos-account .cos-acc-notices a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 
 /* Form panels */
 .cos-acc-panels { padding: 32px 36px 40px; }
@@ -190,365 +197,263 @@ if ( $logged_in ) {
 .cos-acc-panel.is-active { display: block; }
 
 /* Fields */
-.cos-acc-field { margin-bottom: 18px; }
-.cos-acc-label {
+.cos-acc-field { margin-bottom: 20px; }
+#cos-account .cos-acc-label {
   display: block;
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  color: var(--cos-slate);
-  margin-bottom: 7px;
+  font-weight: 500;
+  color: var(--acc-ink);
+  margin-bottom: 8px;
 }
-/* Override any WooCommerce/TT5 input styles */
-.cos-acc-input,
-.cos-acc-input[type="text"],
-.cos-acc-input[type="email"],
-.cos-acc-input[type="password"] {
-  display: block !important;
-  width: 100% !important;
-  padding: 12px 14px !important;
-  border: 1px solid var(--cos-stone, #E5DED4) !important;
-  border-radius: 0 !important;
-  background: #fff !important;
-  font-size: 13px !important;
-  font-weight: 300 !important;
-  color: var(--cos-ink) !important;
-  font-family: var(--cos-body) !important;
-  outline: none !important;
-  box-shadow: none !important;
-  transition: border-color .2s !important;
-  -webkit-appearance: none !important;
-  appearance: none !important;
-  height: auto !important;
-  min-height: 44px !important;
-  line-height: 1.5 !important;
-}
-.cos-acc-input:focus,
-.cos-acc-input[type="text"]:focus,
-.cos-acc-input[type="email"]:focus,
-.cos-acc-input[type="password"]:focus {
-  border-color: var(--cos-navy, #050505) !important;
-  box-shadow: none !important;
-  outline: none !important;
-}
-.cos-acc-input::placeholder { color: rgba(92, 102, 117, .38); }
-
-.cos-acc-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-
-.cos-acc-check-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 18px;
-}
-.cos-acc-check-row input[type="checkbox"] {
-  width: 24px;
-  height: 24px;
-  flex-shrink: 0;
-  accent-color: var(--cos-navy);
-  cursor: pointer;
-}
-.cos-acc-check-label {
-  font-size: 12px;
-  font-weight: 300;
-  color: var(--cos-slate);
-  cursor: pointer;
-}
-.cos-acc-consent {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  margin-top: 18px;
-  font-size: 11px;
-  font-weight: 300;
-  color: var(--cos-slate);
-  line-height: 1.65;
-}
-.cos-acc-consent input[type="checkbox"] {
-  width: 24px;
-  height: 24px;
-  margin-top: 2px;
-  flex-shrink: 0;
-  accent-color: var(--cos-navy);
-}
-.cos-acc-consent a { color: var(--cos-navy); text-decoration: underline; text-underline-offset: 2px; }
-
-.cos-acc-submit {
-  display: block !important;
-  width: 100% !important;
-  padding: 16px !important;
-  min-height: 52px !important;
-  box-sizing: border-box !important;
-  background: var(--hx-ink, #1C1D1F) !important;
-  color: #fff !important;
-  font-size: 12.5px !important;
-  font-weight: 500 !important;
-  letter-spacing: .16em !important;
-  text-transform: uppercase !important;
-  border: none !important;
-  cursor: pointer !important;
-  font-family: var(--cos-body) !important;
-  transition: background .2s !important;
-  margin-top: 26px !important;
-  border-radius: 0 !important;
-}
-.cos-acc-submit:hover { background: #2B2C2F !important; }
-
-/* Card bottom strip */
-.cos-acc-card-foot {
-  padding: 18px 36px 24px;
-  text-align: center;
-  border-top: 1px solid var(--cos-stone, #E5DED4);
-}
-.cos-acc-forgot {
-  font-size: 11px;
+#cos-account .cos-acc-input {
+  display: block;
+  width: 100%;
+  height: 52px;
+  margin: 0;
+  padding: 0 16px;
+  border: 1px solid var(--acc-line-strong);
+  border-radius: 0;
+  background: var(--acc-field);
+  font-family: var(--hx-sans, 'Inter', system-ui, sans-serif);
+  font-size: 1rem;
   font-weight: 400;
-  color: var(--cos-slate);
-  text-decoration: none;
-  transition: color .2s;
-  display: block;
-  min-height: 24px;
-  line-height: 24px;
-  margin-bottom: 14px;
+  line-height: 1.5;
+  color: var(--acc-ink);
+  caret-color: var(--acc-ink);
+  box-shadow: none;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  transition: border-color var(--acc-dur) var(--acc-ease), box-shadow var(--acc-dur) var(--acc-ease);
 }
-.cos-acc-forgot:hover { color: var(--cos-navy); }
-.cos-acc-security {
+#cos-account .cos-acc-input:focus,
+#cos-account .cos-acc-input:focus-visible {
+  border-color: var(--acc-ink);
+  box-shadow: inset 0 0 0 1px var(--acc-ink);
+  outline: none;
+}
+#cos-account .cos-acc-input:user-invalid { border-color: var(--acc-error); }
+#cos-account .cos-acc-input::placeholder { color: #7A7A77; opacity: 1; }
+
+.cos-acc-two-col { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 16px; }
+
+#cos-account :is(.cos-acc-check-row, .cos-acc-consent) {
+  display: flex;
+  gap: 12px;
+  min-height: 44px;
+  margin-top: 16px;
+  color: var(--acc-text);
+  cursor: pointer;
+}
+#cos-account .cos-acc-check-row { align-items: center; }
+#cos-account .cos-acc-consent { align-items: flex-start; padding-top: 10px; }
+#cos-account :is(.cos-acc-check-row, .cos-acc-consent) input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  flex-shrink: 0;
+  accent-color: var(--acc-ink);
+  cursor: pointer;
+}
+#cos-account .cos-acc-consent input[type="checkbox"] { margin-top: 1px; }
+#cos-account .cos-acc-consent a {
+  color: var(--acc-ink);
+  text-decoration: underline;
+  text-decoration-color: var(--acc-line-strong);
+  text-underline-offset: 4px;
+}
+#cos-account .cos-acc-consent a:hover { text-decoration-color: var(--acc-ink); }
+
+#cos-account .cos-acc-submit {
+  display: block;
+  width: 100%;
+  min-height: 52px;
+  margin-top: 28px;
+  padding: 0 24px;
+  background: var(--acc-ink);
+  color: var(--acc-ground);
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background-color var(--acc-dur) var(--acc-ease);
+}
+#cos-account .cos-acc-submit:hover { background: #2B2C2F; }
+
+/* Card foot */
+.cos-acc-card-foot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 36px 24px;
+  border-top: 1px solid var(--acc-line);
+}
+#cos-account .cos-acc-forgot {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--acc-ink);
+  text-decoration: underline;
+  text-decoration-color: var(--acc-line-strong);
+  text-underline-offset: 4px;
+  transition: text-decoration-color var(--acc-dur) var(--acc-ease);
+}
+#cos-account .cos-acc-forgot:hover { text-decoration-color: var(--acc-ink); }
+#cos-account .cos-acc-security {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 6px;
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  color: var(--cos-slate);
+  gap: 8px;
+  color: var(--acc-muted);
 }
-.cos-acc-security svg { width: 11px; height: 11px; flex-shrink: 0; color: var(--cos-gold-l, #B79A5B); }
+.cos-acc-security svg { width: 14px; height: 14px; flex-shrink: 0; }
 
 /* ═══════════════════════════════════════════════
-   LOGGED-IN — dashboard
+   SIGNED IN — dashboard
 ═══════════════════════════════════════════════ */
 .cos-acc-banner {
-  background: var(--cos-navy, #050505);
-  padding: 48px 24px 44px;
+  padding: 56px 24px 40px;
+  border-bottom: 1px solid var(--acc-line);
 }
 .cos-acc-banner-inner {
   max-width: 1080px;
   margin: 0 auto;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   gap: 24px;
   flex-wrap: wrap;
 }
-.cos-acc-welcome-label {
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: .28em;
-  text-transform: uppercase;
-  color: var(--cos-gold-l, #B79A5B);
-  margin-bottom: 8px;
-}
-.cos-acc-welcome-name {
-  font-family: var(--cos-display);
-  font-style: italic;
-  font-weight: 300;
-  font-size: clamp(26px, 3vw, 40px);
-  color: #fff;
-  line-height: 1.1;
-}
-.cos-acc-logout {
-  padding: 11px 26px;
-  border: 1px solid rgba(255,255,255,.18);
-  color: rgba(255,255,255,.6);
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: .18em;
-  text-transform: uppercase;
+#cos-account .cos-acc-logout {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  border: 1px solid var(--acc-line-strong);
+  color: var(--acc-ink);
   text-decoration: none;
-  transition: border-color .2s, color .2s;
   white-space: nowrap;
-  display: inline-block;
+  transition: border-color var(--acc-dur) var(--acc-ease), background-color var(--acc-dur) var(--acc-ease), color var(--acc-dur) var(--acc-ease);
 }
-.cos-acc-logout:hover { border-color: rgba(255,255,255,.5); color: #fff; }
+#cos-account .cos-acc-logout:hover { background: var(--acc-ink); border-color: var(--acc-ink); color: var(--acc-ground); }
 
 .cos-acc-body {
-  max-width: 1080px;
+  max-width: calc(1080px + 48px);
   margin: 0 auto;
-  padding: 44px 24px 88px;
+  padding: 48px 24px 96px;
 }
 .cos-acc-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 2px;
+  grid-template-columns: minmax(0,1fr);
+  gap: 48px 40px;
 }
 
-/* Dashboard cards */
-.cos-acc-dc {
-  background: #fff;
-  border-top: 2px solid var(--cos-gold, #8B692F);
-}
+/* Dashboard sections: a strong hairline, a label head, open content */
+.cos-acc-dc { border-top: 1px solid var(--acc-line-strong); }
 .cos-acc-dc-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 22px 28px;
-  border-bottom: 1px solid var(--cos-stone, #E5DED4);
+  gap: 16px;
+  min-height: 64px;
+  border-bottom: 1px solid var(--acc-line);
 }
-.cos-acc-dc-title {
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: .22em;
-  text-transform: uppercase;
-  color: var(--cos-ink);
-}
-.cos-acc-dc-link {
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--cos-gold);
-  text-decoration: none;
-  transition: color .2s;
+#cos-account .cos-acc-dc-title { color: var(--acc-ink); }
+#cos-account .cos-acc-dc-link {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  min-height: 24px;
-  padding: 6px 4px;
-  margin: -6px -4px;
+  margin-right: -4px;
+  padding: 0 4px;
+  color: var(--acc-ink);
+  text-decoration: none;
 }
-.cos-acc-dc-link:hover { color: var(--cos-navy); }
-.cos-acc-dc-link::after { content: '→'; font-style: normal; }
-.cos-acc-dc-body { padding: 22px 28px; }
+#cos-account .cos-acc-dc-link .hx-arrow { width: 14px; margin-left: 10px; }
+#cos-account .cos-acc-dc-link:hover .hx-arrow { transform: translateX(4px); }
+.cos-acc-dc-body { padding-top: 8px; }
 
-/* Orders list */
+/* Orders */
 .cos-acc-order {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
-  padding: 13px 0;
-  border-bottom: 1px solid var(--cos-stone, #E5DED4);
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--acc-line);
 }
-.cos-acc-order:last-child { border-bottom: none; }
-.cos-acc-order-id { font-size: 12px; font-weight: 500; color: var(--cos-ink); }
-.cos-acc-order-meta { font-size: 11px; font-weight: 300; color: var(--cos-slate); margin-top: 2px; }
-.cos-acc-order-badge {
-  font-size: 8px;
-  font-weight: 700;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  padding: 4px 9px;
-  border: 1px solid currentColor;
-  white-space: nowrap;
+.cos-acc-order:last-child { border-bottom: 0; }
+#cos-account .cos-acc-order-id { font-weight: 500; color: var(--acc-ink); line-height: 1.5; }
+#cos-account .cos-acc-order-meta { color: var(--acc-muted); font-variant-numeric: tabular-nums lining-nums; }
+#cos-account .cos-acc-order-status {
   flex-shrink: 0;
+  letter-spacing: .14em;
+  color: var(--acc-muted);
+  text-align: right;
 }
-.cos-acc-order-badge.s-completed   { color: var(--cos-teal, #46656B); }
-.cos-acc-order-badge.s-processing  { color: var(--cos-gold, #8B692F); }
-.cos-acc-order-badge.s-on-hold,
-.cos-acc-order-badge.s-pending-payment { color: var(--cos-slate); }
-.cos-acc-order-badge.s-cancelled,
-.cos-acc-order-badge.s-failed      { color: var(--cos-error, #A13B3B); }
+#cos-account .cos-acc-order-status:is(.s-processing, .s-on-hold, .s-completed) { color: var(--acc-ink); }
+#cos-account .cos-acc-order-status:is(.s-cancelled, .s-failed) { color: var(--acc-error); }
 
-/* Address block */
-.cos-acc-addr {
-  font-size: 13px;
-  font-weight: 300;
-  color: var(--cos-slate);
-  line-height: 1.9;
+/* Address */
+#cos-account .cos-acc-addr {
+  padding-top: 8px;
+  color: var(--acc-text);
   font-style: normal;
 }
-.cos-acc-addr-name { font-weight: 500; color: var(--cos-ink); display: block; }
+.cos-acc-addr-name { font-weight: 500; color: var(--acc-ink); display: block; }
 
-/* Account detail rows */
+/* Account details */
 .cos-acc-info {
   display: flex;
   align-items: baseline;
-  gap: 12px;
+  gap: 16px;
   padding: 12px 0;
-  border-bottom: 1px solid var(--cos-stone, #E5DED4);
+  border-bottom: 1px solid var(--acc-line);
 }
-.cos-acc-info:last-child { border-bottom: none; }
-.cos-acc-info-key {
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: var(--cos-slate);
+.cos-acc-info:last-child { border-bottom: 0; }
+#cos-account .cos-acc-info-key {
   flex-shrink: 0;
-  width: 84px;
+  width: 7.5rem;
+  letter-spacing: .14em;
+  color: var(--acc-muted);
 }
-.cos-acc-info-val {
-  font-size: 13px;
-  font-weight: 300;
-  color: var(--cos-ink);
-  word-break: break-all;
-}
+#cos-account .cos-acc-info-val { min-width: 0; color: var(--acc-ink); overflow-wrap: anywhere; }
+#cos-account .cos-acc-info-val.is-masked { letter-spacing: .1em; color: var(--acc-muted); }
 
-.cos-acc-empty {
-  font-size: 13px;
-  font-weight: 300;
-  color: var(--cos-slate);
-  line-height: 1.75;
+#cos-account .cos-acc-empty { padding-top: 8px; color: var(--acc-text); }
+#cos-account .cos-acc-empty a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--acc-ink);
+  text-decoration: underline;
+  text-decoration-color: var(--acc-line-strong);
+  text-underline-offset: 4px;
 }
-.cos-acc-empty a { color: var(--cos-navy); text-decoration: underline; text-underline-offset: 2px; }
+#cos-account .cos-acc-empty a:hover { text-decoration-color: var(--acc-ink); }
 
 /* ── Responsive ── */
-@media (min-width: 900px) {
-  .cos-acc-grid { grid-template-columns: repeat(3, 1fr); }
+@media (min-width: 640px) {
+  .cos-acc-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
 }
-@media (min-width: 640px) and (max-width: 899px) {
-  .cos-acc-grid { grid-template-columns: repeat(2, 1fr); }
+@media (min-width: 900px) {
+  .cos-acc-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
 }
 @media (max-width: 860px) {
   .cos-acc-layout { flex-direction: column; align-items: stretch; gap: 0; }
-  .cos-acc-brand { padding: 48px 0 40px; text-align: center; overflow: visible; }
-  .cos-acc-brand-bg { display: none; }
-  .cos-acc-brand-line { margin: 0 auto 20px; }
-  .cos-acc-brand-sub { margin-left: auto; margin-right: auto; }
+  .cos-acc-brand { padding: 32px 0 40px; text-align: center; }
+  .cos-acc-brand-line { margin: 0 auto 24px; }
+  #cos-account .cos-acc-brand-sub { margin-left: auto; margin-right: auto; }
   .cos-acc-perk-sep { margin: 0 auto 20px; }
-  .cos-acc-brand-perks { flex-direction: row; flex-wrap: wrap; justify-content: center; }
+  .cos-acc-brand-perks { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 12px 24px; }
   .cos-acc-card-col { flex: none; width: 100%; max-width: 480px; margin: 0 auto; }
-  .cos-acc-page { align-items: flex-start; }
+  .cos-acc-page { align-items: flex-start; padding-top: 32px; }
 }
 @media (max-width: 460px) {
   .cos-acc-panels { padding: 24px 20px 28px; }
-  .cos-acc-card-foot { padding: 16px 20px 22px; }
-  .cos-acc-two-col { grid-template-columns: 1fr; }
+  #cos-account .cos-acc-notices { padding: 20px 20px 0; }
+  .cos-acc-card-foot { padding: 8px 20px 20px; }
+  .cos-acc-two-col { grid-template-columns: minmax(0,1fr); gap: 0; }
+  .cos-acc-banner { padding: 40px 20px 32px; }
 }
-/* Suppress WooCommerce blocktheme form resets on this page */
-#cos-account .cos-acc-input { all: unset; }
-#cos-account .cos-acc-input,
-#cos-account .cos-acc-input[type="text"],
-#cos-account .cos-acc-input[type="email"],
-#cos-account .cos-acc-input[type="password"] {
-  box-sizing: border-box !important;
-  display: block !important;
-  width: 100% !important;
-  min-height: 44px !important;
-  padding: 12px 14px !important;
-  border: 1px solid var(--cos-stone, #E5DED4) !important;
-  border-radius: 0 !important;
-  background: #fff !important;
-  font-size: 13px !important;
-  font-weight: 300 !important;
-  color: var(--cos-ink, #111111) !important;
-  font-family: var(--cos-body, sans-serif) !important;
-  line-height: 1.5 !important;
-  outline: none !important;
-  box-shadow: none !important;
-  transition: border-color .2s !important;
-  -webkit-appearance: none !important;
-  appearance: none !important;
-  margin: 0 !important;
-}
-#cos-account .cos-acc-input:focus,
-#cos-account .cos-acc-input[type="text"]:focus,
-#cos-account .cos-acc-input[type="email"]:focus,
-#cos-account .cos-acc-input[type="password"]:focus {
-  border-color: var(--cos-navy, #050505) !important;
-  box-shadow: none !important;
+@media (prefers-reduced-motion: reduce) {
+  #cos-account *, #cos-account .hx-arrow { transition: none; }
 }
 </style>
 
@@ -558,13 +463,10 @@ if ( $logged_in ) {
 
 <?php if ( $logged_in ) : ?>
 
-<!-- ═══════ LOGGED-IN ═══════ -->
+<!-- ═══════ SIGNED IN ═══════ -->
 <div class="cos-acc-banner">
   <div class="cos-acc-banner-inner">
-    <div>
-      <p class="cos-acc-welcome-label">Welcome back to your ritual</p>
-      <p class="cos-acc-welcome-name"><?php echo esc_html( $first_name ); ?></p>
-    </div>
+    <h1 class="cos-acc-welcome-name">Welcome back, <?php echo esc_html( $first_name ); ?></h1>
     <a href="<?php echo esc_url( $logout_url ); ?>" class="cos-acc-logout">Sign out</a>
   </div>
 </div>
@@ -573,10 +475,10 @@ if ( $logged_in ) {
   <div class="cos-acc-grid">
 
     <!-- Orders -->
-    <div class="cos-acc-dc">
+    <section class="cos-acc-dc" aria-labelledby="cos-acc-h-orders">
       <div class="cos-acc-dc-head">
-        <span class="cos-acc-dc-title">My Orders</span>
-        <a href="<?php echo esc_url( $orders_url ); ?>" class="cos-acc-dc-link">View all</a>
+        <h2 class="cos-acc-dc-title" id="cos-acc-h-orders">My orders</h2>
+        <a href="<?php echo esc_url( $orders_url ); ?>" class="cos-acc-dc-link">View all<span class="hx-arrow" aria-hidden="true"></span></a>
       </div>
       <div class="cos-acc-dc-body">
         <?php if ( ! empty( $orders ) ) :
@@ -591,19 +493,19 @@ if ( $logged_in ) {
               &middot; <?php echo wp_kses_post( $o->get_formatted_order_total() ); ?>
             </div>
           </div>
-          <span class="cos-acc-order-badge s-<?php echo esc_attr( $s ); ?>"><?php echo esc_html( wc_get_order_status_name( $s ) ); ?></span>
+          <span class="cos-acc-order-status s-<?php echo esc_attr( $s ); ?>"><?php echo esc_html( wc_get_order_status_name( $s ) ); ?></span>
         </div>
         <?php endforeach; else : ?>
-        <p class="cos-acc-empty">No Caviar of Switzerland orders yet.<br><a href="/shop/">Explore the four-step ritual →</a></p>
+        <p class="cos-acc-empty">No Caviar of Switzerland orders yet.<br><a href="/shop/">Explore the four-step ritual</a></p>
         <?php endif; ?>
       </div>
-    </div>
+    </section>
 
     <!-- Address -->
-    <div class="cos-acc-dc">
+    <section class="cos-acc-dc" aria-labelledby="cos-acc-h-address">
       <div class="cos-acc-dc-head">
-        <span class="cos-acc-dc-title">Delivery Address</span>
-        <a href="<?php echo esc_url( $addr_url ); ?>" class="cos-acc-dc-link">Edit</a>
+        <h2 class="cos-acc-dc-title" id="cos-acc-h-address">Delivery address</h2>
+        <a href="<?php echo esc_url( $addr_url ); ?>" class="cos-acc-dc-link" aria-label="Edit delivery address">Edit<span class="hx-arrow" aria-hidden="true"></span></a>
       </div>
       <div class="cos-acc-dc-body">
         <?php if ( $has_addr ) :
@@ -622,16 +524,16 @@ if ( $logged_in ) {
           ?>
         </address>
         <?php else : ?>
-        <p class="cos-acc-empty">No address saved yet.<br><a href="<?php echo esc_url( $addr_url ); ?>">Add a delivery address →</a></p>
+        <p class="cos-acc-empty">No address saved yet.<br><a href="<?php echo esc_url( $addr_url ); ?>">Add a delivery address</a></p>
         <?php endif; ?>
       </div>
-    </div>
+    </section>
 
     <!-- Account details -->
-    <div class="cos-acc-dc">
+    <section class="cos-acc-dc" aria-labelledby="cos-acc-h-details">
       <div class="cos-acc-dc-head">
-        <span class="cos-acc-dc-title">Account Details</span>
-        <a href="<?php echo esc_url( $detail_url ); ?>" class="cos-acc-dc-link">Edit</a>
+        <h2 class="cos-acc-dc-title" id="cos-acc-h-details">Account details</h2>
+        <a href="<?php echo esc_url( $detail_url ); ?>" class="cos-acc-dc-link" aria-label="Edit account details">Edit<span class="hx-arrow" aria-hidden="true"></span></a>
       </div>
       <div class="cos-acc-dc-body">
         <div class="cos-acc-info">
@@ -644,15 +546,15 @@ if ( $logged_in ) {
         </div>
         <div class="cos-acc-info">
           <span class="cos-acc-info-key">Password</span>
-          <span class="cos-acc-info-val" style="letter-spacing:.1em;color:var(--cos-slate)">••••••••</span>
+          <span class="cos-acc-info-val is-masked" aria-label="Hidden">••••••••</span>
         </div>
       </div>
-    </div>
+    </section>
 
   </div>
 </div>
 
-<?php else : /* ═══════ LOGGED-OUT ═══════ */ ?>
+<?php else : /* ═══════ SIGNED OUT ═══════ */ ?>
 
 <?php
 ob_start();
@@ -665,24 +567,23 @@ $active = ( ! empty( $_POST['register'] ) || ( ! empty( $_GET['action'] ) && $_G
 <div class="cos-acc-page">
   <div class="cos-acc-layout">
 
-    <!-- Brand panel (visible on wide screens) -->
+    <!-- Brand panel -->
     <div class="cos-acc-brand">
       <span class="cos-acc-brand-line"></span>
-      <p class="cos-acc-brand-eyebrow">Caviar of Switzerland</p>
       <h1 class="cos-acc-brand-heading">Your ritual,<br>your account.</h1>
       <p class="cos-acc-brand-sub">Manage your orders, update your details, and access personalised ritual guidance from your Caviar of Switzerland concierge.</p>
       <div class="cos-acc-perk-sep"></div>
       <div class="cos-acc-brand-perks">
         <span class="cos-acc-brand-perk">
-          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2.5L3 5.7v5.1c0 3.8 2.9 6.8 7 7.4 4.1-.6 7-3.6 7-7.4V5.7L10 2.5z"/><path d="M7 10l2 2 4-4"/></svg>
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2.5L3 5.7v5.1c0 3.8 2.9 6.8 7 7.4 4.1-.6 7-3.6 7-7.4V5.7L10 2.5z"/><path d="M7 10l2 2 4-4"/></svg>
           Order history
         </span>
         <span class="cos-acc-brand-perk">
-          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6.5" width="11" height="7" rx="1"/><path d="M13 9.5h1.5a2 2 0 0 1 0 4H13"/><circle cx="5.5" cy="15" r="1.5"/><circle cx="10.5" cy="15" r="1.5"/></svg>
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6.5" width="11" height="7" rx="1"/><path d="M13 9.5h1.5a2 2 0 0 1 0 4H13"/><circle cx="5.5" cy="15" r="1.5"/><circle cx="10.5" cy="15" r="1.5"/></svg>
           Saved addresses
         </span>
         <span class="cos-acc-brand-perk">
-          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="7.5" r="3.5"/><path d="M4 17c0-3 2.7-5.5 6-5.5s6 2.5 6 5.5"/></svg>
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="7.5" r="3.5"/><path d="M4 17c0-3 2.7-5.5 6-5.5s6 2.5 6 5.5"/></svg>
           Ritual profile
         </span>
       </div>
@@ -692,21 +593,21 @@ $active = ( ! empty( $_POST['register'] ) || ( ! empty( $_GET['action'] ) && $_G
     <div class="cos-acc-card-col">
       <div class="cos-acc-card">
 
-        <div class="cos-acc-tabs" role="tablist">
+        <div class="cos-acc-tabs" role="tablist" aria-label="Account">
           <button class="cos-acc-tab <?php echo $active === 'login' ? 'is-active' : ''; ?>"
-            role="tab" id="cos-t-login"
+            type="button" role="tab" id="cos-t-login"
             aria-selected="<?php echo $active === 'login' ? 'true' : 'false'; ?>"
             aria-controls="cos-p-login"
-            onclick="cosTab('login')">Sign in</button>
+            tabindex="<?php echo $active === 'login' ? '0' : '-1'; ?>">Sign in</button>
           <button class="cos-acc-tab <?php echo $active === 'register' ? 'is-active' : ''; ?>"
-            role="tab" id="cos-t-register"
+            type="button" role="tab" id="cos-t-register"
             aria-selected="<?php echo $active === 'register' ? 'true' : 'false'; ?>"
             aria-controls="cos-p-register"
-            onclick="cosTab('register')">Register</button>
+            tabindex="<?php echo $active === 'register' ? '0' : '-1'; ?>">Register</button>
         </div>
 
         <?php if ( $notices ) : ?>
-        <div class="cos-acc-notices"><?php echo $notices; ?></div>
+        <div class="cos-acc-notices" role="alert"><?php echo $notices; ?></div>
         <?php endif; ?>
 
         <div class="cos-acc-panels">
@@ -714,7 +615,7 @@ $active = ( ! empty( $_POST['register'] ) || ( ! empty( $_GET['action'] ) && $_G
           <!-- Sign-in panel -->
           <div class="cos-acc-panel <?php echo $active === 'login' ? 'is-active' : ''; ?>"
             id="cos-p-login" role="tabpanel" aria-labelledby="cos-t-login">
-            <form method="post" action="<?php echo esc_url( get_permalink() ); ?>" novalidate>
+            <form method="post" action="<?php echo esc_url( get_permalink() ); ?>">
               <div class="cos-acc-field">
                 <label class="cos-acc-label" for="cos-l-email">Email address</label>
                 <input class="cos-acc-input" type="email" id="cos-l-email" name="username"
@@ -740,7 +641,7 @@ $active = ( ! empty( $_POST['register'] ) || ( ! empty( $_GET['action'] ) && $_G
           <!-- Register panel -->
           <div class="cos-acc-panel <?php echo $active === 'register' ? 'is-active' : ''; ?>"
             id="cos-p-register" role="tabpanel" aria-labelledby="cos-t-register">
-            <form method="post" action="<?php echo esc_url( get_permalink() ); ?>" novalidate>
+            <form method="post" action="<?php echo esc_url( get_permalink() ); ?>">
               <div class="cos-acc-two-col">
                 <div class="cos-acc-field">
                   <label class="cos-acc-label" for="cos-r-fn">First name</label>
@@ -772,7 +673,7 @@ $active = ( ! empty( $_POST['register'] ) || ( ! empty( $_GET['action'] ) && $_G
               </div>
               <label class="cos-acc-consent">
                 <input type="checkbox" name="gdpr_consent" required/>
-                I agree to the <a href="/terms/" target="_blank">Terms &amp; Conditions</a> and <a href="/privacy/" target="_blank">Privacy Policy</a>.
+                <span>I agree to the <a href="/terms/" target="_blank">Terms &amp; Conditions</a> and <a href="/privacy/" target="_blank">Privacy Policy</a>.</span>
               </label>
               <input type="hidden" name="redirect" value="<?php echo esc_url( get_permalink() ); ?>"/>
               <?php wp_nonce_field( 'woocommerce-register', 'woocommerce-register-nonce' ); ?>
@@ -785,7 +686,7 @@ $active = ( ! empty( $_POST['register'] ) || ( ! empty( $_GET['action'] ) && $_G
         <div class="cos-acc-card-foot">
           <a href="<?php echo esc_url( wp_lostpassword_url( get_permalink() ) ); ?>" class="cos-acc-forgot">Forgot your password?</a>
           <div class="cos-acc-security">
-            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="9" width="10" height="8" rx="1"/><path d="M7 9V7a3 3 0 0 1 6 0v2"/></svg>
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="9" width="10" height="8" rx="1"/><path d="M7 9V7a3 3 0 0 1 6 0v2"/></svg>
             Encrypted &amp; secure
           </div>
         </div>
@@ -801,15 +702,32 @@ $active = ( ! empty( $_POST['register'] ) || ( ! empty( $_GET['action'] ) && $_G
 </main>
 
 <script nonce="<?php echo esc_attr( cos_csp_nonce() ); ?>">
-function cosTab(tab) {
-  ['login','register'].forEach(function(t) {
-    var btn   = document.getElementById('cos-t-' + t);
-    var panel = document.getElementById('cos-p-' + t);
-    var on    = (t === tab);
-    if (btn)   { btn.classList.toggle('is-active', on); btn.setAttribute('aria-selected', on); }
-    if (panel) { panel.classList.toggle('is-active', on); }
+(function () {
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('#cos-account [role="tab"]'));
+  if (!tabs.length) return;
+  function select(tab, focus) {
+    tabs.forEach(function (t) {
+      var on = (t === tab);
+      var panel = document.getElementById(t.getAttribute('aria-controls'));
+      t.classList.toggle('is-active', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+      if (panel) panel.classList.toggle('is-active', on);
+    });
+    if (focus) tab.focus();
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { select(t, false); });
+    t.addEventListener('keydown', function (e) {
+      var next = null;
+      if (e.key === 'ArrowRight') next = tabs[(i + 1) % tabs.length];
+      else if (e.key === 'ArrowLeft') next = tabs[(i - 1 + tabs.length) % tabs.length];
+      else if (e.key === 'Home') next = tabs[0];
+      else if (e.key === 'End') next = tabs[tabs.length - 1];
+      if (next) { e.preventDefault(); select(next, true); }
+    });
   });
-}
+})();
 </script>
 
 <?php wp_footer(); ?>

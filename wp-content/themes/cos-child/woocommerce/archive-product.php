@@ -118,15 +118,11 @@ $bundle_saving = ( $bundle && $separate_total > $bundle_price && count( $individ
 		</div>
 	</header>
 
-	<nav class="hxshop-index" aria-label="On this page">
-		<div class="hx-wrap">
-			<ol class="hxshop-index__list">
-				<li><a class="hxshop-index__link" href="#cos-products" data-cro-cta="shop-hero-primary"><span class="hxshop-index__n" aria-hidden="true">01</span>The four formulas</a></li>
-				<?php if ( $bundle ) : ?><li><a class="hxshop-index__link" href="#cos-ritual"><span class="hxshop-index__n" aria-hidden="true">02</span>The four formulas, as one ritual</a></li><?php endif; ?>
-				<li><a class="hxshop-index__link" href="#about"><span class="hxshop-index__n" aria-hidden="true"><?php echo $bundle ? '03' : '02'; ?></span>Built as one system</a></li>
-			</ol>
-		</div>
-	</nav>
+	<?php // section bar: the sitewide sticky hx-bar since 31 Oct 2026 (was the numbered .hxshop-index grid)
+	$hxshop_bar = array( array( 'href' => '#cos-products', 'text' => 'The four formulas', 'cta' => 'shop-hero-primary' ) );
+	if ( $bundle ) $hxshop_bar[] = array( 'href' => '#cos-ritual', 'text' => 'The four formulas, as one ritual' );
+	$hxshop_bar[] = array( 'href' => '#about', 'text' => 'Built as one system' );
+	get_template_part( 'template-parts/hx/section-bar', null, array( 'items' => $hxshop_bar ) ); ?>
 
 	<!-- 2. The four formulas -->
 	<section class="hxshop-list" id="cos-products" aria-labelledby="hxshop-list-title">
@@ -153,17 +149,12 @@ $bundle_saving = ( $bundle && $separate_total > $bundle_price && count( $individ
 						<a class="hxshop-item__stage cos-select-item" href="<?php echo esc_url( $url ); ?>" data-product_id="<?php echo esc_attr( $product->get_id() ); ?>" tabindex="-1" aria-hidden="true">
 							<?php
 							if ( $key ) {
-								echo cos_h26_picture( 'wc-stage-graphite-' . $key, array( 400, 600, 800, 1122 ), array( 1122, 1402 ), '', array( 'class' => 'hxshop-item__object', 'sizes' => '(min-width: 1100px) min(24vw, 360px), 48vw', 'w' => 1122 ) ); // the homepage collection's graphite studio packshots (owner, 23 Oct 2026; graphite set 25 Oct)
+								echo cos_h26_picture( 'coll-photo-' . $key, array( 480, 800 ), array( 4, 5 ), '', array( 'class' => 'hxshop-item__object', 'sizes' => '(min-width: 1100px) min(24vw, 360px), 48vw', 'w' => 800 ) ); // the homepage collection's own photographs (owner, 31 Oct 2026; were the graphite stage set wc-stage-graphite-*)
 							} else {
 								echo $product->get_image( 'woocommerce_single', array( 'class' => 'hxshop-item__wcimg', 'alt' => '' ) ); // phpcs:ignore
 							}
 							?>
 						</a>
-						<?php if ( $can_buy ) : ?>
-						<div class="hxshop-item__actions">
-							<a href="<?php echo esc_url( add_query_arg( 'add-to-cart', $product->get_id(), wc_get_cart_url() ) ); ?>" class="hxshop-item__add hxshop-add cos-card-btn add_to_cart_button ajax_add_to_cart" data-product_id="<?php echo esc_attr( $product->get_id() ); ?>" data-product_sku="<?php echo esc_attr( $product->get_sku() ); ?>" data-quantity="1" data-hxshop-name="<?php echo esc_attr( $name ); ?>" aria-label="<?php echo esc_attr( sprintf( 'Add %s to bag', $name ) ); ?>" rel="nofollow"><span class="hxshop-add__label">Add to bag</span></a>
-						</div>
-						<?php endif; ?>
 					</div>
 					<?php if ( $d ) : ?><p class="hxshop-item__step"><span class="hx-sr">Step </span><span class="hxshop-item__num"><?php echo esc_html( $d['num'] ); ?></span> <?php echo esc_html( $d['verb'] ); ?></p><?php endif; ?>
 					<h3 class="hxshop-item__name">
@@ -177,6 +168,12 @@ $bundle_saving = ( $bundle && $separate_total > $bundle_price && count( $individ
 						<span class="hxshop-item__price"><?php echo wp_kses_post( wc_price( (float) $product->get_price() ) ); ?></span>
 						<?php if ( $size ) : ?><span class="hxshop-item__dot" aria-hidden="true"></span><span class="hx-sr"> for </span><span class="hxshop-item__size"><?php echo esc_html( $size ); ?></span><?php endif; ?>
 					</p>
+					<?php // the bag control: on the photograph's corner from 640px, under the price on phones (clarify, 1 Nov 2026) ?>
+					<?php if ( $can_buy ) : ?>
+					<div class="hxshop-item__actions">
+						<a href="<?php echo esc_url( add_query_arg( 'add-to-cart', $product->get_id(), wc_get_cart_url() ) ); ?>" class="hxshop-item__add hxshop-add cos-card-btn add_to_cart_button ajax_add_to_cart" data-product_id="<?php echo esc_attr( $product->get_id() ); ?>" data-product_sku="<?php echo esc_attr( $product->get_sku() ); ?>" data-quantity="1" data-hxshop-name="<?php echo esc_attr( $name ); ?>" aria-label="<?php echo esc_attr( sprintf( 'Add to bag: %s', $name ) ); ?>" rel="nofollow"><span class="hxshop-add__label" aria-hidden="true">Add<span class="hxshop-add__long"> to bag</span></span></a>
+					</div>
+					<?php endif; ?>
 				</li>
 				<?php endforeach; ?>
 			</ol>
@@ -194,10 +191,10 @@ $bundle_saving = ( $bundle && $separate_total > $bundle_price && count( $individ
 	   cleanser read "50 ml") bleeds off the left edge and dissolves into the room's own black; the type
 	   sits in pearl on the right. The product's name is the heading (no label above it); the steps, the
 	   price and the actions are set as one quiet column. */ ?>
-	<section class="hxshop-ritual hx-on-dark" id="cos-ritual" aria-labelledby="hxshop-ritual-title">
+	<section class="hxshop-ritual hxshop-ritual--light" id="cos-ritual" aria-labelledby="hxshop-ritual-title">
 		<div class="hxshop-ritual__grid">
 			<a class="hxshop-ritual__media" href="<?php echo esc_url( $bundle_url ); ?>" tabindex="-1" aria-hidden="true" data-hx-reveal="settle">
-				<?php echo cos_h26_picture( 'hxshop-ritual-photo', array( 1280, 1920, 2400 ), array( 5549, 3700 ), 'The four Caviar of Switzerland formulas on black marble beside a gold spoon of caviar', array( 'class' => 'hxshop-ritual__pic', 'sizes' => '(min-width: 900px) 60vw, 100vw', 'w' => 1920 ) ); ?>
+				<?php echo cos_h26_picture( 'hxshop-ritual-studio', array( 1000, 1672 ), array( 1672, 941 ), 'The four Caviar of Switzerland formulas, Revitalizing Eye Cream, Advanced Repair Serum, 24h Regeneration Cream and Micellar Water All-in-One Cleanser, on a mirrored shelf in soft light', array( 'class' => 'hxshop-ritual__pic', 'sizes' => '(min-width: 900px) 60vw, 100vw', 'w' => 1672 ) ); // owner's light studio shot, as supplied (design-sources/shop-ritual-2026-11-01/build_ritual_studio.py), 1 Nov 2026 ?>
 			</a>
 			<div class="hxshop-ritual__body">
 				<h2 id="hxshop-ritual-title" class="hx-heading hxshop-ritual__title" data-hx-reveal>The Complete Ritual</h2>
@@ -339,7 +336,12 @@ document.addEventListener('DOMContentLoaded', function () {
 (function ($) {
   if (!$) return;
   var status = document.getElementById('hxshop-status');
-  function label(btn, text) { btn.find('.hxshop-add__label').text(text); }
+  // a tile's label is "Add<span> to bag</span>" (the long half hides on phones): keep its markup to restore
+  function label(btn, text) {
+    var el = btn.find('.hxshop-add__label');
+    if (el.attr('data-hxshop-rest') === undefined) el.attr('data-hxshop-rest', el.html());
+    if (text === null) el.html(el.attr('data-hxshop-rest')); else el.text(text);
+  }
   $(document.body).on('adding_to_cart', function (e, btn) {
     if (!btn || !btn.hasClass('hxshop-add')) return;
     btn.addClass('is-busy').attr('aria-busy', 'true');
@@ -353,12 +355,12 @@ document.addEventListener('DOMContentLoaded', function () {
   $(document.body).on('added_to_cart', function (e, fragments, hash, btn) {
     if (!btn || !btn.hasClass('hxshop-add')) return;
     btn.removeClass('is-busy').removeAttr('aria-busy').addClass('is-added');
-    label(btn, 'Added to bag');
+    label(btn, btn.hasClass('hxshop-item__add') ? 'Added' : 'Added to bag');
     if (status) status.textContent = (btn.attr('data-hxshop-name') || 'Item') + ' added to your bag.';
     clearTimeout(btn[0].hxshopT);
     btn[0].hxshopT = setTimeout(function () {
       btn.removeClass('is-added');
-      label(btn, 'Add to bag');
+      label(btn, null);
     }, 2400);
   });
 })(window.jQuery);

@@ -20,6 +20,10 @@ function cos_staging_global_styles(): void { ?>
    layout box toward the page's scrollable area, producing a phantom
    horizontal scrollbar even though nothing is visibly clipped. */
 html,body{overflow-x:hidden;max-width:100%}
+/* 31 Oct 2026: as in inc/navigation.php (17 Oct): body overflow-x:hidden makes <body> a scroll
+   container that never scrolls, which freezes CSS view() timelines (the closing photograph's
+   scroll-linked entrance). clip guards the same phantom scroll without one; html keeps hidden. */
+@supports (overflow-x:clip){body{overflow-x:clip}}
 .cos-spot-price,.cos-step-price,.cos-stat-big,.cos-spot-price *,.cos-step-price *{font-variant-numeric:lining-nums tabular-nums}
 /* Header, mobile menu and footer styles: assets/css/home-staging/chrome.css (homepage
    only, enqueued by inc/hx-system.php). Only page-level bits stay inline here. */

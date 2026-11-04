@@ -8,7 +8,8 @@
  * Two art-directed frames: hxh-wide (>=600px; on landscape screens the object sits
  * right of centre with the headline in the calm field to its left, on portrait
  * tablets it is centred under the headline) and hxh-tall (phones: headline above the
- * object, the action on the reflective floor below it).
+ * object; the action on the reflective floor below it on portrait tablets, directly under
+ * the copy on phones since 29 Oct 2026 so it is in reach on first paint).
  *
  * The <picture> media query and sizes below must match the LCP preload in
  * inc/home-2026.php ($hxh_wide_media, $hxh_*_sizes).
@@ -62,7 +63,9 @@ $hxh_alt        = 'The 24h Regeneration Cream, open and filled with white cream,
 			<p class="hxh__lead hx-load-rise" style="--hx-i:12">Four caviar formulas. One complete&nbsp;ritual.</p>
 		</div>
 		<div class="hxh__action hx-load-rise" style="--hx-i:16">
-			<a class="hx-btn hxh__cta" href="<?php echo esc_url( home_url( '/the-ritual/' ) ); ?>" data-cro-cta="home-hero-primary">Discover the Ritual<span class="hx-arrow" aria-hidden="true"></span></a>
+			<?php /* 1 Nov 2026 (owner, after a critique: "the purchase moment is too quiet"): the one action names
+			   the set and opens its product page; still the outlined button (no fill, 31 Oct restraint rule). */ ?>
+			<a class="hx-btn hxh__cta" href="<?php echo esc_url( home_url( '/products/the-complete-ritual/' ) ); ?>" data-cro-cta="home-hero-primary">Shop the Complete Ritual<span class="hx-arrow" aria-hidden="true"></span></a>
 		</div>
 	</div>
 </section>

@@ -1,0 +1,38 @@
+{
+ "sci-cleanser-what": {
+  "source": "C:/Users/giann/Dropbox\\VitalTrends/Graphics/Media\\cleanser.jpg",
+  "crop": [
+   108,
+   0,
+   863,
+   1079
+  ]
+ },
+ "sci-cleanser-how": {
+  "source": "C:/Users/giann/Dropbox\\VitalTrends/Graphics/Photoshoots\\June 2026\\CAV59324 copy.jpg",
+  "crop": [
+   0,
+   344,
+   5504,
+   6880
+  ]
+ },
+ "sci-cleanser-does": {
+  "source": "C:/Users/giann/Dropbox\\VitalTrends/Graphics/Photoshoots\\June 2026\\CAV58745 copy.jpg",
+  "crop": [
+   0,
+   366,
+   4880,
+   6100
+  ]
+ },
+ "sci-cleanser-who": {
+  "source": "C:/Users/giann/Dropbox\\VitalTrends/Graphics/Photoshoots\\June 2026\\CAV59132 copy.jpg",
+  "crop": [
+   0,
+   412,
+   5504,
+   6880
+  ]
+ }
+}

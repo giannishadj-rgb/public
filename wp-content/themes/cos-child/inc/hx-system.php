@@ -29,6 +29,8 @@ add_action( 'wp_enqueue_scripts', static function (): void {
 		wp_enqueue_script( 'cos-hx-motion', $uri . '/assets/js/hx-motion.js', array(), (string) filemtime( $dir . '/assets/js/hx-motion.js' ), array( 'strategy' => 'defer', 'in_footer' => true ) );
 		// 25 Oct 2026: light or dark type on the old pages' bleed openings (see the file header)
 		wp_enqueue_script( 'cos-hx-hero-tone', $uri . '/assets/js/hx-hero-tone.js', array(), (string) filemtime( $dir . '/assets/js/hx-hero-tone.js' ), array( 'strategy' => 'defer', 'in_footer' => true ) );
+		// 31 Oct 2026: the shared sticky section bar (template-parts/hx/section-bar.php); exits at once on pages without one
+		wp_enqueue_script( 'cos-hx-section-bar', $uri . '/assets/js/hx-section-bar.js', array(), (string) filemtime( $dir . '/assets/js/hx-section-bar.js' ), array( 'strategy' => 'defer', 'in_footer' => true ) );
 	}
 	$chrome = $is_home ? '/assets/css/home-staging/chrome.css' : '/assets/css/hx/chrome.css';
 	wp_enqueue_style( 'cos-hx-chrome', $uri . $chrome, array( $is_home ? 'cos-hx-closing' : 'cos-hx-system' ), (string) filemtime( $dir . $chrome ) );
@@ -49,6 +51,12 @@ add_action( 'wp_enqueue_scripts', static function (): void {
 	$dir = get_stylesheet_directory();
 	wp_enqueue_style( 'cos-hx-typeset-site', get_stylesheet_directory_uri() . '/assets/css/hx/typeset-site.css', array( 'cos-hx-legacy-floor' ), (string) filemtime( $dir . '/assets/css/hx/typeset-site.css' ) );
 }, 100 );
+
+// Six type roles on every page (1 Nov 2026): loaded after every other sheet; see its header.
+add_action( 'wp_enqueue_scripts', static function (): void {
+	$dir = get_stylesheet_directory();
+	wp_enqueue_style( 'cos-hx-scale', get_stylesheet_directory_uri() . '/assets/css/hx/scale.css', array(), (string) filemtime( $dir . '/assets/css/hx/scale.css' ) );
+}, 120 );
 
 // Swiss scientific luxury typography (owner brief, 29 Oct 2026; every page since the same day):
 // Suisse Works (display) and Suisse Int'l (text) are commercially licensed and not in the

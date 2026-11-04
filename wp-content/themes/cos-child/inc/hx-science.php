@@ -68,6 +68,8 @@ function hxsc_chapters(): array {
  * Sources: pages 344 / 346 / 60. 'roles' = Protect / Repair / Rejuvenate as on the homepage.
  * 'img' = [ src (theme- or uploads-relative), width, height, alt ] — the ingredient photographs,
  * shown in one warm monochrome (CSS) so five different stock photographs read as one set.
+ * 'tex' (31 Oct 2026, owner reference): the macro texture photograph on /science/ingredients/,
+ * Pexels-licensed, built by design-sources/science-ingredients-2026-10-31/build_ingredient_textures.py.
  */
 function hxsc_actives(): array {
 	$t = get_stylesheet_directory_uri() . '/assets/images/ingredients/';
@@ -81,7 +83,8 @@ function hxsc_actives(): array {
 			'role'  => 'Barrier lipids',
 			'roles' => array( 'protect', 'repair', 'rejuvenate' ),
 			'desc'  => 'Full-spectrum extract of Acipenser Baerii (Siberian) sturgeon roe, rich in phospholipids, amino acids, vitamins and trace minerals. Its phospholipid profile mirrors the skin’s own intercellular lipids, so it helps replenish the barrier with the kind of lipids that cleansing and time remove. Micro-encapsulated to protect its potency.',
-			'img'   => array( $t . 'caviar-extract-700x700.webp', 700, 700, 'Caviar pearls on a silver spoon at the lips, in black and white' ),
+			'img'   => array( $t . 'tex-caviar-extract-900.jpg', 900, 900, 'A white cream swatch scattered with tiny golden beads' ),
+			'tex'   => 'tex-caviar-extract',
 		),
 		array(
 			'num'   => '02',
@@ -93,7 +96,8 @@ function hxsc_actives(): array {
 			'desc'  => 'Palmitoyl Tripeptide-1, the primary firming active in the High-Tech Complex. The peptide mimics a fragment of collagen, a signal studied in collagen research, for skin that looks firmer and smoother.',
 			// In-vitro ingredient research: always shown with this label, never as a product result.
 			'vitro' => array( '4.5×', 'Type I collagen in treated fibroblasts vs. control', 'Published in-vitro studies of the ingredient on dermal fibroblasts. Ingredient research in cell culture, not a result measured with our products.' ),
-			'img'   => array( $t . 'syn-coll-peptide-700x700.webp', 700, 700, 'A pipette releasing drops of serum onto a glass dish beside a swatch of cream' ),
+			'img'   => array( $t . 'tex-syn-coll-peptide-900.jpg', 900, 900, 'Smooth white cream in soft swirls' ),
+			'tex'   => 'tex-syn-coll-peptide',
 		),
 		array(
 			'num'   => '03',
@@ -103,7 +107,8 @@ function hxsc_actives(): array {
 			'role'  => 'Hydration at three depths',
 			'roles' => array( 'repair' ),
 			'desc'  => 'Three molecular weights hold moisture at the surface, in the outer layers and deeper in the epidermis, while a crosspolymer form sustains release for 24 hours. One molecule of hyaluronic acid can hold 1,000× its own weight in water.',
-			'img'   => array( $u . 'hyaluronic-acid-700x700.webp', 700, 700, 'A cluster of clear bubbles in a fluid' ),
+			'img'   => array( $t . 'tex-hyaluronic-acid-900.jpg', 900, 900, 'Clear drops of liquid with tiny bubbles' ),
+			'tex'   => 'tex-hyaluronic-acid',
 			'depth' => array(
 				array( 'High', '1,500–1,800 kDa', 'Surface', 'Forms a hydrating film on the surface and helps prevent water loss (TEWL).' ),
 				array( 'Medium', '200–500 kDa', 'Stratum corneum', 'Hydrates the outer layers of the epidermis.' ),
@@ -118,7 +123,8 @@ function hxsc_actives(): array {
 			'role'  => 'Antioxidant enzyme',
 			'roles' => array( 'protect' ),
 			'desc'  => 'One of the skin’s own antioxidant enzymes. SOD converts the superoxide radical, the most abundant free radical produced in the skin, into hydrogen peroxide and oxygen: it neutralises the radical at its source, before the chain of stress that degrades collagen begins.',
-			'img'   => array( $u . 'superoxide-dismutase-700x700.webp', 700, 700, 'Clouds of pigment unfolding in water' ),
+			'img'   => array( $t . 'tex-superoxide-dismutase-900.jpg', 900, 900, 'Pearly glassy drops on a pale surface' ),
+			'tex'   => 'tex-superoxide-dismutase',
 		),
 		array(
 			'num'   => '05',
@@ -128,7 +134,8 @@ function hxsc_actives(): array {
 			'role'  => 'Antioxidant & UV resilience',
 			'roles' => array( 'protect' ),
 			'desc'  => 'A polyphenol extracted from Polygonum Cuspidatum root. A direct antioxidant that helps skin resist daily UV and environmental stress, and works alongside SOD for broader antioxidant cover.',
-			'img'   => array( $u . 'resveratrol-700x700.webp', 700, 700, 'Dark grapes beaded with water' ),
+			'img'   => array( $t . 'tex-resveratrol-900.jpg', 900, 900, 'A translucent amber oil spread on white' ),
+			'tex'   => 'tex-resveratrol',
 		),
 	);
 }

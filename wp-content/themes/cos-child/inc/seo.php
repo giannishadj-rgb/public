@@ -115,7 +115,6 @@ function cos_child_seo_page_meta(): array {
 		// Skin Concerns hub + 5 purchase-intent landing pages (page 23776 and
 		// children) — see inc/schema.php's cos_child_concern_page_schema() for
 		// the matching WebPage schema.
-		'skin-concerns'          => [ 'Shop Skincare by Skin Concern | Caviar of Switzerland', 'Find Swiss caviar skincare for fine lines, loss of firmness, dark circles, dryness and dullness, with relevant products and supporting evidence.' ],
 		'fine-lines-wrinkles'    => [ 'Skincare for Fine Lines & Wrinkles | Caviar of Switzerland', 'Explore Swiss skincare for fine lines and wrinkles, including caviar extract, peptides, clinical evidence and a recommended four-step routine.' ],
 		'loss-of-firmness'       => [ 'Firming Skincare for Loss of Firmness | Caviar of Switzerland', 'Discover firming Swiss skincare with caviar extract and SYN®-COLL, including the serum associated with a disclosed 28-day firmness result.' ],
 		'dark-circles'           => [ 'Eye Care for Dark Circles | Caviar of Switzerland', 'Explore Swiss eye care for dark circles, puffiness and fine lines, with suitable ingredients, realistic guidance and a targeted eye cream.' ],

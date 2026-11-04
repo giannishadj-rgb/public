@@ -1,0 +1,122 @@
+/* ==========================================================================
+   Six roles, every page (owner, 1 Nov 2026, after a critique: "13 distinct font sizes, 11
+   readable text blocks below 13px and a 15px desktop body; accessibility is craftsmanship").
+   Loaded last on every page (inc/hx-system.php, priority 120). Delete the file to roll back.
+
+     h1        serif 400 · 32→48px     page titles, hero, closing title, measured figures
+     section   serif 400 · 22→32px     section titles, and the old pages' in-copy h2s
+     title     serif 400 · 18→20px     names, questions, prices in serif, serif step numbers
+     body      Inter 400 · 16px        all reading copy (was 15px on desktop)
+     small     Inter 400 · 14px        secondary text, captions, meta, footer small print
+     label     Inter 500 · 12px caps   short labels and actions only; long ones are sentence case
+
+   Phones keep the 30 Oct floor (benefits, prices, sizes, study details and service lines at
+   15px). Commerce metadata steps up to the body size on tablets and desktops, where there is
+   room. The header nav stays 12px tracked capitals (owner, 19 Oct 2026).
+   Selectors repeat #cos-main-content three times (and #cos-footer in the footer) to outrank the
+   stacked type layers, whose end blocks already double the id.
+   ========================================================================== */
+html body{
+	--r-h1:clamp(2rem,1.6rem + 1.6vw,3rem);
+	--r-section:clamp(1.375rem,1.15rem + .85vw,2rem);
+	--r-title:clamp(1.125rem,1.05rem + .25vw,1.25rem);
+	--r-body:1rem;
+	--r-small:.875rem;
+	--r-label:.75rem;
+}
+/* the role tokens the earlier layers read: the homepage (body.cos-h26), the rest
+   (body:not(.cos-h26)) and the science pages, which set their own on .hxsc. :is() matches the
+   specificity of those blocks, so these win on order. */
+html body:is(.cos-h26,:not(.cos-h26)),html body:is(.cos-h26,:not(.cos-h26)) :is(#cos-main-content.hxsc,#cos-main-content .hxsc){
+	--ts-h1:var(--r-h1);
+	--ts-statement:var(--r-h1);
+	--ts-display:var(--r-section);
+	--ts-subhead:var(--r-section);
+	--ts-title:var(--r-title);
+	--ts-product:var(--r-title);
+	--ts-figure:var(--r-h1);
+	--ts-figure-sm:var(--r-section);
+	--ts-label:var(--r-label);
+	--ts-action:var(--r-label);
+	--ts-body:var(--r-body);
+	--hx-fs-body:var(--r-body);
+	--hx-fs-lead:var(--r-body);
+	--hx-fs-label:var(--r-label);
+	--hxsc-read:var(--r-body);
+}
+
+/* ─── section: the old pages' h2s inside reading copy, the science index titles ─── */
+html body #cos-main-content#cos-main-content#cos-main-content :is(.cos-art-h2,.cos-cc-section-h2,.cos-help-section-h2,.ship-h2,.cos-ct-info h2,.cos-ing-main h2,.cos-jnl-hub-cta-band h2,.hxsc-index__title,.hxpd-name){font-size:var(--r-section)}
+html body #cos-main-content#cos-main-content#cos-main-content .hxrt-steps__note{font-size:var(--r-body);font-family:var(--hx-sans)}
+
+/* ─── h1: the homepage closing title (the hero's size); the ritual page's two-line title keeps
+   its width cap only where a line would otherwise wrap (under ~370px) ─── */
+html body #cos-main-content#cos-main-content#cos-main-content .hxz__title{font-size:var(--r-h1)}
+html body #cos-main-content#cos-main-content#cos-main-content .hxrt-hero .hxrt-hero__title{font-size:min(var(--r-h1),8.6vw)}
+@media (min-width:768px){html body #cos-main-content#cos-main-content#cos-main-content .hxrt-hero .hxrt-hero__title{font-size:var(--r-h1)}}
+html body #cos-main-content#cos-main-content#cos-main-content .hxsc-skin__finding.hxsc-skin__finding--reported{font-size:var(--r-title)}
+html body #cos-main-content#cos-main-content#cos-main-content .hxz__amt{font-size:var(--r-section)}
+
+/* ─── title: questions, names and serif numerals that sat between roles (15–24px) ─── */
+html body #cos-main-content#cos-main-content#cos-main-content :is(.hxpd-faq__q,.hxshop-faq__q,.ship-step-num,.hxpd-offer__name,.hxrt-facts__row dd,.hxr__name,.hxshop-ritual__name,.hxz__tag-full,.hxz__tag-short,.hxpd-seq__num,.hxrt-offer__num,.hxsc-index__n,.hxsc-num,.hxsc-syn__k,.hxsc-syn__i,.hxpd-contents__num,.hxpd-use__step .hx-step,.hxrt-glance__meta .hx-step){font-size:var(--r-title)}
+
+/* ─── body: reading copy at 16px ─── */
+html body #cos-main-content#cos-main-content#cos-main-content :is(
+	.hx-lead,.hx-body,.hxh__lead,.hxpd-promise,.hxpd-lead,.hxpd-sci__text,.hxpd-orbs__text,.hxpd-story__text,.hxpd-seq__gesture,.hxpd-seq__name,.hxpd-contents__name,.hxpd-saving__amt,.hxpd-faq__a,.hxpd-use__step p,
+	.hxr__how,.hxr__lede,.hxm__frame-line,.hxv__line,.hxv__story,.hxp__fact dd,
+	.hxrt-glance__text,.hxrt-inline,.hxrt-step__suits-text,.hxrt-how > li,
+	.hxsc-actlist__line,.hxsc-depth__d,.hxsc-index__line,.hxsc-steps__d,.hxsc-syn__t,.hxsc-prose > p,
+	.hxhe-card__body,.hxhe-cert__body,.hxhe-era__body,.hxhe-principle__body,.hxhe-principle__en,.hxhe-prose > p,.hxhe-commitment > p:not(.hxhe-num),
+	.hxshop-inline,.hxshop-hero__sub,.hxshop-faq__a > p,
+	.cos-art-dek,.cos-art-p,.cos-art-lede,.cos-cc-faq-a,.cos-cc-inline,.cos-cc-lede,.cos-cc-note,.cos-cc-product-desc,.cos-cc-section > p,.cos-ct-note,.cos-ct-sub,.cos-faq-q-btn,.cos-faq-answer,.cos-faq-answer p,
+	.cos-help-sub,.cos-help-card > p,.cos-help-contact-tile > p,.cos-ing-tagline,.cos-ing-main > p,.cos-ing-mech-box > p,.cos-jnl-featured-dek,.cos-jnl-hub-dek,.cos-jnl-sub,
+	.ship-hero-sub,.ship-note,.ship-p,.ship-step-body,.ship-callout > p,.priv-hero-sub,.terms-hero-sub,.cos-404-inner > p
+){font-size:var(--r-body)}
+/* links, emphasis and inline names inside reading copy follow it */
+html body #cos-main-content#cos-main-content#cos-main-content :is(.cos-art-p,.cos-art-lede,.cos-help-card > p,.cos-ct-note,.ship-step-body,.hxhe-cert__body,.hx-lead,.hx-body,.hxshop-faq__a > p,.cos-faq-answer p) :is(a,strong,b,em,i){font-size:inherit}
+html body #cos-main-content#cos-main-content#cos-main-content .hxpd-result__facts div{font-size:var(--r-body)}
+
+/* ─── small: secondary text that sat under 14px ─── */
+html body #cos-main-content#cos-main-content#cos-main-content :is(.cos-cc-faq-q,.cos-jnl-card-meta,.cos-jnl-hub-card-meta,.hxp__alt,.hxp__place,.hxp__region,.hxpd-contents__size,.hxpd-gallery__count,.hxpd-inci__note,.hxr__count,.hxsc-nw,.hxsc-skin__note,.hxsc-actlist__n,.hxshop-ritual .hxshop-ritual__num,.cos-cc-breadcrumb,.hxm__credit){font-size:var(--r-small)}
+html body .hx-bar.hx-bar .hx-bar__link{font-size:var(--r-small)}
+/* the ingredient list (INCI) and study meta are secondary: 14px on wider screens, 15px phones */
+@media (min-width:768px){
+	html body #cos-main-content#cos-main-content#cos-main-content :is(.hxpd-inci,.hxm__nb,.hxm__note){font-size:var(--r-small)}
+}
+/* the skin-concern breadcrumb (stored markup, no classes on the items) */
+html body #cos-main-content#cos-main-content#cos-main-content nav[aria-label*="readcrumb" i] :is(ol,li,a){font-size:var(--r-small)}
+
+/* ─── label: capitals at 12px (11px, 12.5px and 13px merged) ─── */
+html body #cos-main-content#cos-main-content#cos-main-content :is(
+	.hx-label,.cos-art-meta,.cos-cc-eyebrow,.cos-cc-section p.cos-cc-product-step,.cos-ct-form-h,.cos-ct-info-label,.cos-ct-label,.cos-faq-category-label,.cos-jnl-card-stream,.cos-jnl-hub-eyebrow,.cos-sm-eyebrow,
+	.hxc__bag-add,.hxc__bag-long,.hxshop-add__label,.hxshop-add__long,.hxrt-scale__end,.hxsc-depth__layer,.hxsc-steps__verb,.hxsc-tl__day,.hxsc-vitro__k,.hxsc-proof__product a,.hxsc-claim__product a,.hxsc-act__role,.hxsc-tag,
+	.ship-step-title,.ship-table-head th,.cos-ing-mech-box > strong,.cos-faq-inner > div > div:not([class]),.hxsc-skin__finding:not(.hxsc-skin__finding--reported),.hxpd-place__step
+){font-size:var(--r-label)}
+html body #cos-main-content#cos-main-content#cos-main-content :is(.hx-label,.cos-ct-label) span{font-size:inherit}
+html body #cos-main-content#cos-main-content#cos-main-content #faq [style*="font-size:10px"],
+html body #cos-main-content#cos-main-content#cos-main-content #cos-faq [style*="font-size:10px"]{font-size:var(--r-label)!important}
+
+/* ─── tracked capitals only for short labels: longer ones read in sentence case ─── */
+html body #cos-main-content#cos-main-content#cos-main-content :is(.hxpd-steps__set,.hxrt-step__shop .hx-link){font-size:var(--r-body);font-weight:400;letter-spacing:0;text-transform:none}
+html body #cos-main-content#cos-main-content#cos-main-content :is(.hxpd-step__of,.hxsc-tl__cap,.cos-jnl-hub-eyebrow,.cos-jnl-featured-body .cos-jnl-card-stream){font-size:var(--r-small)!important;font-weight:400;letter-spacing:0;text-transform:none} /* legacy-floor.css sizes the journal eyebrows with !important */
+html body #cos-main-content#cos-main-content#cos-main-content.hxpd--set .hxpd-orbs__lists .hxpd-acc__sum{font-size:var(--r-body);font-weight:400;letter-spacing:0;text-transform:none}
+
+/* ─── commerce metadata: the body size where there is room (tablet and desktop) ─── */
+@media (min-width:768px){
+	html body #cos-main-content#cos-main-content#cos-main-content :is(
+		.hxpd-price__size,.hxpd-evidence,.hxpd-evidence__link,.hxpd-offer__what,.hxpd-offer__price,.hxpd-services li,.hxpd-steps__price,.hxpd-saving__vs,.hxpd-sci__meta,
+		.hxshop-item__benefit,.hxshop-item__meta,.hxshop-item__price,.hxshop-item__size,.hxshop-ritual__compare,.hxshop-ritual__service,
+		.hxrt-step__price,.hxrt-offer__compare,.hxrt-offer__assure li,.hxrt-glance__meta,.hxz__assure li,.hxz__apart
+	){font-size:var(--r-body)}
+	html body #cos-main-content#cos-main-content#cos-main-content #collection :is(.hxc__benefit,.hxc__price,.hxc__size,.hxc__meta){font-size:var(--r-body)}
+	html body #cos-main-content#cos-main-content#cos-main-content :is(.hxpd-evidence,.hxshop-item__meta,.hxshop-ritual__compare,#collection .hxc__meta) :is(span:not(.hxpd-evidence__fig),a){font-size:inherit} /* the evidence figure is a serif title, like the price beside it */
+}
+
+/* ─── footer ─── */
+html body #cos-footer#cos-footer#cos-footer :is(.hxf-links a,.hxf-house__mail,.hxf-house address,.hxf-nl__sub){font-size:var(--r-body)}
+html body #cos-footer#cos-footer#cos-footer :is(.hxf-assure li,.cos-trust-item,.cos-nl-consent-text,.cos-nl-consent-text a,.hxf-base__copy,.cos-footer-cookie-link){font-size:var(--r-small)}
+html body #cos-footer#cos-footer#cos-footer :is(.hxf-group__title,.hxf-base__place,.hxf-form__btn){font-size:var(--r-label)}
+html body #cos-footer#cos-footer#cos-footer .hxf-nl__title{font-size:var(--r-section)}
+@media (max-width:767.98px){
+	html body #cos-footer#cos-footer#cos-footer :is(.hxf-assure li,.cos-trust-item,.cos-nl-consent-text,.hxf-base__copy,.cos-footer-cookie-link){font-size:.9375rem}
+}

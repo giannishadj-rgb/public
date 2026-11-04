@@ -1,0 +1,38 @@
+{
+ "sci-eye-what": {
+  "source": "C:/Users/giann/Dropbox\\VitalTrends/Graphics/Media\\eyecream.jpg",
+  "crop": [
+   108,
+   0,
+   863,
+   1079
+  ]
+ },
+ "sci-eye-how": {
+  "source": "C:/Users/giann/Dropbox\\VitalTrends/Graphics/Photoshoots\\June 2026\\CAV59770 copy.jpg",
+  "crop": [
+   0,
+   412,
+   5504,
+   6880
+  ]
+ },
+ "sci-eye-does": {
+  "source": "C:/Users/giann/Dropbox\\VitalTrends/Graphics/Photoshoots\\July 2022\\DSC_3846.jpg",
+  "crop": [
+   0,
+   278,
+   3712,
+   4640
+  ]
+ },
+ "sci-eye-who": {
+  "source": "C:/Users/giann/Dropbox\\VitalTrends/Graphics/Photoshoots\\June 2026\\CAV59015 copy.jpg",
+  "crop": [
+   0,
+   550,
+   5504,
+   6880
+  ]
+ }
+}

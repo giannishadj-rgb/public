@@ -161,9 +161,9 @@ function cos_hxpd_context( WC_Product $product ): array {
 			$slides[] = cos_h26_picture( 'pack-' . $me['key'], array( 480, 720, 960 ), array( 2, 3 ), $pd['image_alt'] ?? $me['cardalt'], array( 'sizes' => '(min-width: 1024px) 40vw, 80vw', 'eager' => true, 'w' => 960, 'class' => 'hxpd-gallery__object' ) );
 		}
 		// 151 = used elsewhere on the site; 182 (CAVIAR3378) opens "Who it is for" on the eye cream's page
-		// 195 (CAVIAR3501) opens "Who it is for" on the cleanser's page, 202 (CAVIAR3602) on the
-		// serum's, 179 (CAVIAR3365) on the cream's, whose "What it does" is 176 (CAVIAR3326) (28 Oct 2026)
-		$skip = array( 'COS-003' => array( 151, 478, 182 ), 'COS-001' => array( 195 ), 'COS-002' => array( 202 ), 'COS-004' => array( 176, 179 ) );
+		// 195 (CAVIAR3501) opens "Who it is for" on the cleanser's page (202, the serum's, returned to
+		// its gallery on 1 Nov 2026 when that card took another photograph), 179 (CAVIAR3365) on the cream's, whose "What it does" is 176 (CAVIAR3326) (28 Oct 2026)
+		$skip = array( 'COS-003' => array( 151, 478 ) ); // 3 Nov 2026: 182, 195, 176 and 179 left the cards, so they are back in their galleries
 		$ids  = array_values( array_diff( $product->get_gallery_image_ids() ?: array( (int) $product->get_image_id() ), $skip[ $sku ] ?? array() ) );
 	}
 	$odd_last = 1 === count( $ids ) % 2 ? end( $ids ) : 0; // spans the full column on desktop
@@ -185,12 +185,12 @@ function cos_hxpd_context( WC_Product $product ): array {
 	$thumbs = array();
 	if ( 'g' === $look ) {
 		// Owner, 28 Oct 2026: remove the bottle-only packshot and lead with the
-		// first owner gallery photograph (the cleanser: presented between two hands).
+		// first owner gallery photograph. 3 Nov 2026: each formula's gallery now opens
+		// with the owner's hand-held photograph (attachments 23809–23812).
 		if ( count( $slides ) > 1 && ! $is_set ) {
 			array_shift( $slides );
 			$slides[0] = preg_replace( '/\ssizes="[^"]*"/', ' sizes="(min-width: 1024px) 44vw, 100vw"', $slides[0] );
 			$slides[0] = preg_replace( '/\sloading="lazy"/', ' loading="eager" fetchpriority="high"', $slides[0], 1 );
-			if ( 'COS-001' === $sku ) $slides[0] = preg_replace( '/\salt="[^"]*"/', ' alt="Micellar Water All-in-One Cleanser presented between two hands"', $slides[0], 1 );
 			$slides[0] = preg_replace( '/<img /', '<img id="cos-gallery-main" ', $slides[0], 1 );
 		}
 		foreach ( $slides as $html ) {
@@ -201,16 +201,22 @@ function cos_hxpd_context( WC_Product $product ): array {
 			$thumbs[] = preg_replace( '/<img /', '<img loading="lazy" ', $t, 1 );
 		}
 	}
+	$owned = 0;
 	if ( $look ) {
-		// the ritual row is shoppable: each formula's price and id
+		// the ritual row is shoppable: each formula's price and id; 'owned' = already in the bag
+		// (30 Oct 2026, "Your ritual": progress rather than cross-sell; inc/commerce.php)
+		$bag = function_exists( 'cos_child_ritual_bag_ids' ) ? cos_child_ritual_bag_ids() : array();
 		foreach ( $formulas as &$f ) {
 			$fp = get_page_by_path( $f['slug'], OBJECT, 'product' );
 			$fw = $fp ? wc_get_product( $fp ) : null;
 			$f['pid']   = $fw ? $fw->get_id() : 0;
 			$f['price'] = $fw ? cos_hxpd_money( (float) $fw->get_price() ) : '';
 			$f['buy']   = $fw && $fw->is_purchasable() && $fw->is_in_stock() && $fw->is_type( 'simple' );
+			$f['owned'] = $f['pid'] && in_array( $f['pid'], $bag, true );
+			$owned     += $f['owned'] ? 1 : 0;
 		}
 		unset( $f );
+		foreach ( $formulas as $f ) if ( $f['current'] ) $me = $f; // pick up pid / owned
 	}
 
 	// Price, comparison and stock.
@@ -220,11 +226,7 @@ function cos_hxpd_context( WC_Product $product ): array {
 
 	$ritual_post  = get_page_by_path( 'the-complete-ritual', OBJECT, 'product' );
 	$ritual_wc    = $ritual_post ? wc_get_product( $ritual_post ) : null;
-
-	// Non-JS add-to-cart: WooCommerce re-renders this page after the POST. Its success
-	// message is blanked sitewide (inc/commerce.php), so confirm it here ourselves.
-	$posted = isset( $_POST['add-to-cart'] ) && absint( wp_unslash( $_POST['add-to-cart'] ) ) === $product->get_id(); // phpcs:ignore WordPress.Security.NonceVerification
-	$added  = $posted && function_exists( 'wc_notice_count' ) && 0 === wc_notice_count( 'error' );
+	$ritual_saving = $ritual_wc && $individual > (float) $ritual_wc->get_price() ? $individual - (float) $ritual_wc->get_price() : 0.0;
 
 	return array(
 		'product'    => $product,
@@ -241,6 +243,7 @@ function cos_hxpd_context( WC_Product $product ): array {
 		'pd'         => $pd,
 		'me'         => $me,
 		'formulas'   => $formulas,
+		'owned'      => $owned,
 		'look'       => $look,
 		'thumbs'     => $thumbs,
 		'study'      => cos_hxpd_studies()[ $sku ] ?? null,
@@ -249,8 +252,7 @@ function cos_hxpd_context( WC_Product $product ): array {
 		'in_stock'   => $product->is_in_stock() && $product->is_purchasable(),
 		'is_simple'  => $product->is_type( 'simple' ),
 		'max_qty'    => (int) COS_MAX_LINE_ITEM_QTY,
-		'cart_url'   => wc_get_cart_url(),
-		'added'      => $added,
+		'ritual_saving' => $ritual_saving,
 		'ritual'     => $ritual_wc ? array( 'url' => get_permalink( $ritual_post ), 'price' => cos_hxpd_money( (float) $ritual_wc->get_price() ) ) : null,
 		'clinical'   => home_url( '/science/clinical-studies/' ),
 		'shipping'   => cos_child_shipping_message( 'long' ),

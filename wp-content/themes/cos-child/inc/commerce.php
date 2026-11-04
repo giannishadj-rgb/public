@@ -629,12 +629,104 @@ jQuery(function($){
 // Remove "View cart" link from add-to-cart notices
 add_filter( 'woocommerce_add_to_cart_message_html', '__return_empty_string' );
 
+/* ─── Add to bag: process once, then post/redirect/get ─────────── */
+// (29 Oct 2026) Every add-to-bag control works without JavaScript: the
+// plain ?add-to-cart=ID links (homepage collection, shop cards, PDP step
+// cards) and the PDP form POST. This site has cart_redirect_after_add = no,
+// so WooCommerce used to process the add and render the same URL — a
+// refresh (or back/forward onto it) added another unit, and a POST asked to
+// resubmit. Now a successful page-load add always 302s to a clean /cart/,
+// so the add URL never stays in the address bar or the history. The AJAX
+// paths (wc-ajax=add_to_cart) are untouched: they never change the URL.
+add_filter( 'woocommerce_add_to_cart_redirect', function ( $url ) {
+	return wp_doing_ajax() ? $url : wc_get_cart_url();
+}, 99 );
+
+// A double tap without JavaScript sends the same ?add-to-cart= request
+// twice, and an AJAX add whose response was lost falls back to the same
+// link (collection.php, hx-product.js). The last add is remembered in the
+// session for a few seconds; a repeat of the same product inside that
+// window goes straight to the cart without adding again. Runs just before
+// WC_Form_Handler::add_to_cart_action (wp_loaded, 20).
+const COS_CHILD_ATC_REPEAT_WINDOW = 4; // seconds
+
+add_action( 'woocommerce_add_to_cart', function ( $cart_item_key, $product_id ): void {
+	if ( WC()->session ) {
+		WC()->session->set( 'cos_atc_last', array( 'id' => (int) $product_id, 't' => time() ) );
+	}
+}, 10, 2 );
+
+add_action( 'wp_loaded', function (): void {
+	if ( wp_doing_ajax() || empty( $_REQUEST['add-to-cart'] ) || ! is_numeric( wp_unslash( $_REQUEST['add-to-cart'] ) ) || ! function_exists( 'WC' ) || ! WC()->session ) return; // phpcs:ignore WordPress.Security.NonceVerification
+	$last = WC()->session->get( 'cos_atc_last' );
+	if ( ! is_array( $last ) || (int) $last['id'] !== absint( wp_unslash( $_REQUEST['add-to-cart'] ) ) || time() - (int) $last['t'] > COS_CHILD_ATC_REPEAT_WINDOW ) return; // phpcs:ignore WordPress.Security.NonceVerification
+	wc_nocache_headers();
+	wp_safe_redirect( wc_get_cart_url() );
+	exit;
+}, 19 );
+
+// WooCommerce's own .ajax_add_to_cart handler (shop cards, shop ritual card,
+// PDP step cards) queues every click, so a double tap or a double Enter
+// sent two adds; only CSS pointer-events on .loading held taps back, never
+// keys. Hold each button from its first click until its request answers
+// (success or failure), and let it go again when the page comes back from
+// the back/forward cache with a request still marked as in flight.
+add_action( 'wp_footer', function (): void {
+	if ( ! wp_script_is( 'wc-add-to-cart', 'done' ) ) return;
+	?>
+<script nonce="<?php echo esc_attr( cos_csp_nonce() ); ?>">
+(function(){
+  var held=[];
+  document.addEventListener('click',function(e){
+    var b=e.target.closest&&e.target.closest('.ajax_add_to_cart[data-product_id]');
+    if(!b) return;
+    if(b.hasAttribute('data-cos-adding')){e.preventDefault();e.stopImmediatePropagation();return;}
+    b.setAttribute('data-cos-adding','');held.push(b);
+  },true);
+  function release(){held.forEach(function(b){b.removeAttribute('data-cos-adding');});held=[];}
+  if(window.jQuery){
+    jQuery(document).ajaxComplete(function(e,xhr,o){ if(o&&/add_to_cart/.test(String(o.url))) release(); });
+    jQuery(document.body).on('ajax_request_not_sent.adding_to_cart',release);
+  }
+  window.addEventListener('pageshow',function(e){ if(e.persisted){release();document.querySelectorAll('.ajax_add_to_cart.loading').forEach(function(b){b.classList.remove('loading');});} });
+})();
+</script>
+	<?php
+}, 30 );
+
 // Update bag count via AJAX on cart change (used by add-to-cart AJAX)
 add_filter( 'woocommerce_add_to_cart_fragments', function ( array $fragments ): array {
 	$count = WC()->cart->get_cart_contents_count();
 	$inner = $count > 0 ? (string) $count : '';
 	// Must return the full outer HTML so WooCommerce replaces the element correctly
 	$fragments['span.cos-bag-count'] = '<span class="cos-bag-count" aria-live="polite">' . $inner . '</span>';
+	return $fragments;
+} );
+
+/* ─── "Your ritual": which of the four steps are in the bag (30 Oct 2026) ───── */
+// The product pages show the ritual as something the customer is assembling, not a
+// cross-sell: each step reads "In your bag" once it is there (template-parts/hx/product/
+// purchase.php, formula.php; hx-product.js applies it). The Complete Ritual in the bag
+// counts as all four. Sent with every add-to-cart response as a fragment, so the page
+// updates in place after an AJAX add.
+function cos_child_ritual_bag_ids(): array {
+	if ( ! function_exists( 'WC' ) || ! WC()->cart ) return array();
+	$ids = array();
+	foreach ( WC()->cart->get_cart() as $item ) $ids[] = (int) $item['product_id'];
+	$set = get_page_by_path( 'the-complete-ritual', OBJECT, 'product' );
+	if ( $set && in_array( (int) $set->ID, $ids, true ) ) {
+		foreach ( array( 'micellar-water-cleanser', 'advanced-repair-serum', 'revitalizing-eye-cream', '24h-regeneration-cream' ) as $slug ) {
+			$p = get_page_by_path( $slug, OBJECT, 'product' );
+			if ( $p ) $ids[] = (int) $p->ID;
+		}
+	}
+	return array_values( array_unique( $ids ) );
+}
+function cos_child_ritual_bag_script(): string {
+	return '<script type="application/json" id="hxpd-bag">' . wp_json_encode( cos_child_ritual_bag_ids() ) . '</script>';
+}
+add_filter( 'woocommerce_add_to_cart_fragments', function ( array $fragments ): array {
+	$fragments['script#hxpd-bag'] = cos_child_ritual_bag_script();
 	return $fragments;
 } );
 

@@ -356,6 +356,20 @@ body.cos-h26 .hxr__link:focus-visible .hxr__frame::after{
 @media (min-width:900px) and (hover:hover) and (pointer:fine){
 	.hxr__name{max-width:14em;margin-top:8px;font-size:clamp(1.0625rem,.95rem + .3vw,1.25rem);color:var(--hx-white,#F8F8F8);text-shadow:0 0 18px rgba(var(--hxr-veil),.45)}
 }
+/* ─── The hovered panel widens (31 Oct 2026, owner) ──────────────────────────────────────
+   Pointer screens only: the panel in focus opens to 1.6× its neighbours, which give way
+   evenly. Plain fr tracks so the columns interpolate; .hxr__step is min-width:0. */
+@media (min-width:900px) and (hover:hover) and (pointer:fine){
+	body.cos-h26 .hxr__steps{grid-template-columns:1fr 1fr 1fr 1fr;transition:grid-template-columns 900ms var(--hx-ease)}
+	body.cos-h26 .hxr__steps:has(.hxr__step:nth-child(1) .hxr__link:is(:hover,:focus-visible)){grid-template-columns:1.6fr 1fr 1fr 1fr}
+	body.cos-h26 .hxr__steps:has(.hxr__step:nth-child(2) .hxr__link:is(:hover,:focus-visible)){grid-template-columns:1fr 1.6fr 1fr 1fr}
+	body.cos-h26 .hxr__steps:has(.hxr__step:nth-child(3) .hxr__link:is(:hover,:focus-visible)){grid-template-columns:1fr 1fr 1.6fr 1fr}
+	body.cos-h26 .hxr__steps:has(.hxr__step:nth-child(4) .hxr__link:is(:hover,:focus-visible)){grid-template-columns:1fr 1fr 1fr 1.6fr}
+}
+@media (prefers-reduced-motion:reduce){
+	body.cos-h26 .hxr__steps{transition:none!important}
+}
+
 .hxr__count{display:none}
 @media (max-width:899.98px){
 	.hxr__count{display:block;margin:var(--hx-s-3) var(--hx-margin) 0;font-family:var(--hx-sans);font-size:.75rem;letter-spacing:.08em;color:var(--hx-fg-3,#5C5C5A);font-variant-numeric:lining-nums tabular-nums;text-align:right}

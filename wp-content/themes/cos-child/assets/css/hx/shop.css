@@ -67,23 +67,8 @@
 	.hxshop-hero__lede{color:var(--hx-ink)}
 }
 
-/* the page's parts, under the plate (the science hub's question index) */
-.hxshop-index{border-bottom:1px solid var(--hx-line)}
-.hxshop-index__list{display:grid;grid-template-columns:minmax(0,1fr)}
-.hxshop .hxshop-index__link{
-	display:flex;align-items:baseline;gap:12px;min-height:48px;padding-block:12px;
-	border-top:1px solid var(--hx-line);
-	font-family:var(--hx-serif);font-size:1.1875rem;line-height:1.3;color:var(--hx-ink);text-decoration:none;
-}
-.hxshop-index__list li:first-child .hxshop-index__link{border-top:0}
-.hxshop-index__n{font-family:var(--hx-sans);font-size:.75rem;letter-spacing:.08em;color:var(--hx-muted);font-variant-numeric:lining-nums tabular-nums}
-.hxshop .hxshop-index__link:hover{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.25em}
-.hxshop .hxshop-index__link:focus-visible{outline:var(--hx-focus-width) solid var(--hx-focus-color);outline-offset:2px}
-@media (min-width:900px){
-	.hxshop-index__list{grid-template-columns:repeat(3,minmax(0,1fr));column-gap:var(--hx-s-5)}
-	.hxshop .hxshop-index__link{flex-direction:column;gap:6px;min-height:96px;padding-block:var(--hx-s-5);border-top:0}
-}
-.hxshop :is(#cos-products,#about){scroll-margin-top:var(--cos-nav-h,80px)}
+/* the page's parts, under the plate: the sitewide section bar .hx-bar (system.css, 31 Oct 2026) */
+.hxshop :is(#cos-products,#about){scroll-margin-top:0}
 .hxshop .hxshop-list{padding-top:var(--hx-section-sm)}
 
 /* ─── Notices (only rendered when WooCommerce has one) ──────────────── */
@@ -104,7 +89,7 @@
 .hxshop-ritual{
 	background:var(--hx-ground-stone,#EDE9E1);
 	padding-block:var(--hx-section-sm);
-	scroll-margin-top:var(--cos-nav-h,80px);
+	scroll-margin-top:0;
 }
 .hxshop-ritual__grid{display:grid;gap:var(--hx-s-7)}
 .hxshop-ritual__media{
@@ -192,7 +177,7 @@ html body:not(.cos-h26) #cos-main-content .hxshop-ritual .hxshop-ritual__amount 
 	--hxshop-row-gap:clamp(48px,9vw,80px);
 	background:var(--hx-white);
 	padding-block:var(--hx-section-sm);
-	scroll-margin-top:var(--cos-nav-h,80px);
+	scroll-margin-top:0;
 }
 .hxshop-list__head{display:grid;gap:var(--hx-s-4);margin-bottom:clamp(24px,.5rem + 3.5vw,64px)}
 .hxshop-list__title{color:var(--hx-fg)}
@@ -230,7 +215,7 @@ html body:not(.cos-h26) #cos-main-content .hxshop-ritual .hxshop-ritual__amount 
 .hxshop-item::marker{content:none}
 .hxshop-item:nth-child(n+3){margin-top:var(--hxshop-row-gap)}
 
-.hxshop-item__tile{position:relative;width:100%;aspect-ratio:4 / 5;background:var(--hxshop-tile);overflow:clip}
+.hxshop-item__tile{grid-row:1;grid-column:1;position:relative;width:100%;aspect-ratio:4 / 5;background:var(--hxshop-tile);overflow:clip}
 .hxshop-item__stage{display:block;position:absolute;inset:0;text-decoration:none}
 .hxshop-item__object,
 .hxshop-item__object img,
@@ -253,12 +238,14 @@ html body:not(.cos-h26) #cos-main-content .hxshop-ritual .hxshop-ritual__amount 
 	transform:translateY(calc((.7775 - var(--hxshop-hz)) * 100%)) scale(var(--hxshop-s));
 }
 
-/* the bag button: a white square in the corner; on hover or focus it opens to its label */
-.hxshop-item__actions{position:absolute;right:12px;bottom:12px;z-index:1;display:flex}
+/* the bag button: a pearl control in the corner, its action always in words with the glyph after
+   it (clarify, 1 Nov 2026: it used to open to its label only on hover, which touch never does).
+   "Add to bag" from 640px, "Add" on two-up phone tiles; "Adding…" and "Added" while it works. */
+.hxshop-item__actions{grid-row:1;grid-column:1;align-self:end;justify-self:end;position:relative;z-index:1;display:flex;margin:0 12px 12px 0}
 .hxshop .hxshop-item__add,
 .hxshop .hxshop-item__add:visited{
-	display:inline-flex;align-items:center;justify-content:flex-end;
-	box-sizing:border-box;min-width:44px;height:44px;padding:0 13px;
+	display:inline-flex;align-items:center;justify-content:flex-end;gap:10px;
+	box-sizing:border-box;min-width:44px;height:44px;padding:0 14px 0 16px;
 	background:var(--hx-white,#F8F8F8);color:var(--hx-ink);
 	text-decoration:none;cursor:pointer;
 	transition:background-color var(--hx-dur-ui) var(--hx-ease-soft),opacity var(--hx-dur-ui);
@@ -270,11 +257,12 @@ html body:not(.cos-h26) #cos-main-content .hxshop-ritual .hxshop-ritual__amount 
 	mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.4'%3E%3Cpath d='M5 8h14l-1 12H6z'/%3E%3Cpath d='M9 8V6a3 3 0 0 1 6 0v2'/%3E%3C/svg%3E") center/contain no-repeat;
 }
 .hxshop .hxshop-item__add .hxshop-add__label{
-	order:1;display:inline-block;max-width:0;overflow:hidden;white-space:nowrap;opacity:0;
-	font-size:var(--ts-action,.78125rem);
-	transition:max-width 520ms var(--hx-ease),margin 520ms var(--hx-ease),opacity 320ms var(--hx-ease-soft);
+	order:1;display:inline-block;white-space:nowrap;
+	font-family:var(--hx-sans);font-size:.78125rem;font-weight:500;line-height:1;letter-spacing:.16em;text-transform:uppercase;
+	transform:translateY(.5px);   /* optical: caps sit on the glyph's centre line */
 }
-.hxshop .hxshop-item__add:is(:hover,:focus-visible,.is-busy,.is-added) .hxshop-add__label{max-width:12em;margin-right:10px;opacity:1}
+/* typeset-site.css sets every action label to 12px; the tile label keeps the 12.5px action floor */
+html body #cos-main-content#cos-main-content .hxshop-item__add .hxshop-add__label{font-size:.78125rem;letter-spacing:.16em}
 .hxshop-item__add.is-added::after{
 	-webkit-mask:none;mask:none;background:none;
 	width:10px;height:6px;margin:0 4px 4px;border-left:1.4px solid currentColor;border-bottom:1.4px solid currentColor;transform:rotate(-45deg);
@@ -330,7 +318,13 @@ html body:not(.cos-h26) #cos-main-content .hxshop-ritual .hxshop-ritual__amount 
 }
 
 @media (max-width:639.98px){
-	.hxshop-item__actions{right:8px;bottom:8px}
+	/* phones: two-up tiles are too narrow for a labelled control on the photograph without covering
+	   the pack, so it takes its own row under the price */
+	.hxshop-item{grid-row:span 6}
+	.hxshop-item__actions{grid-row:6;align-self:start;justify-self:center;margin:12px 0 0}
+	.hxshop .hxshop-item__add,.hxshop .hxshop-item__add:visited{box-shadow:inset 0 0 0 1px var(--hx-line-strong,rgba(28,29,31,.28))}
+	.hxshop .hxshop-item__add{gap:8px;padding:0 12px 0 14px}
+	.hxshop-add__long{display:none}
 	.hxshop-item__name{font-size:.9375rem;padding-inline:6px}
 	.hxshop-item__benefit{font-size:.875rem;padding-inline:6px}
 }
@@ -434,3 +428,49 @@ html body:not(.cos-h26) #cos-main-content .hxshop-ritual .hxshop-ritual__amount 
 	.hxshop-ritual.hxshop-ritual .hxshop-ritual__body{padding:var(--hx-s-8) max(var(--hx-margin),calc((100vw - var(--hx-max)) / 2 + var(--hx-margin))) var(--hx-s-8) clamp(32px,4vw,72px);max-width:calc(30rem + 2 * var(--hx-margin))}
 }
 
+/* ─── The homepage's photographs (owner, 31 Oct 2026: "use the product images on the home page")
+   The tiles now show coll-photo-* exactly as the homepage collection does: the owner's overhead
+   packshots on one light ground (241,242,244), every pack at its true relative size on one
+   shared baseline, 4:5, uncropped. So the graphite set's horizon alignment no longer applies,
+   the tile's loading ground is the photographs' own, and the bag is the homepage's: a hairline
+   square in ink that fills ink on hover, focus and once added (a white square disappears on the
+   light ground). ── */
+.hxshop-list__items{--hxshop-tile:#F1F2F4}
+.hxshop-item__object img{transform:none;transform-origin:50% 50%}
+.hxshop .hxshop-item__add,
+.hxshop .hxshop-item__add:visited{background:transparent;color:var(--hx-ink);box-shadow:inset 0 0 0 1px var(--hx-line-strong,rgba(28,29,31,.28))}
+.hxshop .hxshop-item__add:is(:hover,:focus-visible,.is-busy,.is-added){background:var(--hx-ink);color:var(--hx-white,#F8F8F8);box-shadow:none}
+
+/* ─── The Complete Ritual, light (owner, 1 Nov 2026: "change the coloring of the background, make the
+   picture more minimal and brighter, consistent with the bright colors of the website"). The owner's
+   studio shot of the four packs, relit on the shop tiles' ground (#F1F2F4), so the photograph and the
+   room are one surface; the type in ink. Replaces the black room of 28 Oct (and its gold spoon). ── */
+.hxshop-ritual.hxshop-ritual--light{--rit-ink:#F1F2F4;background:#F1F2F4;color:var(--hx-text)}
+.hxshop-ritual--light.hxshop-ritual .hxshop-ritual__media{background:#F1F2F4}
+.hxshop-ritual--light.hxshop-ritual .hxshop-ritual__media{background:#EEDFDE}   /* the photograph's own blush, while it loads */
+.hxshop-ritual--light.hxshop-ritual .hxshop-ritual__media img{object-position:43% 60%}   /* the packs span 21-64% of the width */
+.hxshop-ritual--light.hxshop-ritual .hxshop-ritual__media::after{content:none}
+html body:not(.cos-h26) #cos-main-content .hxshop-ritual--light :is(.hxshop-ritual__title,.hxshop-ritual__name){color:var(--hx-ink)}
+html body:not(.cos-h26) #cos-main-content .hxshop-ritual--light :is(.hxshop-ritual__copy,.hxshop-ritual__num,.hxshop-ritual__verb){color:var(--hx-fg-2,#3A3B3D)}
+html body:not(.cos-h26) #cos-main-content .hxshop-ritual--light .hxshop-ritual__amount .woocommerce-Price-amount{color:var(--hx-ink)}
+.hxshop-ritual--light.hxshop-ritual :is(.hxshop-ritual__compare,.hxshop-ritual__mid,.hxshop-ritual__service){color:var(--hx-fg-2,#3A3B3D)}
+.hxshop-ritual--light.hxshop-ritual .hxshop-ritual__save{color:var(--hx-ink)}
+.hxshop-ritual--light.hxshop-ritual .hxshop-ritual__steps{border-top-color:var(--hx-line)}
+.hxshop-ritual--light.hxshop-ritual .hxshop-ritual__steps li{border-bottom-color:var(--hx-line)}
+.hxshop .hxshop-ritual--light .hx-btn.hxshop-ritual__add{--hx-btn-bg:var(--hx-ink);--hx-btn-bg-hover:#2B2C2F;--hx-btn-fg:#F8F8F8;--hx-btn-frame:rgba(205,191,168,.55)}
+.hxshop .hxshop-ritual--light .hx-btn.hxshop-ritual__add:visited{color:#F8F8F8}
+.hxshop .hxshop-ritual--light :is(.hxshop-ritual__more,.hxshop-ritual__more:visited){color:var(--hx-ink)}
+.hxshop-ritual--light.hxshop-ritual :focus-visible{outline-color:var(--hx-ink)}
+@media (max-width:1199.98px){.hxshop-ritual--light.hxshop-ritual .hxshop-ritual__media{aspect-ratio:1/1}}   /* the four packs larger on phones and tablets: the square crop loses only empty ground */
+
+/* ─── tile bag at the homepage's size (owner, 3 Nov 2026): mirrors collection.css's ".hxc__bag" end
+   block — 38px tall, tighter padding, 16px glyph (15px on phones); an invisible band keeps the tap
+   target 44px. min-width drops to 38 so the "Add" phone control is not forced wider. ── */
+.hxshop .hxshop-item__add,
+.hxshop .hxshop-item__add:visited{position:relative;min-width:38px;height:38px;gap:8px;padding:0 11px 0 13px}
+.hxshop-item__add::after{width:16px;height:16px}
+.hxshop-item__add::before{content:"";position:absolute;inset:-3px 0}
+@media (max-width:639.98px){
+	.hxshop .hxshop-item__add{gap:7px;padding:0 10px 0 12px}
+	.hxshop-item__add::after{width:15px;height:15px}
+}

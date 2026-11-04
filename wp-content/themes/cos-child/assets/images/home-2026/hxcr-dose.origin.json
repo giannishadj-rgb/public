@@ -1,0 +1,6 @@
+{
+ "source": "owner-supplied texture artwork design-sources/home-2026/{cleanser,serum,eye}-texture-packshot_v1.png, cream-texture-packshot_v2.png (5 Oct 2026)",
+ "transform": "single texture elements lifted from the artwork (gel disc, pearl sphere, pearl drop by circular mask; cream ribbon below the jar with a faded top edge); alpha kept in AVIF/WebP, JPEG flattened on #F2F2EF; cut-outs in design-sources/home-2026/set-packs-2026-11-03/dose-*.png",
+ "built": "2026-11-03",
+ "cream": "owner-supplied cream smear photograph (3 Nov 2026), design-sources/home-2026/set-packs-2026-11-03/owner-cream-smear-supplied.jpg; white ground removed (pure 255 flood from the edges + row/column-enclosed fill), colour untouched; build_dose_cream_owner.py"
+}

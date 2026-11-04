@@ -9,6 +9,7 @@ if ( ! $args['in_stock'] || ! $args['is_simple'] ) return;
 ?>
 <div id="cos-pdp-sticky-atc" class="hxpd-bar" aria-hidden="true" data-hxpd-bar>
 	<div class="hxpd-bar__info">
+		<?php if ( ! empty( $args['me'] ) ) : // 30 Oct 2026: the place in the ritual stays with the reader ?><span class="hxpd-bar__step">Step <?php echo esc_html( (string) (int) $args['me']['num'] ); ?> of 4 <span aria-hidden="true">·</span> <?php echo esc_html( $args['me']['verb'] ); ?></span><?php endif; ?>
 		<span class="hxpd-bar__name"><?php echo esc_html( $args['name'] ); ?></span>
 		<span class="hxpd-bar__price"><?php echo esc_html( $args['price_txt'] ); ?><?php if ( $args['size'] && ! $args['is_set'] ) : ?> <span aria-hidden="true">·</span> <?php echo esc_html( $args['size'] ); ?><?php endif; ?></span>
 	</div>

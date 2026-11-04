@@ -1,0 +1,20 @@
+{
+ "cleanser": {
+  "source": "Unsplash Z0mwx0RgyKQ \"Rippling water surface with light reflections\", alisa wong (@aecey), Unsplash License",
+  "illustrative": true
+ },
+ "serum": {
+  "source": "owner photograph DSC_6612 (hxhe-drop), the Advanced Repair Serum dispensed onto a fingertip",
+  "illustrative": false
+ },
+ "eye": {
+  "source": "Unsplash JiqTLjzEH18 \"white cosmetic cream smear\", Jocelyn Morales (@molnj), Unsplash License",
+  "illustrative": true
+ },
+ "cream": {
+  "source": "Unsplash kD9qprR6HBI \"white cream smear on beige surface\", Kelsey Curtis (@kelseycurtis), Unsplash License",
+  "illustrative": true
+ },
+ "transform": "3:4 crops, colour reduced toward the site monochrome (cleanser greyscale, serum 55%, eye 40%, cream 30% saturation); originals in design-sources/home-2026/set-textures-2026-11-03",
+ "built": "2026-11-03"
+}

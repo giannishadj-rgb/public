@@ -6,10 +6,11 @@
  * positioning line word for word and sold the set with a text link only; the set was the one
  * product on the page that could not be seen or priced.
  *
- * Now: the four formulas together on the silver tray (hxpd-tray, also the set page's first
- * photograph; the red-ribbon gift-box composite 23723 was judged too busy on 14 Oct and is still
- * not used), its name, a line of its own, the four formulas it holds as 01–04, the
- * live set price with the separate total only while it is lower, one action and the two
+ * Now (31 Oct 2026, owner): the four formulas on stepped mirror glass, full-bleed, a hairline from
+ * each to its name and size (hxz-mirror-wide ≥900px, hxz-mirror-narrow below; owner's photo, the
+ * cleanser label's "50 ml" corrected to "150 ml" by copying the label's own "1", as on the mirror
+ * hero; the silver tray, hxpd-tray, is still the set page's photo). Beneath: its name, a line of
+ * its own (the 01–04 list went: the photograph names the four now), the live set price with the separate total only while it is lower, one action and the two
  * service assurances (owner, 6 Oct: only these two). "Four formulas. One complete ritual."
  * stays the hero's line (round-1 ruling). Nothing here says the cleanser travels inside the
  * box: that is still undecided (PRODUCT.md).
@@ -27,39 +28,78 @@ $hxz_total   = function_exists( 'cos_h26_individual_total' ) ? cos_h26_individua
 $hxz_apart   = ( $hxz_wc && $hxz_total > (float) $hxz_wc->get_price() )
 	? html_entity_decode( wp_strip_all_tags( wc_price( $hxz_total, array( 'decimals' => 0 ) ) ), ENT_QUOTES, 'UTF-8' )
 	: '';
+
+/*
+ * The callouts (owner, 31 Oct 2026: "use lines to point to each product and show the product name").
+ * Anchors are measured on the 1448x1086 photograph and given in % of each crop:
+ *   stage  (>=1200px, x -361-1809, y -400-820; widened 361px a side and 400px on top along the
+ *          slabs' own diagonals, scratchpad extend.py, the added top lifted a touch so the set's
+ *          name, price and action sit on it in ink): --sx/--sy/--slen
+ *   wide   (900-1199px, x -145-1593, y -80-834): --x/--y = where the line meets the product, --len its length
+ *   narrow (<900px,  x 360-1100, y 0-630): --mx = the product's centre; the tag hangs below the photo
+ *   --t / --mt = when the timed entrance's band of light crosses that product (only where the
+ *   browser has no scroll-driven animation; closing.css, Motion): (x + 10%) / 170% of 1400ms.
+ * Each line runs into open background: serum to the left, the eye and 24h creams upward (over
+ * their caps), the cleanser to the right (its cap nearly meets the top edge).
+ */
+$hxz_by_slug = array();
+foreach ( cos_h26_products() as $p ) $hxz_by_slug[ $p['slug'] ] = $p;
+$hxz_calls = array(
+	array( 'slug' => 'advanced-repair-serum',   'short' => 'Serum',     'dir' => 'left',  'pos' => '--sx:35.62%;--sy:63.11%;--slen:5.5%;--x:32.05%;--y:49.23%;--len:6%;--mx:14.9%;--t:346ms;--mt:205ms' ),
+	array( 'slug' => 'revitalizing-eye-cream',  'short' => 'Eye Cream', 'dir' => 'up',    'pos' => '--sx:44.42%;--sy:49.75%;--slen:9%;--x:43.04%;--y:31.4%;--len:10%;--mx:32.8%;--t:436ms;--mt:352ms' ),
+	array( 'slug' => '24h-regeneration-cream',  'short' => '24h Cream', 'dir' => 'up',    'pos' => '--sx:53.04%;--sy:60.16%;--slen:9%;--x:53.8%;--y:45.3%;--len:10%;--mx:58.1%;--t:527ms;--mt:561ms' ),
+	array( 'slug' => 'micellar-water-cleanser', 'short' => 'Cleanser',  'dir' => 'right', 'pos' => '--sx:65.76%;--sy:49.18%;--slen:5.5%;--x:69.68%;--y:41.58%;--len:6%;--mx:85.8%;--t:659ms;--mt:789ms' ),
+);
 ?>
 <section id="closing" class="hxz" aria-labelledby="hxz-title">
-	<div class="hxz__set">
-		<figure class="hxz__media" data-hx-reveal="settle">
-			<a class="hxz__photo" href="<?php echo esc_url( $hxz_set_url ); ?>" tabindex="-1" aria-hidden="true">
-				<?php echo cos_h26_picture( 'hxpd-tray', array( 640, 1024 ), array( 4, 5 ), '', array( 'class' => 'hxz__img', 'sizes' => '(min-width: 900px) 54vw, 100vw', 'w' => 1024 ) ); // phpcs:ignore -- escaped in the helper ?>
-			</a>
-		</figure>
+	<div class="hxz__stage">
+	<figure class="hxz__media" data-hx-reveal="settle" data-hx-at="0.8">
+		<div class="hxz__canvas">
+			<?php
+			echo cos_h26_picture( // phpcs:ignore -- escaped in the helper
+				'hxz-mirror-narrow',
+				array( 740 ),
+				array( 740, 630 ),
+				'The four formulas of The Complete Ritual on stepped mirror glass: Advanced Repair Serum, Revitalizing Eye Cream, 24h Regeneration Cream and Micellar Water All-in-One Cleanser',
+				array(
+					'class' => 'hxz__img',
+					'sizes' => '100vw',
+					'w'     => 740,
+					'art'   => array(
+						array( 'media' => '(min-width: 1200px)', 'base' => 'hxz-mirror-stage', 'widths' => array( 1440, 2170 ), 'sizes' => '100vw' ),
+						array( 'media' => '(min-width: 900px)', 'base' => 'hxz-mirror-wide', 'widths' => array( 1080, 1448, 1738 ), 'sizes' => '100vw' ),
+					),
+				)
+			);
+			?>
+			<?php foreach ( $hxz_calls as $c ) : $p = $hxz_by_slug[ $c['slug'] ] ?? null; if ( ! $p ) continue; ?>
+			<span class="hxz__call hxz__call--<?php echo esc_attr( $c['dir'] ); ?>" style="<?php echo esc_attr( $c['pos'] ); ?>">
+				<span class="hxz__line" aria-hidden="true"></span>
+				<a class="hxz__tag" href="<?php echo esc_url( $p['url'] ); ?>" data-cro-cta="home-closing-callout"><span class="hxz__tag-name"><span class="hxz__tag-full"><?php echo esc_html( str_replace( '-', "\u{2011}", $p['name'][0] . ' ' . $p['name'][1] ) ); // non-breaking hyphens: never "All-" / "in-One" ?></span><span class="hxz__tag-short"><?php echo esc_html( $c['short'] ); ?></span></span><span class="hxz__tag-size"><?php echo esc_html( $p['size'] ); ?></span></a>
+			</span>
+			<?php endforeach; ?>
+		</div>
+	</figure>
 
-		<div class="hxz__body">
-			<div class="hxz__top">
-				<h2 id="hxz-title" class="hx-display hxz__title" data-hx-reveal="light">The Complete <em>Ritual</em></h2>
-				<p class="hx-lead hxz__lede" data-hx-reveal data-hx-delay="120">All four formulas, full size, for every morning and every evening.</p>
-				<ol class="hxz__contents" aria-label="In The Complete Ritual" data-hx-reveal data-hx-delay="200">
-					<?php foreach ( cos_h26_products() as $p ) : ?>
-					<li class="hxz__item"><span class="hxz__num" aria-hidden="true"><?php echo esc_html( $p['num'] ); ?></span><span class="hxz__name"><?php echo esc_html( $p['name'][0] . ' ' . $p['name'][1] ); ?></span><span class="hxz__size"><?php echo esc_html( $p['size'] ); ?></span></li>
-					<?php endforeach; ?>
-				</ol>
-			</div>
+	<div class="hx-wrap hxz__body">
+		<div class="hxz__top">
+			<h2 id="hxz-title" class="hx-display hxz__title" data-hx-reveal="light">The Complete <em>Ritual</em></h2>
+			<p class="hx-lead hxz__lede" data-hx-reveal data-hx-delay="120">All four formulas, full size, for every morning and every evening.</p>
+		</div>
 
-			<div class="hxz__act" data-hx-reveal data-hx-delay="240">
-				<?php if ( $hxz_price ) : ?>
-				<p class="hxz__price"><span class="hxz__amt"><?php echo esc_html( $hxz_price ); ?></span><?php if ( $hxz_apart ) : ?><span class="hxz__apart"><?php echo esc_html( $hxz_apart ); ?> bought separately</span><?php endif; ?></p>
-				<?php endif; ?>
-				<div class="hxz__buy">
-					<a class="hx-btn hxz__btn" href="<?php echo esc_url( $hxz_set_url ); ?>" data-cro-cta="home-final-ritual">Shop the Complete Ritual<span class="hx-arrow" aria-hidden="true"></span></a>
-					<ul class="hxz__assure" role="list" aria-label="Delivery and returns">
-						<li>Free worldwide shipping</li>
-						<li>30-day returns</li>
-					</ul>
-				</div>
+		<div class="hxz__act" data-hx-reveal data-hx-delay="200">
+			<?php if ( $hxz_price ) : ?>
+			<p class="hxz__price"><span class="hxz__amt"><?php echo esc_html( $hxz_price ); ?></span><?php if ( $hxz_apart ) : ?><span class="hxz__apart"><?php echo esc_html( $hxz_apart ); ?> bought separately</span><?php endif; ?></p>
+			<?php endif; ?>
+			<div class="hxz__buy">
+				<a class="hx-btn hxz__btn" href="<?php echo esc_url( $hxz_set_url ); ?>" data-cro-cta="home-final-ritual">Shop the Complete Ritual<span class="hx-arrow" aria-hidden="true"></span></a>
+				<ul class="hxz__assure" role="list" aria-label="Delivery and returns">
+					<li>Free worldwide shipping</li>
+					<li>30-day returns</li>
+				</ul>
 			</div>
 		</div>
+	</div>
 	</div>
 
 	<div class="hx-wrap hxz__inner">

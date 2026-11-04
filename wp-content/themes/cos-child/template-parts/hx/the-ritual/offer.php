@@ -24,7 +24,7 @@ $o     = $args['offer'] ?? array();
 
 		<div class="hxrt-offer__copy">
 			<h2 id="hxrt-offer-title" class="hx-heading hxrt-offer__title" data-hx-reveal>The Complete <em>Ritual</em></h2>
-			<p class="hx-body hxrt-offer__lede" data-hx-reveal>All four full-size formulas, presented in the Caviar of Switzerland ritual box with a written ritual guide. For anyone ready to adopt the complete ritual rather than building it product by product.</p>
+			<p class="hx-body hxrt-offer__lede" data-hx-reveal>All four formulas, full size. For anyone ready to adopt the complete ritual rather than building it product by product.</p>
 
 			<?php if ( ! empty( $o['price'] ) ) : ?>
 			<p class="hxrt-offer__price" data-hx-reveal>

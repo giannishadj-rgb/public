@@ -101,11 +101,11 @@ $hxrt_copy = array(
 		'key'    => 'cream',
 		'role'   => 'The completion',
 		'what'   => 'The final step seals the ritual. A silky, velvet-textured cream that locks in moisture and the serum and eye-care steps before it, with a caviar lipid complex that supports the skin’s barrier: lasting hydration and comfort, day and night.',
-		'amount' => 'A pea-sized amount',
+		'amount' => 'A hazelnut-sized amount',
 		'when'   => 'Morning and evening',
 		'how'    => array(
 			'The final step, after serum and eye cream.',
-			'Warm a pea-sized amount between the palms for three seconds.',
+			'Warm a hazelnut-sized amount between the palms for three seconds.',
 			'Press it across face and neck to seal in the layers beneath.',
 			'By day, wear it under a broad-spectrum SPF 50+. By night, it is your overnight treatment.',
 		),

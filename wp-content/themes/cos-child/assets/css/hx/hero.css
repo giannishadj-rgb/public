@@ -149,6 +149,12 @@ body.cos-h26 .hxh.h26-hero--pearl{background:#F8F8F8}
 /* Tracked italic capitals run ~13.3x the font size for "REFINED TO THE ESSENTIAL.": scale with
    the phone so each line stays one line (25px at 390, 20.5px at 320). */
 @media (max-width:699.98px){.hxh__title{font-size:min(2rem,6.4vw)}}
+/* Phones (29 Oct 2026, critique: at 390×844 the action sat on the floor, at or past the fold once
+   the browser toolbar is up): the action follows the copy, above the jar, so it is in reach on
+   first paint on every phone. Portrait tablets keep it on the floor. */
+@media (max-width:599.98px) and (max-aspect-ratio:999/1000){
+	.hxh__action{margin-top:clamp(24px,3.6svh,32px)}
+}
 /* Squat portrait phones (iPhone SE 375×667, 360×640, 320×568): the tall frame is cropped top
    and bottom here, and a centred crop lifts the jar into the copy. Anchor the crop near the
    top of the frame so the jar sits lower, under the copy. */
@@ -182,3 +188,10 @@ body.cos-h26 .hxh.h26-hero--pearl{background:#F8F8F8}
 @keyframes hxh-focus{from{transform:scale(1.035);filter:blur(10px)}to{transform:none;filter:blur(0)}}
 @keyframes hxh-light{from{-webkit-mask-position:60% 0;mask-position:60% 0}to{-webkit-mask-position:0 0;mask-position:0 0}}
 @media print{.hxh__line{-webkit-mask:none;mask:none}}
+
+/* "Shop the Complete Ritual" (1 Nov 2026) is longer than the old label: on the narrowest phones
+   the tracking closes up so it stays on one line, clear of the jar's lid */
+@media (max-width:379.98px){
+	html body.cos-h26 #cos-main-content#cos-main-content .hxh__cta{padding-inline:16px;letter-spacing:.06em;white-space:nowrap}
+	html body.cos-h26 #cos-main-content#cos-main-content .hxh__cta .hx-arrow{margin-left:10px}
+}

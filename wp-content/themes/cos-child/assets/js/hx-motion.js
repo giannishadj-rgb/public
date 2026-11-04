@@ -24,6 +24,9 @@
  *            the total at --hx-delay-max (150ms).
  *   Stagger: data-hx-stagger on a parent → its [data-hx-reveal] descendants get --hx-i = 0,1,2…
  *   Hairline: .hx-line / [data-hx-line] draws left→right once in view (.is-drawn).
+ *   Late trigger: data-hx-at="0.5" waits until that fraction of the element is in view (capped
+ *            so a block taller than the viewport still triggers), for a tall authored entrance
+ *            that should play where it is seen (the closing photograph's callouts).
  *
  * HAND-AUTHORED PAGES (journal, FAQ, contact, help, shipping, skin concerns, sitemap, 404…) carry
  *   no reveal markup in their post_content, so autoTag() applies the same language at load:
@@ -49,6 +52,7 @@
 	var hasIO = 'IntersectionObserver' in window;
 	var seen = typeof WeakSet === 'function' ? new WeakSet() : null;
 	var revealIO = null;
+	var atIO = {};   // data-hx-at observers, one per threshold
 	var jumpUntil = 0; // reveals intersecting before this time (ms) show instantly
 	function now() { return window.performance && performance.now ? performance.now() : Date.now(); }
 	function markJump(ms) { jumpUntil = Math.max(jumpUntil, now() + (ms || 200)); }
@@ -72,6 +76,7 @@
 	function revealAll() {
 		all(document, '[data-hx-reveal],.hx-line,[data-hx-line]').forEach(function (el) { show(el, true); });
 		if (revealIO) revealIO.disconnect();
+		Object.keys(atIO).forEach(function (k) { atIO[k].disconnect(); });
 	}
 
 	function applyStagger(root) {
@@ -151,6 +156,15 @@
 				show(el, true);
 				return;
 			}
+			var at = parseFloat(el.getAttribute('data-hx-at'));
+			if (at > 0 && at <= 1) {
+				// a block taller than the viewport can never be `at` visible: cap at 90% of what fits
+				at = Math.min(at, 0.9 * vh / Math.max(r.height, 1));
+				var k = at.toFixed(2);
+				if (!atIO[k]) atIO[k] = new IntersectionObserver(onEnter, { threshold: parseFloat(k) });
+				atIO[k].observe(el);
+				return;
+			}
 			revealIO.observe(el);
 		});
 	}
@@ -170,6 +184,7 @@
 			if (!n) break;
 			show(n, true);
 			if (revealIO) revealIO.unobserve(n);
+			Object.keys(atIO).forEach(function (k) { atIO[k].unobserve(n); });
 		}
 	}
 
@@ -269,21 +284,24 @@
 		initDrift(root || document);
 	}
 
+	function onEnter(entries, io) {
+		var jumped = now() < jumpUntil;
+		entries.forEach(function (e) {
+			if (!e.isIntersecting) return;
+			if (io.thresholds[0] > 0 && e.intersectionRatio < io.thresholds[0] - 0.01) return;
+			// entering from above (scrolling back up past skipped content) or after a jump: no transition
+			var fromAbove = e.boundingClientRect.top < (e.rootBounds ? e.rootBounds.top : 0) + 1;
+			show(e.target, jumped || fromAbove);
+			io.unobserve(e.target);
+		});
+	}
+
 	function boot() {
 		// 20 Oct 2026 (owner: "animate the home page"): scroll reveals are back on. Content is
 		// hidden only once this line has run (html.hx-motion), only below the fold, and never
 		// under reduced motion; anything already on screen is shown at once.
 		if (!reduced && hasIO) {
-			revealIO = new IntersectionObserver(function (entries) {
-				var jumped = now() < jumpUntil;
-				entries.forEach(function (e) {
-					if (!e.isIntersecting) return;
-					// entering from above (scrolling back up past skipped content) or after a jump: no transition
-					var fromAbove = e.boundingClientRect.top < (e.rootBounds ? e.rootBounds.top : 0) + 1;
-					show(e.target, jumped || fromAbove);
-					revealIO.unobserve(e.target);
-				});
-			}, { rootMargin: '0px 0px -6% 0px', threshold: 0 });
+			revealIO = new IntersectionObserver(onEnter, { rootMargin: '0px 0px -6% 0px', threshold: 0 });
 			doc.classList.add('hx-motion');
 		}
 		// a deep link (/#ritual) may land after this runs: treat the first moments as a jump

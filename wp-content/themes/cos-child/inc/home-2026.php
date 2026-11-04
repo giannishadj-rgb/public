@@ -188,7 +188,7 @@ function cos_h26_products(): array {
 			'slug'    => '24h-regeneration-cream',
 			'num'     => '04',
 			'verb'    => 'Restore',
-			'cue'     => 'Warm a pea-sized amount, press in to seal.', // from 'how' in inc/product-data.php
+			'cue'     => 'Warm a hazelnut-sized amount, press in to seal.', // from 'how' in inc/product-data.php
 			'benefit' => 'Lasting hydration & barrier support',
 			'name'    => array( '24h Regeneration', 'Cream' ),
 			'size'    => '50 ml',

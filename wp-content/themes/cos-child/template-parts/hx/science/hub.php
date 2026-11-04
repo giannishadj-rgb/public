@@ -92,15 +92,8 @@ get_template_part( 'template-parts/hx/science/masthead', null, array(
 ) );
 ?>
 
-<nav class="hxsc-qnav" aria-label="On this page">
-	<div class="hx-wrap">
-		<ol class="hxsc-qnav__list">
-			<?php foreach ( $questions as $i => [ $id, $q ] ) : ?>
-			<li><a class="hxsc-qnav__link" href="#<?php echo esc_attr( $id ); ?>"><span class="hxsc-qnav__n" aria-hidden="true"><?php echo esc_html( sprintf( '%02d', $i + 1 ) ); ?></span><?php echo esc_html( $q ); ?></a></li>
-			<?php endforeach; ?>
-		</ol>
-	</div>
-</nav>
+<?php // section bar: the sitewide sticky hx-bar since 31 Oct 2026 (was the numbered .hxsc-qnav grid)
+get_template_part( 'template-parts/hx/section-bar', null, array( 'items' => array_map( static fn( $q ) => array( 'href' => '#' . $q[0], 'text' => $q[1] ), $questions ) ) ); ?>
 
 <section id="why" class="hxsc-q" aria-labelledby="hxsc-why-t">
 	<div class="hx-wrap hxsc-q__split hxsc-q__split--fig">

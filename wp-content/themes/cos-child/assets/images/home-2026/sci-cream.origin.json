@@ -1,0 +1,38 @@
+{
+ "sci-cream-what": {
+  "source": "C:/Users/giann/Dropbox\\VitalTrends/Graphics/Photoshoots\\June 2026\\CAV59913 copy.jpg",
+  "crop": [
+   1046,
+   3671,
+   3412,
+   4265
+  ]
+ },
+ "sci-cream-how": {
+  "source": "C:/Users/giann/Dropbox\\VitalTrends/Graphics/Photoshoots\\June 2026\\CAV59689 copy.jpg",
+  "crop": [
+   0,
+   550,
+   5504,
+   6880
+  ]
+ },
+ "sci-cream-does": {
+  "source": "C:/Users/giann/Dropbox\\VitalTrends/Graphics/Photoshoots\\July 2022\\DSC_4408.jpg",
+  "crop": [
+   0,
+   324,
+   3712,
+   4640
+  ]
+ },
+ "sci-cream-who": {
+  "source": "C:/Users/giann/Dropbox\\VitalTrends/Graphics/Photoshoots\\June 2026\\CAV59102 copy.jpg",
+  "crop": [
+   0,
+   550,
+   5504,
+   6880
+  ]
+ }
+}

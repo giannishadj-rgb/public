@@ -236,7 +236,7 @@ function cos_get_product_copy( string $sku ): ?array {
 			),
 			'how' => array(
 				'The final step — apply after serum and eye cream.',
-				'Warm a pea-sized amount between palms for 3 seconds.',
+				'Warm a hazelnut-sized amount between palms for 3 seconds.',
 				'Press gently across face and neck to seal in the steps before it.',
 				'Morning: wear under SPF. Evening: the last step before sleep.',
 			),
@@ -254,8 +254,7 @@ function cos_get_product_copy( string $sku ): ?array {
 				'Each step prepares the skin for the one that follows',
 				'Built around the shared Caviar of Switzerland High-Tech Complex',
 				'Save €50 versus buying each product individually',
-				'Presented in the Caviar of Switzerland ritual box — ready to gift',
-				'Includes a written ritual guide and complimentary tracked worldwide delivery',
+				'Complimentary tracked worldwide delivery',
 			),
 			// Bundle deliberately has only these 4 keys — it has no per-SKU
 			// specs/faqs/actives/how/stats/inci of its own (each component

@@ -1,0 +1,38 @@
+{
+ "sci-serum-what": {
+  "source": "C:/Users/giann/Dropbox\\VitalTrends/Graphics/Media\\serum.jpg",
+  "crop": [
+   108,
+   0,
+   864,
+   1080
+  ]
+ },
+ "sci-serum-how": {
+  "source": "C:/Users/giann/Dropbox\\VitalTrends/Graphics/Photoshoots\\July 2022\\DSC_4854.jpg",
+  "crop": [
+   0,
+   278,
+   3712,
+   4640
+  ]
+ },
+ "sci-serum-does": {
+  "source": "C:/Users/giann/Dropbox\\VitalTrends/Graphics/Photoshoots\\July 2022\\DSC_4823.jpg",
+  "crop": [
+   0,
+   278,
+   3712,
+   4640
+  ]
+ },
+ "sci-serum-who": {
+  "source": "C:/Users/giann/Dropbox\\VitalTrends/Graphics/Photoshoots\\November 2022\\DSC_6172.jpg",
+  "crop": [
+   0,
+   324,
+   3712,
+   4640
+  ]
+ }
+}

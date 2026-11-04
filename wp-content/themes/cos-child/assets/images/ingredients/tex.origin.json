@@ -1,0 +1,62 @@
+{
+  "caviar-extract": {
+    "source": "https://www.pexels.com/photo/white-with-yellow-beads-cream-6496466/",
+    "license": "Pexels License (free commercial use, no attribution required)",
+    "crop": [
+      200,
+      350,
+      1500,
+      1650
+    ],
+    "ground_lifted_from": 245.0,
+    "shows": "A white cream swatch scattered with tiny golden beads"
+  },
+  "syn-coll-peptide": {
+    "source": "https://www.pexels.com/photo/texture-of-cream-6496465/",
+    "license": "Pexels License (free commercial use, no attribution required)",
+    "crop": [
+      0,
+      200,
+      1600,
+      1800
+    ],
+    "ground_lifted_from": 215.0,
+    "shows": "Smooth white cream in soft swirls"
+  },
+  "hyaluronic-acid": {
+    "source": "https://www.pexels.com/photo/water-drops-on-white-background-14766498/",
+    "license": "Pexels License (free commercial use, no attribution required)",
+    "crop": [
+      0,
+      760,
+      1500,
+      2260
+    ],
+    "ground_lifted_from": 251.7,
+    "shows": "Clear drops of liquid with tiny bubbles on white"
+  },
+  "superoxide-dismutase": {
+    "source": "https://www.pexels.com/photo/abstract-background-with-white-glassy-drops-4194857/",
+    "license": "Pexels License (free commercial use, no attribution required)",
+    "crop": [
+      266,
+      0,
+      1333,
+      1067
+    ],
+    "ground_lifted_from": 222.0,
+    "shows": "Pearly glassy drops on a pale surface"
+  },
+  "resveratrol": {
+    "source": "https://www.pexels.com/photo/transparent-yellowish-liquid-on-white-surface-4465831/",
+    "license": "Pexels License (free commercial use, no attribution required)",
+    "crop": [
+      100,
+      0,
+      1167,
+      1067
+    ],
+    "ground_lifted_from": 217.0,
+    "shows": "A translucent amber oil spread on white"
+  }
+}

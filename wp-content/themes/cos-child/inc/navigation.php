@@ -367,3 +367,12 @@ function cos_child_global_footer(): void {
 <?php cos_child_newsletter_form_script(); ?>
 <?php }
 add_action( 'wp_footer', 'cos_child_global_footer', 5 );
+
+/* 1 Nov 2026 (owner): the /skin-concerns/ hub was removed (page 23776 set to draft, not trashed, so
+   its five guides keep their /skin-concerns/<guide>/ addresses). Its old address goes to the shop. */
+add_action( 'template_redirect', static function (): void {
+	if ( is_404() && 'skin-concerns' === trim( (string) wp_parse_url( $_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH ), '/' ) ) {
+		wp_safe_redirect( home_url( '/shop/' ), 301 );
+		exit;
+	}
+}, 1 );   // before WordPress's 404 guess, which would send it to /journal/skin-concerns/

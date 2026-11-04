@@ -24,7 +24,6 @@ get_template_part( 'template-parts/hx/science/masthead', null, array(
 		'tall' => array( 'evidence-portrait', array( 640, 960, 1280 ), array( 4, 5 ) ),
 		'pos'  => '50% 30%',
 		'pos_wide' => '50% 30%',
-		'caption' => 'Illustrative model, not a study participant.',
 	),
 ) );
 
@@ -38,19 +37,39 @@ $studies = array_slice( $all, 0, 3 );
 			<h2 id="cs-results" class="hx-heading hxsc-sec__title">Each formula, studied on its own.</h2>
 			<p class="hx-body hxsc-sec__intro">Separate studies by an independent contract research organisation. There is no study of the complete ritual, and the Micellar Water Cleanser has not been clinically studied.</p>
 		</div>
-		<ol class="hxsc-claims__list" role="list">
-			<?php foreach ( $studies as $s ) : $m = ( 'measured' === $s['kind'] ); ?>
-			<li class="hxsc-claim hxsc-claim--<?php echo esc_attr( $s['kind'] ); ?>" data-hx-reveal>
-				<div class="hxsc-claim__obj"><?php echo cos_h26_picture( 'pack-' . $s['obj'], array( 480, 720 ), array( 2, 3 ), '', array( 'sizes' => '(min-width: 900px) 240px, 150px', 'w' => 480 ) ); // phpcs:ignore ?></div>
-				<div class="hxsc-claim__text">
-					<?php if ( $m ) : ?>
-					<p class="hx-numeral hxsc-claim__n"><?php echo esc_html( $s['fig'] ); ?><span class="hxsc-pct">%</span></p>
-					<h3 class="hxsc-claim__finding"><?php echo esc_html( $s['finding'] ); ?></h3>
-					<?php else : ?>
-					<h3 class="hxsc-claim__finding hxsc-claim__finding--reported"><?php echo esc_html( $s['fig'] ); ?>% panellist-reported satisfaction <span class="hxsc-nw">at 28 days</span></h3>
-					<?php endif; ?>
-					<p class="hxsc-claim__product"><a href="<?php echo hxsc_url( $s['url'] ); ?>"><?php echo esc_html( $s['product'] ); ?></a></p>
-					<p class="hxsc-claim__foot"><span class="hxsc-kind"><?php echo $m ? 'Instrument‑measured' : 'Self‑reported'; ?></span> <span aria-hidden="true">·</span> <?php echo esc_html( $s['method'] ); ?> <span aria-hidden="true">·</span> <span class="hxsc-nw"><?php echo esc_html( $s['panel'] ); ?> aged <?php echo esc_html( $s['ages'] ); ?></span> <span aria-hidden="true">·</span> <span class="hxsc-nw"><?php echo esc_html( strtolower( $s['regimen'] ) ); ?></span></p>
+		<?php
+		/*
+		 * One skin close-up per study (owner, 31 Oct 2026, references: a ring on the skin and the result
+		 * set beside it). study-* crops of the page's own model (design-sources/science-studies-2026-10-31).
+		 * rx/ry = the ring's centre, text = where the result sits, both in % of the photograph. The model is
+		 * illustrative; the 24h cream's self-reported result is a sentence, never a figure.
+		 */
+		$zones = array(
+			'serum' => array( 'img' => 'study-firmness', 'rx' => '33%', 'ry' => '60%', 'text' => '50%', 'at' => 'top', 'zone' => 'Cheek and contour' ),
+			'eye'   => array( 'img' => 'study-eye',      'rx' => '80%', 'ry' => '43%', 'text' => '74%', 'at' => 'mid', 'zone' => 'Eye contour' ),
+			'cream' => array( 'img' => 'study-comfort',  'rx' => '82%', 'ry' => '80%', 'text' => '50%', 'at' => 'top', 'zone' => 'Cheek' ),
+		);
+		?>
+		<ol class="hxsc-claims__list hxsc-skin" role="list">
+			<?php foreach ( $studies as $s ) : $m = ( 'measured' === $s['kind'] ); $z = $zones[ $s['obj'] ]; ?>
+			<li class="hxsc-skin__study hxsc-skin__study--<?php echo esc_attr( $s['kind'] ); ?> hxsc-skin__study--<?php echo esc_attr( $z['at'] ); ?>" data-hx-reveal>
+				<figure class="hxsc-skin__plate" style="--rx:<?php echo esc_attr( $z['rx'] ); ?>;--ry:<?php echo esc_attr( $z['ry'] ); ?>;--tx:<?php echo esc_attr( $z['text'] ); ?>">
+					<?php echo cos_h26_picture( $z['img'], array( 600, 900, 1200 ), array( 4, 5 ), '', array( 'class' => 'hxsc-skin__img', 'sizes' => '(min-width: 900px) min(58vw, 760px), 100vw', 'w' => 900 ) ); // phpcs:ignore -- decorative crop; the result is the text ?>
+					<span class="hxsc-skin__ring" aria-hidden="true"></span>
+					<figcaption class="hxsc-skin__result">
+						<span class="hxsc-skin__zone"><?php echo esc_html( $z['zone'] ); ?></span>
+						<?php if ( $m ) : ?>
+						<span class="hxsc-skin__n"><?php echo esc_html( $s['fig'] ); ?>%</span>
+						<span class="hxsc-skin__finding"><?php echo esc_html( $s['finding'] ); ?></span>
+						<?php else : ?>
+						<span class="hxsc-skin__finding hxsc-skin__finding--reported"><?php echo esc_html( $s['fig'] ); ?>% of panellists reported satisfaction at 28 days</span>
+						<?php endif; ?>
+						<span class="hxsc-skin__note"><?php echo $m ? 'Instrument‑measured' : 'Self‑reported'; ?> · <span class="hxsc-nw"><?php echo esc_html( $s['panel'] ); ?> aged <?php echo esc_html( $s['ages'] ); ?></span> · <span class="hxsc-nw"><?php echo esc_html( strtolower( $s['regimen'] ) ); ?></span></span>
+					</figcaption>
+				</figure>
+				<div class="hxsc-skin__text">
+					<h3 class="hxsc-skin__product"><a href="<?php echo hxsc_url( $s['url'] ); ?>"><?php echo esc_html( $s['product'] ); ?></a></h3>
+					<p class="hxsc-skin__method"><?php echo esc_html( $s['method'] ); ?></p>
 					<?php if ( 'serum' === $s['obj'] ) : ?>
 					<p class="hxsc-claim__interim">Day 7 interim, same study: <strong><?php echo esc_html( $interim['fig'] ); ?>%</strong> surface smoothness <span class="hxsc-nw">(<?php echo esc_html( strtolower( $interim['method'] ) ); ?>)</span>.</p>
 					<?php endif; ?>

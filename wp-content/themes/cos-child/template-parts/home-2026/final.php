@@ -35,10 +35,10 @@ $steps = array(
 	'micellar-water-cleanser' => array( 'cleanser', 'Sweep a soaked cotton pad over face and neck to lift make-up and the day’s impurities. No rinsing: the skin is ready for what follows.' ),
 	'advanced-repair-serum'   => array( 'serum', 'The most concentrated step. Press two or three drops into face and neck, then give them a minute to absorb.' ),
 	'revitalizing-eye-cream'  => array( 'eye', 'Care for the thinnest skin of the face. Pat a little along the orbital bone, from the inner to the outer corner. Never drag.' ),
-	'24h-regeneration-cream'  => array( 'cream', 'The final step seals the ritual. Warm a pea-sized amount between your palms and press it in, under SPF by day and overnight by night.' ),
+	'24h-regeneration-cream'  => array( 'cream', 'The final step seals the ritual. Warm a hazelnut-sized amount between your palms and press it in, under SPF by day and overnight by night.' ),
 );
 $nbh = static function ( string $s ): string {
-	return str_replace( '-', "\u{2011}", $s ); // non-breaking hyphens: "make-up", "pea-sized" never split
+	return str_replace( '-', "\u{2011}", $s ); // non-breaking hyphens: "make-up", "hazelnut-sized" never split
 };
 ?>
 <section id="ritual" class="hxr" aria-labelledby="hxr-title">

@@ -6,6 +6,7 @@
  *    falls back to the normal form POST, which shows WooCommerce's notices.
  * 4. Phone bar: visible while the primary button is out of view; submits the same form.
  * 5. Links that point at a closed <details> open it.
+ * 6. "Your ritual": marks the steps already in the bag, kept current from the add-to-cart fragments.
  */
 (function () {
 	'use strict';
@@ -66,21 +67,7 @@
 		}
 	}
 
-	/* 1c — the section bar marks the part in view */
-	var secLinks = Array.prototype.slice.call(d.querySelectorAll('.hxpd-secnav__link'));
-	if (secLinks.length && 'IntersectionObserver' in window) {
-		var byId = {};
-		secLinks.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
-		var secIO = new IntersectionObserver(function (entries) {
-			entries.forEach(function (e) {
-				if (!e.isIntersecting) return;
-				secLinks.forEach(function (a) { a.classList.remove('is-on'); });
-				var a = byId[e.target.id];
-				if (a) a.classList.add('is-on');
-			});
-		}, { rootMargin: '-40% 0px -55% 0px' });
-		Object.keys(byId).forEach(function (id) { var el = d.getElementById(id); if (el) secIO.observe(el); });
-	}
+	/* 1c — the section bar marks the part in view: assets/js/hx-section-bar.js (sitewide, 31 Oct 2026) */
 
 	/* 2 — quantity */
 	var form = d.querySelector('[data-hxpd-form]');
@@ -150,6 +137,14 @@
 					form.submit();
 				});
 		});
+		// Back/forward cache: a page left mid-add (the fallback POST above) comes back
+		// with the button stuck on "Adding…" and every later submit ignored; reset it.
+		window.addEventListener('pageshow', function (e) {
+			if (!e.persisted) return;
+			busy = false;
+			form.removeAttribute('data-hxpd-native');
+			setState('Add to bag');
+		});
 	}
 
 	/* 4 — phone bar */
@@ -167,6 +162,46 @@
 		});
 	}
 
+	/* 6 — "Your ritual": mark the steps already in the bag. The server renders the first state;
+	   every add-to-cart response carries a fresh #hxpd-bag (inc/commerce.php), read here from the
+	   fragments so the page follows the bag without a reload. */
+	function applyBag(ids) {
+		var own = {};
+		ids.forEach(function (id) { own[String(id)] = true; });
+		d.querySelectorAll('[data-hxpd-pid]').forEach(function (el) {
+			var on = !!own[el.getAttribute('data-hxpd-pid')];
+			el.classList.toggle('is-owned', on);
+			var st = el.querySelector('[data-hxpd-state]');
+			if (st) st.textContent = on ? 'In your bag' : '';
+		});
+		// distinct formulas on the page (3 Nov 2026: the step cards became the homepage tiles)
+		var seen = {}, n = 0;
+		d.querySelectorAll('[data-hxpd-pid]').forEach(function (el) {
+			var id = el.getAttribute('data-hxpd-pid');
+			if (!seen[id]) { seen[id] = true; if (own[id]) n++; }
+		});
+		d.querySelectorAll('[data-hxpd-owned]').forEach(function (el) {
+			el.textContent = n + ' of 4 in your bag';
+			el.hidden = n === 0;
+		});
+	}
+	function bagFrom(html) {
+		var m = /\[[^\]]*\]/.exec(html || '');
+		try { return m ? JSON.parse(m[0]) : null; } catch (e) { return null; }
+	}
+	if (window.jQuery) {
+		window.jQuery(d.body).on('added_to_cart', function (e, fragments) {
+			var ids = fragments && bagFrom(fragments['script#hxpd-bag']);
+			if (ids) applyBag(ids);
+		});
+	}
+	// the "Your ritual" tiles (homepage collection markup, 3 Nov 2026) add without jQuery and announce it here
+	d.addEventListener('hx:added_to_cart', function (e) {
+		var fr = e.detail && e.detail.fragments;
+		var ids = fr && bagFrom(fr['script#hxpd-bag']);
+		if (ids) applyBag(ids);
+	});
+
 	/* 5 — open a details target */
 	d.querySelectorAll('[data-hxpd-open]').forEach(function (a) {
 		a.addEventListener('click', function () {
@@ -174,4 +209,18 @@
 			if (t && t.tagName === 'DETAILS') t.open = true;
 		});
 	});
+
+	/* 7 — key ingredients on phones (1 Nov 2026): names first, what each one does on request.
+	   The list collapses only under 768px (product.css); without this script it stays open. */
+	var orbs = d.getElementById('hxpd-orbs-list');
+	var more = d.querySelector('.hxpd-orbs__toggle');
+	if (orbs && more) {
+		var set = function (open) {
+			more.setAttribute('aria-expanded', open ? 'true' : 'false');
+			orbs.classList.toggle('is-brief', !open);
+		};
+		set(false);
+		more.hidden = false;
+		more.addEventListener('click', function () { set(more.getAttribute('aria-expanded') !== 'true'); });
+	}
 })();

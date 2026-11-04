@@ -14,7 +14,7 @@
 defined( 'ABSPATH' ) || exit;
 $steps = $args['steps'] ?? array();
 $url   = $args['url'] ?? static fn( string $p ): string => home_url( $p );
-$nb    = static fn( string $s ): string => str_replace( '-', "\u{2011}", $s ); // keep make-up, pea-sized whole
+$nb    = static fn( string $s ): string => str_replace( '-', "\u{2011}", $s ); // keep make-up, hazelnut-sized whole
 ?>
 <section id="step-by-step" class="hxrt-steps" aria-labelledby="hxrt-steps-title">
 	<div class="hx-wrap">
@@ -28,7 +28,7 @@ $nb    = static fn( string $s ): string => str_replace( '-', "\u{2011}", $s ); /
 		$slug = strtolower( $s['verb'] );
 		$name = $s['name'][0] . ' ' . $s['name'][1];
 		?>
-	<article id="step-<?php echo esc_attr( $slug ); ?>" class="hxrt-step<?php echo $i % 2 ? ' hxrt-step--flip' : ''; ?>" aria-labelledby="hxrt-step-<?php echo $n; ?>" data-hxrt-label="<?php echo esc_attr( sprintf( 'Step %d of %d · %s', $n, count( $steps ), $s['verb'] ) ); ?>">
+	<article id="step-<?php echo esc_attr( $slug ); ?>" class="hxrt-step<?php echo $i % 2 ? ' hxrt-step--flip' : ''; ?>" aria-labelledby="hxrt-step-<?php echo $n; ?>" data-hx-bar-label="<?php echo esc_attr( sprintf( 'Step %d of %d · %s', $n, count( $steps ), $s['verb'] ) ); ?>">
 		<div class="hxrt-step__media">
 			<div class="hx-frame hxrt-step__frame">
 				<?php

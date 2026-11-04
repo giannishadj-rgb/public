@@ -56,7 +56,7 @@ $results = array(
 		'note'    => '',
 		'img'     => 'story-eye',
 		'alt'     => 'The Revitalizing Eye Cream held between the cheeks of two women with their eyes closed',
-		'credit'  => 'Campaign photograph, not study participants',
+		'credit'  => '',
 	),
 	array(
 		'key'     => 'cream',

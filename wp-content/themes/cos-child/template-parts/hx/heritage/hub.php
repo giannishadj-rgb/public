@@ -60,15 +60,8 @@ $parts = array(
 	</div>
 </header>
 
-<nav class="hxhe-index" aria-label="On this page">
-	<div class="hx-wrap">
-		<ol class="hxhe-index__list">
-			<?php foreach ( $parts as $i => [ $id, $title ] ) : ?>
-			<li><a class="hxhe-index__link" href="#<?php echo esc_attr( $id ); ?>"><span class="hxhe-index__n" aria-hidden="true"><?php echo esc_html( sprintf( '%02d', $i + 1 ) ); ?></span><?php echo esc_html( $title ); ?></a></li>
-			<?php endforeach; ?>
-		</ol>
-	</div>
-</nav>
+<?php // section bar: the sitewide sticky hx-bar since 31 Oct 2026 (was the numbered .hxhe-index grid)
+get_template_part( 'template-parts/hx/section-bar', null, array( 'items' => array_map( static fn( $p ) => array( 'href' => '#' . $p[0], 'text' => $p[1] ), $parts ) ) ); ?>
 
 <section id="standard" class="hxhe-sec hxhe-guarantee" aria-labelledby="hxhe-guarantee-title">
 	<div class="hx-wrap hxhe-split hxhe-split--image-left">

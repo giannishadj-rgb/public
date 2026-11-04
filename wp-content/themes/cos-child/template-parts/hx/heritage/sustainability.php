@@ -2,8 +2,8 @@
 /**
  * /heritage/sustainability/ (page 391) — "Luxury without compromise." Styles: assets/css/hx/heritage.css.
  *
- * Copy carried over from post_content: the five commitments (incl. the 2026 refill pilot, stated as
- * not yet operational) and "Honesty about limits", tightened. No claim added; several await the owner.
+ * Copy carried over from post_content: the commitments and "Honesty about limits", tightened. The
+ * refill programme (a Q4 2026 pilot) was removed by the owner, 31 Oct 2026. No claim added; several await the owner.
  * Critic round 1 (17 Oct): the valley is now a warm-monochrome full-bleed plate under the title (the
  * page's one signature image; atmosphere only, uncaptioned); "Honesty about limits" is a two-column
  * statement without the low-resolution box photograph. Two eyebrows only.
@@ -68,11 +68,6 @@ defined( 'ABSPATH' ) || exit;
 				<h3 class="hx-title">Local Swiss manufacturing</h3>
 				<p>Made in Zug, on a short supply chain. We do not manufacture in lower-cost regions for margin reasons.</p>
 			</li>
-			<li class="hxhe-commitment" data-hx-reveal>
-				<p class="hxhe-num">05 <span class="hxhe-num__note">· In development</span></p>
-				<h3 class="hx-title">Refill programme</h3>
-				<p>Refill formats for the 24h Regeneration Cream and Micellar Water Cleanser. Piloting with subscription clients in Q4&nbsp;2026.</p>
-			</li>
 		</ol>
 	</div>
 </section>
@@ -82,7 +77,7 @@ defined( 'ABSPATH' ) || exit;
 		<h2 id="hxhe-limits-title" class="hx-heading hxhe-h2" data-hx-reveal>Honesty about limits.</h2>
 		<div class="hxhe-prose hxhe-limits__prose" data-hx-reveal>
 			<p class="hx-lead">We are not a net-zero business. Our manufacturing has an energy footprint; the glass and aluminium in our packaging carry an embedded carbon cost, and international shipping adds to it. We do not claim otherwise.</p>
-			<p>Every commitment on this page is operational, not aspirational. If it is not operational yet, we say so, as with the refill programme. We will update this page annually with measurable progress, and if something we committed to is not achieved, we will report that too.</p>
+			<p>Every commitment on this page is operational, not aspirational. We will update this page annually with measurable progress, and if something we committed to is not achieved, we will report that too.</p>
 		</div>
 	</div>
 </section>

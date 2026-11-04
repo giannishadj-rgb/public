@@ -50,3 +50,56 @@ html body.cos-h26 .hxz__act{display:flex;flex-direction:column;align-items:flex-
 @media (min-width:900px) and (hover:hover) and (pointer:fine){
 	html body.cos-h26 .hxr__stepno{color:var(--hx-white,#F8F8F8)}
 }
+
+/* ─── Middle rhythm (29 Oct 2026, critique: "tighten the middle, more deliberate rhythm") ──
+   Every room shares the pearl ground, so where two rooms meet their paddings stack (176px on a
+   phone, 270px at 1440). The middle of the page, Our story → Measured → the heritage plate, now
+   reads as one group: those joins and the gaps inside Measured come in by about 20%. The long
+   pauses between chapters stay exactly as they were: collection → Our story (top of .hxv),
+   heritage band → The Ritual, and every other room on --ts-room. Was → now:
+     Our story bottom + Measured top     176 → 141 (phone), 270 → 216 (1440)
+     Measured bottom (into the plate)     88 → 70,           135 → 108
+     Measured head → results           48–96 → 40–76     result → result (phone)  56–72 → 44–56
+     eye stagger (desktop)             56–88 → 44–70     results → studies link   56–96 → 44–76
+     Our story chapter → chapter (phone) 40–56 → 32–44
+   (Our story's head gap is already tightened in typeset.css, 36–56.) */
+html body.cos-h26 .hxv{padding-bottom:calc(var(--ts-room) * .8)}
+html body.cos-h26 .hxm{padding-block:calc(var(--ts-room) * .8)}
+html body.cos-h26 .hxm__head{margin-bottom:clamp(40px,1.25rem + 3.2vw,76px)}
+@media (max-width:899.98px){ /* stacked on phones; from 900px both are one row (row-gap 0) */
+	html body.cos-h26 .hxv__chapters{row-gap:clamp(32px,6.4vw,44px)}
+	html body.cos-h26 .hxm__results{row-gap:clamp(44px,8vw,56px)}
+}
+@media (min-width:900px){html body.cos-h26 .hxm__result--eye{margin-top:clamp(44px,4vw,70px)}}
+html body.cos-h26 .hxm__foot{margin-top:clamp(44px,1.25rem + 3.2vw,76px)}
+/* The eye cream's photo credit hangs out of flow under its photograph (typeset.css), so it sat
+   on the −38% figure (5px overlap on phones, 4px clear on desktop). The finding that carries a
+   credit starts 20px lower; the other two keep their place. */
+html body.cos-h26 #cos-main-content .hxm__result:has(.hxm__credit) .hxm__copy{margin-top:calc(clamp(24px,1rem + 1.2vw,36px) + 20px)}
+
+/* ─── Mobile readability floor (30 Oct 2026, critique: "secondary information should not become
+   visually apologetic"; same rules for the other pages at the end of typeset-site.css) ──
+   · Phones: benefit lines, study details, prices, sizes and service lines read at 15px, captions
+     at 14px. Capital labels are never under 12px, at any width (DESIGN.md).
+   · Text enlargement: the two-column tiles keep two columns only while each column is at least
+     9.5em wide. When the reader enlarges text (200%) they fall to one column, so long names never
+     split mid-word. Never more than two columns below the desktop grid.
+   #cos-main-content is doubled to outrank the stacked type layers (typeset.css), like
+   #cos-footer#cos-footer in chrome.css. Contrast was already ≥5.5:1 everywhere (measured). */
+html body.cos-h26 #cos-main-content#cos-main-content :is(.hxr__stepno,.hx-label){font-size:.75rem}
+@media (max-width:767.98px){
+	html body.cos-h26 #cos-main-content#cos-main-content :is(.hxm__method,.hxm__note,.hxz__apart,.hxz__size,.hxz__assure li){font-size:.9375rem}
+	html body.cos-h26 #cos-main-content#cos-main-content #collection.hxc :is(.hxc__benefit,.hxc__price,.hxc__size){font-size:.9375rem} /* the collection's own rules carry #collection too */
+	html body.cos-h26 #cos-main-content#cos-main-content :is(.hxm__credit,.hxp__place){font-size:.875rem}
+}
+@media (max-width:1099.98px){
+	html body.cos-h26 #cos-main-content#cos-main-content #collection .hxc__list{grid-template-columns:repeat(auto-fit,minmax(min(100%,max(9.5em,calc(50% - var(--hxc-gap)))),1fr))}
+}
+/* enlarged text wraps inside its button or label instead of running off the screen */
+@media (max-width:767.98px){html body.cos-h26 #cos-main-content :is(.hx-btn,.hxz .hx-label){white-space:normal;max-width:100%;text-align:center}}
+
+/* ─── Phone reading size (31 Oct 2026, readability paper: explanatory copy 16px on phones) ──
+   The homepage's leads, step explanations, story lines and study notes all read --ts-body
+   (typeset.css). Desktop stays at the owner's quieter 15px. Benefits, prices, sizes and
+   methods keep the 15px floor above; capitals stay 12px. */
+@media (max-width:767.98px){html body.cos-h26.cos-h26{--ts-body:1rem}}

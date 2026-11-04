@@ -13,7 +13,8 @@
 
    MOBILE MENU (#cos-mob-menu) — warm white sheet under the header: five serif
    destinations, then Help / Account / Contact, then the house line. Fades in;
-   links rise in sequence (no motion under prefers-reduced-motion).
+   links arrive together, short screens fit without scrolling (end of file; no motion
+   under prefers-reduced-motion).
 
    FOOTER (#cos-footer.hxf) — graphite #2A2A2C (warm, not black) so the logo shows
    as supplied (silver + Swiss red), one clean edge after the ivory closing.
@@ -480,3 +481,36 @@ body.hx-head-photo #cos-nav-wrap#cos-nav-wrap.is-live:not(.scrolled):not(:has([a
 body.hx-head-photo.hx-head-light #cos-nav-wrap#cos-nav-wrap.is-live:not(.scrolled):not(:has([aria-expanded="true"])) .cos-mob-btn{filter:drop-shadow(0 0 2px rgba(8,8,8,.9)) drop-shadow(0 0 6px rgba(8,8,8,.75)) drop-shadow(0 0 14px rgba(8,8,8,.55))}
 body.hx-head-photo.hx-head-light #cos-nav-wrap#cos-nav-wrap.is-live:not(.scrolled):not(:has([aria-expanded="true"])) .cos-nav-logo img{filter:drop-shadow(0 0 3px rgba(8,8,8,.75)) drop-shadow(0 0 14px rgba(8,8,8,.5))!important}
 
+
+/* ─── Mobile menu refinement (29 Oct 2026, critique) ────────────────
+   1. Entrance: the five destinations and the service links arrive together in one short
+      fade. It was a 55ms-per-link stagger over ~1s, so for half a second after opening
+      the lower destinations sat under a heavy fade (Swiss Heritage still invisible at 250ms).
+   2. Fit: the primary navigation is always in view before anything secondary. Short
+      portrait phones tighten the rows and let the assurance line step aside; landscape
+      phones set the five destinations in a column with Help / Account / Contact beside
+      them, so nothing needs a scroll. Taps stay 44px or taller. */
+@media (prefers-reduced-motion:no-preference){
+	#cos-mob-menu :is(.hxn-menu__link,.hxn-menu__secondary,.hxn-menu__foot){transform:translate3d(0,6px,0)}
+	#cos-mob-menu.open :is(.hxn-menu__link,.hxn-menu__secondary,.hxn-menu__foot){transform:none;transition:opacity 240ms var(--hx-ease-soft,ease),transform 360ms var(--hx-ease,ease);transition-delay:40ms}
+}
+@media (max-width:1023.98px) and (max-height:600px) and (orientation:portrait){
+	#cos-mob-menu .hxn-menu__link{min-height:52px;font-size:1.625rem}
+	#cos-mob-menu .hxn-menu__secondary{margin-top:12px}
+	#cos-mob-menu .hxn-menu__assure{display:none}
+	#cos-mob-menu .hxn-menu__foot{padding-top:24px}
+}
+@media (max-width:1023.98px) and (max-height:500px) and (orientation:landscape){
+	#cos-mob-menu .hxn-menu{
+		display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);column-gap:56px;align-content:start;
+		max-width:none;padding-top:calc(var(--cos-nav-h,80px) + 4px);
+		padding-bottom:calc(12px + env(safe-area-inset-bottom,0px));
+		padding-inline:max(var(--hx-margin,24px),env(safe-area-inset-left,0px)) max(var(--hx-margin,24px),env(safe-area-inset-right,0px));
+	}
+	#cos-mob-menu .hxn-menu__link{min-height:44px;font-size:1.375rem}
+	#cos-mob-menu .hxn-menu__secondary{flex-direction:column;align-items:flex-start;gap:0;margin-top:0}
+	#cos-mob-menu :is(.hxn-menu__assure,.hxn-menu__foot){display:none}
+}
+
+/* Text enlargement (30 Oct 2026): the long e-mail address wraps instead of running off a phone screen */
+#cos-footer#cos-footer .hxf-house__mail{overflow-wrap:anywhere}

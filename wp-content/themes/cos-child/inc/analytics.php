@@ -209,19 +209,30 @@ add_filter( 'woocommerce_add_to_cart_fragments', function ( array $fragments ): 
 	return $fragments;
 } );
 
-/* ─── add_to_cart: server-confirmed (non-AJAX form-post path) ───── */
-// This site has woocommerce_cart_redirect_after_add = no, so the
-// single-product form POSTs back to the same page and WooCommerce
-// re-renders it in place — no redirect, no ?added-to-cart= query var ever
-// appears. woocommerce_add_to_cart still fires normally during wp_loaded
-// (before this wp_footer hook runs), so $cos_last_added_to_cart from the
-// hook above is already populated with the real confirmed item by the time
-// we get here. True AJAX add-to-cart requests never reach this point at all
-// — WooCommerce's AJAX handler exits via wp_die() before wp_footer runs —
-// so there's no double-fire risk between the two paths.
+/* ─── add_to_cart: server-confirmed (non-AJAX link / form-post path) ── */
+// Since 29 Oct 2026 a page-load add (?add-to-cart= link or the PDP form
+// POST) 302-redirects to a clean /cart/ (post/redirect/get, inc/commerce.php),
+// so $cos_last_added_to_cart from the hook above can't survive to render the
+// tracking script. Same answer as remove_from_cart below: stash it in
+// WC()->session just before the redirect and consume it exactly once on the
+// next page load. True AJAX add-to-cart requests never redirect (the filter
+// isn't reached for them) and never reach wp_footer either — WooCommerce's
+// AJAX handler exits via wp_die() — so there's no double-fire risk.
+add_filter( 'woocommerce_add_to_cart_redirect', function ( $url ) {
+	if ( $url && ! wp_doing_ajax() && ! empty( $GLOBALS['cos_last_added_to_cart'] ) && function_exists( 'WC' ) && WC()->session ) {
+		WC()->session->set( 'cos_pending_added_to_cart', $GLOBALS['cos_last_added_to_cart'] );
+	}
+	return $url;
+}, 100 );
+
 function cos_child_track_add_to_cart_pageload(): void {
-	if ( is_admin() || empty( $GLOBALS['cos_last_added_to_cart'] ) ) return;
-	$item = $GLOBALS['cos_last_added_to_cart'];
+	if ( is_admin() ) return;
+	$item = $GLOBALS['cos_last_added_to_cart'] ?? null;
+	if ( ! $item && function_exists( 'WC' ) && WC()->session ) {
+		$item = WC()->session->get( 'cos_pending_added_to_cart' );
+		if ( $item ) WC()->session->set( 'cos_pending_added_to_cart', null );
+	}
+	if ( ! $item ) return;
 	?>
 <script nonce="<?php echo esc_attr( cos_csp_nonce() ); ?>">
 document.addEventListener('DOMContentLoaded',function(){

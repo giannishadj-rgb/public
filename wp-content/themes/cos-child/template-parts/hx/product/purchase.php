@@ -1,9 +1,11 @@
 <?php
 /**
  * Purchase column (hxpd). Order of reading: step → name → promise → price · size →
- * (set: what is included) → quantity + Add to bag → assurances → benefits → details.
- * The form is a real WooCommerce add-to-cart POST (works without JS); hx-product.js
- * upgrades it to AJAX so the page stays put and the bag count updates in place.
+ * (set: what is included) → quantity + Add to bag → assurances (services) → evidence → the
+ * ritual → benefits → details.
+ * The form is a real WooCommerce add-to-cart POST (works without JS: the add is processed
+ * once and redirects to /cart/, inc/commerce.php); hx-product.js upgrades it to AJAX so
+ * the page stays put and the bag count updates in place.
  * Legacy ids kept for tests/analytics: #cos-pdp-atc-btn, #cos-qty, data-cro-cta.
  */
 defined( 'ABSPATH' ) || exit;
@@ -18,10 +20,14 @@ $plus    = '<span class="hxpd-acc__icon" aria-hidden="true"></span>';
 <div class="hxpd-panel">
 	<div class="hxpd-panel__inner">
 		<div class="hxpd-summary">
-		<?php if ( $is_set ) : ?>
+		<?php if ( $is_set && 'g' === ( $args['look'] ?? '' ) ) :
+			// 3 Nov 2026 (owner: "apply the serum changes"): no line above the name; the four steps are the
+			// routine row under the services ?>
+		<?php elseif ( $is_set ) : ?>
 		<p class="hxpd-step"><span class="hxpd-step__verb">The four steps</span><span class="hxpd-step__rule" aria-hidden="true"></span><span class="hxpd-step__of">Cleanse · Treat · Revive · Restore</span></p>
-		<?php elseif ( $me && 'g' === ( $args['look'] ?? '' ) ) : // clarify, 28 Oct 2026: one statement of the step, not "01 Cleanse" and "Step 1 of 4" ?>
-		<p class="hxpd-step"><span class="hxpd-step__verb">Step <?php echo esc_html( (string) (int) $me['num'] ); ?> of 4 <span aria-hidden="true">·</span> <?php echo esc_html( $me['verb'] ); ?></span></p>
+		<?php elseif ( $me && 'g' === ( $args['look'] ?? '' ) ) :
+			// 3 Nov 2026 (owner): the step line and its meter moved into "In the ritual" below, so the
+			// step is stated once ?>
 		<?php elseif ( $me ) : ?>
 		<p class="hxpd-step"><span class="hx-sr">Step </span><span class="hx-step"><?php echo esc_html( $me['num'] ); ?></span><span class="hxpd-step__rule" aria-hidden="true"></span><span class="hxpd-step__verb"><?php echo esc_html( $me['verb'] ); ?></span><span class="hxpd-step__of"><span class="hx-sr">, </span>Step <?php echo esc_html( (string) (int) $me['num'] ); ?> of 4</span></p>
 		<?php endif; ?>
@@ -35,11 +41,9 @@ $plus    = '<span class="hxpd-acc__icon" aria-hidden="true"></span>';
 			<span class="hxpd-price__amt"><?php echo esc_html( $args['price_txt'] ); ?></span>
 			<?php if ( $args['size'] && ! $is_set ) : ?><span class="hxpd-price__dot" aria-hidden="true"></span><span class="hx-sr">, </span><span class="hxpd-price__size"><?php echo esc_html( $args['size'] ); ?></span><?php endif; ?>
 		</p>
-		<?php if ( $is_set && $args['saving'] > 0 ) : ?>
-		<p class="hxpd-saving"><?php echo esc_html( cos_hxpd_money( $args['individual'] ) ); ?> when bought separately <span aria-hidden="true">·</span> you save <?php echo esc_html( cos_hxpd_money( $args['saving'] ) ); ?></p>
-		<?php endif; ?>
+		<?php // the "You save / bought separately" lines were removed from the set page (owner, 3 Nov 2026) ?>
 
-		<?php if ( $is_set ) : ?>
+		<?php if ( $is_set && ! ( 'g' === ( $args['look'] ?? '' ) ) ) : // the routine row below lists the four on this look ?>
 		<ol class="hxpd-contents" aria-label="Included in The Complete Ritual">
 			<?php foreach ( $args['formulas'] as $f ) : ?>
 			<li><a class="hxpd-contents__link" href="<?php echo esc_url( $f['url'] ); ?>"><span class="hxpd-contents__num"><?php echo esc_html( $f['num'] ); ?></span><span class="hxpd-contents__name"><?php echo esc_html( $f['full'] ); ?></span><span class="hxpd-contents__size"><?php echo esc_html( $f['size'] ); ?></span></a></li>
@@ -68,16 +72,13 @@ $plus    = '<span class="hxpd-acc__icon" aria-hidden="true"></span>';
 		<p class="hxpd-unavailable">Currently unavailable. <?php echo $is_set ? 'Each formula can still be bought on its own.' : ''; ?></p>
 		<?php endif; ?>
 
-		<p class="hxpd-confirm" role="status" aria-live="polite" data-hxpd-confirm><?php if ( $args['added'] ) : ?>Added to your bag. <a class="hxpd-confirm__link" href="<?php echo esc_url( $args['cart_url'] ); ?>">View bag</a><?php endif; ?></p>
+		<p class="hxpd-confirm" role="status" aria-live="polite" data-hxpd-confirm></p>
 
-		<?php if ( $study ) : ?>
-		<p class="hxpd-evidence"><a href="#hxpd-result" class="hxpd-evidence__link"><span class="hxpd-evidence__fig"><?php echo esc_html( $study['sign'] . $study['n'] . $study['unit'] ); ?></span> <?php echo esc_html( strtolower( $study['finding'] ) ); ?> <span class="hxpd-evidence__kind">(<?php echo esc_html( strtolower( $study['kind'] ) ); ?>, 28 days)</span></a></p>
-		<?php endif; ?>
-
+		<?php // 1 Nov 2026 (owner, after a critique): the service assurances sit directly under Add to bag ?>
 		<?php if ( 'g' === ( $args['look'] ?? '' ) ) : ?>
 		<ul class="hxpd-services" aria-label="Our services">
-			<li><span class="hxpd-services__icon hxpd-services__icon--ship" aria-hidden="true"></span><?php echo esc_html( $args['shipping'] ); ?></li>
-			<li><span class="hxpd-services__icon hxpd-services__icon--return" aria-hidden="true"></span><a href="<?php echo esc_url( home_url( '/shipping-returns/' ) ); ?>">Returns within 30 days</a></li>
+			<li><span class="hxpd-services__icon hxpd-services__icon--ship" aria-hidden="true"></span><?php echo esc_html( cos_child_shipping_message( 'short' ) ); ?></li>
+			<li><span class="hxpd-services__icon hxpd-services__icon--return" aria-hidden="true"></span>30-day returns</li>
 			<li><span class="hxpd-services__icon hxpd-services__icon--lock" aria-hidden="true"></span>Secure checkout</li>
 		</ul>
 		<?php else : ?>
@@ -86,6 +87,41 @@ $plus    = '<span class="hxpd-acc__icon" aria-hidden="true"></span>';
 			<li><a href="<?php echo esc_url( home_url( '/shipping-returns/' ) ); ?>">Returns within 30 days</a></li>
 		</ul>
 		<?php endif; ?>
+
+		<?php // the one-line study result under the services was removed (owner, 3 Nov 2026); the full result stays further down the page (#hxpd-result) ?>
+
+		<?php // the step row was removed from The Complete Ritual (owner, 3 Nov 2026) ?>
+		<?php if ( $me && 'g' === ( $args['look'] ?? '' ) ) : // the four formula pages ?>
+		<?php // 3 Nov 2026 (owner, ref: an "at-home facial" step chart; then a "Your daily routine" row): the ritual as one horizontal
+		// timeline — "Step N" over a hairline with a dot per step, each pack at its true relative size,
+		// the step named in italic serif. This formula is the filled dot; the other three link to their
+		// pages. Under it, this step's one gesture. "In your bag" per step (hx-product.js keeps it current). ?>
+		<section class="hxpd-tl" aria-labelledby="hxpd-tl-title">
+			<div class="hxpd-tl__head">
+				<?php // visible heading removed (owner, 3 Nov 2026); kept for screen readers as the section's name ?>
+				<h2 id="hxpd-tl-title" class="hx-sr"><?php echo $is_set ? 'Included in The Complete Ritual' : 'The ritual, morning and evening'; ?></h2>
+				<p class="hxpd-tl__count" data-hxpd-owned<?php echo $args['owned'] ? '' : ' hidden'; ?>><?php echo esc_html( $args['owned'] . ' of 4 in your bag' ); ?></p>
+			</div>
+			<ol class="hxpd-tl__list">
+				<?php foreach ( $args['formulas'] as $f ) :
+					$tag = $f['current'] ? 'div' : 'a'; ?>
+				<li class="hxpd-tl__step hxpd-tl__step--<?php echo esc_attr( $f['key'] ); ?><?php echo $f['current'] ? ' is-current' : ''; ?><?php echo ! empty( $f['owned'] ) ? ' is-owned' : ''; ?>" data-hxpd-pid="<?php echo (int) ( $f['pid'] ?? 0 ); ?>"<?php echo $f['current'] ? ' aria-current="step"' : ''; ?>>
+					<<?php echo $tag; ?> class="hxpd-tl__link"<?php echo $f['current'] ? '' : ' href="' . esc_url( $f['url'] ) . '"'; ?>>
+						<span class="hxpd-tl__orb"><span class="hxpd-tl__no"><span class="hx-sr">Step </span><?php echo esc_html( (string) (int) $f['num'] ); ?></span>
+						<span class="hxpd-tl__pack" aria-hidden="true"><?php echo cos_h26_picture( 'packshot-' . $f['key'], array( 480, 640 ), array( 2, 3 ), '', array( 'sizes' => '80px', 'w' => 480 ) ); // phpcs:ignore -- transparent cut-out on a shared baseline ?></span></span>
+						<span class="hxpd-tl__verb"><?php echo esc_html( $f['verb'] ); ?></span>
+						<span class="hxpd-tl__why"><?php echo esc_html( $is_set ? $f['size'] : str_replace( '-', "‑", $f['benefit'] ) ); // the set: what is in the box ?></span>
+						<span class="hx-sr">: <?php echo esc_html( $f['full'] ); ?><?php echo $f['current'] ? ', this formula' : ''; ?></span>
+						<span class="hxpd-tl__state" data-hxpd-state><?php echo ! empty( $f['owned'] ) ? 'In your bag' : ''; ?></span>
+					</<?php echo $tag; ?>>
+				</li>
+				<?php endforeach; ?>
+			</ol>
+			<?php // the gesture line under the steps was removed (owner, 3 Nov 2026); "How to use" further down carries it ?>
+		</section>
+		<?php endif; ?>
+		<?php if ( 'g' === ( $args['look'] ?? '' ) && function_exists( 'cos_child_ritual_bag_script' ) ) echo cos_child_ritual_bag_script(); // phpcs:ignore -- JSON of product ids; replaced by the add-to-cart fragment ?>
+
 
 		<?php if ( 'ab' === ( $args['look'] ?? '' ) ) :
 			get_template_part( 'template-parts/hx/product/purchase-ab', null, $args );
@@ -113,10 +149,6 @@ $plus    = '<span class="hxpd-acc__icon" aria-hidden="true"></span>';
 				<p class="hxpd-inci__note">Refer to the packaging for the most up-to-date list.</p>
 			</details>
 			<?php else : ?>
-			<details class="hxpd-acc__item">
-				<summary class="hxpd-acc__sum">The ritual box<?php echo $plus; // phpcs:ignore ?></summary>
-				<p class="hxpd-acc__text">All four formulas, presented in the Caviar of Switzerland ritual box with a written ritual guide. Ready to give.</p>
-			</details>
 			<details class="hxpd-acc__item" id="hxpd-ingredients">
 				<summary class="hxpd-acc__sum">Full ingredient lists<?php echo $plus; // phpcs:ignore ?></summary>
 				<?php foreach ( $args['formulas'] as $f ) : ?>

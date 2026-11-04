@@ -33,6 +33,9 @@ $hxpd = cos_hxpd_context( $product );
 $theme_dir = get_stylesheet_directory();
 $theme_uri = get_stylesheet_directory_uri();
 wp_enqueue_style( 'cos-hx-product', $theme_uri . '/assets/css/hx/product.css', array( 'cos-hx-system' ), (string) filemtime( $theme_dir . '/assets/css/hx/product.css' ) );
+// 3 Nov 2026: "Your ritual" uses the homepage collection tiles; collection.css scopes them with
+// body:is(.cos-h26,.single-product), loaded after product.css
+wp_enqueue_style( 'cos-hx-collection', $theme_uri . '/assets/css/hx/collection.css', array( 'cos-hx-product' ), (string) filemtime( $theme_dir . '/assets/css/hx/collection.css' ) );
 wp_enqueue_script( 'cos-hx-product', $theme_uri . '/assets/js/hx-product.js', array( 'jquery' ), (string) filemtime( $theme_dir . '/assets/js/hx-product.js' ), array( 'strategy' => 'defer', 'in_footer' => true ) );
 if ( function_exists( 'WC' ) ) wp_enqueue_script( 'wc-add-to-cart' );
 ?><!DOCTYPE html>

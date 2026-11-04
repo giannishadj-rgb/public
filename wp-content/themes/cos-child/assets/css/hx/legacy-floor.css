@@ -73,7 +73,7 @@
 #cos-main-content .cos-ing-hero-inner .cos-ing-eyebrow{color:rgba(255,255,255,.8)}
 
 /* ─── Actions: links, buttons, tabs ──────────────────────────────────── */
-#cos-main-content :is(.cos-art-cta-link, .cos-art-back a, .cos-ing-back a, .cos-cc-product-link, .cos-cc-cta-btn, .cos-cc-cta-ghost, .cos-ct-submit, .cos-help-card a, .cos-help-contact-tile a, .cos-help-nav-link, .cos-jnl-nav-link, .cos-jnl-card-cta, .cos-jnl-hub-card-cta, .cos-jnl-hub-cta-link, .cos-jnl-hub-back, .ship-contact-btn, .cos-404-link-primary, .cos-404-link-outline){
+#cos-main-content :is(.cos-art-cta-link, .cos-art-back a, .cos-ing-back a, .cos-cc-product-link, .cos-cc-cta-btn, .cos-cc-cta-ghost, .cos-ct-submit, .cos-help-card a, .cos-help-contact-tile a, .cos-help-nav-link, .cos-jnl-nav-link, .cos-jnl-card-cta, .cos-jnl-hub-card-cta, .cos-jnl-hub-cta-link, .cos-jnl-hub-back, .ship-contact-btn){
 	font-size:.78125rem;
 	font-weight:500;
 	letter-spacing:.16em;
