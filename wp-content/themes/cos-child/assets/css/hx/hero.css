@@ -1,6 +1,6 @@
 /* ==========================================================================
    hx/hero.css — 01 Hero (14 Oct 2026 rebuild). Prefix hxh-. Owner: hero agent.
-   Markup: template-parts/home-2026/hero.php. Images: wc-hero-* (build_wc_hero.py, 19 Oct:
+   Markup: template-parts/home-2026/hero.php. Images: wc-hero-set-* since 6 Nov 2026 (four-formula lineup, build_wc_hero_lineup.py); before that wc-hero-* (build_wc_hero.py, 19 Oct:
    the owner's jar + lid photograph, pixel-identical, in a built ivory studio set; replaces
    the champagne-silk hxh-* set).
 
@@ -14,7 +14,7 @@
    ========================================================================== */
 
 /* the legacy hook class carries old section styles — neutralise them */
-body.cos-h26 .hxh.h26-hero--pearl{background:#F8F8F8}
+body.cos-h26 .hxh.h26-hero--pearl{background:#DCDCE2}
 
 .hxh{
 	--hxh-nav:var(--cos-nav-h,80px);
@@ -25,7 +25,7 @@ body.cos-h26 .hxh.h26-hero--pearl{background:#F8F8F8}
 	display:flex;
 	min-height:max(560px,100svh);
 	overflow:clip;
-	background:#F8F8F8; /* site pearl: no flash before the photograph paints */
+	background:#DCDCE2; /* the lineup set's mean tone (6 Nov 2026): no flash before the photograph paints */
 	color:var(--hx-text);
 }
 
@@ -116,18 +116,13 @@ body.cos-h26 .hxh.h26-hero--pearl{background:#F8F8F8}
 }
 @media (min-width:1100px) and (min-aspect-ratio:1/1){
 	.hxh{--hxh-pos-x:63%}
-	/* Product scale: the jar and lid fill ~46–49% of the width at every desktop size (unscaled they
-	   are 41% at 1280, 45% at 1440, 39% at 1920+). Scaled from the lid's left edge so the object
-	   grows right and down, away from the copy. The independent `scale` property composes with
-	   the entrance transform on the img and the drift translate on the wrapper. */
-	.hxh__picture{scale:1.1;transform-origin:45% 60%}
+	/* 6 Nov 2026: the jar-era picture zoom (scale 1.08–1.18) is gone; the four-formula lineup is
+	   sized in the frame itself (build_wc_hero_lineup.py) so all four stay whole beside the copy. */
 }
-@media (min-width:1440px) and (min-aspect-ratio:1/1){.hxh__picture{scale:1.08}}
-@media (min-width:1800px) and (min-aspect-ratio:1/1){.hxh__picture{scale:1.18}}
 /* Narrow landscape (768–1099px): covering the full screen height makes the jar about half
    the screen wide, so no crop clears both the copy and the right edge. The frame covers 80%
    of the height instead (jar 20% smaller, lid ~50px clear of the copy), and the set's own
-   edge rows (sampled from wc-hero-wide) continue into the thin bands above and below; they
+   edge rows (sampled from wc-hero-set-wide, 6 Nov 2026) continue into the thin bands above and below; they
    are smooth side-to-side gradients that barely change vertically, so the join does not show. */
 @media (min-width:768px) and (max-width:1099.98px) and (min-aspect-ratio:1/1){
 	/* The bands are laid out exactly like the photograph (same rendered width, the larger of the
@@ -136,8 +131,8 @@ body.cos-h26 .hxh.h26-hero--pearl{background:#F8F8F8}
 	.hxh__media{
 		container-type:size;
 		background-image:
-			linear-gradient(90deg,#D8D7D2 0%,#DEDDD9 10%,#E5E4E0 25%,#EBEAE6 50%,#E8E7E3 75%,#E2E1DD 90%,#DCDBD7 100%),
-			linear-gradient(90deg,#DFDCD5 0%,#E3E0DB 10%,#E9E6E1 25%,#EDEAE5 50%,#EAE7E2 75%,#E4E1DC 90%,#DFDCD7 100%);
+			linear-gradient(90deg,#C8C9D1 0%,#C7C8D0 10%,#C9CAD2 25%,#D8D8DE 50%,#DCDCE3 75%,#E1E0E7 90%,#E2E1E8 100%),
+			linear-gradient(90deg,#DFDEE6 0%,#DFDEE6 10%,#E0DFE7 25%,#E4E3E8 50%,#D7D6DC 75%,#DEDDE5 90%,#DCDAE2 100%);
 		background-repeat:no-repeat;
 		background-size:max(100cqw,74cqh * 1.969) 50%;
 		background-position:var(--hxh-pos-x) top,var(--hxh-pos-x) bottom;

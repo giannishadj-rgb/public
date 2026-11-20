@@ -86,7 +86,7 @@
 
 /* ─── Breadcrumbs (skin concerns) ────────────────────────────────────── */
 #cos-main-content .cos-cc-crumbs ol{align-items:center;font-size:var(--hx-fs-label,.75rem);color:var(--hx-fg-3,#5D5F60)}
-#cos-main-content .cos-cc-crumbs a{display:inline-flex;align-items:center;min-height:32px}
+#cos-main-content .cos-cc-crumbs a{display:inline-flex;align-items:center;min-height:44px}   /* was 32px (re-audit 8 Nov 2026) */
 
 /* FAQ closing block: its sizes are inline style attributes, so only !important reaches them */
 #cos-main-content #cos-faq [style*="font-size:10px"]{font-size:var(--hx-fs-label,.75rem)!important;font-weight:500!important}
@@ -101,3 +101,22 @@
 	letter-spacing:var(--hx-tr-label,.2em);
 	color:rgba(255,255,255,.72);
 }
+
+/* ─── Re-audit 8 Nov 2026 ───────────────────────────────────────────────
+   Ingredient pages' back row (All five actives / Science hub / Clinical studies): 37–38px → 44px targets.
+   Contact form fields: the page's own CSS set 13px (iPhone Safari zooms on focus under 16px) and removed the
+   focus outline; they now follow DESIGN.md's commerce fields: 16px, 50px tall, one-pixel rule, square,
+   and the system's 2px keyboard ring. */
+#cos-main-content .cos-ing-back-inner a{display:inline-flex;align-items:center;min-height:44px}
+#cos-main-content :is(.cos-ct-input,.cos-ct-textarea){font-size:1rem;line-height:1.4;min-height:50px;border:1px solid var(--hx-line-strong,rgba(28,29,31,.28));border-radius:0;background:var(--hx-white,#F8F8F8);color:var(--hx-ink,#1C1D1F)}
+#cos-main-content :is(.cos-ct-input,.cos-ct-textarea):focus{border-color:var(--hx-ink,#1C1D1F)}
+#cos-main-content :is(.cos-ct-input,.cos-ct-textarea):focus-visible{outline:var(--hx-focus-width,2px) solid var(--hx-focus-color,#1C1D1F);outline-offset:var(--hx-focus-offset,4px)}
+#cos-main-content :is(.cos-ct-input,.cos-ct-textarea)::placeholder{color:var(--hx-muted,#5C5C5A);opacity:1}
+/* Journal articles: the 680px column gave ~84 characters a line at 14px; 608px (560px of text inside the
+   24px padding, DESIGN.md's 40em prose measure) gives ~74. The whole column narrows, so headings,
+   pull quotes and the CTA stay aligned with the text. */
+#cos-main-content .cos-art-content{max-width:608px}
+
+/* 17 Nov 2026 (site critique): journal article bodies sat on white (#fff) inside the pearl page */
+html body #cos-main-content .cos-art-body{background:transparent}
+html body #cos-main-content .cos-art-cta{border:1px solid var(--hx-line,rgba(28,29,31,.14))}

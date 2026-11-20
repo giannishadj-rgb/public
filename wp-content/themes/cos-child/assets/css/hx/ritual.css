@@ -374,3 +374,40 @@ body.cos-h26 .hxr__link:focus-visible .hxr__frame::after{
 @media (max-width:899.98px){
 	.hxr__count{display:block;margin:var(--hx-s-3) var(--hx-margin) 0;font-family:var(--hx-sans);font-size:.75rem;letter-spacing:.08em;color:var(--hx-fg-3,#5C5C5A);font-variant-numeric:lining-nums tabular-nums;text-align:right}
 }
+
+/* ─── The gesture at rest (layout, 4 Nov 2026, owner) ───────────────────────────────────
+   Pointer screens ≥900px only showed how to apply each step on hover, so a first-time visitor
+   scanning the four panels never saw the order logic or the gestures. One short line now sits
+   under the formula name at rest; on hover or keyboard focus it gives way to the full
+   explanation (same place, no repeat). Touch screens and phones already show the full text in
+   the caption, so the short line is not drawn there. Same grid-rows collapse as .hxr__more. */
+.hxr__gist{display:none}
+@media (min-width:900px) and (hover:hover) and (pointer:fine){
+	.hxr__gist{
+		display:grid;
+		grid-template-rows:1fr;
+		transition:grid-template-rows 900ms var(--hx-ease),opacity 500ms var(--hx-ease-soft);
+	}
+	.hxr__gist-in{display:flex;justify-content:center;min-height:0;overflow:hidden}
+	.hxr__gist-text{
+		display:block;
+		max-width:24ch;
+		margin-top:var(--hx-s-3);
+		font-family:var(--hx-sans);
+		font-size:1rem;
+		font-weight:400;
+		font-synthesis:none;
+		line-height:1.5;
+		letter-spacing:.01em;
+		color:var(--hx-on-dark);
+		text-wrap:balance;
+		text-shadow:0 0 18px rgba(var(--hxr-veil),.5);
+		-webkit-font-smoothing:antialiased;
+	}
+	.hxr__link:is(:hover,:focus-visible) .hxr__gist{grid-template-rows:0fr;opacity:0}
+	/* the low shade reaches a little higher at rest, to carry the extra line */
+	.hxr__frame::after{background:radial-gradient(ellipse 90% 30% at 50% 100%,rgba(var(--hxr-veil),.46),rgba(var(--hxr-veil),0) 100%),linear-gradient(to top,rgba(var(--hxr-veil),.5) 0,rgba(var(--hxr-veil),.3) 18%,rgba(var(--hxr-veil),.08) 34%,rgba(var(--hxr-veil),0) 44%)}
+}
+@media (prefers-reduced-motion:reduce){
+	.hxr__gist{transition:none!important}
+}

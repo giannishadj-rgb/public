@@ -6,6 +6,10 @@
  * with the honest note that the set itself was never studied and the cleanser has no study), how
  * to use, and questions. The set has no copy of its own beyond this file: everything else is read
  * from the four formulas.
+ *
+ * 17 Nov 2026 (site critique, owner: fix all): distilled. The four formulas were shown about six times;
+ * the three-panel row, the texture strip under the results and the closing "Each formula on its own"
+ * tiles are gone, as are the labels above headings. Bar: five parts.
  */
 defined( 'ABSPATH' ) || exit;
 $studies = $args['studies'];
@@ -18,7 +22,6 @@ $faqs = array(
 );
 
 $parts = array(
-	array( 'hxcr-intro', 'The ritual' ),
 	array( 'hxpd-sci', 'The four steps' ),
 	array( 'hxpd-use', 'How to use' ),
 	array( 'hxpd-actives', 'Ingredients' ),
@@ -27,39 +30,12 @@ $parts = array(
 );
 get_template_part( 'template-parts/hx/section-bar', null, array( 'items' => array_map( static fn( $p ) => array( 'href' => '#' . $p[0], 'text' => $p[1] ), $parts ) ) );
 
-// 3 Nov 2026 (owner: "like" Chanel's Sublimage skincare-ritual page, in this site's light look,
-// purchase block kept first): a centred opening, a three-panel triptych, a full-bleed light band
-// with one line, the four formulas as large alternating rows, the gesture, then the facts, and
-// the line at the end. Chanel's refill carousel has no equivalent (no refill programme, 31 Oct).
-$tri = array(
-	array( 'hxcr-caviar', array( 480, 720, 1080 ), 'In every formula', // 3 Nov 2026 (owner): free Unsplash caviar photograph, hxcr-caviar.origin.json
-		 'Caviar extract', 'Caviar extract is in all four formulas, from the cleanser to the cream.', '#hxpd-actives', 'The ingredients' ),
-	array( 'ritual-model', array( 640, 960, 1280 ), 'Morning and evening', 'Four steps, one order', 'Cleanse, treat, revive, restore: the same four gestures, in the same order, every day.', '#hxpd-sci', 'The four steps' ),
-	array( 'texture-application', array( 600, 800, 1200 ), 'The textures', 'From water to cream', 'A micellar water, a serum, an eye cream and a 24h cream, applied from the lightest to the richest.', '#hxpd-use', 'How to use' ),
-);
 ?>
 
 <section class="hxcr-intro" id="hxcr-intro" aria-labelledby="hxcr-intro-title">
 	<div class="hx-wrap hxcr-intro__inner">
-		<p class="hxcr-kicker" data-hx-reveal>The Complete Ritual</p>
 		<h2 id="hxcr-intro-title" class="hx-heading hxcr-intro__title" data-hx-reveal>Four formulas, used in one order</h2>
 		<p class="hx-lead hxcr-intro__lede" data-hx-reveal>Micellar Water All-in-One Cleanser, Advanced Repair Serum, Revitalizing Eye Cream and 24h Regeneration Cream: the whole routine, each full size, in one set.</p>
-	</div>
-</section>
-
-<section class="hxcr-tri" aria-label="The ritual in three parts">
-	<div class="hx-wrap">
-		<ul class="hxcr-tri__list" data-hx-stagger>
-			<?php foreach ( $tri as $t ) : ?>
-			<li class="hxcr-tri__panel" data-hx-reveal>
-				<div class="hxcr-tri__media<?php echo 'auth-ritual-spoon' === $t[0] ? ' hxcr-tri__media--whole' : ''; ?>"><?php echo cos_h26_picture( $t[0], $t[1], array( 3, 4 ), '', array( 'sizes' => '(min-width: 900px) 30vw, 88vw', 'w' => 720 ) ); // phpcs:ignore -- escaped in the helper ?></div>
-				<p class="hxcr-kicker"><?php echo esc_html( $t[2] ); ?></p>
-				<h3 class="hxcr-tri__title"><?php echo esc_html( $t[3] ); ?></h3>
-				<p class="hx-body hxcr-tri__text"><?php echo esc_html( $t[4] ); ?></p>
-				<a class="hx-link hxcr-tri__link" href="<?php echo esc_attr( $t[5] ); ?>"><?php echo esc_html( $t[6] ); ?><span class="hx-arrow" aria-hidden="true"></span></a>
-			</li>
-			<?php endforeach; ?>
-		</ul>
 	</div>
 </section>
 
@@ -80,7 +56,6 @@ $tri = array(
 <section class="hxpd-sci hxcr-steps" id="hxpd-sci" aria-labelledby="hxpd-sci-title">
 	<div class="hx-wrap">
 		<div class="hxcr-steps__head">
-			<p class="hxcr-kicker" data-hx-reveal>Cleanse · Treat · Revive · Restore</p>
 			<h2 id="hxpd-sci-title" class="hx-heading hxcr-steps__title" data-hx-reveal>The four steps</h2>
 			<p class="hx-body hxcr-steps__lede" data-hx-reveal>All four come full size, and each is also sold on its own.</p>
 		</div>
@@ -137,7 +112,6 @@ $tri = array(
 			<figcaption class="hx-sr">How much of each formula to use</figcaption>
 		</figure>
 		<div class="hxcr-gesture__body">
-			<p class="hxcr-kicker" data-hx-reveal>The gesture</p>
 			<h2 id="hxpd-use-title" class="hx-heading hxcr-gesture__title" data-hx-reveal>How to use</h2>
 			<ol class="hxcr-gesture__steps">
 				<?php foreach ( $args['formulas'] as $f ) : ?>
@@ -166,19 +140,7 @@ $tri = array(
 	</div>
 </section>
 
-<?php
-// 3 Nov 2026 (owner ref: a results band over a strip of texture close-ups): "Measured, formula by formula"
-// on a soft pearl ground, the two instrument-measured results as serif figures and the cream's
-// self-reported result in words (it never takes a figure, DESIGN.md), then the four textures edge to edge.
-// Textures (hxcr-tex.origin.json): the serum is the owner's photograph (DSC_6612); cleanser, eye cream and
-// 24h cream are Unsplash-licence photographs (the note under the strip was removed by the owner, 3 Nov 2026).
-$hxcr_tex = array(
-	'cleanser' => 'Rippling clear water, illustrating the micellar water',
-	'serum'    => 'The Advanced Repair Serum dispensed onto a fingertip',
-	'eye'      => 'A smear of white cream, illustrating the eye cream',
-	'cream'    => 'A smear of rich white cream, illustrating the 24h cream',
-);
-?>
+<?php // results on a soft pearl ground: the two instrument-measured results as serif figures, the cream's self-reported result in words (never a figure, DESIGN.md) ?>
 <section class="hxpd-result hxcr-tex" id="hxpd-result" aria-labelledby="hxpd-result-title">
 	<div class="hxcr-tex__sky">
 		<div class="hx-wrap">
@@ -204,16 +166,6 @@ $hxcr_tex = array(
 			<p class="hxcr-tex__more" data-hx-reveal><a class="hx-link" href="<?php echo esc_url( $args['clinical'] ); ?>">Read the studies<span class="hx-arrow" aria-hidden="true"></span></a></p>
 		</div>
 	</div>
-	<ul class="hxcr-tex__strip" aria-label="The four textures">
-		<?php foreach ( $args['formulas'] as $f ) : ?>
-		<li class="hxcr-tex__panel hxcr-tex__panel--<?php echo esc_attr( $f['key'] ); ?>">
-			<a class="hxcr-tex__link" href="<?php echo esc_url( $f['url'] ); ?>">
-				<?php echo cos_h26_picture( 'hxcr-tex-' . $f['key'], array( 480, 720, 1080 ), array( 3, 4 ), $hxcr_tex[ $f['key'] ] ?? '', array( 'class' => 'hxcr-tex__pic', 'sizes' => '(min-width: 760px) 25vw, 50vw', 'w' => 720 ) ); // phpcs:ignore -- escaped in the helper ?>
-				<span class="hxcr-tex__cap" data-hx-reveal><span class="hxcr-tex__step">Step <?php echo esc_html( (string) (int) $f['num'] ); ?> · <?php echo esc_html( $f['verb'] ); ?></span><span class="hxcr-tex__name"><?php echo esc_html( $f['full'] ); ?></span></span>
-			</a>
-		</li>
-		<?php endforeach; ?>
-	</ul>
 </section>
 
 <section class="hxpd-faq" id="hxpd-faq" aria-labelledby="hxpd-faq-title">
@@ -227,15 +179,5 @@ $hxcr_tex = array(
 			</details>
 			<?php endforeach; ?>
 		</div>
-	</div>
-</section>
-
-<section class="hxpd-steps hxcr-line" id="hxpd-line" aria-labelledby="hxpd-line-title">
-	<div class="hx-wrap">
-		<div class="hxpd-steps__head hxcr-line__head">
-			<p class="hxcr-kicker" data-hx-reveal>Discover the line</p>
-			<h2 id="hxpd-line-title" class="hx-heading hxpd-steps__title" data-hx-reveal>Each formula on its own</h2>
-		</div>
-		<?php get_template_part( 'template-parts/home-2026/collection', null, array( 'embed' => true ) ); ?>
 	</div>
 </section>

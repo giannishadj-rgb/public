@@ -1,13 +1,29 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-15T17:30:59.628149+00:00",
+  "generatedAt": "2026-11-08T09:23:45.007Z",
   "title": "Design System: Caviar of Switzerland",
   "extensions": {
     "colorMeta": {
-      "warm-ivory": {
+      "pearl": {
         "role": "neutral",
-        "displayName": "Warm Ivory",
-        "canonical": "#F4F1EA",
+        "displayName": "Pearl",
+        "canonical": "#F8F8F8",
+        "tonalRamp": [
+          "oklch(15% 0.000 90)",
+          "oklch(26% 0.000 90)",
+          "oklch(38% 0.000 90)",
+          "oklch(49% 0.000 90)",
+          "oklch(61% 0.000 90)",
+          "oklch(72% 0.000 90)",
+          "oklch(84% 0.000 90)",
+          "oklch(95% 0.000 90)"
+        ],
+        "tonalRampPurpose": "Preview-only synthesized lightness ramp; not application tokens."
+      },
+      "stone-ground": {
+        "role": "neutral",
+        "displayName": "Stone Ground",
+        "canonical": "#EDE9E1",
         "tonalRamp": [
           "oklch(15% 0.012 85)",
           "oklch(26% 0.012 85)",
@@ -18,266 +34,305 @@
           "oklch(84% 0.012 85)",
           "oklch(95% 0.012 85)"
         ],
-        "tonalRampPurpose": "Preview-only synthesized lightness ramp; does not add application tokens."
-      },
-      "pearl": {
-        "role": "neutral",
-        "displayName": "Pearl",
-        "canonical": "#FCFBF8",
-        "tonalRamp": [
-          "oklch(15% 0.005 85)",
-          "oklch(26% 0.005 85)",
-          "oklch(38% 0.005 85)",
-          "oklch(49% 0.005 85)",
-          "oklch(61% 0.005 85)",
-          "oklch(72% 0.005 85)",
-          "oklch(84% 0.005 85)",
-          "oklch(95% 0.005 85)"
-        ],
-        "tonalRampPurpose": "Preview-only synthesized lightness ramp; does not add application tokens."
+        "tonalRampPurpose": "Preview-only synthesized lightness ramp; not application tokens."
       },
       "champagne": {
         "role": "neutral",
         "displayName": "Champagne",
         "canonical": "#E8E0D2",
         "tonalRamp": [
-          "oklch(15% 0.023 85)",
-          "oklch(26% 0.023 85)",
-          "oklch(38% 0.023 85)",
-          "oklch(49% 0.023 85)",
-          "oklch(61% 0.023 85)",
-          "oklch(72% 0.023 85)",
-          "oklch(84% 0.023 85)",
-          "oklch(95% 0.023 85)"
+          "oklch(15% 0.021 82)",
+          "oklch(26% 0.021 82)",
+          "oklch(38% 0.021 82)",
+          "oklch(49% 0.021 82)",
+          "oklch(61% 0.021 82)",
+          "oklch(72% 0.021 82)",
+          "oklch(84% 0.021 82)",
+          "oklch(95% 0.021 82)"
         ],
-        "tonalRampPurpose": "Preview-only synthesized lightness ramp; does not add application tokens."
+        "tonalRampPurpose": "Preview-only synthesized lightness ramp; not application tokens."
       },
       "pale-stone": {
         "role": "neutral",
         "displayName": "Pale Stone",
         "canonical": "#DDD8CF",
         "tonalRamp": [
-          "oklch(15% 0.012 85)",
-          "oklch(26% 0.012 85)",
-          "oklch(38% 0.012 85)",
-          "oklch(49% 0.012 85)",
-          "oklch(61% 0.012 85)",
-          "oklch(72% 0.012 85)",
-          "oklch(84% 0.012 85)",
-          "oklch(95% 0.012 85)"
+          "oklch(15% 0.013 82)",
+          "oklch(26% 0.013 82)",
+          "oklch(38% 0.013 82)",
+          "oklch(49% 0.013 82)",
+          "oklch(61% 0.013 82)",
+          "oklch(72% 0.013 82)",
+          "oklch(84% 0.013 82)",
+          "oklch(95% 0.013 82)"
         ],
-        "tonalRampPurpose": "Preview-only synthesized lightness ramp; does not add application tokens."
+        "tonalRampPurpose": "Preview-only synthesized lightness ramp; not application tokens."
+      },
+      "ink": {
+        "role": "primary",
+        "displayName": "Atelier Ink",
+        "canonical": "#1C1D1F",
+        "tonalRamp": [
+          "oklch(15% 0.004 264)",
+          "oklch(26% 0.004 264)",
+          "oklch(38% 0.004 264)",
+          "oklch(49% 0.004 264)",
+          "oklch(61% 0.004 264)",
+          "oklch(72% 0.004 264)",
+          "oklch(84% 0.004 264)",
+          "oklch(95% 0.004 264)"
+        ],
+        "tonalRampPurpose": "Preview-only synthesized lightness ramp; not application tokens."
       },
       "graphite": {
         "role": "primary",
-        "displayName": "Graphite",
-        "canonical": "#202221",
+        "displayName": "Lettering Graphite",
+        "canonical": "#2A2B2D",
         "tonalRamp": [
-          "oklch(15% 0.004 155)",
-          "oklch(26% 0.004 155)",
-          "oklch(38% 0.004 155)",
-          "oklch(49% 0.004 155)",
-          "oklch(61% 0.004 155)",
-          "oklch(72% 0.004 155)",
-          "oklch(84% 0.004 155)",
-          "oklch(95% 0.004 155)"
+          "oklch(15% 0.004 265)",
+          "oklch(26% 0.004 265)",
+          "oklch(38% 0.004 265)",
+          "oklch(49% 0.004 265)",
+          "oklch(61% 0.004 265)",
+          "oklch(72% 0.004 265)",
+          "oklch(84% 0.004 265)",
+          "oklch(95% 0.004 265)"
         ],
-        "tonalRampPurpose": "Preview-only synthesized lightness ramp; does not add application tokens."
+        "tonalRampPurpose": "Preview-only synthesized lightness ramp; not application tokens."
       },
       "body-graphite": {
         "role": "neutral",
         "displayName": "Body Graphite",
         "canonical": "#3A3B3D",
         "tonalRamp": [
-          "oklch(15% 0.004 260)",
-          "oklch(26% 0.004 260)",
-          "oklch(38% 0.004 260)",
-          "oklch(49% 0.004 260)",
-          "oklch(61% 0.004 260)",
-          "oklch(72% 0.004 260)",
-          "oklch(84% 0.004 260)",
-          "oklch(95% 0.004 260)"
+          "oklch(15% 0.004 265)",
+          "oklch(26% 0.004 265)",
+          "oklch(38% 0.004 265)",
+          "oklch(49% 0.004 265)",
+          "oklch(61% 0.004 265)",
+          "oklch(72% 0.004 265)",
+          "oklch(84% 0.004 265)",
+          "oklch(95% 0.004 265)"
         ],
-        "tonalRampPurpose": "Preview-only synthesized lightness ramp; does not add application tokens."
+        "tonalRampPurpose": "Preview-only synthesized lightness ramp; not application tokens."
       },
       "muted-graphite": {
         "role": "neutral",
         "displayName": "Muted Graphite",
-        "canonical": "#5D5F60",
+        "canonical": "#5C5C5A",
         "tonalRamp": [
-          "oklch(15% 0.003 230)",
-          "oklch(26% 0.003 230)",
-          "oklch(38% 0.003 230)",
-          "oklch(49% 0.003 230)",
-          "oklch(61% 0.003 230)",
-          "oklch(72% 0.003 230)",
-          "oklch(84% 0.003 230)",
-          "oklch(95% 0.003 230)"
+          "oklch(15% 0.003 107)",
+          "oklch(26% 0.003 107)",
+          "oklch(38% 0.003 107)",
+          "oklch(49% 0.003 107)",
+          "oklch(61% 0.003 107)",
+          "oklch(72% 0.003 107)",
+          "oklch(84% 0.003 107)",
+          "oklch(95% 0.003 107)"
         ],
-        "tonalRampPurpose": "Preview-only synthesized lightness ramp; does not add application tokens."
+        "tonalRampPurpose": "Preview-only synthesized lightness ramp; not application tokens."
       },
       "warm-accent": {
         "role": "neutral",
-        "displayName": "Warm Accent",
+        "displayName": "Warm Accent (legacy)",
         "canonical": "#625646",
         "tonalRamp": [
-          "oklch(15% 0.028 75)",
-          "oklch(26% 0.028 75)",
-          "oklch(38% 0.028 75)",
-          "oklch(49% 0.028 75)",
-          "oklch(61% 0.028 75)",
-          "oklch(72% 0.028 75)",
-          "oklch(84% 0.028 75)",
-          "oklch(95% 0.028 75)"
+          "oklch(15% 0.029 75)",
+          "oklch(26% 0.029 75)",
+          "oklch(38% 0.029 75)",
+          "oklch(49% 0.029 75)",
+          "oklch(61% 0.029 75)",
+          "oklch(72% 0.029 75)",
+          "oklch(84% 0.029 75)",
+          "oklch(95% 0.029 75)"
         ],
-        "tonalRampPurpose": "Preview-only synthesized lightness ramp; does not add application tokens."
+        "tonalRampPurpose": "Preview-only synthesized lightness ramp; not application tokens."
       },
       "chrome": {
         "role": "neutral",
-        "displayName": "Chrome",
+        "displayName": "Chrome (decorative)",
         "canonical": "#A7ACB2",
         "tonalRamp": [
-          "oklch(15% 0.01 250)",
-          "oklch(26% 0.01 250)",
-          "oklch(38% 0.01 250)",
-          "oklch(49% 0.01 250)",
-          "oklch(61% 0.01 250)",
-          "oklch(72% 0.01 250)",
-          "oklch(84% 0.01 250)",
-          "oklch(95% 0.01 250)"
+          "oklch(15% 0.010 253)",
+          "oklch(26% 0.010 253)",
+          "oklch(38% 0.010 253)",
+          "oklch(49% 0.010 253)",
+          "oklch(61% 0.010 253)",
+          "oklch(72% 0.010 253)",
+          "oklch(84% 0.010 253)",
+          "oklch(95% 0.010 253)"
         ],
-        "tonalRampPurpose": "Preview-only synthesized lightness ramp; does not add application tokens."
+        "tonalRampPurpose": "Preview-only synthesized lightness ramp; not application tokens."
       },
-      "footer-linen": {
+      "chrome-numeral": {
         "role": "neutral",
-        "displayName": "Footer Linen",
-        "canonical": "#EDE8DE",
+        "displayName": "Chrome Numeral",
+        "canonical": "#8A8E94",
         "tonalRamp": [
-          "oklch(15% 0.016 85)",
-          "oklch(26% 0.016 85)",
-          "oklch(38% 0.016 85)",
-          "oklch(49% 0.016 85)",
-          "oklch(61% 0.016 85)",
-          "oklch(72% 0.016 85)",
-          "oklch(84% 0.016 85)",
-          "oklch(95% 0.016 85)"
+          "oklch(15% 0.010 258)",
+          "oklch(26% 0.010 258)",
+          "oklch(38% 0.010 258)",
+          "oklch(49% 0.010 258)",
+          "oklch(61% 0.010 258)",
+          "oklch(72% 0.010 258)",
+          "oklch(84% 0.010 258)",
+          "oklch(95% 0.010 258)"
         ],
-        "tonalRampPurpose": "Preview-only synthesized lightness ramp; does not add application tokens."
+        "tonalRampPurpose": "Preview-only synthesized lightness ramp; not application tokens."
+      },
+      "footer-ink": {
+        "role": "neutral",
+        "displayName": "Footer Ink",
+        "canonical": "#1C1D1F",
+        "tonalRamp": [
+          "oklch(15% 0.004 264)",
+          "oklch(26% 0.004 264)",
+          "oklch(38% 0.004 264)",
+          "oklch(49% 0.004 264)",
+          "oklch(61% 0.004 264)",
+          "oklch(72% 0.004 264)",
+          "oklch(84% 0.004 264)",
+          "oklch(95% 0.004 264)"
+        ],
+        "tonalRampPurpose": "Preview-only synthesized lightness ramp; not application tokens."
+      },
+      "footer-text": {
+        "role": "neutral",
+        "displayName": "Footer Text",
+        "canonical": "#C9C7C1",
+        "tonalRamp": [
+          "oklch(15% 0.009 91)",
+          "oklch(26% 0.009 91)",
+          "oklch(38% 0.009 91)",
+          "oklch(49% 0.009 91)",
+          "oklch(61% 0.009 91)",
+          "oklch(72% 0.009 91)",
+          "oklch(84% 0.009 91)",
+          "oklch(95% 0.009 91)"
+        ],
+        "tonalRampPurpose": "Preview-only synthesized lightness ramp; not application tokens."
       },
       "rule": {
         "role": "neutral",
-        "displayName": "Hairline",
-        "canonical": "rgba(28,29,31,.14)",
-        "tonalRamp": [
-          "oklch(15% 0.004 260)",
-          "oklch(26% 0.004 260)",
-          "oklch(38% 0.004 260)",
-          "oklch(49% 0.004 260)",
-          "oklch(61% 0.004 260)",
-          "oklch(72% 0.004 260)",
-          "oklch(84% 0.004 260)",
-          "oklch(95% 0.004 260)"
-        ],
-        "tonalRampPurpose": "Preview-only synthesized lightness ramp; does not add application tokens."
+        "displayName": "Rule",
+        "canonical": "rgba(28,29,31,.14)"
       },
       "rule-strong": {
         "role": "neutral",
-        "displayName": "Strong Hairline",
-        "canonical": "rgba(28,29,31,.28)",
-        "tonalRamp": [
-          "oklch(15% 0.004 260)",
-          "oklch(26% 0.004 260)",
-          "oklch(38% 0.004 260)",
-          "oklch(49% 0.004 260)",
-          "oklch(61% 0.004 260)",
-          "oklch(72% 0.004 260)",
-          "oklch(84% 0.004 260)",
-          "oklch(95% 0.004 260)"
-        ],
-        "tonalRampPurpose": "Preview-only synthesized lightness ramp; does not add application tokens."
+        "displayName": "Strong Rule",
+        "canonical": "rgba(28,29,31,.28)"
+      },
+      "rule-hair": {
+        "role": "neutral",
+        "displayName": "Hair Rule",
+        "canonical": "rgba(28,29,31,.08)"
       }
     },
     "typographyMeta": {
-      "display": {
-        "displayName": "Atelier display",
-        "purpose": "Unna regular and genuine italic; composition-specific hero sizes override the shared fluid role."
+      "h1": {
+        "displayName": "H1",
+        "purpose": "Page titles, hero statements, closing title, measured figures."
+      },
+      "section": {
+        "displayName": "Section",
+        "purpose": "Section titles and headings inside reading copy."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Product names, questions, serif prices and step numbers."
       },
       "body": {
-        "displayName": "Reading",
-        "purpose": "Inter regular, minimum 16px for main reading copy."
+        "displayName": "Body",
+        "purpose": "All reading copy and commerce metadata, 14px / 1.25."
+      },
+      "prose": {
+        "displayName": "Prose",
+        "purpose": "Long-form running text, 14px / 1.5."
+      },
+      "footer": {
+        "displayName": "Footer",
+        "purpose": "Footer links and small print, 16px."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Short labels and every action, 12px tracked capitals."
+      },
+      "nav": {
+        "displayName": "Nav",
+        "purpose": "Header navigation, 12px tracked capitals."
       }
     },
     "shadows": [],
     "motion": [
       {
-        "name": "hero-arrive",
-        "value": "1000ms cubic-bezier(.19,1,.22,1)",
-        "purpose": "One entrance: opacity .86 to 1 and 12px rise; disabled for reduced motion."
+        "name": "ease",
+        "value": "cubic-bezier(.19,1,.22,1)",
+        "purpose": "Reveals, heading light and image settle: decelerating."
       },
       {
-        "name": "ui-transition",
-        "value": "320ms cubic-bezier(.33,0,.2,1)",
-        "purpose": "Button fill and arrow response."
+        "name": "ease-soft",
+        "value": "cubic-bezier(.33,0,.2,1)",
+        "purpose": "UI state changes (hover fills, colour)."
       },
       {
-        "name": "object-hover",
-        "value": "500ms cubic-bezier(.19,1,.22,1)",
-        "purpose": "Homepage collection object rises 6px; reduced motion disables it."
+        "name": "dur-ui",
+        "value": "320ms",
+        "purpose": "Hover and state transitions."
       },
       {
-        "name": "ritual-hover",
-        "value": "600ms cubic-bezier(.19,1,.22,1)",
-        "purpose": "Ritual image scales to 1.025; reduced motion disables it."
+        "name": "dur-reveal",
+        "value": "700ms",
+        "purpose": "Text reveal, rising 14px."
+      },
+      {
+        "name": "dur-heading-light",
+        "value": "800ms",
+        "purpose": "A heading written by a band of light."
+      },
+      {
+        "name": "dur-image",
+        "value": "900ms",
+        "purpose": "Image settle 1.04 to 1 inside its own frame."
+      },
+      {
+        "name": "stagger",
+        "value": "50ms, capped at 150ms",
+        "purpose": "List items; no reveal waits longer than 150ms."
       }
     ],
     "breakpoints": [
       {
-        "name": "ritual-two-column",
-        "value": "640px"
+        "name": "600px",
+        "value": "600px"
       },
       {
-        "name": "science-columns-editorial-stack",
+        "name": "700px",
         "value": "700px"
       },
       {
-        "name": "landscape-hero",
-        "value": "768px",
-        "condition": "Also requires min-aspect-ratio 1/1."
+        "name": "768px",
+        "value": "768px"
       },
       {
-        "name": "collection-provenance-columns",
+        "name": "900px",
         "value": "900px"
       },
       {
-        "name": "desktop-navigation",
+        "name": "1024px",
         "value": "1024px"
       },
       {
-        "name": "ritual-four-column-science-proof",
+        "name": "1100px",
         "value": "1100px"
+      },
+      {
+        "name": "1280px",
+        "value": "1280px"
       }
     ],
-    "provenance": {
-      "sourceFiles": [
-        "wp-content/themes/cos-child/assets/css/hx/system.css",
-        "wp-content/themes/cos-child/assets/css/hx/hero.css",
-        "wp-content/themes/cos-child/assets/css/hx/collection.css",
-        "wp-content/themes/cos-child/assets/css/hx/caviar.css",
-        "wp-content/themes/cos-child/assets/css/hx/science.css",
-        "wp-content/themes/cos-child/assets/css/hx/provenance.css",
-        "wp-content/themes/cos-child/assets/css/hx/ritual.css",
-        "wp-content/themes/cos-child/assets/css/hx/closing.css",
-        "wp-content/themes/cos-child/assets/css/storefront-2026.css",
-        "wp-content/themes/cos-child/assets/css/editorial-2026.css",
-        "wp-content/themes/cos-child/assets/js/hx-motion.js"
-      ],
-      "assetRules": [
-        "Exact products, labels, pack proportions and supplied marks are immutable.",
-        "Generated direction studies are references, not shipping product artwork.",
-        "Hero derives from app/design-sources/home-2026/hero-jar_master.png by proportional resizing and format conversion only.",
-        "Every shipping raster retains adjacent source/transformation provenance; invented craft imagery must not be represented as the actual facility."
-      ],
-      "previewRules": "Tonal ramps are synthesized previews, not new tokens. Component specimens show canonical interaction and text structure, not replacement product artwork. Fonts inherit project-loaded local Unna and Inter with system fallbacks."
+    "focus": {
+      "value": "2px solid ink (pearl on dark grounds), 4px offset, keyboard only",
+      "purpose": "The one focus ring."
     }
   },
   "components": [
@@ -285,95 +340,145 @@
       "name": "Primary button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Square purchase action with an understated hover response.",
-      "html": "<button class=\"ds-primary\">Shop the collection <span aria-hidden=\"true\">?</span></button>",
-      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:52px;padding:0 34px;background:var(--hx-ink,#202221);color:var(--hx-white,#FCFBF8);font:500 15px/1.3 Inter,system-ui,sans-serif;letter-spacing:.015em;border:0;border-radius:0;cursor:pointer;transition:background-color 320ms cubic-bezier(.33,0,.2,1)}.ds-primary:hover{background:#2B2C2F}.ds-primary:focus-visible{outline:2px solid var(--hx-ink,#202221);outline-offset:4px}.ds-primary:active{transform:translateY(1px)}.ds-primary span{transition:transform 320ms ease}.ds-primary:hover span{transform:translateX(4px)}@media(prefers-reduced-motion:reduce){.ds-primary,.ds-primary span{transition:none}}"
+      "description": "Filled ink, the decisive action on a page (Add to bag, checkout).",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Add to bag <span class=\"ds-arrow\" aria-hidden=\"true\"></span></a>",
+      "css": ".ds-btn-primary{font-family:Inter,system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;display:inline-flex;align-items:center;gap:14px;min-height:52px;padding:14px 34px;background:#1C1D1F;color:#F8F8F8;border-radius:0;text-decoration:none;transition:background-color .32s cubic-bezier(.33,0,.2,1)}.ds-btn-primary:hover{background:#2A2B2D}.ds-btn-primary:focus-visible{outline:2px solid #1C1D1F;outline-offset:4px}.ds-arrow{position:relative;width:22px;height:1px;background:currentColor;transition:transform .32s cubic-bezier(.33,0,.2,1)}.ds-arrow::after{content:\"\";position:absolute;right:0;top:-3px;width:7px;height:7px;border-top:1px solid currentColor;border-right:1px solid currentColor;transform:rotate(45deg)}.ds-btn-primary:hover .ds-arrow{transform:translateX(4px)}"
     },
     {
-      "name": "Editorial link",
+      "name": "Outline button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Campaign actions over photographs; fills ink on hover and keyboard focus.",
+      "html": "<a class=\"ds-btn-outline\" href=\"#\">Shop the Complete Ritual</a>",
+      "css": ".ds-btn-outline{font-family:Inter,system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;display:inline-flex;align-items:center;min-height:52px;padding:0 34px;background:transparent;color:#1C1D1F;box-shadow:inset 0 0 0 1px #1C1D1F;border-radius:0;text-decoration:none;transition:background-color .32s cubic-bezier(.33,0,.2,1),color .32s cubic-bezier(.33,0,.2,1)}.ds-btn-outline:hover,.ds-btn-outline:focus-visible{background:#1C1D1F;color:#F8F8F8}.ds-btn-outline:focus-visible{outline:2px solid #1C1D1F;outline-offset:4px}"
+    },
+    {
+      "name": "Bag button",
+      "kind": "button",
+      "refersTo": "bag-button",
+      "description": "Square hairline glyph button in a collection photograph corner.",
+      "html": "<button class=\"ds-bag\" type=\"button\" aria-label=\"Add to bag: Advanced Repair Serum\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M6 8h12l-1 12H7L6 8z\"/><path d=\"M9 8V6a3 3 0 0 1 6 0v2\"/></svg></button>",
+      "css": ".ds-bag{display:inline-grid;place-items:center;width:48px;height:48px;padding:0;background:transparent;color:#1C1D1F;border:0;border-radius:0;box-shadow:inset 0 0 0 1px rgba(28,29,31,.28);cursor:pointer;transition:background-color .32s cubic-bezier(.33,0,.2,1),color .32s cubic-bezier(.33,0,.2,1)}.ds-bag:hover{background:#1C1D1F;color:#F8F8F8}.ds-bag:focus-visible{outline:2px solid #1C1D1F;outline-offset:4px}"
+    },
+    {
+      "name": "Text link",
       "kind": "custom",
       "refersTo": "text-link",
-      "description": "Visible underlining with a comfortable action height.",
-      "html": "<a class=\"ds-link\" href=\"#details\">Discover the ritual <span aria-hidden=\"true\">?</span></a>",
-      "css": ".ds-link{display:inline-flex;align-items:center;gap:14px;min-height:48px;color:var(--hx-ink,#202221);font:500 16px/1.4 Inter,system-ui,sans-serif;text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1px}.ds-link:hover{text-decoration-thickness:2px}.ds-link:focus-visible{outline:2px solid var(--hx-ink,#202221);outline-offset:4px}"
+      "description": "Onward link in label capitals; the underline draws in on hover.",
+      "html": "<a class=\"ds-link\" href=\"#\">Read the studies <span aria-hidden=\"true\">→</span></a>",
+      "css": ".ds-link{font-family:Inter,system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;display:inline-flex;align-items:center;gap:10px;min-height:44px;color:#1C1D1F;text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 calc(50% + 12px)/0 1px no-repeat;transition:background-size .7s cubic-bezier(.19,1,.22,1)}.ds-link:hover{background-size:100% 1px}.ds-link:focus-visible{outline:2px solid #1C1D1F;outline-offset:4px}"
     },
     {
       "name": "Newsletter field",
       "kind": "input",
-      "refersTo": "input",
-      "description": "Readable square input on the warm footer surface.",
-      "html": "<label class=\"ds-field-label\" for=\"ds-email\">Email address</label><input class=\"ds-field\" id=\"ds-email\" type=\"email\" placeholder=\"Your email address\" autocomplete=\"email\">",
-      "css": ".ds-field-label{display:block;margin-bottom:8px;font:400 16px/1.5 Inter,system-ui,sans-serif;color:#202221}.ds-field{min-height:52px;padding:0 16px;border:1px solid #B4AEA4;border-radius:0;background:var(--hx-white,#FCFBF8);color:#202221;font:400 16px/1.7 Inter,system-ui,sans-serif}.ds-field::placeholder{color:#5D5F60;opacity:1}.ds-field:hover{border-color:#625646}.ds-field:focus-visible{outline:2px solid var(--hx-ink,#202221);outline-offset:4px}"
+      "refersTo": "field-underline",
+      "description": "Underline field with an inline Join action, on the footer band.",
+      "html": "<div class=\"ds-nl\"><label class=\"ds-nl__sr\" for=\"ds-nl-email\">Email address</label><input id=\"ds-nl-email\" class=\"ds-nl__input\" type=\"email\" placeholder=\"Email address\"><button class=\"ds-nl__btn\" type=\"button\">Join →</button></div>",
+      "css": ".ds-nl{font-family:Inter,system-ui,sans-serif;display:flex;align-items:center;max-width:540px;padding:24px;background:#1C1D1F}.ds-nl__sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.ds-nl__input{flex:1;min-height:56px;padding:0;background:transparent;color:#F8F8F8;border:0;border-bottom:1px solid rgba(242,239,232,.42);border-radius:0;font:inherit;font-size:16px}.ds-nl__input::placeholder{color:#C9C7C1}.ds-nl__input:focus-visible{outline:2px solid #F8F8F8;outline-offset:4px}.ds-nl__btn{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;min-height:56px;padding:0 0 0 12px;background:transparent;color:#F8F8F8;border:0;border-bottom:1px solid rgba(242,239,232,.42);cursor:pointer}.ds-nl__btn:focus-visible{outline:2px solid #F8F8F8;outline-offset:4px}"
     },
     {
-      "name": "Navigation links",
+      "name": "Header navigation",
       "kind": "nav",
-      "description": "Sentence-case links on a light warm ground; the supplied logo remains an external identity asset.",
-      "html": "<nav class=\"ds-nav\" aria-label=\"Collection navigation\"><a href=\"#collection\">The collection</a><a href=\"#science\">Our science</a><a href=\"#ritual\">The ritual</a></nav>",
-      "css": ".ds-nav{display:flex;flex-wrap:wrap;gap:22px;padding:16px 24px;background:#F4F1EA;border-bottom:1px solid #DDD8CF}.ds-nav a{display:inline-flex;align-items:center;min-height:44px;color:#202221;text-decoration:none;font:400 14px/1.5 Inter,system-ui,sans-serif;letter-spacing:.015em}.ds-nav a:hover{text-decoration:underline;text-underline-offset:6px}.ds-nav a:focus-visible{outline:2px solid var(--hx-ink,#202221);outline-offset:4px}"
+      "refersTo": "header",
+      "description": "Solid (scrolled) state: capitals left, logo centred, utilities right; 80px.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Primary\"><div class=\"ds-nav__links\"><a href=\"#\" aria-current=\"page\">Shop</a><a href=\"#\">The Ritual</a><a href=\"#\">Swiss Science</a></div><span class=\"ds-nav__logo\">CAVIAR<small>OF SWITZERLAND</small></span><div class=\"ds-nav__utils\"><a href=\"#\">Bag</a></div></nav>",
+      "css": ".ds-nav{font-family:Inter,system-ui,sans-serif;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:80px;padding:0 40px;background:#F8F8F8;border-bottom:1px solid rgba(28,29,31,.08)}.ds-nav__links{display:flex;gap:28px}.ds-nav a{display:inline-flex;align-items:center;min-height:44px;color:#1C1D1F;font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;text-underline-offset:6px}.ds-nav a[aria-current],.ds-nav a:hover{text-decoration:underline;text-decoration-thickness:1px}.ds-nav a:focus-visible{outline:2px solid #1C1D1F;outline-offset:4px}.ds-nav__logo{color:#2A2B2D;font-weight:700;font-size:28px;letter-spacing:-.02em;line-height:.9;text-align:center}.ds-nav__logo small{display:block;font-size:10px;font-weight:400;letter-spacing:.04em}.ds-nav__utils{justify-self:end}"
     },
     {
-      "name": "Collection decision",
+      "name": "Collection tile",
       "kind": "card",
-      "description": "The always-visible text portion of an unboxed product object; prices are dynamic in production.",
-      "html": "<a class=\"ds-object\" href=\"#product\"><span class=\"ds-object-step\">02 Treat</span><strong>Advanced Repair Serum</strong><span>For firmer, smoother-looking skin.</span><span class=\"ds-object-meta\">30 ml ? Current price</span><span class=\"ds-object-action\">Discover the formula</span></a>",
-      "css": ".ds-object{display:grid;justify-items:center;gap:14px;max-width:280px;padding:24px 0;background:#FCFBF8;text-align:center;color:#3A3B3D;text-decoration:none;font:400 16px/1.55 Inter,system-ui,sans-serif}.ds-object strong{font:400 28px/1.14 Unna,Georgia,serif;color:#202221}.ds-object-step,.ds-object-meta{color:#5D5F60}.ds-object-action{display:inline-flex;align-items:center;min-height:48px;text-decoration:underline;text-underline-offset:6px;text-decoration-color:#A7ACB2;color:#202221}.ds-object:hover .ds-object-action{text-decoration-color:#202221}.ds-object:focus-visible{outline:2px solid var(--hx-ink,#202221);outline-offset:4px}"
+      "refersTo": "bag-button",
+      "description": "Signature: 4:5 photograph, step label, serif name, benefit, price · size.",
+      "html": "<article class=\"ds-tile\"><div class=\"ds-tile__stage\"></div><p class=\"ds-tile__step\">Treat</p><h3 class=\"ds-tile__name\">Advanced Repair Serum</h3><p class=\"ds-tile__meta\">€150 · 30 ml</p></article>",
+      "css": ".ds-tile{font-family:Inter,system-ui,sans-serif;max-width:320px;color:#3A3B3D}.ds-tile__stage{aspect-ratio:4/5;background:linear-gradient(160deg,#E4E5E6,#CFD1D3)}.ds-tile__step{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;margin:16px 0 6px;color:#1C1D1F}.ds-tile__name{font-family:\"Source Serif 4\",Georgia,serif;font-weight:300;margin:0 0 6px;font-size:20px;line-height:1.2;color:#1C1D1F}.ds-tile:hover .ds-tile__name{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}.ds-tile__meta{margin:0;font-size:14px;line-height:1.25}"
     },
     {
-      "name": "Measured finding",
+      "name": "Evidence figure",
       "kind": "custom",
-      "description": "A finding remains inseparable from its product and study attribution.",
-      "html": "<section class=\"ds-proof\"><h3>Advanced Repair Serum</h3><strong>+47<span>%</span></strong><p class=\"ds-proof-finding\">Skin firmness</p><p>Instrument-measured ? 28 days<br>Cutometry (R2), 32 women aged 45?60.</p></section>",
-      "css": ".ds-proof{max-width:380px;border-top:1px solid rgba(28,29,31,.28);padding-top:32px;color:#3A3B3D;font:400 16px/1.7 Inter,system-ui,sans-serif}.ds-proof h3{font:500 16px/1.5 Inter,system-ui,sans-serif;color:#202221;margin:0 0 18px}.ds-proof strong{font:400 56px/1.05 Unna,Georgia,serif;color:#202221}.ds-proof strong span{font-size:.6em}.ds-proof p{margin:16px 0 0}.ds-proof .ds-proof-finding{font:400 26px/1.2 Unna,Georgia,serif;color:#202221}"
+      "refersTo": "text-link",
+      "description": "Signature: serif figure beside its finding with product, method, panel and duration.",
+      "html": "<div class=\"ds-fig\"><span class=\"ds-fig__n\">+47%</span><div><p class=\"ds-fig__f\">Skin firmness</p><p class=\"ds-fig__m\">Advanced Repair Serum · cutometry · 32 women aged 45–60 · 28 days</p></div></div>",
+      "css": ".ds-fig{font-family:Inter,system-ui,sans-serif;display:flex;align-items:baseline;gap:20px;color:#3A3B3D}.ds-fig__n{font-family:\"Source Serif 4\",Georgia,serif;font-weight:300;font-size:48px;line-height:1;color:#1C1D1F;font-variant-numeric:lining-nums}.ds-fig__f{font-family:\"Source Serif 4\",Georgia,serif;font-weight:300;margin:0 0 4px;font-size:20px;color:#1C1D1F}.ds-fig__m{margin:0;font-size:14px;line-height:1.25;color:#5C5C5A}"
     },
     {
-      "name": "Visible ritual instruction",
-      "kind": "custom",
-      "description": "The text portion of a ritual step is present without hover.",
-      "html": "<a class=\"ds-step\" href=\"#cleanse\"><h3>01 Cleanse</h3><p>Begin with Micellar Water. Follow the product directions as the first step of your ritual.</p><span>Explore the formula ?</span></a>",
-      "css": ".ds-step{display:block;max-width:340px;padding-top:24px;border-top:1px solid #DDD8CF;color:#3A3B3D;text-decoration:none}.ds-step h3{margin:0;font:400 25px/1.2 Unna,Georgia,serif;color:#202221}.ds-step p{font:400 16px/1.7 Inter,system-ui,sans-serif;margin:14px 0}.ds-step span{display:inline-flex;align-items:center;min-height:48px;font:400 16px/1.5 Inter,system-ui,sans-serif;text-decoration:underline;text-underline-offset:6px;color:#202221}.ds-step:hover span{text-decoration-thickness:2px}.ds-step:focus-visible{outline:2px solid var(--hx-ink,#202221);outline-offset:4px}"
+      "name": "Video control",
+      "kind": "button",
+      "refersTo": "video-control",
+      "description": "Always-visible Pause / Play on film openings; a flat caption chip, never a pill.",
+      "html": "<button class=\"ds-vctl\" type=\"button\" aria-label=\"Pause hero video\">Pause</button>",
+      "css": ".ds-vctl{font-family:Inter,system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;min-width:68px;min-height:44px;padding:0 14px;background:rgba(248,248,248,.86);color:#1C1D1F;border:0;border-radius:0;cursor:pointer}.ds-vctl:hover{background:rgba(248,248,248,.96)}.ds-vctl:focus-visible{outline:2px solid #1C1D1F;outline-offset:3px}"
     }
   ],
   "narrative": {
     "northStar": "The Swiss Atelier",
-    "overview": "Four real formulas are presented as a considered collection of precious objects. Warm light, chrome, cream, water and stone give the photography material presence; the interface supplies quiet structure and clear decisions. Upright Unna, selective genuine italic and readable Inter establish a restrained editorial voice.\n\nThe homepage expresses desire through the campaign; the storefront supports choice and purchase; editorial chapters make provenance, science and practice understandable. They share the same light material world without forcing the same composition onto every surface.",
+    "overview": "Four real formulas are presented as a considered collection of precious objects, made in Zug. The interface is the atelier's bench: one pale pearl surface, ink type, fine rules and square edges, so the photographs (chrome lids, cream, water, stone, skin) carry all of the colour, light and depth. Nothing on the page competes with the object; restraint is the luxury.\n\nThe voice is light and quiet. Headings are set in a light, optically sized serif, in sentence case, at a small number of sizes; everything else is a compact, precise Inter. Authority comes from space, alignment and exact detail rather than size, colour or effects. The homepage creates desire through full-bleed photography; the deeper pages (science, heritage, the ritual, journal) use the same world at reading pace, so moving from campaign to evidence never feels like a change of brand.\n\nMotion has one idea, light travelling over polished silver: openings rack into focus and headings are written by a soft band of light. It is decelerating, quick to finish and never hides a photograph or blocks reading.",
     "keyCharacteristics": [
-      "Warm tonal surfaces and graphite text.",
-      "Exact packaging and a supplied, unchanged silver wordmark with Swiss cross.",
-      "Unboxed compositions, square controls, generous spacing and fine rules.",
-      "Visible benefits, readable evidence and natural scrolling."
+      "One light ground (pearl) on every page; the footer is the only dark band.",
+      "Light serif headings in sentence case; compact Inter for everything else; 12px tracked capitals only for short labels and actions.",
+      "Square corners, one-pixel rules, no shadows, no rounded cards.",
+      "Exact, unaltered product photography and the official logo as supplied.",
+      "Evidence presented precisely: product, method, panel and duration with every figure."
     ],
     "rules": [
       {
         "name": "The Material Rule",
-        "body": "Depth belongs to the photograph; interface color remains a quiet material ground.",
+        "body": "Depth and colour belong to the photograph; interface colour stays a quiet ground. No saturated interface accent, no gold, no gradients on UI.",
         "section": "colors"
       },
       {
-        "name": "The Reading Floor Rule",
-        "body": "Main reading copy stays at least 16px; purchase actions stay at least 15px. The 14px tier is reserved for secondary metadata, credits and supporting navigation details.",
+        "name": "The One Dark Band Rule",
+        "body": "The footer is the only dark interface surface. Dark openings exist only where the photograph or film itself is dark (the /science/ caviar film). Do not add new dark sections or dark cards.",
+        "section": "colors"
+      },
+      {
+        "name": "The Cobalt Rule",
+        "body": "Never pair cobalt or navy with caviar: another caviar-skincare house owns that combination.",
+        "section": "colors"
+      },
+      {
+        "name": "The Six Roles Rule",
+        "body": "Every readable text maps to one role above (set in `assets/css/hx/scale.css`, which loads last on every page). A new style never introduces a new size.",
+        "section": "typography"
+      },
+      {
+        "name": "The Fourteen Rule",
+        "body": "Reading copy is 14px at every width (owner decision, 8 Nov 2026); nothing readable sits below 12px, and capitals are always 12px or larger. Do not raise reading copy to 16px unasked.",
+        "section": "typography"
+      },
+      {
+        "name": "The Two Families Rule",
+        "body": "Only Source Serif 4 and Inter render anywhere on the site, including header, footer, skip link and hand-authored content pages.",
         "section": "typography"
       },
       {
         "name": "The Flat Surface Rule",
-        "body": "Use space, tone and hairlines to establish hierarchy; do not add decorative elevation.",
+        "body": "Use space, tone and hairlines for hierarchy; never add decorative elevation, glow or drop shadows to UI.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Photograph Is Never Hidden Rule",
+        "body": "No mask, curtain, darkness or fade may gate an image; it is visible the moment it paints. Image motion is limited to a gentle settle inside its own frame (1.04 → 1).",
         "section": "elevation"
       }
     ],
     "dos": [
-      "**Do** preserve exact products, labels, pack proportions and the supplied official mark.",
-      "**Do** keep benefits and purchase information visible on every device.",
-      "**Do** scope every study result to its actual product, method, panel and duration.",
-      "**Do** keep reading copy at least 16px and meaningful touch targets at least 44px.",
-      "**Do** keep each shipping raster traceable to its source and transformation in its adjacent provenance sidecar.",
-      "**Do** use original hero artwork through proportional resizing and format conversion only."
+      "**Do** keep one pearl ground per page and let photographs carry colour and depth.",
+      "**Do** set every heading in the light serif, sentence case, at one of the three serif roles.",
+      "**Do** keep reading copy at 14px (1.25, or 1.5 for long-form prose), footer text at 16px, and capitals at 12px or larger.",
+      "**Do** give every interactive control a target of at least 44px and a visible 2px keyboard focus ring.",
+      "**Do** show exact packaging and labels and the official logo as supplied: graphite lettering on light grounds, the silver original on the footer, the pearl-lettered version only over dark film. The red square and white cross never change.",
+      "**Do** label every study figure with its product, method, panel and duration; keep self-reported results as text.",
+      "**Do** use the deeper chrome numeral colour whenever a chrome numeral carries meaning.",
+      "**Do** keep benefits, prices and purchase actions visible on every device; never behind hover."
     ],
     "donts": [
-      "**Don't** ship generated direction studies as product artwork or treat their invented packs as approved assets.",
-      "**Don't** redraw packaging, wordmarks or the Swiss cross, or recolor the official logo.",
-      "**Don't** add decorative shadows, rounded cards, cobalt styling or theatrical interface effects.",
-      "**Don't** add invented reviews, press marks, scarcity, clinical claims or facility provenance.",
-      "**Don't** hide explanations behind hover, scroll-gate content or introduce compulsory parallax."
+      "**Don't** add new dark backgrounds, gold, rounded cards, shadows, badges or oversized type (owner, 31 Oct 2026): ask first.",
+      "**Don't** introduce a third typeface, Inter Light or Inter italic, or a new text size outside the six roles.",
+      "**Don't** use cobalt or navy with caviar imagery.",
+      "**Don't** redraw or recolour packaging, the wordmark or the Swiss cross, or ship generated imagery as product artwork.",
+      "**Don't** add star ratings, testimonials, press marks, scarcity cues or invented clinical claims.",
+      "**Don't** hide a photograph behind motion, hijack scrolling, or make content depend on hover or JavaScript.",
+      "**Don't** put a decorative kicker or eyebrow above a section heading or h1, or numbers that carry no information. (The ritual step above a product name, and the 01–04 step numerals, are information and stay.)"
     ]
   }
 }

@@ -9,11 +9,12 @@ test.describe('Navigation, accessibility, and responsive scenarios', () => {
     const nav = page.getByRole('navigation', { name: /primary navigation/i });
     await expect(nav).toBeVisible();
 
-    for (const name of ['Shop', 'Home', 'The Ritual', 'Swiss Science', 'Swiss Heritage']) {
+    for (const name of ['Home', 'Shop', 'The Ritual', 'Swiss Science', 'Swiss Heritage']) {
       await expect(nav.getByRole('link', { name: new RegExp(`^${name}$`, 'i') })).toBeVisible();
     }
 
-    await expect(nav.getByRole('link', { name: /^Help$/i })).toBeVisible();
+    // Help intentionally lives in the mobile menu, not the compact desktop bar.
+    await expect(nav.getByRole('link', { name: /^Help$/i })).toHaveCount(0);
     await expect(nav.getByRole('link', { name: /^Account$/i })).toBeVisible();
     await expect(nav.getByRole('link', { name: /^Bag$/i })).toBeVisible();
     await expectNoHorizontalOverflow(page);
@@ -23,17 +24,26 @@ test.describe('Navigation, accessibility, and responsive scenarios', () => {
     await page.setViewportSize({ width: 390, height: 844 });
     await gotoAndCheck(page, '/');
 
-    const button = page.getByRole('button', { name: /open navigation menu/i });
+    // 8 Nov 2026: the homepage uses the sitewide header, whose toggle is renamed "Close navigation
+    // menu" while open, so it is located by id rather than by its (changing) accessible name.
+    const button = page.locator('#cos-mob-btn');
     const menu = page.locator('#cos-mob-menu');
     await expect(button).toBeVisible();
+    await expect(button).toHaveAccessibleName(/open navigation menu/i);
     await expect(button).toHaveAttribute('aria-expanded', 'false');
 
     await button.click();
     await expect(button).toHaveAttribute('aria-expanded', 'true');
+    await expect(button).toHaveAccessibleName(/close navigation menu/i);
     await expect(menu).toHaveClass(/open/);
     await expect(menu).toHaveAttribute('aria-hidden', 'false');
     await expect(menu.getByRole('link', { name: /^Home$/i })).toBeFocused();
+    await expect(menu.getByRole('link', { name: /^Help$/i })).toBeVisible();
 
+    // Disclosure, not a modal (17 Oct 2026 audit P1-2): the × toggle stays in the focus loop, so
+    // Shift+Tab from the first link reaches it, and once more wraps to the last menu link.
+    await page.keyboard.press('Shift+Tab');
+    await expect(button).toBeFocused();
     await page.keyboard.press('Shift+Tab');
     await expect(menu.getByRole('link', { name: /^Contact$/i })).toBeFocused();
 

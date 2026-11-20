@@ -1,0 +1,26 @@
+{
+  "source": "https://unsplash.com/photos/reflection-photography-of-mountains-PTkB0AvR4M0",
+  "photographer": "Kimon Maritz (@kimonmaritz)",
+  "place": "Oeschinen Lake, Kandersteg, Switzerland",
+  "licence": "Unsplash License (free to use, no attribution required)",
+  "downloaded": "2026-11-18",
+  "original_size": [
+    2231,
+    3648
+  ],
+  "crops": {
+    "wide": [
+      0,
+      750,
+      2231,
+      2144
+    ],
+    "tall": [
+      0,
+      60,
+      2231,
+      2849
+    ]
+  },
+  "used_on": "/heritage/sustainability/ hero (template-parts/hx/heritage/sustainability.php)"
+}

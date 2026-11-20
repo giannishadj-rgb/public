@@ -120,3 +120,46 @@ html body #cos-footer#cos-footer#cos-footer .hxf-nl__title{font-size:var(--r-sec
 @media (max-width:767.98px){
 	html body #cos-footer#cos-footer#cos-footer :is(.hxf-assure li,.cos-trust-item,.cos-nl-consent-text,.hxf-base__copy,.cos-footer-cookie-link){font-size:.9375rem}
 }
+
+/* ─── homepage reading copy at Guerlain's measured size (owner, 6 Nov 2026): 14px, line-height
+   1.25, every screen width. Main content only; the footer is shared with every page and keeps
+   the body role. Delete this block to return the homepage to 16px / 1.6. ─── */
+html body.cos-h26 #cos-main-content#cos-main-content#cos-main-content :is(
+	.hxh__lead,.hx-lead,.hxv__story,.hxv__line,.hxm__frame-line,.hxm__nb,.hxr__lede,.hxr__gist-text,.hxr__how,
+	.hxc__benefit,.hxc__price,.hxc__size,.hxc__sep,.hxc__meta,.hxz__apart,.hxz__assure li
+){font-size:.875rem;line-height:1.25}
+@media (min-width:768px){
+	html body.cos-h26 #cos-main-content#cos-main-content#cos-main-content #collection :is(.hxc__benefit,.hxc__price,.hxc__size,.hxc__meta){font-size:.875rem;line-height:1.25}
+}
+
+/* ─── The homepage's reading type on every page (owner, 7 Nov 2026: "apply the typography of the
+   home page to the entire website"). Headings, titles and 12px capitals already matched; this
+   carries the homepage's reading copy (Inter 14px, line-height 1.25, the 6 Nov Guerlain block
+   above) to every other page's main content, at every width, commerce metadata included. The
+   footer keeps 16px everywhere, as on the homepage. One deliberate difference: long-form running
+   prose (journal articles, legal pages, FAQ answers, science and heritage prose) keeps 14px but at
+   line-height 1.5, since 1.25 over multi-paragraph text is hard to follow. Delete this block to
+   return the other pages to 16px / 1.6. ─── */
+html body:not(.cos-h26) #cos-main-content,html body:not(.cos-h26) :is(#cos-main-content.hxsc,#cos-main-content .hxsc){
+	--r-body:.875rem;--ts-body:.875rem;--hx-fs-body:.875rem;--hx-fs-lead:.875rem;--hxsc-read:.875rem;
+}
+html body:not(.cos-h26) #cos-main-content#cos-main-content#cos-main-content :is(
+	.hx-lead,.hx-body,.hxh__lead,.hxpd-promise,.hxpd-lead,.hxpd-sci__text,.hxpd-orbs__text,.hxpd-story__text,.hxpd-seq__gesture,.hxpd-seq__name,
+	.hxpd-contents__name,.hxpd-saving__amt,.hxpd-faq__a,.hxpd-use__step p,.hxr__how,.hxr__lede,.hxm__frame-line,.hxv__line,.hxv__story,.hxp__fact dd,
+	.hxrt-glance__text,.hxrt-inline,.hxrt-step__suits-text,.hxrt-how > li,.hxsc-actlist__line,.hxsc-depth__d,.hxsc-index__line,.hxsc-steps__d,
+	.hxsc-syn__t,.hxsc-prose > p,.hxhe-card__body,.hxhe-cert__body,.hxhe-era__body,.hxhe-principle__body,.hxhe-principle__en,.hxhe-prose > p,
+	.hxhe-commitment > p:not(.hxhe-num),.hxshop-inline,.hxshop-hero__sub,.hxshop-faq__a > p,.cos-art-dek,.cos-art-p,.cos-art-lede,.cos-cc-faq-a,
+	.cos-cc-inline,.cos-cc-lede,.cos-cc-note,.cos-cc-product-desc,.cos-cc-section > p,.cos-ct-note,.cos-ct-sub,.cos-faq-q-btn,.cos-faq-answer,
+	.cos-faq-answer p,.cos-help-sub,.cos-help-card > p,.cos-help-contact-tile > p,.cos-ing-tagline,.cos-ing-main > p,.cos-ing-mech-box > p,
+	.cos-jnl-featured-dek,.cos-jnl-hub-dek,.cos-jnl-sub,.ship-hero-sub,.ship-note,.ship-p,.ship-step-body,.ship-callout > p,.priv-hero-sub,
+	.terms-hero-sub,.cos-404-inner > p,.hxpd-price__size,.hxpd-evidence,.hxpd-evidence__link,.hxpd-offer__what,.hxpd-offer__price,.hxpd-services li,
+	.hxpd-steps__price,.hxpd-saving__vs,.hxpd-sci__meta,.hxshop-item__benefit,.hxshop-item__meta,.hxshop-item__price,.hxshop-item__size,
+	.hxshop-ritual__compare,.hxshop-ritual__service,.hxrt-step__price,.hxrt-offer__compare,.hxrt-offer__assure li,.hxrt-glance__meta,.hxz__assure li,
+	.hxz__apart,.priv-p,.priv-contact-box p,.priv-updated,.cos-jnl-hub-card-dek,.cos-jnl-card-dek,
+	.priv-ul li,.cos-acc-brand-sub,.cos-faq-answer a,[id="cos-faq"] p,
+	.hxshop-ritual__save,.hxshop-ritual__compare .woocommerce-Price-amount
+){font-size:.875rem;line-height:1.25}
+html body:not(.cos-h26) #cos-main-content#cos-main-content#cos-main-content :is(
+	.cos-art-p,.cos-art-lede,.cos-art-dek,.hxsc-prose > p,.hxhe-prose > p,.hxpd-faq__a,.hxshop-faq__a > p,.cos-cc-faq-a,.cos-faq-answer,.cos-faq-answer p,
+	.ship-p,.ship-step-body,.ship-callout > p,.cos-ing-main > p,.cos-cc-section > p,.priv-p,.cos-help-card > p,.priv-ul li
+):not(.hx-x):not(.hx-x){line-height:1.5}   /* the two :not()s outweigh the list above, whose :is() carries a two-class item */

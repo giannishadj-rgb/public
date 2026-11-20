@@ -571,7 +571,7 @@ $active = ( ! empty( $_POST['register'] ) || ( ! empty( $_GET['action'] ) && $_G
     <div class="cos-acc-brand">
       <span class="cos-acc-brand-line"></span>
       <h1 class="cos-acc-brand-heading">Your ritual,<br>your account.</h1>
-      <p class="cos-acc-brand-sub">Manage your orders, update your details, and access personalised ritual guidance from your Caviar of Switzerland concierge.</p>
+      <p class="cos-acc-brand-sub">Follow your orders, keep your addresses and update your details in one place.</p>
       <div class="cos-acc-perk-sep"></div>
       <div class="cos-acc-brand-perks">
         <span class="cos-acc-brand-perk">
@@ -584,7 +584,7 @@ $active = ( ! empty( $_POST['register'] ) || ( ! empty( $_GET['action'] ) && $_G
         </span>
         <span class="cos-acc-brand-perk">
           <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="7.5" r="3.5"/><path d="M4 17c0-3 2.7-5.5 6-5.5s6 2.5 6 5.5"/></svg>
-          Ritual profile
+          Account details
         </span>
       </div>
     </div>

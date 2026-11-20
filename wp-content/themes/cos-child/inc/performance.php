@@ -197,13 +197,12 @@ function cos_child_preload_fonts(): void {
 	// single preload replaces the old one-static-file-at-a-time preload,
 	// which only ever covered weight 400.
 	echo '<link rel="preload" href="' . esc_url( $font_uri . 'inter-var-latin.woff2' ) . '" as="font" type="font/woff2" crossorigin>' . "\n";
-	// Cormorant Garamond is self-hosted (see style.css) — only italic/300 is
-	// ever used anywhere in the theme, so only that one variant is preloaded.
-	echo '<link rel="preload" href="' . esc_url( $font_uri . 'cormorant-garamond-300-italic-latin.woff2' ) . '" as="font" type="font/woff2" crossorigin>' . "\n";
-	// 17 Oct 2026 (audit P2-4): the homepage H1 (LCP) opens in upright Cormorant (variable file,
-	// declared in hx/system.css): preload it there so the headline doesn't wait for the CSS.
-	if ( function_exists( 'cos_h26_is_active' ) && cos_h26_is_active() ) {
-		echo '<link rel="preload" href="' . esc_url( $font_uri . 'cormorant-garamond-var-latin.woff2' ) . '" as="font" type="font/woff2" crossorigin>' . "\n";
+	// Audit 8 Nov 2026: the display serif is Source Serif 4 (inc/hx-system.php), not Cormorant —
+	// the two Cormorant preloads fetched files no page renders. Every opening h1 (the homepage
+	// LCP among them) is upright Source Serif 4, so preload that variable file. Skipped while the
+	// licensed Suisse files are present, since Suisse then replaces it.
+	if ( ! file_exists( get_stylesheet_directory() . '/assets/fonts/suisse/SuisseWorks-Regular.woff2' ) ) {
+		echo '<link rel="preload" href="' . esc_url( $font_uri . 'source-serif4-var-latin.woff2' ) . '" as="font" type="font/woff2" crossorigin>' . "\n";
 	}
 }
 add_action( 'wp_head', 'cos_child_preload_fonts', 1 );
@@ -227,3 +226,38 @@ function cos_child_preload_home_hero(): void {
 	}
 }
 add_action( 'wp_head', 'cos_child_preload_home_hero', 2 );
+
+/**
+ * Responsive sizes for upload images hand-written into page content (audit 8 Nov 2026).
+ *
+ * The hand-authored pages (journal, help, shipping, science …) reference Media Library files by
+ * bare URL, without the wp-image-{id} class WordPress needs to add srcset, so every card and
+ * hero downloaded the full original (journal hubs: 1600–2200px photos into ~380px cards; help
+ * and shipping heroes: 3600px+). This resolves such an <img> to its attachment and adds the
+ * attachment's own srcset. Content is untouched; images that already carry srcset, or whose
+ * file is not an attachment, are left as they are.
+ *
+ * sizes: lazy images get "auto" (the browser measures the rendered box; WP's
+ * wp-img-auto-sizes-contain CSS supports it), falling back to the width attribute, or the
+ * viewport width for attribute-less heroes.
+ */
+add_filter( 'wp_content_img_tag', static function ( string $image, string $context, int $attachment_id ): string {
+	if ( $attachment_id || false !== strpos( $image, ' srcset=' ) ) return $image;
+	if ( ! preg_match( '/ src=(["\'])([^"\']+)\1/', $image, $m ) || false === strpos( $m[2], '/wp-content/uploads/' ) ) return $image;
+	static $ids = array();
+	$url    = 0 === strpos( $m[2], '/' ) ? home_url( $m[2] ) : $m[2];
+	$lookup = preg_replace( '/-(?:\d+x\d+|scaled)(\.\w+)$/', '$1', $url );
+	if ( ! array_key_exists( $lookup, $ids ) ) {
+		$ids[ $lookup ] = attachment_url_to_postid( $lookup ) ?: attachment_url_to_postid( preg_replace( '/(\.\w+)$/', '-scaled$1', $lookup ) );
+	}
+	$id   = $ids[ $lookup ];
+	$meta = $id ? wp_get_attachment_metadata( $id ) : false;
+	if ( ! $meta || empty( $meta['width'] ) || empty( $meta['height'] ) ) return $image;
+	// The attachment's true proportions, not the tag's width/height (cards say 400×300 on 2:3 photos).
+	$srcset = wp_calculate_image_srcset( array( (int) $meta['width'], (int) $meta['height'] ), wp_get_attachment_image_url( $id, 'full' ), $meta, $id );
+	if ( ! $srcset ) return $image;
+	$w     = preg_match( '/ width=(["\']?)(\d+)\1/', $image, $wm ) ? (int) $wm[2] : 0;
+	$lazy  = (bool) preg_match( '/ loading=(["\']?)lazy\1/', $image );
+	$sizes = ( $lazy ? 'auto, ' : '' ) . ( $w ? "(max-width: {$w}px) 100vw, {$w}px" : '100vw' );
+	return preg_replace( '/<img\s/i', '<img srcset="' . esc_attr( $srcset ) . '" sizes="' . esc_attr( $sizes ) . '" ', $image, 1 );
+}, 10, 3 );

@@ -467,3 +467,53 @@ html body:is(.cos-h26,.single-product) #collection.hxc .hxc__bag::after{content:
    hairline frame stays, and hover / focus / added still fill ink (the :is() rule above outranks this) */
 html body:is(.cos-h26,.single-product) #collection.hxc .hxc__bag,
 html body:is(.cos-h26,.single-product) #collection.hxc .hxc__bag:visited{background:transparent}
+
+/* 48px bag (adapt, 4 Nov 2026, owner; supersedes the 1 Nov "a size smaller" 38px block above): the
+   visible control is the tap target, so the invisible band goes. On phones it centres under the
+   centred name, benefit and price instead of sitting at the left edge. */
+html body:is(.cos-h26,.single-product) #collection.hxc .hxc__bag,
+html body:is(.cos-h26,.single-product) #collection.hxc .hxc__bag:visited{height:48px;gap:10px;padding:0 16px 0 18px}
+html body:is(.cos-h26,.single-product) #collection.hxc .hxc__bag svg{width:18px;height:18px}
+html body:is(.cos-h26,.single-product) #collection.hxc .hxc__bag::after{content:none}
+@media (max-width:599px){
+	html body:is(.cos-h26,.single-product) #collection.hxc .hxc__bag{justify-self:center;height:48px;gap:8px;padding:0 14px 0 16px}
+	html body:is(.cos-h26,.single-product) #collection.hxc .hxc__bag::after{content:none}
+	html body:is(.cos-h26,.single-product) #collection.hxc .hxc__bag svg{width:16px;height:16px}
+}
+
+/* glyph-only bag, label on hover (owner, 6 Nov 2026): on pointer desktops from 600px the control
+   rests as a 48px square with just the bag glyph; hovering (or keyboard focus) slides the
+   "Add to bag" caps out to the left of the glyph and the button widens with them. "Added" stays
+   open while the confirmation shows. Touch devices and phones keep the labelled control, since
+   they have no hover. The accessible name is on the link itself, so nothing changes for readers. */
+@media (min-width:600px) and (hover:hover) and (pointer:fine){
+	html body:is(.cos-h26,.single-product) #collection.hxc .hxc__bag,
+	html body:is(.cos-h26,.single-product) #collection.hxc .hxc__bag:visited{
+		gap:0;
+		padding:0 15px;
+		transition:gap 380ms var(--hx-ease,cubic-bezier(.22,.61,.36,1)),padding 380ms var(--hx-ease,cubic-bezier(.22,.61,.36,1)),background-color 240ms ease,color 240ms ease,box-shadow 240ms ease;
+	}
+	html body:is(.cos-h26,.single-product) #collection.hxc .hxc__bag-label{
+		display:inline-block;
+		max-width:0;
+		overflow:hidden;
+		opacity:0;
+		transition:max-width 380ms var(--hx-ease,cubic-bezier(.22,.61,.36,1)),opacity 220ms ease;
+	}
+	html body:is(.cos-h26,.single-product) #collection.hxc .hxc__bag:is(:hover,:focus-visible,.is-added){gap:10px;padding:0 16px 0 18px}
+	html body:is(.cos-h26,.single-product) #collection.hxc .hxc__bag:is(:hover,:focus-visible,.is-added) .hxc__bag-label{
+		max-width:12em;
+		opacity:1;
+		transition:max-width 380ms var(--hx-ease,cubic-bezier(.22,.61,.36,1)),opacity 260ms ease 120ms;
+	}
+}
+@media (min-width:600px) and (hover:hover) and (pointer:fine) and (prefers-reduced-motion:reduce){
+	html body:is(.cos-h26,.single-product) #collection.hxc :is(.hxc__bag,.hxc__bag-label){transition:none}
+}
+/* the scroll reveal's transition (opacity, with a stagger delay) outranks the block above; keep
+   its fade and add the expansion so hover still animates after the tile has come in */
+@media (min-width:600px) and (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+	html.hx-motion body:is(.cos-h26,.single-product) #collection.hxc .hxc__item.is-in:not(.hx-instant) .hxc__bag{
+		transition:opacity 600ms var(--hx-ease) min(calc(var(--hx-i,0) * var(--hx-stagger,50ms)),var(--hx-delay-max,150ms)),gap 380ms var(--hx-ease,cubic-bezier(.22,.61,.36,1)),padding 380ms var(--hx-ease,cubic-bezier(.22,.61,.36,1)),background-color 240ms ease,color 240ms ease,box-shadow 240ms ease;
+	}
+}

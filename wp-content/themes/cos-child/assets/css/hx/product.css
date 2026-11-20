@@ -52,13 +52,6 @@ body.hxpd-page{background:var(--hx-white)}
 .hxpd-price__amt{font-family:var(--hx-serif);font-size:1.75rem;font-weight:400;letter-spacing:0;line-height:1}
 .hxpd-price__dot{width:3px;height:3px;border-radius:50%;background:var(--hx-chrome)}
 .hxpd-price__size{font-size:var(--hx-fs-detail);color:var(--hx-muted);letter-spacing:.02em}
-.hxpd-saving{margin-top:8px;font-size:var(--hx-fs-detail);color:var(--hx-muted)}
-.hxpd-evidence{margin-top:16px;font-size:var(--hx-fs-detail);line-height:1.5}
-.hxpd-evidence__link{display:inline-flex;flex-wrap:wrap;align-items:baseline;gap:0 6px;min-height:44px;align-items:center;color:var(--hx-text);text-decoration:none;border-bottom:1px solid transparent}
-.hxpd-evidence__link:hover{color:var(--hx-ink)}
-.hxpd-evidence__link:hover .hxpd-evidence__kind{text-decoration:underline;text-underline-offset:3px}
-.hxpd-evidence__fig{font-family:var(--hx-serif);font-size:1.25rem;color:var(--hx-ink);font-variant-numeric:lining-nums}
-.hxpd-evidence__kind{color:var(--hx-muted)}
 
 /* Set contents */
 .hxpd-contents{margin-top:24px;border-top:1px solid var(--hx-line)}
@@ -75,7 +68,7 @@ body.hxpd-page{background:var(--hx-white)}
 .hxpd-qty{display:flex;align-items:stretch;flex:none;min-height:52px;border:1px solid var(--hx-line-strong);background:var(--hx-white)}
 .hxpd-qty__btn{width:44px;padding:0;border:0;background:none;color:var(--hx-ink);font:300 20px/1 var(--hx-sans);cursor:pointer;transition:background-color var(--hx-dur-ui) var(--hx-ease-soft)}
 .hxpd-qty__btn:hover{background:var(--hx-pearl)}
-.hxpd-qty__input{width:36px;border:0;background:none;text-align:center;font:400 15px/1 var(--hx-sans);color:var(--hx-ink);-moz-appearance:textfield;appearance:textfield;font-variant-numeric:tabular-nums}
+.hxpd-qty__input{width:44px;border:0;background:none;text-align:center;font:400 16px/1 var(--hx-sans);color:var(--hx-ink);-moz-appearance:textfield;appearance:textfield;font-variant-numeric:tabular-nums}
 .hxpd-qty__input::-webkit-inner-spin-button,.hxpd-qty__input::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
 .hxpd-add{flex:1 1 8em;min-width:0;white-space:normal;height:auto;padding-block:14px;line-height:1.3}
 .hxpd-add,.hxpd-bar__btn{font-size:.9375rem;letter-spacing:.08em}
@@ -113,6 +106,7 @@ details[open] > .hxpd-acc__sum .hxpd-acc__icon::after{transform:rotate(0)}
 .hxpd-inci strong{font-weight:500;color:var(--hx-ink)}
 .hxpd-inci + .hxpd-inci{margin-top:-6px}
 .hxpd-inci__note{padding:0 0 20px;font-size:.875rem;color:var(--hx-muted)}
+.hxpd-inci,.hxpd-inci__note{max-width:40em}   /* re-audit 8 Nov 2026: the INCI ran ~160 characters a line at full width */
 .hxpd-specs{padding:0 0 18px}
 .hxpd-specs div{display:grid;grid-template-columns:40% 1fr;gap:12px;padding:8px 0;font-size:1rem;line-height:1.5}
 .hxpd-specs dt{color:var(--hx-muted)}
@@ -196,22 +190,12 @@ details[open] > .hxpd-acc__sum .hxpd-acc__icon::after{transform:rotate(0)}
 @media (min-width:900px){.hxpd-result__grid{grid-template-columns:6fr 5fr;gap:clamp(48px,7vw,128px);align-items:center}}
 
 /* Set results */
-.hxpd-results{display:grid;gap:40px;margin-top:clamp(36px,4vw,64px)}
-.hxpd-results__item{padding-top:20px;border-top:1px solid var(--hx-line-strong)}
-.hxpd-results__product{font-size:var(--hx-fs-label);font-weight:500;letter-spacing:var(--hx-tr-label);text-transform:uppercase;color:var(--hx-accent)}
-.hxpd-results__n{margin-top:18px;color:var(--hx-ink)}
-.hxpd-results__finding{margin-top:12px;font-family:var(--hx-serif);font-size:var(--hx-fs-title);line-height:var(--hx-lh-title);color:var(--hx-ink)}
-.hxpd-results__method{margin-top:8px}
-.hxpd-results__kind{display:block;color:var(--hx-ink);font-weight:500}
-.hxpd-result--set .hxpd-result__more{margin-top:32px}
-@media (min-width:900px){.hxpd-results{grid-template-columns:repeat(3,1fr);gap:48px}}
 
 .hxpd-use{background:var(--hx-white)}
 .hxpd-use__steps{border-top:1px solid var(--hx-line)}
 .hxpd-use__step{display:grid;grid-template-columns:44px 1fr;gap:12px;padding:16px 0;border-bottom:1px solid var(--hx-line)}
 .hxpd-use__step .hx-step{padding-top:4px}
 .hxpd-use__step strong{font-weight:500;color:var(--hx-ink)}
-.hxpd-use--set{background:var(--hx-pearl)}
 
 /* Within the ritual / the four steps */
 .hxpd-ritual{background:var(--hx-pearl)}
@@ -231,7 +215,6 @@ a.hxpd-ritual__link:hover .hxpd-ritual__object img{transform:translateY(-6px)}
 .hxpd-ritual__here{margin-top:8px;font-size:12px;letter-spacing:.06em;color:var(--hx-muted)}
 .hxpd-ritual__item.is-current .hxpd-ritual__stage{opacity:.55}
 .hxpd-ritual__set{margin-top:clamp(36px,4vw,56px);text-align:center}
-
 
 /* FAQ */
 .hxpd-faq{background:var(--hx-white)}
@@ -505,11 +488,7 @@ html body:not(.cos-h26) #cos-main-content .hxpd--g .hxpd-orbs__title,html body:n
 .hxpd--g .hxpd-orbs__link{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding-bottom:2px;border-bottom:1px solid var(--hx-ink);font-size:.78125rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--hx-ink);text-decoration:none}
 .hxpd--g .hxpd-orbs__arrow{width:7px;height:7px;margin-top:-4px;border-right:1.3px solid currentColor;border-bottom:1.3px solid currentColor;transform:rotate(45deg)}
 .hxpd--g .hxpd-orbs__list{display:grid;grid-template-columns:1fr 1fr;gap:40px 20px}
-.hxpd--g .hxpd-orbs__orb{position:relative;display:block;width:min(100%,220px);aspect-ratio:1;margin-bottom:22px;border-radius:50%;
-	background:radial-gradient(circle at 32% 26%,#FFFFFF 0,rgba(255,255,255,.9) 14%,rgba(255,255,255,0) 34%),radial-gradient(circle at 50% 50%,#FBFBFA 55%,#E6E7E8 80%,#C9CBCE 100%);
-	box-shadow:inset -10px -14px 24px rgba(28,29,31,.10),inset 8px 10px 20px rgba(255,255,255,.9),0 18px 30px -18px rgba(28,29,31,.35)}
-.hxpd--g .hxpd-orbs__orb::after{content:"";position:absolute;inset:6%;border-radius:50%;border:1px solid rgba(255,255,255,.75);pointer-events:none}
-.hxpd--g .hxpd-orbs__orb svg{position:absolute;inset:12%;width:76%;height:76%;overflow:visible}
+
 .hxpd--g .hxpd-orbs__name{font-family:var(--hx-serif);font-weight:400;font-size:var(--ts-title,1.375rem);line-height:1.22;color:var(--hx-ink)}
 .hxpd--g .hxpd-orbs__text{margin-top:10px;max-width:22em;font-size:.9375rem;line-height:1.6;color:var(--hx-text)}
 .hxpd--g .hxpd-orbs__inci{border-top:1px solid var(--hx-line)}
@@ -542,10 +521,10 @@ html body:not(.cos-h26) #cos-main-content.hxpd :is(.hxpd-steps__name,.hxpd-ritua
    pages"). set.php reuses the science cards (.hxpd-sci) for the four steps and the orbs head for
    the ingredient lists; only these few pieces are its own. */
 .hxpd--set .hxpd-sci__media{display:block}
-.hxpd--set .hxpd-sci__step{margin-bottom:6px;font-size:.6875rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--hx-fg-3,#5C5C5A)}
+
 .hxpd--set .hxpd-sci__name a{color:inherit;text-decoration:underline 1px transparent;text-underline-offset:.22em;transition:text-decoration-color var(--hx-dur-ui) var(--hx-ease-soft)}
 .hxpd--set .hxpd-sci__card:hover .hxpd-sci__name a,.hxpd--set .hxpd-sci__name a:focus-visible{text-decoration-color:currentColor}
-.hxpd--set .hxpd-sci__meta{margin-top:12px;font-size:.875rem;color:var(--hx-fg-3,#5C5C5A);font-variant-numeric:lining-nums tabular-nums}
+
 .hxpd--set .hxpd-orbs__lede{margin-top:16px;max-width:26em}
 .hxpd--set .hxpd-orbs__lists{border-top:1px solid var(--hx-line)}
 .hxpd--set .hxpd-orbs__lists .hxpd-inci{padding-bottom:18px}
@@ -562,54 +541,13 @@ html body:not(.cos-h26) #cos-main-content.hxpd :is(.hxpd-steps__name,.hxpd-ritua
    4. Further down, "Your ritual" counts the steps in the bag and swaps a step's add button for
       "In your bag". The bag state comes from #hxpd-bag (inc/commerce.php, hx-product.js §6).
    Labels stay ≥12px, links and rows ≥44px. */
-.hxpd-place{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:16px}
-.hxpd-place__step{margin:0;font-size:.8125rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;line-height:1.4;color:var(--hx-ink)}
-.hxpd-place__of{color:var(--hx-muted)}
-.hxpd-meter{display:flex;gap:4px;margin:0;padding:0;list-style:none}
-.hxpd-meter__seg{width:clamp(20px,2.4vw,32px);height:2px;background:var(--hx-line-strong)}
-.hxpd-meter__seg.is-current{background:var(--hx-ink)}
-
-.hxpd-seq{margin-top:24px;padding-top:18px;border-top:1px solid var(--hx-line)}
-.hxpd-seq__head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:6px}
-html body #cos-main-content .hxpd-seq__title{margin:0;font-family:var(--hx-sans);font-size:.75rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;line-height:1.4;color:var(--hx-ink)}
-.hxpd-seq__count{margin:0;font-size:.8125rem;color:var(--hx-accent);font-variant-numeric:lining-nums}
-.hxpd-seq__list{margin:0;padding:0;list-style:none}
-.hxpd-seq__row{display:grid;grid-template-columns:28px 76px minmax(0,1fr) auto;grid-template-areas:"num role name state";align-items:center;column-gap:10px;min-height:48px;padding:6px 0;border-bottom:1px solid var(--hx-line)}
-.hxpd-seq__num{grid-area:num;font-family:var(--hx-serif);font-size:1rem;color:var(--hx-muted);font-variant-numeric:lining-nums}
-.hxpd-seq__role{grid-area:role;white-space:nowrap;font-size:.75rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--hx-muted)}
-.hxpd-seq__name,.hxpd-seq__gesture{grid-area:name;font-size:.9375rem;line-height:1.45}
-.hxpd-seq__name{display:inline-flex;align-items:center;min-height:44px;color:var(--hx-text);text-decoration:underline 1px transparent;text-underline-offset:.25em;transition:color var(--hx-dur-ui) var(--hx-ease-soft),text-decoration-color var(--hx-dur-ui) var(--hx-ease-soft)}
-.hxpd-seq__name:hover,.hxpd-seq__name:focus-visible{color:var(--hx-ink);text-decoration-color:currentColor}
-.hxpd-seq__row.is-current :is(.hxpd-seq__num,.hxpd-seq__role){color:var(--hx-ink)}
-.hxpd-seq__gesture{color:var(--hx-ink);padding-block:8px}
-.hxpd-seq__state{grid-area:state;font-size:.8125rem;color:var(--hx-accent);white-space:nowrap}
-.hxpd-seq__state:not(:empty)::before{content:"";display:inline-block;width:9px;height:5px;margin:0 7px 3px 0;border-left:1.3px solid currentColor;border-bottom:1.3px solid currentColor;transform:rotate(-45deg)}
-@media (max-width:479.98px){
-	.hxpd-seq__row{grid-template-columns:22px 82px minmax(0,1fr);column-gap:8px;grid-template-areas:"num role name" ". . state"}
-	.hxpd-seq__state:empty{display:none}
-	.hxpd-seq__state{padding-bottom:6px}
-}
-
-.hxpd-offer{position:relative;display:grid;gap:4px;margin-top:16px;padding:16px 48px 16px 18px;border:1px solid var(--hx-line-strong);background:var(--hx-white);color:var(--hx-text);text-decoration:none;transition:border-color var(--hx-dur-ui) var(--hx-ease-soft)}
-.hxpd-offer:hover,.hxpd-offer:focus-visible{border-color:var(--hx-ink)}
-.hxpd-offer__name{font-family:var(--hx-serif);font-size:1.1875rem;line-height:1.25;color:var(--hx-ink)}
-.hxpd-offer__what{font-size:.875rem;line-height:1.5}
-.hxpd-offer__price{margin-top:4px;font-size:.875rem;line-height:1.5;font-variant-numeric:lining-nums}
-.hxpd-offer__price strong{font-weight:500;color:var(--hx-ink)}
-.hxpd-offer__arrow{position:absolute;right:20px;top:50%;width:8px;height:8px;margin-top:-4px;border-top:1.3px solid var(--hx-ink);border-right:1.3px solid var(--hx-ink);transform:rotate(45deg);transition:transform var(--hx-dur-ui) var(--hx-ease-soft)}
-.hxpd-offer:hover .hxpd-offer__arrow{transform:translateX(3px) rotate(45deg)}
 
 /* The Complete Ritual's own page: the saving first, then what it is compared with */
-.hxpd--set .hxpd-saving{display:flex;flex-direction:column;gap:2px;margin-top:10px}
-.hxpd--set .hxpd-saving__amt{font-size:.9375rem;font-weight:500;color:var(--hx-ink)}
-.hxpd--set .hxpd-saving__vs{font-size:.875rem;color:var(--hx-muted)}
 
 /* "Your ritual" further down: the count, and "In your bag" in place of a step's add button */
 :is(.hxpd--ab,.hxpd--g) .hxpd-steps__count{margin:0;font-size:.875rem;color:var(--hx-accent);font-variant-numeric:lining-nums}
 :is(.hxpd--ab,.hxpd--g) .hxpd-steps__head .hxpd-steps__count{margin-right:auto}
-:is(.hxpd--ab,.hxpd--g) .hxpd-steps__state{display:flex;align-items:center;min-height:44px;margin:0;font-size:.875rem;color:var(--hx-accent)}
-:is(.hxpd--ab,.hxpd--g) .hxpd-steps__state:empty{display:none}
-:is(.hxpd--ab,.hxpd--g) .hxpd-steps__state::before{content:"";display:inline-block;width:9px;height:5px;margin:0 8px 3px 0;border-left:1.3px solid currentColor;border-bottom:1.3px solid currentColor;transform:rotate(-45deg)}
+
 :is(.hxpd--ab,.hxpd--g) .hxpd-steps__card.is-owned .hxpd-steps__add{display:none}
 
 /* phone bar: the step above the name */
@@ -660,7 +598,7 @@ html body #cos-main-content .hxpd-seq__title{margin:0;font-family:var(--hx-sans)
 	.hxpd--g .hxpd-orbs__toggle:focus-visible{outline:var(--hx-focus-width) solid var(--hx-focus-color);outline-offset:2px}
 	.hxpd--g .hxpd-orbs__list.is-brief{row-gap:28px}
 	.hxpd--g .hxpd-orbs__list.is-brief .hxpd-orbs__text{display:none}
-	.hxpd--g .hxpd-orbs__list.is-brief .hxpd-orbs__orb{margin-bottom:14px}
+
 }
 
 /* ─── Tighter, larger (owner, 1 Nov 2026, second pass: "enlarge key images and text, tighten a
@@ -758,17 +696,18 @@ html body #cos-main-content#cos-main-content#cos-main-content.hxpd .hxpd-gallery
 html body #cos-main-content#cos-main-content#cos-main-content.hxpd :is(.hxpd-steps__badge,.hxpd-seq__role,.hxpd-seq__title,.hxpd-sci__step,.hxpd-step__verb,.hxpd-result__kind,.hxpd-results__product){line-height:1.3;letter-spacing:.16em}
 html body #cos-main-content#cos-main-content#cos-main-content.hxpd :is(.hxpd-place__step,.hxpd-place__of,.hxpd-orbs__link,.hxpd-steps__add){line-height:1.3;letter-spacing:.14em}
 /* the set's study line: a label like the formula pages' "Instrument-measured" */
-html body #cos-main-content#cos-main-content#cos-main-content.hxpd .hxpd-results__kind{font-size:var(--r-label);font-weight:500;line-height:1.3;letter-spacing:.16em;text-transform:uppercase}
+
 /* phones: the ritual tiles are ~165px wide, so the step badge keeps one line at a slightly closer tracking */
 @media (max-width:639.98px){html body #cos-main-content#cos-main-content#cos-main-content.hxpd .hxpd-steps__badge{letter-spacing:.1em;white-space:nowrap}}
 
 /* ─── services on one line (owner, 3 Nov 2026): the three assurances under Add to bag sit in one
    quiet row — short wording (as the footer), small-text role, 16px glyphs. Wraps only when the
    column is too narrow (small phones). Outranks scale.css's body-size commerce rule. ── */
-html body #cos-main-content#cos-main-content#cos-main-content.hxpd--g .hxpd-services{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 12px}
+html body #cos-main-content#cos-main-content#cos-main-content.hxpd--g .hxpd-services{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 8px}
 html body #cos-main-content#cos-main-content#cos-main-content.hxpd--g :is(.hxpd-services li,.hxpd-services a){font-size:var(--r-small,.875rem);white-space:nowrap}
-html body #cos-main-content#cos-main-content#cos-main-content.hxpd--g .hxpd-services li{gap:8px}
-html body #cos-main-content#cos-main-content#cos-main-content.hxpd--g .hxpd-services__icon{width:16px;height:16px}
+/* 17 Nov 2026 (owner): all three on one line; tightened icon + gaps so they fit the 460px buy column */
+html body #cos-main-content#cos-main-content#cos-main-content.hxpd--g .hxpd-services li{gap:6px}
+html body #cos-main-content#cos-main-content#cos-main-content.hxpd--g .hxpd-services__icon{width:15px;height:15px}
 @media (max-width:767.98px){
 	/* phones: the row cannot hold all three, so they wrap from the left instead of spreading */
 	html body #cos-main-content#cos-main-content#cos-main-content.hxpd--g .hxpd-services{justify-content:flex-start;column-gap:24px}
@@ -796,85 +735,67 @@ html body #cos-main-content#cos-main-content#cos-main-content #collection.hxc--e
 	html body #cos-main-content#cos-main-content #collection.hxc--embed .hxc__list{grid-template-columns:repeat(auto-fit,minmax(min(100%,max(9.5em,calc(50% - var(--hxc-gap)))),1fr))}
 }
 
-/* ─── The ritual as a routine row (owner, 3 Nov 2026: first a step chart with dots, then a
-   "Your daily routine" row as reference). purchase.php .hxpd-tl. Four columns: each pack (the
-   transparent packshot-{key} cut-out on its shared baseline) inside a soft stone circle with its
-   number to the left; a fine arrow leads to the next circle; beneath, the step in italic Cormorant and
-   its one benefit (the homepage's approved line). This formula: ink number and a fine ink ring;
-   the other three link to their pages. Then this step's gesture. Flat: tone, hairlines, type. ── */
-/* the block is its own size container: circles scale with the panel's width, not the viewport's */
+/* ─── The ritual as a routine row. purchase.php .hxpd-tl. 12 Nov 2026 (owner: "more delicate, no
+   product images", ref: numbered hairline circles): four fine rings joined by a hairline, the step
+   named inside in small tracked capitals, its number above the ring's shoulder, the benefit beneath.
+   This formula: an ink ring and ink type; the other three are links (ring darkens on hover). ── */
+/* the block is its own size container: rings scale with the panel's width, not the viewport's */
 .hxpd--g .hxpd-tl{container-type:inline-size;margin-top:28px;padding-top:22px;border-top:1px solid var(--hx-line)}
 .hxpd--g .hxpd-tl__head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 16px}
-html body #cos-main-content#cos-main-content#cos-main-content.hxpd.hxpd--g .hxpd-tl__title{
-	margin:0;font-family:var(--hx-sans);font-size:var(--r-label);font-weight:500;line-height:1.4;
-	letter-spacing:.16em;text-transform:uppercase;color:var(--hx-ink);
-}
+
 html body #cos-main-content#cos-main-content#cos-main-content.hxpd.hxpd--g .hxpd-tl__count{margin:0;font-size:var(--r-small);letter-spacing:0;color:var(--hx-accent)}
 .hxpd--g .hxpd-tl__list{
-	--tl-d:clamp(52px, 25cqi - 46px, 84px);   /* a quarter of the block, less room for the number */
-	display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:24px 0 0;padding:0 0 0 12px;list-style:none;
+	--tl-d:clamp(70px, 25cqi - 18px, 100px);   /* a quarter of the block, less a little air */
+	display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:24px 0 0;padding:0;list-style:none;
 }
 .hxpd--g .hxpd-tl__step{position:relative;margin:0;padding:0;min-width:0}
-/* the arrow: a hairline from this circle's right edge to just before the next circle's number,
-   with a drawn head (::before) at its end */
+/* the join: one hairline from ring to ring, through the rings' centres */
 .hxpd--g .hxpd-tl__step:not(:last-child)::after{
-	content:"";position:absolute;top:calc(var(--tl-d) / 2);height:1px;pointer-events:none;
-	left:calc(50% + var(--tl-d) / 2 + 8px);width:calc(100% - var(--tl-d) - 34px);
-	background:var(--hx-line-strong);
-}
-.hxpd--g .hxpd-tl__step:not(:last-child)::before{
-	content:"";position:absolute;top:calc(var(--tl-d) / 2 - 3px);width:6px;height:6px;pointer-events:none;
-	left:calc(50% + var(--tl-d) / 2 + 8px + (100% - var(--tl-d) - 34px) - 7px);
-	border-top:1px solid var(--hx-line-strong);border-right:1px solid var(--hx-line-strong);transform:rotate(45deg);
+	content:"";position:absolute;top:calc(20px + var(--tl-d) / 2);height:1px;pointer-events:none;
+	left:calc(50% + var(--tl-d) / 2);width:calc(100% - var(--tl-d));
+	background:var(--hx-line);
 }
 html body #cos-main-content#cos-main-content#cos-main-content.hxpd.hxpd--g .hxpd-tl__link{
 	display:flex;flex-direction:column;align-items:center;text-align:center;color:inherit;text-decoration:none;
 }
-.hxpd--g .hxpd-tl__orb{
-	position:relative;flex:none;width:var(--tl-d);height:var(--tl-d);border-radius:50%;
-	background:#ECEBE7;
-	transition:background-color var(--hx-dur-ui) var(--hx-ease-soft);
-}
-.hxpd--g .hxpd-tl__step.is-current .hxpd-tl__orb{outline:1px solid var(--hx-ink);outline-offset:4px}
 html body #cos-main-content#cos-main-content#cos-main-content.hxpd.hxpd--g .hxpd-tl__no{
-	position:absolute;top:50%;right:calc(100% + 11px);transform:translateY(-50%);
-	font-family:var(--hx-sans);font-size:var(--r-small);font-weight:500;line-height:1;letter-spacing:0;
-	font-variant-numeric:lining-nums;color:var(--hx-muted);
+	display:block;width:var(--tl-d);height:20px;padding-left:2px;text-align:left;
+	font-family:var(--hx-sans);font-size:12px;font-weight:400;line-height:1;letter-spacing:.08em;
+	font-variant-numeric:lining-nums tabular-nums;color:var(--hx-muted);
 }
-/* the pack: its visible height centred in the circle (the bottle cut-outs carry ~11% air above the cap) */
-.hxpd--g .hxpd-tl__pack{position:absolute;left:50%;top:calc(var(--tl-d) * .5 - var(--tl-d) * .88 * .555);width:calc(var(--tl-d) * .88 * 2 / 3);transform:translateX(-50%)}
-.hxpd--g .hxpd-tl__pack :is(picture,img){display:block;width:100%;height:auto}
-.hxpd--g .hxpd-tl__step--cream .hxpd-tl__pack{top:calc(var(--tl-d) * .5 - var(--tl-d) * .88 * .75)}   /* the jar fills only the lower half of its frame */
+.hxpd--g .hxpd-tl__orb{
+	display:grid;place-items:center;flex:none;width:var(--tl-d);height:var(--tl-d);border-radius:50%;
+	border:1px solid var(--hx-line-strong);background:transparent;
+	transition:border-color var(--hx-dur-ui) var(--hx-ease-soft);
+}
+.hxpd--g .hxpd-tl__step.is-current .hxpd-tl__orb{border-color:var(--hx-ink)}
 html body #cos-main-content#cos-main-content#cos-main-content.hxpd.hxpd--g .hxpd-tl__verb{
-	margin-top:14px;font-family:var(--hx-serif);font-style:italic;font-weight:400;font-size:var(--r-title);line-height:1.2;letter-spacing:0;
-	color:var(--hx-fg-2,#3A3B3D);text-decoration:underline 1px transparent;text-underline-offset:.2em;
-	transition:text-decoration-color var(--hx-dur-ui) var(--hx-ease-soft),color var(--hx-dur-ui) var(--hx-ease-soft);
+	margin:0;padding:0 4px;font-family:var(--hx-sans);font-style:normal;font-weight:400;font-size:12px;line-height:1.2;
+	letter-spacing:.12em;text-transform:uppercase;color:var(--hx-fg-2,#3A3B3D);
+	transition:color var(--hx-dur-ui) var(--hx-ease-soft);
 }
 html body #cos-main-content#cos-main-content#cos-main-content.hxpd.hxpd--g .hxpd-tl__why{
-	margin-top:4px;padding-inline:4px;font-size:.75rem;line-height:1.45;letter-spacing:0;color:var(--hx-muted);text-wrap:balance;
+	margin-top:12px;padding-inline:4px;font-size:.75rem;line-height:1.45;letter-spacing:0;color:var(--hx-muted);text-wrap:balance;
 }
 html body #cos-main-content#cos-main-content#cos-main-content.hxpd.hxpd--g .hxpd-tl__step.is-current :is(.hxpd-tl__no,.hxpd-tl__verb){color:var(--hx-ink)}
 html body #cos-main-content#cos-main-content#cos-main-content.hxpd.hxpd--g .hxpd-tl__state{margin-top:6px;font-size:.75rem;line-height:1.3;letter-spacing:0;color:var(--hx-accent);white-space:nowrap}
 .hxpd--g .hxpd-tl__state:empty{display:none}
 .hxpd--g .hxpd-tl__state::before{content:"";display:inline-block;width:8px;height:4px;margin:0 6px 3px 0;border-left:1.2px solid currentColor;border-bottom:1.2px solid currentColor;transform:rotate(-45deg)}
-html body #cos-main-content#cos-main-content#cos-main-content.hxpd.hxpd--g a.hxpd-tl__link:is(:hover,:focus-visible) .hxpd-tl__verb{color:var(--hx-ink);text-decoration-color:currentColor}
-.hxpd--g a.hxpd-tl__link:is(:hover,:focus-visible) .hxpd-tl__orb{background:#E4E3DE}
+html body #cos-main-content#cos-main-content#cos-main-content.hxpd.hxpd--g a.hxpd-tl__link:is(:hover,:focus-visible) .hxpd-tl__verb{color:var(--hx-ink)}
+.hxpd--g a.hxpd-tl__link:is(:hover,:focus-visible) .hxpd-tl__orb{border-color:var(--hx-ink)}
 .hxpd--g a.hxpd-tl__link:focus{outline:none}
 .hxpd--g a.hxpd-tl__link:focus-visible{outline:1px solid var(--hx-ink);outline-offset:4px}
-html body #cos-main-content#cos-main-content#cos-main-content.hxpd.hxpd--g .hxpd-tl__gesture{
-	margin:22px 0 0;padding-top:18px;border-top:1px solid var(--hx-line);
-	font-family:var(--hx-serif);font-weight:400;font-size:var(--r-title);line-height:1.35;letter-spacing:0;color:var(--hx-ink);text-wrap:pretty;
-}
-html body #cos-main-content#cos-main-content#cos-main-content.hxpd.hxpd--g .hxpd-tl__gesture-step{
-	margin-right:10px;font-family:var(--hx-sans);font-size:var(--r-label);font-weight:500;letter-spacing:.16em;text-transform:uppercase;
-	color:var(--hx-muted);vertical-align:.15em;
-}
+
 @container (max-width:439.98px){
-	/* a narrow block (phones, tablet panels): no arrows (no room between the circles), and the
-	   benefit lines are dropped (four ~90px columns would stack them four lines deep) */
-	.hxpd--g .hxpd-tl__step:not(:last-child)::after,.hxpd--g .hxpd-tl__step:not(:last-child)::before{content:none}
-	html body #cos-main-content#cos-main-content#cos-main-content.hxpd.hxpd--g .hxpd-tl__no{right:calc(100% + 10px);font-size:.75rem}
-	html body #cos-main-content#cos-main-content#cos-main-content.hxpd.hxpd--g .hxpd-tl__verb{font-size:1.0625rem;margin-top:12px}
+	/* a narrow block (phones, tablet panels): the words no longer fit inside a ring, so the number
+	   moves into a smaller ring and the step is named beneath it; benefit lines are dropped (four
+	   ~85px columns would stack them four lines deep) */
+	.hxpd--g .hxpd-tl__list{--tl-d:clamp(48px, 25cqi - 30px, 60px)}
+	html body #cos-main-content#cos-main-content#cos-main-content.hxpd.hxpd--g .hxpd-tl__link{position:relative}
+	html body #cos-main-content#cos-main-content#cos-main-content.hxpd.hxpd--g .hxpd-tl__no{position:absolute;top:0;left:50%;display:grid;place-items:center;height:var(--tl-d);padding:0;transform:translateX(-50%);text-align:center;letter-spacing:.04em;z-index:1}
+	.hxpd--g .hxpd-tl__orb{margin-bottom:30px;position:relative}
+	html body #cos-main-content#cos-main-content#cos-main-content.hxpd.hxpd--g .hxpd-tl__verb{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%);padding:0;white-space:nowrap;letter-spacing:.08em}
+	.hxpd--g .hxpd-tl__step:not(:last-child)::after{top:calc(var(--tl-d) / 2)}
 	html body #cos-main-content#cos-main-content#cos-main-content.hxpd.hxpd--g .hxpd-tl__why{display:none}
 }
 @media (prefers-reduced-motion:reduce){.hxpd--g :is(.hxpd-tl__orb,.hxpd-tl__verb){transition:none}}/* heading hidden (owner, 3 Nov 2026): the head row holds only the bag count, right-aligned, and
@@ -981,8 +902,7 @@ html body #cos-main-content#cos-main-content#cos-main-content.hxpd--set .hxcr-st
 .hxpd--set .hxcr-gesture{padding-block:0 var(--hxcr-room);background:var(--hx-white)}
 .hxpd--set .hxcr-gesture__grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:center}
 @media (min-width:900px){.hxpd--set .hxcr-gesture__grid{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(48px,7vw,128px)}}
-.hxpd--set .hxcr-gesture__media{margin:0;aspect-ratio:1122/1402;overflow:clip;background:var(--hx-pearl)}
-.hxpd--set .hxcr-gesture__media :where(picture,img){display:block;width:100%;height:100%;object-fit:cover}
+
 .hxpd--set .hxcr-gesture__body{max-width:30rem}
 html body #cos-main-content#cos-main-content#cos-main-content.hxpd--set .hxcr-gesture__title{margin:0 0 28px}
 .hxpd--set .hxcr-gesture__steps{margin:0;padding:0;list-style:none;border-top:1px solid var(--hx-line)}
@@ -994,7 +914,6 @@ html body #cos-main-content#cos-main-content#cos-main-content.hxpd--set .hxcr-ge
 /* the line, at the end */
 .hxpd--set .hxcr-line{padding-block:var(--hxcr-room);background:var(--hx-white);border-top:1px solid var(--hx-line)}
 .hxpd--set .hxcr-line__head{display:block;text-align:center;margin-bottom:clamp(40px,5vw,72px)}
-
 
 /* "Measured, formula by formula" with the four textures (owner ref, 3 Nov 2026; set.php, hxcr-tex-*).
    A soft pearl sky (light only, no colour) holds the results; the instrument-measured two take the serif
@@ -1026,9 +945,8 @@ html body #cos-main-content#cos-main-content#cos-main-content.hxpd--set .hxcr-te
 html body #cos-main-content#cos-main-content#cos-main-content.hxpd--set .hxcr-tex__step{font-size:var(--r-label);font-weight:500;letter-spacing:.16em;text-transform:uppercase;line-height:1.4;color:var(--hx-ink)}
 html body #cos-main-content#cos-main-content#cos-main-content.hxpd--set .hxcr-tex__name{max-width:11em;font-family:var(--hx-serif);font-size:var(--r-title);line-height:1.25;color:var(--hx-ink);text-decoration:underline 1px transparent;text-underline-offset:.2em;transition:text-decoration-color var(--hx-dur-ui) var(--hx-ease-soft)}
 .hxpd--set .hxcr-tex__link:is(:hover,:focus-visible) .hxcr-tex__name{text-decoration-color:currentColor}
-html body #cos-main-content#cos-main-content#cos-main-content.hxpd--set .hxcr-tex__note{margin:14px auto clamp(48px,6vw,96px);font-size:.875rem;line-height:1.55;color:var(--hx-muted);text-align:center}
-@media (prefers-reduced-motion:reduce){.hxpd--set .hxcr-tex__pic img{transition:none}.hxpd--set .hxcr-tex__link:hover .hxcr-tex__pic img{transform:none}}
 
+@media (prefers-reduced-motion:reduce){.hxpd--set .hxcr-tex__pic img{transition:none}.hxpd--set .hxcr-tex__link:hover .hxcr-tex__pic img{transform:none}}
 
 /* How to use: the amounts chart (owner ref, 3 Nov 2026), replacing the portrait. A flat pearl 4:5 panel;
    swatches placed in % of the panel, hairline callouts in one SVG (viewBox 100 x 125 = the panel), and
@@ -1059,5 +977,40 @@ html body #cos-main-content#cos-main-content#cos-main-content.hxpd--set .hxcr-do
 	.hxpd--set .hxcr-tex__cap{position:static;padding:12px 16px 18px;background:var(--hx-white)}
 	.hxpd--set .hxcr-tex__link{display:flex;flex-direction:column}
 }
-html body #cos-main-content#cos-main-content#cos-main-content.hxpd--set .hxcr-step__name a{display:inline-block;padding-block:10px;margin-block:-10px}
+html body #cos-main-content#cos-main-content#cos-main-content.hxpd--set .hxcr-step__name a{display:inline-block;padding-block:11px;margin-block:-11px}   /* 44px target (re-audit 8 Nov 2026) */
 @container (max-width:479.98px){.hxpd--set .hxcr-dose__label--cream{max-width:38cqi}}   /* "A hazelnut-sized amount" wraps on narrow charts so it clears the eye-cream label */
+
+/* The Complete Ritual opens on the owner's studio lineup (11–12 Nov 2026): one full-bleed photograph
+   under the transparent header with the purchase block set on its wall; no gallery on this page.
+   Desktop: the wide stage, products bottom-left, panel on the right. Below 1200px: the tall stage,
+   panel on the wall above the products. Crops only ever take extended wall (object-position). */
+.hxpd--set{padding-top:0}
+.hxpd-hero{position:relative;isolation:isolate;overflow:hidden;background:#E2DEE3}
+.hxpd-hero__media{position:absolute;inset:0;z-index:-1}
+.hxpd-hero__media img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 100%}
+.hxpd-hero__stage{padding-top:calc(var(--cos-nav-h,80px) + 16px)}
+.hxpd-hero__stage::after{content:"";display:block;aspect-ratio:1270 / 1090}   /* the products' share of the tall stage, plus room for the step marks */
+.hxpd-hero .hxpd-panel{position:static;padding:8px var(--hx-margin) 0;background:none}
+.hxpd-hero .hxpd-panel__inner{max-width:520px;margin-inline:0}
+@media (min-width:1200px){
+	.hxpd-hero{min-height:max(100svh,680px);display:grid}
+	.hxpd-hero__media img{object-position:0% 100%}
+	.hxpd-hero__stage{display:grid;align-content:center;justify-items:end;padding:calc(var(--cos-nav-h,80px) + 24px) var(--hx-margin) 48px}
+	.hxpd-hero__stage::after{content:none}
+	.hxpd-hero .hxpd-panel{width:clamp(340px,31vw,460px);padding:0;margin-right:clamp(0px,3vw,56px)}
+	.hxpd-hero .hxpd-panel__inner{max-width:none}
+}
+
+/* Step marks on the photograph (12 Nov 2026): numeral, verb, a hairline down to the product.
+   Placed by hx-product.js (.is-placed), revealed one after another in ritual order (.is-in). */
+.hxpd-hero__steps{position:absolute;inset:0;z-index:0;margin:0;padding:0;list-style:none;pointer-events:none}
+.hxpd-hero__step{position:absolute;left:0;top:0;display:flex;flex-direction:column;align-items:center;gap:6px;transform:translate(-50%,-100%);opacity:0;color:var(--hx-text);text-align:center;white-space:nowrap}
+.hxpd-hero__steps:not(.is-placed) .hxpd-hero__step{visibility:hidden}
+.hxpd-hero__num{font-size:12px;letter-spacing:.08em;color:inherit}
+.hxpd-hero__verb{font:500 12px/1 var(--hx-sans);letter-spacing:.16em;text-transform:uppercase}
+.hxpd-hero__rule{display:block;width:1px;height:clamp(16px,2.4vw,32px);margin-top:4px;margin-bottom:10px;background:currentColor;opacity:.55;transform:scaleY(0);transform-origin:50% 0}
+.hxpd-hero__steps.is-in .hxpd-hero__step{opacity:1;transition:opacity .7s var(--hx-ease-soft,ease) calc(.35s + var(--i) * .28s),translate .9s cubic-bezier(.2,.7,.2,1) calc(.35s + var(--i) * .28s);translate:0 0}
+.hxpd-hero__steps.is-placed:not(.is-in) .hxpd-hero__step{translate:0 10px}
+.hxpd-hero__steps.is-in .hxpd-hero__rule{transform:scaleY(1);transition:transform .8s cubic-bezier(.2,.7,.2,1) calc(.6s + var(--i) * .28s)}
+@media (max-width:599.98px){.hxpd-hero__step{gap:4px}.hxpd-hero__num,.hxpd-hero__verb{font-size:12px}.hxpd-hero__verb{letter-spacing:.12em}.hxpd-hero__rule{margin-bottom:6px}}
+@media (prefers-reduced-motion:reduce){.hxpd-hero__steps .hxpd-hero__step,.hxpd-hero__steps .hxpd-hero__rule{transition:none!important;translate:none!important}.hxpd-hero__steps.is-in .hxpd-hero__rule{transform:none}}

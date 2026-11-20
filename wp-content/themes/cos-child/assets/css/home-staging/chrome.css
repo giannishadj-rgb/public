@@ -100,8 +100,8 @@ html body.cos-h26.cos-h26-nocturne #cos-nav-wrap .cos-nav-links a{font-size:.75r
 	/* the 44px target is wider than its lines: offset so the drawn lines sit on the page margin */
 	.cos-mob-btn{display:flex;position:absolute;left:calc(var(--hx-margin,24px) - 12px);top:50%;transform:translateY(-50%)}
 	.cos-nav-utils{margin-right:-10px}
-	/* Help + Account live in the menu below 1024px; only the bag stays in the bar. */
-	.cos-nav-utils a.cos-nav-help,.cos-nav-utils a.cos-nav-account{display:none}
+	/* Help lives in the menu below 1024px; account + bag stay in the bar (owner, 7 Nov 2026). */
+	.cos-nav-utils a.cos-nav-help{display:none}
 	.cos-nav-logo{position:absolute;left:50%;transform:translateX(-50%)}
 	/* Scales with the clear space between menu button and bag (21px floor). */
 	.cos-nav-logo img{height:clamp(21px,38.2vw - 93px,42px)}
@@ -439,3 +439,12 @@ body.cos-h26 #cos-footer#cos-footer .hxf-house address{font-size:.9375rem}
 @media (max-width:767.98px){
 	#cos-footer#cos-footer :is(.cos-nl-consent-text,.hxf-base__copy,.hxf-consent){font-size:.9375rem}
 }
+
+
+/* ═══ Tap targets (adapt, 4 Nov 2026, owner): the visible boxes are now the 44px targets ═══
+   Nav links were 18px tall with an invisible 44px ::before band; footer links were 34px from
+   768px up. Same block in hx/chrome.css (every other page) and home-staging/chrome.css (home). */
+#cos-nav-wrap#cos-nav-wrap .cos-nav-links a{display:inline-flex;align-items:center;min-height:44px}
+#cos-nav-wrap#cos-nav-wrap .cos-nav-links a::before{content:none}
+#cos-nav-wrap#cos-nav-wrap .cos-nav-links a::after{bottom:7px}   /* the hairline keeps its 6px gap under the 18px label line */
+#cos-footer#cos-footer#cos-footer :is(.hxf-links a,.hxf-house__mail){min-height:44px}

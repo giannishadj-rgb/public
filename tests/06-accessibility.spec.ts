@@ -74,6 +74,9 @@ test.describe('Accessibility scenarios', () => {
   test('checkout with a real cart (collapsed optional fields, collapsed coupon) has no serious violations', async ({ page }) => {
     await gotoAndCheck(page, '/products/advanced-repair-serum/');
     await page.locator('#cos-pdp-atc-btn').click();
+    // The add can land as a form post that 302s to /cart/ (WebKit): let that navigation finish
+    // before going to checkout, or the goto is interrupted by it (race, not an a11y failure).
+    await page.waitForURL(/\/cart\//, { timeout: 5_000 }).catch(() => undefined);
     await page.waitForLoadState('networkidle');
     await gotoAndCheck(page, '/checkout/');
     await expectNoSeriousAccessibilityViolations(page);

@@ -25,6 +25,19 @@
  *   wc-close-print         November 2022 shoot of the four current packs, crop + resize only
  *                          (wc-close-print.origin.json)
  * Previous version (caviar plate + facts): git history.
+ *
+ * 6 Nov 2026 (owner: more eye-catching and elegant, in the site's look): new photographs in one silver
+ * palette with the lineup hero, built by design-sources/home-2026/build_hxv_story_2026-11-06.py:
+ *   hxv-zug-tall     Zug old-town lakefront + Rigi (Unsplash, Louis Droege), silver monochrome
+ *   hxv-caviar-tall  black caviar macro (brand stock, Dropbox Assets/Stock Images/Caviar)
+ *   hxv-ritual-tall  owner June 2026 shoot CAV59851, the four formulas on glass blocks
+ * The old images above stay on disk (hxhe-valley-warm-tall is still used on /heritage/).
+ *
+ * 4 Nov 2026 (distill, owner): the outlined DISCOVER (a third link to /heritage/) was removed, so the
+ * section links there once, through "Our history". Each panel line is now one fact, not a tagline:
+ *   Siberian Caviar  "From Siberian sturgeon, farmed and traceable"  (PRODUCT.md confirmed facts)
+ *   The Ritual       "Four steps, morning and evening"               (replaces a repeat of the hero line)
+ * "More than twenty years in Zug" was already a fact and stays.
  */
 defined( 'ABSPATH' ) || exit;
 
@@ -34,22 +47,23 @@ $chapters = array(
 		'italic' => false,
 		'line'   => 'More than twenty years in Zug',
 		'url'    => '/heritage/',
-		'img'    => array( 'hxhe-valley-warm-tall', array( 640, 960, 1280 ), array( 4, 5 ), 'A Swiss alpine valley beneath snow-covered peaks, in warm monochrome' ),
+		'pos'    => '50% 62%', // phones (4:3): keep the old-town houses and the Rigi in frame
+		'img'    => array( 'hxv-zug-tall', array( 640, 960, 1280, 1600 ), array( 4, 5 ), 'The old town of Zug on the lakefront, the snow-capped Rigi beyond, in black and white' ),
 	),
 	array(
 		'title'  => 'Siberian Caviar',
 		'italic' => true,
-		'line'   => 'The heart of every formula',
+		'line'   => 'From Siberian sturgeon, farmed and traceable',
 		'url'    => '/science/why-caviar/',
-		'img'    => array( 'wc-cav-heap-tall', array( 640, 960, 1290, 1600 ), array( 4, 5 ), 'Glossy black caviar heaped on a pale, reflective surface' ),
+		'img'    => array( 'hxv-caviar-tall', array( 640, 960, 1280, 1600 ), array( 4, 5 ), 'A close view of glossy black caviar, each grain catching the light' ),
 	),
 	array(
 		'title'  => 'The Ritual',
 		'italic' => true,
-		'line'   => 'Four formulas, one daily ritual',
+		'line'   => 'Four steps, morning and evening',
 		'url'    => '/the-ritual/',
-		'pos'    => '50% 88%', // the packs stand low in the frame: keep the jar whole in the 4:3 phone crop
-		'img'    => array( 'wc-close-print', array( 480, 720, 960, 1200 ), array( 4, 5 ), 'The four Caviar of Switzerland formulas on a stone counter before reeded glass' ),
+		'pos'    => '50% 92%', // phones (4:3): keep the jar and eye cream whole on the glass blocks
+		'img'    => array( 'hxv-ritual-tall', array( 640, 960, 1280, 1600 ), array( 4, 5 ), 'The four Caviar of Switzerland formulas arranged on clear glass blocks in soft grey light' ),
 	),
 );
 
@@ -58,8 +72,7 @@ $chapters = array(
 	<div class="hx-wrap">
 		<header class="hxv__head">
 			<h2 id="hxv-title" class="hx-heading hxv__title" data-hx-reveal="light">Our story</h2>
-			<p class="hxv__story" data-hx-reveal data-hx-delay="120">Our story begins in Zug, with&nbsp;caviar.</p>
-			<p class="hxv__act" data-hx-reveal data-hx-delay="240"><a class="hxv__cta" href="<?php echo esc_url( home_url( '/heritage/' ) ); ?>" data-cro-cta="home-caviar-discover">Discover<span class="hx-sr"> our story</span></a></p>
+			<p class="hxv__story" data-hx-reveal data-hx-delay="120">It begins in Zug, with&nbsp;caviar.</p><?php /* 4 Nov 2026 (clarify): was "Our story begins…", repeating the title */ ?>
 		</header>
 
 		<ul class="hxv__chapters" role="list" data-hx-stagger>

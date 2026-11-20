@@ -89,6 +89,18 @@ function cos_child_clean_journal_hub_content( string $content ): string {
 }
 add_filter( 'the_content', 'cos_child_clean_journal_hub_content', 1 );
 
+/**
+ * Journal articles (17 Nov 2026 critique): the DB-authored end links carried typed arrows
+ * ("Explore →", "← Back to the Journal"); the site draws its arrows (.hx-arrow). Done as a
+ * filter so it reaches every article and staging without a DB push.
+ */
+function cos_child_journal_drawn_arrows( string $content ): string {
+	if ( is_admin() || false === strpos( $content, 'cos-art-cta-link' ) ) return $content;
+	$content = preg_replace( '#(<a class="cos-art-cta-link"[^>]*>)(.*?)\s*(?:&rarr;|→)\s*</a>#u', '$1$2<span class="hx-arrow" aria-hidden="true"></span></a>', $content );
+	return preg_replace( '#(<div class="cos-art-back"><a [^>]*>)\s*(?:&larr;|←)\s*#u', '$1', $content );
+}
+add_filter( 'the_content', 'cos_child_journal_drawn_arrows', 20 );
+
 function cos_child_decode_script_body_entities( string $html ): string {
 	$decoded = preg_replace_callback(
 		'#<script\b([^>]*)>(.*?)</script>#is',

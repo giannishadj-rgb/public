@@ -26,33 +26,7 @@ body.cos-h26 .hxv__head{
 	margin-bottom:clamp(48px,1.5rem + 4vw,96px);
 }
 body.cos-h26 .hxv__story{margin-top:var(--hx-s-4);max-width:26em;text-wrap:balance}
-body.cos-h26 .hxv__act{margin-top:clamp(28px,1rem + 1.6vw,40px)}
-
-/* the outlined square action (same vocabulary as the hero's) */
-body.cos-h26 .hxv__cta,
-body.cos-h26 .hxv__cta:visited{
-	display:inline-flex;
-	align-items:center;
-	justify-content:center;
-	box-sizing:border-box;
-	min-height:52px;
-	padding:0 36px;
-	box-shadow:inset 0 0 0 1px var(--hx-ink);
-	background:transparent;
-	color:var(--hx-ink);
-	font-family:var(--hx-sans);
-	font-size:var(--ts-action,.78125rem);
-	font-weight:500;
-	line-height:1.3;
-	letter-spacing:.16em;
-	text-transform:uppercase;
-	text-decoration:none;
-	transition:background-color var(--hx-dur-ui) var(--hx-ease-soft),color var(--hx-dur-ui) var(--hx-ease-soft);
-	-webkit-tap-highlight-color:transparent;
-}
-body.cos-h26 .hxv__cta:is(:hover,:focus-visible){background:var(--hx-ink);color:var(--hx-white)}
-body.cos-h26 .hxv__cta:focus{outline:none}
-body.cos-h26 .hxv__cta:focus-visible{outline:var(--hx-focus-width) solid var(--hx-focus-color);outline-offset:var(--hx-focus-offset)}
+/* 4 Nov 2026: the outlined DISCOVER action was removed (distill); the triptych panels are the links. */
 
 /* ─── Triptych ───────────────────────────────────────────────────────── */
 body.cos-h26 .hxv__chapters{
@@ -123,7 +97,6 @@ body.cos-h26 .hxv__link:focus-visible{outline:var(--hx-focus-width) solid var(--
 
 @media (prefers-reduced-motion:reduce){
 	body.cos-h26 .hxv__img img,
-	body.cos-h26 .hxv__name,
-	body.cos-h26 .hxv__cta{transition:none}
+	body.cos-h26 .hxv__name{transition:none}
 	body.cos-h26 .hxv__link:hover .hxv__img img{transform:none}
 }

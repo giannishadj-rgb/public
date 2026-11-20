@@ -87,6 +87,8 @@ function cos_staging_nav_aria( string $href ): string {
 
 function cos_staging_global_nav(): void {
 	$logo_svg  = cos_staging_logo_svg();
+	// 7 Nov 2026 (owner): "Home" is back in the homepage bar, so the menu is the same on every page
+	// (it was dropped on 4 Nov; marked aria-current here, as on the other pages' bar).
 	$primary = array(
 		'/'            => 'Home',
 		'/shop/'       => 'Shop',
@@ -125,7 +127,8 @@ function cos_staging_global_nav(): void {
 <div id="cos-mob-menu" class="hxn-sheet" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Navigation menu">
   <div class="hxn-menu">
     <nav class="hxn-menu__primary" aria-label="Menu">
-      <?php $i = 0; foreach ( $primary as $href => $label ) : ?>
+      <?php /* "Home" first, as in the bar (7 Nov 2026). */
+      $i = 0; foreach ( $primary as $href => $label ) : ?>
       <a class="hxn-menu__link" style="--hxn-i:<?php echo (int) $i++; ?>" href="<?php echo esc_attr( $href ); ?>"<?php echo cos_staging_nav_aria( $href ); ?>><?php echo esc_html( $label ); ?><span class="hx-arrow" aria-hidden="true"></span></a>
       <?php endforeach; ?>
     </nav>
@@ -233,7 +236,9 @@ function cos_staging_global_footer(): void {
 <script nonce="<?php echo esc_attr( cos_csp_nonce() ); ?>">
 (function(){
   var navWrap=document.getElementById('cos-nav-wrap');
-  window.addEventListener('scroll',function(){navWrap.classList.toggle('scrolled',window.scrollY>10);},{passive:true});
+  function navState(){navWrap.classList.toggle('scrolled',window.scrollY>10);}
+  navState(); // initial state too, so a reload mid-page never shows a transparent bar (was in home-2026.js, retired 8 Nov 2026)
+  window.addEventListener('scroll',navState,{passive:true});
   var mobBtn=document.getElementById('cos-mob-btn');
   var mobMenu=document.getElementById('cos-mob-menu');
   var h1=document.getElementById('cos-h1');

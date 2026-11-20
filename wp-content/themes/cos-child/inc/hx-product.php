@@ -149,11 +149,19 @@ function cos_hxpd_context( WC_Product $product ): array {
 	// photographs from the WooCommerce gallery. Images used further down the page are
 	// left out so nothing repeats. Sizes match the CSS layout (first large, rest 2-up).
 	$slides     = array();
+	$hero       = '';
 	$first_size = '(min-width: 1024px) 56vw, 100vw';
 	$rest_size  = '(min-width: 1024px) 28vw, 100vw';
 	if ( $is_set ) {
-		$slides[] = cos_h26_picture( 'hxpd-tray', array( 640, 1024 ), array( 4, 5 ), 'The Complete Ritual: the four Caviar of Switzerland formulas on a silver tray', array( 'sizes' => $first_size, 'eager' => true, 'w' => 1024 ) );
-		$ids = array( 23725, 23717, 482, 23721 );
+		// 11 Nov 2026 (owner): the page opens on the owner's studio lineup of the four formulas, full-bleed,
+		// with the purchase block set on the wall; 12 Nov: the gallery photographs are gone from this page.
+		// Two stages built from the one photograph (design-sources/set-hero-2026-11-11, stage.py): wide
+		// (wall extended up and right, for the panel) and tall for phones/tablets (wall extended up).
+		$hero = cos_h26_picture( 'hxpd-set-stage-wide', array( 1280, 1920, 2572 ), array( 2572, 1461 ), 'The Complete Ritual: Micellar Water All-in-one Cleanser, Revitalizing Eye Cream, 24h Regeneration Cream and Advanced Repair Serum on a pale studio ground', array(
+			'sizes' => '100vw', 'eager' => true, 'w' => 2572, 'class' => 'hxpd-hero__media',
+			'art'   => array( array( 'media' => '(max-width: 1199.98px)', 'base' => 'hxpd-set-stage-tall', 'widths' => array( 640, 960, 1270 ), 'sizes' => '100vw' ) ),
+		) );
+		$ids  = array();
 	} else {
 		if ( $me ) {
 			// The clean cut-out packshot shared with the homepage collection and the shop
@@ -249,6 +257,7 @@ function cos_hxpd_context( WC_Product $product ): array {
 		'study'      => cos_hxpd_studies()[ $sku ] ?? null,
 		'studies'    => cos_hxpd_studies(),
 		'slides'     => $slides,
+		'hero'       => $hero,
 		'in_stock'   => $product->is_in_stock() && $product->is_purchasable(),
 		'is_simple'  => $product->is_type( 'simple' ),
 		'max_qty'    => (int) COS_MAX_LINE_ITEM_QTY,

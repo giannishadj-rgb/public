@@ -88,7 +88,7 @@
 .cos-bag-link{position:relative}
 /* Bag count: a small graphite disc, legible figures. Filled by inc/commerce.php
    (cart fragments) + inc/analytics.php; empty = hidden. */
-#cos-nav-wrap#cos-nav-wrap .cos-bag-count{position:absolute;top:7px;right:3px;min-width:17px;height:17px;padding:0 5px;border-radius:9px;box-sizing:border-box;background:var(--hx-ink,#1C1D1F);color:#F8F8F8;font-family:var(--hx-sans,'Inter',sans-serif);font-size:10px;font-weight:500;line-height:17px;letter-spacing:0;text-align:center;font-variant-numeric:tabular-nums;display:none;pointer-events:none}
+#cos-nav-wrap#cos-nav-wrap .cos-bag-count{position:absolute;top:6px;right:2px;min-width:19px;height:19px;padding:0 5px;border-radius:10px;box-sizing:border-box;background:var(--hx-ink,#1C1D1F);color:#F8F8F8;font-family:var(--hx-sans,'Inter',sans-serif);font-size:12px;font-weight:500;line-height:19px;letter-spacing:0;text-align:center;font-variant-numeric:tabular-nums;display:none;pointer-events:none}
 #cos-nav-wrap#cos-nav-wrap .cos-bag-count:not(:empty){display:block}
 
 /* Menu button (phones/tablets) — three hairlines that cross into an ×. */
@@ -106,8 +106,9 @@
 	/* the 44px target is wider than its lines: offset so the drawn lines sit on the page margin */
 	#cos-nav-wrap#cos-nav-wrap .cos-mob-btn{display:flex;position:absolute;left:calc(var(--hx-margin,24px) - 12px);top:50%;transform:translateY(-50%)}
 	#cos-nav-wrap#cos-nav-wrap .cos-nav-utils{margin-right:-10px}
-	/* Account lives in the menu below 1024px; only the bag stays in the bar. */
-	#cos-nav-wrap#cos-nav-wrap .cos-nav-utils a:is(.cos-nav-help,.cos-nav-account){display:none}
+	/* Help lives in the menu below 1024px; account + bag stay in the bar (owner, 7 Nov 2026: the
+	   profile icon must show on phones too; it was menu-only before). */
+	#cos-nav-wrap#cos-nav-wrap .cos-nav-utils a.cos-nav-help{display:none}
 	#cos-nav-wrap#cos-nav-wrap .cos-nav-logo{position:absolute;left:50%;transform:translateX(-50%)}
 	/* Scales with the clear space between menu button and bag (21px floor). */
 	#cos-nav-wrap#cos-nav-wrap .cos-nav-logo img{height:clamp(21px,38.2vw - 93px,42px)}
@@ -514,3 +515,19 @@ body.hx-head-photo.hx-head-light #cos-nav-wrap#cos-nav-wrap.is-live:not(.scrolle
 
 /* Text enlargement (30 Oct 2026): the long e-mail address wraps instead of running off a phone screen */
 #cos-footer#cos-footer .hxf-house__mail{overflow-wrap:anywhere}
+
+
+/* ═══ Tap targets (adapt, 4 Nov 2026, owner): the visible boxes are now the 44px targets ═══
+   Nav links were 18px tall with an invisible 44px ::before band; footer links were 34px from
+   768px up. Same block in hx/chrome.css (every other page) and home-staging/chrome.css (home). */
+#cos-nav-wrap#cos-nav-wrap .cos-nav-links a{display:inline-flex;align-items:center;min-height:44px}
+#cos-nav-wrap#cos-nav-wrap .cos-nav-links a::before{content:none}
+#cos-nav-wrap#cos-nav-wrap .cos-nav-links a::after{bottom:7px}   /* the hairline keeps its 6px gap under the 18px label line */
+#cos-footer#cos-footer#cos-footer :is(.hxf-links a,.hxf-house__mail){min-height:44px}
+
+/* ─── Checkout: a quieter frame (17 Nov 2026 site critique, owner: fix all). The logo and the bag stay
+   (the bag is the way back); the page links, the menu button, the account icon, the newsletter and
+   the link columns step aside so nothing pulls her away while she pays. Legal links and cookie
+   settings stay in the footer base. The order-received page keeps the full header. ─── */
+body.woocommerce-checkout:not(.woocommerce-order-received) #cos-nav-wrap#cos-nav-wrap :is(.cos-nav-links,.cos-mob-btn,.cos-nav-account){visibility:hidden}
+body.woocommerce-checkout:not(.woocommerce-order-received) #cos-footer#cos-footer :is(.hxf-nl,.hxf-cols){display:none}

@@ -15,7 +15,7 @@ get_template_part( 'template-parts/hx/science/masthead', null, array(
 	'mode'  => 'bleed',
 	'label' => 'Chapter 04 <span aria-hidden="true">·</span> Clinical studies',
 	'title' => 'Evidence you can read.',
-	'lead'  => 'Every statistic we publish is backed by an independent dermatologist evaluation. Methodology, panel size, age range and duration are disclosed in full.',
+	'lead'  => 'Every figure comes from an independent study, with its method, panel size, age range and duration disclosed in full. Instrument measurements come first; what panellists reported themselves is marked as such.',
 	'plate' => array(
 		// bleed (25 Oct 2026): the wide portrait (grey ground at the lower left for the type);
 		// phones keep the 4:5 portrait

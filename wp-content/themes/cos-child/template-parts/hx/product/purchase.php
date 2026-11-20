@@ -107,9 +107,9 @@ $plus    = '<span class="hxpd-acc__icon" aria-hidden="true"></span>';
 					$tag = $f['current'] ? 'div' : 'a'; ?>
 				<li class="hxpd-tl__step hxpd-tl__step--<?php echo esc_attr( $f['key'] ); ?><?php echo $f['current'] ? ' is-current' : ''; ?><?php echo ! empty( $f['owned'] ) ? ' is-owned' : ''; ?>" data-hxpd-pid="<?php echo (int) ( $f['pid'] ?? 0 ); ?>"<?php echo $f['current'] ? ' aria-current="step"' : ''; ?>>
 					<<?php echo $tag; ?> class="hxpd-tl__link"<?php echo $f['current'] ? '' : ' href="' . esc_url( $f['url'] ) . '"'; ?>>
-						<span class="hxpd-tl__orb"><span class="hxpd-tl__no"><span class="hx-sr">Step </span><?php echo esc_html( (string) (int) $f['num'] ); ?></span>
-						<span class="hxpd-tl__pack" aria-hidden="true"><?php echo cos_h26_picture( 'packshot-' . $f['key'], array( 480, 640 ), array( 2, 3 ), '', array( 'sizes' => '80px', 'w' => 480 ) ); // phpcs:ignore -- transparent cut-out on a shared baseline ?></span></span>
-						<span class="hxpd-tl__verb"><?php echo esc_html( $f['verb'] ); ?></span>
+						<?php // 12 Nov 2026 (owner, ref: numbered hairline circles): no packshots; the step named inside a fine ring, its number above ?>
+						<span class="hxpd-tl__no"><span class="hx-sr">Step </span><?php echo esc_html( $f['num'] ); ?></span>
+						<span class="hxpd-tl__orb"><span class="hxpd-tl__verb"><?php echo esc_html( $f['verb'] ); ?></span></span>
 						<span class="hxpd-tl__why"><?php echo esc_html( $is_set ? $f['size'] : str_replace( '-', "‑", $f['benefit'] ) ); // the set: what is in the box ?></span>
 						<span class="hx-sr">: <?php echo esc_html( $f['full'] ); ?><?php echo $f['current'] ? ', this formula' : ''; ?></span>
 						<span class="hxpd-tl__state" data-hxpd-state><?php echo ! empty( $f['owned'] ) ? 'In your bag' : ''; ?></span>

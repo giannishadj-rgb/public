@@ -110,9 +110,8 @@
 .hxsc-plate--video .hxsc-plate__caption{z-index:3}
 .hxsc-plate__control{
 	position:absolute;z-index:4;top:calc(var(--cos-nav-h,80px) + 16px);right:var(--hx-margin);
-	min-width:68px;min-height:44px;padding:9px 14px;border:1px solid rgba(28,29,31,.42);border-radius:999px;
-	background:rgba(248,248,248,.82);color:var(--hx-ink);font:500 .75rem/1 var(--hx-sans);letter-spacing:.04em;
-	-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);cursor:pointer;
+	min-width:68px;min-height:44px;padding:0 14px;border:0;border-radius:0;
+	background:rgba(248,248,248,.86);color:var(--hx-ink);font:500 .75rem/1 var(--hx-sans);letter-spacing:.14em;text-transform:uppercase;cursor:pointer;
 }
 .hxsc-plate__control:hover{background:rgba(248,248,248,.96)}
 .hxsc-plate__control:focus-visible{outline:var(--hx-focus-width) solid var(--hx-focus-color);outline-offset:3px}
@@ -430,7 +429,7 @@ html body:not(.cos-h26) #cos-main-content .hxsc-plate--bleed .hxsc-plate__title{
 }
 .hxsc-actlist__n{grid-area:n;padding-top:4px;font-size:.75rem;letter-spacing:.08em;color:var(--hx-muted);font-variant-numeric:lining-nums tabular-nums}
 .hxsc-actlist__name{grid-area:name;font-family:var(--hx-serif);font-size:var(--ts-title,1.375rem);font-weight:400;line-height:1.25;color:var(--hx-ink)}
-.hxsc-actlist__name a{text-decoration:none;text-underline-offset:.2em;text-decoration-thickness:1px}
+.hxsc-actlist__name a{display:inline-block;padding-block:11px;margin-block:-11px;text-decoration:none;text-underline-offset:.2em;text-decoration-thickness:1px}   /* 44px+ target, text unmoved (re-audit 8 Nov 2026) */
 .hxsc-actlist__name a:hover{text-decoration:underline}
 .hxsc-actlist__role{grid-area:role;font-size:.75rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--hx-muted)}
 .hxsc-actlist__line{grid-area:line;margin-top:4px;max-width:34em;font-size:1rem;line-height:1.6;color:var(--hx-text)}
@@ -501,10 +500,7 @@ html body:not(.cos-h26) #cos-main-content .hxsc-plate--dark :is(.hxsc-plate__tit
 	.hxsc-plate--dark .hxsc-plate__media::before{content:""!important;position:absolute;z-index:2;inset:0;pointer-events:none;background:linear-gradient(0deg,rgba(8,8,8,.72) 0,rgba(8,8,8,.4) 36%,rgba(8,8,8,0) 62%)}
 	.hxsc-plate--dark .hxsc-plate__text{position:relative;z-index:3;align-self:end;padding-block:0 clamp(40px,7svh,88px)}
 }
-/* owner, 25 Oct 2026: no Pause pill over the video. It stays for keyboard users (WCAG 2.2.2: a
-   way to pause motion longer than 5s), off screen until it takes focus; shown again whenever the
-   video is not playing (reduced motion, or paused from the keyboard), as the way to start it. */
-.hxsc-plate--dark .hxsc-plate__control:not(.is-paused):not(:focus-visible){clip-path:inset(50%);width:1px;min-width:0;height:1px;min-height:0;padding:0;border:0;overflow:hidden;white-space:nowrap}
+/* Pause / Play: always visible (WCAG 2.2.2, audit 8 Nov 2026; the owner hid it from pointer users on 25 Oct), styled as a flat square caption chip in 12px tracked capitals, never a pill or blurred. Shows "Play" whenever the film is not playing (reduced motion, or paused). */
 
 /* ─── Chapters on bleed plates (25 Oct 2026, owner: "hero image first" on every page) ───
    The five chapters open like the hub: the photograph fills the first screen under the
@@ -564,6 +560,7 @@ html body:not(.cos-h26) #cos-main-content .hxsc-plate--dark :is(.hxsc-plate__tit
 .hxsc-skin__product{margin:0;font-family:var(--hx-serif);font-size:var(--ts-title,1.25rem);font-weight:400}
 .hxsc-skin__product a{color:var(--hx-ink);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.24em;text-decoration-color:transparent}
 .hxsc-skin__product a:is(:hover,:focus-visible){text-decoration-color:currentColor}
+.hxsc-skin__product a{display:inline-block;padding-block:10px;margin-block:-10px}   /* 44px+ target without moving the line (re-audit 8 Nov 2026) */
 .hxsc-skin__method{margin:0;font-size:.875rem;color:var(--hx-muted)}
 
 /* bigger (owner, same day: "use different images for each study. And also make them bigger"): one

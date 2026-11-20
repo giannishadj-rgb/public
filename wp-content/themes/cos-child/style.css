@@ -259,7 +259,7 @@ body.page .entry-content {
 .woocommerce-message,
 .woocommerce-info,
 .woocommerce-error {
-	padding: 14px 20px; margin-bottom: 20px; border-left: 3px solid var(--cos-navy);
+	padding: 14px 20px; margin-bottom: 20px; border: 1px solid rgba(28,29,31,.14);
 	background: #fff; font-size: 13px; font-weight: 300; color: var(--cos-ink);
 	list-style: none;
 }

@@ -13,6 +13,7 @@ This suite is built for VS Code Test Explorer through the Playwright runner.
 - Accessibility: automated axe scans for serious/critical WCAG issues on key routes and open mobile navigation.
 - UI/UX responsiveness: mobile scroll locking, primary tap-target sizing, contact form validation, sticky-header skip navigation.
 - Visual regression: viewport snapshots for key storefront states, product detail, non-empty cart, and open mobile menu.
+- Homepage resilience: semantic section order, responsive hero art direction, image metadata, link health, JavaScript-free rendering, reduced motion, reveal fallback, and asset scoping.
 
 ## Run
 
@@ -39,8 +40,8 @@ In VS Code, install/enable the recommended `ms-playwright.playwright` extension 
 
 ## iPhone WebKit smoke checks
 
-The `mobile-webkit` project uses the iPhone 13 preset and runs the 38 route,
-navigation, commerce and accessibility scenarios in files 01, 02, 03 and 06.
+The `mobile-webkit` project uses the iPhone 13 preset and runs focused route,
+navigation, commerce, accessibility, add-to-bag, and homepage-resilience scenarios.
 It does not create new visual-regression baselines. Start Local WP, then run:
 
 ```powershell

@@ -376,3 +376,13 @@ add_action( 'template_redirect', static function (): void {
 		exit;
 	}
 }, 1 );   // before WordPress's 404 guess, which would send it to /journal/skin-concerns/
+
+/* 17 Nov 2026 (site critique): /my-account/ is WooCommerce's usual address, but the account lives at
+   /account/ here, so the old path (and anything under it) was a 404. It forwards, keeping the rest. */
+add_action( 'template_redirect', static function (): void {
+	$path = trim( (string) wp_parse_url( $_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH ), '/' );
+	if ( is_404() && preg_match( '#^my-account(/.*)?$#', $path, $m ) ) {
+		wp_safe_redirect( home_url( '/account' . ( $m[1] ?? '' ) . '/' ), 301 );
+		exit;
+	}
+}, 1 );

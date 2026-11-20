@@ -224,3 +224,37 @@
 		more.addEventListener('click', function () { set(more.getAttribute('aria-expanded') !== 'true'); });
 	}
 })();
+
+/* The Complete Ritual: step marks on the hero photograph (12 Nov 2026). Each mark stores where its
+   product's top sits as a fraction of the wide and the tall stage; this maps that through the
+   photograph's object-fit:cover crop, then reveals the marks in ritual order once it has loaded. */
+(function () {
+	var list = document.querySelector('[data-hxpd-steps]');
+	if (!list) return;
+	var hero = list.parentElement, img = hero.querySelector('.hxpd-hero__media img');
+	if (!img) return;
+	var marks = list.querySelectorAll('.hxpd-hero__step');
+	function place() {
+		var nw = img.naturalWidth, nh = img.naturalHeight;
+		if (!nw || !nh) return;
+		var W = hero.clientWidth, H = hero.clientHeight;
+		var k = Math.max(W / nw, H / nh), rw = nw * k, rh = nh * k;
+		var pos = getComputedStyle(img).objectPosition.split(' ').map(function (v) { return parseFloat(v) / 100; });
+		var ox = (W - rw) * (isNaN(pos[0]) ? .5 : pos[0]), oy = (H - rh) * (isNaN(pos[1]) ? .5 : pos[1]);
+		var tall = /stage-tall/.test(img.currentSrc || img.src);
+		for (var i = 0; i < marks.length; i++) {
+			var f = (marks[i].getAttribute(tall ? 'data-tall' : 'data-wide') || '0,0').split(',');
+			marks[i].style.left = Math.round(ox + parseFloat(f[0]) * rw) + 'px';
+			marks[i].style.top = Math.round(oy + parseFloat(f[1]) * rh) + 'px';
+		}
+		list.classList.add('is-placed');
+	}
+	function reveal() {
+		place();
+		requestAnimationFrame(function () { requestAnimationFrame(function () { list.classList.add('is-in'); }); });
+	}
+	if (img.complete && img.naturalWidth) reveal(); else img.addEventListener('load', reveal, { once: true });
+	img.addEventListener('load', place); // a different stage when the window crosses 1200px
+	if ('ResizeObserver' in window) new ResizeObserver(place).observe(hero); else window.addEventListener('resize', place);
+})();
+

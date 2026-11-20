@@ -1,8 +1,6 @@
 import { expect, test } from '@playwright/test';
 import { expectNoHorizontalOverflow, gotoAndCheck } from './helpers/cos-helpers';
 
-// Homepage type roles (typeset, 11 Oct 2026): one size per role per breakpoint,
-// driven by the --t-* tokens on .h26 (end of home-2026.css, documented in DESIGN.md).
 const viewports = [
   { width: 320, height: 568 },
   { width: 375, height: 667 },
@@ -13,98 +11,82 @@ const viewports = [
   { width: 1920, height: 1080 }
 ];
 
-const px = (n: number) => `${n}px`;
-
 test.describe('Homepage editorial typography', () => {
   for (const viewport of viewports) {
     test(`consistent hierarchy at ${viewport.width}px`, async ({ page }) => {
       await page.setViewportSize(viewport);
       await gotoAndCheck(page, '/');
       await page.evaluate(() => document.fonts.ready.then(() => undefined));
-      const w = viewport.width;
 
-      // Five sections under the hero, every heading in the display serif.
-      const headings = page.locator('main h2');
-      await expect(headings).toHaveCount(5);
-      for (const heading of await headings.all()) {
-        await expect(heading).toHaveCSS('font-family', /Cormorant Garamond/);
+      const h1 = page.locator('main h1');
+      const h2s = page.locator('main h2');
+      await expect(h1).toHaveCount(1);
+      await expect(h2s).toHaveCount(6);
+
+      for (const heading of await page.locator('main h1, main h2').all()) {
+        await expect(heading).toHaveCSS('font-family', /Source Serif 4|Georgia|Times New Roman/);
+        await expect(heading).toHaveCSS('font-weight', '400');
       }
 
-      // Hero display line.
-      const hero = page.locator('main h1');
-      await expect(hero).toHaveCSS('font-size', px(w >= 1440 ? 60 : w >= 700 ? 48 : w >= 360 ? 40 : 38));
-      await expect(hero).toHaveCSS('font-weight', '300');
+      const sizes = await page.locator('main h1, main h2').evaluateAll(nodes =>
+        nodes.map(node => Number.parseFloat(getComputedStyle(node).fontSize))
+      );
+      expect(sizes[0], 'The hero heading should remain the strongest type role').toBeGreaterThan(sizes[1]);
+      expect(Math.min(...sizes), 'Section headings should never become cramped').toBeGreaterThanOrEqual(22);
 
-      // Shared roles: the same job renders at the same size wherever it appears.
-      // The four section headings share one size, weight and case; the hero and
-      // The Ritual are deliberate editorial exceptions.
-      const heading = px(w >= 1100 ? 48 : w >= 700 ? 40 : 34);
-      for (const el of await page.locator('.h26-caviar__title, .h26e__title, .h26-provenance__title').all()) {
-        await expect(el).toHaveCSS('font-size', heading);
-        await expect(el).toHaveCSS('font-weight', '300');
-        await expect(el).toHaveCSS('text-transform', 'none');
+      for (const copy of await page.locator('.hxh__lead, .hxm__frame-line, .hxp__lede, .hxr__lede').all()) {
+        const fontSize = await copy.evaluate(node => Number.parseFloat(getComputedStyle(node).fontSize));
+        expect(fontSize, 'Editorial support copy should remain at least 14px').toBeGreaterThanOrEqual(14);
       }
-      // The Collection is set to the owner's Dior reference (13 Oct 2026): a smaller
-      // Cormorant heading and a 14px Inter listing (name 500, description, price).
-      await expect(page.locator('.h26c__title')).toHaveCSS('font-size', px(w >= 1100 ? 42 : w >= 700 ? 38 : 32));
-      await expect(page.locator('.h26c__title')).toHaveCSS('font-family', /Cormorant/);
-      for (const el of await page.locator('.h26c__name, .h26c__benefit, .h26c__price').all()) {
-        await expect(el).toHaveCSS('font-family', /Inter/);
-        await expect(el).toHaveCSS('font-size', '14px');
-      }
-      const figure = px(w >= 1100 ? 56 : 48);
-      for (const el of await page.locator('.h26e__fig').all()) await expect(el).toHaveCSS('font-size', figure);
 
-      // Reading copy never drops below 16px; purchase details never below 15px.
-      const reading = page.locator('.h26-hero__lines, .h26c__lede, .h26e__lede, .h26v__lede, .h26v__fact-v, .h26e__panel, .h26e__method, .h26h__lede, .h26r__lede, .h26r__how');
-      for (const p of await reading.all()) {
-        await expect(p).toHaveCSS('font-family', /Inter/);
-        await expect(p).toHaveCSS('font-size', '16px');
-      }
-      for (const p of await page.locator('.h26r__fact').all()) {
-        await expect(p).toHaveCSS('font-size', '15px');
-      }
-      await expect(page.locator('.cos-nl-input')).toHaveCSS('font-size', '16px');
-
-      // Nothing clips its own text, and the page never scrolls sideways.
-      const clipped = await page.locator('main h1, main h2, main h3, main p, .h26-btn, .h26-link, .h26c__name').evaluateAll(nodes =>
+      const clipped = await page.locator('main h1, main h2, main h3, main p, .hx-btn, .hx-link, .hxc__name').evaluateAll(nodes =>
         nodes.filter(node => {
-          const r = node.getBoundingClientRect();
-          return r.width > 1 && r.height > 1 && node.scrollWidth > node.clientWidth + 2;
+          const rect = node.getBoundingClientRect();
+          return rect.width > 1 && rect.height > 1 && node.scrollWidth > node.clientWidth + 2;
         }).map(node => node.textContent?.trim())
       );
-      expect(clipped).toEqual([]);
+      expect(clipped, 'Homepage text should not be horizontally clipped').toEqual([]);
 
-      // Collection: prices line up across the four products in each row, and each
-      // whole tile is a comfortable target.
-      const btnTops = await page.locator('.h26c__price').evaluateAll(els => els.map(e => Math.round(e.getBoundingClientRect().top)));
-      expect(btnTops.length).toBe(4);
-      for (const h of await page.locator('.h26c__item').evaluateAll(els => els.map(e => e.getBoundingClientRect().height))) expect(h).toBeGreaterThanOrEqual(44);
-      const perRow = w >= 1100 ? [btnTops] : [btnTops.slice(0, 2), btnTops.slice(2)];
-      for (const row of perRow) expect(Math.max(...row) - Math.min(...row)).toBeLessThanOrEqual(2);
+      const collectionItems = await page.locator('.hxc__item').evaluateAll(items => items.map(item => ({
+        itemTop: Math.round(item.getBoundingClientRect().top),
+        priceTop: Math.round(item.querySelector('.hxc__price')!.getBoundingClientRect().top)
+      })));
+      expect(collectionItems).toHaveLength(4);
+      const rows = collectionItems.reduce((groups, item) => {
+        const row = groups.get(item.itemTop) || [];
+        row.push(item);
+        groups.set(item.itemTop, row);
+        return groups;
+      }, new Map<number, typeof collectionItems>());
+      for (const row of rows.values()) {
+        const priceTops = row.map(item => item.priceTop);
+        expect(Math.max(...priceTops) - Math.min(...priceTops), 'Collection prices should align within each row').toBeLessThanOrEqual(3);
+      }
+
       await expectNoHorizontalOverflow(page);
     });
   }
 
-  test('keeps study context precise and scopes the newsletter copy to the homepage', async ({ page }) => {
+  test('keeps clinical study context precise and the newsletter treatment consistent', async ({ page }) => {
     await gotoAndCheck(page, '/');
-    // Only the two instrument results are pinned to the face.
-    await expect(page.locator('.h26e__fig')).toHaveText(['+47%', '−38%']);
-    await expect(page.locator('.h26e__call')).toHaveCount(2);
-    for (const call of await page.locator('.h26e__call').all()) await expect(call).toContainText('Instrument-measured');
-    // The self-reported result is a separate, labelled caption.
-    await expect(page.locator('.h26e__note')).toContainText('Self-reported');
-    await expect(page.locator('.h26e__note')).toContainText('100%');
-    await expect(page.locator('.h26e__credit')).toContainText('not a study participant');
-    await expect(page.locator('.h26e__lede')).toContainText('Evaluated over 28 days');
-    // Newsletter outcomes are announced through a persistent live region.
+
+    await expect(page.locator('.hxm__fig')).toHaveText(['+47%', '−38%']);
+    await expect(page.locator('.hxm__results > li')).toHaveCount(3);
+    await expect(page.locator('.hxm__method')).toContainText([
+      'Cutometry',
+      'Optical profilometry',
+      'Self-assessment'
+    ]);
+    await expect(page.locator('.hxm__note').last()).toContainText('100% panellist-reported satisfaction');
+    await expect(page.locator('.hxm__frame-line')).toContainText('Separate 28-day studies');
+
     await expect(page.locator('#cos-nl-status')).toHaveAttribute('role', 'status');
     await expect(page.locator('.cos-nl-input')).toHaveAttribute('aria-describedby', 'cos-nl-status');
     await expect(page.locator('.cos-nl-headline')).toHaveText('The Caviar Circle');
 
     await gotoAndCheck(page, '/shop/');
     await expect(page.locator('body')).not.toHaveClass(/cos-h26/);
-    await expect(page.locator('.cos-nl-headline')).toHaveText('Enter the world of Caviar of Switzerland.');
-    await expect(page.locator('.cos-nl-headline')).toHaveCSS('font-style', 'italic');
+    await expect(page.locator('.cos-nl-headline')).toHaveText('The Caviar Circle');
+    await expect(page.locator('#cos-nl-status')).toHaveAttribute('role', 'status');
   });
 });

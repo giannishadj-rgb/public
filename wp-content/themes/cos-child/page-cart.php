@@ -44,6 +44,31 @@ if ( $has_bundle ) {
 	$bundle_saving = $parts_total - $bundle_price;
 }
 
+// 17 Nov 2026 (site critique, owner: fix all): with one to three of the four formulas in the bag and
+// no set, one quiet line names the Complete Ritual, only while it really costs less than the four.
+$cos_set_offer = null;
+if ( ! $has_bundle ) {
+	$cos_step_skus = array( 'COS-001', 'COS-002', 'COS-003', 'COS-004' );
+	$cos_in_bag    = 0;
+	foreach ( $cart_items as $cart_item ) {
+		if ( in_array( $cart_item['data']->get_sku(), $cos_step_skus, true ) ) $cos_in_bag++;
+	}
+	$cos_set_id = wc_get_product_id_by_sku( 'COS-BUNDLE' );
+	$cos_set    = $cos_set_id ? wc_get_product( $cos_set_id ) : null;
+	if ( $cos_in_bag > 0 && $cos_in_bag < 4 && $cos_set && $cos_set->is_purchasable() && $cos_set->is_in_stock() ) {
+		$cos_parts = 0.0;
+		foreach ( $cos_step_skus as $step_sku ) {
+			$step_id    = wc_get_product_id_by_sku( $step_sku );
+			$step_wc    = $step_id ? wc_get_product( $step_id ) : null;
+			$cos_parts += $step_wc ? (float) $step_wc->get_price() : 0;
+		}
+		$cos_set_price = (float) $cos_set->get_price();
+		if ( $cos_set_price > 0 && $cos_set_price < $cos_parts ) {
+			$cos_set_offer = array( 'url' => get_permalink( $cos_set_id ), 'price' => $cos_set_price );
+		}
+	}
+}
+
 // Step number + verb and size per formula, from the homepage's single product source.
 $cos_steps = array();
 if ( function_exists( 'cos_h26_products' ) ) {
@@ -229,6 +254,9 @@ $cos_coupon_error = (bool) $cos_coupon_msgs;
 				</div>
 				<?php if ( $has_bundle && $bundle_saving > 0 ) : ?>
 				<p class="hxco-note hxco-note--saving cos-cp-row-saving">Includes your Complete Ritual saving of <?php echo wp_kses_post( wc_price( $bundle_saving ) ); ?> on the four formulas bought separately.</p>
+				<?php endif; ?>
+				<?php if ( $cos_set_offer ) : ?>
+				<p class="hxco-note hxco-note--set">All four formulas as <a href="<?php echo esc_url( $cos_set_offer['url'] ); ?>" data-cro-cta="cart-set-offer">The Complete Ritual</a>, <?php echo wp_kses_post( wc_price( $cos_set_offer['price'], array( 'decimals' => 0 ) ) ); ?>.</p>
 				<?php endif; ?>
 
 				<details class="hxco-coupon"<?php echo ( $cos_coupon_error || $cos_coupon_value ) ? ' open' : ''; ?>>

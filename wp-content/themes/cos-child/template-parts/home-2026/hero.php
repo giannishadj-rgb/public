@@ -26,14 +26,16 @@ defined( 'ABSPATH' ) || exit;
 $hxh_wide_media = '(min-aspect-ratio: 1/1)';
 $hxh_wide_sizes = '(min-aspect-ratio: 1969/1000) 100vw, 196.9vh'; // frame is 2560x1300 (1.969:1), covers by height
 $hxh_tall_sizes = '(max-aspect-ratio: 6/13) 46.16vh, 100vw';      // frame is 1080x2340 (0.4615:1)
-$hxh_alt        = 'The 24h Regeneration Cream, open and filled with white cream, its polished chrome lid with the Swiss cross resting against the jar, reflected on a pale ivory studio floor';
+$hxh_alt        = 'The four Caviar of Switzerland formulas on stepped clear acrylic: Micellar Water, 24h Regeneration Cream, Advanced Repair Serum and Revitalizing Eye Cream, white with polished chrome caps, reflected on a pale grey studio floor';
+// 6 Nov 2026 (owner): hero photograph is now the four-formula lineup (wc-hero-set-*, build_wc_hero_lineup.py;
+// photograph untouched, only its background extended). The jar frames (wc-hero-wide/-tall) stay on disk.
 ?>
 <section class="hxh h26-hero--pearl" aria-labelledby="hxh-title">
 	<div class="hxh__media">
 		<div class="hxh__drift" data-hx-drift="0.07">
 			<?php
 			echo cos_h26_picture(
-				'wc-hero-tall',
+				'wc-hero-set-tall',
 				array( 640, 860, 1080 ),
 				array( 1080, 2340 ),
 				$hxh_alt,
@@ -43,7 +45,7 @@ $hxh_alt        = 'The 24h Regeneration Cream, open and filled with white cream,
 					'sizes' => $hxh_tall_sizes,
 					'w'     => 1080,
 					'art'   => array(
-						array( 'media' => $hxh_wide_media, 'base' => 'wc-hero-wide', 'widths' => array( 1440, 1920, 2560 ), 'sizes' => $hxh_wide_sizes ),
+						array( 'media' => $hxh_wide_media, 'base' => 'wc-hero-set-wide', 'widths' => array( 1440, 1920, 2560 ), 'sizes' => $hxh_wide_sizes ),
 					),
 				)
 			);

@@ -44,18 +44,22 @@ add_action( 'wp_enqueue_scripts', static function (): void {
 	if ( ! cos_h26_is_active() ) return;
 	$dir = get_stylesheet_directory();
 	$uri = get_stylesheet_directory_uri();
-	wp_enqueue_style( 'cos-home-2026', $uri . '/assets/css/home-2026.css', array(), (string) filemtime( $dir . '/assets/css/home-2026.css' ) );
-	// The "Nocturne" look (dark obsidian + champagne, owner's pick 4 Oct 2026) is
-	// the homepage's look: a layer over the base component styles above.
-	wp_enqueue_style( 'cos-home-2026-nocturne', $uri . '/assets/css/home-2026-nocturne.css', array( 'cos-home-2026' ), (string) filemtime( $dir . '/assets/css/home-2026-nocturne.css' ) );
-	wp_enqueue_script( 'cos-home-2026', $uri . '/assets/js/home-2026.js', array(), (string) filemtime( $dir . '/assets/js/home-2026.js' ), array( 'strategy' => 'defer', 'in_footer' => true ) );
+	// Audit 8 Nov 2026: home-2026.css + home-2026-nocturne.css (68 KB, ~85% unused) replaced by
+	// home-2026-base.css — only their rules that still match homepage markup, same order;
+	// verified identical computed styles at 390/820/1440, top + scrolled, menu open, hover.
+	// home-2026.js retired (its only live job, the initial .scrolled header state, moved into
+	// inc/home-staging-navigation.php). The originals stay on disk for a restore.
+	wp_enqueue_style( 'cos-home-2026-base', $uri . '/assets/css/home-2026-base.css', array(), (string) filemtime( $dir . '/assets/css/home-2026-base.css' ) );
+	$prev = 'cos-home-2026-base';
 	// 14 Oct 2026 world-class rebuild: one design-system layer, then one stylesheet per
 	// section (each owns its own template part and class prefix), loaded last.
-	$prev = 'cos-home-2026-nocturne';
 	// typeset.css + composition.css (19 Oct 2026): the homepage type roles and room/plate
 	// layout, loaded last so they govern every section.
 	foreach ( array( 'system', 'hero', 'collection', 'caviar', 'measured', 'provenance', 'ritual', 'closing', 'typeset', 'composition' ) as $hx ) {
-		$asset = 'system' === $hx ? '/assets/css/home-staging/system.css' : '/assets/css/hx/' . $hx . '.css';
+		// 8 Nov 2026 (re-audit): the homepage loads the shared hx/system.css like every page; the older fork
+		// home-staging/system.css is retired (kept on disk). Verified: identical computed styles but the footer's
+		// tablet top padding, which now matches the other pages.
+		$asset = 'system' === $hx ? '/assets/css/hx/system.css' : '/assets/css/hx/' . $hx . '.css';
 		wp_enqueue_style( 'cos-hx-' . $hx, $uri . $asset, array( $prev ), (string) filemtime( $dir . $asset ) );
 		$prev = 'cos-hx-' . $hx;
 	}
@@ -79,8 +83,8 @@ add_action( 'wp_head', static function (): void {
 	// 19 Oct 2026: the hero is the wc-hero-wide / wc-hero-tall pair (template-parts/home-2026/hero.php,
 	// $hxh_wide_media / $hxh_*_sizes); keep these in step with that file.
 	foreach ( array(
-		array( '(min-aspect-ratio: 1/1)', cos_h26_srcset( 'wc-hero-wide', array( 1440, 1920, 2560 ), 'avif' ), '(min-aspect-ratio: 1969/1000) 100vw, 196.9vh' ),
-		array( 'not all and (min-aspect-ratio: 1/1)', cos_h26_srcset( 'wc-hero-tall', array( 640, 860, 1080 ), 'avif' ), '(max-aspect-ratio: 6/13) 46.16vh, 100vw' ),
+		array( '(min-aspect-ratio: 1/1)', cos_h26_srcset( 'wc-hero-set-wide', array( 1440, 1920, 2560 ), 'avif' ), '(min-aspect-ratio: 1969/1000) 100vw, 196.9vh' ),
+		array( 'not all and (min-aspect-ratio: 1/1)', cos_h26_srcset( 'wc-hero-set-tall', array( 640, 860, 1080 ), 'avif' ), '(max-aspect-ratio: 6/13) 46.16vh, 100vw' ),
 	) as [ $media, $set, $sizes ] ) {
 		echo '<link rel="preload" as="image" type="image/avif" fetchpriority="high" media="' . esc_attr( $media ) . '" imagesrcset="' . esc_attr( $set ) . '" imagesizes="' . esc_attr( $sizes ) . '">' . "\n";
 	}
@@ -287,6 +291,8 @@ function cos_h26_arrow(): string {
 	return '<span class="h26-arrow" aria-hidden="true">→</span>';
 }
 
-// Staging chrome is selected at query time, exclusively for the homepage.
-require_once __DIR__ . '/home-staging-navigation.php';
+// 8 Nov 2026 (owner: "choose one and merge the header/footer"): the homepage now uses the sitewide
+// header, menu and footer (inc/navigation.php + assets/css/hx/chrome.css), like every other page.
+// inc/home-staging-navigation.php and assets/css/home-staging/chrome.css are no longer loaded;
+// they stay on disk only as a restore point (re-add this require to bring them back).
 

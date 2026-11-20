@@ -131,7 +131,7 @@ html body:not(.cos-h26) #cos-main-content :is(.hx-numeral,.hxrt-step__num,.cos-c
 	line-height:.95;
 	letter-spacing:-.01em;
 }
-html body:not(.cos-h26) #cos-main-content .hxrt-step__num{color:var(--hx-chrome,#A7ACB2)}
+html body:not(.cos-h26) #cos-main-content .hxrt-step__num{color:#8A8E94}   /* audit 8 Nov 2026: deeper chrome, 3.1:1 on pearl (--hx-chrome #A7ACB2 was 2.15:1) */
 html body:not(.cos-h26) #cos-main-content :is(.hxpd-price__amt,.hxrt-offer__amount,.hxshop-ritual .woocommerce-Price-amount){font-size:var(--ts-title);font-weight:400;letter-spacing:0}
 
 /* ─── Body + detail ──────────────────────────────────────────────── */
@@ -243,7 +243,9 @@ html body:not(.cos-h26) #cos-main-content :is(.cos-jnl-hub-intro,.cos-sm-header)
 html body:not(.cos-h26) #cos-main-content .cos-sm-header{text-align:left;max-width:none;padding:calc(var(--cos-nav-h,80px) + clamp(56px,2.5rem + 4vw,128px)) var(--hx-margin,24px) clamp(48px,2rem + 3vw,96px)}
 html body:not(.cos-h26) #cos-main-content .cos-sm-header > *{max-width:var(--hx-max,1440px);margin-inline:auto}
 html body:not(.cos-h26) #cos-main-content .cos-sm-header h1{margin-top:var(--hx-stack,24px)}
-html body:not(.cos-h26) #cos-main-content :is(.cos-jnl-hub-back,.cos-jnl-hub-cta-link){color:var(--hx-ink,#1C1D1F)}
+html body:not(.cos-h26) #cos-main-content .cos-jnl-hub-back{color:var(--hx-ink,#1C1D1F)}
+/* audit 8 Nov 2026: the hub CTA is a filled ink button (style.css), so its label stays light — ink text here made it invisible */
+html body:not(.cos-h26) #cos-main-content .cos-jnl-hub-cta-link{color:var(--hx-white,#F8F8F8)}
 html body:not(.cos-h26) #cos-main-content .cos-help-contact-tile{background:var(--hx-pearl,#F8F8F8);color:var(--hx-text,#3A3B3D)}
 html body:not(.cos-h26) #cos-main-content .cos-help-contact-tile :is(h3,p,a){color:var(--hx-ink,#1C1D1F)}
 html body:not(.cos-h26) #cos-main-content .cos-help-contact-tile p{color:var(--hx-text,#3A3B3D)}

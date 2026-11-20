@@ -37,16 +37,12 @@
 .hxshop-hero__video{display:block;width:100%;height:calc(min(92vw,52svh) + var(--cos-nav-h,80px));object-fit:cover;object-position:50% 48%}
 .hxshop-hero__control{
 	position:absolute;z-index:3;top:calc(var(--cos-nav-h,80px) + 16px);right:var(--hx-margin);
-	min-width:68px;min-height:44px;padding:9px 14px;border:1px solid rgba(28,29,31,.42);border-radius:999px;
-	background:rgba(248,248,248,.82);color:var(--hx-ink);font:500 .75rem/1 var(--hx-sans);letter-spacing:.04em;
-	-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);cursor:pointer;
+	min-width:68px;min-height:44px;padding:0 14px;border:0;border-radius:0;
+	background:rgba(248,248,248,.86);color:var(--hx-ink);font:500 .75rem/1 var(--hx-sans);letter-spacing:.14em;text-transform:uppercase;cursor:pointer;
 }
 .hxshop-hero__control:hover{background:rgba(248,248,248,.96)}
 .hxshop-hero__control:focus-visible{outline:var(--hx-focus-width) solid var(--hx-focus-color);outline-offset:3px}
-/* owner, 25 Oct 2026: no Pause pill on the opening film. It stays for keyboard users (WCAG 2.2.2:
-   a way to pause motion longer than 5s), off screen until it takes focus, and shows as "Play"
-   whenever the film is not playing (reduced motion, or paused from the keyboard). As /science/. */
-.hxshop-hero__control:not(.is-paused):not(:focus-visible){clip-path:inset(50%);width:1px;min-width:0;height:1px;min-height:0;padding:0;border:0;overflow:hidden;white-space:nowrap}
+/* Pause / Play: always visible (WCAG 2.2.2, audit 8 Nov 2026; the owner hid it from pointer users on 25 Oct), styled as a flat square caption chip in 12px tracked capitals, never a pill or blurred. Shows "Play" whenever the film is not playing (reduced motion, or paused). */
 .hxshop-hero__text{display:grid;row-gap:var(--hx-s-4);padding-block:var(--hx-s-7) var(--hx-s-8)}
 .hxshop-hero__lede{max-width:30em}
 @media (min-width:700px) and (orientation:landscape){
@@ -473,4 +469,36 @@ html body:not(.cos-h26) #cos-main-content .hxshop-ritual--light .hxshop-ritual__
 @media (max-width:639.98px){
 	.hxshop .hxshop-item__add{gap:7px;padding:0 10px 0 12px}
 	.hxshop-item__add::after{width:15px;height:15px}
+}
+
+/* ─── The Complete Ritual as a pearl plate (owner, 7 Nov 2026: "change the image background so it
+   matches the look and feel of the website, use the whole width for the picture, all the information
+   on top of the picture"). The studio shot recoloured from blush to the site's cool pearl (red Swiss
+   squares kept; design-sources/shop-ritual-2026-11-07). From 1280px the photograph runs edge to edge
+   and the type sits on its open ground at the right, aligned to the page grid; the wide frame's ground
+   was extended right so the packs never sit under the type. Below 1280px the photograph leads full
+   width (packs-only crop on phones) and dissolves at the shelf into the same pearl grey, so the type
+   continues on the picture's own ground. Three classes: above the --light and dark-room layers. ── */
+.hxshop-ritual.hxshop-ritual.hxshop-ritual--plate{--rit-ink:#E4E5E7;background:#E4E5E7;padding:0}
+.hxshop-ritual.hxshop-ritual.hxshop-ritual--plate .hxshop-ritual__media{background:#E6E7E9;aspect-ratio:820 / 941;height:auto;min-height:0}
+.hxshop-ritual.hxshop-ritual.hxshop-ritual--plate .hxshop-ritual__media img{object-position:50% 50%}
+.hxshop-ritual.hxshop-ritual.hxshop-ritual--plate .hxshop-ritual__media::after{content:"";position:absolute;inset:auto 0 0;height:30%;pointer-events:none;background:linear-gradient(to bottom,rgba(228,229,231,0),#E4E5E7 92%)}
+.hxshop-ritual.hxshop-ritual.hxshop-ritual--plate .hxshop-ritual__body{position:relative;margin-top:-48px}
+@media (min-width:700px){
+	.hxshop-ritual.hxshop-ritual.hxshop-ritual--plate .hxshop-ritual__media{aspect-ratio:16 / 9}
+	.hxshop-ritual.hxshop-ritual.hxshop-ritual--plate .hxshop-ritual__media img{object-position:29% 50%}   /* the packs' centre in the wide frame */
+}
+@media (min-width:1280px){
+	.hxshop-ritual.hxshop-ritual.hxshop-ritual--plate .hxshop-ritual__grid{grid-template-columns:minmax(0,1fr);min-height:0;align-items:stretch}
+	.hxshop-ritual.hxshop-ritual.hxshop-ritual--plate .hxshop-ritual__media{grid-area:1 / 1;aspect-ratio:1900 / 941;height:auto;min-height:680px}
+	.hxshop-ritual.hxshop-ritual.hxshop-ritual--plate .hxshop-ritual__media img{object-position:0 50%}   /* taller than its ratio: crop only the extended ground on the right */
+	.hxshop-ritual.hxshop-ritual.hxshop-ritual--plate .hxshop-ritual__media::after{content:none}
+	/* the type starts at 57% of the photograph's drawn width (the cleanser ends at 48% since the packs
+	   moved left, 7 Nov 2026; the image is
+	   drawn at least 680px tall, so at least 1373px wide), and ends on the page grid's right margin */
+	.hxshop-ritual.hxshop-ritual.hxshop-ritual--plate .hxshop-ritual__body{
+		grid-area:1 / 1;align-self:center;justify-self:stretch;max-width:none;margin:0;
+		padding:48px max(var(--hx-margin),calc((100vw - var(--hx-max)) / 2 + var(--hx-margin))) 48px calc(max(100vw,1373px) * .57);
+	}
+	.hxshop-ritual.hxshop-ritual.hxshop-ritual--plate .hxshop-ritual__body > *{max-width:31rem}
 }

@@ -56,7 +56,7 @@ $parts = array(
 	<button class="hxhe-hero__control" type="button" aria-controls="hxhe-hero-video" aria-label="Play hero video"><span class="hxhe-hero__control-label">Play</span></button>
 	<div class="hx-wrap hxhe-hero__text">
 		<h1 id="hxhe-title" class="hx-display hxhe-hero__title hx-load-rise" style="--hx-i:1">Precision born <em>from the Alps.</em></h1>
-		<p class="hx-lead hxhe-hero__lede hx-load-rise" style="--hx-i:2">Switzerland is not a backdrop. It is a methodology: four centuries of watchmaking mastery, pharmaceutical leadership and Alpine purity, distilled into every formula we create.</p>
+		<p class="hx-lead hxhe-hero__lede hx-load-rise" style="--hx-i:2">Formulated and made in Zug for more than twenty years, to the standard Switzerland is known for: every batch tested, every ingredient traced.</p>
 	</div>
 </header>
 
@@ -71,8 +71,8 @@ get_template_part( 'template-parts/hx/section-bar', null, array( 'items' => arra
 		<div class="hxhe-split__text" data-hx-stagger>
 			<h2 id="hxhe-guarantee-title" class="hx-heading hxhe-h2" data-hx-reveal>Where one standard rules all others.</h2>
 			<div class="hxhe-prose" data-hx-reveal>
-				<p>In Switzerland, precision is not a marketing claim. It is a cultural inheritance, threaded through four centuries of watchmaking mastery, pharmaceutical innovation and the enduring discipline of life in the Alps.</p>
-				<p>When we chose to formulate in Switzerland, we were not choosing a label. We were choosing to be held accountable. Every batch tested. Every ingredient traced. Every formula validated before it reaches your skin.</p>
+				<p>Watchmaking and the pharmaceutical industry made precision a working habit in Switzerland. We formulate here to be held to it.</p>
+				<p>Our laboratory in Zug is GMP-certified and works to ISO&nbsp;22716. Every batch is tested and released only when it meets our standard, and every ingredient can be traced to its source.</p>
 			</div>
 			<figure class="hxhe-quote" data-hx-reveal>
 				<blockquote><p>“In Switzerland, good enough has never been good&nbsp;enough.”</p></blockquote>
@@ -98,7 +98,7 @@ get_template_part( 'template-parts/hx/section-bar', null, array( 'items' => arra
 			<li class="hxhe-era" data-hx-reveal>
 				<p class="hxhe-num">21st century</p>
 				<h3 class="hx-title hxhe-era__title">Caviar of Switzerland</h3>
-				<p class="hxhe-era__body">Founded here, in the Canton of Zug, as a direct heir to this tradition. Not inspired by Swiss heritage; constituted by it.</p>
+				<p class="hxhe-era__body">Founded in the Canton of Zug, where every formula is still developed and made.</p>
 			</li>
 		</ol>
 	</div>
@@ -124,7 +124,7 @@ get_template_part( 'template-parts/hx/section-bar', null, array( 'items' => arra
 			</li>
 			<li class="hxhe-principle" data-hx-reveal>
 				<p class="hxhe-principle__fr" lang="fr">Maîtrise</p>
-				<p class="hxhe-principle__body"><span class="hxhe-principle__en">Mastery.</span> Our formulas draw on decades of ingredient science developed in Swiss laboratories. We do not follow trends. We follow data.</p>
+				<p class="hxhe-principle__body"><span class="hxhe-principle__en">Mastery.</span> Our formulas draw on decades of ingredient science developed in Swiss laboratories. A formula changes when the measurements say it should.</p>
 			</li>
 			<li class="hxhe-principle" data-hx-reveal>
 				<p class="hxhe-principle__fr" lang="fr">Durée</p>
@@ -148,7 +148,7 @@ get_template_part( 'template-parts/hx/section-bar', null, array( 'items' => arra
 			</li>
 			<li data-hx-reveal>
 				<a class="hxhe-card" href="<?php echo esc_url( home_url( '/heritage/sustainability/' ) ); ?>">
-					<span class="hxhe-card__media hx-frame"><?php echo cos_h26_picture( 'hxhe-sustain-tall', array( 640, 960, 1280 ), array( 4, 5 ), '', array( 'sizes' => '(min-width: 760px) 46vw, 100vw', 'w' => 960 ) ); // phpcs:ignore ?></span>
+					<span class="hxhe-card__media hx-frame"><?php echo cos_h26_picture( 'auth-ritual-counter', array( 640, 960, 1280 ), array( 4, 5 ), '', array( 'sizes' => '(min-width: 760px) 46vw, 100vw', 'w' => 960 ) ); // phpcs:ignore ?></span>
 					<span class="hx-title hxhe-card__title">Responsibility as a Swiss value.</span>
 					<span class="hxhe-card__body">Recyclable packaging, sustainable ingredient sourcing, and products built for longevity, not disposability.</span>
 					<span class="hxhe-card__cta">Sustainability<?php echo $a; // phpcs:ignore ?></span>
@@ -160,7 +160,7 @@ get_template_part( 'template-parts/hx/section-bar', null, array( 'items' => arra
 
 <section class="hxhe-close" aria-labelledby="hxhe-close-title">
 	<div class="hx-wrap hxhe-close__in" data-hx-stagger>
-		<p class="hx-label" data-hx-reveal="fade">Formulated in Zug <span aria-hidden="true">·</span> Swiss precision</p>
+		<?php /* 8 Nov 2026 (re-audit): the "Formulated in Zug · Swiss precision" kicker above this h2 is removed (DESIGN.md: no decorative label above a heading; the page above already says it). */ ?>
 		<h2 id="hxhe-close-title" class="hx-heading hxhe-close__title" data-hx-reveal>The Swiss standard, in your&nbsp;hands.</h2>
 		<p class="hxhe-close__actions" data-hx-reveal>
 			<a class="hx-btn" href="<?php echo esc_url( home_url( '/shop/' ) ); ?>">Shop the collection<?php echo $a; // phpcs:ignore ?></a>

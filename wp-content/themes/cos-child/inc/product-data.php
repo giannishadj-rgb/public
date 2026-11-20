@@ -72,7 +72,7 @@ function cos_get_product_copy( string $sku ): ?array {
 			),
 			// No stats entry: none of this product's original figures (99.8% /
 			// 0% / 28 days) are disclosed with methodology anywhere on the site.
-			'inci' => 'Aqua, Hexylene Glycol, Glycerin, Poloxamer 184, Disodium Cocoamphodiacetate, Panthenol, Allantoin, Acipenser Gueldenstaedtii Roe Extract, Chamomilla Recutita Flower Extract, Sodium Hyaluronate, Phenoxyethanol, Ethylhexylglycerin, Citric Acid, Sodium Citrate.',
+			'inci' => 'Aqua, Hexylene Glycol, Glycerin, Poloxamer 184, Disodium Cocoamphodiacetate, Panthenol, Allantoin, Acipenser Baerii Roe Extract, Chamomilla Recutita Flower Extract, Sodium Hyaluronate, Phenoxyethanol, Ethylhexylglycerin, Citric Acid, Sodium Citrate.',
 		),
 
 		'COS-002' => array(
@@ -82,7 +82,7 @@ function cos_get_product_copy( string $sku ): ?array {
 			// concern/benefit wording is repeated across them. 'summary'
 			// replaces the WooCommerce short description on the PDP only.
 			'summary'  => 'A lightweight, concentrated firming serum at the heart of the four-step ritual.',
-			'description' => '<h2>The Heart of the Ritual</h2><p>Step 2 of the ritual, between Micellar Water and 24h Regeneration Cream: a fine, lightweight serum that concentrates the High-Tech Complex.</p><p>Its silky, non-oily texture absorbs quickly, so the cream that follows seals the routine without heaviness or residue.</p>',
+			'description' => '<h2>The Heart of the Ritual</h2><p>Step 2 of the ritual, after the Micellar Water and before the Revitalizing Eye Cream: a fine, lightweight serum that concentrates the High-Tech Complex.</p><p>Its silky, non-oily texture absorbs quickly, so the creams that follow seal the routine without heaviness or residue.</p>',
 			'description_image' => array(
 				'dir'     => 'pdp/serum-ritual',
 				'desktop' => array( 'widths' => array( 560, 840, 1120 ), 'w' => 1120, 'h' => 1400 ),
@@ -131,7 +131,7 @@ function cos_get_product_copy( string $sku ): ?array {
 			'stats' => array(
 				array( '+47%', 'Skin firmness, instrument-measured (cutometry) at 28 days' ),
 			),
-			'inci' => 'Aqua, Glycerin, Niacinamide, Butylene Glycol, Acipenser Gueldenstaedtii Roe Extract (Micro-Encapsulated), Tripeptide-5 (SYN®-COLL), Sodium Hyaluronate, Resveratrol, Tocopheryl Acetate, Xanthan Gum, Carbomer, Sodium Hydroxide, Phenoxyethanol, Ethylhexylglycerin.',
+			'inci' => 'Aqua, Glycerin, Niacinamide, Butylene Glycol, Acipenser Baerii Roe Extract (Micro-Encapsulated), Tripeptide-5 (SYN®-COLL), Sodium Hyaluronate, Resveratrol, Tocopheryl Acetate, Xanthan Gum, Carbomer, Sodium Hydroxide, Phenoxyethanol, Ethylhexylglycerin.',
 		),
 
 		'COS-003' => array(
@@ -187,7 +187,7 @@ function cos_get_product_copy( string $sku ): ?array {
 			'stats' => array(
 				array( '−38%', 'Crow’s-feet depth, instrument-measured (optical profilometry) at 28 days' ),
 			),
-			'inci' => 'Aqua, Glycerin, Caffeine, Butylene Glycol, Acipenser Gueldenstaedtii Roe Extract (Micro-Encapsulated), Sodium Hyaluronate (Triple Weight), Menaquinone-7, Palmitoyl Pentapeptide-4, Xanthan Gum, Carbomer, Triethanolamine, Phenoxyethanol, Ethylhexylglycerin.',
+			'inci' => 'Aqua, Glycerin, Caffeine, Butylene Glycol, Acipenser Baerii Roe Extract (Micro-Encapsulated), Sodium Hyaluronate (Triple Weight), Menaquinone-7, Palmitoyl Pentapeptide-4, Xanthan Gum, Carbomer, Triethanolamine, Phenoxyethanol, Ethylhexylglycerin.',
 		),
 
 		'COS-004' => array(
@@ -243,7 +243,7 @@ function cos_get_product_copy( string $sku ): ?array {
 			'stats' => array(
 				array( '100%', 'Panellist-reported satisfaction at 28 days (self-reported)' ),
 			),
-			'inci' => 'Aqua (Swiss Glacier Meltwater), Glycerin, Dimethicone, Cetearyl Alcohol, Acipenser Gueldenstaedtii Roe Extract, Sodium Hyaluronate (Triple Weight Complex), Superoxide Dismutase, Tocopheryl Acetate, Ceteareth-20, Stearic Acid, Glyceryl Stearate, Carbomer, Sodium Hydroxide, Phenoxyethanol, Ethylhexylglycerin.',
+			'inci' => 'Aqua (Swiss Glacier Meltwater), Glycerin, Dimethicone, Cetearyl Alcohol, Acipenser Baerii Roe Extract, Sodium Hyaluronate (Triple Weight Complex), Superoxide Dismutase, Tocopheryl Acetate, Ceteareth-20, Stearic Acid, Glyceryl Stearate, Carbomer, Sodium Hydroxide, Phenoxyethanol, Ethylhexylglycerin.',
 		),
 
 		'COS-BUNDLE' => array(

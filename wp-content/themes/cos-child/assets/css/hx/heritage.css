@@ -120,16 +120,12 @@
 .hxhe-hero--bleed .hxhe-caption{z-index:2}
 .hxhe-hero__control{
 	position:absolute;z-index:3;top:calc(var(--cos-nav-h,80px) + 16px);right:var(--hx-margin);
-	min-width:68px;min-height:44px;padding:9px 14px;border:1px solid rgba(28,29,31,.42);border-radius:999px;
-	background:rgba(248,248,248,.82);color:var(--hx-ink);font:500 .75rem/1 var(--hx-sans);letter-spacing:.04em;
-	-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);cursor:pointer;
+	min-width:68px;min-height:44px;padding:0 14px;border:0;border-radius:0;
+	background:rgba(248,248,248,.86);color:var(--hx-ink);font:500 .75rem/1 var(--hx-sans);letter-spacing:.14em;text-transform:uppercase;cursor:pointer;
 }
 .hxhe-hero__control:hover{background:rgba(248,248,248,.96)}
 .hxhe-hero__control:focus-visible{outline:var(--hx-focus-width) solid var(--hx-focus-color);outline-offset:3px}
-/* owner, 25 Oct 2026: no Pause pill on the opening film. It stays for keyboard users (WCAG 2.2.2:
-   a way to pause motion longer than 5s), off screen until it takes focus, and shows as "Play"
-   whenever the film is not playing (reduced motion, or paused from the keyboard). As /science/ and /shop/. */
-.hxhe-hero__control:not(.is-paused):not(:focus-visible){clip-path:inset(50%);width:1px;min-width:0;height:1px;min-height:0;padding:0;border:0;overflow:hidden;white-space:nowrap}
+/* Pause / Play: always visible (WCAG 2.2.2, audit 8 Nov 2026; the owner hid it from pointer users on 25 Oct), styled as a flat square caption chip in 12px tracked capitals, never a pill or blurred. Shows "Play" whenever the film is not playing (reduced motion, or paused). */
 .hxhe-hero--bleed .hxhe-hero__text{display:grid;row-gap:var(--hx-s-5);padding-block:var(--hx-s-7) var(--hx-s-8)}
 .hxhe-hero--bleed .hxhe-hero__title{max-width:9.5em}
 .hxhe-hero--bleed .hxhe-hero__lede{max-width:30em}
@@ -138,7 +134,8 @@
 	.hxhe-hero--bleed .hxhe-hero__plate,.hxhe-hero--bleed .hxhe-hero__text{grid-area:1 / 1}
 	.hxhe-hero--bleed .hxhe-hero__plate::after{
 		content:"";position:absolute;z-index:2;inset:0;pointer-events:none;
-		background:radial-gradient(ellipse 48% 48% at 11% 88%,rgba(248,248,248,.76) 0%,rgba(248,248,248,.52) 38%,rgba(248,248,248,0) 76%);
+		/* audit 8 Nov 2026: wider, firmer wash — the lede's line ends had run onto the dark rock */
+		background:radial-gradient(ellipse 56% 52% at 12% 88%,rgba(248,248,248,.86) 0%,rgba(248,248,248,.7) 46%,rgba(248,248,248,0) 82%);
 	}
 	.hxhe-hero--bleed .hxhe-hero__plate img{height:100%;object-position:0 50%}
 	.hxhe-hero--bleed .hxhe-hero__video{object-position:50% 0}
@@ -148,6 +145,7 @@
 		padding:0 var(--hx-margin) clamp(40px,7svh,88px);
 	}
 	.hxhe-hero--bleed .hxhe-hero__text > *{max-width:min(34rem,40vw)}
+	.hxhe-hero--bleed .hxhe-hero__lede{max-width:min(30rem,34vw)}
 	html body:not(.cos-h26) #cos-main-content .hxhe-hero--bleed .hxhe-hero__title{font-size:min(var(--ts-h1),3.6vw)}
 	.hxhe-hero--bleed .hxhe-hero__lede{color:var(--hx-ink)}
 	.hxhe-hero--bleed .hxhe-hero__plate .hxhe-caption{z-index:3;left:auto;right:var(--hx-margin);bottom:var(--hx-s-5)}
@@ -311,3 +309,15 @@
 	html body:not(.cos-h26) #cos-main-content .hxhe-hero--bleed.hxhe-hero--dark :is(.hxhe-hero__title,.hxhe-hero__title *,.hxhe-hero__lede){color:#F8F8F8}
 }
 
+
+/* 17 Nov 2026: the Sustainability card now shows the four formulas (auth-ritual-counter, 2:3); the
+   bottles stand in its lower half, so the wide card crop is anchored low */
+.hxhe-explore__list li:nth-child(2) .hxhe-card__media img{object-position:50% 92%}
+
+/* 18 Nov 2026: Sustainability opens on Oeschinen Lake (hxhe-sustain-lake-*). Wide screens: the snow and
+   rock behind the transparent header are busy, so a pearl wash lifts the top for the ink header
+   (openings stay light at the top, sitewide rule); the dark water keeps the light type at the lower left. */
+@media (min-width:700px) and (orientation:landscape){
+	.hxhe-hero--bleed.hxhe-hero--lake .hxhe-hero__plate img{object-position:50% 100%}
+}
+.hxhe-hero--bleed.hxhe-hero--lake .hxhe-hero__plate::before{content:"";position:absolute;z-index:1;inset:0 0 auto;height:min(26%,240px);background:linear-gradient(to bottom,rgba(246,246,244,.9) 0%,rgba(246,246,244,.62) 45%,rgba(246,246,244,0) 100%);pointer-events:none}

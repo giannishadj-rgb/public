@@ -399,3 +399,7 @@ body.hxco-page .select2-hidden-accessible{border:0!important;clip:rect(0 0 0 0)!
 /* ═══ ACCOUNT ══
    page-account.php owns its typography and colour since 1 Nov 2026 (typeset pass);
    the earlier light-touch overrides that lived here were removed. */
+
+/* 17 Nov 2026: the bag's quiet Complete Ritual line (page-cart.php), a sentence with one text link */
+.hxco-note--set a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.hxco-note--set a:hover{color:var(--hx-ink)}

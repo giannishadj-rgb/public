@@ -31,11 +31,13 @@ defined( 'ABSPATH' ) || exit;
 // product's 'how' in inc/product-data.php; cosmetic description only (no regeneration claims).
 // Photographs: hxr-{step} (4:5, phones) and hxr-{step}-tall (1:2, >=900px), graded from the
 // owner's full-resolution studio originals by design-sources/home-2026/build_ritual_panels.py.
+// The third entry is the gesture in one line (layout, 4 Nov 2026, owner): shown at rest on pointer
+// screens ≥900px, where the full explanation only appears on hover; shortened from the full text, no new claims.
 $steps = array(
-	'micellar-water-cleanser' => array( 'cleanser', 'Sweep a soaked cotton pad over face and neck to lift make-up and the day’s impurities. No rinsing: the skin is ready for what follows.' ),
-	'advanced-repair-serum'   => array( 'serum', 'The most concentrated step. Press two or three drops into face and neck, then give them a minute to absorb.' ),
-	'revitalizing-eye-cream'  => array( 'eye', 'Care for the thinnest skin of the face. Pat a little along the orbital bone, from the inner to the outer corner. Never drag.' ),
-	'24h-regeneration-cream'  => array( 'cream', 'The final step seals the ritual. Warm a hazelnut-sized amount between your palms and press it in, under SPF by day and overnight by night.' ),
+	'micellar-water-cleanser' => array( 'cleanser', 'Sweep a soaked cotton pad over face and neck to lift make-up and the day’s impurities. No rinsing: the skin is ready for what follows.', 'Sweep over face and neck with a soaked pad. No rinsing.' ),
+	'advanced-repair-serum'   => array( 'serum', 'The most concentrated step. Press two or three drops into face and neck, then give them a minute to absorb.', 'Press two or three drops into face and neck.' ),
+	'revitalizing-eye-cream'  => array( 'eye', 'Care for the thinnest skin of the face. Pat a little along the orbital bone, from the inner to the outer corner. Never drag.', 'Pat along the orbital bone, inner to outer corner.' ),
+	'24h-regeneration-cream'  => array( 'cream', 'The final step seals the ritual. Warm a hazelnut-sized amount between your palms and press it in, under SPF by day and overnight by night.', 'Warm a hazelnut-sized amount and press it in.' ),
 );
 $nbh = static function ( string $s ): string {
 	return str_replace( '-', "\u{2011}", $s ); // non-breaking hyphens: "make-up", "hazelnut-sized" never split
@@ -79,6 +81,8 @@ $nbh = static function ( string $s ): string {
 						<?php /* 29 Oct 2026 (homepage critique; owner chose it): the formula is named at rest, on every
 						   screen, so each step maps to its product; the hover still explains the step (11 Oct ruling). */ ?>
 						<span class="hxr__name"><?php echo esc_html( $nbh( $p['name'][0] . ' ' . $p['name'][1] ) ); ?><span class="hx-sr">. </span></span>
+						<?php /* aria-hidden: the full explanation below is always in the accessible name; this is its visual summary */ ?>
+						<span class="hxr__gist" aria-hidden="true"><span class="hxr__gist-in"><span class="hxr__gist-text"><?php echo esc_html( $nbh( $st[2] ) ); ?></span></span></span>
 						<span class="hxr__more"><span class="hxr__inner"><span class="hxr__rule" aria-hidden="true"></span><span class="hxr__how"><?php echo esc_html( $nbh( $st[1] ) ); ?></span></span></span>
 					</span>
 				</a>

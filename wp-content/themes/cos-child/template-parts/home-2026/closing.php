@@ -37,6 +37,9 @@ $hxz_apart   = ( $hxz_wc && $hxz_total > (float) $hxz_wc->get_price() )
  *          name, price and action sit on it in ink): --sx/--sy/--slen
  *   wide   (900-1199px, x -145-1593, y -80-834): --x/--y = where the line meets the product, --len its length
  *   narrow (<900px,  x 360-1100, y 0-630): --mx = the product's centre; the tag hangs below the photo
+ *   tall   (<600px, x 721-1461, y 100-1030 of the stage crop; 7 Nov 2026): the full name sits just
+ *          above its product, centred on it (--qx, column width --pw, % of the crop), on a short
+ *          hairline (--ql, default 24px) ending at the product's top (--py)
  *   --t / --mt = when the timed entrance's band of light crosses that product (only where the
  *   browser has no scroll-driven animation; closing.css, Motion): (x + 10%) / 170% of 1400ms.
  * Each line runs into open background: serum to the left, the eye and 24h creams upward (over
@@ -45,10 +48,10 @@ $hxz_apart   = ( $hxz_wc && $hxz_total > (float) $hxz_wc->get_price() )
 $hxz_by_slug = array();
 foreach ( cos_h26_products() as $p ) $hxz_by_slug[ $p['slug'] ] = $p;
 $hxz_calls = array(
-	array( 'slug' => 'advanced-repair-serum',   'short' => 'Serum',     'dir' => 'left',  'pos' => '--sx:35.62%;--sy:63.11%;--slen:5.5%;--x:32.05%;--y:49.23%;--len:6%;--mx:14.9%;--t:346ms;--mt:205ms' ),
-	array( 'slug' => 'revitalizing-eye-cream',  'short' => 'Eye Cream', 'dir' => 'up',    'pos' => '--sx:44.42%;--sy:49.75%;--slen:9%;--x:43.04%;--y:31.4%;--len:10%;--mx:32.8%;--t:436ms;--mt:352ms' ),
-	array( 'slug' => '24h-regeneration-cream',  'short' => '24h Cream', 'dir' => 'up',    'pos' => '--sx:53.04%;--sy:60.16%;--slen:9%;--x:53.8%;--y:45.3%;--len:10%;--mx:58.1%;--t:527ms;--mt:561ms' ),
-	array( 'slug' => 'micellar-water-cleanser', 'short' => 'Cleanser',  'dir' => 'right', 'pos' => '--sx:65.76%;--sy:49.18%;--slen:5.5%;--x:69.68%;--y:41.58%;--len:6%;--mx:85.8%;--t:659ms;--mt:789ms' ),
+	array( 'slug' => 'advanced-repair-serum',   'short' => 'Serum',     'dir' => 'left',  'pos' => '--sx:35.62%;--sy:63.11%;--slen:5.5%;--x:32.05%;--y:49.23%;--len:6%;--mx:14.9%;--qx:15%;--pw:22%;--py:49.7%;--ql:3.75rem;--t:346ms;--mt:205ms' ),
+	array( 'slug' => 'revitalizing-eye-cream',  'short' => 'Eye Cream', 'dir' => 'up',    'pos' => '--sx:44.42%;--sy:49.75%;--slen:9%;--x:43.04%;--y:31.4%;--len:10%;--mx:32.8%;--qx:33.1%;--pw:23%;--py:54.8%;--t:436ms;--mt:352ms' ),
+	array( 'slug' => '24h-regeneration-cream',  'short' => '24h Cream', 'dir' => 'up',    'pos' => '--sx:53.04%;--sy:60.16%;--slen:9%;--x:53.8%;--y:45.3%;--len:10%;--mx:58.1%;--qx:58.1%;--pw:26%;--py:68.4%;--t:527ms;--mt:561ms' ),
+	array( 'slug' => 'micellar-water-cleanser', 'short' => 'Cleanser',  'dir' => 'right', 'pos' => '--sx:65.76%;--sy:49.18%;--slen:5.5%;--x:69.68%;--y:41.58%;--len:6%;--mx:85.8%;--qx:85.8%;--pw:23%;--py:35.6%;--t:659ms;--mt:789ms' ),
 );
 ?>
 <section id="closing" class="hxz" aria-labelledby="hxz-title">
@@ -66,7 +69,10 @@ $hxz_calls = array(
 					'sizes' => '100vw',
 					'w'     => 740,
 					'art'   => array(
-						array( 'media' => '(min-width: 1200px)', 'base' => 'hxz-mirror-stage', 'widths' => array( 1440, 2170 ), 'sizes' => '100vw' ),
+						// 7 Nov 2026 (owner): phones get a taller crop (stage x 721-1461, y 100-1030: the narrow crop
+							// plus 300px of the stage's own extended grey above) so the full names sit over the products
+							array( 'media' => '(max-width: 599.98px)', 'base' => 'hxz-mirror-tall', 'widths' => array( 740 ), 'sizes' => '100vw' ),
+							array( 'media' => '(min-width: 1200px)', 'base' => 'hxz-mirror-stage', 'widths' => array( 1440, 2170 ), 'sizes' => '100vw' ),
 						array( 'media' => '(min-width: 900px)', 'base' => 'hxz-mirror-wide', 'widths' => array( 1080, 1448, 1738 ), 'sizes' => '100vw' ),
 					),
 				)
@@ -93,9 +99,10 @@ $hxz_calls = array(
 			<?php endif; ?>
 			<div class="hxz__buy">
 				<a class="hx-btn hxz__btn" href="<?php echo esc_url( $hxz_set_url ); ?>" data-cro-cta="home-final-ritual">Shop the Complete Ritual<span class="hx-arrow" aria-hidden="true"></span></a>
+				<?php /* 7 Nov 2026 (owner): both on one line, short words, a small line icon each */ ?>
 				<ul class="hxz__assure" role="list" aria-label="Delivery and returns">
-					<li>Free worldwide shipping</li>
-					<li>30-day returns</li>
+					<li><svg class="hxz__ico" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M1.5 5.5h10v8h-10zM11.5 8.5h3.6l2.4 2.6v2.4h-6"/><circle cx="5" cy="14.5" r="1.5"/><circle cx="14.5" cy="14.5" r="1.5"/></svg>Free delivery</li>
+					<li><svg class="hxz__ico" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4.5 8.5a6 6 0 1 1 1.2 6.2"/><path d="M4.2 4.5v4.3h4.3"/></svg>30-day returns</li>
 				</ul>
 			</div>
 		</div>

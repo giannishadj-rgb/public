@@ -1,0 +1,211 @@
+{
+  "date": "2026-11-06",
+  "scope": "Homepage hero, four-formula lineup (wc-hero-set-wide, wc-hero-set-tall)",
+  "source": {
+    "path": "../design-sources/home-2026/hero-lineup_master.png",
+    "sha256": "0e8faf294f2a51964944c31d1d93704b681dff0394df958e9a136fa56b4c1898",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "supplied_by": "owner, 6 Nov 2026"
+  },
+  "builder": {
+    "path": "../design-sources/home-2026/build_wc_hero_lineup.py",
+    "sha256": "78abaa9361d9e470e3f8ed2d562663940375ceccb2d5435b99b6867409c8843b"
+  },
+  "operations": [
+    "No edit inside the photograph; frame extended with its own blurred, edge-replicated background, feather 90px",
+    "Uniform scale per frame",
+    "Grain on the extension only; output unsharp {\"radius\": 1.0, \"percent\": 30, \"threshold\": 2}",
+    "AVIF/WebP/JPEG export {\"avif\": {\"quality\": 80, \"speed\": 4}, \"webp\": {\"quality\": 82, \"method\": 6}, \"jpg\": {\"quality\": 84, \"optimize\": true, \"progressive\": true}}"
+  ],
+  "frames": {
+    "wide": {
+      "offset": [
+        859.3,
+        251.53
+      ],
+      "scale": 1.15,
+      "size": [
+        2560,
+        1300
+      ]
+    },
+    "tall": {
+      "offset": [
+        -268.64,
+        922.32
+      ],
+      "scale": 1.12,
+      "size": [
+        1080,
+        2340
+      ]
+    }
+  },
+  "derivatives": [
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-hero-set-wide-1440.avif",
+      "bytes": 22685,
+      "dimensions": [
+        1440,
+        731
+      ],
+      "sha256": "e6204334d82a64455c1e341519dcea43f0775b397410c27b4a8927d9f320e25e"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-hero-set-wide-1440.webp",
+      "bytes": 19906,
+      "dimensions": [
+        1440,
+        731
+      ],
+      "sha256": "245e0f0beef348a098690e54b6f15ddd9ca0c9d9c87e69a7abb126b190f7aad1"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-hero-set-wide-1440.jpg",
+      "bytes": 46738,
+      "dimensions": [
+        1440,
+        731
+      ],
+      "sha256": "d50df222da4f7a40e4a2e1c167c8e0d6cf11a30d8a6876d073e336916ed64551"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-hero-set-wide-1920.avif",
+      "bytes": 35175,
+      "dimensions": [
+        1920,
+        975
+      ],
+      "sha256": "52d7a0612ca4befd8591fc5b0f7c5f7be14ead9fa61908ad65f3342f62758a62"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-hero-set-wide-1920.webp",
+      "bytes": 30718,
+      "dimensions": [
+        1920,
+        975
+      ],
+      "sha256": "06154df4a0067c94e4468eddf46791068cc28cd8d6281122dbcd6a2b2d050913"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-hero-set-wide-1920.jpg",
+      "bytes": 77087,
+      "dimensions": [
+        1920,
+        975
+      ],
+      "sha256": "c7d3eb837d5e9a806d6fe45a4b4a99c9c2007e520ac0950137f694aa6fdc40cd"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-hero-set-wide-2560.avif",
+      "bytes": 53765,
+      "dimensions": [
+        2560,
+        1300
+      ],
+      "sha256": "ddd6c0b7566e57eec04e48c1ea7b9720a91c2cf8e7083ff588135d38b37add15"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-hero-set-wide-2560.webp",
+      "bytes": 46320,
+      "dimensions": [
+        2560,
+        1300
+      ],
+      "sha256": "f9046607210ed57676dcb556b781c1229d7d55a9ca500950f39472e12a550d38"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-hero-set-wide-2560.jpg",
+      "bytes": 129703,
+      "dimensions": [
+        2560,
+        1300
+      ],
+      "sha256": "f31884a12cebbf17b311fb80c0d0e3acd00c47e9b1364282aadda3b23adf28a1"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-hero-set-tall-640.avif",
+      "bytes": 22401,
+      "dimensions": [
+        640,
+        1387
+      ],
+      "sha256": "bdbc6f0e2e3b372832f68ff011b19b6219469fdfd0d6659ce784919527d77cf6"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-hero-set-tall-640.webp",
+      "bytes": 19390,
+      "dimensions": [
+        640,
+        1387
+      ],
+      "sha256": "10974a331daffbdeb299cfed57ccc98cb5e4f2327cf8ca4c3559137b824646e1"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-hero-set-tall-640.jpg",
+      "bytes": 44163,
+      "dimensions": [
+        640,
+        1387
+      ],
+      "sha256": "095042a2723abaf7b1e8db7c353283c9f924ba8164587e4b078d41d3073da91f"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-hero-set-tall-860.avif",
+      "bytes": 34624,
+      "dimensions": [
+        860,
+        1863
+      ],
+      "sha256": "644945396cf91a161af5aff7f86795a2127ff42745e433f1ffccea6aa091ebfe"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-hero-set-tall-860.webp",
+      "bytes": 29934,
+      "dimensions": [
+        860,
+        1863
+      ],
+      "sha256": "e753328cd30028d0b5fcdcdcc646e49c51468091d8524e7e421ffa88a26b9f65"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-hero-set-tall-860.jpg",
+      "bytes": 75049,
+      "dimensions": [
+        860,
+        1863
+      ],
+      "sha256": "0b42e23b4f964d9f74abce0bc8d32e0e7dd5bb8d3613a1f2e389bd947bbaeb53"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-hero-set-tall-1080.avif",
+      "bytes": 49475,
+      "dimensions": [
+        1080,
+        2340
+      ],
+      "sha256": "0512a68b45f9430d9e511c01b692069c1966c2d19d9391eaa62513fd78b9141c"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-hero-set-tall-1080.webp",
+      "bytes": 41072,
+      "dimensions": [
+        1080,
+        2340
+      ],
+      "sha256": "21b8791091f171c3261c3c5c4bd6471c1f49d1244b529e7fb6f63d443926ad45"
+    },
+    {
+      "path": "wp-content/themes/cos-child/assets/images/home-2026/wc-hero-set-tall-1080.jpg",
+      "bytes": 111636,
+      "dimensions": [
+        1080,
+        2340
+      ],
+      "sha256": "662952c1991eeba8d513b01da0d575e018ba1db59953c1b896158c698766f6fc"
+    }
+  ]
+}

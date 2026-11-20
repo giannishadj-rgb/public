@@ -196,7 +196,7 @@ html body.cos-h26 :is(.hx-lead,.hx-body,.hx-detail,.hxr__lede,.hxr__how,.hxr__ho
 html body.cos-h26 .hxc__price{font-weight:500}
 
 /* action: labels take the button's size and tracking */
-html body.cos-h26 :is(.hx-label,.hxc__verb,.hxs__product,.hxr__stepno,.hxp__caption,.hxp__place,.hxp__alt,.hxp__region,.hxm a:not(.hx-link),.hx-link,.hx-btn,.hxv__cta,.hxz__cta,.hxz__cta-text){
+html body.cos-h26 :is(.hx-label,.hxc__verb,.hxs__product,.hxr__stepno,.hxp__caption,.hxp__place,.hxp__alt,.hxp__region,.hxm a:not(.hx-link),.hx-link,.hx-btn,.hxz__cta,.hxz__cta-text){
 	font-family:var(--hx-sans);
 	font-size:.78125rem;
 	font-weight:500;
@@ -318,7 +318,7 @@ html body.cos-h26 #cos-main-content #collection.hxc .hxc__price{font-weight:500}
 
 /* labels (eyebrows, step names) 12px; actions 12.5→13px; Medium, capitals, line-height 1.3 */
 html body.cos-h26 #cos-main-content :is(.hx-label,.hxc__verb,.hxs__product,.hxr__stepno,.hxp__caption,.hxp__place,.hxp__alt,.hxp__region){font-size:.6875rem;font-weight:500;line-height:1.3;letter-spacing:.16em}
-html body.cos-h26 #cos-main-content :is(.hx-link,.hx-btn,.hxv__cta,.hxz__cta,.hxz__cta-text,.hxm a:not(.hx-link)){font-size:.75rem;font-weight:500;line-height:1.3;letter-spacing:.14em}
+html body.cos-h26 #cos-main-content :is(.hx-link,.hx-btn,.hxz__cta,.hxz__cta-text,.hxm a:not(.hx-link)){font-size:.75rem;font-weight:500;line-height:1.3;letter-spacing:.14em}
 
 /* One section head (owner, 29 Oct 2026: "The essential four" and "Our story" read differently):
    both titles are the display role; both subtitles are the lead (Inter 15px, graphite); the same
@@ -328,7 +328,6 @@ html body.cos-h26 #cos-main-content .hxv .hxv__story{
 	margin-top:0;font-family:var(--hx-sans);font-size:var(--ts-body);font-weight:400;font-style:normal;
 	line-height:1.6;letter-spacing:0;color:var(--hx-fg-2,#3A3B3D);
 }
-html body.cos-h26 #cos-main-content .hxv__act{margin-top:clamp(10px,.25rem + .6vw,16px)}
 /* study methods and the closing assurances: the detail role, 14px */
 html body.cos-h26 #cos-main-content :is(.hxm__method,.hxz__assure li){font-size:.875rem;line-height:1.55;letter-spacing:0}
 

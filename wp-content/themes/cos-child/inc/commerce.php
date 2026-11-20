@@ -269,8 +269,20 @@ add_filter( 'woocommerce_order_button_html', function ( string $html ): string {
 // to serve it) — reused rather than building a separate empty-state
 // mechanism, just with an actionable link instead of the generic default.
 add_filter( 'woocommerce_no_available_payment_methods_message', function ( string $message ): string {
-	return 'We\'re unable to offer a payment method for this order right now. Please <a href="' . esc_url( home_url( '/contact/' ) ) . '">contact our concierge team</a> and we\'ll help you complete your order.';
+	return 'We\'re unable to offer a payment method for this order right now. Please <a href="' . esc_url( home_url( '/contact/' ) ) . '">contact us</a> and we\'ll help you complete your order.';
 } );
+
+// 17 Nov 2026 (site critique): the store base is CH:LU, so WooCommerce preselected the Luzern
+// canton for every new customer. The canton starts empty; the country still defaults to Switzerland.
+add_filter( 'default_checkout_billing_state', '__return_empty_string' );
+add_filter( 'default_checkout_shipping_state', '__return_empty_string' );
+
+// 17 Nov 2026: WooCommerce's "Billing First name is a required field." in the house voice.
+add_filter( 'woocommerce_checkout_required_field_notice', function ( string $notice, string $field_label ): string {
+	$label = trim( preg_replace( '/^(?:Billing|Shipping)\s+/i', '', wp_strip_all_tags( $field_label ) ) );
+	$label = strtr( strtolower( $label ), array( 'postcode / zip' => 'postcode', 'town / city' => 'town or city', 'country / region' => 'country', 'state / county' => 'canton or region' ) );
+	return esc_html( sprintf( 'Please enter your %s.', $label ) );
+}, 10, 2 );
 
 // Reassurance line directly under the Place Order button — hooked here
 // (rather than injected once via JS) so it survives every AJAX
@@ -279,15 +291,15 @@ add_action( 'woocommerce_review_order_after_submit', function (): void {
 	$gateways = cos_child_enabled_payment_gateways();
 	$ids      = array_keys( $gateways );
 	if ( array( 'cod' ) === $ids ) {
-		$payment_bit = 'Pay on Delivery';
+		$payment_bit = 'Pay on delivery';
 	} elseif ( in_array( 'cod', $ids, true ) && count( $ids ) > 1 ) {
-		$payment_bit = 'Secure Payment or Pay on Delivery';
+		$payment_bit = 'Secure payment or pay on delivery';
 	} elseif ( $ids ) {
-		$payment_bit = 'Secure Online Payment';
+		$payment_bit = 'Secure online payment';
 	} else {
 		$payment_bit = '';
 	}
-	$parts = array_filter( array( 'Encrypted Checkout', $payment_bit, '30-Day Returns' ) );
+	$parts = array_filter( array( 'Encrypted checkout', $payment_bit, '30-day returns' ) );
 	echo '<p class="cos-co-reassurance">' . esc_html( implode( ' · ', $parts ) ) . ' — <a href="/shipping-returns/">see our return policy</a></p>';
 } );
 

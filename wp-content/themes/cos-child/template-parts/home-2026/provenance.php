@@ -42,32 +42,14 @@ $hxp_arrow = '<span class="hx-arrow" aria-hidden="true"></span>';
 
 		<div class="hxp__over hx-wrap" data-hx-stagger>
 			<h2 id="hxp-title" class="hx-heading hxp__title" data-hx-reveal="light">Fewer things, made&nbsp;well.</h2>
-		</div>
-	</div>
-
-	<div class="hxp__band hx-wrap">
-		<div class="hxp__intro" data-hx-stagger>
+			<?php /* 4 Nov 2026 (owner): the reading line and links moved from the ivory band onto the photograph,
+			   under the heading; the facts list (Zug · 20+ years · ISO 22716) and the band are gone. */ ?>
 			<p class="hx-lead hxp__lede" data-hx-reveal>Each formula is made in one place, patiently, and with care.</p>
 			<p class="hxp__links" data-hx-reveal>
 				<a class="hx-link" href="<?php echo esc_url( home_url( '/heritage/' ) ); ?>">Our Swiss heritage<?php echo $hxp_arrow; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 				<a class="hx-link" href="<?php echo esc_url( home_url( '/science/swiss-formulation/' ) ); ?>">How we formulate in Zug<?php echo $hxp_arrow; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 			</p>
 		</div>
-
-		<dl class="hxp__facts" data-hx-stagger>
-			<div class="hxp__fact" data-hx-reveal>
-				<dt>Zug, Switzerland</dt>
-				<dd>Where every formula is created and filled</dd>
-			</div>
-			<div class="hxp__fact" data-hx-reveal>
-				<dt>20+&nbsp;years</dt>
-				<dd>Making skincare in Zug</dd>
-			</div>
-			<div class="hxp__fact" data-hx-reveal>
-				<dt>ISO&nbsp;22716</dt>
-				<dd>Good manufacturing practice (GMP) for cosmetics</dd>
-			</div>
-		</dl>
 	</div>
 </section>
 

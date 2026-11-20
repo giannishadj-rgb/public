@@ -374,8 +374,8 @@ test.describe('Checkout: coupon, collapsed optional fields, reassurance, and err
 
   test('a reassurance line naming the real payment method and a returns link sits under Place Order', async ({ page }) => {
     const reassurance = page.locator('.cos-co-reassurance');
-    await expect(reassurance).toContainText('Pay on Delivery');
-    await expect(reassurance).toContainText('30-Day Returns');
+    await expect(reassurance).toContainText('Pay on delivery');
+    await expect(reassurance).toContainText('30-day returns');
     await expect(reassurance.locator('a')).toHaveAttribute('href', '/shipping-returns/');
   });
 

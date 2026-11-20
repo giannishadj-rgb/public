@@ -12,26 +12,30 @@ defined( 'ABSPATH' ) || exit;
 ?>
 <?php
 /*
+ * 18 Nov 2026 (owner: "something relevant from free stock"): the old plate showed a Neck & Décolleté
+ * cream and a jade roller, outside the four-formula range. Now Oeschinen Lake, Kandersteg (Kimon Maritz,
+ * Unsplash License; hxhe-sustain-lake.origin.json): water, snow and mist in silver tones.
+ *
  * Opening (25 Oct 2026, owner: "layout this page like the rest with the hero image first"): the
  * heritage hub's bleed plate. The valley fills the first screen under the transparent header,
  * the h1 and lead in ink at the lower left on a soft pearl wash; phones: the tall crop on a clean
  * edge, type beneath. The eyebrow left with the old layout, as on the hub.
  */
 ?>
-<header class="hxhe-hero hxhe-hero--bleed hxhe-hero--dark" aria-labelledby="hxhe-title">
+<header class="hxhe-hero hxhe-hero--bleed hxhe-hero--dark hxhe-hero--lake" aria-labelledby="hxhe-title">
 	<figure class="hxhe-hero__plate hx-load-fade">
 		<?php
 		echo cos_h26_picture(
-			'hxhe-sustain-tall',
+			'hxhe-sustain-lake-tall',
 			array( 640, 960, 1280 ),
 			array( 4, 5 ),
-			'The four formulas and the cream jar on dark marble among broad green leaves, with a jade roller and a gua sha stone',
+			'Oeschinen Lake in Kandersteg: snow-covered peaks above a band of mist, mirrored in still water',
 			array(
 				'sizes' => '100vw',
 				'w'     => 960,
 				'eager' => true,
 				'art'   => array(
-					array( 'media' => '(min-width: 700px) and (orientation: landscape)', 'base' => 'hxhe-sustain-wide', 'widths' => array( 1440, 1707 ), 'sizes' => '100vw' ),
+					array( 'media' => '(min-width: 700px) and (orientation: landscape)', 'base' => 'hxhe-sustain-lake-wide', 'widths' => array( 1440, 1707 ), 'sizes' => '100vw' ),
 				),
 			)
 		);

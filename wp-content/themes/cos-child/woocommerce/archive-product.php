@@ -108,6 +108,7 @@ $bundle_saving = ( $bundle && $separate_total > $bundle_price && count( $individ
 	<header class="hxshop-hero" aria-labelledby="hxshop-title">
 		<figure class="hxshop-hero__plate hx-load-fade">
 			<video id="hxshop-hero-video" class="hxshop-hero__video cos-shop-hero-img" width="1080" height="1920" poster="<?php echo esc_url( $hxshop_poster_uri ); ?>" autoplay muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1">
+				<source src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/video/shop-face-cream-720.mp4' ); ?>" type="video/mp4" media="(max-width: 699px)"><?php /* audit 8 Nov 2026: 0.75 MB phone encode */ ?>
 				<source src="<?php echo esc_url( $hxshop_video_uri ); ?>" type="video/mp4">
 			</video>
 		</figure>
@@ -120,7 +121,7 @@ $bundle_saving = ( $bundle && $separate_total > $bundle_price && count( $individ
 
 	<?php // section bar: the sitewide sticky hx-bar since 31 Oct 2026 (was the numbered .hxshop-index grid)
 	$hxshop_bar = array( array( 'href' => '#cos-products', 'text' => 'The four formulas', 'cta' => 'shop-hero-primary' ) );
-	if ( $bundle ) $hxshop_bar[] = array( 'href' => '#cos-ritual', 'text' => 'The four formulas, as one ritual' );
+	if ( $bundle ) $hxshop_bar[] = array( 'href' => '#cos-ritual', 'text' => 'The Complete Ritual' );
 	$hxshop_bar[] = array( 'href' => '#about', 'text' => 'Built as one system' );
 	get_template_part( 'template-parts/hx/section-bar', null, array( 'items' => $hxshop_bar ) ); ?>
 
@@ -191,10 +192,14 @@ $bundle_saving = ( $bundle && $separate_total > $bundle_price && count( $individ
 	   cleanser read "50 ml") bleeds off the left edge and dissolves into the room's own black; the type
 	   sits in pearl on the right. The product's name is the heading (no label above it); the steps, the
 	   price and the actions are set as one quiet column. */ ?>
-	<section class="hxshop-ritual hxshop-ritual--light" id="cos-ritual" aria-labelledby="hxshop-ritual-title">
+	<section class="hxshop-ritual hxshop-ritual--light hxshop-ritual--plate" id="cos-ritual" aria-labelledby="hxshop-ritual-title">
 		<div class="hxshop-ritual__grid">
 			<a class="hxshop-ritual__media" href="<?php echo esc_url( $bundle_url ); ?>" tabindex="-1" aria-hidden="true" data-hx-reveal="settle">
-				<?php echo cos_h26_picture( 'hxshop-ritual-studio', array( 1000, 1672 ), array( 1672, 941 ), 'The four Caviar of Switzerland formulas, Revitalizing Eye Cream, Advanced Repair Serum, 24h Regeneration Cream and Micellar Water All-in-One Cleanser, on a mirrored shelf in soft light', array( 'class' => 'hxshop-ritual__pic', 'sizes' => '(min-width: 900px) 60vw, 100vw', 'w' => 1672 ) ); // owner's light studio shot, as supplied (design-sources/shop-ritual-2026-11-01/build_ritual_studio.py), 1 Nov 2026 ?>
+				<?php // 7 Nov 2026 (owner): "match the look of the site, use the whole width, all the information on the picture":
+				// the same studio shot recoloured from blush to the site's cool pearl (red Swiss squares kept), full-bleed.
+				// Wide frame (ground extended right for the type) from 700px, packs-only crop on phones.
+				// design-sources/shop-ritual-2026-11-07/build_ritual_pearl.py; the blush files stay on disk.
+				echo cos_h26_picture( 'hxshop-ritual-pearl-tall', array( 820 ), array( 820, 941 ), 'The four Caviar of Switzerland formulas, Revitalizing Eye Cream, Advanced Repair Serum, 24h Regeneration Cream and Micellar Water All-in-One Cleanser, on a mirrored shelf in soft pearl-grey light', array( 'class' => 'hxshop-ritual__pic', 'sizes' => '100vw', 'w' => 820, 'art' => array( array( 'media' => '(min-width: 700px)', 'base' => 'hxshop-ritual-pearl-wide', 'widths' => array( 1200, 1900 ), 'sizes' => '100vw' ) ) ) ); ?>
 			</a>
 			<div class="hxshop-ritual__body">
 				<h2 id="hxshop-ritual-title" class="hx-heading hxshop-ritual__title" data-hx-reveal>The Complete Ritual</h2>

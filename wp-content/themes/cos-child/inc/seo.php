@@ -81,7 +81,7 @@ function cos_child_seo_page_meta(): array {
 		'shop'       => [ 'Luxury Anti-Aging Skincare & Caviar Skin Care Products', 'Shop Swiss caviar skincare for fine lines, firmness, dark circles, dryness and dullness. Explore individual formulas or save €50 on the complete ritual.' ],
 		'the-ritual' => [ '4-Step Anti-Aging Skincare Routine for Mature Skin', 'Learn the four-step Swiss caviar skincare routine: cleanse, treat, eye and moisturise. See how to layer each formula morning and evening.' ],
 		'science'    => [ 'Swiss Science — Caviar of Switzerland', 'Explore the High-Tech Complex, five active ingredients, and independent clinical evidence behind the ritual.' ],
-		'heritage'   => [ 'Swiss Heritage — Caviar of Switzerland', 'Four centuries of Swiss watchmaking precision and Basel pharmaceutical science, formulated in Canton Zug under GMP-grade manufacturing standards.' ],
+		'heritage'   => [ 'Swiss Heritage — Caviar of Switzerland', 'Formulated and made in Zug for more than twenty years, in a GMP-certified laboratory working to ISO 22716.' ],
 		'journal'    => [ 'Journal — Caviar of Switzerland', 'Editorial guidance on Swiss skincare science, rituals, ingredients, and the Caviar of Switzerland protocol.' ],
 		// Journal pillar hub pages — see cos_child_register_journal_pillar_taxonomy().
 		'ingredients-science' => [ 'Ingredient Science — Caviar of Switzerland Journal', 'What each active ingredient in the ritual actually does, and the clinical evidence behind the claim.' ],
@@ -98,8 +98,8 @@ function cos_child_seo_page_meta(): array {
 		// still gets a real title/description for the browser tab and any
 		// shared link (e.g. an abandoned-cart email), not for search display.
 		'checkout'   => [ 'Checkout — Caviar of Switzerland', 'Complete your Caviar of Switzerland order securely — free worldwide shipping and 30-day returns on every purchase.' ],
-		'contact'    => [ 'Contact — Caviar of Switzerland', 'Contact the Caviar of Switzerland concierge team for order, ritual, and product guidance.' ],
-		'account'    => [ 'Account — Caviar of Switzerland', 'Access Caviar of Switzerland account guidance, order support, and concierge assistance.' ],
+		'contact'    => [ 'Contact — Caviar of Switzerland', 'Contact Caviar of Switzerland for help with orders, the ritual and our products.' ],
+		'account'    => [ 'Account — Caviar of Switzerland', 'Sign in to your Caviar of Switzerland account to see orders, addresses and account details.' ],
 		'privacy'    => [ 'Privacy Policy — Caviar of Switzerland', 'Read how Caviar of Switzerland handles contact, consultation, order, and newsletter information.' ],
 		'terms'      => [ 'Terms and Conditions — Caviar of Switzerland', 'Read the terms for using the Caviar of Switzerland website, product pages, services, and orders.' ],
 		// These four previously had no entry here, so the description fell
@@ -108,7 +108,7 @@ function cos_child_seo_page_meta(): array {
 		// headings) with no sentence structure, producing 200+ character
 		// descriptions well past typical search-result display limits.
 		'clinical-studies' => [ 'Clinical Studies — Caviar of Switzerland', 'Independent, dermatologist-reviewed clinical studies behind every Caviar of Switzerland claim — methodology, panel size, and results disclosed in full.' ],
-		'help'              => [ 'Help — Caviar of Switzerland', 'Get help with your Caviar of Switzerland order or ritual — shipping, returns, payment, and product questions answered, or contact our concierge.' ],
+		'help'              => [ 'Help — Caviar of Switzerland', 'Get help with your Caviar of Switzerland order or ritual — shipping, returns, payment, and product questions answered, or contact us.' ],
 		'shipping-returns'  => [ 'Shipping & Returns — Caviar of Switzerland', cos_child_shipping_message( 'long' ) . ' Hassle-free returns within 30 days — what to know before you order from Caviar of Switzerland.' ],
 		'faq'               => [ 'FAQ — Caviar of Switzerland', 'Answers to common questions about the Caviar of Switzerland ritual — ingredients, usage, shipping, returns, and the High-Tech Complex actives.' ],
 

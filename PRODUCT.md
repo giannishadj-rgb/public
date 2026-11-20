@@ -82,7 +82,7 @@ Swiss restraint and a small, considered ritual. A focused four-step routine — 
 - Payments: only Cash on Delivery enabled locally; Stripe/WooCommerce Payments pending merchant onboarding (see OWNER-ACTIONS.md).
 - Claims are governed by `CLAIMS-REGISTER.md` — no claim beyond what it marks Verified/Fixed.
 - **Confirmed facts:**
-  - Caviar source: Siberian sturgeon (*Acipenser baerii*), sustainably farmed, fully traceable, never wild-harvested. The four INCI lists in `inc/product-data.php` still read "Acipenser Gueldenstaedtii Roe Extract" and must be corrected to match.
+  - Caviar source: Siberian sturgeon (*Acipenser baerii*), sustainably farmed, fully traceable, never wild-harvested. The four INCI lists in `inc/product-data.php` read "Acipenser Baerii Roe Extract" since 8 November 2026 (they previously named *Acipenser gueldenstaedtii*); confirm against the printed packaging before the next print run.
   - The brand has been established for more than 20 years (may be stated).
 - **Undecided — do not claim:**
   - The name of the independent contract research organisation (CRO) that ran the studies; describe it only as "an independent contract research organisation".
@@ -118,4 +118,4 @@ Absent — must not be fabricated: customer reviews, testimonials, press coverag
 
 ## Accessibility & Inclusion
 
-Mobile-first for a broad audience that includes mature skincare buyers aged approximately 45–65+: readable body text (16px+), generous touch targets (44px+), WCAG AA contrast and reduced-motion preferences. Validate iPhone/Safari and desktop experiences; do not assume all customers use the same device or have the same visual and motor needs.
+Mobile-first for a broad audience that includes mature skincare buyers aged approximately 45–65+: readable body text (Inter 14px reading copy at line-height 1.25, 1.5 for long-form prose: owner decision 8 Nov 2026, after the Guerlain reference; the footer stays 16px; nothing readable below 12px), generous touch targets (44px+), WCAG AA contrast and reduced-motion preferences. Validate iPhone/Safari and desktop experiences; do not assume all customers use the same device or have the same visual and motor needs.

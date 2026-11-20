@@ -2,98 +2,136 @@
 name: Caviar of Switzerland
 description: Swiss skincare, refined to the essential.
 colors:
-  warm-ivory: "#F4F1EA"
-  pearl: "#FCFBF8"
+  pearl: "#F8F8F8"
+  stone-ground: "#EDE9E1"
   champagne: "#E8E0D2"
   pale-stone: "#DDD8CF"
-  graphite: "#202221"
+  ink: "#1C1D1F"
+  graphite: "#2A2B2D"
   body-graphite: "#3A3B3D"
-  muted-graphite: "#5D5F60"
+  muted-graphite: "#5C5C5A"
   warm-accent: "#625646"
   chrome: "#A7ACB2"
-  footer-linen: "#EDE8DE"
+  chrome-numeral: "#8A8E94"
+  footer-ink: "#1C1D1F"
+  footer-text: "#C9C7C1"
   rule: "rgba(28,29,31,.14)"
   rule-strong: "rgba(28,29,31,.28)"
+  rule-hair: "rgba(28,29,31,.08)"
 typography:
-  display:
-    fontFamily: "Cormorant Garamond, Georgia, serif"
-    fontSize: "clamp(1.625rem, 1.3rem + 1.3vw, 2.5rem)"
+  h1:
+    fontFamily: "Source Serif 4, Georgia, Times New Roman, serif"
+    fontSize: "clamp(2rem, 1.6rem + 1.6vw, 3rem)"
     fontWeight: 300
-    lineHeight: 1.14
-    letterSpacing: "0.04em"
-    textTransform: "uppercase"
-  statement:
-    fontFamily: "Cormorant Garamond, Georgia, serif"
-    fontSize: "min(3.25rem, (100vw - 2 * gutter) * .076)"
-    fontWeight: 300
-    lineHeight: 1.18
-    letterSpacing: "0.04em"
-    textTransform: "uppercase"
-  title:
-    fontFamily: "Cormorant Garamond, Georgia, serif"
-    fontSize: "clamp(1.25rem, 1.15rem + .4vw, 1.5rem)"
-    fontWeight: 400
-    lineHeight: 1.22
-  figure:
-    fontFamily: "Cormorant Garamond, Georgia, serif"
-    fontSize: "clamp(3rem, 2.4rem + 2.4vw, 4.5rem)"
-    fontWeight: 300
-    lineHeight: 0.95
+    lineHeight: 1.05
     letterSpacing: "-0.01em"
+  section:
+    fontFamily: "Source Serif 4, Georgia, Times New Roman, serif"
+    fontSize: "clamp(1.375rem, 1.15rem + .85vw, 2rem)"
+    fontWeight: 300
+    lineHeight: 1.15
+    letterSpacing: "-0.01em"
+  title:
+    fontFamily: "Source Serif 4, Georgia, Times New Roman, serif"
+    fontSize: "clamp(1.125rem, 1.05rem + .25vw, 1.25rem)"
+    fontWeight: 300
+    lineHeight: 1.2
+    letterSpacing: "-0.005em"
   body:
-    fontFamily: "Inter, system-ui, -apple-system, Segoe UI, Arial, sans-serif"
-    fontSize: "1rem"
-    fontWeight: 400
-    lineHeight: 1.7
-  detail:
     fontFamily: "Inter, system-ui, -apple-system, Segoe UI, Arial, sans-serif"
     fontSize: "0.875rem"
     fontWeight: 400
-    lineHeight: 1.55
-    letterSpacing: "0.01em"
+    lineHeight: 1.25
+  prose:
+    fontFamily: "Inter, system-ui, -apple-system, Segoe UI, Arial, sans-serif"
+    fontSize: "0.875rem"
+    fontWeight: 400
+    lineHeight: 1.5
+  footer:
+    fontFamily: "Inter, system-ui, -apple-system, Segoe UI, Arial, sans-serif"
+    fontSize: "1rem"
+    fontWeight: 400
+    lineHeight: 1.5
   label:
     fontFamily: "Inter, system-ui, -apple-system, Segoe UI, Arial, sans-serif"
     fontSize: "0.75rem"
     fontWeight: 500
-    lineHeight: 1.5
-    letterSpacing: "0.2em"
-    textTransform: "uppercase"
-  action:
-    fontFamily: "Inter, system-ui, -apple-system, Segoe UI, Arial, sans-serif"
-    fontSize: "0.78125rem"
-    fontWeight: 500
     lineHeight: 1.3
-    letterSpacing: "0.16em"
-    textTransform: "uppercase"
+    letterSpacing: "0.14em"
+  nav:
+    fontFamily: "Inter, system-ui, -apple-system, Segoe UI, Arial, sans-serif"
+    fontSize: "0.75rem"
+    fontWeight: 400
+    lineHeight: 1.5
+    letterSpacing: "0.14em"
 rounded:
   square: "0"
 spacing:
-  xs: "8px"
-  sm: "16px"
-  md: "24px"
-  lg: "32px"
-  xl: "48px"
-  xxl: "64px"
-  gutter: "clamp(24px, 5.2vw, 80px)"
-  section: "clamp(72px, 4rem + 4vw, 128px)"
+  s1: "4px"
+  s2: "8px"
+  s3: "12px"
+  s4: "16px"
+  s5: "24px"
+  s6: "32px"
+  s7: "48px"
+  s8: "64px"
+  s9: "96px"
+  s10: "128px"
+  margin: "clamp(24px, 5.2vw, 80px)"
+  gap: "clamp(16px, 2.2vw, 32px)"
+  section-y: "clamp(88px, 72.4px + 4vw, 130px)"
 components:
   button-primary:
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.pearl}"
+    typography: "{typography.label}"
+    rounded: "{rounded.square}"
+    padding: "14px 34px"
+    height: "52px"
+  button-primary-hover:
     backgroundColor: "{colors.graphite}"
     textColor: "{colors.pearl}"
-    typography: "{typography.action}"
+  button-outline:
+    backgroundColor: "transparent"
+    textColor: "{colors.ink}"
+    typography: "{typography.label}"
     rounded: "{rounded.square}"
     padding: "0 34px"
     height: "52px"
-  text-link:
-    textColor: "{colors.graphite}"
-    typography: "{typography.detail}"
-    height: "48px"
-  input:
-    backgroundColor: "{colors.pearl}"
-    textColor: "{colors.graphite}"
-    typography: "{typography.body}"
+  button-outline-hover:
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.pearl}"
+  bag-button:
+    backgroundColor: "transparent"
+    textColor: "{colors.ink}"
     rounded: "{rounded.square}"
-    height: "52px"
+    size: "48px"
+  text-link:
+    textColor: "{colors.ink}"
+    typography: "{typography.label}"
+    height: "44px"
+  field-underline:
+    backgroundColor: "transparent"
+    textColor: "{colors.pearl}"
+    typography: "{typography.footer}"
+    rounded: "{rounded.square}"
+    height: "56px"
+  header:
+    backgroundColor: "{colors.pearl}"
+    textColor: "{colors.ink}"
+    typography: "{typography.nav}"
+    height: "80px"
+  footer:
+    backgroundColor: "{colors.footer-ink}"
+    textColor: "{colors.footer-text}"
+    typography: "{typography.footer}"
+  video-control:
+    backgroundColor: "rgba(248,248,248,.86)"
+    textColor: "{colors.ink}"
+    typography: "{typography.label}"
+    rounded: "{rounded.square}"
+    padding: "0 14px"
+    height: "44px"
 ---
 
 # Design System: Caviar of Switzerland
@@ -102,127 +140,152 @@ components:
 
 **Creative North Star: "The Swiss Atelier"**
 
-Four real formulas are presented as a considered collection of precious objects. Warm light, chrome, cream, water and stone give the photography material presence; the interface supplies quiet structure and clear decisions. Upright Cormorant Garamond, selective genuine italic and readable Inter establish a restrained editorial voice.
+Four real formulas are presented as a considered collection of precious objects, made in Zug. The interface is the atelier's bench: one pale pearl surface, ink type, fine rules and square edges, so the photographs (chrome lids, cream, water, stone, skin) carry all of the colour, light and depth. Nothing on the page competes with the object; restraint is the luxury.
 
-The homepage expresses desire through the campaign; the storefront supports choice and purchase; editorial chapters make provenance, science and practice understandable. They share the same light material world without forcing the same composition onto every surface.
+The voice is light and quiet. Headings are set in a light, optically sized serif, in sentence case, at a small number of sizes; everything else is a compact, precise Inter. Authority comes from space, alignment and exact detail rather than size, colour or effects. The homepage creates desire through full-bleed photography; the deeper pages (science, heritage, the ritual, journal) use the same world at reading pace, so moving from campaign to evidence never feels like a change of brand.
+
+Motion has one idea, light travelling over polished silver: openings rack into focus and headings are written by a soft band of light. It is decelerating, quick to finish and never hides a photograph or blocks reading.
 
 **Key Characteristics:**
-- Warm tonal surfaces and graphite text.
-- Exact packaging and a supplied, unchanged silver wordmark with Swiss cross.
-- Unboxed compositions, square controls, generous spacing and fine rules.
-- Visible benefits, readable evidence and natural scrolling.
+- One light ground (pearl) on every page; the footer is the only dark band.
+- Light serif headings in sentence case; compact Inter for everything else; 12px tracked capitals only for short labels and actions.
+- Square corners, one-pixel rules, no shadows, no rounded cards.
+- Exact, unaltered product photography and the official logo as supplied.
+- Evidence presented precisely: product, method, panel and duration with every figure.
 
 ## Colors
 
-### Primary
+A near-monochrome pearl-and-ink palette; colour belongs to the photographs.
 
-Graphite carries headings, navigation and primary actions. Pearl provides the action's contrasting text. There is no saturated interface accent.
+### Primary
+- **Atelier Ink** (ink): headings, primary text on light grounds, the filled primary button, outline-button frames, focus rings on light grounds.
+- **Lettering Graphite** (graphite): the official logo's lettering on light grounds (owner-approved graphite version of the mark) and the primary button's hover fill.
 
 ### Neutral
+- **Pearl** (pearl): the single page ground on every page, the solid header, light text on the footer and on dark openings.
+- **Stone Ground** (stone-ground): a rare alternate room ground where a section needs separation by tone rather than by a rule.
+- **Champagne** and **Pale Stone** (champagne, pale-stone): quiet supporting surfaces and dividers in older editorial content; never a page ground on new work.
+- **Body Graphite** (body-graphite): reading copy.
+- **Muted Graphite** (muted-graphite): secondary text, captions, metadata.
+- **Warm Accent** (warm-accent): a restrained bronze kept for legacy labels; new work stays monochrome.
+- **Chrome** (chrome): decorative metal only (hairline ornaments, large numerals as decoration). **Chrome Numeral** (chrome-numeral) is the deeper chrome to use when a numeral carries meaning, such as ritual step numbers (3.1:1 on pearl, the large-text minimum).
+- **Footer Ink** and **Footer Text** (footer-ink, footer-text): the footer band and its link colour; footer headings and the newsletter title use pearl.
+- **Rules** (rule, rule-strong, rule-hair): one-pixel dividers; hair for the scrolled header edge, strong for control outlines.
 
-Warm ivory is the page ground; pearl is the brighter collection and science surface; champagne supports considered editorial and product evidence bands. Pale stone supplies dividers. Body graphite carries reading copy, muted graphite secondary information, and warm accent restrained labels. Chrome is decorative metal, never a substitute for legible text. Footer linen closes the same warm world.
+### Named Rules
+**The Material Rule.** Depth and colour belong to the photograph; interface colour stays a quiet ground. No saturated interface accent, no gold, no gradients on UI.
 
-**The Material Rule.** Depth belongs to the photograph; interface color remains a quiet material ground.
+**The One Dark Band Rule.** The footer is the only dark interface surface. Dark openings exist only where the photograph or film itself is dark (the /science/ caviar film). Do not add new dark sections or dark cards.
+
+**The Cobalt Rule.** Never pair cobalt or navy with caviar: another caviar-skincare house owns that combination.
 
 ## Typography
 
-**Display Font:** Cormorant Garamond, with Georgia and serif fallbacks. Local variable faces use weight 300 for display and 400 for product names.
+**Display Font:** Source Serif 4 (Georgia, Times New Roman fallbacks), self-hosted variable file with optical sizing, weight pinned to Light 300 so every serif renders light.
+**Body Font:** Inter (system sans fallbacks), weights 400 and 500 only. No Inter Light, no Inter italic.
 
-**Body Font:** Inter, with system sans fallbacks. Reading text and editorial ledes use regular weight (400); actions use medium (500).
+**Character:** a fine, contemporary book serif for names and statements against a precise Swiss sans; the serif brings the warmth, Inter the exactness. If licensed Suisse Works / Suisse Int'l files are added to `assets/fonts/suisse/`, they replace both automatically.
 
-The frontmatter records shared homepage roles. Use genuine italic selectively within a heading; keep long reading passages in Inter and sentence case. Use lining numerals for product steps and evidence.
+### Hierarchy
+- **H1** (300, 32→48px, 1.05): page titles, hero statements, the closing title, measured figures. Sentence case; a genuine italic only for an `<em>` inside a heading.
+- **Section** (300, 22→32px, 1.15): section titles and headings inside reading copy.
+- **Title** (300, 18→20px, 1.2): product names, questions, serif prices, serif step numbers.
+- **Body** (400, 14px, 1.25): all reading copy and commerce metadata: leads, benefits, prices, sizes, service lines.
+- **Prose** (400, 14px, 1.5): long-form running text (journal articles, legal pages, FAQ answers, science and heritage prose), where 1.25 would tire the eye.
+- **Footer** (400, 16px): footer links and small print stay at 16px.
+- **Label** (500, 12px, 0.14em, capitals): short labels and every action (buttons, text links, footer group titles). Longer phrases are set in sentence case instead.
+- **Nav** (400, 12px, 0.14em, capitals): the header navigation (owner, 19 Oct 2026).
 
-**Six roles, every page (owner, 1 November 2026; this supersedes the sizes in the paragraphs below and in the frontmatter).** After a critique counted 13 to 27 visible sizes, eleven text blocks under 13px and a 15px desktop body, the whole site uses six roles, set in `assets/css/hx/scale.css`, which loads after every other sheet (delete it to roll back). Serif, Regular, sentence case: **h1** 32→48px (page titles, hero, the closing title, measured figures); **section** 22→32px (section titles, and headings inside reading copy); **title** 18→20px (names, questions, serif prices and step numbers). Inter: **body** 16px for all reading copy; **small** 14px for secondary text, captions, meta and footer small print; **label** 500, 12px tracked capitals, only for short labels and actions (longer ones, such as "All four as The Complete Ritual, €450", read in sentence case). Commerce metadata (prices, sizes, benefits, service lines, savings) reads at the body size from 768px up; phones keep the 15px floor of 30 October. Deliberate exceptions: the 12px header nav (owner, 19 October), the homepage ritual's vertical step words, percent superscripts and icon glyphs.
+Measures: intros cap at 34em, narrow columns 24em, prose up to 40em. Lining numerals for steps, prices and evidence; tabular numerals where figures align.
 
-**Couture typeset (owner, 19 October 2026: "prestigious and luxurious like Dior", hierarchy restored 29 October 2026).** The homepage uses seven roles, set in `assets/css/hx/typeset.css`, which loads last on the homepage only. Authority comes from capitals, tracking and space, not from indiscriminate enlargement, and colour is monochrome ink and graphite (no warm-accent type). Display: Cormorant 300 in capitals with +0.04em tracking (28 to 40px for section titles, 32 to 52px for the closing statement). Title: Cormorant 400 sentence case at 21 to 24px for findings and editorial facts. Figure: 48 to 72px (reported 32 to 40px). Body: Inter 16px/1.65. Product names: Inter 500 at 15 to 16px. Benefits: Inter 400 at 15px minimum. Detail: 14px. Label: Inter 500, 12px capitals, 0.2em. Action: Inter 500, 12.5px capitals, 0.16em, for every link, button and CTA.
+### Named Rules
+**The Six Roles Rule.** Every readable text maps to one role above (set in `assets/css/hx/scale.css`, which loads last on every page). A new style never introduces a new size.
 
-The campaign hero headline is the positioning line, set in capitals: "SWISS SKINCARE, / *REFINED TO THE ESSENTIAL.*" (the source keeps title case; capitals come from CSS). It uses the display voice at a composition-specific 28px floor, rising fluidly to about 40px at 1440px; on the narrowest phones it may wrap deliberately rather than shrink into the supporting-title tier. One quiet proposition line follows at the 16px reading floor in body graphite. The header navigation matches the label register: Inter 12px capitals, 0.14em. Editorial chapter pages keep their own scales; these are homepage roles, not replacement global scales.
+**The Fourteen Rule.** Reading copy is 14px at every width (owner decision, 8 Nov 2026); nothing readable sits below 12px, and capitals are always 12px or larger. Do not raise reading copy to 16px unasked.
 
-**Two families, sitewide (verified on every page, 25 October 2026).** Only Cormorant Garamond and Inter render anywhere on the site, including the header, footer, skip link and hand-authored content pages. Inter is used at 400 (reading and metadata) and 500 (labels, actions and homepage collection names). There is no Inter Light (300) and no Inter italic. Cormorant italic is reserved for an `<em>` inside a heading; Latin species names may be italic. Source Serif 4 was removed from the theme.
-
-**The Reading Floor Rule (1 November 2026).** Reading copy is 16px at every width. Secondary text is never under 14px. Labels and actions are 12px tracked capitals, always with a 44px or taller target. Nothing readable sits between roles: a new text style maps to one of the six roles in `scale.css`, not a new size.
+**The Two Families Rule.** Only Source Serif 4 and Inter render anywhere on the site, including header, footer, skip link and hand-authored content pages.
 
 ## Layout
 
-**Plates and rooms (owner, 19 October 2026: "prestigious and luxurious like Dior").** The homepage alternates two kinds of space, set in `assets/css/hx/composition.css` (homepage only, loaded after typeset.css). Plates (hero, heritage) are full-bleed photographs with type composed on the image, left. Rooms (collection, our story, science, ritual, closing) share one centred axis: a centred head, intros capped at 34em, product captions centred under their objects, and centred closing links. They also share one vertical rhythm, `--ts-room` (88px on phones to 152px wide), applied top and bottom; the closing takes 1.25× before its statement and a tight signature after. Reading prose (science pillars, ritual instructions, result columns) stays left-aligned inside its column.
+A single centred column system: content caps at 1440px (wide plates at 1760px) inside a fluid page margin (24px on phones to 80px wide), with a fluid gap (16→32px) on a 12-column grid. Sections share one vertical rhythm (section-y, 88px on phones to 130px wide) with no hairlines between sections; rooms separate by space, not by lines.
 
-Use open grids and the shared fluid gutter. The homepage content width is 1440px plus its outer gutters; editorial introductions and photographs cap at 1440px, chapters at 1280px. Body measures are usually 24–34em; chapter prose may extend to 40em. Shared sections use the compact section token; intentional full photographic fields establish their own height.
+Two kinds of space alternate:
+- **Plates**: full-bleed photographs or films under the transparent header, the page's h1 and lead composed on the image at the lower left, on a soft pearl wash where the photograph is busy. Every page opens on a plate.
+- **Rooms**: pearl grounds with a centred head, intros capped at 34em, and objects or text aligned to the grid. Reading prose stays left-aligned.
 
-Collection objects form two columns on phones and four from 1100px. Each object keeps its name, benefit, size, dynamic price and action visible. Homepage ritual steps form two columns on phones and four from 1100px, with instructions always visible. Science pillars become three columns from 700px, while homepage measured results become three (the self-reported cream without a figure). At 900px, provenance uses adjacent copy and photography. Editorial chapter and ritual rows stack below 700px.
+Responsive behaviour: phones get one column, a two-column collection and ritual grid, and the menu button; the desktop header appears from 1024px; the collection becomes four across from 1100px; editorial rows go side by side from 900px. Breakpoints in use: 600, 700, 768, 900, 1024, 1100, 1280px. Two-column grids sized in em collapse under 200% text so nothing clips. Pages longer than a screen carry one sticky, left-aligned section bar under the header for their chapters.
 
-The hero uses a full photographic field: centred copy and a lower action on phones, left copy and adjacent product space from 768px when landscape. Minimum hero heights are 560px on phones and 600px on landscape desktop, expanding to the small viewport height. Fixed navigation is 80px desktop and 64px below 1024px. Section anchors clear it with additional space.
+The fixed header is 80px at every width; anchors clear it with 8px to spare.
 
 ## Elevation & Depth
 
-UI stays flat: no card or button shadows. Separate surfaces with space, a tonal change or a fine rule. Real photographic light, chrome reflections and product volume provide depth. Product images retain their own authentic backgrounds; editorial photographs can have deliberate rectangular edges.
+Flat. The interface has no shadows, no glass and no layered cards; hierarchy comes from space, a change of ground and one-pixel rules. Depth is photographic: real light, chrome reflections, product volume and floor reflections inside the images. The only blur in the system is motion (an opening racking into focus), never a surface treatment.
 
-**The Flat Surface Rule.** Use space, tone and hairlines to establish hierarchy; do not add decorative elevation.
+### Named Rules
+**The Flat Surface Rule.** Use space, tone and hairlines for hierarchy; never add decorative elevation, glow or drop shadows to UI.
+
+**The Photograph Is Never Hidden Rule.** No mask, curtain, darkness or fade may gate an image; it is visible the moment it paints. Image motion is limited to a gentle settle inside its own frame (1.04 → 1).
 
 ## Shapes
 
-Buttons, fields, image stages and editorial bands use square corners. Rules are one pixel. Homepage collection objects are contained rather than cropped: stages are 2:3 at all widths. Ritual photography uses 4:5 at all widths. Meaningful circular controls or iconography may retain their functional shape.
+Square everywhere: buttons, fields, image stages, chips and bands have 0 radius. Rules and control outlines are one pixel (drawn as an inset hairline on buttons). Product images are contained, never cropped through the pack; collection stages are 4:5. Editorial photographs keep deliberate rectangular edges. Circles are allowed only where a control or icon is functionally round.
 
 ## Components
 
-**Primary button:** graphite with pearl text, square, at least 52px high. Shared buttons use the frontmatter padding. Hover gently changes the fill; the arrow moves 4px. The former inset decorative frame is disabled. **Hero exception (owner, 19 October 2026):** the hero action is a slim graphite outline (1px inset hairline, graphite 15px label, hairline arrow) that fills graphite with pearl text on hover and keyboard focus, so it does not compete with the chrome lid; 24px horizontal padding on phones and 28px desktop, 52px / 54px high.
+Every control is **tailored and restrained**: square, ink or hairline, 12px tracked capitals, with a 44px or larger target.
 
-**Text link:** a visible underline or resting hairline, comfortable 48px height and a trailing arrow where useful. Hover strengthens the underline. Keyboard focus remains visible, using a two-pixel outline with four-pixel offset; specific surfaces use three to seven pixels of offset.
+### Buttons
+- **Shape:** square (0).
+- **Primary:** filled atelier ink with pearl label, 52px high, 14px × 34px padding, label role. Used for the decisive action on a page: Add to bag on product pages, checkout steps.
+- **Hover / Focus:** fill eases to lettering graphite (320ms); a trailing arrow moves 4px. Keyboard focus is a 2px ring with 4px offset in ink (pearl on dark grounds); click focus shows no ring.
+- **Outline:** transparent with a one-pixel inset ink frame and ink label, 52–54px high; fills ink with a pearl label on hover and keyboard focus. Used for campaign actions over photographs (the hero's "Shop the Complete Ritual", the closing set) so the action never competes with the chrome lids.
+- **Bag button:** a 48px square with a one-pixel strong-rule frame and a hairline bag glyph, in the photograph's corner on collection tiles; on desktop "Add to bag" slides out on hover. It is a sibling of the product link (never nested), works as a plain add-to-cart link without JavaScript, and adds in place with it.
 
-**Our story (owner, 19 October 2026: after Sensai's "Our Story", in the site's colours; "pearls have nothing to do with it"):** the former caviar section tells the house's own story in Sensai's register. A centred head (display title "Our story", the Inter line "Our story begins in Zug, with caviar.", an outlined square "Discover" to /heritage/) sits above a triptych of 4:5 photographs on a 6px seam (4:3 stacked below 900px), each chapter a link: “Our history” / "More than twenty years in Zug" (alpine valley, → heritage), “Siberian Caviar” / "The heart of every formula" (owner caviar macro, → why caviar), “The Ritual” / "Four formulas, one daily ritual" (November 2022 photograph of the four current packs, → the ritual). Chapter names use the same Inter 500 sentence-case role as collection names. Short evocative lines only; no pearl wording, no result claims.
+### Text links
+Label role in ink, 44px tall target, with a trailing arrow where it leads onward; the underline draws in on hover (700ms). Links inside reading copy are underlined in the text colour with an offset underline.
 
-**Measured on skin (owner, 20 October 2026; compact science section after Our story, `measured.php`, `hx/measured.css`, prefix hxm-, id #evidence):** a pearl room between the two ivory ones. Centred display title "Measured, formula by formula" and one framing line (separate 28-day single-formula studies by an independent contract research organisation). Three results, one per studied formula, three across from 900px with the middle (eye) result set lower as an editorial stagger: a 5:4 owner photograph of the product (serum: hxhe-drop; eye cream: story-eye, captioned "Campaign photograph, not study participants" because the models look younger than the panel; 24h cream: hxhe-jar, the same shoot as the serum), then the serif figure beside its finding (above it between 900 and 1099px), a product link in tracked capitals, and method · panel · duration at the 16px reading floor; the serum adds +22% smoothness by day 7. The cream is self-reported, so it never gets a figure: "Overall satisfaction", its product link, "Self-assessment, 34 women aged 40–65, 28 days" and "100% panellist-reported satisfaction" in text (owner, 20 October 2026). Below a hairline, "Read the studies" on the right. No figure is ever placed on a face.
+### Inputs / Fields
+- **Newsletter field (footer):** an underline-only field, 56px high, 16px pearl text on the footer band, with the Join action set as a text button on the same line and an arrow.
+- **Commerce fields (checkout, account):** square, one-pixel rule border on pearl, 16px text, at least 50px high; WooCommerce's native semantics, labels and error feedback are kept.
+- **Focus:** the 2px ink ring with 4px offset; errors use text, never colour alone.
 
-**Swiss science section (owner-confirmed shape brief, 20 October 2026; `/science/` hub + five chapters, `inc/hx-science.php`, `template-parts/hx/science/*`, `hx/science-pages.css`, prefix hxsc-):** the homepage's world at reading pace. Type always comes before the photograph and never sits on it: the opening plate is either a band (caps h1 left, lead right, then the photograph full-bleed) or a split (copy left, photograph bleeding off the right edge); no eyebrow above the h1, the chapter sub-navigation carries the position. Warm white grounds, because the product cut-outs (pack-*) are shot on #FBFAF6 and stand on the page with no frame; pearl for alternate sections; 1px rules; monochrome labels. The hub is proof, then the way in: the three words, the three studied formulas as aligned columns (cut-out, result, finding, product, method), the five chapters as a photo index, then a quiet close to the Complete Ritual. Only instrument-measured results take the serif figure; the 24h cream's self-reported result is always text. Chapter components: two line diagrams (the four relations between the actives; hyaluronic acid at three depths), the five actives alternating image and text in one warm-monochrome treatment, study rows with a "Study detail" disclosure, the 28-day protocol, six stages and four facts.
+### Navigation
+- **Header:** 80px. Transparent over the opening plate once its script has run, solid pearl with a hairline bottom edge once scrolled (or without JavaScript). Desktop: five destinations in nav-role capitals on the left, the logo centred, account and bag glyphs on the right. Below 1024px: menu button, logo, bag, in visual and tab order. Over a dark film the logo swaps to the pearl-lettered version and labels turn pearl. The current page's link is underlined.
+- **Mobile menu:** a pearl sheet under the header with the five destinations in the section serif, each with a hairline arrow and a rule between, then Help, Account and Contact in body Inter, then the house line (Swiss cross, "Caviar of Switzerland · Zug" in label capitals). It is a disclosure, not a modal: the rest of the page becomes inert, the × toggle stays in the focus loop, Escape closes it, and its accessible name switches Open/Close navigation menu.
+- **Section bar:** one sticky, left-aligned bar under the header on long pages (ritual, product, science, heritage, shop), naming the page's chapters; it scrolls horizontally with an edge fade when it does not fit.
 
-**Every other page (owner, 21 October 2026: "use the homepage as your guide for fonts, styling, look and feel and apply it on all pages"; `hx/typeset-site.css`, enqueued last on every page but the homepage):** the homepage roles carried sitewide. Page titles (h1) in Cormorant 300 capitals +.04em at 32→48px (product names one step down, 26→40px); section titles in the 26→40px display capitals; headings inside reading copy (journal, skin concerns, help, shipping, ingredients) in 20→26px capitals; names, cards and questions in the 20→24px sentence-case serif title; figures 48→72px; reading copy 16px Inter 400; labels 12px tracked capitals in ink (steps and meta muted); every button and CTA 12.5px tracked capitals. Monochrome: the bronze accent and the old gold are replaced by muted graphite, warm ivory bands by pearl, pure-black buttons by graphite ink. The old hand-authored pages no longer put white italic type on a near-black photo veil: the title sits on the warm-white ground first and the photograph follows as a full-bleed plate, as on the science and heritage pages; dark title bands (journal category hubs, sitemap) and the black evidence band on skin-concern pages are light. Theme-only, no page content changed.
+### Footer
+The single dark band, footer ink with footer-text links at 16px. Top: "The Caviar Circle" newsletter (pearl serif title, one-line promise, underline field, consent line). Then three link groups under 12px capital titles (Customer care, including Help; Explore; The house in Zug with address, email and three social glyphs), which collapse to plus-sign disclosures on phones. Then the service line (Made in Switzerland · Free worldwide shipping · 30-day returns · Secure checkout), hidden on the homepage only because its closing section already states the assurances. It closes on the silver original logo centred above the copyright.
 
-**Collection tile (owner, 20 October 2026; rebuilt against Guerlain's Orchidée Impériale grid in a blind builder/critic loop, then finished with the owner's own photography):** each tile is the owner's studio packshot (wc-stage-*): the pack on a graphite stage (never navy: La Prairie owns cobalt) with a lit horizon and a real floor reflection, photographed 4:5 and shown uncropped in a 4:5 tile at every width. Four across from 1100px, near edge to edge on a 12px seam; two across below (960px max on tablets). Type sizes match Guerlain's measured grid: section title in Cormorant capitals 28px (20px on phones), lede 16px on two balanced lines; beneath each photograph, left-aligned on one inset: ritual step 12px Inter tracked label, name in Cormorant capitals 600 at 14px in #111, benefit 12px directly under it, then price · size 14px (12px on phones). Step and price rows align across each row by subgrid. The bag is a bare hairline pearl glyph (no filled block) in a 44px target in the photograph's bottom-right corner, 8px in (36px on phones inside a 44px tap area); hover and focus draw a 1px pearl frame, and it fills pearl only briefly once added; hover eases the photograph in (scale 1.03) and underlines the name. The bag button is a sibling of the product link, never nested; without JavaScript it is a WooCommerce ?add-to-cart= link; with JavaScript it adds in-page (wc-ajax + `hx:added_to_cart` → mini-bag); simple, purchasable, in-stock products only.
+### Collection tile (signature)
+A 4:5 photograph of one formula (owner's overhead packshot on its own grey ground and shadow, shown as supplied), the bag button in its corner, then beneath, left-aligned on one inset: ritual step in label capitals, the name in the title serif, benefit, and price · size in body Inter. Step and price rows align across the row. Hover eases the photograph to 1.03 and underlines the name.
 
-**Collection object (earlier):** an unboxed, linked composition containing an accurate packshot, the ritual verb (serif italic at the lead size, no numeral or dash: the list order carries the sequence), serif name, visible benefit and one quiet price line ("€150 · 50 ml"), all left-aligned. Since 19 October 2026 there is no separate "Discover" row: the whole object is the link, and hover or keyboard focus underlines the name. The section uses four type sizes (heading, name, lead, 16px body); its heading is "The essential four." No overlay hides purchase information. Desktop hover raises the homepage product by 6px; shop cards remain still. Since 19 October 2026 the homepage packshots are `wc-coll-*`, cut from one supplied studio photograph of all four packs (all_high_res.jpg, May 2021, current silver-foil print): one scale for every canvas, rendered at one width on a shared baseline so the packs keep their true relative sizes, with only their photographed contact shadow and reflection. The older `collection-object-*` set (from the rejected flat masters: black print, equalised heights, painted drop shadows) must not return anywhere. Since 19 October 2026 every single-product context (homepage science, product gallery and ritual strip, Complete Ritual set, science hub and studies, the ritual page offer, shop grid, checkout thumbnails) uses `pack-*`: the same masters on the same 2:3 transparent canvas the old set used, so layouts were unchanged (`build_pack_canvas.py`, `pack.origin.json`).
+### Evidence figure (signature)
+A measured result is a serif figure (H1 or section size) beside its finding, always with product, method, panel and duration in body Inter. Only instrument-measured results take a figure; self-reported results are always written as text. A figure is never placed on a face.
 
-**Evidence:** product-first attribution with a serif measured figure, finding, method, panel and duration. Homepage figures use 56px; self-reported figures use 36px and a separate ruled region. Editorial study figures use 64px and reported figures 40px. Never imply a complete-ritual study.
+### Video opening control
+Openings with a looping film (shop, heritage, science) always show a Pause / Play control: a flat square chip in translucent pearl, 44px high, ink label in 12px tracked capitals, top right under the header. Never a pill, never blurred.
 
-**Ritual step:** image, number and verb, followed by instructions that are always visible. The image may scale gently to 1.025 on hover. Content does not depend on hover.
-
-**Fields:** pearl fill, square border, readable 16px input and a 50–52px minimum field height. Newsletter fields use a restrained warm border and an adjacent graphite action; keep visible status and accessible labels. Checkout and account retain their native WooCommerce semantics and feedback.
-
-**Navigation and footer:** official logo with no filter or redraw. On the homepage's light header it is the graphite version (the homepage footer is dark graphite and keeps the silver original) (owner approved, 19 October 2026: the silver lettering is barely legible on light grounds): `logo-graphite.svg`, the official vector paths with only the lettering fill changed to #2A2B2D, red square and white cross unchanged (`build_logo_graphite.py`). The silver original `logo-master.svg` remains the mark for dark grounds; warm ivory navigation, 12px tracked-capital links and graphite utility icons, identical on every page; no Help icon in the bar. Mobile navigation uses a readable serif list. The footer continues the light material world with warm linen, clear service links and the same field/button vocabulary.
-
-Motion has one idea: light travelling over polished silver (owner request, 20 October 2026). The hero is the authored moment: the light comes up and the photograph racks into focus (blur 10px to 0, scale 1.035 to 1, 1.7s), then a soft band of light writes each headline line in turn, starting partly lit; the supporting line and action follow with a 12px rise from opacity 0.86. Further down, the same light reveals each section heading (data-hx-reveal="light", starting mostly lit, 800ms), and the closing line repeats it as a bookend. **Below-fold timing (animate pass, 20 October 2026):** every scroll reveal finishes in 600–900ms and starts at most 150ms after it enters the viewport (50ms list stagger, delays capped), so text reads almost at once: body text fades and rises 14px in 700ms, labels fade in 600ms. **Photographs are never hidden by motion:** no clip curtain, darkness or fade gates an image, so it is visible as soon as the browser paints it, independent of when the reveal fires or the file loads; image reveals are a 1.04 to 1 scale settle inside their own frame (900ms), The Ritual's panels rise 14px as a group, and in the collection a soft band of studio light crosses each photograph once (900ms overlay, the photograph untouched) with its text fading in from intersection. Reveals are skipped (shown at once) for anything on screen at load, content entering from above, any jump of more than a viewport (deep links, End, scrollbar drags, find-in-page), and keyboard focus moving into a section. Same-page anchors glide natively for up to two viewports and jump beyond that, update the hash and move focus to the target; there is no CSS smooth scrolling, which used to animate deep links through the whole page on load. Reveals are decelerating (--hx-ease), hide text only when the script has run and only below the fold, and never hijack scrolling or loop. Content remains visible without JavaScript. Reduced motion shows everything at once, without masks, blur or movement; use native scrolling. **Sitewide since 25 October 2026 (owner: "uniform across the entire site"):** this is the motion of every page, not only the homepage. One engine (assets/js/hx-motion.js) and one set of motion tokens (700ms reveal, 900ms image, 14px rise, 50ms stagger, 150ms cap) serve all pages. Every page's opening (the section holding its h1) gets the hero's entrance: its photograph or video racks into focus, the h1 is written by the light, and the lines around it rise in. Every h2 is written by the light as it scrolls in. Hand-authored content pages (journal, FAQ, contact, help, shipping, skin concerns, sitemap, 404) are tagged at load with the same language, replacing their old one-off fade-ups. Cart, checkout and account have no reveals; only control feedback moves there. **Closing photograph (31 October 2026, owner: "zoom out a bit more, animate while scrolling, add the highlighted in the pic"):** the homepage closes on its second authored moment, the bookend to the hero, and it is tied to the scroll rather than the clock (CSS scroll-driven animation on the photograph's own view timeline, so scrolling back runs it backwards): the full-bleed mirror-glass set zooms out 1.12 to 1 (entry 0% to cover 50%), one band of studio light crosses it (cover 15–55%), and as the band reaches each formula its hairline draws out and its name and size are written along the line by the heading light mask (cover 26–46%, the light's order). From 1200px the set's name, line, price, action and assurances sit on the photograph's calm grey upper field, all in ink (the field is mid-grey, so muted greys are not used there). Browsers without scroll-driven animation get a timed version of the same sequence (`data-hx-at="0.8"`, a late trigger in hx-motion.js). The photograph is only ever brightened, never hidden. Scroll timelines need `body{overflow-x:clip}`, not hidden (inc/navigation.php and inc/home-staging-navigation.php).
+### Motion
+One engine and one set of tokens on every page: ease `cubic-bezier(.19,1,.22,1)` (state changes use the softer `(.33,0,.2,1)`), 320ms for UI state, 700ms text reveals rising 14px, 800ms heading light, 900ms image settle, 50ms list stagger capped at 150ms. Each opening racks into focus and its h1 is written by the light; each h2 is written by the light as it enters. Reveals are skipped for anything already on screen, deep links, large jumps and keyboard focus moves. Reduced motion shows everything at once with no masks, blur or movement. Scroll-linked effects need `body{overflow-x:clip}`, never `hidden`.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** preserve exact products, labels, pack proportions and the supplied official mark.
-- **Do** keep benefits and purchase information visible on every device.
-- **Do** scope every study result to its actual product, method, panel and duration.
-- **Do** keep reading copy at least 16px and meaningful touch targets at least 44px.
-- **Do** keep each shipping raster traceable to its source and transformation in its adjacent provenance sidecar.
-- **Do** preserve the hero jar and lid region exactly. Since 19 October 2026 the hero places that protected region (jar, lid and their real floor reflection, pixel-identical to hero-jar_master.png) in a built ivory studio set instead of champagne silk (wc-hero-*, build_wc_hero.py, wc-hero.origin.json); responsive exports resize and compress the composed master. The source is 1672px wide, so the jar is enlarged on retina screens: a higher-resolution photograph of this composition is still needed.
+- **Do** keep one pearl ground per page and let photographs carry colour and depth.
+- **Do** set every heading in the light serif, sentence case, at one of the three serif roles.
+- **Do** keep reading copy at 14px (1.25, or 1.5 for long-form prose), footer text at 16px, and capitals at 12px or larger.
+- **Do** give every interactive control a target of at least 44px and a visible 2px keyboard focus ring.
+- **Do** show exact packaging and labels and the official logo as supplied: graphite lettering on light grounds, the silver original on the footer, the pearl-lettered version only over dark film. The red square and white cross never change.
+- **Do** label every study figure with its product, method, panel and duration; keep self-reported results as text.
+- **Do** use the deeper chrome numeral colour whenever a chrome numeral carries meaning.
+- **Do** keep benefits, prices and purchase actions visible on every device; never behind hover.
 
 ### Don't:
-- **Don't** ship generated direction studies as product artwork or treat their invented packs as approved assets.
-- **Don't** redraw packaging, wordmarks or the Swiss cross, or recolor the official logo beyond the owner-approved graphite lettering for light grounds (never the red square or white cross).
-- **Don't** add decorative shadows, rounded cards, cobalt styling or theatrical interface effects.
-- **Don't** add invented reviews, press marks, scarcity, clinical claims or facility provenance.
-- **Don't** hide explanations behind hover, scroll-gate content or introduce compulsory parallax.
-
-## Verified refinement — 17 October 2026
-
-The homepage retains the supplied hero and collection imagery without product-pixel edits. Provenance now uses an asymmetric cream/glass/steel formulation study beside factual Zug copy, rather than mountain imagery. The study is illustrative, not certified documentary photography of the manufacturing facility. The original silver logo is used without filters on navigation and footer.
-
-Homepage benefits remain visible at 16px on phones. Purchase actions use 15px minimum (superseded 19 October 2026: 12.5px tracked capitals, see Typography). Ritual instructions are visible in a two-column mobile/four-column desktop grid. The footer uses light stone #EAE6DE. Scroll reveals and parallax are removed; one one-second hero entrance begins from 86% opacity. Content remains readable without JavaScript.
-
-Independent visual comparison and browser geometry review: output/critic-20261017/independent-review.md. Scoped commerce/accessibility review: output/experience-20261017/REPORT.md. Mechanical detector findings were advisory type-ramp mismatches against earlier documentation, not observed accessibility failures. Physical iPhone Safari and production network performance remain unverified.
-
-## Independent quality reopening — 17 October 2026
-
-The first finish statement did not establish the commissioned luxury threshold. Fresh independent art direction, mobile UX and asset/performance reviewers reopened the work. The initial new art-direction verdict was FAIL for the provenance image, mixed ritual portraits and text-only closing. The commissioned revisions replace the suspect lab rendering with a product-free glass/water/stone study; use one illustrative mature application portrait beside four clear ordered steps; close on the unchanged four product assets with a factual full-size offer and live set/separate price comparison only while valid. Mechanism copy is shorter, with precise study attribution retained.
-
-The two new images are generated illustrative campaign art, not documentary facility images, testimonials or study participants. Their complete built-in imagegen prompts, source paths and proportional derivative records sit beside them as swiss-material-study-20261017.origin.json and ritual-portrait-20261017.origin.json in assets/images/home-2026/. No product packaging appears in either.
-
-The hero audit establishes pixel identity for the protected jar/lid/reflection region in the saved composed master against hero-jar_master.png. It does not assert that the entire photograph is unmodified: the silk environment is extended. Collection exports trace to the four source packshots with backdrop normalisation and alpha decomposition; geometry and label content are retained. Never substitute the broader claim that every product pixel was untouched by that historical pipeline.
-
-Final practical verification: the art-direction reviewer independently approves all seven homepage sections beside the observed La Prairie, Augustinus Bader and Cle de Peau references. All five opening concepts are explicit on desktop and mobile. Three cold local mobile runs under 1.6 Mbps/150 ms/4x CPU give median LCP 1.740 s and initial CLS 0. A separate desktop lazy-image shift was traced to an indefinite provenance figure width and fixed with width:100%; the focused scroll rerun records zero shifts. Source evidence and limits: output/luxury-reopened-20261017/assets-performance.md. These measurements are local lab evidence, not production field performance.
-
-Text-enlargement accommodation: collection names, step labels and price metadata can wrap; the nested product link has a minmax(0,1fr) column. Homepage measured results use em-based responsive columns and wrap method notes. This avoids the observed 200% text viewport clipping while preserving normal-size composition. Synthetic text enlargement is not a physical Safari test.
+- **Don't** add new dark backgrounds, gold, rounded cards, shadows, badges or oversized type (owner, 31 Oct 2026): ask first.
+- **Don't** introduce a third typeface, Inter Light or Inter italic, or a new text size outside the six roles.
+- **Don't** use cobalt or navy with caviar imagery.
+- **Don't** redraw or recolour packaging, the wordmark or the Swiss cross, or ship generated imagery as product artwork.
+- **Don't** add star ratings, testimonials, press marks, scarcity cues or invented clinical claims.
+- **Don't** hide a photograph behind motion, hijack scrolling, or make content depend on hover or JavaScript.
+- **Don't** put a decorative kicker or eyebrow above a section heading or h1, or numbers that carry no information. (The ritual step above a product name, and the 01–04 step numerals, are information and stay.)

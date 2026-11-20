@@ -49,12 +49,41 @@ if ( function_exists( 'WC' ) ) wp_enqueue_script( 'wc-add-to-cart' );
 <?php wp_body_open(); ?>
 
 <main id="cos-main-content" class="hxpd<?php echo $hxpd['is_set'] ? ' hxpd--set' : ''; ?><?php echo $hxpd['look'] ? ' hxpd--' . esc_attr( $hxpd['look'] ) : ''; ?>">
+	<?php if ( ! empty( $hxpd['hero'] ) ) : // The Complete Ritual: the purchase block sits on the photograph ?>
+	<section class="hxpd-buy hxpd-hero" aria-labelledby="hxpd-name">
+		<?php echo $hxpd['hero']; // phpcs:ignore -- escaped in cos_h26_picture() ?>
+		<?php
+		// 12 Nov 2026 (owner): each product in the photograph carries its step, revealed in ritual
+		// order on load. Where each product's top sits, as a fraction of each stage (wide / tall);
+		// hx-product.js maps it onto the cropped photograph.
+		$hxpd_marks = array(
+			'cleanser' => array( '0.1388,0.3936', '0.1079,0.7348' ),
+			'serum'    => array( '0.4666,0.5702', '0.7717,0.8120' ),
+			'eye'      => array( '0.2080,0.5120', '0.2480,0.7866' ),
+			'cream'    => array( '0.3025,0.7050', '0.4394,0.8710' ),
+		);
+		?>
+		<ol class="hxpd-hero__steps" data-hxpd-steps aria-label="The order of use">
+			<?php foreach ( $hxpd['formulas'] as $i => $f ) : if ( empty( $hxpd_marks[ $f['key'] ] ) ) continue; ?>
+			<li class="hxpd-hero__step" style="--i:<?php echo (int) $i; ?>" data-wide="<?php echo esc_attr( $hxpd_marks[ $f['key'] ][0] ); ?>" data-tall="<?php echo esc_attr( $hxpd_marks[ $f['key'] ][1] ); ?>">
+				<span class="hx-step hxpd-hero__num"><?php echo esc_html( $f['num'] ); ?></span>
+				<span class="hxpd-hero__verb"><?php echo esc_html( $f['verb'] ); ?><span class="hx-sr">: <?php echo esc_html( $f['full'] ); ?></span></span>
+				<span class="hxpd-hero__rule" aria-hidden="true"></span>
+			</li>
+			<?php endforeach; ?>
+		</ol>
+		<div class="hxpd-hero__stage">
+			<?php get_template_part( 'template-parts/hx/product/purchase', null, $hxpd ); ?>
+		</div>
+	</section>
+	<?php else : ?>
 	<section class="hxpd-buy" aria-labelledby="hxpd-name">
 		<div class="hxpd-buy__grid">
 			<?php get_template_part( 'template-parts/hx/product/gallery', null, $hxpd ); ?>
 			<?php get_template_part( 'template-parts/hx/product/purchase', null, $hxpd ); ?>
 		</div>
 	</section>
+	<?php endif; ?>
 	<?php get_template_part( 'template-parts/hx/product/' . ( $hxpd['is_set'] ? 'set' : ( 'ab' === $hxpd['look'] ? 'formula-ab' : 'formula' ) ), null, $hxpd ); ?>
 </main>
 

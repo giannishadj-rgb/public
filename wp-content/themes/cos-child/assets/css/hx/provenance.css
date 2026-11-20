@@ -70,51 +70,6 @@
 }
 .hxp__alt{color:var(--hx-ink)}
 
-/* ─── The ivory band ────────────────────────────────────────────── */
-.hxp__band{
-	display:grid;
-	grid-template-columns:repeat(12,minmax(0,1fr));
-	column-gap:var(--hx-gap);
-	row-gap:var(--hx-s-7);
-	padding-top:clamp(40px,2rem + 2.5vw,80px);
-	padding-bottom:clamp(56px,2.5rem + 3vw,104px);
-}
-.hxp__intro{grid-column:1 / -1}
-.hxp__lede{max-width:26em;margin:0;color:var(--hx-text)}
-.hxp__links{display:flex;flex-wrap:wrap;gap:0 var(--hx-s-6);margin:var(--hx-s-4) 0 0}
-.hxp__links .hx-link{color:var(--hx-ink)}
-
-.hxp__facts{grid-column:1 / -1;margin:0;padding:0}
-.hxp__fact{
-	display:flex;
-	flex-direction:column;
-	gap:4px;
-	margin:0;
-	padding:14px 0 16px;
-	border-top:1px solid var(--hx-line-strong);
-}
-.hxp__fact:last-child{border-bottom:1px solid var(--hx-line-strong)}
-.hxp__fact dt{
-	font-family:var(--hx-serif);
-	font-size:var(--hx-fs-title);
-	font-weight:400;
-	line-height:1.1;
-	letter-spacing:var(--hx-tr-title);
-	color:var(--hx-ink);
-	font-variant-numeric:lining-nums proportional-nums;
-	font-feature-settings:"lnum" 1;
-	white-space:nowrap;
-}
-.hxp__fact dd{
-	margin:0;
-	font-family:var(--hx-sans);
-	font-size:var(--hx-fs-detail);
-	line-height:var(--hx-lh-detail);
-	letter-spacing:var(--hx-tr-detail);
-	color:var(--hx-muted);
-	text-wrap:pretty;
-}
-
 /* ─── Phones ────────────────────────────────────────────────────── */
 @media (max-width:399.98px){
 	.hxp__label{letter-spacing:.14em}
@@ -123,10 +78,13 @@
 @media (max-width:359.98px){
 	.hxp{--hxp-top:112px}
 	.hxp__title{margin-top:16px}
-	.hxp__photo img{aspect-ratio:1100/1720;object-position:58% 50%}  /* two-line heading: more sky, summit lower */
+	.hxp__photo img{object-position:58% 50%}  /* ratio: the 4:5 phone print below (4 Nov 2026) */
 }
 @media (max-width:759.98px){
-	.hxp__band{row-gap:var(--hx-s-6)}
+	/* 4 Nov 2026 (distill): no label row on phones, so the register hairline sat under the heading and
+	   read as a link underline; and a shorter 4:5 print (was 1100:1540, ~546px tall at 390px). */
+	.hxp__over::before{content:none}
+	.hxp__photo img{aspect-ratio:4/5}
 	.hxp__caption{flex-direction:row;gap:var(--hx-s-2);white-space:nowrap}
 	.hxp__region{display:none}
 }
@@ -136,15 +94,25 @@
 	.hxp__photo img{aspect-ratio:auto;height:clamp(560px,80svh,860px);object-position:50% 34%}
 	.hxp__caption{flex-direction:row;gap:var(--hx-s-3)}
 	.hxp__title{max-width:9.5em}
-	.hxp__fact{flex-direction:row;align-items:baseline;justify-content:space-between;gap:var(--hx-s-5);padding:16px 0}
-	.hxp__fact dd{max-width:19em;text-align:right}
-}
-@media (min-width:1100px){
-	.hxp__band{align-items:start}
-	.hxp__intro{grid-column:1 / span 5}
-	.hxp__facts{grid-column:7 / -1}
 }
 
 @media (forced-colors:active){
 	.hxp__over::before{background:CanvasText}
+}
+
+/* ─── Text on the plate, taller print (4 Nov 2026, owner) ───────────────────────────────
+   The ivory band (lede, links, facts list) is gone: the lede and the two links sit on the
+   photograph under the heading, on the light cloud at the left, in ink; the facts list was
+   removed. The print is taller to carry them. */
+.hxp__lede{max-width:24em;margin:var(--hx-s-4) 0 0;color:var(--hx-ink)}
+.hxp__links{display:flex;flex-wrap:wrap;gap:0 var(--hx-s-6);margin:var(--hx-s-3) 0 0}
+.hxp__links .hx-link{color:var(--hx-ink)}
+@media (max-width:759.98px){
+	.hxp__photo img{aspect-ratio:3/4.6}                 /* was 4:5 (488px at 390); now ~598px */
+	.hxp__links{flex-direction:column;align-items:flex-start;gap:0}
+}
+@media (max-width:359.98px){.hxp__photo img{aspect-ratio:3/5}}
+@media (min-width:760px){
+	.hxp__photo img{height:clamp(680px,100svh,1040px);object-position:50% 40%}   /* was clamp(560px,80svh,860px) */
+	.hxp__title{max-width:11em}
 }

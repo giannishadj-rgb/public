@@ -146,7 +146,7 @@ html body:not(.cos-h26) #cos-main-content .hxrt-hero .hxrt-hero__title{font-size
 	letter-spacing:var(--hx-tr-numeral);
 	font-variant-numeric:lining-nums;
 	font-feature-settings:"lnum" 1;
-	color:var(--hx-chrome);
+	color:#8A8E94;   /* audit 8 Nov 2026: 3.1:1 on #F8F8F8; typeset-site.css:134 sets the same and wins */
 }
 .hxrt-step__title{margin-top:var(--hx-s-4)}
 .hxrt-step__product{margin-top:var(--hx-s-2);font-family:var(--hx-serif);font-size:var(--hx-fs-title);font-style:normal;font-weight:400;line-height:var(--hx-lh-title);color:var(--hx-accent);text-wrap:balance}

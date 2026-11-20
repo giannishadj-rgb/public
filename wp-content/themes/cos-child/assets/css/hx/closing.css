@@ -38,6 +38,10 @@ body.cos-h26 a.hxz__tag:is(:hover,:focus-visible) .hxz__tag-name{text-decoration
 .hxz__tag-name{font-family:var(--hx-serif);font-weight:400;line-height:1.2;letter-spacing:-.005em}
 .hxz__tag-size{font-family:var(--hx-sans);font-weight:400;line-height:1.4;color:var(--hx-fg-2,#3A3B3D);font-variant-numeric:lining-nums tabular-nums}
 .hxz__tag-full{display:none}
+@media (max-width:599.98px){
+	.hxz__tag-full{display:inline}   /* phones: the full name, over the product (7 Nov 2026) */
+	.hxz__tag-short{display:none}
+}
 
 /* below 900px: a short line from the photograph's lower edge, the tag centred beneath */
 @media (max-width:899.98px){
@@ -48,6 +52,24 @@ body.cos-h26 a.hxz__tag:is(:hover,:focus-visible) .hxz__tag-name{text-decoration
 	.hxz__tag-size{font-size:.9375rem}   /* the phone floor for sizes (composition.css) */
 	.hxz__media{background:none}
 	.hxz__canvas{background:#DADAD6}
+}
+
+/* phones (7 Nov 2026, owner: "make the photo a bit taller, use the space above the products to
+   write their names in full", then "no arrows, more stylish, not four lines going down"): the
+   tall crop (740x930, the narrow crop plus the stage's own grey above). Each name and size sit
+   just above their own product, centred on it (--qx, column width --pw), resting on a short
+   hairline (--ql, 24px) that stops just above the cap (--py). The labels hug their products, so
+   together they trace the line-up's own silhouette: serum and cleanser high at the outside, eye
+   cream and 24h cream low in the middle. The serum's hairline is the one long stroke (3.75rem) so its
+   name clears the eye cream's on a 320px screen. Lines draw out of the product (origin bottom). */
+@media (max-width:599.98px){
+	.hxz__media{padding-bottom:0}
+	.hxz__canvas{aspect-ratio:740 / 930}
+	.hxz__call{inset:auto;top:auto;bottom:calc(100% - var(--py));left:calc(var(--qx) - var(--pw) / 2);width:var(--pw);display:flex;flex-direction:column;align-items:center}
+	.hxz__tag{order:-1;position:relative;left:auto;top:auto;transform:none;max-width:none;align-items:center;text-align:center;gap:3px}
+	.hxz__tag-name{text-wrap:balance}
+	.hxz__tag-size{display:none}   /* owner, 7 Nov 2026: names only on phones, no volumes */
+	.hxz__line{position:relative;left:auto;top:auto;flex:none;width:1px;height:var(--ql,24px);margin-top:10px;opacity:.7;transform-origin:50% 100%}
 }
 
 /* ≥900px: callouts on the photograph. The rules read --cx/--cy/--clen, pointed at the wide
@@ -220,8 +242,13 @@ body.cos-h26 a.hxz__tag:is(:hover,:focus-visible) .hxz__tag-name{text-decoration
 .hxz__apart{font-family:var(--hx-sans);font-size:.875rem;color:var(--hx-fg-3,#5C5C5A);font-variant-numeric:lining-nums}
 .hxz__buy{display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px}
 
-.hxz__assure{display:flex;flex-direction:column;gap:2px;margin:0;padding:0;list-style:none}
-.hxz__assure li{margin:0;font-family:var(--hx-sans);font-size:.875rem;font-weight:400;line-height:1.5;color:var(--hx-muted);white-space:nowrap}
+.hxz__assure{display:flex;flex-direction:row;flex-wrap:wrap;align-items:center;gap:6px 22px;margin:0;padding:0;list-style:none}
+.hxz__assure li{display:inline-flex;align-items:center;gap:7px;margin:0;font-family:var(--hx-sans);font-size:.875rem;font-weight:400;line-height:1.5;color:var(--hx-muted);white-space:nowrap}
+/* the two small line icons (owner, 7 Nov 2026): a van and a return arrow, hairline weight, current colour */
+.hxz__ico{flex:none;width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round}
+@media (max-width:599.98px){
+	.hxz__assure{justify-content:center;width:100%}   /* centred under the full-width button */
+}
 
 /* the action: transparent with a black hairline and black label (owner, 31 Oct 2026), the hero's
    outline button: fills black with a pearl label on hover and keyboard focus */
@@ -250,3 +277,7 @@ body.cos-h26 .hxz__btn::after{content:none}
 	.hxz__house .hxz__place{display:none}
 }
 
+
+/* Smaller callout names (owner, 4 Nov 2026): 15px at every width, down from the title role
+   (20px desktop / 18px phones, scale.css). One ID more than scale.css, which loads last. */
+html body #cos-main-content#cos-main-content#cos-main-content#cos-main-content :is(.hxz__tag-full,.hxz__tag-short){font-size:.9375rem;line-height:1.3}
